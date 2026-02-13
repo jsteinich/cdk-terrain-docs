@@ -2,7 +2,7 @@
   - [x] ~~Option 1: Request a copy from private repo from Hashicorp team~~
   - [~] Option 2: Scrape through internet archive
 - [ ] Re-add brew support for cdktn-cli
-- [ ] Re-Add API Reference (auto-generated from JSII manifest, see `v0.21.x/docs/cdktf/api-reference`)
+- [x] Re-Add API Reference (auto-generated from JSII manifest, see `v0.21.x/docs/cdktf/api-reference`)
 - [ ] Migrate content back to [open-constructs/cdk-terrain](https://github.com/open-constructs/cdk-terrain) repo
 - [ ] Review concepts cross language provider examples / namespaces
   - [ ] go-providers `github.com/open-constructs/cdk-terrain/examples/go/documentation/generated/hashicorp/*/\*` (generated style, matching concept docs)

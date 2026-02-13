@@ -114,7 +114,7 @@
         ]
       }
       ,
-      { 
+      {
         "tab": "Tutorials",
         "groups": [
           {
@@ -124,6 +124,65 @@
               "tutorials/build-aws",
               "tutorials/lambda-functions",
               "tutorials/deploy-applications"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": ["api-reference/index"]
+          },
+          {
+            "group": "TypeScript",
+            "pages": [
+              "api-reference/typescript/constructs",
+              "api-reference/typescript/classes",
+              "api-reference/typescript/structs",
+              "api-reference/typescript/protocols",
+              "api-reference/typescript/enums"
+            ]
+          },
+          {
+            "group": "Python",
+            "pages": [
+              "api-reference/python/constructs",
+              "api-reference/python/classes",
+              "api-reference/python/structs",
+              "api-reference/python/protocols",
+              "api-reference/python/enums"
+            ]
+          },
+          {
+            "group": "Java",
+            "pages": [
+              "api-reference/java/constructs",
+              "api-reference/java/classes",
+              "api-reference/java/structs",
+              "api-reference/java/protocols",
+              "api-reference/java/enums"
+            ]
+          },
+          {
+            "group": "Go",
+            "pages": [
+              "api-reference/go/constructs",
+              "api-reference/go/classes",
+              "api-reference/go/structs",
+              "api-reference/go/protocols",
+              "api-reference/go/enums"
+            ]
+          },
+          {
+            "group": "C#",
+            "pages": [
+              "api-reference/csharp/constructs",
+              "api-reference/csharp/classes",
+              "api-reference/csharp/structs",
+              "api-reference/csharp/protocols",
+              "api-reference/csharp/enums"
             ]
           }
         ]
