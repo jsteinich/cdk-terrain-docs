@@ -227,12 +227,13 @@ When both packages are installed:
 ### Options
 
 1. **Wait**: Use `@cdktf/provider-*` until `@cdktn/provider-*` is released
-2. **Generate locally** (Recommended): Use `cdktn get` to generate provider bindings without prebuilt packages
+2. **Generate locally** (Recommended): Use [`cdktn get`](https://cdktn.io/docs/cli-reference/commands#get) to generate provider bindings without prebuilt packages
 
 ```bash
 # Generate local provider bindings (recommended for clean migration)
 cdktn get
 ```
+> **Note**: Generating provider bindings for larger providers uses a significant amount of memory (up to 16GB).
 
 ## Verification
 
@@ -245,11 +246,11 @@ cdktn synth
 # Verify output
 ls cdktf.out/stacks/*/cdk.tf.json
 
-# Check no cdktf imports remain (TypeScript)
+# Check no cdktf imports remain (TypeScript example)
 grep -r "from \"cdktf\"" src/
 grep -r "from '@cdktf/" src/
 
-# Run tests
+# Run tests (TypeScript example)
 npm test
 ```
 
