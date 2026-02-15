@@ -1,0 +1,316 @@
+---
+title: Migrating to CDKTN
+sidebarTitle: Migrating to CDKTN
+description: >-
+  First release of CDK Terrain.
+---
+
+0.22 is the first release of CDK Terrain (`cdktn`), the community continuation of CDK for Terraform (`cdktf`).
+
+## Migration Process
+
+### CLI
+
+```bash
+# Install the new CLI
+npm install -g cdktn-cli
+```
+
+The `cdktn` cli should be fully compatible with existing CDK for Terraform projects for at least v0.22.
+
+### Projects by Language
+
+#### TypeScript/JavaScript
+
+**1. Update package.json dependencies:**
+
+```diff
+{
+  "dependencies": {
+-   "cdktf": "^0.21.0",
++   "cdktn": "^0.22.0",
+-   "@cdktf/provider-aws": "^19.0.0"
++   "@cdktn/provider-aws": "^20.0.0"
+  },
+  "devDependencies": {
+-   "cdktf-cli": "^0.21.0"
++   "cdktn-cli": "^0.22.0"
+  }
+}
+```
+
+**2. Update imports:**
+
+```diff
+- import { App, TerraformStack, TerraformOutput } from "cdktf";
++ import { App, TerraformStack, TerraformOutput } from "cdktn";
+
+- import { AwsProvider } from "@cdktf/provider-aws/lib/provider";
++ import { AwsProvider } from "@cdktn/provider-aws/lib/provider";
+```
+
+**3. Update npm scripts:**
+
+```diff
+{
+  "scripts": {
+-   "get": "cdktf get",
+-   "synth": "cdktf synth"
++   "get": "cdktn get",
++   "synth": "cdktn synth"
+  }
+}
+```
+
+**4. Reinstall dependencies:**
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+#### Python
+
+**1. Update requirements.txt or Pipfile:**
+
+```diff
+- cdktf>=0.21.0
++ cdktn>=0.22.0
+
+- cdktf-cdktf-provider-aws>=19.0.0
++ cdktn-provider-aws>=20.0.0
+```
+
+**2. Update imports:**
+
+```diff
+- from cdktf import App, TerraformStack, TerraformOutput
++ from cdktn import App, TerraformStack, TerraformOutput
+
+- from cdktf_cdktf_provider_aws.provider import AwsProvider
++ from cdktn_provider_aws.provider import AwsProvider
+```
+
+**3. Reinstall dependencies:**
+
+```bash
+pip install -r requirements.txt --force-reinstall
+# or with pipenv
+pipenv install --dev
+```
+
+#### Go
+
+**1. Update go.mod:**
+
+```diff
+require (
+-   github.com/hashicorp/terraform-cdk-go/cdktf v0.21.0
++   github.com/open-constructs/cdk-terrain-go/cdktn v0.22.0
+)
+```
+
+**2. Update imports:**
+
+```diff
+- import "github.com/hashicorp/terraform-cdk-go/cdktf"
++ import "github.com/open-constructs/cdk-terrain-go/cdktn"
+- import "github.com/cdktf/cdktf-provider-aws-go/aws/v19/provider"
++ import "github.com/cdktn-io/cdktn-provider-aws-go/aws/v20/provider"
+
+// Update all cdktf.* references to cdktn.*
+- app := cdktf.NewApp(nil)
++ app := cdktn.NewApp(nil)
+```
+
+**3. Update modules:**
+
+```bash
+go mod tidy
+```
+
+#### Java
+
+**1. Update build.gradle:**
+
+```diff
+dependencies {
+-   implementation "com.hashicorp:cdktf:0.21.0"
++   implementation "io.cdktn:cdktn:0.22.0"
+}
+```
+> **Note**: Initially the release is only available on GitHub packages. [More Info](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry)
+
+> **Note**: Prebuilt providers are currently published to npm, PyPI, and Go modules only. Java (Maven Central) and C# (NuGet) prebuilt provider publishing may be added in future releases.
+
+**2. Update imports:**
+
+```diff
+- import com.hashicorp.cdktf.App;
+- import com.hashicorp.cdktf.TerraformStack;
++ import io.cdktn.cdktn.App;
++ import io.cdktn.cdktn.TerraformStack;
+```
+
+**3. Rebuild:**
+
+```bash
+./gradlew build
+```
+
+#### C#
+
+**1. Update .csproj:**
+
+```diff
+<ItemGroup>
+-   <PackageReference Include="HashiCorp.Cdktf" Version="0.21.0" />
++   <PackageReference Include="Io.Cdktn" Version="0.22.0" />
+</ItemGroup>
+```
+
+> **Note**: Initially the release is only available on GitHub packages. [More Info](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry)
+
+> **Note**: Prebuilt providers are currently published to npm, PyPI, and Go modules only. Java (Maven Central) and C# (NuGet) prebuilt provider publishing may be added in future releases.
+
+**2. Update using directives:**
+
+```diff
+- using HashiCorp.Cdktf;
++ using Io.Cdktn;
+```
+
+**3. Restore packages:**
+
+```bash
+dotnet restore
+```
+
+## What Stays the Same
+
+The following items are unchanged and backward compatible:
+
+| Item                       | Value                 | Notes             |
+| -------------------------- | --------------------- | ----------------- |
+| Configuration file         | `cdktf.json`          | No rename needed  |
+| Output directory           | `cdktf.out/`          | Still the default |
+| Environment variables      | `CDKTF_*`             | Still honored     |
+| Home directory             | `~/.cdktf`            | Still used        |
+| Terraform provider sources | `hashicorp/aws`, etc. | Unchanged         |
+| Terraform state            | Your `.tfstate` files | Unaffected        |
+
+## Transitional Period (Dual Dependencies)
+
+If you use prebuilt providers that haven't been updated to `@cdktn/provider-*` yet, you may temporarily have both `cdktf` and `cdktn` installed:
+
+```json
+{
+  "dependencies": {
+    "cdktn": "^0.22.0",
+    "@cdktf/provider-aws": "^19.0.0" // Still uses cdktf peer dep
+  }
+}
+```
+
+This is partially supported but not recommended long-term. You may run into [type errors](#type-errors-with-dual-dependencies) depending on your usage.
+
+### Bundle Size Impact
+
+When both packages are installed:
+
+- **Bundle size**: Approximately 2x larger (both packages included)
+- **Tree-shaking**: Bundlers will remove unused exports, reducing actual impact
+- **Shared dependencies**: `constructs` is deduplicated between packages
+
+**Recommendation**: Complete migration promptly to reduce bundle size and complexity.
+
+### Options
+
+1. **Wait**: Use `@cdktf/provider-*` until `@cdktn/provider-*` is released
+2. **Generate locally** (Recommended): Use [`cdktn get`](https://cdktn.io/docs/cli-reference/commands#get) to generate provider bindings without prebuilt packages
+
+```bash
+# Generate local provider bindings (recommended for clean migration)
+cdktn get
+```
+> **Note**: Generating provider bindings for larger providers uses a significant amount of memory (up to 16GB).
+
+## Verification
+
+After migration, verify your project works:
+
+```bash
+# Synthesize
+cdktn synth
+
+# Verify output
+ls cdktf.out/stacks/*/cdk.tf.json
+
+# Check no cdktf imports remain (TypeScript example)
+grep -r "from \"cdktf\"" src/
+grep -r "from '@cdktf/" src/
+
+# Run tests (TypeScript example)
+npm test
+```
+
+## Troubleshooting
+
+### "Module not found" errors
+
+Ensure you've updated ALL imports. Search for remaining `cdktf` references:
+
+```bash
+# TypeScript
+grep -rn "cdktf" --include="*.ts" --include="*.tsx"
+
+# Python
+grep -rn "cdktf" --include="*.py"
+```
+
+### Type errors with dual dependencies
+
+If you have both `cdktf` and `cdktn` installed you may run into errors such as:
+```
+Type 'TerraformCount' is not assignable to type 'number | TerraformCount | undefined'.
+  Type 'import("node_modules/cdktn/lib/terraform-count").TerraformCount' is not assignable to type 'import("node_modules/cdktf/lib/terraform-count").TerraformCount'.
+    Types have separate declarations of a private property 'count'.
+```
+This is a result of types not matching (one is `cdktf` (referenced by cdktf providers) and the other is `cdktn`).
+
+Depending on your language / package manager you may be able to resolve temporarily until `cdktn` providers are available.
+
+Using [pnpm](https://pnpm.io/settings#overrides) it would look like:
+
+```
+# In pnpm-workspace.yaml
+
+overrides:
+  cdktf: "$cdktn"
+```
+
+It may also be possible to specifically reference the `cdktf` version of a type temporarily. For example:
+```diff
+- Lifecycle = new TerraformResourceLifecycle()
++ Lifecycle = new Hashicorp.Cdktf.TerraformResourceLifecycle()
+```
+
+### Provider version conflicts
+
+If a prebuilt provider requires a specific `cdktf` version:
+
+1. Check if `@cdktn/provider-*` version is available
+2. If not, use `cdktn get` to generate local bindings
+
+### State drift after migration
+
+If you see state drift after migration, verify:
+
+1. Internal symbols were NOT changed (they should still be `cdktf/*`)
+2. Logical IDs were NOT changed (still `__cdktf_*`)
+3. Run `cdktn diff` to see actual differences
+
+## Getting Help
+
+- Ask question in [the cdk.dev Slack](https://cdk.dev/)
+- GitHub Issues: https://github.com/open-constructs/cdk-terrain/issues

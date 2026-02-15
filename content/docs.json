@@ -94,6 +94,7 @@
                 "expanded": false,
                 "pages": [
                   "release/index",
+                  "release/upgrade-guide-v0-22",
                   "release/upgrade-guide-v0-19",
                   "release/upgrade-guide-v0-18",
                   "release/upgrade-guide-v0-17",
