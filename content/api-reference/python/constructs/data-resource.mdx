@@ -1,0 +1,886 @@
+---
+title: "Python: DataResource"
+sidebarTitle: DataResource
+description: CDKTN Core API Reference for DataResource in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+The DataResource implements the standard resource lifecycle, but does not directly take any other actions.
+
+You can use the DataResource resource without requiring or configuring a provider.
+
+The DataResource resource is useful for storing values which need to follow a manage resource lifecycle, and for triggering provisioners when there is no other logical managed resource in which to place them.
+
+It requires Terraform 1.4 or later.
+
+It is also possible to generate these bindings by adding "terraform.io/builtin/terraform" to the "terraformProviders" key in your cdktf.json file and running "cdktn get".
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data
+
+## Initializers <a name="Initializers" id="cdktn.DataResource.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.DataResource(
+  scope: Construct,
+  id: str,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
+  depends_on: typing.List[ITerraformDependable] = None,
+  for_each: ITerraformIterator = None,
+  lifecycle: TerraformResourceLifecycle = None,
+  provider: TerraformProvider = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
+  input: typing.Mapping[typing.Any] = None,
+  triggers_replace: typing.Mapping[typing.Any] = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.connection">connection</a></code> | <code><a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a> &#124; <a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.count">count</a></code> | <code>typing.Union\[int, float] &#124; <a href="#cdktn.TerraformCount">TerraformCount</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.dependsOn">depends\_on</a></code> | <code>typing.List\[<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>]</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.forEach">for\_each</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.lifecycle">lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.provider">provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List\[<a href="#cdktn.FileProvisioner">FileProvisioner</a> &#124; <a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a> &#124; <a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>]</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.input">input</a></code> | <code>typing.Mapping\[typing.Any]</code> | (Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply. |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.triggersReplace">triggers\_replace</a></code> | <code>typing.Mapping\[typing.Any]</code> | (Optional) A value which is stored in the instance state, and will force replacement when the value changes. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataResource.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataResource.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+The scoped construct ID.
+
+Must be unique amongst siblings in the same scope
+
+***
+
+### `connection`<sup>Optional</sup> <a name="connection" id="cdktn.DataResource.Initializer.parameter.connection"></a>
+
+- *Type:* <a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a> | <a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a>
+
+***
+
+### `count`<sup>Optional</sup> <a name="count" id="cdktn.DataResource.Initializer.parameter.count"></a>
+
+- *Type:* typing.Union\[int, float] | <a href="#cdktn.TerraformCount">TerraformCount</a>
+
+***
+
+### `depends_on`<sup>Optional</sup> <a name="depends_on" id="cdktn.DataResource.Initializer.parameter.dependsOn"></a>
+
+- *Type:* typing.List\[<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>]
+
+***
+
+### `for_each`<sup>Optional</sup> <a name="for_each" id="cdktn.DataResource.Initializer.parameter.forEach"></a>
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="cdktn.DataResource.Initializer.parameter.lifecycle"></a>
+
+- *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
+
+***
+
+### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.DataResource.Initializer.parameter.provider"></a>
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### `provisioners`<sup>Optional</sup> <a name="provisioners" id="cdktn.DataResource.Initializer.parameter.provisioners"></a>
+
+- *Type:* typing.List\[<a href="#cdktn.FileProvisioner">FileProvisioner</a> | <a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a> | <a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>]
+
+***
+
+### `input`<sup>Optional</sup> <a name="input" id="cdktn.DataResource.Initializer.parameter.input"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+(Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#input
+
+***
+
+### `triggers_replace`<sup>Optional</sup> <a name="triggers_replace" id="cdktn.DataResource.Initializer.parameter.triggersReplace"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+(Optional) A value which is stored in the instance state, and will force replacement when the value changes.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#triggers\_replace
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataResource.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.DataResource.addOverride">add\_override</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.overrideLogicalId">override\_logical\_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.DataResource.resetOverrideLogicalId">reset\_override\_logical\_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.DataResource.toHclTerraform">to\_hcl\_terraform</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.toMetadata">to\_metadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.toTerraform">to\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataResource.addMoveTarget">add\_move\_target</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
+| <code><a href="#cdktn.DataResource.getAnyMapAttribute">get\_any\_map\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getBooleanAttribute">get\_boolean\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getBooleanMapAttribute">get\_boolean\_map\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getListAttribute">get\_list\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getNumberAttribute">get\_number\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getNumberListAttribute">get\_number\_list\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getNumberMapAttribute">get\_number\_map\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getStringAttribute">get\_string\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getStringMapAttribute">get\_string\_map\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.hasResourceMove">has\_resource\_move</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.importFrom">import\_from</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.interpolationForAttribute">interpolation\_for\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.moveFromId">move\_from\_id</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#cdktn.DataResource.moveTo">move\_to</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#cdktn.DataResource.moveToId">move\_to\_id</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#cdktn.DataResource.resetInput">reset\_input</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.resetTriggersReplace">reset\_triggers\_replace</a></code> | *No description.* |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.DataResource.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `add_override` <a name="add_override" id="cdktn.DataResource.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.DataResource.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.DataResource.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `override_logical_id` <a name="override_logical_id" id="cdktn.DataResource.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="cdktn.DataResource.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+***
+
+### `reset_override_logical_id` <a name="reset_override_logical_id" id="cdktn.DataResource.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.DataResource.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+### `to_metadata` <a name="to_metadata" id="cdktn.DataResource.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+### `to_terraform` <a name="to_terraform" id="cdktn.DataResource.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `add_move_target` <a name="add_move_target" id="cdktn.DataResource.addMoveTarget"></a>
+
+```python
+def add_move_target(
+  move_target: str
+) -> None
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+#### `move_target`<sup>Required</sup> <a name="move_target" id="cdktn.DataResource.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* str
+
+The string move target that will correspond to this resource.
+
+***
+
+### `get_any_map_attribute` <a name="get_any_map_attribute" id="cdktn.DataResource.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+#### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.DataResource.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+### `get_boolean_attribute` <a name="get_boolean_attribute" id="cdktn.DataResource.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+#### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.DataResource.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="cdktn.DataResource.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+#### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.DataResource.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+### `get_list_attribute` <a name="get_list_attribute" id="cdktn.DataResource.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+#### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.DataResource.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+### `get_number_attribute` <a name="get_number_attribute" id="cdktn.DataResource.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+#### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.DataResource.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+### `get_number_list_attribute` <a name="get_number_list_attribute" id="cdktn.DataResource.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+#### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.DataResource.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+### `get_number_map_attribute` <a name="get_number_map_attribute" id="cdktn.DataResource.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+#### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.DataResource.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+### `get_string_attribute` <a name="get_string_attribute" id="cdktn.DataResource.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+#### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.DataResource.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+### `get_string_map_attribute` <a name="get_string_map_attribute" id="cdktn.DataResource.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+#### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.DataResource.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+### `has_resource_move` <a name="has_resource_move" id="cdktn.DataResource.hasResourceMove"></a>
+
+```python
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
+```
+
+### `import_from` <a name="import_from" id="cdktn.DataResource.importFrom"></a>
+
+```python
+def import_from(
+  id: str,
+  provider: TerraformProvider = None
+) -> None
+```
+
+#### `id`<sup>Required</sup> <a name="id" id="cdktn.DataResource.importFrom.parameter.id"></a>
+
+- *Type:* str
+
+***
+
+#### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.DataResource.importFrom.parameter.provider"></a>
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="cdktn.DataResource.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+#### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.DataResource.interpolationForAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+### `move_from_id` <a name="move_from_id" id="cdktn.DataResource.moveFromId"></a>
+
+```python
+def move_from_id(
+  id: str
+) -> None
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+#### `id`<sup>Required</sup> <a name="id" id="cdktn.DataResource.moveFromId.parameter.id"></a>
+
+- *Type:* str
+
+Full id of resource being moved from, e.g. "aws\_s3\_bucket.example".
+
+***
+
+### `move_to` <a name="move_to" id="cdktn.DataResource.moveTo"></a>
+
+```python
+def move_to(
+  move_target: str,
+  index: str | typing.Union[int, float] = None
+) -> None
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+#### `move_target`<sup>Required</sup> <a name="move_target" id="cdktn.DataResource.moveTo.parameter.moveTarget"></a>
+
+- *Type:* str
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+***
+
+#### `index`<sup>Optional</sup> <a name="index" id="cdktn.DataResource.moveTo.parameter.index"></a>
+
+- *Type:* str | typing.Union\[int, float]
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+***
+
+### `move_to_id` <a name="move_to_id" id="cdktn.DataResource.moveToId"></a>
+
+```python
+def move_to_id(
+  id: str
+) -> None
+```
+
+Moves this resource to the resource corresponding to "id".
+
+#### `id`<sup>Required</sup> <a name="id" id="cdktn.DataResource.moveToId.parameter.id"></a>
+
+- *Type:* str
+
+Full id of resource to move to, e.g. "aws\_s3\_bucket.example".
+
+***
+
+### `reset_input` <a name="reset_input" id="cdktn.DataResource.resetInput"></a>
+
+```python
+def reset_input() -> None
+```
+
+### `reset_triggers_replace` <a name="reset_triggers_replace" id="cdktn.DataResource.resetTriggersReplace"></a>
+
+```python
+def reset_triggers_replace() -> None
+```
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataResource.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.DataResource.isTerraformElement">is\_terraform\_element</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.isTerraformResource">is\_terraform\_resource</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.generateConfigForImport">generate\_config\_for\_import</a></code> | Generates CDKTN code for importing a Data resource upon running "cdktn plan &lt; stack-name >". |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.DataResource.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.DataResource.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataResource.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_terraform_element` <a name="is_terraform_element" id="cdktn.DataResource.isTerraformElement"></a>
+
+```python
+import cdktn
+
+cdktn.DataResource.is_terraform_element(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataResource.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `is_terraform_resource` <a name="is_terraform_resource" id="cdktn.DataResource.isTerraformResource"></a>
+
+```python
+import cdktn
+
+cdktn.DataResource.is_terraform_resource(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataResource.isTerraformResource.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `generate_config_for_import` <a name="generate_config_for_import" id="cdktn.DataResource.generateConfigForImport"></a>
+
+```python
+import cdktn
+
+cdktn.DataResource.generate_config_for_import(
+  scope: Construct,
+  import_to_id: str,
+  import_from_id: str,
+  provider: TerraformProvider = None
+)
+```
+
+Generates CDKTN code for importing a Data resource upon running "cdktn plan &lt; stack-name >".
+
+#### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataResource.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+***
+
+#### `import_to_id`<sup>Required</sup> <a name="import_to_id" id="cdktn.DataResource.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* str
+
+The construct id used in the generated config for the Data to import.
+
+***
+
+#### `import_from_id`<sup>Required</sup> <a name="import_from_id" id="cdktn.DataResource.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* str
+
+The id of the existing Data that should be imported.
+
+Refer to the [import section](https://terraform.io/providers/builtin/terraform/latest/docs/resources/data#import) in the documentation of this resource for the id to use
+
+***
+
+#### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.DataResource.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+? Optional instance of the provider where the Data to import is found.
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataResource.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.DataResource.property.cdktfStack">cdktf\_stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.friendlyUniqueId">friendly\_unique\_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.terraformMetaArguments">terraform\_meta\_arguments</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.terraformResourceType">terraform\_resource\_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.terraformGeneratorMetadata">terraform\_generator\_metadata</a></code> | <code><a href="#cdktn.TerraformProviderGeneratorMetadata">TerraformProviderGeneratorMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.connection">connection</a></code> | <code><a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a> &#124; <a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.count">count</a></code> | <code>typing.Union\[int, float] &#124; <a href="#cdktn.TerraformCount">TerraformCount</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.dependsOn">depends\_on</a></code> | <code>typing.List\[str]</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.forEach">for\_each</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.lifecycle">lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.provider">provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.provisioners">provisioners</a></code> | <code>typing.List\[<a href="#cdktn.FileProvisioner">FileProvisioner</a> &#124; <a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a> &#124; <a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>]</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.output">output</a></code> | <code><a href="#cdktn.AnyMap">AnyMap</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.inputInput">input\_input</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.triggersReplaceInput">triggers\_replace\_input</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.input">input</a></code> | <code>typing.Mapping\[typing.Any]</code> | (Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply. |
+| <code><a href="#cdktn.DataResource.property.triggersReplace">triggers\_replace</a></code> | <code>typing.Mapping\[typing.Any]</code> | (Optional) A value which is stored in the instance state, and will force replacement when the value changes. |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.DataResource.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="cdktn.DataResource.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.DataResource.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+
+### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="cdktn.DataResource.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+***
+
+### `terraform_meta_arguments`<sup>Required</sup> <a name="terraform_meta_arguments" id="cdktn.DataResource.property.terraformMetaArguments"></a>
+
+```python
+terraform_meta_arguments: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `terraform_resource_type`<sup>Required</sup> <a name="terraform_resource_type" id="cdktn.DataResource.property.terraformResourceType"></a>
+
+```python
+terraform_resource_type: str
+```
+
+- *Type:* str
+
+***
+
+### `terraform_generator_metadata`<sup>Optional</sup> <a name="terraform_generator_metadata" id="cdktn.DataResource.property.terraformGeneratorMetadata"></a>
+
+```python
+terraform_generator_metadata: TerraformProviderGeneratorMetadata
+```
+
+- *Type:* <a href="#cdktn.TerraformProviderGeneratorMetadata">TerraformProviderGeneratorMetadata</a>
+
+***
+
+### `connection`<sup>Optional</sup> <a name="connection" id="cdktn.DataResource.property.connection"></a>
+
+```python
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
+```
+
+- *Type:* <a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a> | <a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a>
+
+***
+
+### `count`<sup>Optional</sup> <a name="count" id="cdktn.DataResource.property.count"></a>
+
+```python
+count: typing.Union[int, float] | TerraformCount
+```
+
+- *Type:* typing.Union\[int, float] | <a href="#cdktn.TerraformCount">TerraformCount</a>
+
+***
+
+### `depends_on`<sup>Optional</sup> <a name="depends_on" id="cdktn.DataResource.property.dependsOn"></a>
+
+```python
+depends_on: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+***
+
+### `for_each`<sup>Optional</sup> <a name="for_each" id="cdktn.DataResource.property.forEach"></a>
+
+```python
+for_each: ITerraformIterator
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="cdktn.DataResource.property.lifecycle"></a>
+
+```python
+lifecycle: TerraformResourceLifecycle
+```
+
+- *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
+
+***
+
+### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.DataResource.property.provider"></a>
+
+```python
+provider: TerraformProvider
+```
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### `provisioners`<sup>Optional</sup> <a name="provisioners" id="cdktn.DataResource.property.provisioners"></a>
+
+```python
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
+```
+
+- *Type:* typing.List\[<a href="#cdktn.FileProvisioner">FileProvisioner</a> | <a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a> | <a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>]
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataResource.property.id"></a>
+
+```python
+id: str
+```
+
+- *Type:* str
+
+***
+
+### `output`<sup>Required</sup> <a name="output" id="cdktn.DataResource.property.output"></a>
+
+```python
+output: AnyMap
+```
+
+- *Type:* <a href="#cdktn.AnyMap">AnyMap</a>
+
+***
+
+### `input_input`<sup>Optional</sup> <a name="input_input" id="cdktn.DataResource.property.inputInput"></a>
+
+```python
+input_input: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `triggers_replace_input`<sup>Optional</sup> <a name="triggers_replace_input" id="cdktn.DataResource.property.triggersReplaceInput"></a>
+
+```python
+triggers_replace_input: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `input`<sup>Required</sup> <a name="input" id="cdktn.DataResource.property.input"></a>
+
+```python
+input: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping\[typing.Any]
+
+(Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#input
+
+***
+
+### `triggers_replace`<sup>Required</sup> <a name="triggers_replace" id="cdktn.DataResource.property.triggersReplace"></a>
+
+```python
+triggers_replace: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping\[typing.Any]
+
+(Optional) A value which is stored in the instance state, and will force replacement when the value changes.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#triggers\_replace
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataResource.property.tfResourceType">tfResourceType</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="cdktn.DataResource.property.tfResourceType"></a>
+
+```python
+tfResourceType: str
+```
+
+- *Type:* str
+
+***
+

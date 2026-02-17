@@ -1,0 +1,57 @@
+---
+title: "Go: ISynthesisSession"
+sidebarTitle: ISynthesisSession
+description: CDKTN Core API Reference for ISynthesisSession in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implemented By:* <a href="#cdktn.ISynthesisSession">ISynthesisSession</a>
+
+Represents a single session of synthesis.
+
+Passed into `TerraformStack.onSynthesize()` methods.
+originally from aws/constructs lib v3.3.126 (synth functionality was removed in constructs v10)
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.ISynthesisSession.property.manifest">Manifest</a></code> | <code><a href="#cdktn.Manifest">Manifest</a></code> | *No description.* |
+| <code><a href="#cdktn.ISynthesisSession.property.outdir">Outdir</a></code> | <code>\*string</code> | The output directory for this synthesis session. |
+| <code><a href="#cdktn.ISynthesisSession.property.skipValidation">SkipValidation</a></code> | <code>\*bool</code> | *No description.* |
+
+***
+
+### `Manifest`<sup>Required</sup> <a name="Manifest" id="cdktn.ISynthesisSession.property.manifest"></a>
+
+```go
+func Manifest() Manifest
+```
+
+- *Type:* <a href="#cdktn.Manifest">Manifest</a>
+
+***
+
+### `Outdir`<sup>Required</sup> <a name="Outdir" id="cdktn.ISynthesisSession.property.outdir"></a>
+
+```go
+func Outdir() *string
+```
+
+- *Type:* \*string
+
+The output directory for this synthesis session.
+
+***
+
+### `SkipValidation`<sup>Optional</sup> <a name="SkipValidation" id="cdktn.ISynthesisSession.property.skipValidation"></a>
+
+```go
+func SkipValidation() *bool
+```
+
+- *Type:* \*bool
+
+***
+

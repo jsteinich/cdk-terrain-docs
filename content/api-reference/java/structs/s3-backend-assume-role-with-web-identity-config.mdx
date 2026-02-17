@@ -1,0 +1,136 @@
+---
+title: "Java: S3BackendAssumeRoleWithWebIdentityConfig"
+sidebarTitle: S3BackendAssumeRoleWithWebIdentityConfig
+description: CDKTN Core API Reference for S3BackendAssumeRoleWithWebIdentityConfig in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.S3BackendAssumeRoleWithWebIdentityConfig;
+
+S3BackendAssumeRoleWithWebIdentityConfig.builder()
+//  .duration(java.lang.String)
+//  .policy(java.lang.String)
+//  .policyArns(java.util.List<java.lang.String>)
+//  .roleArn(java.lang.String)
+//  .sessionName(java.lang.String)
+//  .webIdentityToken(java.lang.String)
+//  .webIdentityTokenFile(java.lang.String)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.duration">duration</a></code> | <code>java.lang.String</code> | (Optional) The duration individual credentials will be valid. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.policy">policy</a></code> | <code>java.lang.String</code> | (Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.policyArns">policyArns</a></code> | <code>java.util.List&lt; java.lang.String ></code> | (Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.roleArn">roleArn</a></code> | <code>java.lang.String</code> | (Required) Amazon Resource Name (ARN) of the IAM Role to assume. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.sessionName">sessionName</a></code> | <code>java.lang.String</code> | (Optional) Session name to use when assuming the role. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.webIdentityToken">webIdentityToken</a></code> | <code>java.lang.String</code> | (Optional) The value of a web identity token from an OpenID Connect (OIDC) or OAuth provider. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.webIdentityTokenFile">webIdentityTokenFile</a></code> | <code>java.lang.String</code> | (Optional) File containing a web identity token from an OpenID Connect (OIDC) or OAuth provider. |
+
+***
+
+### `duration`<sup>Optional</sup> <a name="duration" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.duration"></a>
+
+```java
+public java.lang.String getDuration();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The duration individual credentials will be valid.
+
+Credentials are automatically renewed up to the maximum defined by the AWS account.
+Specified using the format &lt; hours >h&lt; minutes >m&lt; seconds >s with any unit being optional.
+For example, an hour and a half can be specified as 1h30m or 90m.
+Must be between 15 minutes (15m) and 12 hours (12h).
+
+***
+
+### `policy`<sup>Optional</sup> <a name="policy" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.policy"></a>
+
+```java
+public java.lang.String getPolicy();
+```
+
+- *Type:* java.lang.String
+
+(Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### `policyArns`<sup>Optional</sup> <a name="policyArns" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.policyArns"></a>
+
+```java
+public java.util.List<java.lang.String> getPolicyArns();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+(Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### `roleArn`<sup>Optional</sup> <a name="roleArn" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.roleArn"></a>
+
+```java
+public java.lang.String getRoleArn();
+```
+
+- *Type:* java.lang.String
+
+(Required) Amazon Resource Name (ARN) of the IAM Role to assume.
+
+Can also be set with the AWS\_ROLE\_ARN environment variable.
+
+***
+
+### `sessionName`<sup>Optional</sup> <a name="sessionName" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.sessionName"></a>
+
+```java
+public java.lang.String getSessionName();
+```
+
+- *Type:* java.lang.String
+
+(Optional) Session name to use when assuming the role.
+
+Can also be set with the AWS\_ROLE\_SESSION\_NAME environment variable.
+
+***
+
+### `webIdentityToken`<sup>Optional</sup> <a name="webIdentityToken" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.webIdentityToken"></a>
+
+```java
+public java.lang.String getWebIdentityToken();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The value of a web identity token from an OpenID Connect (OIDC) or OAuth provider.
+
+One of web\_identity\_token or web\_identity\_token\_file is required.
+
+***
+
+### `webIdentityTokenFile`<sup>Optional</sup> <a name="webIdentityTokenFile" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.webIdentityTokenFile"></a>
+
+```java
+public java.lang.String getWebIdentityTokenFile();
+```
+
+- *Type:* java.lang.String
+
+(Optional) File containing a web identity token from an OpenID Connect (OIDC) or OAuth provider.
+
+One of web\_identity\_token\_file or web\_identity\_token is required.
+Can also be set with the AWS\_WEB\_IDENTITY\_TOKEN\_FILE environment variable.
+
+***
+

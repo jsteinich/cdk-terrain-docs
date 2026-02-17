@@ -1,0 +1,90 @@
+---
+title: "Python: CosBackendAssumeRole"
+sidebarTitle: CosBackendAssumeRole
+description: CDKTN Core API Reference for CosBackendAssumeRole in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.CosBackendAssumeRole.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.CosBackendAssumeRole(
+  role_arn: str,
+  session_duration: typing.Union[int, float],
+  session_name: str,
+  policy: typing.Any = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.roleArn">role\_arn</a></code> | <code>str</code> | (Required) The ARN of the role to assume. |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.sessionDuration">session\_duration</a></code> | <code>typing.Union\[int, float]</code> | (Required) The duration of the session when making the AssumeRole call. |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.sessionName">session\_name</a></code> | <code>str</code> | (Required) The session name to use when making the AssumeRole call. |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.policy">policy</a></code> | <code>typing.Any</code> | (Optional) A more restrictive policy when making the AssumeRole call. |
+
+***
+
+### `role_arn`<sup>Required</sup> <a name="role_arn" id="cdktn.CosBackendAssumeRole.property.roleArn"></a>
+
+```python
+role_arn: str
+```
+
+- *Type:* str
+
+(Required) The ARN of the role to assume.
+
+It can be sourced from the TENCENTCLOUD\_ASSUME\_ROLE\_ARN.
+
+***
+
+### `session_duration`<sup>Required</sup> <a name="session_duration" id="cdktn.CosBackendAssumeRole.property.sessionDuration"></a>
+
+```python
+session_duration: typing.Union[int, float]
+```
+
+- *Type:* typing.Union\[int, float]
+
+(Required) The duration of the session when making the AssumeRole call.
+
+Its value ranges from 0 to 43200(seconds), and default is 7200 seconds.
+It can be sourced from the TENCENTCLOUD\_ASSUME\_ROLE\_SESSION\_DURATION.
+
+***
+
+### `session_name`<sup>Required</sup> <a name="session_name" id="cdktn.CosBackendAssumeRole.property.sessionName"></a>
+
+```python
+session_name: str
+```
+
+- *Type:* str
+
+(Required) The session name to use when making the AssumeRole call.
+
+It can be sourced from the TENCENTCLOUD\_ASSUME\_ROLE\_SESSION\_NAME.
+
+***
+
+### `policy`<sup>Optional</sup> <a name="policy" id="cdktn.CosBackendAssumeRole.property.policy"></a>
+
+```python
+policy: typing.Any
+```
+
+- *Type:* typing.Any
+
+(Optional) A more restrictive policy when making the AssumeRole call.
+
+Its content must not contains principal elements.
+Please refer to [policies syntax logic](https://www.tencentcloud.com/document/product/598/10603).
+
+***
+

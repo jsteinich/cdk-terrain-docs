@@ -1,0 +1,436 @@
+---
+title: "Python: Testing"
+sidebarTitle: Testing
+description: CDKTN Core API Reference for Testing in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Testing utilities for cdktf applications.
+
+## Initializers <a name="Initializers" id="cdktn.Testing.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.Testing()
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Testing.app">app</a></code> | Returns an app for testing with the following properties: - Output directory is a temp dir. |
+| <code><a href="#cdktn.Testing.enableFutureFlags">enable\_future\_flags</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.fakeCdktfJsonPath">fake\_cdktf\_json\_path</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.fullSynth">full\_synth</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.renderConstructTree">render\_construct\_tree</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.setupJest">setup\_jest</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.stubVersion">stub\_version</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.synth">synth</a></code> | Returns the Terraform synthesized JSON. |
+| <code><a href="#cdktn.Testing.synthHcl">synth\_hcl</a></code> | Returns the Terraform synthesized JSON. |
+| <code><a href="#cdktn.Testing.synthScope">synth\_scope</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toBeValidTerraform">to\_be\_valid\_terraform</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveDataSource">to\_have\_data\_source</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveDataSourceWithProperties">to\_have\_data\_source\_with\_properties</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveProvider">to\_have\_provider</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveProviderWithProperties">to\_have\_provider\_with\_properties</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveResource">to\_have\_resource</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveResourceWithProperties">to\_have\_resource\_with\_properties</a></code> | *No description.* |
+
+***
+
+### `app` <a name="app" id="cdktn.Testing.app"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.app(
+  context: typing.Mapping[typing.Any] = None,
+  enable_future_flags: bool = None,
+  fake_cdktf_json_path: bool = None,
+  outdir: str = None,
+  stack_traces: bool = None,
+  stub_version: bool = None
+)
+```
+
+Returns an app for testing with the following properties: - Output directory is a temp dir.
+
+#### `context`<sup>Optional</sup> <a name="context" id="cdktn.Testing.app.parameter.context"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+#### `enable_future_flags`<sup>Optional</sup> <a name="enable_future_flags" id="cdktn.Testing.app.parameter.enableFutureFlags"></a>
+
+- *Type:* bool
+
+***
+
+#### `fake_cdktf_json_path`<sup>Optional</sup> <a name="fake_cdktf_json_path" id="cdktn.Testing.app.parameter.fakeCdktfJsonPath"></a>
+
+- *Type:* bool
+
+***
+
+#### `outdir`<sup>Optional</sup> <a name="outdir" id="cdktn.Testing.app.parameter.outdir"></a>
+
+- *Type:* str
+
+***
+
+#### `stack_traces`<sup>Optional</sup> <a name="stack_traces" id="cdktn.Testing.app.parameter.stackTraces"></a>
+
+- *Type:* bool
+
+***
+
+#### `stub_version`<sup>Optional</sup> <a name="stub_version" id="cdktn.Testing.app.parameter.stubVersion"></a>
+
+- *Type:* bool
+
+***
+
+### `enable_future_flags` <a name="enable_future_flags" id="cdktn.Testing.enableFutureFlags"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.enable_future_flags(
+  app: App
+)
+```
+
+#### `app`<sup>Required</sup> <a name="app" id="cdktn.Testing.enableFutureFlags.parameter.app"></a>
+
+- *Type:* <a href="#cdktn.App">App</a>
+
+***
+
+### `fake_cdktf_json_path` <a name="fake_cdktf_json_path" id="cdktn.Testing.fakeCdktfJsonPath"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.fake_cdktf_json_path(
+  app: App
+)
+```
+
+#### `app`<sup>Required</sup> <a name="app" id="cdktn.Testing.fakeCdktfJsonPath.parameter.app"></a>
+
+- *Type:* <a href="#cdktn.App">App</a>
+
+***
+
+### `full_synth` <a name="full_synth" id="cdktn.Testing.fullSynth"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.full_synth(
+  stack: TerraformStack
+)
+```
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.Testing.fullSynth.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `render_construct_tree` <a name="render_construct_tree" id="cdktn.Testing.renderConstructTree"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.render_construct_tree(
+  construct: IConstruct
+)
+```
+
+#### `construct`<sup>Required</sup> <a name="construct" id="cdktn.Testing.renderConstructTree.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
+
+***
+
+### `setup_jest` <a name="setup_jest" id="cdktn.Testing.setupJest"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.setup_jest()
+```
+
+### `stub_version` <a name="stub_version" id="cdktn.Testing.stubVersion"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.stub_version(
+  app: App
+)
+```
+
+#### `app`<sup>Required</sup> <a name="app" id="cdktn.Testing.stubVersion.parameter.app"></a>
+
+- *Type:* <a href="#cdktn.App">App</a>
+
+***
+
+### `synth` <a name="synth" id="cdktn.Testing.synth"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.synth(
+  stack: TerraformStack,
+  run_validations: bool = None
+)
+```
+
+Returns the Terraform synthesized JSON.
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.Testing.synth.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `run_validations`<sup>Optional</sup> <a name="run_validations" id="cdktn.Testing.synth.parameter.runValidations"></a>
+
+- *Type:* bool
+
+***
+
+### `synth_hcl` <a name="synth_hcl" id="cdktn.Testing.synthHcl"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.synth_hcl(
+  stack: TerraformStack,
+  run_validations: bool = None,
+  return_metadata: bool = None
+)
+```
+
+Returns the Terraform synthesized JSON.
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.Testing.synthHcl.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `run_validations`<sup>Optional</sup> <a name="run_validations" id="cdktn.Testing.synthHcl.parameter.runValidations"></a>
+
+- *Type:* bool
+
+***
+
+#### `return_metadata`<sup>Optional</sup> <a name="return_metadata" id="cdktn.Testing.synthHcl.parameter.returnMetadata"></a>
+
+- *Type:* bool
+
+***
+
+### `synth_scope` <a name="synth_scope" id="cdktn.Testing.synthScope"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.synth_scope(
+  fn: IScopeCallback
+)
+```
+
+#### `fn`<sup>Required</sup> <a name="fn" id="cdktn.Testing.synthScope.parameter.fn"></a>
+
+- *Type:* <a href="#cdktn.IScopeCallback">IScopeCallback</a>
+
+***
+
+### `to_be_valid_terraform` <a name="to_be_valid_terraform" id="cdktn.Testing.toBeValidTerraform"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.to_be_valid_terraform(
+  received: str
+)
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toBeValidTerraform.parameter.received"></a>
+
+- *Type:* str
+
+***
+
+### `to_have_data_source` <a name="to_have_data_source" id="cdktn.Testing.toHaveDataSource"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.to_have_data_source(
+  received: str,
+  resource_type: str
+)
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveDataSource.parameter.received"></a>
+
+- *Type:* str
+
+***
+
+#### `resource_type`<sup>Required</sup> <a name="resource_type" id="cdktn.Testing.toHaveDataSource.parameter.resourceType"></a>
+
+- *Type:* str
+
+***
+
+### `to_have_data_source_with_properties` <a name="to_have_data_source_with_properties" id="cdktn.Testing.toHaveDataSourceWithProperties"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.to_have_data_source_with_properties(
+  received: str,
+  resource_type: str,
+  properties: typing.Mapping[typing.Any] = None
+)
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveDataSourceWithProperties.parameter.received"></a>
+
+- *Type:* str
+
+***
+
+#### `resource_type`<sup>Required</sup> <a name="resource_type" id="cdktn.Testing.toHaveDataSourceWithProperties.parameter.resourceType"></a>
+
+- *Type:* str
+
+***
+
+#### `properties`<sup>Optional</sup> <a name="properties" id="cdktn.Testing.toHaveDataSourceWithProperties.parameter.properties"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `to_have_provider` <a name="to_have_provider" id="cdktn.Testing.toHaveProvider"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.to_have_provider(
+  received: str,
+  resource_type: str
+)
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveProvider.parameter.received"></a>
+
+- *Type:* str
+
+***
+
+#### `resource_type`<sup>Required</sup> <a name="resource_type" id="cdktn.Testing.toHaveProvider.parameter.resourceType"></a>
+
+- *Type:* str
+
+***
+
+### `to_have_provider_with_properties` <a name="to_have_provider_with_properties" id="cdktn.Testing.toHaveProviderWithProperties"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.to_have_provider_with_properties(
+  received: str,
+  resource_type: str,
+  properties: typing.Mapping[typing.Any] = None
+)
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveProviderWithProperties.parameter.received"></a>
+
+- *Type:* str
+
+***
+
+#### `resource_type`<sup>Required</sup> <a name="resource_type" id="cdktn.Testing.toHaveProviderWithProperties.parameter.resourceType"></a>
+
+- *Type:* str
+
+***
+
+#### `properties`<sup>Optional</sup> <a name="properties" id="cdktn.Testing.toHaveProviderWithProperties.parameter.properties"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `to_have_resource` <a name="to_have_resource" id="cdktn.Testing.toHaveResource"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.to_have_resource(
+  received: str,
+  resource_type: str
+)
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveResource.parameter.received"></a>
+
+- *Type:* str
+
+***
+
+#### `resource_type`<sup>Required</sup> <a name="resource_type" id="cdktn.Testing.toHaveResource.parameter.resourceType"></a>
+
+- *Type:* str
+
+***
+
+### `to_have_resource_with_properties` <a name="to_have_resource_with_properties" id="cdktn.Testing.toHaveResourceWithProperties"></a>
+
+```python
+import cdktn
+
+cdktn.Testing.to_have_resource_with_properties(
+  received: str,
+  resource_type: str,
+  properties: typing.Mapping[typing.Any] = None
+)
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveResourceWithProperties.parameter.received"></a>
+
+- *Type:* str
+
+***
+
+#### `resource_type`<sup>Required</sup> <a name="resource_type" id="cdktn.Testing.toHaveResourceWithProperties.parameter.resourceType"></a>
+
+- *Type:* str
+
+***
+
+#### `properties`<sup>Optional</sup> <a name="properties" id="cdktn.Testing.toHaveResourceWithProperties.parameter.properties"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+

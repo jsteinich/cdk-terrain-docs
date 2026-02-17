@@ -1,0 +1,110 @@
+---
+title: "Python: Annotations"
+sidebarTitle: Annotations
+description: CDKTN Core API Reference for Annotations in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Includes API for attaching annotations such as warning messages to constructs.
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Annotations.addError">add\_error</a></code> | Adds an \{ "error": &lt; message > } metadata entry to this construct. |
+| <code><a href="#cdktn.Annotations.addInfo">add\_info</a></code> | Adds an info metadata entry to this construct. |
+| <code><a href="#cdktn.Annotations.addWarning">add\_warning</a></code> | Adds a warning metadata entry to this construct. |
+
+***
+
+### `add_error` <a name="add_error" id="cdktn.Annotations.addError"></a>
+
+```python
+def add_error(
+  message: str
+) -> None
+```
+
+Adds an \{ "error": &lt; message > } metadata entry to this construct.
+
+The toolkit will fail synthesis when errors are reported.
+
+#### `message`<sup>Required</sup> <a name="message" id="cdktn.Annotations.addError.parameter.message"></a>
+
+- *Type:* str
+
+The error message.
+
+***
+
+### `add_info` <a name="add_info" id="cdktn.Annotations.addInfo"></a>
+
+```python
+def add_info(
+  message: str
+) -> None
+```
+
+Adds an info metadata entry to this construct.
+
+The CLI will display the info message when apps are synthesized.
+
+#### `message`<sup>Required</sup> <a name="message" id="cdktn.Annotations.addInfo.parameter.message"></a>
+
+- *Type:* str
+
+The info message.
+
+***
+
+### `add_warning` <a name="add_warning" id="cdktn.Annotations.addWarning"></a>
+
+```python
+def add_warning(
+  message: str
+) -> None
+```
+
+Adds a warning metadata entry to this construct.
+
+The CLI will display the warning when an app is synthesized.
+In a future release the CLI might introduce a --strict flag which
+will then fail the synthesis if it encounters a warning.
+
+#### `message`<sup>Required</sup> <a name="message" id="cdktn.Annotations.addWarning.parameter.message"></a>
+
+- *Type:* str
+
+The warning message.
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Annotations.of">of</a></code> | Returns the annotations API for a construct scope. |
+
+***
+
+### `of` <a name="of" id="cdktn.Annotations.of"></a>
+
+```python
+import cdktn
+
+cdktn.Annotations.of(
+  scope: IConstruct
+)
+```
+
+Returns the annotations API for a construct scope.
+
+#### `scope`<sup>Required</sup> <a name="scope" id="cdktn.Annotations.of.parameter.scope"></a>
+
+- *Type:* constructs.IConstruct
+
+The scope.
+
+***
+

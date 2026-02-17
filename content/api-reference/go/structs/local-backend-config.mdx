@@ -1,0 +1,58 @@
+---
+title: "Go: LocalBackendConfig"
+sidebarTitle: LocalBackendConfig
+description: CDKTN Core API Reference for LocalBackendConfig in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+The local backend stores state on the local filesystem, locks that state using system APIs, and performs operations locally.
+
+Read more about this backend in the Terraform docs:
+https://developer.hashicorp.com/terraform/language/settings/backends/local
+
+## Initializer <a name="Initializer" id="cdktn.LocalBackendConfig.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+&cdktn.LocalBackendConfig {
+	Path: *string,
+	WorkspaceDir: *string,
+}
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.LocalBackendConfig.property.path">Path</a></code> | <code>\*string</code> | Path where the state file is stored. |
+| <code><a href="#cdktn.LocalBackendConfig.property.workspaceDir">WorkspaceDir</a></code> | <code>\*string</code> | (Optional) The path to non-default workspaces. |
+
+***
+
+### `Path`<sup>Optional</sup> <a name="Path" id="cdktn.LocalBackendConfig.property.path"></a>
+
+```go
+Path *string
+```
+
+- *Type:* \*string
+- *Default:* defaults to terraform.$\{stackId}.tfstate
+
+Path where the state file is stored.
+
+***
+
+### `WorkspaceDir`<sup>Optional</sup> <a name="WorkspaceDir" id="cdktn.LocalBackendConfig.property.workspaceDir"></a>
+
+```go
+WorkspaceDir *string
+```
+
+- *Type:* \*string
+
+(Optional) The path to non-default workspaces.
+
+***
+

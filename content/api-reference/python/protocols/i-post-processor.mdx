@@ -1,0 +1,43 @@
+---
+title: "Python: IPostProcessor"
+sidebarTitle: IPostProcessor
+description: CDKTN Core API Reference for IPostProcessor in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implemented By:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+A Token that can post-process the complete resolved value, after resolve() has recursed over it.
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IPostProcessor.postProcess">post\_process</a></code> | Process the completely resolved value, after full recursion/resolution has happened. |
+
+***
+
+### `post_process` <a name="post_process" id="cdktn.IPostProcessor.postProcess"></a>
+
+```python
+def post_process(
+  input: typing.Any,
+  context: IResolveContext
+) -> typing.Any
+```
+
+Process the completely resolved value, after full recursion/resolution has happened.
+
+#### `input`<sup>Required</sup> <a name="input" id="cdktn.IPostProcessor.postProcess.parameter.input"></a>
+
+- *Type:* typing.Any
+
+***
+
+#### `context`<sup>Required</sup> <a name="context" id="cdktn.IPostProcessor.postProcess.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+

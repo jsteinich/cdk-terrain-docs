@@ -1,0 +1,90 @@
+---
+title: "Go: CosBackendAssumeRole"
+sidebarTitle: CosBackendAssumeRole
+description: CDKTN Core API Reference for CosBackendAssumeRole in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.CosBackendAssumeRole.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+&cdktn.CosBackendAssumeRole {
+	RoleArn: *string,
+	SessionDuration: *f64,
+	SessionName: *string,
+	Policy: interface{},
+}
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.roleArn">RoleArn</a></code> | <code>\*string</code> | (Required) The ARN of the role to assume. |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.sessionDuration">SessionDuration</a></code> | <code>\*f64</code> | (Required) The duration of the session when making the AssumeRole call. |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.sessionName">SessionName</a></code> | <code>\*string</code> | (Required) The session name to use when making the AssumeRole call. |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.policy">Policy</a></code> | <code>interface\{}</code> | (Optional) A more restrictive policy when making the AssumeRole call. |
+
+***
+
+### `RoleArn`<sup>Required</sup> <a name="RoleArn" id="cdktn.CosBackendAssumeRole.property.roleArn"></a>
+
+```go
+RoleArn *string
+```
+
+- *Type:* \*string
+
+(Required) The ARN of the role to assume.
+
+It can be sourced from the TENCENTCLOUD\_ASSUME\_ROLE\_ARN.
+
+***
+
+### `SessionDuration`<sup>Required</sup> <a name="SessionDuration" id="cdktn.CosBackendAssumeRole.property.sessionDuration"></a>
+
+```go
+SessionDuration *f64
+```
+
+- *Type:* \*f64
+
+(Required) The duration of the session when making the AssumeRole call.
+
+Its value ranges from 0 to 43200(seconds), and default is 7200 seconds.
+It can be sourced from the TENCENTCLOUD\_ASSUME\_ROLE\_SESSION\_DURATION.
+
+***
+
+### `SessionName`<sup>Required</sup> <a name="SessionName" id="cdktn.CosBackendAssumeRole.property.sessionName"></a>
+
+```go
+SessionName *string
+```
+
+- *Type:* \*string
+
+(Required) The session name to use when making the AssumeRole call.
+
+It can be sourced from the TENCENTCLOUD\_ASSUME\_ROLE\_SESSION\_NAME.
+
+***
+
+### `Policy`<sup>Optional</sup> <a name="Policy" id="cdktn.CosBackendAssumeRole.property.policy"></a>
+
+```go
+Policy interface{}
+```
+
+- *Type:* interface\{}
+
+(Optional) A more restrictive policy when making the AssumeRole call.
+
+Its content must not contains principal elements.
+Please refer to [policies syntax logic](https://www.tencentcloud.com/document/product/598/10603).
+
+***
+

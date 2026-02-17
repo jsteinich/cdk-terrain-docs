@@ -1,0 +1,52 @@
+---
+title: "Java: TerraformCondition"
+sidebarTitle: TerraformCondition
+description: CDKTN Core API Reference for TerraformCondition in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.TerraformCondition.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.TerraformCondition;
+
+TerraformCondition.builder()
+    .condition(java.lang.Object)
+    .errorMessage(java.lang.String)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformCondition.property.condition">condition</a></code> | <code>java.lang.Object</code> | This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not. |
+| <code><a href="#cdktn.TerraformCondition.property.errorMessage">errorMessage</a></code> | <code>java.lang.String</code> | This contains the text that Terraform will include as part of error messages when it detects an unmet condition. |
+
+***
+
+### `condition`<sup>Required</sup> <a name="condition" id="cdktn.TerraformCondition.property.condition"></a>
+
+```java
+public java.lang.Object getCondition();
+```
+
+- *Type:* java.lang.Object
+
+This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not.
+
+***
+
+### `errorMessage`<sup>Required</sup> <a name="errorMessage" id="cdktn.TerraformCondition.property.errorMessage"></a>
+
+```java
+public java.lang.String getErrorMessage();
+```
+
+- *Type:* java.lang.String
+
+This contains the text that Terraform will include as part of error messages when it detects an unmet condition.
+
+***
+

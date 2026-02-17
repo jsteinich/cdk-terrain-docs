@@ -1,0 +1,109 @@
+---
+title: "Python: RemoteExecProvisioner"
+sidebarTitle: RemoteExecProvisioner
+description: CDKTN Core API Reference for RemoteExecProvisioner in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+The remote-exec provisioner invokes a script on a remote resource after it is created.
+
+This can be used to run a configuration management tool, bootstrap into a cluster, etc
+The remote-exec provisioner requires a connection and supports both ssh and winrm.
+
+See [remote-exec](https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec)
+
+## Initializer <a name="Initializer" id="cdktn.RemoteExecProvisioner.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.RemoteExecProvisioner(
+  type: str,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  inline: typing.List[str] = None,
+  script: str = None,
+  scripts: typing.List[str] = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.RemoteExecProvisioner.property.type">type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.RemoteExecProvisioner.property.connection">connection</a></code> | <code><a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a> &#124; <a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a></code> | Most provisioners require access to the remote resource via SSH or WinRM and expect a nested connection block with details about how to connect. |
+| <code><a href="#cdktn.RemoteExecProvisioner.property.inline">inline</a></code> | <code>typing.List\[str]</code> | This is a list of command strings. |
+| <code><a href="#cdktn.RemoteExecProvisioner.property.script">script</a></code> | <code>str</code> | This is a path (relative or absolute) to a local script that will be copied to the remote resource and then executed. |
+| <code><a href="#cdktn.RemoteExecProvisioner.property.scripts">scripts</a></code> | <code>typing.List\[str]</code> | This is a list of paths (relative or absolute) to local scripts that will be copied to the remote resource and then executed. |
+
+***
+
+### `type`<sup>Required</sup> <a name="type" id="cdktn.RemoteExecProvisioner.property.type"></a>
+
+```python
+type: str
+```
+
+- *Type:* str
+
+***
+
+### `connection`<sup>Optional</sup> <a name="connection" id="cdktn.RemoteExecProvisioner.property.connection"></a>
+
+```python
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
+```
+
+- *Type:* <a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a> | <a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a>
+
+Most provisioners require access to the remote resource via SSH or WinRM and expect a nested connection block with details about how to connect.
+
+A connection must be provided here or in the parent resource.
+
+***
+
+### `inline`<sup>Optional</sup> <a name="inline" id="cdktn.RemoteExecProvisioner.property.inline"></a>
+
+```python
+inline: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+This is a list of command strings.
+
+They are executed in the order they are provided.
+This cannot be provided with script or scripts.
+
+***
+
+### `script`<sup>Optional</sup> <a name="script" id="cdktn.RemoteExecProvisioner.property.script"></a>
+
+```python
+script: str
+```
+
+- *Type:* str
+
+This is a path (relative or absolute) to a local script that will be copied to the remote resource and then executed.
+
+This cannot be provided with inline or scripts.
+
+***
+
+### `scripts`<sup>Optional</sup> <a name="scripts" id="cdktn.RemoteExecProvisioner.property.scripts"></a>
+
+```python
+scripts: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+This is a list of paths (relative or absolute) to local scripts that will be copied to the remote resource and then executed.
+
+They are executed in the order they are provided.
+This cannot be provided with inline or script.
+
+***
+

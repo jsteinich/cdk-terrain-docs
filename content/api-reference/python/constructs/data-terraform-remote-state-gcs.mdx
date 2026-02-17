@@ -1,0 +1,459 @@
+---
+title: "Python: DataTerraformRemoteStateGcs"
+sidebarTitle: DataTerraformRemoteStateGcs
+description: CDKTN Core API Reference for DataTerraformRemoteStateGcs in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.DataTerraformRemoteStateGcs.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateGcs(
+  scope: Construct,
+  id: str,
+  defaults: typing.Mapping[typing.Any] = None,
+  workspace: str = None,
+  bucket: str,
+  access_token: str = None,
+  credentials: str = None,
+  encryption_key: str = None,
+  impersonate_service_account: str = None,
+  impersonate_service_account_delegates: typing.List[str] = None,
+  kms_encryption_key: str = None,
+  prefix: str = None,
+  storeage_custom_endpoint: str = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.defaults">defaults</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.workspace">workspace</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.bucket">bucket</a></code> | <code>str</code> | (Required) The name of the GCS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.accessToken">access\_token</a></code> | <code>str</code> | (Optional) A temporary \[OAuth 2.0 access token] obtained from the Google Authorization server, i.e. the Authorization: Bearer token used to authenticate HTTP requests to GCP APIs. This is an alternative to credentials. If both are specified, access\_token will be used over the credentials field. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.credentials">credentials</a></code> | <code>str</code> | (Optional) Local path to Google Cloud Platform account credentials in JSON format. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.encryptionKey">encryption\_key</a></code> | <code>str</code> | (Optional) A 32 byte base64 encoded 'customer supplied encryption key' used to encrypt all state. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.impersonateServiceAccount">impersonate\_service\_account</a></code> | <code>str</code> | (Optional) The service account to impersonate for accessing the State Bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.impersonateServiceAccountDelegates">impersonate\_service\_account\_delegates</a></code> | <code>typing.List\[str]</code> | (Optional) The delegation chain for an impersonating a service account. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.kmsEncryptionKey">kms\_encryption\_key</a></code> | <code>str</code> | (Optional) A Cloud KMS key ('customer-managed encryption key') used when reading and writing state files in the bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.prefix">prefix</a></code> | <code>str</code> | (Optional) GCS prefix inside the bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.storeageCustomEndpoint">storeage\_custom\_endpoint</a></code> | <code>str</code> | (Optional) A URL containing three parts: the protocol, the DNS name pointing to a Private Service Connect endpoint, and the path for the Cloud Storage API (/storage/v1/b). |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.defaults"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.workspace"></a>
+
+- *Type:* str
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.bucket"></a>
+
+- *Type:* str
+
+(Required) The name of the GCS bucket.
+
+This name must be globally unique.
+
+***
+
+### `access_token`<sup>Optional</sup> <a name="access_token" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.accessToken"></a>
+
+- *Type:* str
+
+(Optional) A temporary \[OAuth 2.0 access token] obtained from the Google Authorization server, i.e. the Authorization: Bearer token used to authenticate HTTP requests to GCP APIs. This is an alternative to credentials. If both are specified, access\_token will be used over the credentials field.
+
+***
+
+### `credentials`<sup>Optional</sup> <a name="credentials" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.credentials"></a>
+
+- *Type:* str
+
+(Optional) Local path to Google Cloud Platform account credentials in JSON format.
+
+If unset, Google Application Default Credentials are used.
+The provided credentials must have Storage Object Admin role on the bucket.
+
+Warning: if using the Google Cloud Platform provider as well,
+it will also pick up the GOOGLE\_CREDENTIALS environment variable.
+
+***
+
+### `encryption_key`<sup>Optional</sup> <a name="encryption_key" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.encryptionKey"></a>
+
+- *Type:* str
+
+(Optional) A 32 byte base64 encoded 'customer supplied encryption key' used to encrypt all state.
+
+***
+
+### `impersonate_service_account`<sup>Optional</sup> <a name="impersonate_service_account" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.impersonateServiceAccount"></a>
+
+- *Type:* str
+
+(Optional) The service account to impersonate for accessing the State Bucket.
+
+You must have roles/iam.serviceAccountTokenCreator role on that account for the impersonation to succeed.
+If you are using a delegation chain, you can specify that using the impersonate\_service\_account\_delegates field.
+Alternatively, this can be specified using the GOOGLE\_IMPERSONATE\_SERVICE\_ACCOUNT environment variable.
+
+***
+
+### `impersonate_service_account_delegates`<sup>Optional</sup> <a name="impersonate_service_account_delegates" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.impersonateServiceAccountDelegates"></a>
+
+- *Type:* typing.List\[str]
+
+(Optional) The delegation chain for an impersonating a service account.
+
+***
+
+### `kms_encryption_key`<sup>Optional</sup> <a name="kms_encryption_key" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.kmsEncryptionKey"></a>
+
+- *Type:* str
+
+(Optional) A Cloud KMS key ('customer-managed encryption key') used when reading and writing state files in the bucket.
+
+Format should be projects/\{\{project}}/locations/\{\{location}}/keyRings/\{\{keyRing}}/cryptoKeys/\{\{name}}.
+For more information, including IAM requirements, see [Customer-managed Encryption Keys](https://cloud.google.com/storage/docs/encryption/customer-managed-keys).
+
+***
+
+### `prefix`<sup>Optional</sup> <a name="prefix" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.prefix"></a>
+
+- *Type:* str
+
+(Optional) GCS prefix inside the bucket.
+
+Named states for workspaces are stored in an object called &lt; prefix >/&lt; name >.tfstate.
+
+***
+
+### `storeage_custom_endpoint`<sup>Optional</sup> <a name="storeage_custom_endpoint" id="cdktn.DataTerraformRemoteStateGcs.Initializer.parameter.storeageCustomEndpoint"></a>
+
+- *Type:* str
+
+(Optional) A URL containing three parts: the protocol, the DNS name pointing to a Private Service Connect endpoint, and the path for the Cloud Storage API (/storage/v1/b).
+
+[See here for more details](https://developer.hashicorp.com/terraform/language/settings/backends/gcs#storage_custom_endpoint)
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.addOverride">add\_override</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.overrideLogicalId">override\_logical\_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.resetOverrideLogicalId">reset\_override\_logical\_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.toHclTerraform">to\_hcl\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.toMetadata">to\_metadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.toTerraform">to\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.get">get</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.getBoolean">get\_boolean</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.getList">get\_list</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.getNumber">get\_number</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.getString">get\_string</a></code> | *No description.* |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.DataTerraformRemoteStateGcs.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `add_override` <a name="add_override" id="cdktn.DataTerraformRemoteStateGcs.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.DataTerraformRemoteStateGcs.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.DataTerraformRemoteStateGcs.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `override_logical_id` <a name="override_logical_id" id="cdktn.DataTerraformRemoteStateGcs.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="cdktn.DataTerraformRemoteStateGcs.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+***
+
+### `reset_override_logical_id` <a name="reset_override_logical_id" id="cdktn.DataTerraformRemoteStateGcs.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.DataTerraformRemoteStateGcs.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `to_metadata` <a name="to_metadata" id="cdktn.DataTerraformRemoteStateGcs.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+### `to_terraform` <a name="to_terraform" id="cdktn.DataTerraformRemoteStateGcs.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `get` <a name="get" id="cdktn.DataTerraformRemoteStateGcs.get"></a>
+
+```python
+def get(
+  output: str
+) -> IResolvable
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateGcs.get.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_boolean` <a name="get_boolean" id="cdktn.DataTerraformRemoteStateGcs.getBoolean"></a>
+
+```python
+def get_boolean(
+  output: str
+) -> IResolvable
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateGcs.getBoolean.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_list` <a name="get_list" id="cdktn.DataTerraformRemoteStateGcs.getList"></a>
+
+```python
+def get_list(
+  output: str
+) -> typing.List[str]
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateGcs.getList.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_number` <a name="get_number" id="cdktn.DataTerraformRemoteStateGcs.getNumber"></a>
+
+```python
+def get_number(
+  output: str
+) -> typing.Union[int, float]
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateGcs.getNumber.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_string` <a name="get_string" id="cdktn.DataTerraformRemoteStateGcs.getString"></a>
+
+```python
+def get_string(
+  output: str
+) -> str
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateGcs.getString.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.isTerraformElement">is\_terraform\_element</a></code> | *No description.* |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.DataTerraformRemoteStateGcs.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateGcs.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateGcs.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_terraform_element` <a name="is_terraform_element" id="cdktn.DataTerraformRemoteStateGcs.isTerraformElement"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateGcs.is_terraform_element(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateGcs.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.property.cdktfStack">cdktf\_stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.property.friendlyUniqueId">friendly\_unique\_id</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.DataTerraformRemoteStateGcs.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="cdktn.DataTerraformRemoteStateGcs.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.DataTerraformRemoteStateGcs.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+
+### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="cdktn.DataTerraformRemoteStateGcs.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateGcs.property.tfResourceType">tfResourceType</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="cdktn.DataTerraformRemoteStateGcs.property.tfResourceType"></a>
+
+```python
+tfResourceType: str
+```
+
+- *Type:* str
+
+***
+

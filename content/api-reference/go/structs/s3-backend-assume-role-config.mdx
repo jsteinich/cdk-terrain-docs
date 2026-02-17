@@ -1,0 +1,155 @@
+---
+title: "Go: S3BackendAssumeRoleConfig"
+sidebarTitle: S3BackendAssumeRoleConfig
+description: CDKTN Core API Reference for S3BackendAssumeRoleConfig in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.S3BackendAssumeRoleConfig.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+&cdktn.S3BackendAssumeRoleConfig {
+	RoleArn: *string,
+	Duration: *string,
+	ExternalId: *string,
+	Policy: *string,
+	PolicyArns: *[]*string,
+	SessionName: *string,
+	SourceIdentity: *string,
+	Tags: *map[string]*string,
+	TransitiveTagKeys: *[]*string,
+}
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.roleArn">RoleArn</a></code> | <code>\*string</code> | (Required) Amazon Resource Name (ARN) of the IAM Role to assume. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.duration">Duration</a></code> | <code>\*string</code> | (Optional) The duration individual credentials will be valid. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.externalId">ExternalId</a></code> | <code>\*string</code> | (Optional) External identifier to use when assuming the role. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.policy">Policy</a></code> | <code>*string</code> | (Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.policyArns">PolicyArns</a></code> | <code>*\[]\*string</code> | (Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.sessionName">SessionName</a></code> | <code>\*string</code> | (Optional) Session name to use when assuming the role. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.sourceIdentity">SourceIdentity</a></code> | <code>\*string</code> | (Optional) Source identity specified by the principal assuming the. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.tags">Tags</a></code> | <code>\*map\[string]*string</code> | (Optional) Map of assume role session tags. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.transitiveTagKeys">TransitiveTagKeys</a></code> | <code>*\[]\*string</code> | (Optional) Set of assume role session tag keys to pass to any subsequent sessions. |
+
+***
+
+### `RoleArn`<sup>Required</sup> <a name="RoleArn" id="cdktn.S3BackendAssumeRoleConfig.property.roleArn"></a>
+
+```go
+RoleArn *string
+```
+
+- *Type:* \*string
+
+(Required) Amazon Resource Name (ARN) of the IAM Role to assume.
+
+***
+
+### `Duration`<sup>Optional</sup> <a name="Duration" id="cdktn.S3BackendAssumeRoleConfig.property.duration"></a>
+
+```go
+Duration *string
+```
+
+- *Type:* \*string
+
+(Optional) The duration individual credentials will be valid.
+
+Credentials are automatically renewed up to the maximum defined by the AWS account.
+Specified using the format &lt; hours >h&lt; minutes >m&lt; seconds >s with any unit being optional.
+For example, an hour and a half can be specified as 1h30m or 90m.
+Must be between 15 minutes (15m) and 12 hours (12h).
+
+***
+
+### `ExternalId`<sup>Optional</sup> <a name="ExternalId" id="cdktn.S3BackendAssumeRoleConfig.property.externalId"></a>
+
+```go
+ExternalId *string
+```
+
+- *Type:* \*string
+
+(Optional) External identifier to use when assuming the role.
+
+***
+
+### `Policy`<sup>Optional</sup> <a name="Policy" id="cdktn.S3BackendAssumeRoleConfig.property.policy"></a>
+
+```go
+Policy *string
+```
+
+- *Type:* \*string
+
+(Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### `PolicyArns`<sup>Optional</sup> <a name="PolicyArns" id="cdktn.S3BackendAssumeRoleConfig.property.policyArns"></a>
+
+```go
+PolicyArns *[]*string
+```
+
+- *Type:* \*\[]\*string
+
+(Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### `SessionName`<sup>Optional</sup> <a name="SessionName" id="cdktn.S3BackendAssumeRoleConfig.property.sessionName"></a>
+
+```go
+SessionName *string
+```
+
+- *Type:* \*string
+
+(Optional) Session name to use when assuming the role.
+
+***
+
+### `SourceIdentity`<sup>Optional</sup> <a name="SourceIdentity" id="cdktn.S3BackendAssumeRoleConfig.property.sourceIdentity"></a>
+
+```go
+SourceIdentity *string
+```
+
+- *Type:* \*string
+
+(Optional) Source identity specified by the principal assuming the.
+
+***
+
+### `Tags`<sup>Optional</sup> <a name="Tags" id="cdktn.S3BackendAssumeRoleConfig.property.tags"></a>
+
+```go
+Tags *map[string]*string
+```
+
+- *Type:* \*map\[string]\*string
+
+(Optional) Map of assume role session tags.
+
+***
+
+### `TransitiveTagKeys`<sup>Optional</sup> <a name="TransitiveTagKeys" id="cdktn.S3BackendAssumeRoleConfig.property.transitiveTagKeys"></a>
+
+```go
+TransitiveTagKeys *[]*string
+```
+
+- *Type:* \*\[]\*string
+
+(Optional) Set of assume role session tag keys to pass to any subsequent sessions.
+
+***
+

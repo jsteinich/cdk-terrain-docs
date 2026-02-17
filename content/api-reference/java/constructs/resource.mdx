@@ -1,0 +1,132 @@
+---
+title: "Java: Resource"
+sidebarTitle: Resource
+description: CDKTN Core API Reference for Resource in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.IResource">IResource</a>
+
+A construct which represents a resource.
+
+## Initializers <a name="Initializers" id="cdktn.Resource.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.Resource;
+
+new Resource(Construct scope, java.lang.String id);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Resource.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.Resource.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.Resource.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.Resource.Initializer.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Resource.toString">toString</a></code> | Returns a string representation of this construct. |
+
+***
+
+### ~~`toString`~~ <a name="toString" id="cdktn.Resource.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Resource.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+***
+
+### ~~`isConstruct`~~ <a name="isConstruct" id="cdktn.Resource.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.Resource;
+
+Resource.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.Resource.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Resource.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.Resource.property.stack">stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | The stack in which this resource is defined. |
+
+***
+
+### ~~`node`~~<sup>Required</sup> <a name="node" id="cdktn.Resource.property.node"></a>
+
+- *Deprecated:* - Please use Construct from the constructs package instead.
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### ~~`stack`~~<sup>Required</sup> <a name="stack" id="cdktn.Resource.property.stack"></a>
+
+- *Deprecated:* - Please use Construct from the constructs package instead.
+
+```java
+public TerraformStack getStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+The stack in which this resource is defined.
+
+***
+

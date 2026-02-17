@@ -1,0 +1,54 @@
+---
+title: "Java: Postcondition"
+sidebarTitle: Postcondition
+description: CDKTN Core API Reference for Postcondition in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Terraform checks a postcondition after evaluating the object it is associated with.
+
+## Initializer <a name="Initializer" id="cdktn.Postcondition.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.Postcondition;
+
+Postcondition.builder()
+    .condition(java.lang.Object)
+    .errorMessage(java.lang.String)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Postcondition.property.condition">condition</a></code> | <code>java.lang.Object</code> | This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not. |
+| <code><a href="#cdktn.Postcondition.property.errorMessage">errorMessage</a></code> | <code>java.lang.String</code> | This contains the text that Terraform will include as part of error messages when it detects an unmet condition. |
+
+***
+
+### `condition`<sup>Required</sup> <a name="condition" id="cdktn.Postcondition.property.condition"></a>
+
+```java
+public java.lang.Object getCondition();
+```
+
+- *Type:* java.lang.Object
+
+This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not.
+
+***
+
+### `errorMessage`<sup>Required</sup> <a name="errorMessage" id="cdktn.Postcondition.property.errorMessage"></a>
+
+```java
+public java.lang.String getErrorMessage();
+```
+
+- *Type:* java.lang.String
+
+This contains the text that Terraform will include as part of error messages when it detects an unmet condition.
+
+***
+

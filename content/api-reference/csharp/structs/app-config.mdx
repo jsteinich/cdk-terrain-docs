@@ -1,0 +1,122 @@
+---
+title: "CSharp: AppConfig"
+sidebarTitle: AppConfig
+description: CDKTN Core API Reference for AppConfig in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.AppConfig.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new AppConfig {
+    System.Collections.Generic.IDictionary<string, object> Context = null,
+    bool HclOutput = null,
+    string Outdir = null,
+    bool SkipBackendValidation = null,
+    bool SkipValidation = null,
+    bool StackTraces = null
+};
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.AppConfig.property.context">Context</a></code> | <code>System.Collections.Generic.IDictionary&lt; string, object ></code> | Additional context values for the application. |
+| <code><a href="#cdktn.AppConfig.property.hclOutput">HclOutput</a></code> | <code>bool</code> | *No description.* |
+| <code><a href="#cdktn.AppConfig.property.outdir">Outdir</a></code> | <code>string</code> | The directory to output Terraform resources. |
+| <code><a href="#cdktn.AppConfig.property.skipBackendValidation">SkipBackendValidation</a></code> | <code>bool</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#cdktn.AppConfig.property.skipValidation">SkipValidation</a></code> | <code>bool</code> | Whether to skip all validations during synthesis of the app. |
+| <code><a href="#cdktn.AppConfig.property.stackTraces">StackTraces</a></code> | <code>bool</code> | *No description.* |
+
+***
+
+### `Context`<sup>Optional</sup> <a name="Context" id="cdktn.AppConfig.property.context"></a>
+
+```csharp
+public System.Collections.Generic.IDictionary<string, object> Context { get; set; }
+```
+
+- *Type:* System.Collections.Generic.IDictionary&lt; string, object >
+- *Default:* no additional context
+
+Additional context values for the application.
+
+Context set by the CLI or the `context` key in `cdktf.json` has precedence.
+
+Context can be read from any construct using `node.getContext(key)`.
+
+***
+
+### `HclOutput`<sup>Optional</sup> <a name="HclOutput" id="cdktn.AppConfig.property.hclOutput"></a>
+
+```csharp
+public bool HclOutput { get; set; }
+```
+
+- *Type:* bool
+
+***
+
+### `Outdir`<sup>Optional</sup> <a name="Outdir" id="cdktn.AppConfig.property.outdir"></a>
+
+```csharp
+public string Outdir { get; set; }
+```
+
+- *Type:* string
+- *Default:* CDKTF\_OUTDIR if defined, otherwise "cdktf.out"
+
+The directory to output Terraform resources.
+
+If you are using the CDKTN CLI, this value is automatically set from one of the following three sources:
+
+- The `-o` / `--output` CLI option
+- The `CDKTF_OUTDIR` environment variable
+- The `outdir` key in `cdktf.json`
+
+If you are using the CDKTN CLI and want to set a different value here, you will also need to set the same value via one of the three ways specified above.
+
+The most common case to set this value is when you are using the CDKTN library directly (e.g. when writing unit tests).
+
+***
+
+### `SkipBackendValidation`<sup>Optional</sup> <a name="SkipBackendValidation" id="cdktn.AppConfig.property.skipBackendValidation"></a>
+
+```csharp
+public bool SkipBackendValidation { get; set; }
+```
+
+- *Type:* bool
+- *Default:* false
+
+Whether to skip backend validation during synthesis of the app.
+
+***
+
+### `SkipValidation`<sup>Optional</sup> <a name="SkipValidation" id="cdktn.AppConfig.property.skipValidation"></a>
+
+```csharp
+public bool SkipValidation { get; set; }
+```
+
+- *Type:* bool
+- *Default:* false
+
+Whether to skip all validations during synthesis of the app.
+
+***
+
+### `StackTraces`<sup>Optional</sup> <a name="StackTraces" id="cdktn.AppConfig.property.stackTraces"></a>
+
+```csharp
+public bool StackTraces { get; set; }
+```
+
+- *Type:* bool
+
+***
+

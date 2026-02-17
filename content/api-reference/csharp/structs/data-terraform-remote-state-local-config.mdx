@@ -1,0 +1,77 @@
+---
+title: "CSharp: DataTerraformRemoteStateLocalConfig"
+sidebarTitle: DataTerraformRemoteStateLocalConfig
+description: CDKTN Core API Reference for DataTerraformRemoteStateLocalConfig in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.DataTerraformRemoteStateLocalConfig.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new DataTerraformRemoteStateLocalConfig {
+    System.Collections.Generic.IDictionary<string, object> Defaults = null,
+    string Workspace = null,
+    string Path = null,
+    string WorkspaceDir = null
+};
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateLocalConfig.property.defaults">Defaults</a></code> | <code>System.Collections.Generic.IDictionary&lt; string, object ></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateLocalConfig.property.workspace">Workspace</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateLocalConfig.property.path">Path</a></code> | <code>string</code> | Path where the state file is stored. |
+| <code><a href="#cdktn.DataTerraformRemoteStateLocalConfig.property.workspaceDir">WorkspaceDir</a></code> | <code>string</code> | (Optional) The path to non-default workspaces. |
+
+***
+
+### `Defaults`<sup>Optional</sup> <a name="Defaults" id="cdktn.DataTerraformRemoteStateLocalConfig.property.defaults"></a>
+
+```csharp
+public System.Collections.Generic.IDictionary<string, object> Defaults { get; set; }
+```
+
+- *Type:* System.Collections.Generic.IDictionary&lt; string, object >
+
+***
+
+### `Workspace`<sup>Optional</sup> <a name="Workspace" id="cdktn.DataTerraformRemoteStateLocalConfig.property.workspace"></a>
+
+```csharp
+public string Workspace { get; set; }
+```
+
+- *Type:* string
+
+***
+
+### `Path`<sup>Optional</sup> <a name="Path" id="cdktn.DataTerraformRemoteStateLocalConfig.property.path"></a>
+
+```csharp
+public string Path { get; set; }
+```
+
+- *Type:* string
+- *Default:* defaults to terraform.$\{stackId}.tfstate
+
+Path where the state file is stored.
+
+***
+
+### `WorkspaceDir`<sup>Optional</sup> <a name="WorkspaceDir" id="cdktn.DataTerraformRemoteStateLocalConfig.property.workspaceDir"></a>
+
+```csharp
+public string WorkspaceDir { get; set; }
+```
+
+- *Type:* string
+
+(Optional) The path to non-default workspaces.
+
+***
+

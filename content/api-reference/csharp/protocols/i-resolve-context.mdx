@@ -1,0 +1,136 @@
+---
+title: "CSharp: IResolveContext"
+sidebarTitle: IResolveContext
+description: CDKTN Core API Reference for IResolveContext in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implemented By:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+Current resolution context for tokens.
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IResolveContext.registerPostProcessor">RegisterPostProcessor</a></code> | Use this postprocessor after the entire token structure has been resolved. |
+| <code><a href="#cdktn.IResolveContext.resolve">Resolve</a></code> | Resolve an inner object. |
+
+***
+
+### `RegisterPostProcessor` <a name="RegisterPostProcessor" id="cdktn.IResolveContext.registerPostProcessor"></a>
+
+```csharp
+private void RegisterPostProcessor(IPostProcessor PostProcessor)
+```
+
+Use this postprocessor after the entire token structure has been resolved.
+
+#### `PostProcessor`<sup>Required</sup> <a name="PostProcessor" id="cdktn.IResolveContext.registerPostProcessor.parameter.postProcessor"></a>
+
+- *Type:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+***
+
+### `Resolve` <a name="Resolve" id="cdktn.IResolveContext.resolve"></a>
+
+```csharp
+private object Resolve(object X)
+```
+
+Resolve an inner object.
+
+#### `X`<sup>Required</sup> <a name="X" id="cdktn.IResolveContext.resolve.parameter.x"></a>
+
+- *Type:* object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.IResolveContext.property.preparing">Preparing</a></code> | <code>bool</code> | True when we are still preparing, false if we're rendering the final output. |
+| <code><a href="#cdktn.IResolveContext.property.scope">Scope</a></code> | <code>Constructs.IConstruct</code> | The scope from which resolution has been initiated. |
+| <code><a href="#cdktn.IResolveContext.property.ignoreEscapes">IgnoreEscapes</a></code> | <code>bool</code> | True when $\{} should not be parsed, and treated as literals. |
+| <code><a href="#cdktn.IResolveContext.property.iteratorContext">IteratorContext</a></code> | <code>string</code> | TerraformIterators can be passed for block attributes and normal list attributes both require different handling when the iterable variable is accessed e.g. a dynamic block needs each.key while a for expression just needs key. |
+| <code><a href="#cdktn.IResolveContext.property.suppressBraces">SuppressBraces</a></code> | <code>bool</code> | True when $\{} should be ommitted (because already inside them), false otherwise. |
+| <code><a href="#cdktn.IResolveContext.property.warnEscapes">WarnEscapes</a></code> | <code>bool</code> | True when $\{} should not be included in the string to be resolved, outputs a warning. |
+
+***
+
+### `Preparing`<sup>Required</sup> <a name="Preparing" id="cdktn.IResolveContext.property.preparing"></a>
+
+```csharp
+public bool Preparing { get; }
+```
+
+- *Type:* bool
+
+True when we are still preparing, false if we're rendering the final output.
+
+***
+
+### `Scope`<sup>Required</sup> <a name="Scope" id="cdktn.IResolveContext.property.scope"></a>
+
+```csharp
+public IConstruct Scope { get; }
+```
+
+- *Type:* Constructs.IConstruct
+
+The scope from which resolution has been initiated.
+
+***
+
+### `IgnoreEscapes`<sup>Optional</sup> <a name="IgnoreEscapes" id="cdktn.IResolveContext.property.ignoreEscapes"></a>
+
+```csharp
+public bool IgnoreEscapes { get; set; }
+```
+
+- *Type:* bool
+
+True when $\{} should not be parsed, and treated as literals.
+
+***
+
+### `IteratorContext`<sup>Optional</sup> <a name="IteratorContext" id="cdktn.IResolveContext.property.iteratorContext"></a>
+
+```csharp
+public string IteratorContext { get; set; }
+```
+
+- *Type:* string
+
+TerraformIterators can be passed for block attributes and normal list attributes both require different handling when the iterable variable is accessed e.g. a dynamic block needs each.key while a for expression just needs key.
+
+***
+
+### `SuppressBraces`<sup>Optional</sup> <a name="SuppressBraces" id="cdktn.IResolveContext.property.suppressBraces"></a>
+
+```csharp
+public bool SuppressBraces { get; set; }
+```
+
+- *Type:* bool
+
+True when $\{} should be ommitted (because already inside them), false otherwise.
+
+***
+
+### `WarnEscapes`<sup>Optional</sup> <a name="WarnEscapes" id="cdktn.IResolveContext.property.warnEscapes"></a>
+
+```csharp
+public bool WarnEscapes { get; set; }
+```
+
+- *Type:* bool
+
+True when $\{} should not be included in the string to be resolved, outputs a warning.
+
+Default: false
+
+***
+

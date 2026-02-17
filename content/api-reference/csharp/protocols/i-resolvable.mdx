@@ -1,0 +1,69 @@
+---
+title: "CSharp: IResolvable"
+sidebarTitle: IResolvable
+description: CDKTN Core API Reference for IResolvable in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implemented By:* <a href="#cdktn.AnyListList">AnyListList</a>, <a href="#cdktn.AnyListMap">AnyListMap</a>, <a href="#cdktn.AnyMap">AnyMap</a>, <a href="#cdktn.AnyMapList">AnyMapList</a>, <a href="#cdktn.BooleanList">BooleanList</a>, <a href="#cdktn.BooleanListList">BooleanListList</a>, <a href="#cdktn.BooleanListMap">BooleanListMap</a>, <a href="#cdktn.BooleanMap">BooleanMap</a>, <a href="#cdktn.BooleanMapList">BooleanMapList</a>, <a href="#cdktn.ComplexComputedList">ComplexComputedList</a>, <a href="#cdktn.ComplexList">ComplexList</a>, <a href="#cdktn.ComplexMap">ComplexMap</a>, <a href="#cdktn.ComplexObject">ComplexObject</a>, <a href="#cdktn.LazyBase">LazyBase</a>, <a href="#cdktn.MapList">MapList</a>, <a href="#cdktn.NumberListList">NumberListList</a>, <a href="#cdktn.NumberListMap">NumberListMap</a>, <a href="#cdktn.NumberMap">NumberMap</a>, <a href="#cdktn.NumberMapList">NumberMapList</a>, <a href="#cdktn.StringListList">StringListList</a>, <a href="#cdktn.StringListMap">StringListMap</a>, <a href="#cdktn.StringMap">StringMap</a>, <a href="#cdktn.StringMapList">StringMapList</a>, <a href="#cdktn.IResolvable">IResolvable</a>
+
+Interface for values that can be resolvable later.
+
+Tokens are special objects that participate in synthesis.
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IResolvable.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#cdktn.IResolvable.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+***
+
+### `Resolve` <a name="Resolve" id="cdktn.IResolvable.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+#### `Context`<sup>Required</sup> <a name="Context" id="cdktn.IResolvable.resolve.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `ToString` <a name="ToString" id="cdktn.IResolvable.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.IResolvable.property.creationStack">CreationStack</a></code> | <code>string\[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+
+***
+
+### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="cdktn.IResolvable.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string\[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+***
+

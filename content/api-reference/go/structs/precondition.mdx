@@ -1,0 +1,54 @@
+---
+title: "Go: Precondition"
+sidebarTitle: Precondition
+description: CDKTN Core API Reference for Precondition in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Terraform checks a precondition before evaluating the object it is associated with.
+
+## Initializer <a name="Initializer" id="cdktn.Precondition.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+&cdktn.Precondition {
+	Condition: interface{},
+	ErrorMessage: *string,
+}
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Precondition.property.condition">Condition</a></code> | <code>interface\{}</code> | This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not. |
+| <code><a href="#cdktn.Precondition.property.errorMessage">ErrorMessage</a></code> | <code>\*string</code> | This contains the text that Terraform will include as part of error messages when it detects an unmet condition. |
+
+***
+
+### `Condition`<sup>Required</sup> <a name="Condition" id="cdktn.Precondition.property.condition"></a>
+
+```go
+Condition interface{}
+```
+
+- *Type:* interface\{}
+
+This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not.
+
+***
+
+### `ErrorMessage`<sup>Required</sup> <a name="ErrorMessage" id="cdktn.Precondition.property.errorMessage"></a>
+
+```go
+ErrorMessage *string
+```
+
+- *Type:* \*string
+
+This contains the text that Terraform will include as part of error messages when it detects an unmet condition.
+
+***
+

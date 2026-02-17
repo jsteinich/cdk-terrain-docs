@@ -1,0 +1,132 @@
+---
+title: "Java: ITokenResolver"
+sidebarTitle: ITokenResolver
+description: CDKTN Core API Reference for ITokenResolver in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implemented By:* <a href="#cdktn.DefaultTokenResolver">DefaultTokenResolver</a>, <a href="#cdktn.ITokenResolver">ITokenResolver</a>
+
+How to resolve tokens.
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.ITokenResolver.resolveList">resolveList</a></code> | Resolve a tokenized list. |
+| <code><a href="#cdktn.ITokenResolver.resolveMap">resolveMap</a></code> | Resolve a tokenized map. |
+| <code><a href="#cdktn.ITokenResolver.resolveNumberList">resolveNumberList</a></code> | Resolve a tokenized number list. |
+| <code><a href="#cdktn.ITokenResolver.resolveString">resolveString</a></code> | Resolve a string with at least one stringified token in it. |
+| <code><a href="#cdktn.ITokenResolver.resolveToken">resolveToken</a></code> | Resolve a single token. |
+
+***
+
+### `resolveList` <a name="resolveList" id="cdktn.ITokenResolver.resolveList"></a>
+
+```java
+public java.lang.Object resolveList(java.util.List<java.lang.String> l, IResolveContext context)
+```
+
+Resolve a tokenized list.
+
+#### `l`<sup>Required</sup> <a name="l" id="cdktn.ITokenResolver.resolveList.parameter.l"></a>
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+***
+
+#### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveList.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `resolveMap` <a name="resolveMap" id="cdktn.ITokenResolver.resolveMap"></a>
+
+```java
+public java.lang.Object resolveMap(java.util.Map<java.lang.String, java.lang.Object> m, IResolveContext context)
+```
+
+Resolve a tokenized map.
+
+#### `m`<sup>Required</sup> <a name="m" id="cdktn.ITokenResolver.resolveMap.parameter.m"></a>
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+#### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveMap.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `resolveNumberList` <a name="resolveNumberList" id="cdktn.ITokenResolver.resolveNumberList"></a>
+
+```java
+public java.lang.Object resolveNumberList(java.util.List<java.lang.Number> l, IResolveContext context)
+```
+
+Resolve a tokenized number list.
+
+#### `l`<sup>Required</sup> <a name="l" id="cdktn.ITokenResolver.resolveNumberList.parameter.l"></a>
+
+- *Type:* java.util.List&lt; java.lang.Number >
+
+***
+
+#### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveNumberList.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `resolveString` <a name="resolveString" id="cdktn.ITokenResolver.resolveString"></a>
+
+```java
+public java.lang.Object resolveString(TokenizedStringFragments s, IResolveContext context)
+```
+
+Resolve a string with at least one stringified token in it.
+
+(May use concatenation)
+
+#### `s`<sup>Required</sup> <a name="s" id="cdktn.ITokenResolver.resolveString.parameter.s"></a>
+
+- *Type:* <a href="#cdktn.TokenizedStringFragments">TokenizedStringFragments</a>
+
+***
+
+#### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveString.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `resolveToken` <a name="resolveToken" id="cdktn.ITokenResolver.resolveToken"></a>
+
+```java
+public java.lang.Object resolveToken(IResolvable t, IResolveContext context, IPostProcessor postProcessor)
+```
+
+Resolve a single token.
+
+#### `t`<sup>Required</sup> <a name="t" id="cdktn.ITokenResolver.resolveToken.parameter.t"></a>
+
+- *Type:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+***
+
+#### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveToken.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+#### `postProcessor`<sup>Required</sup> <a name="postProcessor" id="cdktn.ITokenResolver.resolveToken.parameter.postProcessor"></a>
+
+- *Type:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+***
+

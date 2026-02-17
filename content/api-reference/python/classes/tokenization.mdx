@@ -1,0 +1,239 @@
+---
+title: "Python: Tokenization"
+sidebarTitle: Tokenization
+description: CDKTN Core API Reference for Tokenization in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Less oft-needed functions to manipulate Tokens.
+
+## Initializers <a name="Initializers" id="cdktn.Tokenization.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.Tokenization()
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Tokenization.isResolvable">is\_resolvable</a></code> | Return whether the given object is an IResolvable object. |
+| <code><a href="#cdktn.Tokenization.resolve">resolve</a></code> | Resolves an object by evaluating all tokens and removing any undefined or empty objects or arrays. |
+| <code><a href="#cdktn.Tokenization.reverse">reverse</a></code> | Reverse any value into Resolvables, if possible. |
+| <code><a href="#cdktn.Tokenization.reverseList">reverse\_list</a></code> | Un-encode a Tokenized value from a list. |
+| <code><a href="#cdktn.Tokenization.reverseMap">reverse\_map</a></code> | Un-encode a Tokenized value from a map. |
+| <code><a href="#cdktn.Tokenization.reverseNumber">reverse\_number</a></code> | Un-encode a Tokenized value from a number. |
+| <code><a href="#cdktn.Tokenization.reverseNumberList">reverse\_number\_list</a></code> | Un-encode a Tokenized value from a list. |
+| <code><a href="#cdktn.Tokenization.reverseString">reverse\_string</a></code> | Un-encode a string potentially containing encoded tokens. |
+| <code><a href="#cdktn.Tokenization.stringifyNumber">stringify\_number</a></code> | Stringify a number directly or lazily if it's a Token. |
+
+***
+
+### `is_resolvable` <a name="is_resolvable" id="cdktn.Tokenization.isResolvable"></a>
+
+```python
+import cdktn
+
+cdktn.Tokenization.is_resolvable(
+  obj: typing.Any
+)
+```
+
+Return whether the given object is an IResolvable object.
+
+This is different from Token.isUnresolved() which will also check for
+encoded Tokens, whereas this method will only do a type check on the given
+object.
+
+#### `obj`<sup>Required</sup> <a name="obj" id="cdktn.Tokenization.isResolvable.parameter.obj"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `resolve` <a name="resolve" id="cdktn.Tokenization.resolve"></a>
+
+```python
+import cdktn
+
+cdktn.Tokenization.resolve(
+  obj: typing.Any,
+  resolver: ITokenResolver,
+  scope: IConstruct,
+  preparing: bool = None
+)
+```
+
+Resolves an object by evaluating all tokens and removing any undefined or empty objects or arrays.
+
+Values can only be primitives, arrays or tokens. Other objects (i.e. with methods) will be rejected.
+
+#### `obj`<sup>Required</sup> <a name="obj" id="cdktn.Tokenization.resolve.parameter.obj"></a>
+
+- *Type:* typing.Any
+
+The object to resolve.
+
+***
+
+#### `resolver`<sup>Required</sup> <a name="resolver" id="cdktn.Tokenization.resolve.parameter.resolver"></a>
+
+- *Type:* <a href="#cdktn.ITokenResolver">ITokenResolver</a>
+
+The resolver to apply to any resolvable tokens found.
+
+***
+
+#### `scope`<sup>Required</sup> <a name="scope" id="cdktn.Tokenization.resolve.parameter.scope"></a>
+
+- *Type:* constructs.IConstruct
+
+The scope from which resolution is performed.
+
+***
+
+#### `preparing`<sup>Optional</sup> <a name="preparing" id="cdktn.Tokenization.resolve.parameter.preparing"></a>
+
+- *Type:* bool
+- *Default:* false
+
+Whether the resolution is being executed during the prepare phase or not.
+
+***
+
+### `reverse` <a name="reverse" id="cdktn.Tokenization.reverse"></a>
+
+```python
+import cdktn
+
+cdktn.Tokenization.reverse(
+  x: typing.Any
+)
+```
+
+Reverse any value into Resolvables, if possible.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.Tokenization.reverse.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `reverse_list` <a name="reverse_list" id="cdktn.Tokenization.reverseList"></a>
+
+```python
+import cdktn
+
+cdktn.Tokenization.reverse_list(
+  l: typing.List[str]
+)
+```
+
+Un-encode a Tokenized value from a list.
+
+#### `l`<sup>Required</sup> <a name="l" id="cdktn.Tokenization.reverseList.parameter.l"></a>
+
+- *Type:* typing.List\[str]
+
+***
+
+### `reverse_map` <a name="reverse_map" id="cdktn.Tokenization.reverseMap"></a>
+
+```python
+import cdktn
+
+cdktn.Tokenization.reverse_map(
+  m: typing.Mapping[typing.Any]
+)
+```
+
+Un-encode a Tokenized value from a map.
+
+#### `m`<sup>Required</sup> <a name="m" id="cdktn.Tokenization.reverseMap.parameter.m"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `reverse_number` <a name="reverse_number" id="cdktn.Tokenization.reverseNumber"></a>
+
+```python
+import cdktn
+
+cdktn.Tokenization.reverse_number(
+  n: typing.Union[int, float]
+)
+```
+
+Un-encode a Tokenized value from a number.
+
+#### `n`<sup>Required</sup> <a name="n" id="cdktn.Tokenization.reverseNumber.parameter.n"></a>
+
+- *Type:* typing.Union\[int, float]
+
+***
+
+### `reverse_number_list` <a name="reverse_number_list" id="cdktn.Tokenization.reverseNumberList"></a>
+
+```python
+import cdktn
+
+cdktn.Tokenization.reverse_number_list(
+  l: typing.List[typing.Union[int, float]]
+)
+```
+
+Un-encode a Tokenized value from a list.
+
+#### `l`<sup>Required</sup> <a name="l" id="cdktn.Tokenization.reverseNumberList.parameter.l"></a>
+
+- *Type:* typing.List\[typing.Union\[int, float]]
+
+***
+
+### `reverse_string` <a name="reverse_string" id="cdktn.Tokenization.reverseString"></a>
+
+```python
+import cdktn
+
+cdktn.Tokenization.reverse_string(
+  s: str
+)
+```
+
+Un-encode a string potentially containing encoded tokens.
+
+#### `s`<sup>Required</sup> <a name="s" id="cdktn.Tokenization.reverseString.parameter.s"></a>
+
+- *Type:* str
+
+***
+
+### `stringify_number` <a name="stringify_number" id="cdktn.Tokenization.stringifyNumber"></a>
+
+```python
+import cdktn
+
+cdktn.Tokenization.stringify_number(
+  x: typing.Union[int, float]
+)
+```
+
+Stringify a number directly or lazily if it's a Token.
+
+If it is an object (i.e., \{ Ref: 'SomeLogicalId' }), return it as-is.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.Tokenization.stringifyNumber.parameter.x"></a>
+
+- *Type:* typing.Union\[int, float]
+
+***
+

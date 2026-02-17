@@ -1,0 +1,201 @@
+---
+title: "Java: Tokenization"
+sidebarTitle: Tokenization
+description: CDKTN Core API Reference for Tokenization in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Less oft-needed functions to manipulate Tokens.
+
+## Initializers <a name="Initializers" id="cdktn.Tokenization.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.Tokenization;
+
+new Tokenization();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Tokenization.isResolvable">isResolvable</a></code> | Return whether the given object is an IResolvable object. |
+| <code><a href="#cdktn.Tokenization.resolve">resolve</a></code> | Resolves an object by evaluating all tokens and removing any undefined or empty objects or arrays. |
+| <code><a href="#cdktn.Tokenization.reverse">reverse</a></code> | Reverse any value into Resolvables, if possible. |
+| <code><a href="#cdktn.Tokenization.reverseList">reverseList</a></code> | Un-encode a Tokenized value from a list. |
+| <code><a href="#cdktn.Tokenization.reverseMap">reverseMap</a></code> | Un-encode a Tokenized value from a map. |
+| <code><a href="#cdktn.Tokenization.reverseNumber">reverseNumber</a></code> | Un-encode a Tokenized value from a number. |
+| <code><a href="#cdktn.Tokenization.reverseNumberList">reverseNumberList</a></code> | Un-encode a Tokenized value from a list. |
+| <code><a href="#cdktn.Tokenization.reverseString">reverseString</a></code> | Un-encode a string potentially containing encoded tokens. |
+| <code><a href="#cdktn.Tokenization.stringifyNumber">stringifyNumber</a></code> | Stringify a number directly or lazily if it's a Token. |
+
+***
+
+### `isResolvable` <a name="isResolvable" id="cdktn.Tokenization.isResolvable"></a>
+
+```java
+import io.cdktn.cdktn.Tokenization;
+
+Tokenization.isResolvable(java.lang.Object obj)
+```
+
+Return whether the given object is an IResolvable object.
+
+This is different from Token.isUnresolved() which will also check for
+encoded Tokens, whereas this method will only do a type check on the given
+object.
+
+#### `obj`<sup>Required</sup> <a name="obj" id="cdktn.Tokenization.isResolvable.parameter.obj"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `resolve` <a name="resolve" id="cdktn.Tokenization.resolve"></a>
+
+```java
+import io.cdktn.cdktn.Tokenization;
+
+Tokenization.resolve(java.lang.Object obj, ResolveOptions options)
+```
+
+Resolves an object by evaluating all tokens and removing any undefined or empty objects or arrays.
+
+Values can only be primitives, arrays or tokens. Other objects (i.e. with methods) will be rejected.
+
+#### `obj`<sup>Required</sup> <a name="obj" id="cdktn.Tokenization.resolve.parameter.obj"></a>
+
+- *Type:* java.lang.Object
+
+The object to resolve.
+
+***
+
+#### `options`<sup>Required</sup> <a name="options" id="cdktn.Tokenization.resolve.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.ResolveOptions">ResolveOptions</a>
+
+Prefix key path components for diagnostics.
+
+***
+
+### `reverse` <a name="reverse" id="cdktn.Tokenization.reverse"></a>
+
+```java
+import io.cdktn.cdktn.Tokenization;
+
+Tokenization.reverse(java.lang.Object x)
+```
+
+Reverse any value into Resolvables, if possible.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.Tokenization.reverse.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `reverseList` <a name="reverseList" id="cdktn.Tokenization.reverseList"></a>
+
+```java
+import io.cdktn.cdktn.Tokenization;
+
+Tokenization.reverseList(java.util.List<java.lang.String> l)
+```
+
+Un-encode a Tokenized value from a list.
+
+#### `l`<sup>Required</sup> <a name="l" id="cdktn.Tokenization.reverseList.parameter.l"></a>
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+***
+
+### `reverseMap` <a name="reverseMap" id="cdktn.Tokenization.reverseMap"></a>
+
+```java
+import io.cdktn.cdktn.Tokenization;
+
+Tokenization.reverseMap(java.util.Map<java.lang.String, java.lang.Object> m)
+```
+
+Un-encode a Tokenized value from a map.
+
+#### `m`<sup>Required</sup> <a name="m" id="cdktn.Tokenization.reverseMap.parameter.m"></a>
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+### `reverseNumber` <a name="reverseNumber" id="cdktn.Tokenization.reverseNumber"></a>
+
+```java
+import io.cdktn.cdktn.Tokenization;
+
+Tokenization.reverseNumber(java.lang.Number n)
+```
+
+Un-encode a Tokenized value from a number.
+
+#### `n`<sup>Required</sup> <a name="n" id="cdktn.Tokenization.reverseNumber.parameter.n"></a>
+
+- *Type:* java.lang.Number
+
+***
+
+### `reverseNumberList` <a name="reverseNumberList" id="cdktn.Tokenization.reverseNumberList"></a>
+
+```java
+import io.cdktn.cdktn.Tokenization;
+
+Tokenization.reverseNumberList(java.util.List<java.lang.Number> l)
+```
+
+Un-encode a Tokenized value from a list.
+
+#### `l`<sup>Required</sup> <a name="l" id="cdktn.Tokenization.reverseNumberList.parameter.l"></a>
+
+- *Type:* java.util.List&lt; java.lang.Number >
+
+***
+
+### `reverseString` <a name="reverseString" id="cdktn.Tokenization.reverseString"></a>
+
+```java
+import io.cdktn.cdktn.Tokenization;
+
+Tokenization.reverseString(java.lang.String s)
+```
+
+Un-encode a string potentially containing encoded tokens.
+
+#### `s`<sup>Required</sup> <a name="s" id="cdktn.Tokenization.reverseString.parameter.s"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `stringifyNumber` <a name="stringifyNumber" id="cdktn.Tokenization.stringifyNumber"></a>
+
+```java
+import io.cdktn.cdktn.Tokenization;
+
+Tokenization.stringifyNumber(java.lang.Number x)
+```
+
+Stringify a number directly or lazily if it's a Token.
+
+If it is an object (i.e., \{ Ref: 'SomeLogicalId' }), return it as-is.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.Tokenization.stringifyNumber.parameter.x"></a>
+
+- *Type:* java.lang.Number
+
+***
+

@@ -1,0 +1,40 @@
+---
+title: "Go: IPostProcessor"
+sidebarTitle: IPostProcessor
+description: CDKTN Core API Reference for IPostProcessor in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implemented By:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+A Token that can post-process the complete resolved value, after resolve() has recursed over it.
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IPostProcessor.postProcess">PostProcess</a></code> | Process the completely resolved value, after full recursion/resolution has happened. |
+
+***
+
+### `PostProcess` <a name="PostProcess" id="cdktn.IPostProcessor.postProcess"></a>
+
+```go
+func PostProcess(input interface{}, context IResolveContext) interface{}
+```
+
+Process the completely resolved value, after full recursion/resolution has happened.
+
+#### `input`<sup>Required</sup> <a name="input" id="cdktn.IPostProcessor.postProcess.parameter.input"></a>
+
+- *Type:* interface\{}
+
+***
+
+#### `context`<sup>Required</sup> <a name="context" id="cdktn.IPostProcessor.postProcess.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+

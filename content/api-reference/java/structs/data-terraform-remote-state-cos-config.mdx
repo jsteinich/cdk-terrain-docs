@@ -1,0 +1,257 @@
+---
+title: "Java: DataTerraformRemoteStateCosConfig"
+sidebarTitle: DataTerraformRemoteStateCosConfig
+description: CDKTN Core API Reference for DataTerraformRemoteStateCosConfig in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.DataTerraformRemoteStateCosConfig.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.DataTerraformRemoteStateCosConfig;
+
+DataTerraformRemoteStateCosConfig.builder()
+//  .defaults(java.util.Map<java.lang.String, java.lang.Object>)
+//  .workspace(java.lang.String)
+    .bucket(java.lang.String)
+//  .accelerate(java.lang.Boolean)
+//  .acl(java.lang.String)
+//  .assumeRole(CosBackendAssumeRole)
+//  .domain(java.lang.String)
+//  .encrypt(java.lang.Boolean)
+//  .endpoint(java.lang.String)
+//  .key(java.lang.String)
+//  .prefix(java.lang.String)
+//  .region(java.lang.String)
+//  .secretId(java.lang.String)
+//  .secretKey(java.lang.String)
+//  .securityToken(java.lang.String)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.defaults">defaults</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.workspace">workspace</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.bucket">bucket</a></code> | <code>java.lang.String</code> | (Required) The name of the COS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.accelerate">accelerate</a></code> | <code>java.lang.Boolean</code> | (Optional) Whether to enable global Acceleration. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.acl">acl</a></code> | <code>java.lang.String</code> | (Optional) Object ACL to be applied to the state file, allows private and public-read. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.assumeRole">assumeRole</a></code> | <code><a href="#cdktn.CosBackendAssumeRole">CosBackendAssumeRole</a></code> | (Optional) The assume\_role block. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.domain">domain</a></code> | <code>java.lang.String</code> | (Optional) The root domain of the API request. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.encrypt">encrypt</a></code> | <code>java.lang.Boolean</code> | (Optional) Whether to enable server side encryption of the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.endpoint">endpoint</a></code> | <code>java.lang.String</code> | (Optional) The Custom Endpoint for the COS backend. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.key">key</a></code> | <code>java.lang.String</code> | (Optional) The path for saving the state file in bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.prefix">prefix</a></code> | <code>java.lang.String</code> | (Optional) The directory for saving the state file in bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.region">region</a></code> | <code>java.lang.String</code> | (Optional) The region of the COS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.secretId">secretId</a></code> | <code>java.lang.String</code> | (Optional) Secret id of Tencent Cloud. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.secretKey">secretKey</a></code> | <code>java.lang.String</code> | (Optional) Secret key of Tencent Cloud. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.securityToken">securityToken</a></code> | <code>java.lang.String</code> | (Optional) TencentCloud Security Token of temporary access credentials. |
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateCosConfig.property.defaults"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getDefaults();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateCosConfig.property.workspace"></a>
+
+```java
+public java.lang.String getWorkspace();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.DataTerraformRemoteStateCosConfig.property.bucket"></a>
+
+```java
+public java.lang.String getBucket();
+```
+
+- *Type:* java.lang.String
+
+(Required) The name of the COS bucket.
+
+You shall manually create it first.
+
+***
+
+### `accelerate`<sup>Optional</sup> <a name="accelerate" id="cdktn.DataTerraformRemoteStateCosConfig.property.accelerate"></a>
+
+```java
+public java.lang.Boolean getAccelerate();
+```
+
+- *Type:* java.lang.Boolean
+
+(Optional) Whether to enable global Acceleration.
+
+Defaults to false.
+
+***
+
+### `acl`<sup>Optional</sup> <a name="acl" id="cdktn.DataTerraformRemoteStateCosConfig.property.acl"></a>
+
+```java
+public java.lang.String getAcl();
+```
+
+- *Type:* java.lang.String
+
+(Optional) Object ACL to be applied to the state file, allows private and public-read.
+
+Defaults to private.
+
+***
+
+### `assumeRole`<sup>Optional</sup> <a name="assumeRole" id="cdktn.DataTerraformRemoteStateCosConfig.property.assumeRole"></a>
+
+```java
+public CosBackendAssumeRole getAssumeRole();
+```
+
+- *Type:* <a href="#cdktn.CosBackendAssumeRole">CosBackendAssumeRole</a>
+
+(Optional) The assume\_role block.
+
+If provided, terraform will attempt to assume this role using the supplied credentials.
+
+***
+
+### `domain`<sup>Optional</sup> <a name="domain" id="cdktn.DataTerraformRemoteStateCosConfig.property.domain"></a>
+
+```java
+public java.lang.String getDomain();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The root domain of the API request.
+
+Defaults to tencentcloudapi.com.
+It supports the environment variable TENCENTCLOUD\_DOMAIN.
+
+***
+
+### `encrypt`<sup>Optional</sup> <a name="encrypt" id="cdktn.DataTerraformRemoteStateCosConfig.property.encrypt"></a>
+
+```java
+public java.lang.Boolean getEncrypt();
+```
+
+- *Type:* java.lang.Boolean
+
+(Optional) Whether to enable server side encryption of the state file.
+
+If it is true, COS will use 'AES256' encryption algorithm to encrypt state file.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.DataTerraformRemoteStateCosConfig.property.endpoint"></a>
+
+```java
+public java.lang.String getEndpoint();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The Custom Endpoint for the COS backend.
+
+It supports the environment variable TENCENTCLOUD\_ENDPOINT.
+
+***
+
+### `key`<sup>Optional</sup> <a name="key" id="cdktn.DataTerraformRemoteStateCosConfig.property.key"></a>
+
+```java
+public java.lang.String getKey();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The path for saving the state file in bucket.
+
+Defaults to terraform.tfstate.
+
+***
+
+### `prefix`<sup>Optional</sup> <a name="prefix" id="cdktn.DataTerraformRemoteStateCosConfig.property.prefix"></a>
+
+```java
+public java.lang.String getPrefix();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The directory for saving the state file in bucket.
+
+Default to "env:".
+
+***
+
+### `region`<sup>Optional</sup> <a name="region" id="cdktn.DataTerraformRemoteStateCosConfig.property.region"></a>
+
+```java
+public java.lang.String getRegion();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The region of the COS bucket.
+
+It supports environment variables TENCENTCLOUD\_REGION.
+
+***
+
+### `secretId`<sup>Optional</sup> <a name="secretId" id="cdktn.DataTerraformRemoteStateCosConfig.property.secretId"></a>
+
+```java
+public java.lang.String getSecretId();
+```
+
+- *Type:* java.lang.String
+
+(Optional) Secret id of Tencent Cloud.
+
+It supports environment variables TENCENTCLOUD\_SECRET\_ID.
+
+***
+
+### `secretKey`<sup>Optional</sup> <a name="secretKey" id="cdktn.DataTerraformRemoteStateCosConfig.property.secretKey"></a>
+
+```java
+public java.lang.String getSecretKey();
+```
+
+- *Type:* java.lang.String
+
+(Optional) Secret key of Tencent Cloud.
+
+It supports environment variables TENCENTCLOUD\_SECRET\_KEY.
+
+***
+
+### `securityToken`<sup>Optional</sup> <a name="securityToken" id="cdktn.DataTerraformRemoteStateCosConfig.property.securityToken"></a>
+
+```java
+public java.lang.String getSecurityToken();
+```
+
+- *Type:* java.lang.String
+
+(Optional) TencentCloud Security Token of temporary access credentials.
+
+It supports environment variables TENCENTCLOUD\_SECURITY\_TOKEN.
+
+***
+

@@ -1,0 +1,403 @@
+---
+title: "Python: Token"
+sidebarTitle: Token
+description: CDKTN Core API Reference for Token in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Represents a special or lazily-evaluated value.
+
+Can be used to delay evaluation of a certain value in case, for example,
+that it requires some context or late-bound data. Can also be used to
+mark values that need special processing at document rendering time.
+
+Tokens can be embedded into strings while retaining their original
+semantics.
+
+## Initializers <a name="Initializers" id="cdktn.Token.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.Token()
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Token.asAny">as\_any</a></code> | Return a resolvable representation of the given value. |
+| <code><a href="#cdktn.Token.asAnyMap">as\_any\_map</a></code> | Return a reversible map representation of this token. |
+| <code><a href="#cdktn.Token.asBooleanMap">as\_boolean\_map</a></code> | Return a reversible map representation of this token. |
+| <code><a href="#cdktn.Token.asList">as\_list</a></code> | Return a reversible list representation of this token. |
+| <code><a href="#cdktn.Token.asMap">as\_map</a></code> | Return a reversible map representation of this token. |
+| <code><a href="#cdktn.Token.asNumber">as\_number</a></code> | Return a reversible number representation of this token. |
+| <code><a href="#cdktn.Token.asNumberList">as\_number\_list</a></code> | Return a reversible list representation of this token. |
+| <code><a href="#cdktn.Token.asNumberMap">as\_number\_map</a></code> | Return a reversible map representation of this token. |
+| <code><a href="#cdktn.Token.asString">as\_string</a></code> | Return a reversible string representation of this token. |
+| <code><a href="#cdktn.Token.asStringMap">as\_string\_map</a></code> | Return a reversible map representation of this token. |
+| <code><a href="#cdktn.Token.isUnresolved">is\_unresolved</a></code> | Returns true if obj represents an unresolved value. |
+| <code><a href="#cdktn.Token.nullValue">null\_value</a></code> | Return a Token containing a `null` value. |
+
+***
+
+### `as_any` <a name="as_any" id="cdktn.Token.asAny"></a>
+
+```python
+import cdktn
+
+cdktn.Token.as_any(
+  value: typing.Any
+)
+```
+
+Return a resolvable representation of the given value.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Token.asAny.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `as_any_map` <a name="as_any_map" id="cdktn.Token.asAnyMap"></a>
+
+```python
+import cdktn
+
+cdktn.Token.as_any_map(
+  value: typing.Any,
+  display_hint: str = None
+)
+```
+
+Return a reversible map representation of this token.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Token.asAnyMap.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+#### `display_hint`<sup>Optional</sup> <a name="display_hint" id="cdktn.Token.asAnyMap.parameter.displayHint"></a>
+
+- *Type:* str
+- *Default:* no display hint
+
+A hint for the Token's purpose when stringifying it.
+
+***
+
+### `as_boolean_map` <a name="as_boolean_map" id="cdktn.Token.asBooleanMap"></a>
+
+```python
+import cdktn
+
+cdktn.Token.as_boolean_map(
+  value: typing.Any,
+  display_hint: str = None
+)
+```
+
+Return a reversible map representation of this token.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Token.asBooleanMap.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+#### `display_hint`<sup>Optional</sup> <a name="display_hint" id="cdktn.Token.asBooleanMap.parameter.displayHint"></a>
+
+- *Type:* str
+- *Default:* no display hint
+
+A hint for the Token's purpose when stringifying it.
+
+***
+
+### `as_list` <a name="as_list" id="cdktn.Token.asList"></a>
+
+```python
+import cdktn
+
+cdktn.Token.as_list(
+  value: typing.Any,
+  display_hint: str = None
+)
+```
+
+Return a reversible list representation of this token.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Token.asList.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+#### `display_hint`<sup>Optional</sup> <a name="display_hint" id="cdktn.Token.asList.parameter.displayHint"></a>
+
+- *Type:* str
+- *Default:* no display hint
+
+A hint for the Token's purpose when stringifying it.
+
+***
+
+### `as_map` <a name="as_map" id="cdktn.Token.asMap"></a>
+
+```python
+import cdktn
+
+cdktn.Token.as_map(
+  value: typing.Any,
+  map_value: typing.Any,
+  display_hint: str = None
+)
+```
+
+Return a reversible map representation of this token.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Token.asMap.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+#### `map_value`<sup>Required</sup> <a name="map_value" id="cdktn.Token.asMap.parameter.mapValue"></a>
+
+- *Type:* typing.Any
+
+***
+
+#### `display_hint`<sup>Optional</sup> <a name="display_hint" id="cdktn.Token.asMap.parameter.displayHint"></a>
+
+- *Type:* str
+- *Default:* no display hint
+
+A hint for the Token's purpose when stringifying it.
+
+***
+
+### `as_number` <a name="as_number" id="cdktn.Token.asNumber"></a>
+
+```python
+import cdktn
+
+cdktn.Token.as_number(
+  value: typing.Any
+)
+```
+
+Return a reversible number representation of this token.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Token.asNumber.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `as_number_list` <a name="as_number_list" id="cdktn.Token.asNumberList"></a>
+
+```python
+import cdktn
+
+cdktn.Token.as_number_list(
+  value: typing.Any
+)
+```
+
+Return a reversible list representation of this token.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Token.asNumberList.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `as_number_map` <a name="as_number_map" id="cdktn.Token.asNumberMap"></a>
+
+```python
+import cdktn
+
+cdktn.Token.as_number_map(
+  value: typing.Any,
+  display_hint: str = None
+)
+```
+
+Return a reversible map representation of this token.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Token.asNumberMap.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+#### `display_hint`<sup>Optional</sup> <a name="display_hint" id="cdktn.Token.asNumberMap.parameter.displayHint"></a>
+
+- *Type:* str
+- *Default:* no display hint
+
+A hint for the Token's purpose when stringifying it.
+
+***
+
+### `as_string` <a name="as_string" id="cdktn.Token.asString"></a>
+
+```python
+import cdktn
+
+cdktn.Token.as_string(
+  value: typing.Any,
+  display_hint: str = None
+)
+```
+
+Return a reversible string representation of this token.
+
+If the Token is initialized with a literal, the stringified value of the
+literal is returned. Otherwise, a special quoted string representation
+of the Token is returned that can be embedded into other strings.
+
+Strings with quoted Tokens in them can be restored back into
+complex values with the Tokens restored by calling `resolve()`
+on the string.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Token.asString.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+#### `display_hint`<sup>Optional</sup> <a name="display_hint" id="cdktn.Token.asString.parameter.displayHint"></a>
+
+- *Type:* str
+- *Default:* no display hint
+
+A hint for the Token's purpose when stringifying it.
+
+***
+
+### `as_string_map` <a name="as_string_map" id="cdktn.Token.asStringMap"></a>
+
+```python
+import cdktn
+
+cdktn.Token.as_string_map(
+  value: typing.Any,
+  display_hint: str = None
+)
+```
+
+Return a reversible map representation of this token.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Token.asStringMap.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+#### `display_hint`<sup>Optional</sup> <a name="display_hint" id="cdktn.Token.asStringMap.parameter.displayHint"></a>
+
+- *Type:* str
+- *Default:* no display hint
+
+A hint for the Token's purpose when stringifying it.
+
+***
+
+### `is_unresolved` <a name="is_unresolved" id="cdktn.Token.isUnresolved"></a>
+
+```python
+import cdktn
+
+cdktn.Token.is_unresolved(
+  obj: typing.Any
+)
+```
+
+Returns true if obj represents an unresolved value.
+
+One of these must be true:
+
+- `obj` is an IResolvable
+- `obj` is a string containing at least one encoded `IResolvable`
+- `obj` is either an encoded number or list
+
+This does NOT recurse into lists or objects to see if they
+containing resolvables.
+
+#### `obj`<sup>Required</sup> <a name="obj" id="cdktn.Token.isUnresolved.parameter.obj"></a>
+
+- *Type:* typing.Any
+
+The object to test.
+
+***
+
+### `null_value` <a name="null_value" id="cdktn.Token.nullValue"></a>
+
+```python
+import cdktn
+
+cdktn.Token.null_value()
+```
+
+Return a Token containing a `null` value.
+
+Note: This is different than `undefined`, `nil`, `None` or similar
+as it will end up in the Terraform config and can be used to explicitly
+not set an attribute (which is sometimes required by Terraform providers)
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Token.property.ANY_MAP_TOKEN_VALUE">ANY\_MAP\_TOKEN\_VALUE</a></code> | <code>str</code> | Any map token representation. |
+| <code><a href="#cdktn.Token.property.NUMBER_MAP_TOKEN_VALUE">NUMBER\_MAP\_TOKEN\_VALUE</a></code> | <code>typing.Union\[int, float]</code> | Number Map token value representation. |
+| <code><a href="#cdktn.Token.property.STRING_MAP_TOKEN_VALUE">STRING\_MAP\_TOKEN\_VALUE</a></code> | <code>str</code> | String Map token value representation. |
+
+***
+
+### `ANY_MAP_TOKEN_VALUE`<sup>Required</sup> <a name="ANY_MAP_TOKEN_VALUE" id="cdktn.Token.property.ANY_MAP_TOKEN_VALUE"></a>
+
+```python
+ANY_MAP_TOKEN_VALUE: str
+```
+
+- *Type:* str
+
+Any map token representation.
+
+***
+
+### `NUMBER_MAP_TOKEN_VALUE`<sup>Required</sup> <a name="NUMBER_MAP_TOKEN_VALUE" id="cdktn.Token.property.NUMBER_MAP_TOKEN_VALUE"></a>
+
+```python
+NUMBER_MAP_TOKEN_VALUE: typing.Union[int, float]
+```
+
+- *Type:* typing.Union\[int, float]
+
+Number Map token value representation.
+
+***
+
+### `STRING_MAP_TOKEN_VALUE`<sup>Required</sup> <a name="STRING_MAP_TOKEN_VALUE" id="cdktn.Token.property.STRING_MAP_TOKEN_VALUE"></a>
+
+```python
+STRING_MAP_TOKEN_VALUE: str
+```
+
+- *Type:* str
+
+String Map token value representation.
+
+***
+

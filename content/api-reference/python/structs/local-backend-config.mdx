@@ -1,0 +1,58 @@
+---
+title: "Python: LocalBackendConfig"
+sidebarTitle: LocalBackendConfig
+description: CDKTN Core API Reference for LocalBackendConfig in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+The local backend stores state on the local filesystem, locks that state using system APIs, and performs operations locally.
+
+Read more about this backend in the Terraform docs:
+https://developer.hashicorp.com/terraform/language/settings/backends/local
+
+## Initializer <a name="Initializer" id="cdktn.LocalBackendConfig.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.LocalBackendConfig(
+  path: str = None,
+  workspace_dir: str = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.LocalBackendConfig.property.path">path</a></code> | <code>str</code> | Path where the state file is stored. |
+| <code><a href="#cdktn.LocalBackendConfig.property.workspaceDir">workspace\_dir</a></code> | <code>str</code> | (Optional) The path to non-default workspaces. |
+
+***
+
+### `path`<sup>Optional</sup> <a name="path" id="cdktn.LocalBackendConfig.property.path"></a>
+
+```python
+path: str
+```
+
+- *Type:* str
+- *Default:* defaults to terraform.$\{stackId}.tfstate
+
+Path where the state file is stored.
+
+***
+
+### `workspace_dir`<sup>Optional</sup> <a name="workspace_dir" id="cdktn.LocalBackendConfig.property.workspaceDir"></a>
+
+```python
+workspace_dir: str
+```
+
+- *Type:* str
+
+(Optional) The path to non-default workspaces.
+
+***
+

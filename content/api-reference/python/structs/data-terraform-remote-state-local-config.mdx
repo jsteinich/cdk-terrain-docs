@@ -1,0 +1,77 @@
+---
+title: "Python: DataTerraformRemoteStateLocalConfig"
+sidebarTitle: DataTerraformRemoteStateLocalConfig
+description: CDKTN Core API Reference for DataTerraformRemoteStateLocalConfig in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.DataTerraformRemoteStateLocalConfig.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateLocalConfig(
+  defaults: typing.Mapping[typing.Any] = None,
+  workspace: str = None,
+  path: str = None,
+  workspace_dir: str = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateLocalConfig.property.defaults">defaults</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateLocalConfig.property.workspace">workspace</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateLocalConfig.property.path">path</a></code> | <code>str</code> | Path where the state file is stored. |
+| <code><a href="#cdktn.DataTerraformRemoteStateLocalConfig.property.workspaceDir">workspace\_dir</a></code> | <code>str</code> | (Optional) The path to non-default workspaces. |
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateLocalConfig.property.defaults"></a>
+
+```python
+defaults: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateLocalConfig.property.workspace"></a>
+
+```python
+workspace: str
+```
+
+- *Type:* str
+
+***
+
+### `path`<sup>Optional</sup> <a name="path" id="cdktn.DataTerraformRemoteStateLocalConfig.property.path"></a>
+
+```python
+path: str
+```
+
+- *Type:* str
+- *Default:* defaults to terraform.$\{stackId}.tfstate
+
+Path where the state file is stored.
+
+***
+
+### `workspace_dir`<sup>Optional</sup> <a name="workspace_dir" id="cdktn.DataTerraformRemoteStateLocalConfig.property.workspaceDir"></a>
+
+```python
+workspace_dir: str
+```
+
+- *Type:* str
+
+(Optional) The path to non-default workspaces.
+
+***
+

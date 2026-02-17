@@ -1,0 +1,125 @@
+---
+title: "Java: ITerraformResource"
+sidebarTitle: ITerraformResource
+description: CDKTN Core API Reference for ITerraformResource in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implemented By:* <a href="#cdktn.DataResource">DataResource</a>, <a href="#cdktn.TerraformDataSource">TerraformDataSource</a>, <a href="#cdktn.TerraformResource">TerraformResource</a>, <a href="#cdktn.ITerraformResource">ITerraformResource</a>
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.ITerraformResource.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+
+***
+
+### `interpolationForAttribute` <a name="interpolationForAttribute" id="cdktn.ITerraformResource.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String terraformAttribute)
+```
+
+#### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.ITerraformResource.interpolationForAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.ITerraformResource.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.count">count</a></code> | <code>java.lang.Number&#124;<a href="#cdktn.TerraformCount">TerraformCount</a></code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.dependsOn">dependsOn</a></code> | <code>java.util.List&lt; java.lang.String ></code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.forEach">forEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.lifecycle">lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.provider">provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.ITerraformResource.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.ITerraformResource.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="cdktn.ITerraformResource.property.terraformResourceType"></a>
+
+```java
+public java.lang.String getTerraformResourceType();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `count`<sup>Optional</sup> <a name="count" id="cdktn.ITerraformResource.property.count"></a>
+
+```java
+public java.lang.Number|TerraformCount getCount();
+```
+
+- *Type:* java.lang.Number|<a href="#cdktn.TerraformCount">TerraformCount</a>
+
+***
+
+### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="cdktn.ITerraformResource.property.dependsOn"></a>
+
+```java
+public java.util.List<java.lang.String> getDependsOn();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+***
+
+### `forEach`<sup>Optional</sup> <a name="forEach" id="cdktn.ITerraformResource.property.forEach"></a>
+
+```java
+public ITerraformIterator getForEach();
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="cdktn.ITerraformResource.property.lifecycle"></a>
+
+```java
+public TerraformResourceLifecycle getLifecycle();
+```
+
+- *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
+
+***
+
+### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.ITerraformResource.property.provider"></a>
+
+```java
+public TerraformProvider getProvider();
+```
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+

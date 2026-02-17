@@ -1,0 +1,876 @@
+---
+title: "Java: S3Backend"
+sidebarTitle: S3Backend
+description: CDKTN Core API Reference for S3Backend in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.S3Backend.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.S3Backend;
+
+S3Backend.Builder.create(Construct scope)
+    .bucket(java.lang.String)
+    .key(java.lang.String)
+//  .accessKey(java.lang.String)
+//  .acl(java.lang.String)
+//  .allowedAccountIds(java.util.List<java.lang.String>)
+//  .assumeRole(S3BackendAssumeRoleConfig)
+//  .assumeRolePolicy(java.lang.String)
+//  .assumeRolePolicyArns(java.util.List<java.lang.String>)
+//  .assumeRoleTags(java.util.Map<java.lang.String, java.lang.String>)
+//  .assumeRoleTransitiveTagKeys(java.util.List<java.lang.String>)
+//  .assumeRoleWithWebIdentity(S3BackendAssumeRoleWithWebIdentityConfig)
+//  .customCaBundle(java.lang.String)
+//  .dynamodbEndpoint(java.lang.String)
+//  .dynamodbTable(java.lang.String)
+//  .ec2MetadataServiceEndpoint(java.lang.String)
+//  .ec2MetadataServiceEndpointMode(java.lang.String)
+//  .encrypt(java.lang.Boolean)
+//  .endpoint(java.lang.String)
+//  .endpoints(S3BackendEndpointConfig)
+//  .externalId(java.lang.String)
+//  .forbiddenAccountIds(java.util.List<java.lang.String>)
+//  .forcePathStyle(java.lang.Boolean)
+//  .httpProxy(java.lang.String)
+//  .httpsProxy(java.lang.String)
+//  .iamEndpoint(java.lang.String)
+//  .insecure(java.lang.Boolean)
+//  .kmsKeyId(java.lang.String)
+//  .maxRetries(java.lang.Number)
+//  .noProxy(java.lang.String)
+//  .profile(java.lang.String)
+//  .region(java.lang.String)
+//  .retryMode(java.lang.String)
+//  .roleArn(java.lang.String)
+//  .secretKey(java.lang.String)
+//  .sessionName(java.lang.String)
+//  .sharedConfigFiles(java.util.List<java.lang.String>)
+//  .sharedCredentialsFile(java.lang.String)
+//  .sharedCredentialsFiles(java.util.List<java.lang.String>)
+//  .skipCredentialsValidation(java.lang.Boolean)
+//  .skipMetadataApiCheck(java.lang.Boolean)
+//  .skipRegionValidation(java.lang.Boolean)
+//  .skipRequestingAccountId(java.lang.Boolean)
+//  .skipS3Checksum(java.lang.Boolean)
+//  .sseCustomerKey(java.lang.String)
+//  .stsEndpoint(java.lang.String)
+//  .stsRegion(java.lang.String)
+//  .token(java.lang.String)
+//  .useLegacyWorkflow(java.lang.Boolean)
+//  .usePathStyle(java.lang.Boolean)
+//  .workspaceKeyPrefix(java.lang.String)
+    .build();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.bucket">bucket</a></code> | <code>java.lang.String</code> | Name of the S3 Bucket. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.key">key</a></code> | <code>java.lang.String</code> | Path to the state file inside the S3 Bucket. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.accessKey">accessKey</a></code> | <code>java.lang.String</code> | (Optional) AWS access key. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.acl">acl</a></code> | <code>java.lang.String</code> | (Optional) Canned ACL to be applied to the state file. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.allowedAccountIds">allowedAccountIds</a></code> | <code>java.util.List&lt; java.lang.String ></code> | (Optional) List of allowed AWS account IDs to prevent potential destruction of a live environment. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.assumeRole">assumeRole</a></code> | <code><a href="#cdktn.S3BackendAssumeRoleConfig">S3BackendAssumeRoleConfig</a></code> | Assuming an IAM Role can be configured in two ways. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.assumeRolePolicy">assumeRolePolicy</a></code> | <code>java.lang.String</code> | (Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.assumeRolePolicyArns">assumeRolePolicyArns</a></code> | <code>java.util.List&lt; java.lang.String ></code> | (Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.assumeRoleTags">assumeRoleTags</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.String ></code> | (Optional) Map of assume role session tags. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.assumeRoleTransitiveTagKeys">assumeRoleTransitiveTagKeys</a></code> | <code>java.util.List&lt; java.lang.String ></code> | (Optional) Set of assume role session tag keys to pass to any subsequent sessions. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.assumeRoleWithWebIdentity">assumeRoleWithWebIdentity</a></code> | <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig">S3BackendAssumeRoleWithWebIdentityConfig</a></code> | Assume Role With Web Identity Configuration. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.customCaBundle">customCaBundle</a></code> | <code>java.lang.String</code> | (Optional) File containing custom root and intermediate certificates. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.dynamodbEndpoint">dynamodbEndpoint</a></code> | <code>java.lang.String</code> | (Optional) Custom endpoint for the AWS DynamoDB API. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.dynamodbTable">dynamodbTable</a></code> | <code>java.lang.String</code> | (Optional) Name of DynamoDB Table to use for state locking and consistency. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.ec2MetadataServiceEndpoint">ec2MetadataServiceEndpoint</a></code> | <code>java.lang.String</code> | Optional) Custom endpoint URL for the EC2 Instance Metadata Service (IMDS) API. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.ec2MetadataServiceEndpointMode">ec2MetadataServiceEndpointMode</a></code> | <code>java.lang.String</code> | (Optional) Mode to use in communicating with the metadata service. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.encrypt">encrypt</a></code> | <code>java.lang.Boolean</code> | (Optional) Enable server side encryption of the state file. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.endpoint">endpoint</a></code> | <code>java.lang.String</code> | (Optional) Custom endpoint for the AWS S3 API. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.endpoints">endpoints</a></code> | <code><a href="#cdktn.S3BackendEndpointConfig">S3BackendEndpointConfig</a></code> | (Optional) The endpoint configuration block. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.externalId">externalId</a></code> | <code>java.lang.String</code> | (Optional) External identifier to use when assuming the role. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.forbiddenAccountIds">forbiddenAccountIds</a></code> | <code>java.util.List&lt; java.lang.String ></code> | (Optional) List of forbidden AWS account IDs to prevent potential destruction of a live environment. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.forcePathStyle">forcePathStyle</a></code> | <code>java.lang.Boolean</code> | (Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >). |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.httpProxy">httpProxy</a></code> | <code>java.lang.String</code> | (Optional) URL of a proxy to use for HTTP requests when accessing the AWS API. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.httpsProxy">httpsProxy</a></code> | <code>java.lang.String</code> | (Optional) URL of a proxy to use for HTTPS requests when accessing the AWS API. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.iamEndpoint">iamEndpoint</a></code> | <code>java.lang.String</code> | (Optional) Custom endpoint for the AWS Identity and Access Management (IAM) API. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.insecure">insecure</a></code> | <code>java.lang.Boolean</code> | Optional) Whether to explicitly allow the backend to perform "insecure" SSL requests. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.kmsKeyId">kmsKeyId</a></code> | <code>java.lang.String</code> | (Optional) Amazon Resource Name (ARN) of a Key Management Service (KMS) Key to use for encrypting the state. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.maxRetries">maxRetries</a></code> | <code>java.lang.Number</code> | (Optional) The maximum number of times an AWS API request is retried on retryable failure. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.noProxy">noProxy</a></code> | <code>java.lang.String</code> | (Optional) Comma-separated list of hosts that should not use HTTP or HTTPS proxies. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.profile">profile</a></code> | <code>java.lang.String</code> | (Optional) Name of AWS profile in AWS shared credentials file (e.g. ~/.aws/credentials) or AWS shared configuration file (e.g. ~/.aws/config) to use for credentials and/or configuration. This can also be sourced from the AWS\_PROFILE environment variable. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | AWS Region of the S3 Bucket and DynamoDB Table (if used). |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.retryMode">retryMode</a></code> | <code>java.lang.String</code> | (Optional) Specifies how retries are attempted. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.roleArn">roleArn</a></code> | <code>java.lang.String</code> | (Optional) Amazon Resource Name (ARN) of the IAM Role to assume. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.secretKey">secretKey</a></code> | <code>java.lang.String</code> | (Optional) AWS secret access key. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.sessionName">sessionName</a></code> | <code>java.lang.String</code> | (Optional) Session name to use when assuming the role. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.sharedConfigFiles">sharedConfigFiles</a></code> | <code>java.util.List&lt; java.lang.String ></code> | (Optional) List of paths to AWS shared configuration files. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.sharedCredentialsFile">sharedCredentialsFile</a></code> | <code>java.lang.String</code> | (Optional) Path to the AWS shared credentials file. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.sharedCredentialsFiles">sharedCredentialsFiles</a></code> | <code>java.util.List&lt; java.lang.String ></code> | (Optional) List of paths to AWS shared credentials files. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.skipCredentialsValidation">skipCredentialsValidation</a></code> | <code>java.lang.Boolean</code> | (Optional) Skip credentials validation via the STS API. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.skipMetadataApiCheck">skipMetadataApiCheck</a></code> | <code>java.lang.Boolean</code> | (Optional) Skip usage of EC2 Metadata API. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.skipRegionValidation">skipRegionValidation</a></code> | <code>java.lang.Boolean</code> | (Optional) Skip validation of provided region name. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.skipRequestingAccountId">skipRequestingAccountId</a></code> | <code>java.lang.Boolean</code> | (Optional) Whether to skip requesting the account ID. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.skipS3Checksum">skipS3Checksum</a></code> | <code>java.lang.Boolean</code> | (Optional) Do not include checksum when uploading S3 Objects. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.sseCustomerKey">sseCustomerKey</a></code> | <code>java.lang.String</code> | (Optional) The key to use for encrypting state with Server-Side Encryption with Customer-Provided Keys (SSE-C). |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.stsEndpoint">stsEndpoint</a></code> | <code>java.lang.String</code> | (Optional) Custom endpoint for the AWS Security Token Service (STS) API. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.stsRegion">stsRegion</a></code> | <code>java.lang.String</code> | (Optional) AWS region for STS. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.token">token</a></code> | <code>java.lang.String</code> | (Optional) Multi-Factor Authentication (MFA) token. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.useLegacyWorkflow">useLegacyWorkflow</a></code> | <code>java.lang.Boolean</code> | (Optional) Use the legacy authentication workflow, preferring environment variables over backend configuration. |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.usePathStyle">usePathStyle</a></code> | <code>java.lang.Boolean</code> | (Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >). |
+| <code><a href="#cdktn.S3Backend.Initializer.parameter.workspaceKeyPrefix">workspaceKeyPrefix</a></code> | <code>java.lang.String</code> | (Optional) Prefix applied to the state path inside the bucket. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.S3Backend.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.S3Backend.Initializer.parameter.bucket"></a>
+
+- *Type:* java.lang.String
+
+Name of the S3 Bucket.
+
+***
+
+### `key`<sup>Required</sup> <a name="key" id="cdktn.S3Backend.Initializer.parameter.key"></a>
+
+- *Type:* java.lang.String
+
+Path to the state file inside the S3 Bucket.
+
+When using a non-default workspace, the state path will be /workspace\_key\_prefix/workspace\_name/key
+
+***
+
+### `accessKey`<sup>Optional</sup> <a name="accessKey" id="cdktn.S3Backend.Initializer.parameter.accessKey"></a>
+
+- *Type:* java.lang.String
+
+(Optional) AWS access key.
+
+If configured, must also configure secret\_key.
+This can also be sourced from
+the AWS\_ACCESS\_KEY\_ID environment variable,
+AWS shared credentials file (e.g. ~/.aws/credentials),
+or AWS shared configuration file (e.g. ~/.aws/config).
+
+***
+
+### `acl`<sup>Optional</sup> <a name="acl" id="cdktn.S3Backend.Initializer.parameter.acl"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Canned ACL to be applied to the state file.
+
+***
+
+### `allowedAccountIds`<sup>Optional</sup> <a name="allowedAccountIds" id="cdktn.S3Backend.Initializer.parameter.allowedAccountIds"></a>
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+(Optional) List of allowed AWS account IDs to prevent potential destruction of a live environment.
+
+Conflicts with forbidden\_account\_ids.
+
+***
+
+### `assumeRole`<sup>Optional</sup> <a name="assumeRole" id="cdktn.S3Backend.Initializer.parameter.assumeRole"></a>
+
+- *Type:* <a href="#cdktn.S3BackendAssumeRoleConfig">S3BackendAssumeRoleConfig</a>
+
+Assuming an IAM Role can be configured in two ways.
+
+The preferred way is to use the argument assume\_role, the other, which is deprecated, is with arguments at the top level.
+
+***
+
+### ~~`assumeRolePolicy`~~<sup>Optional</sup> <a name="assumeRolePolicy" id="cdktn.S3Backend.Initializer.parameter.assumeRolePolicy"></a>
+
+- *Deprecated:* Use assumeRole.policy instead.
+
+- *Type:* java.lang.String
+
+(Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### ~~`assumeRolePolicyArns`~~<sup>Optional</sup> <a name="assumeRolePolicyArns" id="cdktn.S3Backend.Initializer.parameter.assumeRolePolicyArns"></a>
+
+- *Deprecated:* Use assumeRole.policyArns instead.
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+(Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### ~~`assumeRoleTags`~~<sup>Optional</sup> <a name="assumeRoleTags" id="cdktn.S3Backend.Initializer.parameter.assumeRoleTags"></a>
+
+- *Deprecated:* Use assumeRole.tags instead.
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.String >
+
+(Optional) Map of assume role session tags.
+
+***
+
+### ~~`assumeRoleTransitiveTagKeys`~~<sup>Optional</sup> <a name="assumeRoleTransitiveTagKeys" id="cdktn.S3Backend.Initializer.parameter.assumeRoleTransitiveTagKeys"></a>
+
+- *Deprecated:* Use assumeRole.transitiveTagKeys instead.
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+(Optional) Set of assume role session tag keys to pass to any subsequent sessions.
+
+***
+
+### `assumeRoleWithWebIdentity`<sup>Optional</sup> <a name="assumeRoleWithWebIdentity" id="cdktn.S3Backend.Initializer.parameter.assumeRoleWithWebIdentity"></a>
+
+- *Type:* <a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig">S3BackendAssumeRoleWithWebIdentityConfig</a>
+
+Assume Role With Web Identity Configuration.
+
+***
+
+### `customCaBundle`<sup>Optional</sup> <a name="customCaBundle" id="cdktn.S3Backend.Initializer.parameter.customCaBundle"></a>
+
+- *Type:* java.lang.String
+
+(Optional) File containing custom root and intermediate certificates.
+
+Can also be set using the AWS\_CA\_BUNDLE environment variable.
+Setting ca\_bundle in the shared config file is not supported.
+
+***
+
+### ~~`dynamodbEndpoint`~~<sup>Optional</sup> <a name="dynamodbEndpoint" id="cdktn.S3Backend.Initializer.parameter.dynamodbEndpoint"></a>
+
+- *Deprecated:* Use endpoints.dynamodb instead
+
+- *Type:* java.lang.String
+
+(Optional) Custom endpoint for the AWS DynamoDB API.
+
+This can also be sourced from the AWS\_DYNAMODB\_ENDPOINT environment variable.
+
+***
+
+### `dynamodbTable`<sup>Optional</sup> <a name="dynamodbTable" id="cdktn.S3Backend.Initializer.parameter.dynamodbTable"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Name of DynamoDB Table to use for state locking and consistency.
+
+The table must have a partition key named LockID with type of String.
+If not configured, state locking will be disabled.
+
+***
+
+### `ec2MetadataServiceEndpoint`<sup>Optional</sup> <a name="ec2MetadataServiceEndpoint" id="cdktn.S3Backend.Initializer.parameter.ec2MetadataServiceEndpoint"></a>
+
+- *Type:* java.lang.String
+
+Optional) Custom endpoint URL for the EC2 Instance Metadata Service (IMDS) API.
+
+Can also be set with the AWS\_EC2\_METADATA\_SERVICE\_ENDPOINT environment variable.
+
+***
+
+### `ec2MetadataServiceEndpointMode`<sup>Optional</sup> <a name="ec2MetadataServiceEndpointMode" id="cdktn.S3Backend.Initializer.parameter.ec2MetadataServiceEndpointMode"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Mode to use in communicating with the metadata service.
+
+Valid values are IPv4 and IPv6.
+Can also be set with the AWS\_EC2\_METADATA\_SERVICE\_ENDPOINT\_MODE environment variable.
+
+***
+
+### `encrypt`<sup>Optional</sup> <a name="encrypt" id="cdktn.S3Backend.Initializer.parameter.encrypt"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Enable server side encryption of the state file.
+
+***
+
+### ~~`endpoint`~~<sup>Optional</sup> <a name="endpoint" id="cdktn.S3Backend.Initializer.parameter.endpoint"></a>
+
+- *Deprecated:* Use endpoints.s3 instead
+
+- *Type:* java.lang.String
+
+(Optional) Custom endpoint for the AWS S3 API.
+
+This can also be sourced from the AWS\_S3\_ENDPOINT environment variable.
+
+***
+
+### `endpoints`<sup>Optional</sup> <a name="endpoints" id="cdktn.S3Backend.Initializer.parameter.endpoints"></a>
+
+- *Type:* <a href="#cdktn.S3BackendEndpointConfig">S3BackendEndpointConfig</a>
+
+(Optional) The endpoint configuration block.
+
+***
+
+### ~~`externalId`~~<sup>Optional</sup> <a name="externalId" id="cdktn.S3Backend.Initializer.parameter.externalId"></a>
+
+- *Deprecated:* Use assume\_role.external\_id instead.
+
+- *Type:* java.lang.String
+
+(Optional) External identifier to use when assuming the role.
+
+***
+
+### `forbiddenAccountIds`<sup>Optional</sup> <a name="forbiddenAccountIds" id="cdktn.S3Backend.Initializer.parameter.forbiddenAccountIds"></a>
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+(Optional) List of forbidden AWS account IDs to prevent potential destruction of a live environment.
+
+Conflicts with allowed\_account\_ids.
+
+***
+
+### ~~`forcePathStyle`~~<sup>Optional</sup> <a name="forcePathStyle" id="cdktn.S3Backend.Initializer.parameter.forcePathStyle"></a>
+
+- *Deprecated:* Use usePathStyle instead
+
+- *Type:* java.lang.Boolean
+
+(Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >).
+
+***
+
+### `httpProxy`<sup>Optional</sup> <a name="httpProxy" id="cdktn.S3Backend.Initializer.parameter.httpProxy"></a>
+
+- *Type:* java.lang.String
+
+(Optional) URL of a proxy to use for HTTP requests when accessing the AWS API.
+
+Can also be set using the HTTP\_PROXY or http\_proxy environment variables.
+
+***
+
+### `httpsProxy`<sup>Optional</sup> <a name="httpsProxy" id="cdktn.S3Backend.Initializer.parameter.httpsProxy"></a>
+
+- *Type:* java.lang.String
+
+(Optional) URL of a proxy to use for HTTPS requests when accessing the AWS API.
+
+Can also be set using the HTTPS\_PROXY or https\_proxy environment variables.
+
+***
+
+### ~~`iamEndpoint`~~<sup>Optional</sup> <a name="iamEndpoint" id="cdktn.S3Backend.Initializer.parameter.iamEndpoint"></a>
+
+- *Deprecated:* Use endpoints.iam instead
+
+- *Type:* java.lang.String
+
+(Optional) Custom endpoint for the AWS Identity and Access Management (IAM) API.
+
+This can also be sourced from the AWS\_IAM\_ENDPOINT environment variable.
+
+***
+
+### `insecure`<sup>Optional</sup> <a name="insecure" id="cdktn.S3Backend.Initializer.parameter.insecure"></a>
+
+- *Type:* java.lang.Boolean
+
+Optional) Whether to explicitly allow the backend to perform "insecure" SSL requests.
+
+If omitted, the default value is false.
+
+***
+
+### `kmsKeyId`<sup>Optional</sup> <a name="kmsKeyId" id="cdktn.S3Backend.Initializer.parameter.kmsKeyId"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Amazon Resource Name (ARN) of a Key Management Service (KMS) Key to use for encrypting the state.
+
+Note that if this value is specified,
+Terraform will need kms:Encrypt, kms:Decrypt and kms:GenerateDataKey permissions on this KMS key.
+
+***
+
+### `maxRetries`<sup>Optional</sup> <a name="maxRetries" id="cdktn.S3Backend.Initializer.parameter.maxRetries"></a>
+
+- *Type:* java.lang.Number
+
+(Optional) The maximum number of times an AWS API request is retried on retryable failure.
+
+Defaults to 5.
+
+***
+
+### `noProxy`<sup>Optional</sup> <a name="noProxy" id="cdktn.S3Backend.Initializer.parameter.noProxy"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Comma-separated list of hosts that should not use HTTP or HTTPS proxies.
+
+Each value can be one of:
+
+- A domain name
+- An IP address
+- A CIDR address
+- An asterisk (\*), to indicate that no proxying should be performed Domain name and IP address values can also include a port number.
+  Can also be set using the NO\_PROXY or no\_proxy environment variables.
+
+***
+
+### `profile`<sup>Optional</sup> <a name="profile" id="cdktn.S3Backend.Initializer.parameter.profile"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Name of AWS profile in AWS shared credentials file (e.g. ~/.aws/credentials) or AWS shared configuration file (e.g. ~/.aws/config) to use for credentials and/or configuration. This can also be sourced from the AWS\_PROFILE environment variable.
+
+***
+
+### `region`<sup>Optional</sup> <a name="region" id="cdktn.S3Backend.Initializer.parameter.region"></a>
+
+- *Type:* java.lang.String
+
+AWS Region of the S3 Bucket and DynamoDB Table (if used).
+
+This can also
+be sourced from the AWS\_DEFAULT\_REGION and AWS\_REGION environment
+variables.
+
+***
+
+### `retryMode`<sup>Optional</sup> <a name="retryMode" id="cdktn.S3Backend.Initializer.parameter.retryMode"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Specifies how retries are attempted.
+
+Valid values are standard and adaptive.
+Can also be configured using the AWS\_RETRY\_MODE environment variable or the shared config file parameter retry\_mode.
+
+***
+
+### ~~`roleArn`~~<sup>Optional</sup> <a name="roleArn" id="cdktn.S3Backend.Initializer.parameter.roleArn"></a>
+
+- *Deprecated:* Use assumeRole.roleArn instead.
+
+- *Type:* java.lang.String
+
+(Optional) Amazon Resource Name (ARN) of the IAM Role to assume.
+
+***
+
+### `secretKey`<sup>Optional</sup> <a name="secretKey" id="cdktn.S3Backend.Initializer.parameter.secretKey"></a>
+
+- *Type:* java.lang.String
+
+(Optional) AWS secret access key.
+
+If configured, must also configure access\_key.
+This can also be sourced from
+the AWS\_SECRET\_ACCESS\_KEY environment variable,
+AWS shared credentials file (e.g. ~/.aws/credentials),
+or AWS shared configuration file (e.g. ~/.aws/config)
+
+***
+
+### ~~`sessionName`~~<sup>Optional</sup> <a name="sessionName" id="cdktn.S3Backend.Initializer.parameter.sessionName"></a>
+
+- *Deprecated:* Use assumeRole.sessionName instead.
+
+- *Type:* java.lang.String
+
+(Optional) Session name to use when assuming the role.
+
+***
+
+### `sharedConfigFiles`<sup>Optional</sup> <a name="sharedConfigFiles" id="cdktn.S3Backend.Initializer.parameter.sharedConfigFiles"></a>
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+(Optional) List of paths to AWS shared configuration files.
+
+Defaults to ~/.aws/config.
+
+***
+
+### `sharedCredentialsFile`<sup>Optional</sup> <a name="sharedCredentialsFile" id="cdktn.S3Backend.Initializer.parameter.sharedCredentialsFile"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Path to the AWS shared credentials file.
+
+Defaults to ~/.aws/credentials.
+
+***
+
+### `sharedCredentialsFiles`<sup>Optional</sup> <a name="sharedCredentialsFiles" id="cdktn.S3Backend.Initializer.parameter.sharedCredentialsFiles"></a>
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+(Optional) List of paths to AWS shared credentials files.
+
+Defaults to ~/.aws/credentials.
+
+***
+
+### `skipCredentialsValidation`<sup>Optional</sup> <a name="skipCredentialsValidation" id="cdktn.S3Backend.Initializer.parameter.skipCredentialsValidation"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Skip credentials validation via the STS API.
+
+***
+
+### `skipMetadataApiCheck`<sup>Optional</sup> <a name="skipMetadataApiCheck" id="cdktn.S3Backend.Initializer.parameter.skipMetadataApiCheck"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Skip usage of EC2 Metadata API.
+
+***
+
+### `skipRegionValidation`<sup>Optional</sup> <a name="skipRegionValidation" id="cdktn.S3Backend.Initializer.parameter.skipRegionValidation"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Skip validation of provided region name.
+
+***
+
+### `skipRequestingAccountId`<sup>Optional</sup> <a name="skipRequestingAccountId" id="cdktn.S3Backend.Initializer.parameter.skipRequestingAccountId"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Whether to skip requesting the account ID.
+
+Useful for AWS API implementations that do not have the IAM, STS API, or metadata API.
+
+***
+
+### `skipS3Checksum`<sup>Optional</sup> <a name="skipS3Checksum" id="cdktn.S3Backend.Initializer.parameter.skipS3Checksum"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Do not include checksum when uploading S3 Objects.
+
+Useful for some S3-Compatible APIs.
+
+***
+
+### `sseCustomerKey`<sup>Optional</sup> <a name="sseCustomerKey" id="cdktn.S3Backend.Initializer.parameter.sseCustomerKey"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The key to use for encrypting state with Server-Side Encryption with Customer-Provided Keys (SSE-C).
+
+This is the base64-encoded value of the key, which must decode to 256 bits.
+This can also be sourced from the AWS\_SSE\_CUSTOMER\_KEY environment variable,
+which is recommended due to the sensitivity of the value.
+Setting it inside a terraform file will cause it to be persisted to disk in terraform.tfstate.
+
+***
+
+### ~~`stsEndpoint`~~<sup>Optional</sup> <a name="stsEndpoint" id="cdktn.S3Backend.Initializer.parameter.stsEndpoint"></a>
+
+- *Deprecated:* Use endpoints.sts instead
+
+- *Type:* java.lang.String
+
+(Optional) Custom endpoint for the AWS Security Token Service (STS) API.
+
+This can also be sourced from the AWS\_STS\_ENDPOINT environment variable.
+
+***
+
+### `stsRegion`<sup>Optional</sup> <a name="stsRegion" id="cdktn.S3Backend.Initializer.parameter.stsRegion"></a>
+
+- *Type:* java.lang.String
+
+(Optional) AWS region for STS.
+
+If unset, AWS will use the same region for STS as other non-STS operations.
+
+***
+
+### `token`<sup>Optional</sup> <a name="token" id="cdktn.S3Backend.Initializer.parameter.token"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Multi-Factor Authentication (MFA) token.
+
+This can also be sourced from the AWS\_SESSION\_TOKEN environment variable.
+
+***
+
+### `useLegacyWorkflow`<sup>Optional</sup> <a name="useLegacyWorkflow" id="cdktn.S3Backend.Initializer.parameter.useLegacyWorkflow"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Use the legacy authentication workflow, preferring environment variables over backend configuration.
+
+Defaults to true.
+This behavior does not align with the authentication flow of the AWS CLI or SDK's, and will be removed in the future.
+
+***
+
+### `usePathStyle`<sup>Optional</sup> <a name="usePathStyle" id="cdktn.S3Backend.Initializer.parameter.usePathStyle"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >).
+
+***
+
+### `workspaceKeyPrefix`<sup>Optional</sup> <a name="workspaceKeyPrefix" id="cdktn.S3Backend.Initializer.parameter.workspaceKeyPrefix"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Prefix applied to the state path inside the bucket.
+
+This is only relevant when using a non-default workspace. Defaults to env:
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.S3Backend.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.S3Backend.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.S3Backend.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.S3Backend.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.S3Backend.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.S3Backend.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.S3Backend.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.S3Backend.getRemoteStateDataSource">getRemoteStateDataSource</a></code> | Creates a TerraformRemoteState resource that accesses this backend. |
+
+***
+
+### `toString` <a name="toString" id="cdktn.S3Backend.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `addOverride` <a name="addOverride" id="cdktn.S3Backend.addOverride"></a>
+
+```java
+public void addOverride(java.lang.String path, java.lang.Object value)
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.S3Backend.addOverride.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.S3Backend.addOverride.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `overrideLogicalId` <a name="overrideLogicalId" id="cdktn.S3Backend.overrideLogicalId"></a>
+
+```java
+public void overrideLogicalId(java.lang.String newLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.S3Backend.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* java.lang.String
+
+The new logical ID to use for this stack element.
+
+***
+
+### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktn.S3Backend.resetOverrideLogicalId"></a>
+
+```java
+public void resetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.S3Backend.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+### `toMetadata` <a name="toMetadata" id="cdktn.S3Backend.toMetadata"></a>
+
+```java
+public java.lang.Object toMetadata()
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.S3Backend.toTerraform"></a>
+
+```java
+public java.lang.Object toTerraform()
+```
+
+Adds this resource to the terraform JSON output.
+
+### `getRemoteStateDataSource` <a name="getRemoteStateDataSource" id="cdktn.S3Backend.getRemoteStateDataSource"></a>
+
+```java
+public TerraformRemoteState getRemoteStateDataSource(Construct scope, java.lang.String name, java.lang.String _fromStack)
+```
+
+Creates a TerraformRemoteState resource that accesses this backend.
+
+#### `scope`<sup>Required</sup> <a name="scope" id="cdktn.S3Backend.getRemoteStateDataSource.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+#### `name`<sup>Required</sup> <a name="name" id="cdktn.S3Backend.getRemoteStateDataSource.parameter.name"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `_fromStack`<sup>Required</sup> <a name="_fromStack" id="cdktn.S3Backend.getRemoteStateDataSource.parameter._fromStack"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.S3Backend.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.S3Backend.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#cdktn.S3Backend.isBackend">isBackend</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.S3Backend.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.S3Backend;
+
+S3Backend.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.S3Backend.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isTerraformElement` <a name="isTerraformElement" id="cdktn.S3Backend.isTerraformElement"></a>
+
+```java
+import io.cdktn.cdktn.S3Backend;
+
+S3Backend.isTerraformElement(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.S3Backend.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `isBackend` <a name="isBackend" id="cdktn.S3Backend.isBackend"></a>
+
+```java
+import io.cdktn.cdktn.S3Backend;
+
+S3Backend.isBackend(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.S3Backend.isBackend.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.S3Backend.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.S3Backend.property.cdktfStack">cdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.S3Backend.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.S3Backend.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.S3Backend.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktn.S3Backend.property.cdktfStack"></a>
+
+```java
+public TerraformStack getCdktfStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.S3Backend.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.S3Backend.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+

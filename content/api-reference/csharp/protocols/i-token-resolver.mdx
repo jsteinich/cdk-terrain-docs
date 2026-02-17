@@ -1,0 +1,132 @@
+---
+title: "CSharp: ITokenResolver"
+sidebarTitle: ITokenResolver
+description: CDKTN Core API Reference for ITokenResolver in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implemented By:* <a href="#cdktn.DefaultTokenResolver">DefaultTokenResolver</a>, <a href="#cdktn.ITokenResolver">ITokenResolver</a>
+
+How to resolve tokens.
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.ITokenResolver.resolveList">ResolveList</a></code> | Resolve a tokenized list. |
+| <code><a href="#cdktn.ITokenResolver.resolveMap">ResolveMap</a></code> | Resolve a tokenized map. |
+| <code><a href="#cdktn.ITokenResolver.resolveNumberList">ResolveNumberList</a></code> | Resolve a tokenized number list. |
+| <code><a href="#cdktn.ITokenResolver.resolveString">ResolveString</a></code> | Resolve a string with at least one stringified token in it. |
+| <code><a href="#cdktn.ITokenResolver.resolveToken">ResolveToken</a></code> | Resolve a single token. |
+
+***
+
+### `ResolveList` <a name="ResolveList" id="cdktn.ITokenResolver.resolveList"></a>
+
+```csharp
+private object ResolveList(string[] L, IResolveContext Context)
+```
+
+Resolve a tokenized list.
+
+#### `L`<sup>Required</sup> <a name="L" id="cdktn.ITokenResolver.resolveList.parameter.l"></a>
+
+- *Type:* string\[]
+
+***
+
+#### `Context`<sup>Required</sup> <a name="Context" id="cdktn.ITokenResolver.resolveList.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `ResolveMap` <a name="ResolveMap" id="cdktn.ITokenResolver.resolveMap"></a>
+
+```csharp
+private object ResolveMap(System.Collections.Generic.IDictionary<string, object> M, IResolveContext Context)
+```
+
+Resolve a tokenized map.
+
+#### `M`<sup>Required</sup> <a name="M" id="cdktn.ITokenResolver.resolveMap.parameter.m"></a>
+
+- *Type:* System.Collections.Generic.IDictionary&lt; string, object >
+
+***
+
+#### `Context`<sup>Required</sup> <a name="Context" id="cdktn.ITokenResolver.resolveMap.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `ResolveNumberList` <a name="ResolveNumberList" id="cdktn.ITokenResolver.resolveNumberList"></a>
+
+```csharp
+private object ResolveNumberList(double[] L, IResolveContext Context)
+```
+
+Resolve a tokenized number list.
+
+#### `L`<sup>Required</sup> <a name="L" id="cdktn.ITokenResolver.resolveNumberList.parameter.l"></a>
+
+- *Type:* double\[]
+
+***
+
+#### `Context`<sup>Required</sup> <a name="Context" id="cdktn.ITokenResolver.resolveNumberList.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `ResolveString` <a name="ResolveString" id="cdktn.ITokenResolver.resolveString"></a>
+
+```csharp
+private object ResolveString(TokenizedStringFragments S, IResolveContext Context)
+```
+
+Resolve a string with at least one stringified token in it.
+
+(May use concatenation)
+
+#### `S`<sup>Required</sup> <a name="S" id="cdktn.ITokenResolver.resolveString.parameter.s"></a>
+
+- *Type:* <a href="#cdktn.TokenizedStringFragments">TokenizedStringFragments</a>
+
+***
+
+#### `Context`<sup>Required</sup> <a name="Context" id="cdktn.ITokenResolver.resolveString.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `ResolveToken` <a name="ResolveToken" id="cdktn.ITokenResolver.resolveToken"></a>
+
+```csharp
+private object ResolveToken(IResolvable T, IResolveContext Context, IPostProcessor PostProcessor)
+```
+
+Resolve a single token.
+
+#### `T`<sup>Required</sup> <a name="T" id="cdktn.ITokenResolver.resolveToken.parameter.t"></a>
+
+- *Type:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+***
+
+#### `Context`<sup>Required</sup> <a name="Context" id="cdktn.ITokenResolver.resolveToken.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+#### `PostProcessor`<sup>Required</sup> <a name="PostProcessor" id="cdktn.ITokenResolver.resolveToken.parameter.postProcessor"></a>
+
+- *Type:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+***
+

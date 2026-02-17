@@ -1,0 +1,346 @@
+---
+title: "Python: TerraformLocal"
+sidebarTitle: TerraformLocal
+description: CDKTN Core API Reference for TerraformLocal in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.ITerraformAddressable">ITerraformAddressable</a>
+
+## Initializers <a name="Initializers" id="cdktn.TerraformLocal.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformLocal(
+  scope: Construct,
+  id: str,
+  expression: typing.Any
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformLocal.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.Initializer.parameter.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.Initializer.parameter.expression">expression</a></code> | <code>typing.Any</code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.TerraformLocal.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.TerraformLocal.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+***
+
+### `expression`<sup>Required</sup> <a name="expression" id="cdktn.TerraformLocal.Initializer.parameter.expression"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformLocal.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformLocal.addOverride">add\_override</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.overrideLogicalId">override\_logical\_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.TerraformLocal.resetOverrideLogicalId">reset\_override\_logical\_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.TerraformLocal.toHclTerraform">to\_hcl\_terraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.toMetadata">to\_metadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.toTerraform">to\_terraform</a></code> | *No description.* |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.TerraformLocal.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `add_override` <a name="add_override" id="cdktn.TerraformLocal.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.TerraformLocal.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformLocal.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `override_logical_id` <a name="override_logical_id" id="cdktn.TerraformLocal.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="cdktn.TerraformLocal.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+***
+
+### `reset_override_logical_id` <a name="reset_override_logical_id" id="cdktn.TerraformLocal.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.TerraformLocal.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+### `to_metadata` <a name="to_metadata" id="cdktn.TerraformLocal.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+### `to_terraform` <a name="to_terraform" id="cdktn.TerraformLocal.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformLocal.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformLocal.isTerraformElement">is\_terraform\_element</a></code> | *No description.* |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.TerraformLocal.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformLocal.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformLocal.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_terraform_element` <a name="is_terraform_element" id="cdktn.TerraformLocal.isTerraformElement"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformLocal.is_terraform_element(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformLocal.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformLocal.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformLocal.property.cdktfStack">cdktf\_stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.friendlyUniqueId">friendly\_unique\_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asAnyMap">as\_any\_map</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asBoolean">as\_boolean</a></code> | <code><a href="#cdktn.IResolvable">IResolvable</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asBooleanMap">as\_boolean\_map</a></code> | <code>typing.Mapping\[bool]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asList">as\_list</a></code> | <code>typing.List\[str]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asNumber">as\_number</a></code> | <code>typing.Union\[int, float]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asNumberMap">as\_number\_map</a></code> | <code>typing.Mapping\[typing.Union\[int, float]]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asString">as\_string</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asStringMap">as\_string\_map</a></code> | <code>typing.Mapping\[str]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.expression">expression</a></code> | <code>typing.Any</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.TerraformLocal.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="cdktn.TerraformLocal.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.TerraformLocal.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+
+### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="cdktn.TerraformLocal.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+***
+
+### `as_any_map`<sup>Required</sup> <a name="as_any_map" id="cdktn.TerraformLocal.property.asAnyMap"></a>
+
+```python
+as_any_map: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `as_boolean`<sup>Required</sup> <a name="as_boolean" id="cdktn.TerraformLocal.property.asBoolean"></a>
+
+```python
+as_boolean: IResolvable
+```
+
+- *Type:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+***
+
+### `as_boolean_map`<sup>Required</sup> <a name="as_boolean_map" id="cdktn.TerraformLocal.property.asBooleanMap"></a>
+
+```python
+as_boolean_map: typing.Mapping[bool]
+```
+
+- *Type:* typing.Mapping\[bool]
+
+***
+
+### `as_list`<sup>Required</sup> <a name="as_list" id="cdktn.TerraformLocal.property.asList"></a>
+
+```python
+as_list: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+***
+
+### `as_number`<sup>Required</sup> <a name="as_number" id="cdktn.TerraformLocal.property.asNumber"></a>
+
+```python
+as_number: typing.Union[int, float]
+```
+
+- *Type:* typing.Union\[int, float]
+
+***
+
+### `as_number_map`<sup>Required</sup> <a name="as_number_map" id="cdktn.TerraformLocal.property.asNumberMap"></a>
+
+```python
+as_number_map: typing.Mapping[typing.Union[int, float]]
+```
+
+- *Type:* typing.Mapping\[typing.Union\[int, float]]
+
+***
+
+### `as_string`<sup>Required</sup> <a name="as_string" id="cdktn.TerraformLocal.property.asString"></a>
+
+```python
+as_string: str
+```
+
+- *Type:* str
+
+***
+
+### `as_string_map`<sup>Required</sup> <a name="as_string_map" id="cdktn.TerraformLocal.property.asStringMap"></a>
+
+```python
+as_string_map: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping\[str]
+
+***
+
+### `expression`<sup>Required</sup> <a name="expression" id="cdktn.TerraformLocal.property.expression"></a>
+
+```python
+expression: typing.Any
+```
+
+- *Type:* typing.Any
+
+***
+

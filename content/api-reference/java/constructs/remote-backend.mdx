@@ -1,0 +1,295 @@
+---
+title: "Java: RemoteBackend"
+sidebarTitle: RemoteBackend
+description: CDKTN Core API Reference for RemoteBackend in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.RemoteBackend.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.RemoteBackend;
+
+RemoteBackend.Builder.create(Construct scope)
+    .organization(java.lang.String)
+    .workspaces(IRemoteWorkspace)
+//  .hostname(java.lang.String)
+//  .token(java.lang.String)
+    .build();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.RemoteBackend.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.RemoteBackend.Initializer.parameter.organization">organization</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.RemoteBackend.Initializer.parameter.workspaces">workspaces</a></code> | <code><a href="#cdktn.IRemoteWorkspace">IRemoteWorkspace</a></code> | *No description.* |
+| <code><a href="#cdktn.RemoteBackend.Initializer.parameter.hostname">hostname</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.RemoteBackend.Initializer.parameter.token">token</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.RemoteBackend.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+### `organization`<sup>Required</sup> <a name="organization" id="cdktn.RemoteBackend.Initializer.parameter.organization"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `workspaces`<sup>Required</sup> <a name="workspaces" id="cdktn.RemoteBackend.Initializer.parameter.workspaces"></a>
+
+- *Type:* <a href="#cdktn.IRemoteWorkspace">IRemoteWorkspace</a>
+
+***
+
+### `hostname`<sup>Optional</sup> <a name="hostname" id="cdktn.RemoteBackend.Initializer.parameter.hostname"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `token`<sup>Optional</sup> <a name="token" id="cdktn.RemoteBackend.Initializer.parameter.token"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.RemoteBackend.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.RemoteBackend.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.RemoteBackend.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.RemoteBackend.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.RemoteBackend.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.RemoteBackend.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.RemoteBackend.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.RemoteBackend.getRemoteStateDataSource">getRemoteStateDataSource</a></code> | Creates a TerraformRemoteState resource that accesses this backend. |
+
+***
+
+### `toString` <a name="toString" id="cdktn.RemoteBackend.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `addOverride` <a name="addOverride" id="cdktn.RemoteBackend.addOverride"></a>
+
+```java
+public void addOverride(java.lang.String path, java.lang.Object value)
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.RemoteBackend.addOverride.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.RemoteBackend.addOverride.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `overrideLogicalId` <a name="overrideLogicalId" id="cdktn.RemoteBackend.overrideLogicalId"></a>
+
+```java
+public void overrideLogicalId(java.lang.String newLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.RemoteBackend.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* java.lang.String
+
+The new logical ID to use for this stack element.
+
+***
+
+### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktn.RemoteBackend.resetOverrideLogicalId"></a>
+
+```java
+public void resetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.RemoteBackend.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+### `toMetadata` <a name="toMetadata" id="cdktn.RemoteBackend.toMetadata"></a>
+
+```java
+public java.lang.Object toMetadata()
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.RemoteBackend.toTerraform"></a>
+
+```java
+public java.lang.Object toTerraform()
+```
+
+Adds this resource to the terraform JSON output.
+
+### `getRemoteStateDataSource` <a name="getRemoteStateDataSource" id="cdktn.RemoteBackend.getRemoteStateDataSource"></a>
+
+```java
+public TerraformRemoteState getRemoteStateDataSource(Construct scope, java.lang.String name, java.lang.String _fromStack)
+```
+
+Creates a TerraformRemoteState resource that accesses this backend.
+
+#### `scope`<sup>Required</sup> <a name="scope" id="cdktn.RemoteBackend.getRemoteStateDataSource.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+#### `name`<sup>Required</sup> <a name="name" id="cdktn.RemoteBackend.getRemoteStateDataSource.parameter.name"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `_fromStack`<sup>Required</sup> <a name="_fromStack" id="cdktn.RemoteBackend.getRemoteStateDataSource.parameter._fromStack"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.RemoteBackend.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.RemoteBackend.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#cdktn.RemoteBackend.isBackend">isBackend</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.RemoteBackend.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.RemoteBackend;
+
+RemoteBackend.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.RemoteBackend.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isTerraformElement` <a name="isTerraformElement" id="cdktn.RemoteBackend.isTerraformElement"></a>
+
+```java
+import io.cdktn.cdktn.RemoteBackend;
+
+RemoteBackend.isTerraformElement(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.RemoteBackend.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `isBackend` <a name="isBackend" id="cdktn.RemoteBackend.isBackend"></a>
+
+```java
+import io.cdktn.cdktn.RemoteBackend;
+
+RemoteBackend.isBackend(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.RemoteBackend.isBackend.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.RemoteBackend.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.RemoteBackend.property.cdktfStack">cdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.RemoteBackend.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.RemoteBackend.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.RemoteBackend.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktn.RemoteBackend.property.cdktfStack"></a>
+
+```java
+public TerraformStack getCdktfStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.RemoteBackend.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.RemoteBackend.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+

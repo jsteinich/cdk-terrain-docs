@@ -1,0 +1,578 @@
+---
+title: "Python: DataTerraformRemoteStateOss"
+sidebarTitle: DataTerraformRemoteStateOss
+description: CDKTN Core API Reference for DataTerraformRemoteStateOss in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.DataTerraformRemoteStateOss.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateOss(
+  scope: Construct,
+  id: str,
+  defaults: typing.Mapping[typing.Any] = None,
+  workspace: str = None,
+  bucket: str,
+  access_key: str = None,
+  acl: str = None,
+  assume_role: OssAssumeRole = None,
+  assume_role_policy: str = None,
+  assume_role_role_arn: str = None,
+  assume_role_session_expiration: typing.Union[int, float] = None,
+  assume_role_session_name: str = None,
+  ecs_role_name: str = None,
+  encrypt: bool = None,
+  endpoint: str = None,
+  key: str = None,
+  prefix: str = None,
+  profile: str = None,
+  region: str = None,
+  secret_key: str = None,
+  security_token: str = None,
+  shared_credentials_file: str = None,
+  sts_endpoint: str = None,
+  tablestore_endpoint: str = None,
+  tablestore_table: str = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.defaults">defaults</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.workspace">workspace</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.bucket">bucket</a></code> | <code>str</code> | (Required) The name of the OSS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.accessKey">access\_key</a></code> | <code>str</code> | (Optional) Alibaba Cloud access key. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.acl">acl</a></code> | <code>str</code> | (Optional) Object ACL to be applied to the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRole">assume\_role</a></code> | <code><a href="#cdktn.OssAssumeRole">OssAssumeRole</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRolePolicy">assume\_role\_policy</a></code> | <code>str</code> | (Optional, Available in 1.1.0+) A more restrictive policy to apply to the temporary credentials. This gives you a way to further restrict the permissions for the resulting temporary security credentials. You cannot use this policy to grant permissions that exceed those of the role that is being assumed. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleRoleArn">assume\_role\_role\_arn</a></code> | <code>str</code> | (Optional, Available in 1.1.0+) The ARN of the role to assume. If ARN is set to an empty string, it does not perform role switching. It supports the environment variable ALICLOUD\_ASSUME\_ROLE\_ARN. Terraform executes configuration on account with provided credentials. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleSessionExpiration">assume\_role\_session\_expiration</a></code> | <code>typing.Union\[int, float]</code> | (Optional, Available in 1.1.0+) The time after which the established session for assuming role expires. Valid value range: \[900-3600] seconds. Default to 3600 (in this case Alibaba Cloud uses its own default value). It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_EXPIRATION. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleSessionName">assume\_role\_session\_name</a></code> | <code>str</code> | (Optional, Available in 1.1.0+) The session name to use when assuming the role. If omitted, 'terraform' is passed to the AssumeRole call as session name. It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_NAME. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.ecsRoleName">ecs\_role\_name</a></code> | <code>str</code> | (Optional, Available in 0.12.14+) The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section of the Alibaba Cloud console. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.encrypt">encrypt</a></code> | <code>bool</code> | (Optional) Whether to enable server side encryption of the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.endpoint">endpoint</a></code> | <code>str</code> | (Optional) A custom endpoint for the OSS API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.key">key</a></code> | <code>str</code> | (Optional) The name of the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.prefix">prefix</a></code> | <code>str</code> | (Optional) The path directory of the state file will be stored. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.profile">profile</a></code> | <code>str</code> | (Optional, Available in 0.12.8+) This is the Alibaba Cloud profile name as set in the shared credentials file. It can also be sourced from the ALICLOUD\_PROFILE environment variable. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.region">region</a></code> | <code>str</code> | (Optional) The region of the OSS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.secretKey">secret\_key</a></code> | <code>str</code> | (Optional) Alibaba Cloud secret access key. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.securityToken">security\_token</a></code> | <code>str</code> | (Optional) STS access token. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.sharedCredentialsFile">shared\_credentials\_file</a></code> | <code>str</code> | (Optional, Available in 0.12.8+) This is the path to the shared credentials file. It can also be sourced from the ALICLOUD\_SHARED\_CREDENTIALS\_FILE environment variable. If this is not set and a profile is specified, ~/.aliyun/config.json will be used. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.stsEndpoint">sts\_endpoint</a></code> | <code>str</code> | (Optional, Available in 1.0.11+) Custom endpoint for the AliCloud Security Token Service (STS) API. It supports environment variable ALICLOUD\_STS\_ENDPOINT. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.tablestoreEndpoint">tablestore\_endpoint</a></code> | <code>str</code> | (Optional) A custom endpoint for the TableStore API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.tablestoreTable">tablestore\_table</a></code> | <code>str</code> | (Optional) A TableStore table for state locking and consistency. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.defaults"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.workspace"></a>
+
+- *Type:* str
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.bucket"></a>
+
+- *Type:* str
+
+(Required) The name of the OSS bucket.
+
+***
+
+### `access_key`<sup>Optional</sup> <a name="access_key" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.accessKey"></a>
+
+- *Type:* str
+
+(Optional) Alibaba Cloud access key.
+
+It supports environment variables ALICLOUD\_ACCESS\_KEY and ALICLOUD\_ACCESS\_KEY\_ID.
+
+***
+
+### `acl`<sup>Optional</sup> <a name="acl" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.acl"></a>
+
+- *Type:* str
+
+(Optional) Object ACL to be applied to the state file.
+
+***
+
+### ~~`assume_role`~~<sup>Optional</sup> <a name="assume_role" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRole"></a>
+
+- *Deprecated:* Use flattened assume role options
+
+- *Type:* <a href="#cdktn.OssAssumeRole">OssAssumeRole</a>
+
+***
+
+### `assume_role_policy`<sup>Optional</sup> <a name="assume_role_policy" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRolePolicy"></a>
+
+- *Type:* str
+
+(Optional, Available in 1.1.0+) A more restrictive policy to apply to the temporary credentials. This gives you a way to further restrict the permissions for the resulting temporary security credentials. You cannot use this policy to grant permissions that exceed those of the role that is being assumed.
+
+***
+
+### `assume_role_role_arn`<sup>Optional</sup> <a name="assume_role_role_arn" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleRoleArn"></a>
+
+- *Type:* str
+
+(Optional, Available in 1.1.0+) The ARN of the role to assume. If ARN is set to an empty string, it does not perform role switching. It supports the environment variable ALICLOUD\_ASSUME\_ROLE\_ARN. Terraform executes configuration on account with provided credentials.
+
+***
+
+### `assume_role_session_expiration`<sup>Optional</sup> <a name="assume_role_session_expiration" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleSessionExpiration"></a>
+
+- *Type:* typing.Union\[int, float]
+
+(Optional, Available in 1.1.0+) The time after which the established session for assuming role expires. Valid value range: \[900-3600] seconds. Default to 3600 (in this case Alibaba Cloud uses its own default value). It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_EXPIRATION.
+
+***
+
+### `assume_role_session_name`<sup>Optional</sup> <a name="assume_role_session_name" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleSessionName"></a>
+
+- *Type:* str
+
+(Optional, Available in 1.1.0+) The session name to use when assuming the role. If omitted, 'terraform' is passed to the AssumeRole call as session name. It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_NAME.
+
+***
+
+### `ecs_role_name`<sup>Optional</sup> <a name="ecs_role_name" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.ecsRoleName"></a>
+
+- *Type:* str
+
+(Optional, Available in 0.12.14+) The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section of the Alibaba Cloud console.
+
+***
+
+### `encrypt`<sup>Optional</sup> <a name="encrypt" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.encrypt"></a>
+
+- *Type:* bool
+
+(Optional) Whether to enable server side encryption of the state file.
+
+If it is true, OSS will use 'AES256' encryption algorithm to encrypt state file.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.endpoint"></a>
+
+- *Type:* str
+
+(Optional) A custom endpoint for the OSS API.
+
+It supports environment variables ALICLOUD\_OSS\_ENDPOINT and OSS\_ENDPOINT.
+
+***
+
+### `key`<sup>Optional</sup> <a name="key" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.key"></a>
+
+- *Type:* str
+
+(Optional) The name of the state file.
+
+Defaults to terraform.tfstate.
+
+***
+
+### `prefix`<sup>Optional</sup> <a name="prefix" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.prefix"></a>
+
+- *Type:* str
+
+(Optional) The path directory of the state file will be stored.
+
+Default to "env:".
+
+***
+
+### `profile`<sup>Optional</sup> <a name="profile" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.profile"></a>
+
+- *Type:* str
+
+(Optional, Available in 0.12.8+) This is the Alibaba Cloud profile name as set in the shared credentials file. It can also be sourced from the ALICLOUD\_PROFILE environment variable.
+
+***
+
+### `region`<sup>Optional</sup> <a name="region" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.region"></a>
+
+- *Type:* str
+
+(Optional) The region of the OSS bucket.
+
+It supports environment variables ALICLOUD\_REGION and ALICLOUD\_DEFAULT\_REGION.
+
+***
+
+### `secret_key`<sup>Optional</sup> <a name="secret_key" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.secretKey"></a>
+
+- *Type:* str
+
+(Optional) Alibaba Cloud secret access key.
+
+It supports environment variables ALICLOUD\_SECRET\_KEY and ALICLOUD\_ACCESS\_KEY\_SECRET.
+
+***
+
+### `security_token`<sup>Optional</sup> <a name="security_token" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.securityToken"></a>
+
+- *Type:* str
+
+(Optional) STS access token.
+
+It supports environment variable ALICLOUD\_SECURITY\_TOKEN.
+
+***
+
+### `shared_credentials_file`<sup>Optional</sup> <a name="shared_credentials_file" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.sharedCredentialsFile"></a>
+
+- *Type:* str
+
+(Optional, Available in 0.12.8+) This is the path to the shared credentials file. It can also be sourced from the ALICLOUD\_SHARED\_CREDENTIALS\_FILE environment variable. If this is not set and a profile is specified, ~/.aliyun/config.json will be used.
+
+***
+
+### `sts_endpoint`<sup>Optional</sup> <a name="sts_endpoint" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.stsEndpoint"></a>
+
+- *Type:* str
+
+(Optional, Available in 1.0.11+) Custom endpoint for the AliCloud Security Token Service (STS) API. It supports environment variable ALICLOUD\_STS\_ENDPOINT.
+
+***
+
+### `tablestore_endpoint`<sup>Optional</sup> <a name="tablestore_endpoint" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.tablestoreEndpoint"></a>
+
+- *Type:* str
+
+(Optional) A custom endpoint for the TableStore API.
+
+***
+
+### `tablestore_table`<sup>Optional</sup> <a name="tablestore_table" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.tablestoreTable"></a>
+
+- *Type:* str
+
+(Optional) A TableStore table for state locking and consistency.
+
+The table must have a primary key named LockID of type String.
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.addOverride">add\_override</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.overrideLogicalId">override\_logical\_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.resetOverrideLogicalId">reset\_override\_logical\_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.toHclTerraform">to\_hcl\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.toMetadata">to\_metadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.toTerraform">to\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.get">get</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.getBoolean">get\_boolean</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.getList">get\_list</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.getNumber">get\_number</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.getString">get\_string</a></code> | *No description.* |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.DataTerraformRemoteStateOss.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `add_override` <a name="add_override" id="cdktn.DataTerraformRemoteStateOss.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.DataTerraformRemoteStateOss.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.DataTerraformRemoteStateOss.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `override_logical_id` <a name="override_logical_id" id="cdktn.DataTerraformRemoteStateOss.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="cdktn.DataTerraformRemoteStateOss.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+***
+
+### `reset_override_logical_id` <a name="reset_override_logical_id" id="cdktn.DataTerraformRemoteStateOss.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.DataTerraformRemoteStateOss.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `to_metadata` <a name="to_metadata" id="cdktn.DataTerraformRemoteStateOss.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+### `to_terraform` <a name="to_terraform" id="cdktn.DataTerraformRemoteStateOss.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `get` <a name="get" id="cdktn.DataTerraformRemoteStateOss.get"></a>
+
+```python
+def get(
+  output: str
+) -> IResolvable
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateOss.get.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_boolean` <a name="get_boolean" id="cdktn.DataTerraformRemoteStateOss.getBoolean"></a>
+
+```python
+def get_boolean(
+  output: str
+) -> IResolvable
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateOss.getBoolean.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_list` <a name="get_list" id="cdktn.DataTerraformRemoteStateOss.getList"></a>
+
+```python
+def get_list(
+  output: str
+) -> typing.List[str]
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateOss.getList.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_number` <a name="get_number" id="cdktn.DataTerraformRemoteStateOss.getNumber"></a>
+
+```python
+def get_number(
+  output: str
+) -> typing.Union[int, float]
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateOss.getNumber.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_string` <a name="get_string" id="cdktn.DataTerraformRemoteStateOss.getString"></a>
+
+```python
+def get_string(
+  output: str
+) -> str
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateOss.getString.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.isTerraformElement">is\_terraform\_element</a></code> | *No description.* |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.DataTerraformRemoteStateOss.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateOss.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateOss.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_terraform_element` <a name="is_terraform_element" id="cdktn.DataTerraformRemoteStateOss.isTerraformElement"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateOss.is_terraform_element(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateOss.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.property.cdktfStack">cdktf\_stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.property.friendlyUniqueId">friendly\_unique\_id</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.DataTerraformRemoteStateOss.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="cdktn.DataTerraformRemoteStateOss.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.DataTerraformRemoteStateOss.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+
+### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="cdktn.DataTerraformRemoteStateOss.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.property.tfResourceType">tfResourceType</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="cdktn.DataTerraformRemoteStateOss.property.tfResourceType"></a>
+
+```python
+tfResourceType: str
+```
+
+- *Type:* str
+
+***
+

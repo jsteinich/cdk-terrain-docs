@@ -1,0 +1,201 @@
+---
+title: "CSharp: Tokenization"
+sidebarTitle: Tokenization
+description: CDKTN Core API Reference for Tokenization in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Less oft-needed functions to manipulate Tokens.
+
+## Initializers <a name="Initializers" id="cdktn.Tokenization.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new Tokenization();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Tokenization.isResolvable">IsResolvable</a></code> | Return whether the given object is an IResolvable object. |
+| <code><a href="#cdktn.Tokenization.resolve">Resolve</a></code> | Resolves an object by evaluating all tokens and removing any undefined or empty objects or arrays. |
+| <code><a href="#cdktn.Tokenization.reverse">Reverse</a></code> | Reverse any value into Resolvables, if possible. |
+| <code><a href="#cdktn.Tokenization.reverseList">ReverseList</a></code> | Un-encode a Tokenized value from a list. |
+| <code><a href="#cdktn.Tokenization.reverseMap">ReverseMap</a></code> | Un-encode a Tokenized value from a map. |
+| <code><a href="#cdktn.Tokenization.reverseNumber">ReverseNumber</a></code> | Un-encode a Tokenized value from a number. |
+| <code><a href="#cdktn.Tokenization.reverseNumberList">ReverseNumberList</a></code> | Un-encode a Tokenized value from a list. |
+| <code><a href="#cdktn.Tokenization.reverseString">ReverseString</a></code> | Un-encode a string potentially containing encoded tokens. |
+| <code><a href="#cdktn.Tokenization.stringifyNumber">StringifyNumber</a></code> | Stringify a number directly or lazily if it's a Token. |
+
+***
+
+### `IsResolvable` <a name="IsResolvable" id="cdktn.Tokenization.isResolvable"></a>
+
+```csharp
+using Io.Cdktn;
+
+Tokenization.IsResolvable(object Obj);
+```
+
+Return whether the given object is an IResolvable object.
+
+This is different from Token.isUnresolved() which will also check for
+encoded Tokens, whereas this method will only do a type check on the given
+object.
+
+#### `Obj`<sup>Required</sup> <a name="Obj" id="cdktn.Tokenization.isResolvable.parameter.obj"></a>
+
+- *Type:* object
+
+***
+
+### `Resolve` <a name="Resolve" id="cdktn.Tokenization.resolve"></a>
+
+```csharp
+using Io.Cdktn;
+
+Tokenization.Resolve(object Obj, ResolveOptions Options);
+```
+
+Resolves an object by evaluating all tokens and removing any undefined or empty objects or arrays.
+
+Values can only be primitives, arrays or tokens. Other objects (i.e. with methods) will be rejected.
+
+#### `Obj`<sup>Required</sup> <a name="Obj" id="cdktn.Tokenization.resolve.parameter.obj"></a>
+
+- *Type:* object
+
+The object to resolve.
+
+***
+
+#### `Options`<sup>Required</sup> <a name="Options" id="cdktn.Tokenization.resolve.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.ResolveOptions">ResolveOptions</a>
+
+Prefix key path components for diagnostics.
+
+***
+
+### `Reverse` <a name="Reverse" id="cdktn.Tokenization.reverse"></a>
+
+```csharp
+using Io.Cdktn;
+
+Tokenization.Reverse(object X);
+```
+
+Reverse any value into Resolvables, if possible.
+
+#### `X`<sup>Required</sup> <a name="X" id="cdktn.Tokenization.reverse.parameter.x"></a>
+
+- *Type:* object
+
+***
+
+### `ReverseList` <a name="ReverseList" id="cdktn.Tokenization.reverseList"></a>
+
+```csharp
+using Io.Cdktn;
+
+Tokenization.ReverseList(string[] L);
+```
+
+Un-encode a Tokenized value from a list.
+
+#### `L`<sup>Required</sup> <a name="L" id="cdktn.Tokenization.reverseList.parameter.l"></a>
+
+- *Type:* string\[]
+
+***
+
+### `ReverseMap` <a name="ReverseMap" id="cdktn.Tokenization.reverseMap"></a>
+
+```csharp
+using Io.Cdktn;
+
+Tokenization.ReverseMap(System.Collections.Generic.IDictionary<string, object> M);
+```
+
+Un-encode a Tokenized value from a map.
+
+#### `M`<sup>Required</sup> <a name="M" id="cdktn.Tokenization.reverseMap.parameter.m"></a>
+
+- *Type:* System.Collections.Generic.IDictionary&lt; string, object >
+
+***
+
+### `ReverseNumber` <a name="ReverseNumber" id="cdktn.Tokenization.reverseNumber"></a>
+
+```csharp
+using Io.Cdktn;
+
+Tokenization.ReverseNumber(double N);
+```
+
+Un-encode a Tokenized value from a number.
+
+#### `N`<sup>Required</sup> <a name="N" id="cdktn.Tokenization.reverseNumber.parameter.n"></a>
+
+- *Type:* double
+
+***
+
+### `ReverseNumberList` <a name="ReverseNumberList" id="cdktn.Tokenization.reverseNumberList"></a>
+
+```csharp
+using Io.Cdktn;
+
+Tokenization.ReverseNumberList(double[] L);
+```
+
+Un-encode a Tokenized value from a list.
+
+#### `L`<sup>Required</sup> <a name="L" id="cdktn.Tokenization.reverseNumberList.parameter.l"></a>
+
+- *Type:* double\[]
+
+***
+
+### `ReverseString` <a name="ReverseString" id="cdktn.Tokenization.reverseString"></a>
+
+```csharp
+using Io.Cdktn;
+
+Tokenization.ReverseString(string S);
+```
+
+Un-encode a string potentially containing encoded tokens.
+
+#### `S`<sup>Required</sup> <a name="S" id="cdktn.Tokenization.reverseString.parameter.s"></a>
+
+- *Type:* string
+
+***
+
+### `StringifyNumber` <a name="StringifyNumber" id="cdktn.Tokenization.stringifyNumber"></a>
+
+```csharp
+using Io.Cdktn;
+
+Tokenization.StringifyNumber(double X);
+```
+
+Stringify a number directly or lazily if it's a Token.
+
+If it is an object (i.e., \{ Ref: 'SomeLogicalId' }), return it as-is.
+
+#### `X`<sup>Required</sup> <a name="X" id="cdktn.Tokenization.stringifyNumber.parameter.x"></a>
+
+- *Type:* double
+
+***
+

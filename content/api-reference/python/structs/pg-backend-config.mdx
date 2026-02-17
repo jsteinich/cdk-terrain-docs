@@ -1,0 +1,108 @@
+---
+title: "Python: PgBackendConfig"
+sidebarTitle: PgBackendConfig
+description: CDKTN Core API Reference for PgBackendConfig in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.PgBackendConfig.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.PgBackendConfig(
+  conn_str: str,
+  schema_name: str = None,
+  skip_index_creation: bool = None,
+  skip_schema_creation: bool = None,
+  skip_table_creation: bool = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.PgBackendConfig.property.connStr">conn\_str</a></code> | <code>str</code> | Postgres connection string; |
+| <code><a href="#cdktn.PgBackendConfig.property.schemaName">schema\_name</a></code> | <code>str</code> | Name of the automatically-managed Postgres schema, default to terraform\_remote\_state. |
+| <code><a href="#cdktn.PgBackendConfig.property.skipIndexCreation">skip\_index\_creation</a></code> | <code>bool</code> | If set to true, the Postgres index must already exist. |
+| <code><a href="#cdktn.PgBackendConfig.property.skipSchemaCreation">skip\_schema\_creation</a></code> | <code>bool</code> | If set to true, the Postgres schema must already exist. |
+| <code><a href="#cdktn.PgBackendConfig.property.skipTableCreation">skip\_table\_creation</a></code> | <code>bool</code> | If set to true, the Postgres table must already exist. |
+
+***
+
+### `conn_str`<sup>Required</sup> <a name="conn_str" id="cdktn.PgBackendConfig.property.connStr"></a>
+
+```python
+conn_str: str
+```
+
+- *Type:* str
+
+Postgres connection string;
+
+a postgres:// URL.
+The PG\_CONN\_STR and standard libpq environment variables can also be used to indicate how to connect to the PostgreSQL database.
+
+***
+
+### `schema_name`<sup>Optional</sup> <a name="schema_name" id="cdktn.PgBackendConfig.property.schemaName"></a>
+
+```python
+schema_name: str
+```
+
+- *Type:* str
+
+Name of the automatically-managed Postgres schema, default to terraform\_remote\_state.
+
+Can also be set using the PG\_SCHEMA\_NAME environment variable.
+
+***
+
+### `skip_index_creation`<sup>Optional</sup> <a name="skip_index_creation" id="cdktn.PgBackendConfig.property.skipIndexCreation"></a>
+
+```python
+skip_index_creation: bool
+```
+
+- *Type:* bool
+
+If set to true, the Postgres index must already exist.
+
+Can also be set using the PG\_SKIP\_INDEX\_CREATION environment variable.
+Terraform won't try to create the index, this is useful when it has already been created by a database administrator.
+
+***
+
+### `skip_schema_creation`<sup>Optional</sup> <a name="skip_schema_creation" id="cdktn.PgBackendConfig.property.skipSchemaCreation"></a>
+
+```python
+skip_schema_creation: bool
+```
+
+- *Type:* bool
+
+If set to true, the Postgres schema must already exist.
+
+Can also be set using the PG\_SKIP\_SCHEMA\_CREATION environment variable.
+Terraform won't try to create the schema, this is useful when it has already been created by a database administrator.
+
+***
+
+### `skip_table_creation`<sup>Optional</sup> <a name="skip_table_creation" id="cdktn.PgBackendConfig.property.skipTableCreation"></a>
+
+```python
+skip_table_creation: bool
+```
+
+- *Type:* bool
+
+If set to true, the Postgres table must already exist.
+
+Can also be set using the PG\_SKIP\_TABLE\_CREATION environment variable.
+Terraform won't try to create the table, this is useful when it has already been created by a database administrator.
+
+***
+

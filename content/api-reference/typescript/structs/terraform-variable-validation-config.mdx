@@ -1,0 +1,51 @@
+---
+title: "Typescript: TerraformVariableValidationConfig"
+sidebarTitle: TerraformVariableValidationConfig
+description: CDKTN Core API Reference for TerraformVariableValidationConfig in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Add one or more validation blocks within the variable block to specify custom conditions.
+
+## Initializer <a name="Initializer" id="cdktn.TerraformVariableValidationConfig.Initializer"></a>
+
+```typescript
+import { TerraformVariableValidationConfig } from 'cdktn'
+
+const terraformVariableValidationConfig: TerraformVariableValidationConfig = { ... }
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformVariableValidationConfig.property.condition">condition</a></code> | <code>any</code> | This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not. |
+| <code><a href="#cdktn.TerraformVariableValidationConfig.property.errorMessage">errorMessage</a></code> | <code>string</code> | This contains the text that Terraform will include as part of error messages when it detects an unmet condition. |
+
+***
+
+### `condition`<sup>Required</sup> <a name="condition" id="cdktn.TerraformVariableValidationConfig.property.condition"></a>
+
+```typescript
+public readonly condition: any;
+```
+
+- *Type:* any
+
+This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not.
+
+***
+
+### `errorMessage`<sup>Required</sup> <a name="errorMessage" id="cdktn.TerraformVariableValidationConfig.property.errorMessage"></a>
+
+```typescript
+public readonly errorMessage: string;
+```
+
+- *Type:* string
+
+This contains the text that Terraform will include as part of error messages when it detects an unmet condition.
+
+***
+

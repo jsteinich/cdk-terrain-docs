@@ -1,0 +1,309 @@
+---
+title: "Java: TerraformStack"
+sidebarTitle: TerraformStack
+description: CDKTN Core API Reference for TerraformStack in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.TerraformStack.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.TerraformStack;
+
+new TerraformStack(Construct scope, java.lang.String id);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformStack.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.TerraformStack.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.TerraformStack.Initializer.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformStack.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformStack.addDependency">addDependency</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.allProviders">allProviders</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.dependsOn">dependsOn</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.ensureBackendExists">ensureBackendExists</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.getLogicalId">getLogicalId</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.hasResourceMove">hasResourceMove</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.prepareStack">prepareStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.registerIncomingCrossStackReference">registerIncomingCrossStackReference</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.registerOutgoingCrossStackReference">registerOutgoingCrossStackReference</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.runAllValidations">runAllValidations</a></code> | Run all validations on the stack. |
+| <code><a href="#cdktn.TerraformStack.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.toTerraform">toTerraform</a></code> | *No description.* |
+
+***
+
+### `toString` <a name="toString" id="cdktn.TerraformStack.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `addDependency` <a name="addDependency" id="cdktn.TerraformStack.addDependency"></a>
+
+```java
+public void addDependency(TerraformStack dependency)
+```
+
+#### `dependency`<sup>Required</sup> <a name="dependency" id="cdktn.TerraformStack.addDependency.parameter.dependency"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `addOverride` <a name="addOverride" id="cdktn.TerraformStack.addOverride"></a>
+
+```java
+public void addOverride(java.lang.String path, java.lang.Object value)
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.TerraformStack.addOverride.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformStack.addOverride.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `allProviders` <a name="allProviders" id="cdktn.TerraformStack.allProviders"></a>
+
+```java
+public java.util.List<TerraformProvider> allProviders()
+```
+
+### `dependsOn` <a name="dependsOn" id="cdktn.TerraformStack.dependsOn"></a>
+
+```java
+public java.lang.Boolean dependsOn(TerraformStack stack)
+```
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.TerraformStack.dependsOn.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `ensureBackendExists` <a name="ensureBackendExists" id="cdktn.TerraformStack.ensureBackendExists"></a>
+
+```java
+public TerraformBackend ensureBackendExists()
+```
+
+### `getLogicalId` <a name="getLogicalId" id="cdktn.TerraformStack.getLogicalId"></a>
+
+```java
+public java.lang.String getLogicalId(Node|TerraformElement tfElement)
+```
+
+#### `tfElement`<sup>Required</sup> <a name="tfElement" id="cdktn.TerraformStack.getLogicalId.parameter.tfElement"></a>
+
+- *Type:* software.constructs.Node|<a href="#cdktn.TerraformElement">TerraformElement</a>
+
+***
+
+### `hasResourceMove` <a name="hasResourceMove" id="cdktn.TerraformStack.hasResourceMove"></a>
+
+```java
+public java.lang.Boolean hasResourceMove()
+```
+
+### `prepareStack` <a name="prepareStack" id="cdktn.TerraformStack.prepareStack"></a>
+
+```java
+public void prepareStack()
+```
+
+### `registerIncomingCrossStackReference` <a name="registerIncomingCrossStackReference" id="cdktn.TerraformStack.registerIncomingCrossStackReference"></a>
+
+```java
+public TerraformRemoteState registerIncomingCrossStackReference(TerraformStack fromStack)
+```
+
+#### `fromStack`<sup>Required</sup> <a name="fromStack" id="cdktn.TerraformStack.registerIncomingCrossStackReference.parameter.fromStack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `registerOutgoingCrossStackReference` <a name="registerOutgoingCrossStackReference" id="cdktn.TerraformStack.registerOutgoingCrossStackReference"></a>
+
+```java
+public TerraformOutput registerOutgoingCrossStackReference(java.lang.String identifier)
+```
+
+#### `identifier`<sup>Required</sup> <a name="identifier" id="cdktn.TerraformStack.registerOutgoingCrossStackReference.parameter.identifier"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `runAllValidations` <a name="runAllValidations" id="cdktn.TerraformStack.runAllValidations"></a>
+
+```java
+public void runAllValidations()
+```
+
+Run all validations on the stack.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.TerraformStack.toHclTerraform"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> toHclTerraform()
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.TerraformStack.toTerraform"></a>
+
+```java
+public java.lang.Object toTerraform()
+```
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformStack.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformStack.isStack">isStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.of">of</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.TerraformStack.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.TerraformStack;
+
+TerraformStack.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformStack.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isStack` <a name="isStack" id="cdktn.TerraformStack.isStack"></a>
+
+```java
+import io.cdktn.cdktn.TerraformStack;
+
+TerraformStack.isStack(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformStack.isStack.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `of` <a name="of" id="cdktn.TerraformStack.of"></a>
+
+```java
+import io.cdktn.cdktn.TerraformStack;
+
+TerraformStack.of(IConstruct construct)
+```
+
+#### `construct`<sup>Required</sup> <a name="construct" id="cdktn.TerraformStack.of.parameter.construct"></a>
+
+- *Type:* software.constructs.IConstruct
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformStack.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformStack.property.dependencies">dependencies</a></code> | <code>java.util.List&lt;<a href="#cdktn.TerraformStack">TerraformStack</a>></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.property.moveTargets">moveTargets</a></code> | <code><a href="#cdktn.TerraformResourceTargets">TerraformResourceTargets</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.property.synthesizer">synthesizer</a></code> | <code><a href="#cdktn.IStackSynthesizer">IStackSynthesizer</a></code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.TerraformStack.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `dependencies`<sup>Required</sup> <a name="dependencies" id="cdktn.TerraformStack.property.dependencies"></a>
+
+```java
+public java.util.List<TerraformStack> getDependencies();
+```
+
+- *Type:* java.util.List&lt;<a href="#cdktn.TerraformStack">TerraformStack</a>>
+
+***
+
+### `moveTargets`<sup>Required</sup> <a name="moveTargets" id="cdktn.TerraformStack.property.moveTargets"></a>
+
+```java
+public TerraformResourceTargets getMoveTargets();
+```
+
+- *Type:* <a href="#cdktn.TerraformResourceTargets">TerraformResourceTargets</a>
+
+***
+
+### `synthesizer`<sup>Required</sup> <a name="synthesizer" id="cdktn.TerraformStack.property.synthesizer"></a>
+
+```java
+public IStackSynthesizer getSynthesizer();
+```
+
+- *Type:* <a href="#cdktn.IStackSynthesizer">IStackSynthesizer</a>
+
+***
+

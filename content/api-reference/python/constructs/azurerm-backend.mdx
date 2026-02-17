@@ -1,0 +1,587 @@
+---
+title: "Python: AzurermBackend"
+sidebarTitle: AzurermBackend
+description: CDKTN Core API Reference for AzurermBackend in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.AzurermBackend.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.AzurermBackend(
+  scope: Construct,
+  container_name: str,
+  key: str,
+  storage_account_name: str,
+  access_key: str = None,
+  client_certificate_password: str = None,
+  client_certificate_path: str = None,
+  client_id: str = None,
+  client_secret: str = None,
+  endpoint: str = None,
+  environment: str = None,
+  metadata_host: str = None,
+  msi_endpoint: str = None,
+  oidc_request_token: str = None,
+  oidc_request_url: str = None,
+  oidc_token: str = None,
+  oidc_token_file_path: str = None,
+  resource_group_name: str = None,
+  sas_token: str = None,
+  snapshot: bool = None,
+  subscription_id: str = None,
+  tenant_id: str = None,
+  use_azuread_auth: bool = None,
+  use_microsoft_graph: bool = None,
+  use_msi: bool = None,
+  use_oidc: bool = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.containerName">container\_name</a></code> | <code>str</code> | (Required) The Name of the Storage Container within the Storage Account. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.key">key</a></code> | <code>str</code> | (Required) The name of the Blob used to retrieve/store Terraform's State file inside the Storage Container. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.storageAccountName">storage\_account\_name</a></code> | <code>str</code> | (Required) The Name of the Storage Account. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.accessKey">access\_key</a></code> | <code>str</code> | access\_key - (Optional) The Access Key used to access the Blob Storage Account. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.clientCertificatePassword">client\_certificate\_password</a></code> | <code>str</code> | (Optional) The password associated with the Client Certificate specified in client\_certificate\_path. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.clientCertificatePath">client\_certificate\_path</a></code> | <code>str</code> | (Optional) The path to the PFX file used as the Client Certificate when authenticating as a Service Principal. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.clientId">client\_id</a></code> | <code>str</code> | (Optional) The Client ID of the Service Principal. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.clientSecret">client\_secret</a></code> | <code>str</code> | (Optional) The Client Secret of the Service Principal. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.endpoint">endpoint</a></code> | <code>str</code> | (Optional) The Custom Endpoint for Azure Resource Manager. This can also be sourced from the ARM\_ENDPOINT environment variable. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.environment">environment</a></code> | <code>str</code> | (Optional) The Azure Environment which should be used. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.metadataHost">metadata\_host</a></code> | <code>str</code> | (Optional) The Hostname of the Azure Metadata Service (for example management.azure.com), used to obtain the Cloud Environment when using a Custom Azure Environment. This can also be sourced from the ARM\_METADATA\_HOSTNAME Environment Variable.). |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.msiEndpoint">msi\_endpoint</a></code> | <code>str</code> | (Optional) The path to a custom Managed Service Identity endpoint which is automatically determined if not specified. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.oidcRequestToken">oidc\_request\_token</a></code> | <code>str</code> | (Optional) The bearer token for the request to the OIDC provider. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.oidcRequestUrl">oidc\_request\_url</a></code> | <code>str</code> | (Optional) The URL for the OIDC provider from which to request an ID token. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.oidcToken">oidc\_token</a></code> | <code>str</code> | (Optional) The ID token when authenticating using OpenID Connect (OIDC). |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.oidcTokenFilePath">oidc\_token\_file\_path</a></code> | <code>str</code> | (Optional) The path to a file containing an ID token when authenticating using OpenID Connect (OIDC). |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.resourceGroupName">resource\_group\_name</a></code> | <code>str</code> | (Required) The Name of the Resource Group in which the Storage Account exists. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.sasToken">sas\_token</a></code> | <code>str</code> | (Optional) The SAS Token used to access the Blob Storage Account. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.snapshot">snapshot</a></code> | <code>bool</code> | (Optional) Should the Blob used to store the Terraform Statefile be snapshotted before use? |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.subscriptionId">subscription\_id</a></code> | <code>str</code> | (Optional) The Subscription ID in which the Storage Account exists. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.tenantId">tenant\_id</a></code> | <code>str</code> | (Optional) The Tenant ID in which the Subscription exists. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.useAzureadAuth">use\_azuread\_auth</a></code> | <code>bool</code> | (Optional) Should AzureAD Authentication be used to access the Blob Storage Account. |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.useMicrosoftGraph">use\_microsoft\_graph</a></code> | <code>bool</code> | (Optional) Should MSAL be used for authentication instead of ADAL, and should Microsoft Graph be used instead of Azure Active Directory Graph? |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.useMsi">use\_msi</a></code> | <code>bool</code> | (Optional) Should Managed Service Identity authentication be used? |
+| <code><a href="#cdktn.AzurermBackend.Initializer.parameter.useOidc">use\_oidc</a></code> | <code>bool</code> | (Optional) Should OIDC authentication be used? This can also be sourced from the ARM\_USE\_OIDC environment variable. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.AzurermBackend.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+### `container_name`<sup>Required</sup> <a name="container_name" id="cdktn.AzurermBackend.Initializer.parameter.containerName"></a>
+
+- *Type:* str
+
+(Required) The Name of the Storage Container within the Storage Account.
+
+***
+
+### `key`<sup>Required</sup> <a name="key" id="cdktn.AzurermBackend.Initializer.parameter.key"></a>
+
+- *Type:* str
+
+(Required) The name of the Blob used to retrieve/store Terraform's State file inside the Storage Container.
+
+***
+
+### `storage_account_name`<sup>Required</sup> <a name="storage_account_name" id="cdktn.AzurermBackend.Initializer.parameter.storageAccountName"></a>
+
+- *Type:* str
+
+(Required) The Name of the Storage Account.
+
+***
+
+### `access_key`<sup>Optional</sup> <a name="access_key" id="cdktn.AzurermBackend.Initializer.parameter.accessKey"></a>
+
+- *Type:* str
+
+access\_key - (Optional) The Access Key used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_ACCESS\_KEY environment variable.
+
+***
+
+### `client_certificate_password`<sup>Optional</sup> <a name="client_certificate_password" id="cdktn.AzurermBackend.Initializer.parameter.clientCertificatePassword"></a>
+
+- *Type:* str
+
+(Optional) The password associated with the Client Certificate specified in client\_certificate\_path.
+
+This can also be sourced from the
+ARM\_CLIENT\_CERTIFICATE\_PASSWORD environment variable.
+
+***
+
+### `client_certificate_path`<sup>Optional</sup> <a name="client_certificate_path" id="cdktn.AzurermBackend.Initializer.parameter.clientCertificatePath"></a>
+
+- *Type:* str
+
+(Optional) The path to the PFX file used as the Client Certificate when authenticating as a Service Principal.
+
+This can also be sourced from the
+ARM\_CLIENT\_CERTIFICATE\_PATH environment variable.
+
+***
+
+### `client_id`<sup>Optional</sup> <a name="client_id" id="cdktn.AzurermBackend.Initializer.parameter.clientId"></a>
+
+- *Type:* str
+
+(Optional) The Client ID of the Service Principal.
+
+This can also be sourced from the ARM\_CLIENT\_ID environment variable.
+
+***
+
+### `client_secret`<sup>Optional</sup> <a name="client_secret" id="cdktn.AzurermBackend.Initializer.parameter.clientSecret"></a>
+
+- *Type:* str
+
+(Optional) The Client Secret of the Service Principal.
+
+This can also be sourced from the ARM\_CLIENT\_SECRET environment variable.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.AzurermBackend.Initializer.parameter.endpoint"></a>
+
+- *Type:* str
+
+(Optional) The Custom Endpoint for Azure Resource Manager. This can also be sourced from the ARM\_ENDPOINT environment variable.
+
+NOTE: An endpoint should only be configured when using Azure Stack.
+
+***
+
+### `environment`<sup>Optional</sup> <a name="environment" id="cdktn.AzurermBackend.Initializer.parameter.environment"></a>
+
+- *Type:* str
+
+(Optional) The Azure Environment which should be used.
+
+This can also be sourced from the ARM\_ENVIRONMENT environment variable.
+Possible values are public, china, german, stack and usgovernment. Defaults to public.
+
+***
+
+### `metadata_host`<sup>Optional</sup> <a name="metadata_host" id="cdktn.AzurermBackend.Initializer.parameter.metadataHost"></a>
+
+- *Type:* str
+
+(Optional) The Hostname of the Azure Metadata Service (for example management.azure.com), used to obtain the Cloud Environment when using a Custom Azure Environment. This can also be sourced from the ARM\_METADATA\_HOSTNAME Environment Variable.).
+
+***
+
+### `msi_endpoint`<sup>Optional</sup> <a name="msi_endpoint" id="cdktn.AzurermBackend.Initializer.parameter.msiEndpoint"></a>
+
+- *Type:* str
+
+(Optional) The path to a custom Managed Service Identity endpoint which is automatically determined if not specified.
+
+This can also be sourced from the ARM\_MSI\_ENDPOINT environment variable.
+
+***
+
+### `oidc_request_token`<sup>Optional</sup> <a name="oidc_request_token" id="cdktn.AzurermBackend.Initializer.parameter.oidcRequestToken"></a>
+
+- *Type:* str
+
+(Optional) The bearer token for the request to the OIDC provider.
+
+This can
+also be sourced from the ARM\_OIDC\_REQUEST\_TOKEN or
+ACTIONS\_ID\_TOKEN\_REQUEST\_TOKEN environment variables.
+
+***
+
+### `oidc_request_url`<sup>Optional</sup> <a name="oidc_request_url" id="cdktn.AzurermBackend.Initializer.parameter.oidcRequestUrl"></a>
+
+- *Type:* str
+
+(Optional) The URL for the OIDC provider from which to request an ID token.
+
+This can also be sourced from the ARM\_OIDC\_REQUEST\_URL or
+ACTIONS\_ID\_TOKEN\_REQUEST\_URL environment variables.
+
+***
+
+### `oidc_token`<sup>Optional</sup> <a name="oidc_token" id="cdktn.AzurermBackend.Initializer.parameter.oidcToken"></a>
+
+- *Type:* str
+
+(Optional) The ID token when authenticating using OpenID Connect (OIDC).
+
+This can also be sourced from the ARM\_OIDC\_TOKEN environment variable.
+
+***
+
+### `oidc_token_file_path`<sup>Optional</sup> <a name="oidc_token_file_path" id="cdktn.AzurermBackend.Initializer.parameter.oidcTokenFilePath"></a>
+
+- *Type:* str
+
+(Optional) The path to a file containing an ID token when authenticating using OpenID Connect (OIDC).
+
+This can also be sourced from the ARM\_OIDC\_TOKEN\_FILE\_PATH environment variable.
+
+***
+
+### `resource_group_name`<sup>Optional</sup> <a name="resource_group_name" id="cdktn.AzurermBackend.Initializer.parameter.resourceGroupName"></a>
+
+- *Type:* str
+
+(Required) The Name of the Resource Group in which the Storage Account exists.
+
+***
+
+### `sas_token`<sup>Optional</sup> <a name="sas_token" id="cdktn.AzurermBackend.Initializer.parameter.sasToken"></a>
+
+- *Type:* str
+
+(Optional) The SAS Token used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_SAS\_TOKEN environment variable.
+
+***
+
+### `snapshot`<sup>Optional</sup> <a name="snapshot" id="cdktn.AzurermBackend.Initializer.parameter.snapshot"></a>
+
+- *Type:* bool
+
+(Optional) Should the Blob used to store the Terraform Statefile be snapshotted before use?
+
+Defaults to false. This value can also be sourced
+from the ARM\_SNAPSHOT environment variable.
+
+***
+
+### `subscription_id`<sup>Optional</sup> <a name="subscription_id" id="cdktn.AzurermBackend.Initializer.parameter.subscriptionId"></a>
+
+- *Type:* str
+
+(Optional) The Subscription ID in which the Storage Account exists.
+
+This can also be sourced from the ARM\_SUBSCRIPTION\_ID environment variable.
+
+***
+
+### `tenant_id`<sup>Optional</sup> <a name="tenant_id" id="cdktn.AzurermBackend.Initializer.parameter.tenantId"></a>
+
+- *Type:* str
+
+(Optional) The Tenant ID in which the Subscription exists.
+
+This can also be sourced from the ARM\_TENANT\_ID environment variable.
+
+***
+
+### `use_azuread_auth`<sup>Optional</sup> <a name="use_azuread_auth" id="cdktn.AzurermBackend.Initializer.parameter.useAzureadAuth"></a>
+
+- *Type:* bool
+
+(Optional) Should AzureAD Authentication be used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_USE\_AZUREAD environment
+variable.
+
+Note: When using AzureAD for Authentication to Storage you also need to
+ensure the Storage Blob Data Owner role is assigned.
+
+***
+
+### `use_microsoft_graph`<sup>Optional</sup> <a name="use_microsoft_graph" id="cdktn.AzurermBackend.Initializer.parameter.useMicrosoftGraph"></a>
+
+- *Type:* bool
+
+(Optional) Should MSAL be used for authentication instead of ADAL, and should Microsoft Graph be used instead of Azure Active Directory Graph?
+
+Defaults to true.
+
+Note: In Terraform 1.2 the Azure Backend uses MSAL (and Microsoft Graph)
+rather than ADAL (and Azure Active Directory Graph) for authentication by
+default - you can disable this by setting use\_microsoft\_graph to false.
+This setting will be removed in Terraform 1.3, due to Microsoft's
+deprecation of ADAL.
+
+***
+
+### `use_msi`<sup>Optional</sup> <a name="use_msi" id="cdktn.AzurermBackend.Initializer.parameter.useMsi"></a>
+
+- *Type:* bool
+
+(Optional) Should Managed Service Identity authentication be used?
+
+This can also be sourced from the ARM\_USE\_MSI environment variable.
+
+***
+
+### `use_oidc`<sup>Optional</sup> <a name="use_oidc" id="cdktn.AzurermBackend.Initializer.parameter.useOidc"></a>
+
+- *Type:* bool
+
+(Optional) Should OIDC authentication be used? This can also be sourced from the ARM\_USE\_OIDC environment variable.
+
+Note: When using OIDC for authentication, use\_microsoft\_graph
+must be set to true (which is the default).
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.AzurermBackend.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.AzurermBackend.addOverride">add\_override</a></code> | *No description.* |
+| <code><a href="#cdktn.AzurermBackend.overrideLogicalId">override\_logical\_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.AzurermBackend.resetOverrideLogicalId">reset\_override\_logical\_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.AzurermBackend.toHclTerraform">to\_hcl\_terraform</a></code> | *No description.* |
+| <code><a href="#cdktn.AzurermBackend.toMetadata">to\_metadata</a></code> | *No description.* |
+| <code><a href="#cdktn.AzurermBackend.toTerraform">to\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.AzurermBackend.getRemoteStateDataSource">get\_remote\_state\_data\_source</a></code> | Creates a TerraformRemoteState resource that accesses this backend. |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.AzurermBackend.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `add_override` <a name="add_override" id="cdktn.AzurermBackend.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.AzurermBackend.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.AzurermBackend.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `override_logical_id` <a name="override_logical_id" id="cdktn.AzurermBackend.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="cdktn.AzurermBackend.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+***
+
+### `reset_override_logical_id` <a name="reset_override_logical_id" id="cdktn.AzurermBackend.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.AzurermBackend.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+### `to_metadata` <a name="to_metadata" id="cdktn.AzurermBackend.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+### `to_terraform` <a name="to_terraform" id="cdktn.AzurermBackend.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `get_remote_state_data_source` <a name="get_remote_state_data_source" id="cdktn.AzurermBackend.getRemoteStateDataSource"></a>
+
+```python
+def get_remote_state_data_source(
+  scope: Construct,
+  name: str,
+  _fromstack: str
+) -> TerraformRemoteState
+```
+
+Creates a TerraformRemoteState resource that accesses this backend.
+
+#### `scope`<sup>Required</sup> <a name="scope" id="cdktn.AzurermBackend.getRemoteStateDataSource.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+#### `name`<sup>Required</sup> <a name="name" id="cdktn.AzurermBackend.getRemoteStateDataSource.parameter.name"></a>
+
+- *Type:* str
+
+***
+
+#### `_fromstack`<sup>Required</sup> <a name="_fromstack" id="cdktn.AzurermBackend.getRemoteStateDataSource.parameter._fromStack"></a>
+
+- *Type:* str
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.AzurermBackend.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.AzurermBackend.isTerraformElement">is\_terraform\_element</a></code> | *No description.* |
+| <code><a href="#cdktn.AzurermBackend.isBackend">is\_backend</a></code> | *No description.* |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.AzurermBackend.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.AzurermBackend.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.AzurermBackend.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_terraform_element` <a name="is_terraform_element" id="cdktn.AzurermBackend.isTerraformElement"></a>
+
+```python
+import cdktn
+
+cdktn.AzurermBackend.is_terraform_element(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.AzurermBackend.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `is_backend` <a name="is_backend" id="cdktn.AzurermBackend.isBackend"></a>
+
+```python
+import cdktn
+
+cdktn.AzurermBackend.is_backend(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.AzurermBackend.isBackend.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.AzurermBackend.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.AzurermBackend.property.cdktfStack">cdktf\_stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.AzurermBackend.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.AzurermBackend.property.friendlyUniqueId">friendly\_unique\_id</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.AzurermBackend.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="cdktn.AzurermBackend.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.AzurermBackend.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+
+### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="cdktn.AzurermBackend.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+***
+

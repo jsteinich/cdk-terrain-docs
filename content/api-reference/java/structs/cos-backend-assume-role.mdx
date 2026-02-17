@@ -1,0 +1,90 @@
+---
+title: "Java: CosBackendAssumeRole"
+sidebarTitle: CosBackendAssumeRole
+description: CDKTN Core API Reference for CosBackendAssumeRole in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.CosBackendAssumeRole.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.CosBackendAssumeRole;
+
+CosBackendAssumeRole.builder()
+    .roleArn(java.lang.String)
+    .sessionDuration(java.lang.Number)
+    .sessionName(java.lang.String)
+//  .policy(java.lang.Object)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.roleArn">roleArn</a></code> | <code>java.lang.String</code> | (Required) The ARN of the role to assume. |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.sessionDuration">sessionDuration</a></code> | <code>java.lang.Number</code> | (Required) The duration of the session when making the AssumeRole call. |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.sessionName">sessionName</a></code> | <code>java.lang.String</code> | (Required) The session name to use when making the AssumeRole call. |
+| <code><a href="#cdktn.CosBackendAssumeRole.property.policy">policy</a></code> | <code>java.lang.Object</code> | (Optional) A more restrictive policy when making the AssumeRole call. |
+
+***
+
+### `roleArn`<sup>Required</sup> <a name="roleArn" id="cdktn.CosBackendAssumeRole.property.roleArn"></a>
+
+```java
+public java.lang.String getRoleArn();
+```
+
+- *Type:* java.lang.String
+
+(Required) The ARN of the role to assume.
+
+It can be sourced from the TENCENTCLOUD\_ASSUME\_ROLE\_ARN.
+
+***
+
+### `sessionDuration`<sup>Required</sup> <a name="sessionDuration" id="cdktn.CosBackendAssumeRole.property.sessionDuration"></a>
+
+```java
+public java.lang.Number getSessionDuration();
+```
+
+- *Type:* java.lang.Number
+
+(Required) The duration of the session when making the AssumeRole call.
+
+Its value ranges from 0 to 43200(seconds), and default is 7200 seconds.
+It can be sourced from the TENCENTCLOUD\_ASSUME\_ROLE\_SESSION\_DURATION.
+
+***
+
+### `sessionName`<sup>Required</sup> <a name="sessionName" id="cdktn.CosBackendAssumeRole.property.sessionName"></a>
+
+```java
+public java.lang.String getSessionName();
+```
+
+- *Type:* java.lang.String
+
+(Required) The session name to use when making the AssumeRole call.
+
+It can be sourced from the TENCENTCLOUD\_ASSUME\_ROLE\_SESSION\_NAME.
+
+***
+
+### `policy`<sup>Optional</sup> <a name="policy" id="cdktn.CosBackendAssumeRole.property.policy"></a>
+
+```java
+public java.lang.Object getPolicy();
+```
+
+- *Type:* java.lang.Object
+
+(Optional) A more restrictive policy when making the AssumeRole call.
+
+Its content must not contains principal elements.
+Please refer to [policies syntax logic](https://www.tencentcloud.com/document/product/598/10603).
+
+***
+

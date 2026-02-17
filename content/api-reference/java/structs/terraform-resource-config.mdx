@@ -1,0 +1,132 @@
+---
+title: "Java: TerraformResourceConfig"
+sidebarTitle: TerraformResourceConfig
+description: CDKTN Core API Reference for TerraformResourceConfig in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.TerraformResourceConfig.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.TerraformResourceConfig;
+
+TerraformResourceConfig.builder()
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
+//  .dependsOn(java.util.List<ITerraformDependable>)
+//  .forEach(ITerraformIterator)
+//  .lifecycle(TerraformResourceLifecycle)
+//  .provider(TerraformProvider)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
+    .terraformResourceType(java.lang.String)
+//  .terraformGeneratorMetadata(TerraformProviderGeneratorMetadata)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformResourceConfig.property.connection">connection</a></code> | <code><a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a>&#124;<a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformResourceConfig.property.count">count</a></code> | <code>java.lang.Number&#124;<a href="#cdktn.TerraformCount">TerraformCount</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformResourceConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List&lt;<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>></code> | *No description.* |
+| <code><a href="#cdktn.TerraformResourceConfig.property.forEach">forEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformResourceConfig.property.lifecycle">lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformResourceConfig.property.provider">provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformResourceConfig.property.provisioners">provisioners</a></code> | <code>java.util.List&lt;<a href="#cdktn.FileProvisioner">FileProvisioner</a>&#124;<a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a>&#124;<a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>></code> | *No description.* |
+| <code><a href="#cdktn.TerraformResourceConfig.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformResourceConfig.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code><a href="#cdktn.TerraformProviderGeneratorMetadata">TerraformProviderGeneratorMetadata</a></code> | *No description.* |
+
+***
+
+### `connection`<sup>Optional</sup> <a name="connection" id="cdktn.TerraformResourceConfig.property.connection"></a>
+
+```java
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
+```
+
+- *Type:* <a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a>|<a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a>
+
+***
+
+### `count`<sup>Optional</sup> <a name="count" id="cdktn.TerraformResourceConfig.property.count"></a>
+
+```java
+public java.lang.Number|TerraformCount getCount();
+```
+
+- *Type:* java.lang.Number|<a href="#cdktn.TerraformCount">TerraformCount</a>
+
+***
+
+### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="cdktn.TerraformResourceConfig.property.dependsOn"></a>
+
+```java
+public java.util.List<ITerraformDependable> getDependsOn();
+```
+
+- *Type:* java.util.List&lt;<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>>
+
+***
+
+### `forEach`<sup>Optional</sup> <a name="forEach" id="cdktn.TerraformResourceConfig.property.forEach"></a>
+
+```java
+public ITerraformIterator getForEach();
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="cdktn.TerraformResourceConfig.property.lifecycle"></a>
+
+```java
+public TerraformResourceLifecycle getLifecycle();
+```
+
+- *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
+
+***
+
+### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.TerraformResourceConfig.property.provider"></a>
+
+```java
+public TerraformProvider getProvider();
+```
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### `provisioners`<sup>Optional</sup> <a name="provisioners" id="cdktn.TerraformResourceConfig.property.provisioners"></a>
+
+```java
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
+```
+
+- *Type:* java.util.List&lt;<a href="#cdktn.FileProvisioner">FileProvisioner</a>|<a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a>|<a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>>
+
+***
+
+### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="cdktn.TerraformResourceConfig.property.terraformResourceType"></a>
+
+```java
+public java.lang.String getTerraformResourceType();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `terraformGeneratorMetadata`<sup>Optional</sup> <a name="terraformGeneratorMetadata" id="cdktn.TerraformResourceConfig.property.terraformGeneratorMetadata"></a>
+
+```java
+public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
+```
+
+- *Type:* <a href="#cdktn.TerraformProviderGeneratorMetadata">TerraformProviderGeneratorMetadata</a>
+
+***
+

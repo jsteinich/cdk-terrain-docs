@@ -1,0 +1,250 @@
+---
+title: "CSharp: App"
+sidebarTitle: App
+description: CDKTN Core API Reference for App in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Represents a cdktn application.
+
+## Initializers <a name="Initializers" id="cdktn.App.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new App(AppConfig Config = null);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.App.Initializer.parameter.config">Config</a></code> | <code><a href="#cdktn.AppConfig">AppConfig</a></code> | configuration. |
+
+***
+
+### `Config`<sup>Optional</sup> <a name="Config" id="cdktn.App.Initializer.parameter.config"></a>
+
+- *Type:* <a href="#cdktn.AppConfig">AppConfig</a>
+
+configuration.
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.App.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.App.crossStackReference">CrossStackReference</a></code> | Creates a reference from one stack to another, invoked on prepareStack since it creates extra resources. |
+| <code><a href="#cdktn.App.synth">Synth</a></code> | Synthesizes all resources to the output directory. |
+
+***
+
+### `ToString` <a name="ToString" id="cdktn.App.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Returns a string representation of this construct.
+
+### `CrossStackReference` <a name="CrossStackReference" id="cdktn.App.crossStackReference"></a>
+
+```csharp
+private string CrossStackReference(TerraformStack FromStack, TerraformStack ToStack, string Identifier)
+```
+
+Creates a reference from one stack to another, invoked on prepareStack since it creates extra resources.
+
+#### `FromStack`<sup>Required</sup> <a name="FromStack" id="cdktn.App.crossStackReference.parameter.fromStack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `ToStack`<sup>Required</sup> <a name="ToStack" id="cdktn.App.crossStackReference.parameter.toStack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `Identifier`<sup>Required</sup> <a name="Identifier" id="cdktn.App.crossStackReference.parameter.identifier"></a>
+
+- *Type:* string
+
+***
+
+### `Synth` <a name="Synth" id="cdktn.App.synth"></a>
+
+```csharp
+private void Synth()
+```
+
+Synthesizes all resources to the output directory.
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.App.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.App.isApp">IsApp</a></code> | *No description.* |
+| <code><a href="#cdktn.App.of">Of</a></code> | *No description.* |
+
+***
+
+### `IsConstruct` <a name="IsConstruct" id="cdktn.App.isConstruct"></a>
+
+```csharp
+using Io.Cdktn;
+
+App.IsConstruct(object X);
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `X`<sup>Required</sup> <a name="X" id="cdktn.App.isConstruct.parameter.x"></a>
+
+- *Type:* object
+
+Any object.
+
+***
+
+### `IsApp` <a name="IsApp" id="cdktn.App.isApp"></a>
+
+```csharp
+using Io.Cdktn;
+
+App.IsApp(object X);
+```
+
+#### `X`<sup>Required</sup> <a name="X" id="cdktn.App.isApp.parameter.x"></a>
+
+- *Type:* object
+
+***
+
+### `Of` <a name="Of" id="cdktn.App.of"></a>
+
+```csharp
+using Io.Cdktn;
+
+App.Of(IConstruct Construct);
+```
+
+#### `Construct`<sup>Required</sup> <a name="Construct" id="cdktn.App.of.parameter.construct"></a>
+
+- *Type:* Constructs.IConstruct
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.App.property.node">Node</a></code> | <code>Constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.App.property.hclOutput">HclOutput</a></code> | <code>bool</code> | *No description.* |
+| <code><a href="#cdktn.App.property.manifest">Manifest</a></code> | <code><a href="#cdktn.Manifest">Manifest</a></code> | *No description.* |
+| <code><a href="#cdktn.App.property.outdir">Outdir</a></code> | <code>string</code> | The output directory into which resources will be synthesized. |
+| <code><a href="#cdktn.App.property.skipBackendValidation">SkipBackendValidation</a></code> | <code>bool</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#cdktn.App.property.skipValidation">SkipValidation</a></code> | <code>bool</code> | Whether to skip all validations during synthesis of the app. |
+| <code><a href="#cdktn.App.property.targetStackId">TargetStackId</a></code> | <code>string</code> | The stack which will be synthesized. |
+
+***
+
+### `Node`<sup>Required</sup> <a name="Node" id="cdktn.App.property.node"></a>
+
+```csharp
+public Node Node { get; }
+```
+
+- *Type:* Constructs.Node
+
+The tree node.
+
+***
+
+### `HclOutput`<sup>Required</sup> <a name="HclOutput" id="cdktn.App.property.hclOutput"></a>
+
+```csharp
+public bool HclOutput { get; }
+```
+
+- *Type:* bool
+
+***
+
+### `Manifest`<sup>Required</sup> <a name="Manifest" id="cdktn.App.property.manifest"></a>
+
+```csharp
+public Manifest Manifest { get; }
+```
+
+- *Type:* <a href="#cdktn.Manifest">Manifest</a>
+
+***
+
+### `Outdir`<sup>Required</sup> <a name="Outdir" id="cdktn.App.property.outdir"></a>
+
+```csharp
+public string Outdir { get; }
+```
+
+- *Type:* string
+
+The output directory into which resources will be synthesized.
+
+***
+
+### `SkipBackendValidation`<sup>Required</sup> <a name="SkipBackendValidation" id="cdktn.App.property.skipBackendValidation"></a>
+
+```csharp
+public bool SkipBackendValidation { get; }
+```
+
+- *Type:* bool
+
+Whether to skip backend validation during synthesis of the app.
+
+***
+
+### `SkipValidation`<sup>Required</sup> <a name="SkipValidation" id="cdktn.App.property.skipValidation"></a>
+
+```csharp
+public bool SkipValidation { get; }
+```
+
+- *Type:* bool
+
+Whether to skip all validations during synthesis of the app.
+
+***
+
+### `TargetStackId`<sup>Optional</sup> <a name="TargetStackId" id="cdktn.App.property.targetStackId"></a>
+
+```csharp
+public string TargetStackId { get; }
+```
+
+- *Type:* string
+
+The stack which will be synthesized.
+
+If not set, all stacks will be synthesized.
+
+***
+

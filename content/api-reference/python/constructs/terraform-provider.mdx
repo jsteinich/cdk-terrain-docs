@@ -1,0 +1,335 @@
+---
+title: "Python: TerraformProvider"
+sidebarTitle: TerraformProvider
+description: CDKTN Core API Reference for TerraformProvider in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.TerraformProvider.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformProvider(
+  scope: Construct,
+  id: str,
+  terraform_resource_type: str,
+  terraform_generator_metadata: TerraformProviderGeneratorMetadata = None,
+  terraform_provider_source: str = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformProvider.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.Initializer.parameter.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.Initializer.parameter.terraformResourceType">terraform\_resource\_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.Initializer.parameter.terraformGeneratorMetadata">terraform\_generator\_metadata</a></code> | <code><a href="#cdktn.TerraformProviderGeneratorMetadata">TerraformProviderGeneratorMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.Initializer.parameter.terraformProviderSource">terraform\_provider\_source</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.TerraformProvider.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.TerraformProvider.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+***
+
+### `terraform_resource_type`<sup>Required</sup> <a name="terraform_resource_type" id="cdktn.TerraformProvider.Initializer.parameter.terraformResourceType"></a>
+
+- *Type:* str
+
+***
+
+### `terraform_generator_metadata`<sup>Optional</sup> <a name="terraform_generator_metadata" id="cdktn.TerraformProvider.Initializer.parameter.terraformGeneratorMetadata"></a>
+
+- *Type:* <a href="#cdktn.TerraformProviderGeneratorMetadata">TerraformProviderGeneratorMetadata</a>
+
+***
+
+### `terraform_provider_source`<sup>Optional</sup> <a name="terraform_provider_source" id="cdktn.TerraformProvider.Initializer.parameter.terraformProviderSource"></a>
+
+- *Type:* str
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformProvider.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformProvider.addOverride">add\_override</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.overrideLogicalId">override\_logical\_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.TerraformProvider.resetOverrideLogicalId">reset\_override\_logical\_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.TerraformProvider.toHclTerraform">to\_hcl\_terraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.toMetadata">to\_metadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.toTerraform">to\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.TerraformProvider.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `add_override` <a name="add_override" id="cdktn.TerraformProvider.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.TerraformProvider.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformProvider.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `override_logical_id` <a name="override_logical_id" id="cdktn.TerraformProvider.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="cdktn.TerraformProvider.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+***
+
+### `reset_override_logical_id` <a name="reset_override_logical_id" id="cdktn.TerraformProvider.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.TerraformProvider.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+### `to_metadata` <a name="to_metadata" id="cdktn.TerraformProvider.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+### `to_terraform` <a name="to_terraform" id="cdktn.TerraformProvider.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformProvider.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformProvider.isTerraformElement">is\_terraform\_element</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.isTerraformProvider">is\_terraform\_provider</a></code> | *No description.* |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.TerraformProvider.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformProvider.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformProvider.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_terraform_element` <a name="is_terraform_element" id="cdktn.TerraformProvider.isTerraformElement"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformProvider.is_terraform_element(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformProvider.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `is_terraform_provider` <a name="is_terraform_provider" id="cdktn.TerraformProvider.isTerraformProvider"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformProvider.is_terraform_provider(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformProvider.isTerraformProvider.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformProvider.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformProvider.property.cdktfStack">cdktf\_stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.property.friendlyUniqueId">friendly\_unique\_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.property.metaAttributes">meta\_attributes</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.property.terraformResourceType">terraform\_resource\_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.property.terraformGeneratorMetadata">terraform\_generator\_metadata</a></code> | <code><a href="#cdktn.TerraformProviderGeneratorMetadata">TerraformProviderGeneratorMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.property.terraformProviderSource">terraform\_provider\_source</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformProvider.property.alias">alias</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.TerraformProvider.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="cdktn.TerraformProvider.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.TerraformProvider.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+
+### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="cdktn.TerraformProvider.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+***
+
+### `meta_attributes`<sup>Required</sup> <a name="meta_attributes" id="cdktn.TerraformProvider.property.metaAttributes"></a>
+
+```python
+meta_attributes: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `terraform_resource_type`<sup>Required</sup> <a name="terraform_resource_type" id="cdktn.TerraformProvider.property.terraformResourceType"></a>
+
+```python
+terraform_resource_type: str
+```
+
+- *Type:* str
+
+***
+
+### `terraform_generator_metadata`<sup>Optional</sup> <a name="terraform_generator_metadata" id="cdktn.TerraformProvider.property.terraformGeneratorMetadata"></a>
+
+```python
+terraform_generator_metadata: TerraformProviderGeneratorMetadata
+```
+
+- *Type:* <a href="#cdktn.TerraformProviderGeneratorMetadata">TerraformProviderGeneratorMetadata</a>
+
+***
+
+### `terraform_provider_source`<sup>Optional</sup> <a name="terraform_provider_source" id="cdktn.TerraformProvider.property.terraformProviderSource"></a>
+
+```python
+terraform_provider_source: str
+```
+
+- *Type:* str
+
+***
+
+### `alias`<sup>Optional</sup> <a name="alias" id="cdktn.TerraformProvider.property.alias"></a>
+
+```python
+alias: str
+```
+
+- *Type:* str
+
+***
+

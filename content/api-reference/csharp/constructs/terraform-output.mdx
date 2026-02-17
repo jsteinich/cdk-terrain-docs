@@ -1,0 +1,313 @@
+---
+title: "CSharp: TerraformOutput"
+sidebarTitle: TerraformOutput
+description: CDKTN Core API Reference for TerraformOutput in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.TerraformOutput.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new TerraformOutput(Construct Scope, string Id, TerraformOutputConfig Config);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformOutput.Initializer.parameter.scope">Scope</a></code> | <code>Constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.Initializer.parameter.id">Id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.Initializer.parameter.config">Config</a></code> | <code><a href="#cdktn.TerraformOutputConfig">TerraformOutputConfig</a></code> | *No description.* |
+
+***
+
+### `Scope`<sup>Required</sup> <a name="Scope" id="cdktn.TerraformOutput.Initializer.parameter.scope"></a>
+
+- *Type:* Constructs.Construct
+
+***
+
+### `Id`<sup>Required</sup> <a name="Id" id="cdktn.TerraformOutput.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+***
+
+### `Config`<sup>Required</sup> <a name="Config" id="cdktn.TerraformOutput.Initializer.parameter.config"></a>
+
+- *Type:* <a href="#cdktn.TerraformOutputConfig">TerraformOutputConfig</a>
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformOutput.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformOutput.addOverride">AddOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.TerraformOutput.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.TerraformOutput.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.toMetadata">ToMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.toTerraform">ToTerraform</a></code> | *No description.* |
+
+***
+
+### `ToString` <a name="ToString" id="cdktn.TerraformOutput.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Returns a string representation of this construct.
+
+### `AddOverride` <a name="AddOverride" id="cdktn.TerraformOutput.addOverride"></a>
+
+```csharp
+private void AddOverride(string Path, object Value)
+```
+
+#### `Path`<sup>Required</sup> <a name="Path" id="cdktn.TerraformOutput.addOverride.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.TerraformOutput.addOverride.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+### `OverrideLogicalId` <a name="OverrideLogicalId" id="cdktn.TerraformOutput.overrideLogicalId"></a>
+
+```csharp
+private void OverrideLogicalId(string NewLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `NewLogicalId`<sup>Required</sup> <a name="NewLogicalId" id="cdktn.TerraformOutput.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* string
+
+The new logical ID to use for this stack element.
+
+***
+
+### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="cdktn.TerraformOutput.resetOverrideLogicalId"></a>
+
+```csharp
+private void ResetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `ToHclTerraform` <a name="ToHclTerraform" id="cdktn.TerraformOutput.toHclTerraform"></a>
+
+```csharp
+private object ToHclTerraform()
+```
+
+### `ToMetadata` <a name="ToMetadata" id="cdktn.TerraformOutput.toMetadata"></a>
+
+```csharp
+private object ToMetadata()
+```
+
+### `ToTerraform` <a name="ToTerraform" id="cdktn.TerraformOutput.toTerraform"></a>
+
+```csharp
+private object ToTerraform()
+```
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformOutput.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformOutput.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.isTerraformOutput">IsTerraformOutput</a></code> | *No description.* |
+
+***
+
+### `IsConstruct` <a name="IsConstruct" id="cdktn.TerraformOutput.isConstruct"></a>
+
+```csharp
+using Io.Cdktn;
+
+TerraformOutput.IsConstruct(object X);
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `X`<sup>Required</sup> <a name="X" id="cdktn.TerraformOutput.isConstruct.parameter.x"></a>
+
+- *Type:* object
+
+Any object.
+
+***
+
+### `IsTerraformElement` <a name="IsTerraformElement" id="cdktn.TerraformOutput.isTerraformElement"></a>
+
+```csharp
+using Io.Cdktn;
+
+TerraformOutput.IsTerraformElement(object X);
+```
+
+#### `X`<sup>Required</sup> <a name="X" id="cdktn.TerraformOutput.isTerraformElement.parameter.x"></a>
+
+- *Type:* object
+
+***
+
+### `IsTerraformOutput` <a name="IsTerraformOutput" id="cdktn.TerraformOutput.isTerraformOutput"></a>
+
+```csharp
+using Io.Cdktn;
+
+TerraformOutput.IsTerraformOutput(object X);
+```
+
+#### `X`<sup>Required</sup> <a name="X" id="cdktn.TerraformOutput.isTerraformOutput.parameter.x"></a>
+
+- *Type:* object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformOutput.property.node">Node</a></code> | <code>Constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformOutput.property.cdktfStack">CdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.property.staticId">StaticId</a></code> | <code>bool</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.property.value">Value</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.property.dependsOn">DependsOn</a></code> | <code><a href="#cdktn.ITerraformDependable">ITerraformDependable</a>\[]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.property.description">Description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.property.precondition">Precondition</a></code> | <code><a href="#cdktn.Precondition">Precondition</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutput.property.sensitive">Sensitive</a></code> | <code>bool</code> | *No description.* |
+
+***
+
+### `Node`<sup>Required</sup> <a name="Node" id="cdktn.TerraformOutput.property.node"></a>
+
+```csharp
+public Node Node { get; }
+```
+
+- *Type:* Constructs.Node
+
+The tree node.
+
+***
+
+### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="cdktn.TerraformOutput.property.cdktfStack"></a>
+
+```csharp
+public TerraformStack CdktfStack { get; }
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `Fqn`<sup>Required</sup> <a name="Fqn" id="cdktn.TerraformOutput.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+***
+
+### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="cdktn.TerraformOutput.property.friendlyUniqueId"></a>
+
+```csharp
+public string FriendlyUniqueId { get; }
+```
+
+- *Type:* string
+
+***
+
+### `StaticId`<sup>Required</sup> <a name="StaticId" id="cdktn.TerraformOutput.property.staticId"></a>
+
+```csharp
+public bool StaticId { get; }
+```
+
+- *Type:* bool
+
+***
+
+### `Value`<sup>Required</sup> <a name="Value" id="cdktn.TerraformOutput.property.value"></a>
+
+```csharp
+public object Value { get; }
+```
+
+- *Type:* object
+
+***
+
+### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="cdktn.TerraformOutput.property.dependsOn"></a>
+
+```csharp
+public ITerraformDependable[] DependsOn { get; }
+```
+
+- *Type:* <a href="#cdktn.ITerraformDependable">ITerraformDependable</a>\[]
+
+***
+
+### `Description`<sup>Optional</sup> <a name="Description" id="cdktn.TerraformOutput.property.description"></a>
+
+```csharp
+public string Description { get; }
+```
+
+- *Type:* string
+
+***
+
+### `Precondition`<sup>Optional</sup> <a name="Precondition" id="cdktn.TerraformOutput.property.precondition"></a>
+
+```csharp
+public Precondition Precondition { get; }
+```
+
+- *Type:* <a href="#cdktn.Precondition">Precondition</a>
+
+***
+
+### `Sensitive`<sup>Optional</sup> <a name="Sensitive" id="cdktn.TerraformOutput.property.sensitive"></a>
+
+```csharp
+public bool Sensitive { get; }
+```
+
+- *Type:* bool
+
+***
+

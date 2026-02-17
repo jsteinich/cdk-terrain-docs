@@ -1,0 +1,102 @@
+---
+title: "CSharp: LazyBase"
+sidebarTitle: LazyBase
+description: CDKTN Core API Reference for LazyBase in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+## Initializers <a name="Initializers" id="cdktn.LazyBase.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new LazyBase();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.LazyBase.addPostProcessor">AddPostProcessor</a></code> | *No description.* |
+| <code><a href="#cdktn.LazyBase.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#cdktn.LazyBase.toJSON">ToJSON</a></code> | Turn this Token into JSON. |
+| <code><a href="#cdktn.LazyBase.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+***
+
+### `AddPostProcessor` <a name="AddPostProcessor" id="cdktn.LazyBase.addPostProcessor"></a>
+
+```csharp
+private void AddPostProcessor(IPostProcessor PostProcessor)
+```
+
+#### `PostProcessor`<sup>Required</sup> <a name="PostProcessor" id="cdktn.LazyBase.addPostProcessor.parameter.postProcessor"></a>
+
+- *Type:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+***
+
+### `Resolve` <a name="Resolve" id="cdktn.LazyBase.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+#### `Context`<sup>Required</sup> <a name="Context" id="cdktn.LazyBase.resolve.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `ToJSON` <a name="ToJSON" id="cdktn.LazyBase.toJSON"></a>
+
+```csharp
+private object ToJSON()
+```
+
+Turn this Token into JSON.
+
+Called automatically when JSON.stringify() is called on a Token.
+
+### `ToString` <a name="ToString" id="cdktn.LazyBase.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.LazyBase.property.creationStack">CreationStack</a></code> | <code>string\[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+
+***
+
+### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="cdktn.LazyBase.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string\[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+***
+

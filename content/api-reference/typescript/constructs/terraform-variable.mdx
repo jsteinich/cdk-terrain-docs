@@ -1,0 +1,382 @@
+---
+title: "Typescript: TerraformVariable"
+sidebarTitle: TerraformVariable
+description: CDKTN Core API Reference for TerraformVariable in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.ITerraformAddressable">ITerraformAddressable</a>
+
+## Initializers <a name="Initializers" id="cdktn.TerraformVariable.Initializer"></a>
+
+```typescript
+import { TerraformVariable } from 'cdktn'
+
+new TerraformVariable(scope: Construct, id: string, config: TerraformVariableConfig)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformVariable.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.Initializer.parameter.config">config</a></code> | <code><a href="#cdktn.TerraformVariableConfig">TerraformVariableConfig</a></code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.TerraformVariable.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.TerraformVariable.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+***
+
+### `config`<sup>Required</sup> <a name="config" id="cdktn.TerraformVariable.Initializer.parameter.config"></a>
+
+- *Type:* <a href="#cdktn.TerraformVariableConfig">TerraformVariableConfig</a>
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformVariable.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformVariable.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.TerraformVariable.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.TerraformVariable.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.toTerraform">toTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.addValidation">addValidation</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.synthesizeAttributes">synthesizeAttributes</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.synthesizeHclAttributes">synthesizeHclAttributes</a></code> | *No description.* |
+
+***
+
+### `toString` <a name="toString" id="cdktn.TerraformVariable.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+### `addOverride` <a name="addOverride" id="cdktn.TerraformVariable.addOverride"></a>
+
+```typescript
+public addOverride(path: string, value: any): void
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.TerraformVariable.addOverride.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformVariable.addOverride.parameter.value"></a>
+
+- *Type:* any
+
+***
+
+### `overrideLogicalId` <a name="overrideLogicalId" id="cdktn.TerraformVariable.overrideLogicalId"></a>
+
+```typescript
+public overrideLogicalId(newLogicalId: string): void
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.TerraformVariable.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* string
+
+The new logical ID to use for this stack element.
+
+***
+
+### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktn.TerraformVariable.resetOverrideLogicalId"></a>
+
+```typescript
+public resetOverrideLogicalId(): void
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.TerraformVariable.toHclTerraform"></a>
+
+```typescript
+public toHclTerraform(): any
+```
+
+### `toMetadata` <a name="toMetadata" id="cdktn.TerraformVariable.toMetadata"></a>
+
+```typescript
+public toMetadata(): any
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.TerraformVariable.toTerraform"></a>
+
+```typescript
+public toTerraform(): any
+```
+
+### `addValidation` <a name="addValidation" id="cdktn.TerraformVariable.addValidation"></a>
+
+```typescript
+public addValidation(validation: TerraformVariableValidationConfig): void
+```
+
+#### `validation`<sup>Required</sup> <a name="validation" id="cdktn.TerraformVariable.addValidation.parameter.validation"></a>
+
+- *Type:* <a href="#cdktn.TerraformVariableValidationConfig">TerraformVariableValidationConfig</a>
+
+***
+
+### `synthesizeAttributes` <a name="synthesizeAttributes" id="cdktn.TerraformVariable.synthesizeAttributes"></a>
+
+```typescript
+public synthesizeAttributes(): {[ key: string ]: any}
+```
+
+### `synthesizeHclAttributes` <a name="synthesizeHclAttributes" id="cdktn.TerraformVariable.synthesizeHclAttributes"></a>
+
+```typescript
+public synthesizeHclAttributes(): {[ key: string ]: any}
+```
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformVariable.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformVariable.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.TerraformVariable.isConstruct"></a>
+
+```typescript
+import { TerraformVariable } from 'cdktn'
+
+TerraformVariable.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformVariable.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+***
+
+### `isTerraformElement` <a name="isTerraformElement" id="cdktn.TerraformVariable.isTerraformElement"></a>
+
+```typescript
+import { TerraformVariable } from 'cdktn'
+
+TerraformVariable.isTerraformElement(x: any)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformVariable.isTerraformElement.parameter.x"></a>
+
+- *Type:* any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformVariable.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformVariable.property.cdktfStack">cdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.booleanValue">booleanValue</a></code> | <code><a href="#cdktn.IResolvable">IResolvable</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.listValue">listValue</a></code> | <code>string\[]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.numberValue">numberValue</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.stringValue">stringValue</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.value">value</a></code> | <code>any</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.default">default</a></code> | <code>any</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.description">description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.nullable">nullable</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.sensitive">sensitive</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformVariable.property.validation">validation</a></code> | <code><a href="#cdktn.TerraformVariableValidationConfig">TerraformVariableValidationConfig</a>\[]</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.TerraformVariable.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktn.TerraformVariable.property.cdktfStack"></a>
+
+```typescript
+public readonly cdktfStack: TerraformStack;
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.TerraformVariable.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.TerraformVariable.property.friendlyUniqueId"></a>
+
+```typescript
+public readonly friendlyUniqueId: string;
+```
+
+- *Type:* string
+
+***
+
+### `booleanValue`<sup>Required</sup> <a name="booleanValue" id="cdktn.TerraformVariable.property.booleanValue"></a>
+
+```typescript
+public readonly booleanValue: IResolvable;
+```
+
+- *Type:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+***
+
+### `listValue`<sup>Required</sup> <a name="listValue" id="cdktn.TerraformVariable.property.listValue"></a>
+
+```typescript
+public readonly listValue: string[];
+```
+
+- *Type:* string\[]
+
+***
+
+### `numberValue`<sup>Required</sup> <a name="numberValue" id="cdktn.TerraformVariable.property.numberValue"></a>
+
+```typescript
+public readonly numberValue: number;
+```
+
+- *Type:* number
+
+***
+
+### `stringValue`<sup>Required</sup> <a name="stringValue" id="cdktn.TerraformVariable.property.stringValue"></a>
+
+```typescript
+public readonly stringValue: string;
+```
+
+- *Type:* string
+
+***
+
+### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformVariable.property.value"></a>
+
+```typescript
+public readonly value: any;
+```
+
+- *Type:* any
+
+***
+
+### `default`<sup>Optional</sup> <a name="default" id="cdktn.TerraformVariable.property.default"></a>
+
+```typescript
+public readonly default: any;
+```
+
+- *Type:* any
+
+***
+
+### `description`<sup>Optional</sup> <a name="description" id="cdktn.TerraformVariable.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+***
+
+### `nullable`<sup>Optional</sup> <a name="nullable" id="cdktn.TerraformVariable.property.nullable"></a>
+
+```typescript
+public readonly nullable: boolean;
+```
+
+- *Type:* boolean
+
+***
+
+### `sensitive`<sup>Optional</sup> <a name="sensitive" id="cdktn.TerraformVariable.property.sensitive"></a>
+
+```typescript
+public readonly sensitive: boolean;
+```
+
+- *Type:* boolean
+
+***
+
+### `type`<sup>Optional</sup> <a name="type" id="cdktn.TerraformVariable.property.type"></a>
+
+```typescript
+public readonly type: string;
+```
+
+- *Type:* string
+
+***
+
+### `validation`<sup>Optional</sup> <a name="validation" id="cdktn.TerraformVariable.property.validation"></a>
+
+```typescript
+public readonly validation: TerraformVariableValidationConfig[];
+```
+
+- *Type:* <a href="#cdktn.TerraformVariableValidationConfig">TerraformVariableValidationConfig</a>\[]
+
+***
+

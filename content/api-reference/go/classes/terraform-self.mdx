@@ -1,0 +1,91 @@
+---
+title: "Go: TerraformSelf"
+sidebarTitle: TerraformSelf
+description: CDKTN Core API Reference for TerraformSelf in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Expressions in connection blocks cannot refer to their parent resource by name.
+
+References create dependencies, and referring to a resource by name within its own block would create a dependency cycle.
+Instead, expressions can use the self object, which represents the connection's parent resource and has all of that resource's attributes.
+For example, use self.public\_ip to reference an aws\_instance's public\_ip attribute.
+
+## Initializers <a name="Initializers" id="cdktn.TerraformSelf.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewTerraformSelf() TerraformSelf
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformSelf.getAny">GetAny</a></code> | Only usable within a connection block to reference the connections parent resource. |
+| <code><a href="#cdktn.TerraformSelf.getNumber">GetNumber</a></code> | Only usable within a connection block to reference the connections parent resource. |
+| <code><a href="#cdktn.TerraformSelf.getString">GetString</a></code> | Only usable within a connection block to reference the connections parent resource. |
+
+***
+
+### `GetAny` <a name="GetAny" id="cdktn.TerraformSelf.getAny"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.TerraformSelf_GetAny(key *string) interface{}
+```
+
+Only usable within a connection block to reference the connections parent resource.
+
+Access a property on the resource like this: `getAny("hostPort")`
+
+#### `key`<sup>Required</sup> <a name="key" id="cdktn.TerraformSelf.getAny.parameter.key"></a>
+
+- *Type:* \*string
+
+***
+
+### `GetNumber` <a name="GetNumber" id="cdktn.TerraformSelf.getNumber"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.TerraformSelf_GetNumber(key *string) *f64
+```
+
+Only usable within a connection block to reference the connections parent resource.
+
+Access a property on the resource like this: `getNumber("hostPort")`
+
+#### `key`<sup>Required</sup> <a name="key" id="cdktn.TerraformSelf.getNumber.parameter.key"></a>
+
+- *Type:* \*string
+
+***
+
+### `GetString` <a name="GetString" id="cdktn.TerraformSelf.getString"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.TerraformSelf_GetString(key *string) *string
+```
+
+Only usable within a connection block to reference the connections parent resource.
+
+Access a property on the resource like this: `getString("publicIp")`
+
+#### `key`<sup>Required</sup> <a name="key" id="cdktn.TerraformSelf.getString.parameter.key"></a>
+
+- *Type:* \*string
+
+***
+

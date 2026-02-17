@@ -1,0 +1,333 @@
+---
+title: "Java: TerraformLocal"
+sidebarTitle: TerraformLocal
+description: CDKTN Core API Reference for TerraformLocal in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.ITerraformAddressable">ITerraformAddressable</a>
+
+## Initializers <a name="Initializers" id="cdktn.TerraformLocal.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.TerraformLocal;
+
+new TerraformLocal(Construct scope, java.lang.String id, java.lang.Object expression);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformLocal.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.Initializer.parameter.expression">expression</a></code> | <code>java.lang.Object</code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.TerraformLocal.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.TerraformLocal.Initializer.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `expression`<sup>Required</sup> <a name="expression" id="cdktn.TerraformLocal.Initializer.parameter.expression"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformLocal.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformLocal.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.TerraformLocal.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.TerraformLocal.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.toTerraform">toTerraform</a></code> | *No description.* |
+
+***
+
+### `toString` <a name="toString" id="cdktn.TerraformLocal.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `addOverride` <a name="addOverride" id="cdktn.TerraformLocal.addOverride"></a>
+
+```java
+public void addOverride(java.lang.String path, java.lang.Object value)
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.TerraformLocal.addOverride.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformLocal.addOverride.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `overrideLogicalId` <a name="overrideLogicalId" id="cdktn.TerraformLocal.overrideLogicalId"></a>
+
+```java
+public void overrideLogicalId(java.lang.String newLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.TerraformLocal.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* java.lang.String
+
+The new logical ID to use for this stack element.
+
+***
+
+### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktn.TerraformLocal.resetOverrideLogicalId"></a>
+
+```java
+public void resetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.TerraformLocal.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+### `toMetadata` <a name="toMetadata" id="cdktn.TerraformLocal.toMetadata"></a>
+
+```java
+public java.lang.Object toMetadata()
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.TerraformLocal.toTerraform"></a>
+
+```java
+public java.lang.Object toTerraform()
+```
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformLocal.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformLocal.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.TerraformLocal.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.TerraformLocal;
+
+TerraformLocal.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformLocal.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isTerraformElement` <a name="isTerraformElement" id="cdktn.TerraformLocal.isTerraformElement"></a>
+
+```java
+import io.cdktn.cdktn.TerraformLocal;
+
+TerraformLocal.isTerraformElement(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformLocal.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformLocal.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformLocal.property.cdktfStack">cdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asAnyMap">asAnyMap</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asBoolean">asBoolean</a></code> | <code><a href="#cdktn.IResolvable">IResolvable</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asBooleanMap">asBooleanMap</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Boolean ></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asList">asList</a></code> | <code>java.util.List&lt; java.lang.String ></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asNumber">asNumber</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asNumberMap">asNumberMap</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Number ></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asString">asString</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.asStringMap">asStringMap</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.String ></code> | *No description.* |
+| <code><a href="#cdktn.TerraformLocal.property.expression">expression</a></code> | <code>java.lang.Object</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.TerraformLocal.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktn.TerraformLocal.property.cdktfStack"></a>
+
+```java
+public TerraformStack getCdktfStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.TerraformLocal.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.TerraformLocal.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `asAnyMap`<sup>Required</sup> <a name="asAnyMap" id="cdktn.TerraformLocal.property.asAnyMap"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAsAnyMap();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+### `asBoolean`<sup>Required</sup> <a name="asBoolean" id="cdktn.TerraformLocal.property.asBoolean"></a>
+
+```java
+public IResolvable getAsBoolean();
+```
+
+- *Type:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+***
+
+### `asBooleanMap`<sup>Required</sup> <a name="asBooleanMap" id="cdktn.TerraformLocal.property.asBooleanMap"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getAsBooleanMap();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Boolean >
+
+***
+
+### `asList`<sup>Required</sup> <a name="asList" id="cdktn.TerraformLocal.property.asList"></a>
+
+```java
+public java.util.List<java.lang.String> getAsList();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+***
+
+### `asNumber`<sup>Required</sup> <a name="asNumber" id="cdktn.TerraformLocal.property.asNumber"></a>
+
+```java
+public java.lang.Number getAsNumber();
+```
+
+- *Type:* java.lang.Number
+
+***
+
+### `asNumberMap`<sup>Required</sup> <a name="asNumberMap" id="cdktn.TerraformLocal.property.asNumberMap"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getAsNumberMap();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Number >
+
+***
+
+### `asString`<sup>Required</sup> <a name="asString" id="cdktn.TerraformLocal.property.asString"></a>
+
+```java
+public java.lang.String getAsString();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `asStringMap`<sup>Required</sup> <a name="asStringMap" id="cdktn.TerraformLocal.property.asStringMap"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getAsStringMap();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.String >
+
+***
+
+### `expression`<sup>Required</sup> <a name="expression" id="cdktn.TerraformLocal.property.expression"></a>
+
+```java
+public java.lang.Object getExpression();
+```
+
+- *Type:* java.lang.Object
+
+***
+

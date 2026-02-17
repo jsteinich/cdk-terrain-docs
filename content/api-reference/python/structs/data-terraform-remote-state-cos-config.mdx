@@ -1,0 +1,257 @@
+---
+title: "Python: DataTerraformRemoteStateCosConfig"
+sidebarTitle: DataTerraformRemoteStateCosConfig
+description: CDKTN Core API Reference for DataTerraformRemoteStateCosConfig in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.DataTerraformRemoteStateCosConfig.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateCosConfig(
+  defaults: typing.Mapping[typing.Any] = None,
+  workspace: str = None,
+  bucket: str,
+  accelerate: bool = None,
+  acl: str = None,
+  assume_role: CosBackendAssumeRole = None,
+  domain: str = None,
+  encrypt: bool = None,
+  endpoint: str = None,
+  key: str = None,
+  prefix: str = None,
+  region: str = None,
+  secret_id: str = None,
+  secret_key: str = None,
+  security_token: str = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.defaults">defaults</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.workspace">workspace</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.bucket">bucket</a></code> | <code>str</code> | (Required) The name of the COS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.accelerate">accelerate</a></code> | <code>bool</code> | (Optional) Whether to enable global Acceleration. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.acl">acl</a></code> | <code>str</code> | (Optional) Object ACL to be applied to the state file, allows private and public-read. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.assumeRole">assume\_role</a></code> | <code><a href="#cdktn.CosBackendAssumeRole">CosBackendAssumeRole</a></code> | (Optional) The assume\_role block. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.domain">domain</a></code> | <code>str</code> | (Optional) The root domain of the API request. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.encrypt">encrypt</a></code> | <code>bool</code> | (Optional) Whether to enable server side encryption of the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.endpoint">endpoint</a></code> | <code>str</code> | (Optional) The Custom Endpoint for the COS backend. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.key">key</a></code> | <code>str</code> | (Optional) The path for saving the state file in bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.prefix">prefix</a></code> | <code>str</code> | (Optional) The directory for saving the state file in bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.region">region</a></code> | <code>str</code> | (Optional) The region of the COS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.secretId">secret\_id</a></code> | <code>str</code> | (Optional) Secret id of Tencent Cloud. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.secretKey">secret\_key</a></code> | <code>str</code> | (Optional) Secret key of Tencent Cloud. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCosConfig.property.securityToken">security\_token</a></code> | <code>str</code> | (Optional) TencentCloud Security Token of temporary access credentials. |
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateCosConfig.property.defaults"></a>
+
+```python
+defaults: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateCosConfig.property.workspace"></a>
+
+```python
+workspace: str
+```
+
+- *Type:* str
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.DataTerraformRemoteStateCosConfig.property.bucket"></a>
+
+```python
+bucket: str
+```
+
+- *Type:* str
+
+(Required) The name of the COS bucket.
+
+You shall manually create it first.
+
+***
+
+### `accelerate`<sup>Optional</sup> <a name="accelerate" id="cdktn.DataTerraformRemoteStateCosConfig.property.accelerate"></a>
+
+```python
+accelerate: bool
+```
+
+- *Type:* bool
+
+(Optional) Whether to enable global Acceleration.
+
+Defaults to false.
+
+***
+
+### `acl`<sup>Optional</sup> <a name="acl" id="cdktn.DataTerraformRemoteStateCosConfig.property.acl"></a>
+
+```python
+acl: str
+```
+
+- *Type:* str
+
+(Optional) Object ACL to be applied to the state file, allows private and public-read.
+
+Defaults to private.
+
+***
+
+### `assume_role`<sup>Optional</sup> <a name="assume_role" id="cdktn.DataTerraformRemoteStateCosConfig.property.assumeRole"></a>
+
+```python
+assume_role: CosBackendAssumeRole
+```
+
+- *Type:* <a href="#cdktn.CosBackendAssumeRole">CosBackendAssumeRole</a>
+
+(Optional) The assume\_role block.
+
+If provided, terraform will attempt to assume this role using the supplied credentials.
+
+***
+
+### `domain`<sup>Optional</sup> <a name="domain" id="cdktn.DataTerraformRemoteStateCosConfig.property.domain"></a>
+
+```python
+domain: str
+```
+
+- *Type:* str
+
+(Optional) The root domain of the API request.
+
+Defaults to tencentcloudapi.com.
+It supports the environment variable TENCENTCLOUD\_DOMAIN.
+
+***
+
+### `encrypt`<sup>Optional</sup> <a name="encrypt" id="cdktn.DataTerraformRemoteStateCosConfig.property.encrypt"></a>
+
+```python
+encrypt: bool
+```
+
+- *Type:* bool
+
+(Optional) Whether to enable server side encryption of the state file.
+
+If it is true, COS will use 'AES256' encryption algorithm to encrypt state file.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.DataTerraformRemoteStateCosConfig.property.endpoint"></a>
+
+```python
+endpoint: str
+```
+
+- *Type:* str
+
+(Optional) The Custom Endpoint for the COS backend.
+
+It supports the environment variable TENCENTCLOUD\_ENDPOINT.
+
+***
+
+### `key`<sup>Optional</sup> <a name="key" id="cdktn.DataTerraformRemoteStateCosConfig.property.key"></a>
+
+```python
+key: str
+```
+
+- *Type:* str
+
+(Optional) The path for saving the state file in bucket.
+
+Defaults to terraform.tfstate.
+
+***
+
+### `prefix`<sup>Optional</sup> <a name="prefix" id="cdktn.DataTerraformRemoteStateCosConfig.property.prefix"></a>
+
+```python
+prefix: str
+```
+
+- *Type:* str
+
+(Optional) The directory for saving the state file in bucket.
+
+Default to "env:".
+
+***
+
+### `region`<sup>Optional</sup> <a name="region" id="cdktn.DataTerraformRemoteStateCosConfig.property.region"></a>
+
+```python
+region: str
+```
+
+- *Type:* str
+
+(Optional) The region of the COS bucket.
+
+It supports environment variables TENCENTCLOUD\_REGION.
+
+***
+
+### `secret_id`<sup>Optional</sup> <a name="secret_id" id="cdktn.DataTerraformRemoteStateCosConfig.property.secretId"></a>
+
+```python
+secret_id: str
+```
+
+- *Type:* str
+
+(Optional) Secret id of Tencent Cloud.
+
+It supports environment variables TENCENTCLOUD\_SECRET\_ID.
+
+***
+
+### `secret_key`<sup>Optional</sup> <a name="secret_key" id="cdktn.DataTerraformRemoteStateCosConfig.property.secretKey"></a>
+
+```python
+secret_key: str
+```
+
+- *Type:* str
+
+(Optional) Secret key of Tencent Cloud.
+
+It supports environment variables TENCENTCLOUD\_SECRET\_KEY.
+
+***
+
+### `security_token`<sup>Optional</sup> <a name="security_token" id="cdktn.DataTerraformRemoteStateCosConfig.property.securityToken"></a>
+
+```python
+security_token: str
+```
+
+- *Type:* str
+
+(Optional) TencentCloud Security Token of temporary access credentials.
+
+It supports environment variables TENCENTCLOUD\_SECURITY\_TOKEN.
+
+***
+

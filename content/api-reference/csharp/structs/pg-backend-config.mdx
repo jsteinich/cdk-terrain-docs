@@ -1,0 +1,108 @@
+---
+title: "CSharp: PgBackendConfig"
+sidebarTitle: PgBackendConfig
+description: CDKTN Core API Reference for PgBackendConfig in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.PgBackendConfig.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new PgBackendConfig {
+    string ConnStr,
+    string SchemaName = null,
+    bool SkipIndexCreation = null,
+    bool SkipSchemaCreation = null,
+    bool SkipTableCreation = null
+};
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.PgBackendConfig.property.connStr">ConnStr</a></code> | <code>string</code> | Postgres connection string; |
+| <code><a href="#cdktn.PgBackendConfig.property.schemaName">SchemaName</a></code> | <code>string</code> | Name of the automatically-managed Postgres schema, default to terraform\_remote\_state. |
+| <code><a href="#cdktn.PgBackendConfig.property.skipIndexCreation">SkipIndexCreation</a></code> | <code>bool</code> | If set to true, the Postgres index must already exist. |
+| <code><a href="#cdktn.PgBackendConfig.property.skipSchemaCreation">SkipSchemaCreation</a></code> | <code>bool</code> | If set to true, the Postgres schema must already exist. |
+| <code><a href="#cdktn.PgBackendConfig.property.skipTableCreation">SkipTableCreation</a></code> | <code>bool</code> | If set to true, the Postgres table must already exist. |
+
+***
+
+### `ConnStr`<sup>Required</sup> <a name="ConnStr" id="cdktn.PgBackendConfig.property.connStr"></a>
+
+```csharp
+public string ConnStr { get; set; }
+```
+
+- *Type:* string
+
+Postgres connection string;
+
+a postgres:// URL.
+The PG\_CONN\_STR and standard libpq environment variables can also be used to indicate how to connect to the PostgreSQL database.
+
+***
+
+### `SchemaName`<sup>Optional</sup> <a name="SchemaName" id="cdktn.PgBackendConfig.property.schemaName"></a>
+
+```csharp
+public string SchemaName { get; set; }
+```
+
+- *Type:* string
+
+Name of the automatically-managed Postgres schema, default to terraform\_remote\_state.
+
+Can also be set using the PG\_SCHEMA\_NAME environment variable.
+
+***
+
+### `SkipIndexCreation`<sup>Optional</sup> <a name="SkipIndexCreation" id="cdktn.PgBackendConfig.property.skipIndexCreation"></a>
+
+```csharp
+public bool SkipIndexCreation { get; set; }
+```
+
+- *Type:* bool
+
+If set to true, the Postgres index must already exist.
+
+Can also be set using the PG\_SKIP\_INDEX\_CREATION environment variable.
+Terraform won't try to create the index, this is useful when it has already been created by a database administrator.
+
+***
+
+### `SkipSchemaCreation`<sup>Optional</sup> <a name="SkipSchemaCreation" id="cdktn.PgBackendConfig.property.skipSchemaCreation"></a>
+
+```csharp
+public bool SkipSchemaCreation { get; set; }
+```
+
+- *Type:* bool
+
+If set to true, the Postgres schema must already exist.
+
+Can also be set using the PG\_SKIP\_SCHEMA\_CREATION environment variable.
+Terraform won't try to create the schema, this is useful when it has already been created by a database administrator.
+
+***
+
+### `SkipTableCreation`<sup>Optional</sup> <a name="SkipTableCreation" id="cdktn.PgBackendConfig.property.skipTableCreation"></a>
+
+```csharp
+public bool SkipTableCreation { get; set; }
+```
+
+- *Type:* bool
+
+If set to true, the Postgres table must already exist.
+
+Can also be set using the PG\_SKIP\_TABLE\_CREATION environment variable.
+Terraform won't try to create the table, this is useful when it has already been created by a database administrator.
+
+***
+

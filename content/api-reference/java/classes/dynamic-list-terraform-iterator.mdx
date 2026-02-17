@@ -1,0 +1,498 @@
+---
+title: "Java: DynamicListTerraformIterator"
+sidebarTitle: DynamicListTerraformIterator
+description: CDKTN Core API Reference for DynamicListTerraformIterator in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.DynamicListTerraformIterator.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.DynamicListTerraformIterator;
+
+new DynamicListTerraformIterator(java.util.List<java.lang.String>|IResolvable|java.util.List<java.lang.Number>|java.util.List<java.lang.Boolean|IResolvable> list, java.lang.String mapKeyAttributeName);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DynamicListTerraformIterator.Initializer.parameter.list">list</a></code> | <code>java.util.List&lt; java.lang.String >&#124;<a href="#cdktn.IResolvable">IResolvable</a>&#124;java.util.List&lt; java.lang.Number >&#124;java.util.List\<java.lang.Boolean&#124;<a href="#cdktn.IResolvable">IResolvable</a>></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.Initializer.parameter.mapKeyAttributeName">mapKeyAttributeName</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `list`<sup>Required</sup> <a name="list" id="cdktn.DynamicListTerraformIterator.Initializer.parameter.list"></a>
+
+- *Type:* java.util.List&lt; java.lang.String >|<a href="#cdktn.IResolvable">IResolvable</a>|java.util.List&lt; java.lang.Number >|java.util.List\<java.lang.Boolean|<a href="#cdktn.IResolvable">IResolvable</a>>
+
+***
+
+### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="cdktn.DynamicListTerraformIterator.Initializer.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DynamicListTerraformIterator.dynamic">dynamic</a></code> | Creates a dynamic expression that can be used to loop over this iterator in a dynamic block. |
+| <code><a href="#cdktn.DynamicListTerraformIterator.forExpressionForList">forExpressionForList</a></code> | Creates a for expression that results in a list. |
+| <code><a href="#cdktn.DynamicListTerraformIterator.forExpressionForMap">forExpressionForMap</a></code> | Creates a for expression that results in a map. |
+| <code><a href="#cdktn.DynamicListTerraformIterator.getAny">getAny</a></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.getAnyMap">getAnyMap</a></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.getBoolean">getBoolean</a></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.getBooleanMap">getBooleanMap</a></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.getList">getList</a></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.getMap">getMap</a></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.getNumber">getNumber</a></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.getNumberList">getNumberList</a></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.getNumberMap">getNumberMap</a></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.getString">getString</a></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.getStringMap">getStringMap</a></code> | *No description.* |
+| <code><a href="#cdktn.DynamicListTerraformIterator.keys">keys</a></code> | Creates a for expression that maps the iterators to its keys. |
+| <code><a href="#cdktn.DynamicListTerraformIterator.pluckProperty">pluckProperty</a></code> | Creates a for expression that accesses the key on each element of the iterator. |
+| <code><a href="#cdktn.DynamicListTerraformIterator.values">values</a></code> | Creates a for expression that maps the iterators to its value in case it is a map. |
+
+***
+
+### `dynamic` <a name="dynamic" id="cdktn.DynamicListTerraformIterator.dynamic"></a>
+
+```java
+public IResolvable dynamic(java.util.Map<java.lang.String, java.lang.Object> attributes)
+```
+
+Creates a dynamic expression that can be used to loop over this iterator in a dynamic block.
+
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+See https://developer.hashicorp.com/terraform/cdktf/concepts/iterators#using-iterators-for-list-attributes
+
+#### `attributes`<sup>Required</sup> <a name="attributes" id="cdktn.DynamicListTerraformIterator.dynamic.parameter.attributes"></a>
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+### `forExpressionForList` <a name="forExpressionForList" id="cdktn.DynamicListTerraformIterator.forExpressionForList"></a>
+
+```java
+public IResolvable forExpressionForList(java.lang.String|IResolvable expression)
+```
+
+Creates a for expression that results in a list.
+
+This method allows you to create every possible for expression, but requires more knowledge about
+Terraform's for expression syntax.
+For the most common use cases you can use keys(), values(), and pluckProperty() instead.
+
+You may write any valid Terraform for each expression, e.g.
+`TerraformIterator.fromList(myIteratorSourceVar).forExpressionForList("val.foo if val.bar == true")`
+will result in `[ for key, val in var.myIteratorSource: val.foo if val.bar == true ]`.
+
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+
+#### `expression`<sup>Required</sup> <a name="expression" id="cdktn.DynamicListTerraformIterator.forExpressionForList.parameter.expression"></a>
+
+- *Type:* java.lang.String|<a href="#cdktn.IResolvable">IResolvable</a>
+
+The expression to use in the for mapping.
+
+***
+
+### `forExpressionForMap` <a name="forExpressionForMap" id="cdktn.DynamicListTerraformIterator.forExpressionForMap"></a>
+
+```java
+public IResolvable forExpressionForMap(java.lang.String|IResolvable keyExpression, java.lang.String|IResolvable valueExpression)
+```
+
+Creates a for expression that results in a map.
+
+This method allows you to create every possible for expression, but requires more knowledge about
+Terraforms for expression syntax.
+For the most common use cases you can use keys(), values(), and pluckProperty instead.
+
+You may write any valid Terraform for each expression, e.g.
+`TerraformIterator.fromMap(myIteratorSourceVar).forExpressionForMap("key", "val.foo if val.bar == true")`
+will result in `\{ for key, val in var.myIteratorSource: key => val.foo if val.bar == true }`.
+
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+
+#### `keyExpression`<sup>Required</sup> <a name="keyExpression" id="cdktn.DynamicListTerraformIterator.forExpressionForMap.parameter.keyExpression"></a>
+
+- *Type:* java.lang.String|<a href="#cdktn.IResolvable">IResolvable</a>
+
+The expression to use as key in the for mapping.
+
+***
+
+#### `valueExpression`<sup>Required</sup> <a name="valueExpression" id="cdktn.DynamicListTerraformIterator.forExpressionForMap.parameter.valueExpression"></a>
+
+- *Type:* java.lang.String|<a href="#cdktn.IResolvable">IResolvable</a>
+
+The expression to use as value in the for mapping.
+
+***
+
+### `getAny` <a name="getAny" id="cdktn.DynamicListTerraformIterator.getAny"></a>
+
+```java
+public IResolvable getAny(java.lang.String attribute)
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.DynamicListTerraformIterator.getAny.parameter.attribute"></a>
+
+- *Type:* java.lang.String
+
+name of the property to retrieve.
+
+***
+
+### `getAnyMap` <a name="getAnyMap" id="cdktn.DynamicListTerraformIterator.getAnyMap"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMap(java.lang.String attribute)
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.DynamicListTerraformIterator.getAnyMap.parameter.attribute"></a>
+
+- *Type:* java.lang.String
+
+name of the property to retrieve.
+
+***
+
+### `getBoolean` <a name="getBoolean" id="cdktn.DynamicListTerraformIterator.getBoolean"></a>
+
+```java
+public IResolvable getBoolean(java.lang.String attribute)
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.DynamicListTerraformIterator.getBoolean.parameter.attribute"></a>
+
+- *Type:* java.lang.String
+
+name of the property to retrieve.
+
+***
+
+### `getBooleanMap` <a name="getBooleanMap" id="cdktn.DynamicListTerraformIterator.getBooleanMap"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMap(java.lang.String attribute)
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.DynamicListTerraformIterator.getBooleanMap.parameter.attribute"></a>
+
+- *Type:* java.lang.String
+
+name of the property to retrieve.
+
+***
+
+### `getList` <a name="getList" id="cdktn.DynamicListTerraformIterator.getList"></a>
+
+```java
+public java.util.List<java.lang.String> getList(java.lang.String attribute)
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.DynamicListTerraformIterator.getList.parameter.attribute"></a>
+
+- *Type:* java.lang.String
+
+name of the property to retrieve.
+
+***
+
+### `getMap` <a name="getMap" id="cdktn.DynamicListTerraformIterator.getMap"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getMap(java.lang.String attribute)
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.DynamicListTerraformIterator.getMap.parameter.attribute"></a>
+
+- *Type:* java.lang.String
+
+name of the property to retrieve.
+
+***
+
+### `getNumber` <a name="getNumber" id="cdktn.DynamicListTerraformIterator.getNumber"></a>
+
+```java
+public java.lang.Number getNumber(java.lang.String attribute)
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.DynamicListTerraformIterator.getNumber.parameter.attribute"></a>
+
+- *Type:* java.lang.String
+
+name of the property to retrieve.
+
+***
+
+### `getNumberList` <a name="getNumberList" id="cdktn.DynamicListTerraformIterator.getNumberList"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberList(java.lang.String attribute)
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.DynamicListTerraformIterator.getNumberList.parameter.attribute"></a>
+
+- *Type:* java.lang.String
+
+name of the property to retrieve.
+
+***
+
+### `getNumberMap` <a name="getNumberMap" id="cdktn.DynamicListTerraformIterator.getNumberMap"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMap(java.lang.String attribute)
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.DynamicListTerraformIterator.getNumberMap.parameter.attribute"></a>
+
+- *Type:* java.lang.String
+
+name of the property to retrieve.
+
+***
+
+### `getString` <a name="getString" id="cdktn.DynamicListTerraformIterator.getString"></a>
+
+```java
+public java.lang.String getString(java.lang.String attribute)
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.DynamicListTerraformIterator.getString.parameter.attribute"></a>
+
+- *Type:* java.lang.String
+
+name of the property to retrieve.
+
+***
+
+### `getStringMap` <a name="getStringMap" id="cdktn.DynamicListTerraformIterator.getStringMap"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMap(java.lang.String attribute)
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.DynamicListTerraformIterator.getStringMap.parameter.attribute"></a>
+
+- *Type:* java.lang.String
+
+name of the property to retrieve.
+
+***
+
+### `keys` <a name="keys" id="cdktn.DynamicListTerraformIterator.keys"></a>
+
+```java
+public IResolvable keys()
+```
+
+Creates a for expression that maps the iterators to its keys.
+
+For lists these would be the indices, for maps the keys.
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+
+### `pluckProperty` <a name="pluckProperty" id="cdktn.DynamicListTerraformIterator.pluckProperty"></a>
+
+```java
+public IResolvable pluckProperty(java.lang.String property)
+```
+
+Creates a for expression that accesses the key on each element of the iterator.
+
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+
+#### `property`<sup>Required</sup> <a name="property" id="cdktn.DynamicListTerraformIterator.pluckProperty.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+The property of the iterators values to map to.
+
+***
+
+### `values` <a name="values" id="cdktn.DynamicListTerraformIterator.values"></a>
+
+```java
+public IResolvable values()
+```
+
+Creates a for expression that maps the iterators to its value in case it is a map.
+
+For lists these would stay the same.
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DynamicListTerraformIterator.fromComplexList">fromComplexList</a></code> | Creates a new iterator from a complex list. |
+| <code><a href="#cdktn.DynamicListTerraformIterator.fromDataSources">fromDataSources</a></code> | Creates a new iterator from a data source that has been created with the `for_each` argument. |
+| <code><a href="#cdktn.DynamicListTerraformIterator.fromList">fromList</a></code> | Creates a new iterator from a list. |
+| <code><a href="#cdktn.DynamicListTerraformIterator.fromMap">fromMap</a></code> | Creates a new iterator from a map. |
+| <code><a href="#cdktn.DynamicListTerraformIterator.fromResources">fromResources</a></code> | Creates a new iterator from a resource that has been created with the `for_each` argument. |
+
+***
+
+### `fromComplexList` <a name="fromComplexList" id="cdktn.DynamicListTerraformIterator.fromComplexList"></a>
+
+```java
+import io.cdktn.cdktn.DynamicListTerraformIterator;
+
+DynamicListTerraformIterator.fromComplexList(IResolvable|ComplexList|StringMapList|NumberMapList|BooleanMapList|AnyMapList list, java.lang.String mapKeyAttributeName)
+```
+
+Creates a new iterator from a complex list.
+
+One example for this would be a list of maps.
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+*Example*
+
+```java
+// Example automatically generated from non-compiling source. May contain errors.
+Object cert = AcmCertificate.Builder.create(this, "cert")
+        .domainName("example.com")
+        .validationMethod("DNS")
+        .build();
+
+Object dvoIterator = TerraformIterator.fromComplexList(cert.getDomainValidationOptions(), "domain_name");
+
+Route53Record.Builder.create(this, "record")
+        .allowOverwrite(true)
+        .name(dvoIterator.getString("name"))
+        .records(List.of(dvoIterator.getString("record")))
+        .ttl(60)
+        .type(dvoIterator.getString("type"))
+        .zoneId(Token.asString(dataAwsRoute53ZoneExample.getZoneId()))
+        .forEach(dvoIterator)
+        .build();
+```
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.DynamicListTerraformIterator.fromComplexList.parameter.list"></a>
+
+- *Type:* <a href="#cdktn.IResolvable">IResolvable</a>|<a href="#cdktn.ComplexList">ComplexList</a>|<a href="#cdktn.StringMapList">StringMapList</a>|<a href="#cdktn.NumberMapList">NumberMapList</a>|<a href="#cdktn.BooleanMapList">BooleanMapList</a>|<a href="#cdktn.AnyMapList">AnyMapList</a>
+
+the list to iterate over.
+
+***
+
+#### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="cdktn.DynamicListTerraformIterator.fromComplexList.parameter.mapKeyAttributeName"></a>
+
+- *Type:* java.lang.String
+
+the name of the attribute that should be used as the key in the map.
+
+Visit https://developer.hashicorp.com/terraform/cdktf/concepts/iterators#using-iterators-on-complex-lists for more information.
+
+***
+
+### `fromDataSources` <a name="fromDataSources" id="cdktn.DynamicListTerraformIterator.fromDataSources"></a>
+
+```java
+import io.cdktn.cdktn.DynamicListTerraformIterator;
+
+DynamicListTerraformIterator.fromDataSources(ITerraformResource resource)
+```
+
+Creates a new iterator from a data source that has been created with the `for_each` argument.
+
+#### `resource`<sup>Required</sup> <a name="resource" id="cdktn.DynamicListTerraformIterator.fromDataSources.parameter.resource"></a>
+
+- *Type:* <a href="#cdktn.ITerraformResource">ITerraformResource</a>
+
+***
+
+### `fromList` <a name="fromList" id="cdktn.DynamicListTerraformIterator.fromList"></a>
+
+```java
+import io.cdktn.cdktn.DynamicListTerraformIterator;
+
+DynamicListTerraformIterator.fromList(java.util.List<java.lang.String>|IResolvable|java.util.List<java.lang.Number>|java.util.List<java.lang.Boolean|IResolvable> list)
+```
+
+Creates a new iterator from a list.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.DynamicListTerraformIterator.fromList.parameter.list"></a>
+
+- *Type:* java.util.List&lt; java.lang.String >|<a href="#cdktn.IResolvable">IResolvable</a>|java.util.List&lt; java.lang.Number >|java.util.List\<java.lang.Boolean|<a href="#cdktn.IResolvable">IResolvable</a>>
+
+***
+
+### `fromMap` <a name="fromMap" id="cdktn.DynamicListTerraformIterator.fromMap"></a>
+
+```java
+import io.cdktn.cdktn.DynamicListTerraformIterator;
+
+DynamicListTerraformIterator.fromMap(ComplexMap|java.util.Map<java.lang.String, java.lang.Object>|java.util.Map<java.lang.String, java.lang.String>|java.util.Map<java.lang.String, java.lang.Number>|java.util.Map<java.lang.String, java.lang.Boolean> map)
+```
+
+Creates a new iterator from a map.
+
+#### `map`<sup>Required</sup> <a name="map" id="cdktn.DynamicListTerraformIterator.fromMap.parameter.map"></a>
+
+- *Type:* <a href="#cdktn.ComplexMap">ComplexMap</a>|java.util.Map&lt; java.lang.String, java.lang.Object >|java.util.Map&lt; java.lang.String, java.lang.String >|java.util.Map&lt; java.lang.String, java.lang.Number >|java.util.Map&lt; java.lang.String, java.lang.Boolean >
+
+***
+
+### `fromResources` <a name="fromResources" id="cdktn.DynamicListTerraformIterator.fromResources"></a>
+
+```java
+import io.cdktn.cdktn.DynamicListTerraformIterator;
+
+DynamicListTerraformIterator.fromResources(ITerraformResource resource)
+```
+
+Creates a new iterator from a resource that has been created with the `for_each` argument.
+
+#### `resource`<sup>Required</sup> <a name="resource" id="cdktn.DynamicListTerraformIterator.fromResources.parameter.resource"></a>
+
+- *Type:* <a href="#cdktn.ITerraformResource">ITerraformResource</a>
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DynamicListTerraformIterator.property.key">key</a></code> | <code>java.lang.String</code> | Returns the key of the current entry in the map that is being iterated over. |
+| <code><a href="#cdktn.DynamicListTerraformIterator.property.value">value</a></code> | <code>java.lang.Object</code> | Returns the value of the current item iterated over. |
+
+***
+
+### `key`<sup>Required</sup> <a name="key" id="cdktn.DynamicListTerraformIterator.property.key"></a>
+
+```java
+public java.lang.String getKey();
+```
+
+- *Type:* java.lang.String
+
+Returns the key of the current entry in the map that is being iterated over.
+
+***
+
+### `value`<sup>Required</sup> <a name="value" id="cdktn.DynamicListTerraformIterator.property.value"></a>
+
+```java
+public java.lang.Object getValue();
+```
+
+- *Type:* java.lang.Object
+
+Returns the value of the current item iterated over.
+
+***
+

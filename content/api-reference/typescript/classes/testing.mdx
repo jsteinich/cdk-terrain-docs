@@ -1,0 +1,357 @@
+---
+title: "Typescript: Testing"
+sidebarTitle: Testing
+description: CDKTN Core API Reference for Testing in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Testing utilities for cdktf applications.
+
+## Initializers <a name="Initializers" id="cdktn.Testing.Initializer"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+new Testing()
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Testing.app">app</a></code> | Returns an app for testing with the following properties: - Output directory is a temp dir. |
+| <code><a href="#cdktn.Testing.enableFutureFlags">enableFutureFlags</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.fakeCdktfJsonPath">fakeCdktfJsonPath</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.fullSynth">fullSynth</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.renderConstructTree">renderConstructTree</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.setupJest">setupJest</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.stubVersion">stubVersion</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.synth">synth</a></code> | Returns the Terraform synthesized JSON. |
+| <code><a href="#cdktn.Testing.synthHcl">synthHcl</a></code> | Returns the Terraform synthesized JSON. |
+| <code><a href="#cdktn.Testing.synthScope">synthScope</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toBeValidTerraform">toBeValidTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveDataSource">toHaveDataSource</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveDataSourceWithProperties">toHaveDataSourceWithProperties</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveProvider">toHaveProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveProviderWithProperties">toHaveProviderWithProperties</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveResource">toHaveResource</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveResourceWithProperties">toHaveResourceWithProperties</a></code> | *No description.* |
+
+***
+
+### `app` <a name="app" id="cdktn.Testing.app"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.app(options?: TestingAppConfig)
+```
+
+Returns an app for testing with the following properties: - Output directory is a temp dir.
+
+#### `options`<sup>Optional</sup> <a name="options" id="cdktn.Testing.app.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.TestingAppConfig">TestingAppConfig</a>
+
+***
+
+### `enableFutureFlags` <a name="enableFutureFlags" id="cdktn.Testing.enableFutureFlags"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.enableFutureFlags(app: App)
+```
+
+#### `app`<sup>Required</sup> <a name="app" id="cdktn.Testing.enableFutureFlags.parameter.app"></a>
+
+- *Type:* <a href="#cdktn.App">App</a>
+
+***
+
+### `fakeCdktfJsonPath` <a name="fakeCdktfJsonPath" id="cdktn.Testing.fakeCdktfJsonPath"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.fakeCdktfJsonPath(app: App)
+```
+
+#### `app`<sup>Required</sup> <a name="app" id="cdktn.Testing.fakeCdktfJsonPath.parameter.app"></a>
+
+- *Type:* <a href="#cdktn.App">App</a>
+
+***
+
+### `fullSynth` <a name="fullSynth" id="cdktn.Testing.fullSynth"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.fullSynth(stack: TerraformStack)
+```
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.Testing.fullSynth.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `renderConstructTree` <a name="renderConstructTree" id="cdktn.Testing.renderConstructTree"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.renderConstructTree(construct: IConstruct)
+```
+
+#### `construct`<sup>Required</sup> <a name="construct" id="cdktn.Testing.renderConstructTree.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
+
+***
+
+### `setupJest` <a name="setupJest" id="cdktn.Testing.setupJest"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.setupJest()
+```
+
+### `stubVersion` <a name="stubVersion" id="cdktn.Testing.stubVersion"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.stubVersion(app: App)
+```
+
+#### `app`<sup>Required</sup> <a name="app" id="cdktn.Testing.stubVersion.parameter.app"></a>
+
+- *Type:* <a href="#cdktn.App">App</a>
+
+***
+
+### `synth` <a name="synth" id="cdktn.Testing.synth"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.synth(stack: TerraformStack, runValidations?: boolean)
+```
+
+Returns the Terraform synthesized JSON.
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.Testing.synth.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `runValidations`<sup>Optional</sup> <a name="runValidations" id="cdktn.Testing.synth.parameter.runValidations"></a>
+
+- *Type:* boolean
+
+***
+
+### `synthHcl` <a name="synthHcl" id="cdktn.Testing.synthHcl"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.synthHcl(stack: TerraformStack, runValidations?: boolean, returnMetadata?: boolean)
+```
+
+Returns the Terraform synthesized JSON.
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.Testing.synthHcl.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `runValidations`<sup>Optional</sup> <a name="runValidations" id="cdktn.Testing.synthHcl.parameter.runValidations"></a>
+
+- *Type:* boolean
+
+***
+
+#### `returnMetadata`<sup>Optional</sup> <a name="returnMetadata" id="cdktn.Testing.synthHcl.parameter.returnMetadata"></a>
+
+- *Type:* boolean
+
+***
+
+### `synthScope` <a name="synthScope" id="cdktn.Testing.synthScope"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.synthScope(fn: IScopeCallback)
+```
+
+#### `fn`<sup>Required</sup> <a name="fn" id="cdktn.Testing.synthScope.parameter.fn"></a>
+
+- *Type:* <a href="#cdktn.IScopeCallback">IScopeCallback</a>
+
+***
+
+### `toBeValidTerraform` <a name="toBeValidTerraform" id="cdktn.Testing.toBeValidTerraform"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.toBeValidTerraform(received: string)
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toBeValidTerraform.parameter.received"></a>
+
+- *Type:* string
+
+***
+
+### `toHaveDataSource` <a name="toHaveDataSource" id="cdktn.Testing.toHaveDataSource"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.toHaveDataSource(received: string, resourceType: string)
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveDataSource.parameter.received"></a>
+
+- *Type:* string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveDataSource.parameter.resourceType"></a>
+
+- *Type:* string
+
+***
+
+### `toHaveDataSourceWithProperties` <a name="toHaveDataSourceWithProperties" id="cdktn.Testing.toHaveDataSourceWithProperties"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.toHaveDataSourceWithProperties(received: string, resourceType: string, properties?: {[ key: string ]: any})
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveDataSourceWithProperties.parameter.received"></a>
+
+- *Type:* string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveDataSourceWithProperties.parameter.resourceType"></a>
+
+- *Type:* string
+
+***
+
+#### `properties`<sup>Optional</sup> <a name="properties" id="cdktn.Testing.toHaveDataSourceWithProperties.parameter.properties"></a>
+
+- *Type:* \{\[ key: string ]: any}
+
+***
+
+### `toHaveProvider` <a name="toHaveProvider" id="cdktn.Testing.toHaveProvider"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.toHaveProvider(received: string, resourceType: string)
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveProvider.parameter.received"></a>
+
+- *Type:* string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveProvider.parameter.resourceType"></a>
+
+- *Type:* string
+
+***
+
+### `toHaveProviderWithProperties` <a name="toHaveProviderWithProperties" id="cdktn.Testing.toHaveProviderWithProperties"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.toHaveProviderWithProperties(received: string, resourceType: string, properties?: {[ key: string ]: any})
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveProviderWithProperties.parameter.received"></a>
+
+- *Type:* string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveProviderWithProperties.parameter.resourceType"></a>
+
+- *Type:* string
+
+***
+
+#### `properties`<sup>Optional</sup> <a name="properties" id="cdktn.Testing.toHaveProviderWithProperties.parameter.properties"></a>
+
+- *Type:* \{\[ key: string ]: any}
+
+***
+
+### `toHaveResource` <a name="toHaveResource" id="cdktn.Testing.toHaveResource"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.toHaveResource(received: string, resourceType: string)
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveResource.parameter.received"></a>
+
+- *Type:* string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveResource.parameter.resourceType"></a>
+
+- *Type:* string
+
+***
+
+### `toHaveResourceWithProperties` <a name="toHaveResourceWithProperties" id="cdktn.Testing.toHaveResourceWithProperties"></a>
+
+```typescript
+import { Testing } from 'cdktn'
+
+Testing.toHaveResourceWithProperties(received: string, resourceType: string, properties?: {[ key: string ]: any})
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveResourceWithProperties.parameter.received"></a>
+
+- *Type:* string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveResourceWithProperties.parameter.resourceType"></a>
+
+- *Type:* string
+
+***
+
+#### `properties`<sup>Optional</sup> <a name="properties" id="cdktn.Testing.toHaveResourceWithProperties.parameter.properties"></a>
+
+- *Type:* \{\[ key: string ]: any}
+
+***
+
