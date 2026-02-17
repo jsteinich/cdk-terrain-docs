@@ -1,993 +1,967 @@
 ---
-title: Java Reference for Protocols
+title: "Java: Protocols"
+sidebarTitle: Protocols
 description: CDKTN Core API Reference for Protocols in Java.
 ---
 
-<!-- This file is generated through yarn generate-docs -->
+{/* This file is generated through yarn generate-docs */}
 
-  # Java: Protocols <a name="Protocols" id="Protocols"></a>
-  
-  ### IAnyProducer <a name="IAnyProducer" id="cdktn.IAnyProducer"></a>
-  
-  - *Implemented By:* <a href="#cdktn.IAnyProducer">IAnyProducer</a>
-  
-  Interface for lazy untyped value producers.
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.IAnyProducer.produce">produce</a></code> | Produce the value. |
-  
-  ---
-  
-  ##### `produce` <a name="produce" id="cdktn.IAnyProducer.produce"></a>
-  
-  ```java
-  public java.lang.Object produce(IResolveContext context)
-  ```
-  
-  Produce the value.
-  
-  ###### `context`<sup>Required</sup> <a name="context" id="cdktn.IAnyProducer.produce.parameter.context"></a>
-  
-  - *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  ---
-  
-  
-  ### IAspect <a name="IAspect" id="cdktn.IAspect"></a>
-  
-  - *Implemented By:* <a href="#cdktn.MigrateIds">MigrateIds</a>, <a href="#cdktn.IAspect">IAspect</a>
-  
-  Represents an Aspect.
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.IAspect.visit">visit</a></code> | All aspects can visit an IConstruct. |
-  
-  ---
-  
-  ##### `visit` <a name="visit" id="cdktn.IAspect.visit"></a>
-  
-  ```java
-  public void visit(IConstruct node)
-  ```
-  
-  All aspects can visit an IConstruct.
-  
-  ###### `node`<sup>Required</sup> <a name="node" id="cdktn.IAspect.visit.parameter.node"></a>
-  
-  - *Type:* software.constructs.IConstruct
-  
-  ---
-  
-  
-  ### IFragmentConcatenator <a name="IFragmentConcatenator" id="cdktn.IFragmentConcatenator"></a>
-  
-  - *Implemented By:* <a href="#cdktn.StringConcat">StringConcat</a>, <a href="#cdktn.IFragmentConcatenator">IFragmentConcatenator</a>
-  
-  Function used to concatenate symbols in the target document language.
-  
-  Interface so it could potentially be exposed over jsii.
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.IFragmentConcatenator.join">join</a></code> | Join the fragment on the left and on the right. |
-  
-  ---
-  
-  ##### `join` <a name="join" id="cdktn.IFragmentConcatenator.join"></a>
-  
-  ```java
-  public java.lang.Object join(java.lang.Object left, java.lang.Object right)
-  ```
-  
-  Join the fragment on the left and on the right.
-  
-  ###### `left`<sup>Required</sup> <a name="left" id="cdktn.IFragmentConcatenator.join.parameter.left"></a>
-  
-  - *Type:* java.lang.Object
-  
-  ---
-  
-  ###### `right`<sup>Required</sup> <a name="right" id="cdktn.IFragmentConcatenator.join.parameter.right"></a>
-  
-  - *Type:* java.lang.Object
-  
-  ---
-  
-  
-  ### IImportableConfig <a name="IImportableConfig" id="cdktn.IImportableConfig"></a>
-  
-  - *Implemented By:* <a href="#cdktn.IImportableConfig">IImportableConfig</a>
-  
-  
-  #### Properties <a name="Properties" id="Properties"></a>
-  
-  | **Name** | **Type** | **Description** |
-  | --- | --- | --- |
-  | <code><a href="#cdktn.IImportableConfig.property.importId">importId</a></code> | <code>java.lang.String</code> | *No description.* |
-  | <code><a href="#cdktn.IImportableConfig.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
-  | <code><a href="#cdktn.IImportableConfig.property.provider">provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
-  
-  ---
-  
-  ##### `importId`<sup>Required</sup> <a name="importId" id="cdktn.IImportableConfig.property.importId"></a>
-  
-  ```java
-  public java.lang.String getImportId();
-  ```
-  
-  - *Type:* java.lang.String
-  
-  ---
-  
-  ##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="cdktn.IImportableConfig.property.terraformResourceType"></a>
-  
-  ```java
-  public java.lang.String getTerraformResourceType();
-  ```
-  
-  - *Type:* java.lang.String
-  
-  ---
-  
-  ##### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.IImportableConfig.property.provider"></a>
-  
-  ```java
-  public TerraformProvider getProvider();
-  ```
-  
-  - *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
-  
-  ---
-  
-  ### IInterpolatingParent <a name="IInterpolatingParent" id="cdktn.IInterpolatingParent"></a>
-  
-  - *Implemented By:* <a href="#cdktn.AnyMapList">AnyMapList</a>, <a href="#cdktn.BooleanMapList">BooleanMapList</a>, <a href="#cdktn.ComplexComputedList">ComplexComputedList</a>, <a href="#cdktn.ComplexObject">ComplexObject</a>, <a href="#cdktn.DataResource">DataResource</a>, <a href="#cdktn.MapList">MapList</a>, <a href="#cdktn.NumberMapList">NumberMapList</a>, <a href="#cdktn.StringMapList">StringMapList</a>, <a href="#cdktn.TerraformDataSource">TerraformDataSource</a>, <a href="#cdktn.TerraformResource">TerraformResource</a>, <a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a>
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.IInterpolatingParent.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-  
-  ---
-  
-  ##### `interpolationForAttribute` <a name="interpolationForAttribute" id="cdktn.IInterpolatingParent.interpolationForAttribute"></a>
-  
-  ```java
-  public IResolvable interpolationForAttribute(java.lang.String terraformAttribute)
-  ```
-  
-  ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.IInterpolatingParent.interpolationForAttribute.parameter.terraformAttribute"></a>
-  
-  - *Type:* java.lang.String
-  
-  ---
-  
-  
-  ### IListProducer <a name="IListProducer" id="cdktn.IListProducer"></a>
-  
-  - *Implemented By:* <a href="#cdktn.IListProducer">IListProducer</a>
-  
-  Interface for lazy list producers.
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.IListProducer.produce">produce</a></code> | Produce the list value. |
-  
-  ---
-  
-  ##### `produce` <a name="produce" id="cdktn.IListProducer.produce"></a>
-  
-  ```java
-  public java.util.List< java.lang.String > produce(IResolveContext context)
-  ```
-  
-  Produce the list value.
-  
-  ###### `context`<sup>Required</sup> <a name="context" id="cdktn.IListProducer.produce.parameter.context"></a>
-  
-  - *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  ---
-  
-  
-  ### IManifest <a name="IManifest" id="cdktn.IManifest"></a>
-  
-  - *Implemented By:* <a href="#cdktn.Manifest">Manifest</a>, <a href="#cdktn.IManifest">IManifest</a>
-  
-  
-  #### Properties <a name="Properties" id="Properties"></a>
-  
-  | **Name** | **Type** | **Description** |
-  | --- | --- | --- |
-  | <code><a href="#cdktn.IManifest.property.stacks">stacks</a></code> | <code>java.util.Map<  java.lang.String, <a href="#cdktn.StackManifest">StackManifest</a>></code> | *No description.* |
-  | <code><a href="#cdktn.IManifest.property.version">version</a></code> | <code>java.lang.String</code> | *No description.* |
-  
-  ---
-  
-  ##### `stacks`<sup>Required</sup> <a name="stacks" id="cdktn.IManifest.property.stacks"></a>
-  
-  ```java
-  public java.util.Map< java.lang.String, StackManifest > getStacks();
-  ```
-  
-  - *Type:* java.util.Map<  java.lang.String, <a href="#cdktn.StackManifest">StackManifest</a>>
-  
-  ---
-  
-  ##### `version`<sup>Required</sup> <a name="version" id="cdktn.IManifest.property.version"></a>
-  
-  ```java
-  public java.lang.String getVersion();
-  ```
-  
-  - *Type:* java.lang.String
-  
-  ---
-  
-  ### INumberProducer <a name="INumberProducer" id="cdktn.INumberProducer"></a>
-  
-  - *Implemented By:* <a href="#cdktn.INumberProducer">INumberProducer</a>
-  
-  Interface for lazy number producers.
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.INumberProducer.produce">produce</a></code> | Produce the number value. |
-  
-  ---
-  
-  ##### `produce` <a name="produce" id="cdktn.INumberProducer.produce"></a>
-  
-  ```java
-  public java.lang.Number produce(IResolveContext context)
-  ```
-  
-  Produce the number value.
-  
-  ###### `context`<sup>Required</sup> <a name="context" id="cdktn.INumberProducer.produce.parameter.context"></a>
-  
-  - *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  ---
-  
-  
-  ### IPostProcessor <a name="IPostProcessor" id="cdktn.IPostProcessor"></a>
-  
-  - *Implemented By:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
-  
-  A Token that can post-process the complete resolved value, after resolve() has recursed over it.
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.IPostProcessor.postProcess">postProcess</a></code> | Process the completely resolved value, after full recursion/resolution has happened. |
-  
-  ---
-  
-  ##### `postProcess` <a name="postProcess" id="cdktn.IPostProcessor.postProcess"></a>
-  
-  ```java
-  public java.lang.Object postProcess(java.lang.Object input, IResolveContext context)
-  ```
-  
-  Process the completely resolved value, after full recursion/resolution has happened.
-  
-  ###### `input`<sup>Required</sup> <a name="input" id="cdktn.IPostProcessor.postProcess.parameter.input"></a>
-  
-  - *Type:* java.lang.Object
-  
-  ---
-  
-  ###### `context`<sup>Required</sup> <a name="context" id="cdktn.IPostProcessor.postProcess.parameter.context"></a>
-  
-  - *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  ---
-  
-  
-  ### IRemoteWorkspace <a name="IRemoteWorkspace" id="cdktn.IRemoteWorkspace"></a>
-  
-  - *Implemented By:* <a href="#cdktn.NamedRemoteWorkspace">NamedRemoteWorkspace</a>, <a href="#cdktn.PrefixedRemoteWorkspaces">PrefixedRemoteWorkspaces</a>, <a href="#cdktn.IRemoteWorkspace">IRemoteWorkspace</a>
-  
-  
-  
-  ### IResolvable <a name="IResolvable" id="cdktn.IResolvable"></a>
-  
-  - *Implemented By:* <a href="#cdktn.AnyListList">AnyListList</a>, <a href="#cdktn.AnyListMap">AnyListMap</a>, <a href="#cdktn.AnyMap">AnyMap</a>, <a href="#cdktn.AnyMapList">AnyMapList</a>, <a href="#cdktn.BooleanList">BooleanList</a>, <a href="#cdktn.BooleanListList">BooleanListList</a>, <a href="#cdktn.BooleanListMap">BooleanListMap</a>, <a href="#cdktn.BooleanMap">BooleanMap</a>, <a href="#cdktn.BooleanMapList">BooleanMapList</a>, <a href="#cdktn.ComplexComputedList">ComplexComputedList</a>, <a href="#cdktn.ComplexList">ComplexList</a>, <a href="#cdktn.ComplexMap">ComplexMap</a>, <a href="#cdktn.ComplexObject">ComplexObject</a>, <a href="#cdktn.LazyBase">LazyBase</a>, <a href="#cdktn.MapList">MapList</a>, <a href="#cdktn.NumberListList">NumberListList</a>, <a href="#cdktn.NumberListMap">NumberListMap</a>, <a href="#cdktn.NumberMap">NumberMap</a>, <a href="#cdktn.NumberMapList">NumberMapList</a>, <a href="#cdktn.StringListList">StringListList</a>, <a href="#cdktn.StringListMap">StringListMap</a>, <a href="#cdktn.StringMap">StringMap</a>, <a href="#cdktn.StringMapList">StringMapList</a>, <a href="#cdktn.IResolvable">IResolvable</a>
-  
-  Interface for values that can be resolvable later.
-  
-  Tokens are special objects that participate in synthesis.
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.IResolvable.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
-  | <code><a href="#cdktn.IResolvable.toString">toString</a></code> | Return a string representation of this resolvable object. |
-  
-  ---
-  
-  ##### `resolve` <a name="resolve" id="cdktn.IResolvable.resolve"></a>
-  
-  ```java
-  public java.lang.Object resolve(IResolveContext context)
-  ```
-  
-  Produce the Token's value at resolution time.
-  
-  ###### `context`<sup>Required</sup> <a name="context" id="cdktn.IResolvable.resolve.parameter.context"></a>
-  
-  - *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  ---
-  
-  ##### `toString` <a name="toString" id="cdktn.IResolvable.toString"></a>
-  
-  ```java
-  public java.lang.String toString()
-  ```
-  
-  Return a string representation of this resolvable object.
-  
-  Returns a reversible string representation.
-  
-  #### Properties <a name="Properties" id="Properties"></a>
-  
-  | **Name** | **Type** | **Description** |
-  | --- | --- | --- |
-  | <code><a href="#cdktn.IResolvable.property.creationStack">creationStack</a></code> | <code>java.util.List< java.lang.String ></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-  
-  ---
-  
-  ##### `creationStack`<sup>Required</sup> <a name="creationStack" id="cdktn.IResolvable.property.creationStack"></a>
-  
-  ```java
-  public java.util.List< java.lang.String > getCreationStack();
-  ```
-  
-  - *Type:* java.util.List< java.lang.String >
-  
-  The creation stack of this resolvable which will be appended to errors thrown during resolution.
-  
-  If this returns an empty array the stack will not be attached.
-  
-  ---
-  
-  ### IResolveContext <a name="IResolveContext" id="cdktn.IResolveContext"></a>
-  
-  - *Implemented By:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  Current resolution context for tokens.
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.IResolveContext.registerPostProcessor">registerPostProcessor</a></code> | Use this postprocessor after the entire token structure has been resolved. |
-  | <code><a href="#cdktn.IResolveContext.resolve">resolve</a></code> | Resolve an inner object. |
-  
-  ---
-  
-  ##### `registerPostProcessor` <a name="registerPostProcessor" id="cdktn.IResolveContext.registerPostProcessor"></a>
-  
-  ```java
-  public void registerPostProcessor(IPostProcessor postProcessor)
-  ```
-  
-  Use this postprocessor after the entire token structure has been resolved.
-  
-  ###### `postProcessor`<sup>Required</sup> <a name="postProcessor" id="cdktn.IResolveContext.registerPostProcessor.parameter.postProcessor"></a>
-  
-  - *Type:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
-  
-  ---
-  
-  ##### `resolve` <a name="resolve" id="cdktn.IResolveContext.resolve"></a>
-  
-  ```java
-  public java.lang.Object resolve(java.lang.Object x)
-  ```
-  
-  Resolve an inner object.
-  
-  ###### `x`<sup>Required</sup> <a name="x" id="cdktn.IResolveContext.resolve.parameter.x"></a>
-  
-  - *Type:* java.lang.Object
-  
-  ---
-  
-  #### Properties <a name="Properties" id="Properties"></a>
-  
-  | **Name** | **Type** | **Description** |
-  | --- | --- | --- |
-  | <code><a href="#cdktn.IResolveContext.property.preparing">preparing</a></code> | <code>java.lang.Boolean</code> | True when we are still preparing, false if we're rendering the final output. |
-  | <code><a href="#cdktn.IResolveContext.property.scope">scope</a></code> | <code>software.constructs.IConstruct</code> | The scope from which resolution has been initiated. |
-  | <code><a href="#cdktn.IResolveContext.property.ignoreEscapes">ignoreEscapes</a></code> | <code>java.lang.Boolean</code> | True when ${} should not be parsed, and treated as literals. |
-  | <code><a href="#cdktn.IResolveContext.property.iteratorContext">iteratorContext</a></code> | <code>java.lang.String</code> | TerraformIterators can be passed for block attributes and normal list attributes both require different handling when the iterable variable is accessed e.g. a dynamic block needs each.key while a for expression just needs key. |
-  | <code><a href="#cdktn.IResolveContext.property.suppressBraces">suppressBraces</a></code> | <code>java.lang.Boolean</code> | True when ${} should be ommitted (because already inside them), false otherwise. |
-  | <code><a href="#cdktn.IResolveContext.property.warnEscapes">warnEscapes</a></code> | <code>java.lang.Boolean</code> | True when ${} should not be included in the string to be resolved, outputs a warning. |
-  
-  ---
-  
-  ##### `preparing`<sup>Required</sup> <a name="preparing" id="cdktn.IResolveContext.property.preparing"></a>
-  
-  ```java
-  public java.lang.Boolean getPreparing();
-  ```
-  
-  - *Type:* java.lang.Boolean
-  
-  True when we are still preparing, false if we're rendering the final output.
-  
-  ---
-  
-  ##### `scope`<sup>Required</sup> <a name="scope" id="cdktn.IResolveContext.property.scope"></a>
-  
-  ```java
-  public IConstruct getScope();
-  ```
-  
-  - *Type:* software.constructs.IConstruct
-  
-  The scope from which resolution has been initiated.
-  
-  ---
-  
-  ##### `ignoreEscapes`<sup>Optional</sup> <a name="ignoreEscapes" id="cdktn.IResolveContext.property.ignoreEscapes"></a>
-  
-  ```java
-  public java.lang.Boolean getIgnoreEscapes();
-  ```
-  
-  - *Type:* java.lang.Boolean
-  
-  True when ${} should not be parsed, and treated as literals.
-  
-  ---
-  
-  ##### `iteratorContext`<sup>Optional</sup> <a name="iteratorContext" id="cdktn.IResolveContext.property.iteratorContext"></a>
-  
-  ```java
-  public java.lang.String getIteratorContext();
-  ```
-  
-  - *Type:* java.lang.String
-  
-  TerraformIterators can be passed for block attributes and normal list attributes both require different handling when the iterable variable is accessed e.g. a dynamic block needs each.key while a for expression just needs key.
-  
-  ---
-  
-  ##### `suppressBraces`<sup>Optional</sup> <a name="suppressBraces" id="cdktn.IResolveContext.property.suppressBraces"></a>
-  
-  ```java
-  public java.lang.Boolean getSuppressBraces();
-  ```
-  
-  - *Type:* java.lang.Boolean
-  
-  True when ${} should be ommitted (because already inside them), false otherwise.
-  
-  ---
-  
-  ##### `warnEscapes`<sup>Optional</sup> <a name="warnEscapes" id="cdktn.IResolveContext.property.warnEscapes"></a>
-  
-  ```java
-  public java.lang.Boolean getWarnEscapes();
-  ```
-  
-  - *Type:* java.lang.Boolean
-  
-  True when ${} should not be included in the string to be resolved, outputs a warning.
-  
-  Default: false
-  
-  ---
-  
-  ### IResource <a name="IResource" id="cdktn.IResource"></a>
-  
-  - *Extends:* software.constructs.IConstruct
-  
-  - *Implemented By:* <a href="#cdktn.Resource">Resource</a>, <a href="#cdktn.IResource">IResource</a>
-  
-  
-  #### Properties <a name="Properties" id="Properties"></a>
-  
-  | **Name** | **Type** | **Description** |
-  | --- | --- | --- |
-  | <code><a href="#cdktn.IResource.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
-  | <code><a href="#cdktn.IResource.property.stack">stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | The stack in which this resource is defined. |
-  
-  ---
-  
-  ##### `node`<sup>Required</sup> <a name="node" id="cdktn.IResource.property.node"></a>
-  
-  ```java
-  public Node getNode();
-  ```
-  
-  - *Type:* software.constructs.Node
-  
-  The tree node.
-  
-  ---
-  
-  ##### `stack`<sup>Required</sup> <a name="stack" id="cdktn.IResource.property.stack"></a>
-  
-  ```java
-  public TerraformStack getStack();
-  ```
-  
-  - *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
-  
-  The stack in which this resource is defined.
-  
-  ---
-  
-  ### IResourceConstructor <a name="IResourceConstructor" id="cdktn.IResourceConstructor"></a>
-  
-  - *Implemented By:* <a href="#cdktn.IResourceConstructor">IResourceConstructor</a>
-  
-  
-  
-  ### IScopeCallback <a name="IScopeCallback" id="cdktn.IScopeCallback"></a>
-  
-  - *Implemented By:* <a href="#cdktn.IScopeCallback">IScopeCallback</a>
-  
-  
-  
-  ### IStackSynthesizer <a name="IStackSynthesizer" id="cdktn.IStackSynthesizer"></a>
-  
-  - *Implemented By:* <a href="#cdktn.IStackSynthesizer">IStackSynthesizer</a>
-  
-  Encodes information how a certain Stack should be deployed inspired by AWS CDK v2 implementation (synth functionality was removed in constructs v10).
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.IStackSynthesizer.synthesize">synthesize</a></code> | Synthesize the associated stack to the session. |
-  
-  ---
-  
-  ##### `synthesize` <a name="synthesize" id="cdktn.IStackSynthesizer.synthesize"></a>
-  
-  ```java
-  public void synthesize(ISynthesisSession session)
-  ```
-  
-  Synthesize the associated stack to the session.
-  
-  ###### `session`<sup>Required</sup> <a name="session" id="cdktn.IStackSynthesizer.synthesize.parameter.session"></a>
-  
-  - *Type:* <a href="#cdktn.ISynthesisSession">ISynthesisSession</a>
-  
-  ---
-  
-  
-  ### IStringProducer <a name="IStringProducer" id="cdktn.IStringProducer"></a>
-  
-  - *Implemented By:* <a href="#cdktn.IStringProducer">IStringProducer</a>
-  
-  Interface for lazy string producers.
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.IStringProducer.produce">produce</a></code> | Produce the string value. |
-  
-  ---
-  
-  ##### `produce` <a name="produce" id="cdktn.IStringProducer.produce"></a>
-  
-  ```java
-  public java.lang.String produce(IResolveContext context)
-  ```
-  
-  Produce the string value.
-  
-  ###### `context`<sup>Required</sup> <a name="context" id="cdktn.IStringProducer.produce.parameter.context"></a>
-  
-  - *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  ---
-  
-  
-  ### ISynthesisSession <a name="ISynthesisSession" id="cdktn.ISynthesisSession"></a>
-  
-  - *Implemented By:* <a href="#cdktn.ISynthesisSession">ISynthesisSession</a>
-  
-  Represents a single session of synthesis.
-  
-  Passed into `TerraformStack.onSynthesize()` methods.
-  originally from aws/constructs lib v3.3.126 (synth functionality was removed in constructs v10)
-  
-  
-  #### Properties <a name="Properties" id="Properties"></a>
-  
-  | **Name** | **Type** | **Description** |
-  | --- | --- | --- |
-  | <code><a href="#cdktn.ISynthesisSession.property.manifest">manifest</a></code> | <code><a href="#cdktn.Manifest">Manifest</a></code> | *No description.* |
-  | <code><a href="#cdktn.ISynthesisSession.property.outdir">outdir</a></code> | <code>java.lang.String</code> | The output directory for this synthesis session. |
-  | <code><a href="#cdktn.ISynthesisSession.property.skipValidation">skipValidation</a></code> | <code>java.lang.Boolean</code> | *No description.* |
-  
-  ---
-  
-  ##### `manifest`<sup>Required</sup> <a name="manifest" id="cdktn.ISynthesisSession.property.manifest"></a>
-  
-  ```java
-  public Manifest getManifest();
-  ```
-  
-  - *Type:* <a href="#cdktn.Manifest">Manifest</a>
-  
-  ---
-  
-  ##### `outdir`<sup>Required</sup> <a name="outdir" id="cdktn.ISynthesisSession.property.outdir"></a>
-  
-  ```java
-  public java.lang.String getOutdir();
-  ```
-  
-  - *Type:* java.lang.String
-  
-  The output directory for this synthesis session.
-  
-  ---
-  
-  ##### `skipValidation`<sup>Optional</sup> <a name="skipValidation" id="cdktn.ISynthesisSession.property.skipValidation"></a>
-  
-  ```java
-  public java.lang.Boolean getSkipValidation();
-  ```
-  
-  - *Type:* java.lang.Boolean
-  
-  ---
-  
-  ### ITerraformAddressable <a name="ITerraformAddressable" id="cdktn.ITerraformAddressable"></a>
-  
-  - *Implemented By:* <a href="#cdktn.AnyListList">AnyListList</a>, <a href="#cdktn.AnyListMap">AnyListMap</a>, <a href="#cdktn.AnyMap">AnyMap</a>, <a href="#cdktn.AnyMapList">AnyMapList</a>, <a href="#cdktn.BooleanList">BooleanList</a>, <a href="#cdktn.BooleanListList">BooleanListList</a>, <a href="#cdktn.BooleanListMap">BooleanListMap</a>, <a href="#cdktn.BooleanMap">BooleanMap</a>, <a href="#cdktn.BooleanMapList">BooleanMapList</a>, <a href="#cdktn.ComplexComputedList">ComplexComputedList</a>, <a href="#cdktn.ComplexList">ComplexList</a>, <a href="#cdktn.ComplexMap">ComplexMap</a>, <a href="#cdktn.ComplexObject">ComplexObject</a>, <a href="#cdktn.DataResource">DataResource</a>, <a href="#cdktn.DataTerraformRemoteState">DataTerraformRemoteState</a>, <a href="#cdktn.DataTerraformRemoteStateAzurerm">DataTerraformRemoteStateAzurerm</a>, <a href="#cdktn.DataTerraformRemoteStateConsul">DataTerraformRemoteStateConsul</a>, <a href="#cdktn.DataTerraformRemoteStateCos">DataTerraformRemoteStateCos</a>, <a href="#cdktn.DataTerraformRemoteStateGcs">DataTerraformRemoteStateGcs</a>, <a href="#cdktn.DataTerraformRemoteStateHttp">DataTerraformRemoteStateHttp</a>, <a href="#cdktn.DataTerraformRemoteStateLocal">DataTerraformRemoteStateLocal</a>, <a href="#cdktn.DataTerraformRemoteStateOss">DataTerraformRemoteStateOss</a>, <a href="#cdktn.DataTerraformRemoteStatePg">DataTerraformRemoteStatePg</a>, <a href="#cdktn.DataTerraformRemoteStateS3">DataTerraformRemoteStateS3</a>, <a href="#cdktn.DataTerraformRemoteStateSwift">DataTerraformRemoteStateSwift</a>, <a href="#cdktn.MapList">MapList</a>, <a href="#cdktn.NumberListList">NumberListList</a>, <a href="#cdktn.NumberListMap">NumberListMap</a>, <a href="#cdktn.NumberMap">NumberMap</a>, <a href="#cdktn.NumberMapList">NumberMapList</a>, <a href="#cdktn.StringListList">StringListList</a>, <a href="#cdktn.StringListMap">StringListMap</a>, <a href="#cdktn.StringMap">StringMap</a>, <a href="#cdktn.StringMapList">StringMapList</a>, <a href="#cdktn.TerraformDataSource">TerraformDataSource</a>, <a href="#cdktn.TerraformHclModule">TerraformHclModule</a>, <a href="#cdktn.TerraformLocal">TerraformLocal</a>, <a href="#cdktn.TerraformModule">TerraformModule</a>, <a href="#cdktn.TerraformRemoteState">TerraformRemoteState</a>, <a href="#cdktn.TerraformResource">TerraformResource</a>, <a href="#cdktn.TerraformVariable">TerraformVariable</a>, <a href="#cdktn.ITerraformAddressable">ITerraformAddressable</a>, <a href="#cdktn.ITerraformDependable">ITerraformDependable</a>
-  
-  
-  #### Properties <a name="Properties" id="Properties"></a>
-  
-  | **Name** | **Type** | **Description** |
-  | --- | --- | --- |
-  | <code><a href="#cdktn.ITerraformAddressable.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-  
-  ---
-  
-  ##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.ITerraformAddressable.property.fqn"></a>
-  
-  ```java
-  public java.lang.String getFqn();
-  ```
-  
-  - *Type:* java.lang.String
-  
-  ---
-  
-  ### ITerraformDependable <a name="ITerraformDependable" id="cdktn.ITerraformDependable"></a>
-  
-  - *Extends:* <a href="#cdktn.ITerraformAddressable">ITerraformAddressable</a>
-  
-  - *Implemented By:* <a href="#cdktn.DataResource">DataResource</a>, <a href="#cdktn.TerraformDataSource">TerraformDataSource</a>, <a href="#cdktn.TerraformHclModule">TerraformHclModule</a>, <a href="#cdktn.TerraformModule">TerraformModule</a>, <a href="#cdktn.TerraformResource">TerraformResource</a>, <a href="#cdktn.ITerraformDependable">ITerraformDependable</a>
-  
-  
-  #### Properties <a name="Properties" id="Properties"></a>
-  
-  | **Name** | **Type** | **Description** |
-  | --- | --- | --- |
-  | <code><a href="#cdktn.ITerraformDependable.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-  
-  ---
-  
-  ##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.ITerraformDependable.property.fqn"></a>
-  
-  ```java
-  public java.lang.String getFqn();
-  ```
-  
-  - *Type:* java.lang.String
-  
-  ---
-  
-  ### ITerraformIterator <a name="ITerraformIterator" id="cdktn.ITerraformIterator"></a>
-  
-  - *Implemented By:* <a href="#cdktn.DynamicListTerraformIterator">DynamicListTerraformIterator</a>, <a href="#cdktn.ListTerraformIterator">ListTerraformIterator</a>, <a href="#cdktn.MapTerraformIterator">MapTerraformIterator</a>, <a href="#cdktn.ResourceTerraformIterator">ResourceTerraformIterator</a>, <a href="#cdktn.TerraformIterator">TerraformIterator</a>, <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
-  
-  
-  
-  ### ITerraformResource <a name="ITerraformResource" id="cdktn.ITerraformResource"></a>
-  
-  - *Implemented By:* <a href="#cdktn.DataResource">DataResource</a>, <a href="#cdktn.TerraformDataSource">TerraformDataSource</a>, <a href="#cdktn.TerraformResource">TerraformResource</a>, <a href="#cdktn.ITerraformResource">ITerraformResource</a>
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.ITerraformResource.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-  
-  ---
-  
-  ##### `interpolationForAttribute` <a name="interpolationForAttribute" id="cdktn.ITerraformResource.interpolationForAttribute"></a>
-  
-  ```java
-  public IResolvable interpolationForAttribute(java.lang.String terraformAttribute)
-  ```
-  
-  ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.ITerraformResource.interpolationForAttribute.parameter.terraformAttribute"></a>
-  
-  - *Type:* java.lang.String
-  
-  ---
-  
-  #### Properties <a name="Properties" id="Properties"></a>
-  
-  | **Name** | **Type** | **Description** |
-  | --- | --- | --- |
-  | <code><a href="#cdktn.ITerraformResource.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-  | <code><a href="#cdktn.ITerraformResource.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
-  | <code><a href="#cdktn.ITerraformResource.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
-  | <code><a href="#cdktn.ITerraformResource.property.count">count</a></code> | <code>java.lang.Number\|<a href="#cdktn.TerraformCount">TerraformCount</a></code> | *No description.* |
-  | <code><a href="#cdktn.ITerraformResource.property.dependsOn">dependsOn</a></code> | <code>java.util.List< java.lang.String ></code> | *No description.* |
-  | <code><a href="#cdktn.ITerraformResource.property.forEach">forEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
-  | <code><a href="#cdktn.ITerraformResource.property.lifecycle">lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
-  | <code><a href="#cdktn.ITerraformResource.property.provider">provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
-  
-  ---
-  
-  ##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.ITerraformResource.property.fqn"></a>
-  
-  ```java
-  public java.lang.String getFqn();
-  ```
-  
-  - *Type:* java.lang.String
-  
-  ---
-  
-  ##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.ITerraformResource.property.friendlyUniqueId"></a>
-  
-  ```java
-  public java.lang.String getFriendlyUniqueId();
-  ```
-  
-  - *Type:* java.lang.String
-  
-  ---
-  
-  ##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="cdktn.ITerraformResource.property.terraformResourceType"></a>
-  
-  ```java
-  public java.lang.String getTerraformResourceType();
-  ```
-  
-  - *Type:* java.lang.String
-  
-  ---
-  
-  ##### `count`<sup>Optional</sup> <a name="count" id="cdktn.ITerraformResource.property.count"></a>
-  
-  ```java
-  public java.lang.Number|TerraformCount getCount();
-  ```
-  
-  - *Type:* java.lang.Number|<a href="#cdktn.TerraformCount">TerraformCount</a>
-  
-  ---
-  
-  ##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="cdktn.ITerraformResource.property.dependsOn"></a>
-  
-  ```java
-  public java.util.List< java.lang.String > getDependsOn();
-  ```
-  
-  - *Type:* java.util.List< java.lang.String >
-  
-  ---
-  
-  ##### `forEach`<sup>Optional</sup> <a name="forEach" id="cdktn.ITerraformResource.property.forEach"></a>
-  
-  ```java
-  public ITerraformIterator getForEach();
-  ```
-  
-  - *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
-  
-  ---
-  
-  ##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="cdktn.ITerraformResource.property.lifecycle"></a>
-  
-  ```java
-  public TerraformResourceLifecycle getLifecycle();
-  ```
-  
-  - *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
-  
-  ---
-  
-  ##### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.ITerraformResource.property.provider"></a>
-  
-  ```java
-  public TerraformProvider getProvider();
-  ```
-  
-  - *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
-  
-  ---
-  
-  ### ITokenMapper <a name="ITokenMapper" id="cdktn.ITokenMapper"></a>
-  
-  - *Implemented By:* <a href="#cdktn.ITokenMapper">ITokenMapper</a>
-  
-  Interface to apply operation to tokens in a string.
-  
-  Interface so it can be exported via jsii.
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.ITokenMapper.mapToken">mapToken</a></code> | Replace a single token. |
-  
-  ---
-  
-  ##### `mapToken` <a name="mapToken" id="cdktn.ITokenMapper.mapToken"></a>
-  
-  ```java
-  public java.lang.Object mapToken(IResolvable t)
-  ```
-  
-  Replace a single token.
-  
-  ###### `t`<sup>Required</sup> <a name="t" id="cdktn.ITokenMapper.mapToken.parameter.t"></a>
-  
-  - *Type:* <a href="#cdktn.IResolvable">IResolvable</a>
-  
-  ---
-  
-  
-  ### ITokenResolver <a name="ITokenResolver" id="cdktn.ITokenResolver"></a>
-  
-  - *Implemented By:* <a href="#cdktn.DefaultTokenResolver">DefaultTokenResolver</a>, <a href="#cdktn.ITokenResolver">ITokenResolver</a>
-  
-  How to resolve tokens.
-  
-  #### Methods <a name="Methods" id="Methods"></a>
-  
-  | **Name** | **Description** |
-  | --- | --- |
-  | <code><a href="#cdktn.ITokenResolver.resolveList">resolveList</a></code> | Resolve a tokenized list. |
-  | <code><a href="#cdktn.ITokenResolver.resolveMap">resolveMap</a></code> | Resolve a tokenized map. |
-  | <code><a href="#cdktn.ITokenResolver.resolveNumberList">resolveNumberList</a></code> | Resolve a tokenized number list. |
-  | <code><a href="#cdktn.ITokenResolver.resolveString">resolveString</a></code> | Resolve a string with at least one stringified token in it. |
-  | <code><a href="#cdktn.ITokenResolver.resolveToken">resolveToken</a></code> | Resolve a single token. |
-  
-  ---
-  
-  ##### `resolveList` <a name="resolveList" id="cdktn.ITokenResolver.resolveList"></a>
-  
-  ```java
-  public java.lang.Object resolveList(java.util.List< java.lang.String > l, IResolveContext context)
-  ```
-  
-  Resolve a tokenized list.
-  
-  ###### `l`<sup>Required</sup> <a name="l" id="cdktn.ITokenResolver.resolveList.parameter.l"></a>
-  
-  - *Type:* java.util.List< java.lang.String >
-  
-  ---
-  
-  ###### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveList.parameter.context"></a>
-  
-  - *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  ---
-  
-  ##### `resolveMap` <a name="resolveMap" id="cdktn.ITokenResolver.resolveMap"></a>
-  
-  ```java
-  public java.lang.Object resolveMap(java.util.Map< java.lang.String, java.lang.Object > m, IResolveContext context)
-  ```
-  
-  Resolve a tokenized map.
-  
-  ###### `m`<sup>Required</sup> <a name="m" id="cdktn.ITokenResolver.resolveMap.parameter.m"></a>
-  
-  - *Type:* java.util.Map< java.lang.String, java.lang.Object >
-  
-  ---
-  
-  ###### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveMap.parameter.context"></a>
-  
-  - *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  ---
-  
-  ##### `resolveNumberList` <a name="resolveNumberList" id="cdktn.ITokenResolver.resolveNumberList"></a>
-  
-  ```java
-  public java.lang.Object resolveNumberList(java.util.List< java.lang.Number > l, IResolveContext context)
-  ```
-  
-  Resolve a tokenized number list.
-  
-  ###### `l`<sup>Required</sup> <a name="l" id="cdktn.ITokenResolver.resolveNumberList.parameter.l"></a>
-  
-  - *Type:* java.util.List< java.lang.Number >
-  
-  ---
-  
-  ###### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveNumberList.parameter.context"></a>
-  
-  - *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  ---
-  
-  ##### `resolveString` <a name="resolveString" id="cdktn.ITokenResolver.resolveString"></a>
-  
-  ```java
-  public java.lang.Object resolveString(TokenizedStringFragments s, IResolveContext context)
-  ```
-  
-  Resolve a string with at least one stringified token in it.
-  
-  (May use concatenation)
-  
-  ###### `s`<sup>Required</sup> <a name="s" id="cdktn.ITokenResolver.resolveString.parameter.s"></a>
-  
-  - *Type:* <a href="#cdktn.TokenizedStringFragments">TokenizedStringFragments</a>
-  
-  ---
-  
-  ###### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveString.parameter.context"></a>
-  
-  - *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  ---
-  
-  ##### `resolveToken` <a name="resolveToken" id="cdktn.ITokenResolver.resolveToken"></a>
-  
-  ```java
-  public java.lang.Object resolveToken(IResolvable t, IResolveContext context, IPostProcessor postProcessor)
-  ```
-  
-  Resolve a single token.
-  
-  ###### `t`<sup>Required</sup> <a name="t" id="cdktn.ITokenResolver.resolveToken.parameter.t"></a>
-  
-  - *Type:* <a href="#cdktn.IResolvable">IResolvable</a>
-  
-  ---
-  
-  ###### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveToken.parameter.context"></a>
-  
-  - *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
-  
-  ---
-  
-  ###### `postProcessor`<sup>Required</sup> <a name="postProcessor" id="cdktn.ITokenResolver.resolveToken.parameter.postProcessor"></a>
-  
-  - *Type:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
-  
-  ---
-  
-  
+### IAnyProducer <a name="IAnyProducer" id="cdktn.IAnyProducer"></a>
+
+- *Implemented By:* <a href="#cdktn.IAnyProducer">IAnyProducer</a>
+
+Interface for lazy untyped value producers.
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IAnyProducer.produce">produce</a></code> | Produce the value. |
+
+***
+
+##### `produce` <a name="produce" id="cdktn.IAnyProducer.produce"></a>
+
+```java
+public java.lang.Object produce(IResolveContext context)
+```
+
+Produce the value.
+
+###### `context`<sup>Required</sup> <a name="context" id="cdktn.IAnyProducer.produce.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### IAspect <a name="IAspect" id="cdktn.IAspect"></a>
+
+- *Implemented By:* <a href="#cdktn.MigrateIds">MigrateIds</a>, <a href="#cdktn.IAspect">IAspect</a>
+
+Represents an Aspect.
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IAspect.visit">visit</a></code> | All aspects can visit an IConstruct. |
+
+***
+
+##### `visit` <a name="visit" id="cdktn.IAspect.visit"></a>
+
+```java
+public void visit(IConstruct node)
+```
+
+All aspects can visit an IConstruct.
+
+###### `node`<sup>Required</sup> <a name="node" id="cdktn.IAspect.visit.parameter.node"></a>
+
+- *Type:* software.constructs.IConstruct
+
+***
+
+### IFragmentConcatenator <a name="IFragmentConcatenator" id="cdktn.IFragmentConcatenator"></a>
+
+- *Implemented By:* <a href="#cdktn.StringConcat">StringConcat</a>, <a href="#cdktn.IFragmentConcatenator">IFragmentConcatenator</a>
+
+Function used to concatenate symbols in the target document language.
+
+Interface so it could potentially be exposed over jsii.
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IFragmentConcatenator.join">join</a></code> | Join the fragment on the left and on the right. |
+
+***
+
+##### `join` <a name="join" id="cdktn.IFragmentConcatenator.join"></a>
+
+```java
+public java.lang.Object join(java.lang.Object left, java.lang.Object right)
+```
+
+Join the fragment on the left and on the right.
+
+###### `left`<sup>Required</sup> <a name="left" id="cdktn.IFragmentConcatenator.join.parameter.left"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+###### `right`<sup>Required</sup> <a name="right" id="cdktn.IFragmentConcatenator.join.parameter.right"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### IImportableConfig <a name="IImportableConfig" id="cdktn.IImportableConfig"></a>
+
+- *Implemented By:* <a href="#cdktn.IImportableConfig">IImportableConfig</a>
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.IImportableConfig.property.importId">importId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.IImportableConfig.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.IImportableConfig.property.provider">provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+
+***
+
+##### `importId`<sup>Required</sup> <a name="importId" id="cdktn.IImportableConfig.property.importId"></a>
+
+```java
+public java.lang.String getImportId();
+```
+
+- *Type:* java.lang.String
+
+***
+
+##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="cdktn.IImportableConfig.property.terraformResourceType"></a>
+
+```java
+public java.lang.String getTerraformResourceType();
+```
+
+- *Type:* java.lang.String
+
+***
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.IImportableConfig.property.provider"></a>
+
+```java
+public TerraformProvider getProvider();
+```
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### IInterpolatingParent <a name="IInterpolatingParent" id="cdktn.IInterpolatingParent"></a>
+
+- *Implemented By:* <a href="#cdktn.AnyMapList">AnyMapList</a>, <a href="#cdktn.BooleanMapList">BooleanMapList</a>, <a href="#cdktn.ComplexComputedList">ComplexComputedList</a>, <a href="#cdktn.ComplexObject">ComplexObject</a>, <a href="#cdktn.DataResource">DataResource</a>, <a href="#cdktn.MapList">MapList</a>, <a href="#cdktn.NumberMapList">NumberMapList</a>, <a href="#cdktn.StringMapList">StringMapList</a>, <a href="#cdktn.TerraformDataSource">TerraformDataSource</a>, <a href="#cdktn.TerraformResource">TerraformResource</a>, <a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a>
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IInterpolatingParent.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+
+***
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="cdktn.IInterpolatingParent.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.IInterpolatingParent.interpolationForAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### IListProducer <a name="IListProducer" id="cdktn.IListProducer"></a>
+
+- *Implemented By:* <a href="#cdktn.IListProducer">IListProducer</a>
+
+Interface for lazy list producers.
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IListProducer.produce">produce</a></code> | Produce the list value. |
+
+***
+
+##### `produce` <a name="produce" id="cdktn.IListProducer.produce"></a>
+
+```java
+public java.util.List<java.lang.String> produce(IResolveContext context)
+```
+
+Produce the list value.
+
+###### `context`<sup>Required</sup> <a name="context" id="cdktn.IListProducer.produce.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### IManifest <a name="IManifest" id="cdktn.IManifest"></a>
+
+- *Implemented By:* <a href="#cdktn.Manifest">Manifest</a>, <a href="#cdktn.IManifest">IManifest</a>
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.IManifest.property.stacks">stacks</a></code> | <code>java.util.Map\<java.lang.String, <a href="#cdktn.StackManifest">StackManifest</a>></code> | *No description.* |
+| <code><a href="#cdktn.IManifest.property.version">version</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+##### `stacks`<sup>Required</sup> <a name="stacks" id="cdktn.IManifest.property.stacks"></a>
+
+```java
+public java.util.Map<java.lang.String, StackManifest> getStacks();
+```
+
+- *Type:* java.util.Map\<java.lang.String, <a href="#cdktn.StackManifest">StackManifest</a>>
+
+***
+
+##### `version`<sup>Required</sup> <a name="version" id="cdktn.IManifest.property.version"></a>
+
+```java
+public java.lang.String getVersion();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### INumberProducer <a name="INumberProducer" id="cdktn.INumberProducer"></a>
+
+- *Implemented By:* <a href="#cdktn.INumberProducer">INumberProducer</a>
+
+Interface for lazy number producers.
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.INumberProducer.produce">produce</a></code> | Produce the number value. |
+
+***
+
+##### `produce` <a name="produce" id="cdktn.INumberProducer.produce"></a>
+
+```java
+public java.lang.Number produce(IResolveContext context)
+```
+
+Produce the number value.
+
+###### `context`<sup>Required</sup> <a name="context" id="cdktn.INumberProducer.produce.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### IPostProcessor <a name="IPostProcessor" id="cdktn.IPostProcessor"></a>
+
+- *Implemented By:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+A Token that can post-process the complete resolved value, after resolve() has recursed over it.
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IPostProcessor.postProcess">postProcess</a></code> | Process the completely resolved value, after full recursion/resolution has happened. |
+
+***
+
+##### `postProcess` <a name="postProcess" id="cdktn.IPostProcessor.postProcess"></a>
+
+```java
+public java.lang.Object postProcess(java.lang.Object input, IResolveContext context)
+```
+
+Process the completely resolved value, after full recursion/resolution has happened.
+
+###### `input`<sup>Required</sup> <a name="input" id="cdktn.IPostProcessor.postProcess.parameter.input"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+###### `context`<sup>Required</sup> <a name="context" id="cdktn.IPostProcessor.postProcess.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### IRemoteWorkspace <a name="IRemoteWorkspace" id="cdktn.IRemoteWorkspace"></a>
+
+- *Implemented By:* <a href="#cdktn.NamedRemoteWorkspace">NamedRemoteWorkspace</a>, <a href="#cdktn.PrefixedRemoteWorkspaces">PrefixedRemoteWorkspaces</a>, <a href="#cdktn.IRemoteWorkspace">IRemoteWorkspace</a>
+
+### IResolvable <a name="IResolvable" id="cdktn.IResolvable"></a>
+
+- *Implemented By:* <a href="#cdktn.AnyListList">AnyListList</a>, <a href="#cdktn.AnyListMap">AnyListMap</a>, <a href="#cdktn.AnyMap">AnyMap</a>, <a href="#cdktn.AnyMapList">AnyMapList</a>, <a href="#cdktn.BooleanList">BooleanList</a>, <a href="#cdktn.BooleanListList">BooleanListList</a>, <a href="#cdktn.BooleanListMap">BooleanListMap</a>, <a href="#cdktn.BooleanMap">BooleanMap</a>, <a href="#cdktn.BooleanMapList">BooleanMapList</a>, <a href="#cdktn.ComplexComputedList">ComplexComputedList</a>, <a href="#cdktn.ComplexList">ComplexList</a>, <a href="#cdktn.ComplexMap">ComplexMap</a>, <a href="#cdktn.ComplexObject">ComplexObject</a>, <a href="#cdktn.LazyBase">LazyBase</a>, <a href="#cdktn.MapList">MapList</a>, <a href="#cdktn.NumberListList">NumberListList</a>, <a href="#cdktn.NumberListMap">NumberListMap</a>, <a href="#cdktn.NumberMap">NumberMap</a>, <a href="#cdktn.NumberMapList">NumberMapList</a>, <a href="#cdktn.StringListList">StringListList</a>, <a href="#cdktn.StringListMap">StringListMap</a>, <a href="#cdktn.StringMap">StringMap</a>, <a href="#cdktn.StringMapList">StringMapList</a>, <a href="#cdktn.IResolvable">IResolvable</a>
+
+Interface for values that can be resolvable later.
+
+Tokens are special objects that participate in synthesis.
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IResolvable.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#cdktn.IResolvable.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+***
+
+##### `resolve` <a name="resolve" id="cdktn.IResolvable.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `context`<sup>Required</sup> <a name="context" id="cdktn.IResolvable.resolve.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+##### `toString` <a name="toString" id="cdktn.IResolvable.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.IResolvable.property.creationStack">creationStack</a></code> | <code>java.util.List&lt; java.lang.String ></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+
+***
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="cdktn.IResolvable.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+***
+
+### IResolveContext <a name="IResolveContext" id="cdktn.IResolveContext"></a>
+
+- *Implemented By:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+Current resolution context for tokens.
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IResolveContext.registerPostProcessor">registerPostProcessor</a></code> | Use this postprocessor after the entire token structure has been resolved. |
+| <code><a href="#cdktn.IResolveContext.resolve">resolve</a></code> | Resolve an inner object. |
+
+***
+
+##### `registerPostProcessor` <a name="registerPostProcessor" id="cdktn.IResolveContext.registerPostProcessor"></a>
+
+```java
+public void registerPostProcessor(IPostProcessor postProcessor)
+```
+
+Use this postprocessor after the entire token structure has been resolved.
+
+###### `postProcessor`<sup>Required</sup> <a name="postProcessor" id="cdktn.IResolveContext.registerPostProcessor.parameter.postProcessor"></a>
+
+- *Type:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+***
+
+##### `resolve` <a name="resolve" id="cdktn.IResolveContext.resolve"></a>
+
+```java
+public java.lang.Object resolve(java.lang.Object x)
+```
+
+Resolve an inner object.
+
+###### `x`<sup>Required</sup> <a name="x" id="cdktn.IResolveContext.resolve.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.IResolveContext.property.preparing">preparing</a></code> | <code>java.lang.Boolean</code> | True when we are still preparing, false if we're rendering the final output. |
+| <code><a href="#cdktn.IResolveContext.property.scope">scope</a></code> | <code>software.constructs.IConstruct</code> | The scope from which resolution has been initiated. |
+| <code><a href="#cdktn.IResolveContext.property.ignoreEscapes">ignoreEscapes</a></code> | <code>java.lang.Boolean</code> | True when $\{} should not be parsed, and treated as literals. |
+| <code><a href="#cdktn.IResolveContext.property.iteratorContext">iteratorContext</a></code> | <code>java.lang.String</code> | TerraformIterators can be passed for block attributes and normal list attributes both require different handling when the iterable variable is accessed e.g. a dynamic block needs each.key while a for expression just needs key. |
+| <code><a href="#cdktn.IResolveContext.property.suppressBraces">suppressBraces</a></code> | <code>java.lang.Boolean</code> | True when $\{} should be ommitted (because already inside them), false otherwise. |
+| <code><a href="#cdktn.IResolveContext.property.warnEscapes">warnEscapes</a></code> | <code>java.lang.Boolean</code> | True when $\{} should not be included in the string to be resolved, outputs a warning. |
+
+***
+
+##### `preparing`<sup>Required</sup> <a name="preparing" id="cdktn.IResolveContext.property.preparing"></a>
+
+```java
+public java.lang.Boolean getPreparing();
+```
+
+- *Type:* java.lang.Boolean
+
+True when we are still preparing, false if we're rendering the final output.
+
+***
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdktn.IResolveContext.property.scope"></a>
+
+```java
+public IConstruct getScope();
+```
+
+- *Type:* software.constructs.IConstruct
+
+The scope from which resolution has been initiated.
+
+***
+
+##### `ignoreEscapes`<sup>Optional</sup> <a name="ignoreEscapes" id="cdktn.IResolveContext.property.ignoreEscapes"></a>
+
+```java
+public java.lang.Boolean getIgnoreEscapes();
+```
+
+- *Type:* java.lang.Boolean
+
+True when $\{} should not be parsed, and treated as literals.
+
+***
+
+##### `iteratorContext`<sup>Optional</sup> <a name="iteratorContext" id="cdktn.IResolveContext.property.iteratorContext"></a>
+
+```java
+public java.lang.String getIteratorContext();
+```
+
+- *Type:* java.lang.String
+
+TerraformIterators can be passed for block attributes and normal list attributes both require different handling when the iterable variable is accessed e.g. a dynamic block needs each.key while a for expression just needs key.
+
+***
+
+##### `suppressBraces`<sup>Optional</sup> <a name="suppressBraces" id="cdktn.IResolveContext.property.suppressBraces"></a>
+
+```java
+public java.lang.Boolean getSuppressBraces();
+```
+
+- *Type:* java.lang.Boolean
+
+True when $\{} should be ommitted (because already inside them), false otherwise.
+
+***
+
+##### `warnEscapes`<sup>Optional</sup> <a name="warnEscapes" id="cdktn.IResolveContext.property.warnEscapes"></a>
+
+```java
+public java.lang.Boolean getWarnEscapes();
+```
+
+- *Type:* java.lang.Boolean
+
+True when $\{} should not be included in the string to be resolved, outputs a warning.
+
+Default: false
+
+***
+
+### IResource <a name="IResource" id="cdktn.IResource"></a>
+
+- *Extends:* software.constructs.IConstruct
+
+- *Implemented By:* <a href="#cdktn.Resource">Resource</a>, <a href="#cdktn.IResource">IResource</a>
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.IResource.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.IResource.property.stack">stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | The stack in which this resource is defined. |
+
+***
+
+##### `node`<sup>Required</sup> <a name="node" id="cdktn.IResource.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+##### `stack`<sup>Required</sup> <a name="stack" id="cdktn.IResource.property.stack"></a>
+
+```java
+public TerraformStack getStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+The stack in which this resource is defined.
+
+***
+
+### IResourceConstructor <a name="IResourceConstructor" id="cdktn.IResourceConstructor"></a>
+
+- *Implemented By:* <a href="#cdktn.IResourceConstructor">IResourceConstructor</a>
+
+### IScopeCallback <a name="IScopeCallback" id="cdktn.IScopeCallback"></a>
+
+- *Implemented By:* <a href="#cdktn.IScopeCallback">IScopeCallback</a>
+
+### IStackSynthesizer <a name="IStackSynthesizer" id="cdktn.IStackSynthesizer"></a>
+
+- *Implemented By:* <a href="#cdktn.IStackSynthesizer">IStackSynthesizer</a>
+
+Encodes information how a certain Stack should be deployed inspired by AWS CDK v2 implementation (synth functionality was removed in constructs v10).
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IStackSynthesizer.synthesize">synthesize</a></code> | Synthesize the associated stack to the session. |
+
+***
+
+##### `synthesize` <a name="synthesize" id="cdktn.IStackSynthesizer.synthesize"></a>
+
+```java
+public void synthesize(ISynthesisSession session)
+```
+
+Synthesize the associated stack to the session.
+
+###### `session`<sup>Required</sup> <a name="session" id="cdktn.IStackSynthesizer.synthesize.parameter.session"></a>
+
+- *Type:* <a href="#cdktn.ISynthesisSession">ISynthesisSession</a>
+
+***
+
+### IStringProducer <a name="IStringProducer" id="cdktn.IStringProducer"></a>
+
+- *Implemented By:* <a href="#cdktn.IStringProducer">IStringProducer</a>
+
+Interface for lazy string producers.
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IStringProducer.produce">produce</a></code> | Produce the string value. |
+
+***
+
+##### `produce` <a name="produce" id="cdktn.IStringProducer.produce"></a>
+
+```java
+public java.lang.String produce(IResolveContext context)
+```
+
+Produce the string value.
+
+###### `context`<sup>Required</sup> <a name="context" id="cdktn.IStringProducer.produce.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### ISynthesisSession <a name="ISynthesisSession" id="cdktn.ISynthesisSession"></a>
+
+- *Implemented By:* <a href="#cdktn.ISynthesisSession">ISynthesisSession</a>
+
+Represents a single session of synthesis.
+
+Passed into `TerraformStack.onSynthesize()` methods.
+originally from aws/constructs lib v3.3.126 (synth functionality was removed in constructs v10)
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.ISynthesisSession.property.manifest">manifest</a></code> | <code><a href="#cdktn.Manifest">Manifest</a></code> | *No description.* |
+| <code><a href="#cdktn.ISynthesisSession.property.outdir">outdir</a></code> | <code>java.lang.String</code> | The output directory for this synthesis session. |
+| <code><a href="#cdktn.ISynthesisSession.property.skipValidation">skipValidation</a></code> | <code>java.lang.Boolean</code> | *No description.* |
+
+***
+
+##### `manifest`<sup>Required</sup> <a name="manifest" id="cdktn.ISynthesisSession.property.manifest"></a>
+
+```java
+public Manifest getManifest();
+```
+
+- *Type:* <a href="#cdktn.Manifest">Manifest</a>
+
+***
+
+##### `outdir`<sup>Required</sup> <a name="outdir" id="cdktn.ISynthesisSession.property.outdir"></a>
+
+```java
+public java.lang.String getOutdir();
+```
+
+- *Type:* java.lang.String
+
+The output directory for this synthesis session.
+
+***
+
+##### `skipValidation`<sup>Optional</sup> <a name="skipValidation" id="cdktn.ISynthesisSession.property.skipValidation"></a>
+
+```java
+public java.lang.Boolean getSkipValidation();
+```
+
+- *Type:* java.lang.Boolean
+
+***
+
+### ITerraformAddressable <a name="ITerraformAddressable" id="cdktn.ITerraformAddressable"></a>
+
+- *Implemented By:* <a href="#cdktn.AnyListList">AnyListList</a>, <a href="#cdktn.AnyListMap">AnyListMap</a>, <a href="#cdktn.AnyMap">AnyMap</a>, <a href="#cdktn.AnyMapList">AnyMapList</a>, <a href="#cdktn.BooleanList">BooleanList</a>, <a href="#cdktn.BooleanListList">BooleanListList</a>, <a href="#cdktn.BooleanListMap">BooleanListMap</a>, <a href="#cdktn.BooleanMap">BooleanMap</a>, <a href="#cdktn.BooleanMapList">BooleanMapList</a>, <a href="#cdktn.ComplexComputedList">ComplexComputedList</a>, <a href="#cdktn.ComplexList">ComplexList</a>, <a href="#cdktn.ComplexMap">ComplexMap</a>, <a href="#cdktn.ComplexObject">ComplexObject</a>, <a href="#cdktn.DataResource">DataResource</a>, <a href="#cdktn.DataTerraformRemoteState">DataTerraformRemoteState</a>, <a href="#cdktn.DataTerraformRemoteStateAzurerm">DataTerraformRemoteStateAzurerm</a>, <a href="#cdktn.DataTerraformRemoteStateConsul">DataTerraformRemoteStateConsul</a>, <a href="#cdktn.DataTerraformRemoteStateCos">DataTerraformRemoteStateCos</a>, <a href="#cdktn.DataTerraformRemoteStateGcs">DataTerraformRemoteStateGcs</a>, <a href="#cdktn.DataTerraformRemoteStateHttp">DataTerraformRemoteStateHttp</a>, <a href="#cdktn.DataTerraformRemoteStateLocal">DataTerraformRemoteStateLocal</a>, <a href="#cdktn.DataTerraformRemoteStateOss">DataTerraformRemoteStateOss</a>, <a href="#cdktn.DataTerraformRemoteStatePg">DataTerraformRemoteStatePg</a>, <a href="#cdktn.DataTerraformRemoteStateS3">DataTerraformRemoteStateS3</a>, <a href="#cdktn.DataTerraformRemoteStateSwift">DataTerraformRemoteStateSwift</a>, <a href="#cdktn.MapList">MapList</a>, <a href="#cdktn.NumberListList">NumberListList</a>, <a href="#cdktn.NumberListMap">NumberListMap</a>, <a href="#cdktn.NumberMap">NumberMap</a>, <a href="#cdktn.NumberMapList">NumberMapList</a>, <a href="#cdktn.StringListList">StringListList</a>, <a href="#cdktn.StringListMap">StringListMap</a>, <a href="#cdktn.StringMap">StringMap</a>, <a href="#cdktn.StringMapList">StringMapList</a>, <a href="#cdktn.TerraformDataSource">TerraformDataSource</a>, <a href="#cdktn.TerraformHclModule">TerraformHclModule</a>, <a href="#cdktn.TerraformLocal">TerraformLocal</a>, <a href="#cdktn.TerraformModule">TerraformModule</a>, <a href="#cdktn.TerraformRemoteState">TerraformRemoteState</a>, <a href="#cdktn.TerraformResource">TerraformResource</a>, <a href="#cdktn.TerraformVariable">TerraformVariable</a>, <a href="#cdktn.ITerraformAddressable">ITerraformAddressable</a>, <a href="#cdktn.ITerraformDependable">ITerraformDependable</a>
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.ITerraformAddressable.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.ITerraformAddressable.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### ITerraformDependable <a name="ITerraformDependable" id="cdktn.ITerraformDependable"></a>
+
+- *Extends:* <a href="#cdktn.ITerraformAddressable">ITerraformAddressable</a>
+
+- *Implemented By:* <a href="#cdktn.DataResource">DataResource</a>, <a href="#cdktn.TerraformDataSource">TerraformDataSource</a>, <a href="#cdktn.TerraformHclModule">TerraformHclModule</a>, <a href="#cdktn.TerraformModule">TerraformModule</a>, <a href="#cdktn.TerraformResource">TerraformResource</a>, <a href="#cdktn.ITerraformDependable">ITerraformDependable</a>
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.ITerraformDependable.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.ITerraformDependable.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### ITerraformIterator <a name="ITerraformIterator" id="cdktn.ITerraformIterator"></a>
+
+- *Implemented By:* <a href="#cdktn.DynamicListTerraformIterator">DynamicListTerraformIterator</a>, <a href="#cdktn.ListTerraformIterator">ListTerraformIterator</a>, <a href="#cdktn.MapTerraformIterator">MapTerraformIterator</a>, <a href="#cdktn.ResourceTerraformIterator">ResourceTerraformIterator</a>, <a href="#cdktn.TerraformIterator">TerraformIterator</a>, <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+### ITerraformResource <a name="ITerraformResource" id="cdktn.ITerraformResource"></a>
+
+- *Implemented By:* <a href="#cdktn.DataResource">DataResource</a>, <a href="#cdktn.TerraformDataSource">TerraformDataSource</a>, <a href="#cdktn.TerraformResource">TerraformResource</a>, <a href="#cdktn.ITerraformResource">ITerraformResource</a>
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.ITerraformResource.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+
+***
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="cdktn.ITerraformResource.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.ITerraformResource.interpolationForAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.ITerraformResource.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.count">count</a></code> | <code>java.lang.Number&#124;<a href="#cdktn.TerraformCount">TerraformCount</a></code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.dependsOn">dependsOn</a></code> | <code>java.util.List&lt; java.lang.String ></code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.forEach">forEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.lifecycle">lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.provider">provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+
+***
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.ITerraformResource.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.ITerraformResource.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+
+##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="cdktn.ITerraformResource.property.terraformResourceType"></a>
+
+```java
+public java.lang.String getTerraformResourceType();
+```
+
+- *Type:* java.lang.String
+
+***
+
+##### `count`<sup>Optional</sup> <a name="count" id="cdktn.ITerraformResource.property.count"></a>
+
+```java
+public java.lang.Number|TerraformCount getCount();
+```
+
+- *Type:* java.lang.Number|<a href="#cdktn.TerraformCount">TerraformCount</a>
+
+***
+
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="cdktn.ITerraformResource.property.dependsOn"></a>
+
+```java
+public java.util.List<java.lang.String> getDependsOn();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+***
+
+##### `forEach`<sup>Optional</sup> <a name="forEach" id="cdktn.ITerraformResource.property.forEach"></a>
+
+```java
+public ITerraformIterator getForEach();
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="cdktn.ITerraformResource.property.lifecycle"></a>
+
+```java
+public TerraformResourceLifecycle getLifecycle();
+```
+
+- *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
+
+***
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.ITerraformResource.property.provider"></a>
+
+```java
+public TerraformProvider getProvider();
+```
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### ITokenMapper <a name="ITokenMapper" id="cdktn.ITokenMapper"></a>
+
+- *Implemented By:* <a href="#cdktn.ITokenMapper">ITokenMapper</a>
+
+Interface to apply operation to tokens in a string.
+
+Interface so it can be exported via jsii.
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.ITokenMapper.mapToken">mapToken</a></code> | Replace a single token. |
+
+***
+
+##### `mapToken` <a name="mapToken" id="cdktn.ITokenMapper.mapToken"></a>
+
+```java
+public java.lang.Object mapToken(IResolvable t)
+```
+
+Replace a single token.
+
+###### `t`<sup>Required</sup> <a name="t" id="cdktn.ITokenMapper.mapToken.parameter.t"></a>
+
+- *Type:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+***
+
+### ITokenResolver <a name="ITokenResolver" id="cdktn.ITokenResolver"></a>
+
+- *Implemented By:* <a href="#cdktn.DefaultTokenResolver">DefaultTokenResolver</a>, <a href="#cdktn.ITokenResolver">ITokenResolver</a>
+
+How to resolve tokens.
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.ITokenResolver.resolveList">resolveList</a></code> | Resolve a tokenized list. |
+| <code><a href="#cdktn.ITokenResolver.resolveMap">resolveMap</a></code> | Resolve a tokenized map. |
+| <code><a href="#cdktn.ITokenResolver.resolveNumberList">resolveNumberList</a></code> | Resolve a tokenized number list. |
+| <code><a href="#cdktn.ITokenResolver.resolveString">resolveString</a></code> | Resolve a string with at least one stringified token in it. |
+| <code><a href="#cdktn.ITokenResolver.resolveToken">resolveToken</a></code> | Resolve a single token. |
+
+***
+
+##### `resolveList` <a name="resolveList" id="cdktn.ITokenResolver.resolveList"></a>
+
+```java
+public java.lang.Object resolveList(java.util.List<java.lang.String> l, IResolveContext context)
+```
+
+Resolve a tokenized list.
+
+###### `l`<sup>Required</sup> <a name="l" id="cdktn.ITokenResolver.resolveList.parameter.l"></a>
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+***
+
+###### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveList.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+##### `resolveMap` <a name="resolveMap" id="cdktn.ITokenResolver.resolveMap"></a>
+
+```java
+public java.lang.Object resolveMap(java.util.Map<java.lang.String, java.lang.Object> m, IResolveContext context)
+```
+
+Resolve a tokenized map.
+
+###### `m`<sup>Required</sup> <a name="m" id="cdktn.ITokenResolver.resolveMap.parameter.m"></a>
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+###### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveMap.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+##### `resolveNumberList` <a name="resolveNumberList" id="cdktn.ITokenResolver.resolveNumberList"></a>
+
+```java
+public java.lang.Object resolveNumberList(java.util.List<java.lang.Number> l, IResolveContext context)
+```
+
+Resolve a tokenized number list.
+
+###### `l`<sup>Required</sup> <a name="l" id="cdktn.ITokenResolver.resolveNumberList.parameter.l"></a>
+
+- *Type:* java.util.List&lt; java.lang.Number >
+
+***
+
+###### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveNumberList.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+##### `resolveString` <a name="resolveString" id="cdktn.ITokenResolver.resolveString"></a>
+
+```java
+public java.lang.Object resolveString(TokenizedStringFragments s, IResolveContext context)
+```
+
+Resolve a string with at least one stringified token in it.
+
+(May use concatenation)
+
+###### `s`<sup>Required</sup> <a name="s" id="cdktn.ITokenResolver.resolveString.parameter.s"></a>
+
+- *Type:* <a href="#cdktn.TokenizedStringFragments">TokenizedStringFragments</a>
+
+***
+
+###### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveString.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+##### `resolveToken` <a name="resolveToken" id="cdktn.ITokenResolver.resolveToken"></a>
+
+```java
+public java.lang.Object resolveToken(IResolvable t, IResolveContext context, IPostProcessor postProcessor)
+```
+
+Resolve a single token.
+
+###### `t`<sup>Required</sup> <a name="t" id="cdktn.ITokenResolver.resolveToken.parameter.t"></a>
+
+- *Type:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+***
+
+###### `context`<sup>Required</sup> <a name="context" id="cdktn.ITokenResolver.resolveToken.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+###### `postProcessor`<sup>Required</sup> <a name="postProcessor" id="cdktn.ITokenResolver.resolveToken.parameter.postProcessor"></a>
+
+- *Type:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+***
+
