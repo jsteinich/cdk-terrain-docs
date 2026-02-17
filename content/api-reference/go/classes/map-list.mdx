@@ -1,0 +1,130 @@
+---
+title: "Go: MapList"
+sidebarTitle: MapList
+description: CDKTN Core API Reference for MapList in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.ITerraformAddressable">ITerraformAddressable</a>, <a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a>, <a href="#cdktn.IResolvable">IResolvable</a>
+
+## Initializers <a name="Initializers" id="cdktn.MapList.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewMapList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MapList
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.MapList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code><a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a></code> | *No description.* |
+| <code><a href="#cdktn.MapList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>\*string</code> | *No description.* |
+| <code><a href="#cdktn.MapList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>\*bool</code> | *No description.* |
+
+***
+
+### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="cdktn.MapList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* <a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a>
+
+***
+
+### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.MapList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* \*string
+
+***
+
+### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="cdktn.MapList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* \*bool
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.MapList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#cdktn.MapList.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.MapList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#cdktn.MapList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+***
+
+### `ComputeFqn` <a name="ComputeFqn" id="cdktn.MapList.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="cdktn.MapList.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+#### `property`<sup>Required</sup> <a name="property" id="cdktn.MapList.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* \*string
+
+***
+
+### `Resolve` <a name="Resolve" id="cdktn.MapList.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+#### `_context`<sup>Required</sup> <a name="_context" id="cdktn.MapList.resolve.parameter._context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `ToString` <a name="ToString" id="cdktn.MapList.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.MapList.property.creationStack">CreationStack</a></code> | <code>\*\[]\*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#cdktn.MapList.property.fqn">Fqn</a></code> | <code>\*string</code> | *No description.* |
+
+***
+
+### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="cdktn.MapList.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* \*\[]\*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+***
+
+### `Fqn`<sup>Required</sup> <a name="Fqn" id="cdktn.MapList.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* \*string
+
+***
+

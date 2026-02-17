@@ -1,0 +1,102 @@
+---
+title: "Java: LazyBase"
+sidebarTitle: LazyBase
+description: CDKTN Core API Reference for LazyBase in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+## Initializers <a name="Initializers" id="cdktn.LazyBase.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.LazyBase;
+
+new LazyBase();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.LazyBase.addPostProcessor">addPostProcessor</a></code> | *No description.* |
+| <code><a href="#cdktn.LazyBase.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#cdktn.LazyBase.toJSON">toJSON</a></code> | Turn this Token into JSON. |
+| <code><a href="#cdktn.LazyBase.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+***
+
+### `addPostProcessor` <a name="addPostProcessor" id="cdktn.LazyBase.addPostProcessor"></a>
+
+```java
+public void addPostProcessor(IPostProcessor postProcessor)
+```
+
+#### `postProcessor`<sup>Required</sup> <a name="postProcessor" id="cdktn.LazyBase.addPostProcessor.parameter.postProcessor"></a>
+
+- *Type:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+***
+
+### `resolve` <a name="resolve" id="cdktn.LazyBase.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext context)
+```
+
+Produce the Token's value at resolution time.
+
+#### `context`<sup>Required</sup> <a name="context" id="cdktn.LazyBase.resolve.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `toJSON` <a name="toJSON" id="cdktn.LazyBase.toJSON"></a>
+
+```java
+public java.lang.Object toJSON()
+```
+
+Turn this Token into JSON.
+
+Called automatically when JSON.stringify() is called on a Token.
+
+### `toString` <a name="toString" id="cdktn.LazyBase.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.LazyBase.property.creationStack">creationStack</a></code> | <code>java.util.List&lt; java.lang.String ></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+
+***
+
+### `creationStack`<sup>Required</sup> <a name="creationStack" id="cdktn.LazyBase.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+***
+

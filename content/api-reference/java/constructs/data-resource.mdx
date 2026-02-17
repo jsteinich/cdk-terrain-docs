@@ -1,0 +1,838 @@
+---
+title: "Java: DataResource"
+sidebarTitle: DataResource
+description: CDKTN Core API Reference for DataResource in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+The DataResource implements the standard resource lifecycle, but does not directly take any other actions.
+
+You can use the DataResource resource without requiring or configuring a provider.
+
+The DataResource resource is useful for storing values which need to follow a manage resource lifecycle, and for triggering provisioners when there is no other logical managed resource in which to place them.
+
+It requires Terraform 1.4 or later.
+
+It is also possible to generate these bindings by adding "terraform.io/builtin/terraform" to the "terraformProviders" key in your cdktf.json file and running "cdktn get".
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data
+
+## Initializers <a name="Initializers" id="cdktn.DataResource.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.DataResource;
+
+DataResource.Builder.create(Construct scope, java.lang.String id)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
+//  .dependsOn(java.util.List<ITerraformDependable>)
+//  .forEach(ITerraformIterator)
+//  .lifecycle(TerraformResourceLifecycle)
+//  .provider(TerraformProvider)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
+//  .input(java.util.Map<java.lang.String, java.lang.Object>)
+//  .triggersReplace(java.util.Map<java.lang.String, java.lang.Object>)
+    .build();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.connection">connection</a></code> | <code><a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a>&#124;<a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.count">count</a></code> | <code>java.lang.Number&#124;<a href="#cdktn.TerraformCount">TerraformCount</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List&lt;<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.forEach">forEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.lifecycle">lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.provider">provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List&lt;<a href="#cdktn.FileProvisioner">FileProvisioner</a>&#124;<a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a>&#124;<a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.input">input</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | (Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply. |
+| <code><a href="#cdktn.DataResource.Initializer.parameter.triggersReplace">triggersReplace</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | (Optional) A value which is stored in the instance state, and will force replacement when the value changes. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataResource.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+The scope in which to define this construct.
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataResource.Initializer.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+The scoped construct ID.
+
+Must be unique amongst siblings in the same scope
+
+***
+
+### `connection`<sup>Optional</sup> <a name="connection" id="cdktn.DataResource.Initializer.parameter.connection"></a>
+
+- *Type:* <a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a>|<a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a>
+
+***
+
+### `count`<sup>Optional</sup> <a name="count" id="cdktn.DataResource.Initializer.parameter.count"></a>
+
+- *Type:* java.lang.Number|<a href="#cdktn.TerraformCount">TerraformCount</a>
+
+***
+
+### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="cdktn.DataResource.Initializer.parameter.dependsOn"></a>
+
+- *Type:* java.util.List&lt;<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>>
+
+***
+
+### `forEach`<sup>Optional</sup> <a name="forEach" id="cdktn.DataResource.Initializer.parameter.forEach"></a>
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="cdktn.DataResource.Initializer.parameter.lifecycle"></a>
+
+- *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
+
+***
+
+### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.DataResource.Initializer.parameter.provider"></a>
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### `provisioners`<sup>Optional</sup> <a name="provisioners" id="cdktn.DataResource.Initializer.parameter.provisioners"></a>
+
+- *Type:* java.util.List&lt;<a href="#cdktn.FileProvisioner">FileProvisioner</a>|<a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a>|<a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>>
+
+***
+
+### `input`<sup>Optional</sup> <a name="input" id="cdktn.DataResource.Initializer.parameter.input"></a>
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+(Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#input
+
+***
+
+### `triggersReplace`<sup>Optional</sup> <a name="triggersReplace" id="cdktn.DataResource.Initializer.parameter.triggersReplace"></a>
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+(Optional) A value which is stored in the instance state, and will force replacement when the value changes.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#triggers\_replace
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataResource.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.DataResource.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.DataResource.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.DataResource.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataResource.addMoveTarget">addMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
+| <code><a href="#cdktn.DataResource.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.hasResourceMove">hasResourceMove</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.importFrom">importFrom</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.moveFromId">moveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#cdktn.DataResource.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#cdktn.DataResource.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#cdktn.DataResource.resetInput">resetInput</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.resetTriggersReplace">resetTriggersReplace</a></code> | *No description.* |
+
+***
+
+### `toString` <a name="toString" id="cdktn.DataResource.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `addOverride` <a name="addOverride" id="cdktn.DataResource.addOverride"></a>
+
+```java
+public void addOverride(java.lang.String path, java.lang.Object value)
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.DataResource.addOverride.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.DataResource.addOverride.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `overrideLogicalId` <a name="overrideLogicalId" id="cdktn.DataResource.overrideLogicalId"></a>
+
+```java
+public void overrideLogicalId(java.lang.String newLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.DataResource.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* java.lang.String
+
+The new logical ID to use for this stack element.
+
+***
+
+### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktn.DataResource.resetOverrideLogicalId"></a>
+
+```java
+public void resetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.DataResource.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+### `toMetadata` <a name="toMetadata" id="cdktn.DataResource.toMetadata"></a>
+
+```java
+public java.lang.Object toMetadata()
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.DataResource.toTerraform"></a>
+
+```java
+public java.lang.Object toTerraform()
+```
+
+Adds this resource to the terraform JSON output.
+
+### `addMoveTarget` <a name="addMoveTarget" id="cdktn.DataResource.addMoveTarget"></a>
+
+```java
+public void addMoveTarget(java.lang.String moveTarget)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+#### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="cdktn.DataResource.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* java.lang.String
+
+The string move target that will correspond to this resource.
+
+***
+
+### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="cdktn.DataResource.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+#### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.DataResource.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getBooleanAttribute` <a name="getBooleanAttribute" id="cdktn.DataResource.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+#### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.DataResource.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="cdktn.DataResource.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+#### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.DataResource.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getListAttribute` <a name="getListAttribute" id="cdktn.DataResource.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+#### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.DataResource.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getNumberAttribute` <a name="getNumberAttribute" id="cdktn.DataResource.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+#### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.DataResource.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getNumberListAttribute` <a name="getNumberListAttribute" id="cdktn.DataResource.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+#### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.DataResource.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="cdktn.DataResource.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+#### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.DataResource.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getStringAttribute` <a name="getStringAttribute" id="cdktn.DataResource.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+#### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.DataResource.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getStringMapAttribute` <a name="getStringMapAttribute" id="cdktn.DataResource.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+#### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.DataResource.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `hasResourceMove` <a name="hasResourceMove" id="cdktn.DataResource.hasResourceMove"></a>
+
+```java
+public TerraformResourceMoveByTarget|TerraformResourceMoveById hasResourceMove()
+```
+
+### `importFrom` <a name="importFrom" id="cdktn.DataResource.importFrom"></a>
+
+```java
+public void importFrom(java.lang.String id)
+public void importFrom(java.lang.String id, TerraformProvider provider)
+```
+
+#### `id`<sup>Required</sup> <a name="id" id="cdktn.DataResource.importFrom.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.DataResource.importFrom.parameter.provider"></a>
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### `interpolationForAttribute` <a name="interpolationForAttribute" id="cdktn.DataResource.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String terraformAttribute)
+```
+
+#### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.DataResource.interpolationForAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `moveFromId` <a name="moveFromId" id="cdktn.DataResource.moveFromId"></a>
+
+```java
+public void moveFromId(java.lang.String id)
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+#### `id`<sup>Required</sup> <a name="id" id="cdktn.DataResource.moveFromId.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+Full id of resource being moved from, e.g. "aws\_s3\_bucket.example".
+
+***
+
+### `moveTo` <a name="moveTo" id="cdktn.DataResource.moveTo"></a>
+
+```java
+public void moveTo(java.lang.String moveTarget)
+public void moveTo(java.lang.String moveTarget, java.lang.String|java.lang.Number index)
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+#### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="cdktn.DataResource.moveTo.parameter.moveTarget"></a>
+
+- *Type:* java.lang.String
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+***
+
+#### `index`<sup>Optional</sup> <a name="index" id="cdktn.DataResource.moveTo.parameter.index"></a>
+
+- *Type:* java.lang.String|java.lang.Number
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+***
+
+### `moveToId` <a name="moveToId" id="cdktn.DataResource.moveToId"></a>
+
+```java
+public void moveToId(java.lang.String id)
+```
+
+Moves this resource to the resource corresponding to "id".
+
+#### `id`<sup>Required</sup> <a name="id" id="cdktn.DataResource.moveToId.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+Full id of resource to move to, e.g. "aws\_s3\_bucket.example".
+
+***
+
+### `resetInput` <a name="resetInput" id="cdktn.DataResource.resetInput"></a>
+
+```java
+public void resetInput()
+```
+
+### `resetTriggersReplace` <a name="resetTriggersReplace" id="cdktn.DataResource.resetTriggersReplace"></a>
+
+```java
+public void resetTriggersReplace()
+```
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataResource.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.DataResource.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.isTerraformResource">isTerraformResource</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTN code for importing a Data resource upon running "cdktn plan &lt; stack-name >". |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.DataResource.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.DataResource;
+
+DataResource.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataResource.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isTerraformElement` <a name="isTerraformElement" id="cdktn.DataResource.isTerraformElement"></a>
+
+```java
+import io.cdktn.cdktn.DataResource;
+
+DataResource.isTerraformElement(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataResource.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `isTerraformResource` <a name="isTerraformResource" id="cdktn.DataResource.isTerraformResource"></a>
+
+```java
+import io.cdktn.cdktn.DataResource;
+
+DataResource.isTerraformResource(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataResource.isTerraformResource.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `generateConfigForImport` <a name="generateConfigForImport" id="cdktn.DataResource.generateConfigForImport"></a>
+
+```java
+import io.cdktn.cdktn.DataResource;
+
+DataResource.generateConfigForImport(Construct scope, java.lang.String importToId, java.lang.String importFromId),DataResource.generateConfigForImport(Construct scope, java.lang.String importToId, java.lang.String importFromId, TerraformProvider provider)
+```
+
+Generates CDKTN code for importing a Data resource upon running "cdktn plan &lt; stack-name >".
+
+#### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataResource.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+The scope in which to define this construct.
+
+***
+
+#### `importToId`<sup>Required</sup> <a name="importToId" id="cdktn.DataResource.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* java.lang.String
+
+The construct id used in the generated config for the Data to import.
+
+***
+
+#### `importFromId`<sup>Required</sup> <a name="importFromId" id="cdktn.DataResource.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* java.lang.String
+
+The id of the existing Data that should be imported.
+
+Refer to the [import section](https://terraform.io/providers/builtin/terraform/latest/docs/resources/data#import) in the documentation of this resource for the id to use
+
+***
+
+#### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.DataResource.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+? Optional instance of the provider where the Data to import is found.
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataResource.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.DataResource.property.cdktfStack">cdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code><a href="#cdktn.TerraformProviderGeneratorMetadata">TerraformProviderGeneratorMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.connection">connection</a></code> | <code><a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a>&#124;<a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.count">count</a></code> | <code>java.lang.Number&#124;<a href="#cdktn.TerraformCount">TerraformCount</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.dependsOn">dependsOn</a></code> | <code>java.util.List&lt; java.lang.String ></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.forEach">forEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.lifecycle">lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.provider">provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.provisioners">provisioners</a></code> | <code>java.util.List&lt;<a href="#cdktn.FileProvisioner">FileProvisioner</a>&#124;<a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a>&#124;<a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.output">output</a></code> | <code><a href="#cdktn.AnyMap">AnyMap</a></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.inputInput">inputInput</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.triggersReplaceInput">triggersReplaceInput</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | *No description.* |
+| <code><a href="#cdktn.DataResource.property.input">input</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | (Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply. |
+| <code><a href="#cdktn.DataResource.property.triggersReplace">triggersReplace</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | (Optional) A value which is stored in the instance state, and will force replacement when the value changes. |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.DataResource.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktn.DataResource.property.cdktfStack"></a>
+
+```java
+public TerraformStack getCdktfStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.DataResource.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.DataResource.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `terraformMetaArguments`<sup>Required</sup> <a name="terraformMetaArguments" id="cdktn.DataResource.property.terraformMetaArguments"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getTerraformMetaArguments();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="cdktn.DataResource.property.terraformResourceType"></a>
+
+```java
+public java.lang.String getTerraformResourceType();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `terraformGeneratorMetadata`<sup>Optional</sup> <a name="terraformGeneratorMetadata" id="cdktn.DataResource.property.terraformGeneratorMetadata"></a>
+
+```java
+public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
+```
+
+- *Type:* <a href="#cdktn.TerraformProviderGeneratorMetadata">TerraformProviderGeneratorMetadata</a>
+
+***
+
+### `connection`<sup>Optional</sup> <a name="connection" id="cdktn.DataResource.property.connection"></a>
+
+```java
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
+```
+
+- *Type:* <a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a>|<a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a>
+
+***
+
+### `count`<sup>Optional</sup> <a name="count" id="cdktn.DataResource.property.count"></a>
+
+```java
+public java.lang.Number|TerraformCount getCount();
+```
+
+- *Type:* java.lang.Number|<a href="#cdktn.TerraformCount">TerraformCount</a>
+
+***
+
+### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="cdktn.DataResource.property.dependsOn"></a>
+
+```java
+public java.util.List<java.lang.String> getDependsOn();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+***
+
+### `forEach`<sup>Optional</sup> <a name="forEach" id="cdktn.DataResource.property.forEach"></a>
+
+```java
+public ITerraformIterator getForEach();
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="cdktn.DataResource.property.lifecycle"></a>
+
+```java
+public TerraformResourceLifecycle getLifecycle();
+```
+
+- *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
+
+***
+
+### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.DataResource.property.provider"></a>
+
+```java
+public TerraformProvider getProvider();
+```
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### `provisioners`<sup>Optional</sup> <a name="provisioners" id="cdktn.DataResource.property.provisioners"></a>
+
+```java
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
+```
+
+- *Type:* java.util.List&lt;<a href="#cdktn.FileProvisioner">FileProvisioner</a>|<a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a>|<a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>>
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataResource.property.id"></a>
+
+```java
+public java.lang.String getId();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `output`<sup>Required</sup> <a name="output" id="cdktn.DataResource.property.output"></a>
+
+```java
+public AnyMap getOutput();
+```
+
+- *Type:* <a href="#cdktn.AnyMap">AnyMap</a>
+
+***
+
+### `inputInput`<sup>Optional</sup> <a name="inputInput" id="cdktn.DataResource.property.inputInput"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getInputInput();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+### `triggersReplaceInput`<sup>Optional</sup> <a name="triggersReplaceInput" id="cdktn.DataResource.property.triggersReplaceInput"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getTriggersReplaceInput();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+### `input`<sup>Required</sup> <a name="input" id="cdktn.DataResource.property.input"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getInput();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+(Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#input
+
+***
+
+### `triggersReplace`<sup>Required</sup> <a name="triggersReplace" id="cdktn.DataResource.property.triggersReplace"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getTriggersReplace();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+(Optional) A value which is stored in the instance state, and will force replacement when the value changes.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#triggers\_replace
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataResource.property.tfResourceType">tfResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="cdktn.DataResource.property.tfResourceType"></a>
+
+```java
+public java.lang.String getTfResourceType();
+```
+
+- *Type:* java.lang.String
+
+***
+

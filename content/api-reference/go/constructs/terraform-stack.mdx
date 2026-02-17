@@ -1,0 +1,309 @@
+---
+title: "Go: TerraformStack"
+sidebarTitle: TerraformStack
+description: CDKTN Core API Reference for TerraformStack in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.TerraformStack.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewTerraformStack(scope Construct, id *string) TerraformStack
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformStack.Initializer.parameter.scope">scope</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.Initializer.parameter.id">id</a></code> | <code>\*string</code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.TerraformStack.Initializer.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.TerraformStack.Initializer.parameter.id"></a>
+
+- *Type:* \*string
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformStack.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformStack.addDependency">AddDependency</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.addOverride">AddOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.allProviders">AllProviders</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.dependsOn">DependsOn</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.ensureBackendExists">EnsureBackendExists</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.getLogicalId">GetLogicalId</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.hasResourceMove">HasResourceMove</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.prepareStack">PrepareStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.registerIncomingCrossStackReference">RegisterIncomingCrossStackReference</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.registerOutgoingCrossStackReference">RegisterOutgoingCrossStackReference</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.runAllValidations">RunAllValidations</a></code> | Run all validations on the stack. |
+| <code><a href="#cdktn.TerraformStack.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.toTerraform">ToTerraform</a></code> | *No description.* |
+
+***
+
+### `ToString` <a name="ToString" id="cdktn.TerraformStack.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Returns a string representation of this construct.
+
+### `AddDependency` <a name="AddDependency" id="cdktn.TerraformStack.addDependency"></a>
+
+```go
+func AddDependency(dependency TerraformStack)
+```
+
+#### `dependency`<sup>Required</sup> <a name="dependency" id="cdktn.TerraformStack.addDependency.parameter.dependency"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `AddOverride` <a name="AddOverride" id="cdktn.TerraformStack.addOverride"></a>
+
+```go
+func AddOverride(path *string, value interface{})
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.TerraformStack.addOverride.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformStack.addOverride.parameter.value"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `AllProviders` <a name="AllProviders" id="cdktn.TerraformStack.allProviders"></a>
+
+```go
+func AllProviders() *[]TerraformProvider
+```
+
+### `DependsOn` <a name="DependsOn" id="cdktn.TerraformStack.dependsOn"></a>
+
+```go
+func DependsOn(stack TerraformStack) *bool
+```
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.TerraformStack.dependsOn.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `EnsureBackendExists` <a name="EnsureBackendExists" id="cdktn.TerraformStack.ensureBackendExists"></a>
+
+```go
+func EnsureBackendExists() TerraformBackend
+```
+
+### `GetLogicalId` <a name="GetLogicalId" id="cdktn.TerraformStack.getLogicalId"></a>
+
+```go
+func GetLogicalId(tfElement interface{}) *string
+```
+
+#### `tfElement`<sup>Required</sup> <a name="tfElement" id="cdktn.TerraformStack.getLogicalId.parameter.tfElement"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `HasResourceMove` <a name="HasResourceMove" id="cdktn.TerraformStack.hasResourceMove"></a>
+
+```go
+func HasResourceMove() *bool
+```
+
+### `PrepareStack` <a name="PrepareStack" id="cdktn.TerraformStack.prepareStack"></a>
+
+```go
+func PrepareStack()
+```
+
+### `RegisterIncomingCrossStackReference` <a name="RegisterIncomingCrossStackReference" id="cdktn.TerraformStack.registerIncomingCrossStackReference"></a>
+
+```go
+func RegisterIncomingCrossStackReference(fromStack TerraformStack) TerraformRemoteState
+```
+
+#### `fromStack`<sup>Required</sup> <a name="fromStack" id="cdktn.TerraformStack.registerIncomingCrossStackReference.parameter.fromStack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `RegisterOutgoingCrossStackReference` <a name="RegisterOutgoingCrossStackReference" id="cdktn.TerraformStack.registerOutgoingCrossStackReference"></a>
+
+```go
+func RegisterOutgoingCrossStackReference(identifier *string) TerraformOutput
+```
+
+#### `identifier`<sup>Required</sup> <a name="identifier" id="cdktn.TerraformStack.registerOutgoingCrossStackReference.parameter.identifier"></a>
+
+- *Type:* \*string
+
+***
+
+### `RunAllValidations` <a name="RunAllValidations" id="cdktn.TerraformStack.runAllValidations"></a>
+
+```go
+func RunAllValidations()
+```
+
+Run all validations on the stack.
+
+### `ToHclTerraform` <a name="ToHclTerraform" id="cdktn.TerraformStack.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() *map[string]interface{}
+```
+
+### `ToTerraform` <a name="ToTerraform" id="cdktn.TerraformStack.toTerraform"></a>
+
+```go
+func ToTerraform() interface{}
+```
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformStack.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformStack.isStack">IsStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.of">Of</a></code> | *No description.* |
+
+***
+
+### `IsConstruct` <a name="IsConstruct" id="cdktn.TerraformStack.isConstruct"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.TerraformStack_IsConstruct(x interface{}) *bool
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformStack.isConstruct.parameter.x"></a>
+
+- *Type:* interface\{}
+
+Any object.
+
+***
+
+### `IsStack` <a name="IsStack" id="cdktn.TerraformStack.isStack"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.TerraformStack_IsStack(x interface{}) *bool
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformStack.isStack.parameter.x"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Of` <a name="Of" id="cdktn.TerraformStack.of"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.TerraformStack_Of(construct IConstruct) TerraformStack
+```
+
+#### `construct`<sup>Required</sup> <a name="construct" id="cdktn.TerraformStack.of.parameter.construct"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.IConstruct
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformStack.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformStack.property.dependencies">Dependencies</a></code> | <code>\*\[]<a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.property.moveTargets">MoveTargets</a></code> | <code><a href="#cdktn.TerraformResourceTargets">TerraformResourceTargets</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformStack.property.synthesizer">Synthesizer</a></code> | <code><a href="#cdktn.IStackSynthesizer">IStackSynthesizer</a></code> | *No description.* |
+
+***
+
+### `Node`<sup>Required</sup> <a name="Node" id="cdktn.TerraformStack.property.node"></a>
+
+```go
+func Node() Node
+```
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Node
+
+The tree node.
+
+***
+
+### `Dependencies`<sup>Required</sup> <a name="Dependencies" id="cdktn.TerraformStack.property.dependencies"></a>
+
+```go
+func Dependencies() *[]TerraformStack
+```
+
+- *Type:* \*\[]<a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `MoveTargets`<sup>Required</sup> <a name="MoveTargets" id="cdktn.TerraformStack.property.moveTargets"></a>
+
+```go
+func MoveTargets() TerraformResourceTargets
+```
+
+- *Type:* <a href="#cdktn.TerraformResourceTargets">TerraformResourceTargets</a>
+
+***
+
+### `Synthesizer`<sup>Required</sup> <a name="Synthesizer" id="cdktn.TerraformStack.property.synthesizer"></a>
+
+```go
+func Synthesizer() IStackSynthesizer
+```
+
+- *Type:* <a href="#cdktn.IStackSynthesizer">IStackSynthesizer</a>
+
+***
+

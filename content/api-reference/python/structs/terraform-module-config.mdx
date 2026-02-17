@@ -1,0 +1,96 @@
+---
+title: "Python: TerraformModuleConfig"
+sidebarTitle: TerraformModuleConfig
+description: CDKTN Core API Reference for TerraformModuleConfig in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.TerraformModuleConfig.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformModuleConfig(
+  depends_on: typing.List[ITerraformDependable] = None,
+  for_each: ITerraformIterator = None,
+  providers: typing.List[TerraformProvider | TerraformModuleProvider] = None,
+  skip_asset_creation_from_local_modules: bool = None,
+  source: str,
+  version: str = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformModuleConfig.property.dependsOn">depends\_on</a></code> | <code>typing.List\[<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModuleConfig.property.forEach">for\_each</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformModuleConfig.property.providers">providers</a></code> | <code>typing.List\[<a href="#cdktn.TerraformProvider">TerraformProvider</a> &#124; <a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModuleConfig.property.skipAssetCreationFromLocalModules">skip\_asset\_creation\_from\_local\_modules</a></code> | <code>bool</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModuleConfig.property.source">source</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModuleConfig.property.version">version</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `depends_on`<sup>Optional</sup> <a name="depends_on" id="cdktn.TerraformModuleConfig.property.dependsOn"></a>
+
+```python
+depends_on: typing.List[ITerraformDependable]
+```
+
+- *Type:* typing.List\[<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>]
+
+***
+
+### `for_each`<sup>Optional</sup> <a name="for_each" id="cdktn.TerraformModuleConfig.property.forEach"></a>
+
+```python
+for_each: ITerraformIterator
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `providers`<sup>Optional</sup> <a name="providers" id="cdktn.TerraformModuleConfig.property.providers"></a>
+
+```python
+providers: typing.List[TerraformProvider | TerraformModuleProvider]
+```
+
+- *Type:* typing.List\[<a href="#cdktn.TerraformProvider">TerraformProvider</a> | <a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>]
+
+***
+
+### `skip_asset_creation_from_local_modules`<sup>Optional</sup> <a name="skip_asset_creation_from_local_modules" id="cdktn.TerraformModuleConfig.property.skipAssetCreationFromLocalModules"></a>
+
+```python
+skip_asset_creation_from_local_modules: bool
+```
+
+- *Type:* bool
+
+***
+
+### `source`<sup>Required</sup> <a name="source" id="cdktn.TerraformModuleConfig.property.source"></a>
+
+```python
+source: str
+```
+
+- *Type:* str
+
+***
+
+### `version`<sup>Optional</sup> <a name="version" id="cdktn.TerraformModuleConfig.property.version"></a>
+
+```python
+version: str
+```
+
+- *Type:* str
+
+***
+

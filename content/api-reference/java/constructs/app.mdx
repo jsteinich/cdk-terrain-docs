@@ -1,0 +1,316 @@
+---
+title: "Java: App"
+sidebarTitle: App
+description: CDKTN Core API Reference for App in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Represents a cdktn application.
+
+## Initializers <a name="Initializers" id="cdktn.App.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.App;
+
+App.Builder.create()
+//  .context(java.util.Map<java.lang.String, java.lang.Object>)
+//  .hclOutput(java.lang.Boolean)
+//  .outdir(java.lang.String)
+//  .skipBackendValidation(java.lang.Boolean)
+//  .skipValidation(java.lang.Boolean)
+//  .stackTraces(java.lang.Boolean)
+    .build();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.App.Initializer.parameter.context">context</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | Additional context values for the application. |
+| <code><a href="#cdktn.App.Initializer.parameter.hclOutput">hclOutput</a></code> | <code>java.lang.Boolean</code> | *No description.* |
+| <code><a href="#cdktn.App.Initializer.parameter.outdir">outdir</a></code> | <code>java.lang.String</code> | The directory to output Terraform resources. |
+| <code><a href="#cdktn.App.Initializer.parameter.skipBackendValidation">skipBackendValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#cdktn.App.Initializer.parameter.skipValidation">skipValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip all validations during synthesis of the app. |
+| <code><a href="#cdktn.App.Initializer.parameter.stackTraces">stackTraces</a></code> | <code>java.lang.Boolean</code> | *No description.* |
+
+***
+
+### `context`<sup>Optional</sup> <a name="context" id="cdktn.App.Initializer.parameter.context"></a>
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+- *Default:* no additional context
+
+Additional context values for the application.
+
+Context set by the CLI or the `context` key in `cdktf.json` has precedence.
+
+Context can be read from any construct using `node.getContext(key)`.
+
+***
+
+### `hclOutput`<sup>Optional</sup> <a name="hclOutput" id="cdktn.App.Initializer.parameter.hclOutput"></a>
+
+- *Type:* java.lang.Boolean
+
+***
+
+### `outdir`<sup>Optional</sup> <a name="outdir" id="cdktn.App.Initializer.parameter.outdir"></a>
+
+- *Type:* java.lang.String
+- *Default:* CDKTF\_OUTDIR if defined, otherwise "cdktf.out"
+
+The directory to output Terraform resources.
+
+If you are using the CDKTN CLI, this value is automatically set from one of the following three sources:
+
+- The `-o` / `--output` CLI option
+- The `CDKTF_OUTDIR` environment variable
+- The `outdir` key in `cdktf.json`
+
+If you are using the CDKTN CLI and want to set a different value here, you will also need to set the same value via one of the three ways specified above.
+
+The most common case to set this value is when you are using the CDKTN library directly (e.g. when writing unit tests).
+
+***
+
+### `skipBackendValidation`<sup>Optional</sup> <a name="skipBackendValidation" id="cdktn.App.Initializer.parameter.skipBackendValidation"></a>
+
+- *Type:* java.lang.Boolean
+- *Default:* false
+
+Whether to skip backend validation during synthesis of the app.
+
+***
+
+### `skipValidation`<sup>Optional</sup> <a name="skipValidation" id="cdktn.App.Initializer.parameter.skipValidation"></a>
+
+- *Type:* java.lang.Boolean
+- *Default:* false
+
+Whether to skip all validations during synthesis of the app.
+
+***
+
+### `stackTraces`<sup>Optional</sup> <a name="stackTraces" id="cdktn.App.Initializer.parameter.stackTraces"></a>
+
+- *Type:* java.lang.Boolean
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.App.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.App.crossStackReference">crossStackReference</a></code> | Creates a reference from one stack to another, invoked on prepareStack since it creates extra resources. |
+| <code><a href="#cdktn.App.synth">synth</a></code> | Synthesizes all resources to the output directory. |
+
+***
+
+### `toString` <a name="toString" id="cdktn.App.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `crossStackReference` <a name="crossStackReference" id="cdktn.App.crossStackReference"></a>
+
+```java
+public java.lang.String crossStackReference(TerraformStack fromStack, TerraformStack toStack, java.lang.String identifier)
+```
+
+Creates a reference from one stack to another, invoked on prepareStack since it creates extra resources.
+
+#### `fromStack`<sup>Required</sup> <a name="fromStack" id="cdktn.App.crossStackReference.parameter.fromStack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `toStack`<sup>Required</sup> <a name="toStack" id="cdktn.App.crossStackReference.parameter.toStack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `identifier`<sup>Required</sup> <a name="identifier" id="cdktn.App.crossStackReference.parameter.identifier"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `synth` <a name="synth" id="cdktn.App.synth"></a>
+
+```java
+public void synth()
+```
+
+Synthesizes all resources to the output directory.
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.App.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.App.isApp">isApp</a></code> | *No description.* |
+| <code><a href="#cdktn.App.of">of</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.App.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.App;
+
+App.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.App.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isApp` <a name="isApp" id="cdktn.App.isApp"></a>
+
+```java
+import io.cdktn.cdktn.App;
+
+App.isApp(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.App.isApp.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `of` <a name="of" id="cdktn.App.of"></a>
+
+```java
+import io.cdktn.cdktn.App;
+
+App.of(IConstruct construct)
+```
+
+#### `construct`<sup>Required</sup> <a name="construct" id="cdktn.App.of.parameter.construct"></a>
+
+- *Type:* software.constructs.IConstruct
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.App.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.App.property.hclOutput">hclOutput</a></code> | <code>java.lang.Boolean</code> | *No description.* |
+| <code><a href="#cdktn.App.property.manifest">manifest</a></code> | <code><a href="#cdktn.Manifest">Manifest</a></code> | *No description.* |
+| <code><a href="#cdktn.App.property.outdir">outdir</a></code> | <code>java.lang.String</code> | The output directory into which resources will be synthesized. |
+| <code><a href="#cdktn.App.property.skipBackendValidation">skipBackendValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#cdktn.App.property.skipValidation">skipValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip all validations during synthesis of the app. |
+| <code><a href="#cdktn.App.property.targetStackId">targetStackId</a></code> | <code>java.lang.String</code> | The stack which will be synthesized. |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.App.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `hclOutput`<sup>Required</sup> <a name="hclOutput" id="cdktn.App.property.hclOutput"></a>
+
+```java
+public java.lang.Boolean getHclOutput();
+```
+
+- *Type:* java.lang.Boolean
+
+***
+
+### `manifest`<sup>Required</sup> <a name="manifest" id="cdktn.App.property.manifest"></a>
+
+```java
+public Manifest getManifest();
+```
+
+- *Type:* <a href="#cdktn.Manifest">Manifest</a>
+
+***
+
+### `outdir`<sup>Required</sup> <a name="outdir" id="cdktn.App.property.outdir"></a>
+
+```java
+public java.lang.String getOutdir();
+```
+
+- *Type:* java.lang.String
+
+The output directory into which resources will be synthesized.
+
+***
+
+### `skipBackendValidation`<sup>Required</sup> <a name="skipBackendValidation" id="cdktn.App.property.skipBackendValidation"></a>
+
+```java
+public java.lang.Boolean getSkipBackendValidation();
+```
+
+- *Type:* java.lang.Boolean
+
+Whether to skip backend validation during synthesis of the app.
+
+***
+
+### `skipValidation`<sup>Required</sup> <a name="skipValidation" id="cdktn.App.property.skipValidation"></a>
+
+```java
+public java.lang.Boolean getSkipValidation();
+```
+
+- *Type:* java.lang.Boolean
+
+Whether to skip all validations during synthesis of the app.
+
+***
+
+### `targetStackId`<sup>Optional</sup> <a name="targetStackId" id="cdktn.App.property.targetStackId"></a>
+
+```java
+public java.lang.String getTargetStackId();
+```
+
+- *Type:* java.lang.String
+
+The stack which will be synthesized.
+
+If not set, all stacks will be synthesized.
+
+***
+

@@ -1,0 +1,141 @@
+---
+title: "Typescript: AnyMapList"
+sidebarTitle: AnyMapList
+description: CDKTN Core API Reference for AnyMapList in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.AnyMapList.Initializer"></a>
+
+```typescript
+import { AnyMapList } from 'cdktn'
+
+new AnyMapList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.AnyMapList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code><a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a></code> | *No description.* |
+| <code><a href="#cdktn.AnyMapList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.AnyMapList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>boolean</code> | *No description.* |
+
+***
+
+### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="cdktn.AnyMapList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* <a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a>
+
+***
+
+### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.AnyMapList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+***
+
+### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="cdktn.AnyMapList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* boolean
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.AnyMapList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#cdktn.AnyMapList.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#cdktn.AnyMapList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#cdktn.AnyMapList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#cdktn.AnyMapList.get">get</a></code> | *No description.* |
+
+***
+
+### `computeFqn` <a name="computeFqn" id="cdktn.AnyMapList.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+### `interpolationForAttribute` <a name="interpolationForAttribute" id="cdktn.AnyMapList.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+#### `property`<sup>Required</sup> <a name="property" id="cdktn.AnyMapList.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+***
+
+### `resolve` <a name="resolve" id="cdktn.AnyMapList.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+#### `_context`<sup>Required</sup> <a name="_context" id="cdktn.AnyMapList.resolve.parameter._context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `toString` <a name="toString" id="cdktn.AnyMapList.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+### `get` <a name="get" id="cdktn.AnyMapList.get"></a>
+
+```typescript
+public get(index: number): AnyMap
+```
+
+#### `index`<sup>Required</sup> <a name="index" id="cdktn.AnyMapList.get.parameter.index"></a>
+
+- *Type:* number
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.AnyMapList.property.creationStack">creationStack</a></code> | <code>string\[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#cdktn.AnyMapList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+
+***
+
+### `creationStack`<sup>Required</sup> <a name="creationStack" id="cdktn.AnyMapList.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string\[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.AnyMapList.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+***
+

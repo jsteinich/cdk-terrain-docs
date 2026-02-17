@@ -1,0 +1,250 @@
+---
+title: "Typescript: HttpBackendConfig"
+sidebarTitle: HttpBackendConfig
+description: CDKTN Core API Reference for HttpBackendConfig in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Stores the state using a simple REST client.
+
+State will be fetched via GET, updated via POST, and purged with DELETE.
+The method used for updating is configurable.
+
+This backend optionally supports state locking.
+When locking support is enabled it will use LOCK and UNLOCK requests providing the lock info in the body.
+The endpoint should return a 423: Locked or 409: Conflict with the holding lock info when
+it's already taken, 200: OK for success. Any other status will be considered an error.
+The ID of the holding lock info will be added as a query parameter to state updates requests.
+
+Read more about this backend in the Terraform docs:
+https://developer.hashicorp.com/terraform/language/settings/backends/http
+
+## Initializer <a name="Initializer" id="cdktn.HttpBackendConfig.Initializer"></a>
+
+```typescript
+import { HttpBackendConfig } from 'cdktn'
+
+const httpBackendConfig: HttpBackendConfig = { ... }
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.HttpBackendConfig.property.address">address</a></code> | <code>string</code> | (Required) The address of the REST endpoint. |
+| <code><a href="#cdktn.HttpBackendConfig.property.clientCaCertificatePem">clientCaCertificatePem</a></code> | <code>string</code> | (Optional) A PEM-encoded CA certificate chain used by the client to verify server certificates during TLS authentication. |
+| <code><a href="#cdktn.HttpBackendConfig.property.clientCertificatePem">clientCertificatePem</a></code> | <code>string</code> | (Optional) A PEM-encoded certificate used by the server to verify the client during mutual TLS (mTLS) authentication. |
+| <code><a href="#cdktn.HttpBackendConfig.property.clientPrivateKeyPem">clientPrivateKeyPem</a></code> | <code>string</code> | (Optional) A PEM-encoded private key, required if client\_certificate\_pem is specified. |
+| <code><a href="#cdktn.HttpBackendConfig.property.lockAddress">lockAddress</a></code> | <code>string</code> | (Optional) The address of the lock REST endpoint. |
+| <code><a href="#cdktn.HttpBackendConfig.property.lockMethod">lockMethod</a></code> | <code>string</code> | (Optional) The HTTP method to use when locking. |
+| <code><a href="#cdktn.HttpBackendConfig.property.password">password</a></code> | <code>string</code> | (Optional) The password for HTTP basic authentication. |
+| <code><a href="#cdktn.HttpBackendConfig.property.retryMax">retryMax</a></code> | <code>number</code> | (Optional) The number of HTTP request retries. |
+| <code><a href="#cdktn.HttpBackendConfig.property.retryWaitMax">retryWaitMax</a></code> | <code>number</code> | (Optional) The maximum time in seconds to wait between HTTP request attempts. |
+| <code><a href="#cdktn.HttpBackendConfig.property.retryWaitMin">retryWaitMin</a></code> | <code>number</code> | (Optional) The minimum time in seconds to wait between HTTP request attempts. |
+| <code><a href="#cdktn.HttpBackendConfig.property.skipCertVerification">skipCertVerification</a></code> | <code>boolean</code> | (Optional) Whether to skip TLS verification. |
+| <code><a href="#cdktn.HttpBackendConfig.property.unlockAddress">unlockAddress</a></code> | <code>string</code> | (Optional) The address of the unlock REST endpoint. |
+| <code><a href="#cdktn.HttpBackendConfig.property.unlockMethod">unlockMethod</a></code> | <code>string</code> | (Optional) The HTTP method to use when unlocking. |
+| <code><a href="#cdktn.HttpBackendConfig.property.updateMethod">updateMethod</a></code> | <code>string</code> | (Optional) HTTP method to use when updating state. |
+| <code><a href="#cdktn.HttpBackendConfig.property.username">username</a></code> | <code>string</code> | (Optional) The username for HTTP basic authentication. |
+
+***
+
+### `address`<sup>Required</sup> <a name="address" id="cdktn.HttpBackendConfig.property.address"></a>
+
+```typescript
+public readonly address: string;
+```
+
+- *Type:* string
+
+(Required) The address of the REST endpoint.
+
+***
+
+### `clientCaCertificatePem`<sup>Optional</sup> <a name="clientCaCertificatePem" id="cdktn.HttpBackendConfig.property.clientCaCertificatePem"></a>
+
+```typescript
+public readonly clientCaCertificatePem: string;
+```
+
+- *Type:* string
+
+(Optional) A PEM-encoded CA certificate chain used by the client to verify server certificates during TLS authentication.
+
+***
+
+### `clientCertificatePem`<sup>Optional</sup> <a name="clientCertificatePem" id="cdktn.HttpBackendConfig.property.clientCertificatePem"></a>
+
+```typescript
+public readonly clientCertificatePem: string;
+```
+
+- *Type:* string
+
+(Optional) A PEM-encoded certificate used by the server to verify the client during mutual TLS (mTLS) authentication.
+
+***
+
+### `clientPrivateKeyPem`<sup>Optional</sup> <a name="clientPrivateKeyPem" id="cdktn.HttpBackendConfig.property.clientPrivateKeyPem"></a>
+
+```typescript
+public readonly clientPrivateKeyPem: string;
+```
+
+- *Type:* string
+
+(Optional) A PEM-encoded private key, required if client\_certificate\_pem is specified.
+
+***
+
+### `lockAddress`<sup>Optional</sup> <a name="lockAddress" id="cdktn.HttpBackendConfig.property.lockAddress"></a>
+
+```typescript
+public readonly lockAddress: string;
+```
+
+- *Type:* string
+
+(Optional) The address of the lock REST endpoint.
+
+Defaults to disabled.
+
+***
+
+### `lockMethod`<sup>Optional</sup> <a name="lockMethod" id="cdktn.HttpBackendConfig.property.lockMethod"></a>
+
+```typescript
+public readonly lockMethod: string;
+```
+
+- *Type:* string
+
+(Optional) The HTTP method to use when locking.
+
+Defaults to LOCK.
+
+***
+
+### `password`<sup>Optional</sup> <a name="password" id="cdktn.HttpBackendConfig.property.password"></a>
+
+```typescript
+public readonly password: string;
+```
+
+- *Type:* string
+
+(Optional) The password for HTTP basic authentication.
+
+***
+
+### `retryMax`<sup>Optional</sup> <a name="retryMax" id="cdktn.HttpBackendConfig.property.retryMax"></a>
+
+```typescript
+public readonly retryMax: number;
+```
+
+- *Type:* number
+
+(Optional) The number of HTTP request retries.
+
+Defaults to 2.
+
+***
+
+### `retryWaitMax`<sup>Optional</sup> <a name="retryWaitMax" id="cdktn.HttpBackendConfig.property.retryWaitMax"></a>
+
+```typescript
+public readonly retryWaitMax: number;
+```
+
+- *Type:* number
+
+(Optional) The maximum time in seconds to wait between HTTP request attempts.
+
+Defaults to 30.
+
+***
+
+### `retryWaitMin`<sup>Optional</sup> <a name="retryWaitMin" id="cdktn.HttpBackendConfig.property.retryWaitMin"></a>
+
+```typescript
+public readonly retryWaitMin: number;
+```
+
+- *Type:* number
+
+(Optional) The minimum time in seconds to wait between HTTP request attempts.
+
+Defaults to 1.
+
+***
+
+### `skipCertVerification`<sup>Optional</sup> <a name="skipCertVerification" id="cdktn.HttpBackendConfig.property.skipCertVerification"></a>
+
+```typescript
+public readonly skipCertVerification: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Whether to skip TLS verification.
+
+Defaults to false.
+
+***
+
+### `unlockAddress`<sup>Optional</sup> <a name="unlockAddress" id="cdktn.HttpBackendConfig.property.unlockAddress"></a>
+
+```typescript
+public readonly unlockAddress: string;
+```
+
+- *Type:* string
+
+(Optional) The address of the unlock REST endpoint.
+
+Defaults to disabled.
+
+***
+
+### `unlockMethod`<sup>Optional</sup> <a name="unlockMethod" id="cdktn.HttpBackendConfig.property.unlockMethod"></a>
+
+```typescript
+public readonly unlockMethod: string;
+```
+
+- *Type:* string
+
+(Optional) The HTTP method to use when unlocking.
+
+Defaults to UNLOCK.
+
+***
+
+### `updateMethod`<sup>Optional</sup> <a name="updateMethod" id="cdktn.HttpBackendConfig.property.updateMethod"></a>
+
+```typescript
+public readonly updateMethod: string;
+```
+
+- *Type:* string
+
+(Optional) HTTP method to use when updating state.
+
+Defaults to POST.
+
+***
+
+### `username`<sup>Optional</sup> <a name="username" id="cdktn.HttpBackendConfig.property.username"></a>
+
+```typescript
+public readonly username: string;
+```
+
+- *Type:* string
+
+(Optional) The username for HTTP basic authentication.
+
+***
+

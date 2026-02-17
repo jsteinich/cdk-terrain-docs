@@ -1,0 +1,133 @@
+---
+title: "Java: Lazy"
+sidebarTitle: Lazy
+description: CDKTN Core API Reference for Lazy in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Lazily produce a value.
+
+Can be used to return a string, list or numeric value whose actual value
+will only be calculated later, during synthesis.
+
+## Initializers <a name="Initializers" id="cdktn.Lazy.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.Lazy;
+
+new Lazy();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Lazy.anyValue">anyValue</a></code> | Produces a lazy token from an untyped value. |
+| <code><a href="#cdktn.Lazy.listValue">listValue</a></code> | Returns a list-ified token for a lazy value. |
+| <code><a href="#cdktn.Lazy.numberValue">numberValue</a></code> | Returns a numberified token for a lazy value. |
+| <code><a href="#cdktn.Lazy.stringValue">stringValue</a></code> | Returns a stringified token for a lazy value. |
+
+***
+
+### `anyValue` <a name="anyValue" id="cdktn.Lazy.anyValue"></a>
+
+```java
+import io.cdktn.cdktn.Lazy;
+
+Lazy.anyValue(IAnyProducer producer),Lazy.anyValue(IAnyProducer producer, LazyAnyValueOptions options)
+```
+
+Produces a lazy token from an untyped value.
+
+#### `producer`<sup>Required</sup> <a name="producer" id="cdktn.Lazy.anyValue.parameter.producer"></a>
+
+- *Type:* <a href="#cdktn.IAnyProducer">IAnyProducer</a>
+
+The lazy producer.
+
+***
+
+#### `options`<sup>Optional</sup> <a name="options" id="cdktn.Lazy.anyValue.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.LazyAnyValueOptions">LazyAnyValueOptions</a>
+
+Options.
+
+***
+
+### `listValue` <a name="listValue" id="cdktn.Lazy.listValue"></a>
+
+```java
+import io.cdktn.cdktn.Lazy;
+
+Lazy.listValue(IListProducer producer),Lazy.listValue(IListProducer producer, LazyListValueOptions options)
+```
+
+Returns a list-ified token for a lazy value.
+
+#### `producer`<sup>Required</sup> <a name="producer" id="cdktn.Lazy.listValue.parameter.producer"></a>
+
+- *Type:* <a href="#cdktn.IListProducer">IListProducer</a>
+
+The producer.
+
+***
+
+#### `options`<sup>Optional</sup> <a name="options" id="cdktn.Lazy.listValue.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.LazyListValueOptions">LazyListValueOptions</a>
+
+Options.
+
+***
+
+### `numberValue` <a name="numberValue" id="cdktn.Lazy.numberValue"></a>
+
+```java
+import io.cdktn.cdktn.Lazy;
+
+Lazy.numberValue(INumberProducer producer)
+```
+
+Returns a numberified token for a lazy value.
+
+#### `producer`<sup>Required</sup> <a name="producer" id="cdktn.Lazy.numberValue.parameter.producer"></a>
+
+- *Type:* <a href="#cdktn.INumberProducer">INumberProducer</a>
+
+The producer.
+
+***
+
+### `stringValue` <a name="stringValue" id="cdktn.Lazy.stringValue"></a>
+
+```java
+import io.cdktn.cdktn.Lazy;
+
+Lazy.stringValue(IStringProducer producer),Lazy.stringValue(IStringProducer producer, LazyStringValueOptions options)
+```
+
+Returns a stringified token for a lazy value.
+
+#### `producer`<sup>Required</sup> <a name="producer" id="cdktn.Lazy.stringValue.parameter.producer"></a>
+
+- *Type:* <a href="#cdktn.IStringProducer">IStringProducer</a>
+
+The producer.
+
+***
+
+#### `options`<sup>Optional</sup> <a name="options" id="cdktn.Lazy.stringValue.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.LazyStringValueOptions">LazyStringValueOptions</a>
+
+Options.
+
+***
+

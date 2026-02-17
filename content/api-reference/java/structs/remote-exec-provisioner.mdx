@@ -1,0 +1,109 @@
+---
+title: "Java: RemoteExecProvisioner"
+sidebarTitle: RemoteExecProvisioner
+description: CDKTN Core API Reference for RemoteExecProvisioner in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+The remote-exec provisioner invokes a script on a remote resource after it is created.
+
+This can be used to run a configuration management tool, bootstrap into a cluster, etc
+The remote-exec provisioner requires a connection and supports both ssh and winrm.
+
+See [remote-exec](https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec)
+
+## Initializer <a name="Initializer" id="cdktn.RemoteExecProvisioner.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.RemoteExecProvisioner;
+
+RemoteExecProvisioner.builder()
+    .type(java.lang.String)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .inline(java.util.List<java.lang.String>)
+//  .script(java.lang.String)
+//  .scripts(java.util.List<java.lang.String>)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.RemoteExecProvisioner.property.type">type</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.RemoteExecProvisioner.property.connection">connection</a></code> | <code><a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a>&#124;<a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a></code> | Most provisioners require access to the remote resource via SSH or WinRM and expect a nested connection block with details about how to connect. |
+| <code><a href="#cdktn.RemoteExecProvisioner.property.inline">inline</a></code> | <code>java.util.List&lt; java.lang.String ></code> | This is a list of command strings. |
+| <code><a href="#cdktn.RemoteExecProvisioner.property.script">script</a></code> | <code>java.lang.String</code> | This is a path (relative or absolute) to a local script that will be copied to the remote resource and then executed. |
+| <code><a href="#cdktn.RemoteExecProvisioner.property.scripts">scripts</a></code> | <code>java.util.List&lt; java.lang.String ></code> | This is a list of paths (relative or absolute) to local scripts that will be copied to the remote resource and then executed. |
+
+***
+
+### `type`<sup>Required</sup> <a name="type" id="cdktn.RemoteExecProvisioner.property.type"></a>
+
+```java
+public java.lang.String getType();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `connection`<sup>Optional</sup> <a name="connection" id="cdktn.RemoteExecProvisioner.property.connection"></a>
+
+```java
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
+```
+
+- *Type:* <a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a>|<a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a>
+
+Most provisioners require access to the remote resource via SSH or WinRM and expect a nested connection block with details about how to connect.
+
+A connection must be provided here or in the parent resource.
+
+***
+
+### `inline`<sup>Optional</sup> <a name="inline" id="cdktn.RemoteExecProvisioner.property.inline"></a>
+
+```java
+public java.util.List<java.lang.String> getInline();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+This is a list of command strings.
+
+They are executed in the order they are provided.
+This cannot be provided with script or scripts.
+
+***
+
+### `script`<sup>Optional</sup> <a name="script" id="cdktn.RemoteExecProvisioner.property.script"></a>
+
+```java
+public java.lang.String getScript();
+```
+
+- *Type:* java.lang.String
+
+This is a path (relative or absolute) to a local script that will be copied to the remote resource and then executed.
+
+This cannot be provided with inline or scripts.
+
+***
+
+### `scripts`<sup>Optional</sup> <a name="scripts" id="cdktn.RemoteExecProvisioner.property.scripts"></a>
+
+```java
+public java.util.List<java.lang.String> getScripts();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+This is a list of paths (relative or absolute) to local scripts that will be copied to the remote resource and then executed.
+
+They are executed in the order they are provided.
+This cannot be provided with inline or script.
+
+***
+

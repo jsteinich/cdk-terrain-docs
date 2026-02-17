@@ -1,0 +1,557 @@
+---
+title: "Java: DataTerraformRemoteStateOss"
+sidebarTitle: DataTerraformRemoteStateOss
+description: CDKTN Core API Reference for DataTerraformRemoteStateOss in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.DataTerraformRemoteStateOss.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.DataTerraformRemoteStateOss;
+
+DataTerraformRemoteStateOss.Builder.create(Construct scope, java.lang.String id)
+//  .defaults(java.util.Map<java.lang.String, java.lang.Object>)
+//  .workspace(java.lang.String)
+    .bucket(java.lang.String)
+//  .accessKey(java.lang.String)
+//  .acl(java.lang.String)
+//  .assumeRole(OssAssumeRole)
+//  .assumeRolePolicy(java.lang.String)
+//  .assumeRoleRoleArn(java.lang.String)
+//  .assumeRoleSessionExpiration(java.lang.Number)
+//  .assumeRoleSessionName(java.lang.String)
+//  .ecsRoleName(java.lang.String)
+//  .encrypt(java.lang.Boolean)
+//  .endpoint(java.lang.String)
+//  .key(java.lang.String)
+//  .prefix(java.lang.String)
+//  .profile(java.lang.String)
+//  .region(java.lang.String)
+//  .secretKey(java.lang.String)
+//  .securityToken(java.lang.String)
+//  .sharedCredentialsFile(java.lang.String)
+//  .stsEndpoint(java.lang.String)
+//  .tablestoreEndpoint(java.lang.String)
+//  .tablestoreTable(java.lang.String)
+    .build();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.defaults">defaults</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.workspace">workspace</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.bucket">bucket</a></code> | <code>java.lang.String</code> | (Required) The name of the OSS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.accessKey">accessKey</a></code> | <code>java.lang.String</code> | (Optional) Alibaba Cloud access key. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.acl">acl</a></code> | <code>java.lang.String</code> | (Optional) Object ACL to be applied to the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRole">assumeRole</a></code> | <code><a href="#cdktn.OssAssumeRole">OssAssumeRole</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRolePolicy">assumeRolePolicy</a></code> | <code>java.lang.String</code> | (Optional, Available in 1.1.0+) A more restrictive policy to apply to the temporary credentials. This gives you a way to further restrict the permissions for the resulting temporary security credentials. You cannot use this policy to grant permissions that exceed those of the role that is being assumed. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleRoleArn">assumeRoleRoleArn</a></code> | <code>java.lang.String</code> | (Optional, Available in 1.1.0+) The ARN of the role to assume. If ARN is set to an empty string, it does not perform role switching. It supports the environment variable ALICLOUD\_ASSUME\_ROLE\_ARN. Terraform executes configuration on account with provided credentials. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleSessionExpiration">assumeRoleSessionExpiration</a></code> | <code>java.lang.Number</code> | (Optional, Available in 1.1.0+) The time after which the established session for assuming role expires. Valid value range: \[900-3600] seconds. Default to 3600 (in this case Alibaba Cloud uses its own default value). It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_EXPIRATION. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleSessionName">assumeRoleSessionName</a></code> | <code>java.lang.String</code> | (Optional, Available in 1.1.0+) The session name to use when assuming the role. If omitted, 'terraform' is passed to the AssumeRole call as session name. It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_NAME. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.ecsRoleName">ecsRoleName</a></code> | <code>java.lang.String</code> | (Optional, Available in 0.12.14+) The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section of the Alibaba Cloud console. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.encrypt">encrypt</a></code> | <code>java.lang.Boolean</code> | (Optional) Whether to enable server side encryption of the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.endpoint">endpoint</a></code> | <code>java.lang.String</code> | (Optional) A custom endpoint for the OSS API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.key">key</a></code> | <code>java.lang.String</code> | (Optional) The name of the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.prefix">prefix</a></code> | <code>java.lang.String</code> | (Optional) The path directory of the state file will be stored. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.profile">profile</a></code> | <code>java.lang.String</code> | (Optional, Available in 0.12.8+) This is the Alibaba Cloud profile name as set in the shared credentials file. It can also be sourced from the ALICLOUD\_PROFILE environment variable. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | (Optional) The region of the OSS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.secretKey">secretKey</a></code> | <code>java.lang.String</code> | (Optional) Alibaba Cloud secret access key. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.securityToken">securityToken</a></code> | <code>java.lang.String</code> | (Optional) STS access token. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.sharedCredentialsFile">sharedCredentialsFile</a></code> | <code>java.lang.String</code> | (Optional, Available in 0.12.8+) This is the path to the shared credentials file. It can also be sourced from the ALICLOUD\_SHARED\_CREDENTIALS\_FILE environment variable. If this is not set and a profile is specified, ~/.aliyun/config.json will be used. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.stsEndpoint">stsEndpoint</a></code> | <code>java.lang.String</code> | (Optional, Available in 1.0.11+) Custom endpoint for the AliCloud Security Token Service (STS) API. It supports environment variable ALICLOUD\_STS\_ENDPOINT. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.tablestoreEndpoint">tablestoreEndpoint</a></code> | <code>java.lang.String</code> | (Optional) A custom endpoint for the TableStore API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.Initializer.parameter.tablestoreTable">tablestoreTable</a></code> | <code>java.lang.String</code> | (Optional) A TableStore table for state locking and consistency. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.defaults"></a>
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.workspace"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.bucket"></a>
+
+- *Type:* java.lang.String
+
+(Required) The name of the OSS bucket.
+
+***
+
+### `accessKey`<sup>Optional</sup> <a name="accessKey" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.accessKey"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Alibaba Cloud access key.
+
+It supports environment variables ALICLOUD\_ACCESS\_KEY and ALICLOUD\_ACCESS\_KEY\_ID.
+
+***
+
+### `acl`<sup>Optional</sup> <a name="acl" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.acl"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Object ACL to be applied to the state file.
+
+***
+
+### ~~`assumeRole`~~<sup>Optional</sup> <a name="assumeRole" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRole"></a>
+
+- *Deprecated:* Use flattened assume role options
+
+- *Type:* <a href="#cdktn.OssAssumeRole">OssAssumeRole</a>
+
+***
+
+### `assumeRolePolicy`<sup>Optional</sup> <a name="assumeRolePolicy" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRolePolicy"></a>
+
+- *Type:* java.lang.String
+
+(Optional, Available in 1.1.0+) A more restrictive policy to apply to the temporary credentials. This gives you a way to further restrict the permissions for the resulting temporary security credentials. You cannot use this policy to grant permissions that exceed those of the role that is being assumed.
+
+***
+
+### `assumeRoleRoleArn`<sup>Optional</sup> <a name="assumeRoleRoleArn" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleRoleArn"></a>
+
+- *Type:* java.lang.String
+
+(Optional, Available in 1.1.0+) The ARN of the role to assume. If ARN is set to an empty string, it does not perform role switching. It supports the environment variable ALICLOUD\_ASSUME\_ROLE\_ARN. Terraform executes configuration on account with provided credentials.
+
+***
+
+### `assumeRoleSessionExpiration`<sup>Optional</sup> <a name="assumeRoleSessionExpiration" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleSessionExpiration"></a>
+
+- *Type:* java.lang.Number
+
+(Optional, Available in 1.1.0+) The time after which the established session for assuming role expires. Valid value range: \[900-3600] seconds. Default to 3600 (in this case Alibaba Cloud uses its own default value). It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_EXPIRATION.
+
+***
+
+### `assumeRoleSessionName`<sup>Optional</sup> <a name="assumeRoleSessionName" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.assumeRoleSessionName"></a>
+
+- *Type:* java.lang.String
+
+(Optional, Available in 1.1.0+) The session name to use when assuming the role. If omitted, 'terraform' is passed to the AssumeRole call as session name. It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_NAME.
+
+***
+
+### `ecsRoleName`<sup>Optional</sup> <a name="ecsRoleName" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.ecsRoleName"></a>
+
+- *Type:* java.lang.String
+
+(Optional, Available in 0.12.14+) The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section of the Alibaba Cloud console.
+
+***
+
+### `encrypt`<sup>Optional</sup> <a name="encrypt" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.encrypt"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Whether to enable server side encryption of the state file.
+
+If it is true, OSS will use 'AES256' encryption algorithm to encrypt state file.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.endpoint"></a>
+
+- *Type:* java.lang.String
+
+(Optional) A custom endpoint for the OSS API.
+
+It supports environment variables ALICLOUD\_OSS\_ENDPOINT and OSS\_ENDPOINT.
+
+***
+
+### `key`<sup>Optional</sup> <a name="key" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.key"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The name of the state file.
+
+Defaults to terraform.tfstate.
+
+***
+
+### `prefix`<sup>Optional</sup> <a name="prefix" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.prefix"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The path directory of the state file will be stored.
+
+Default to "env:".
+
+***
+
+### `profile`<sup>Optional</sup> <a name="profile" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.profile"></a>
+
+- *Type:* java.lang.String
+
+(Optional, Available in 0.12.8+) This is the Alibaba Cloud profile name as set in the shared credentials file. It can also be sourced from the ALICLOUD\_PROFILE environment variable.
+
+***
+
+### `region`<sup>Optional</sup> <a name="region" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.region"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The region of the OSS bucket.
+
+It supports environment variables ALICLOUD\_REGION and ALICLOUD\_DEFAULT\_REGION.
+
+***
+
+### `secretKey`<sup>Optional</sup> <a name="secretKey" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.secretKey"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Alibaba Cloud secret access key.
+
+It supports environment variables ALICLOUD\_SECRET\_KEY and ALICLOUD\_ACCESS\_KEY\_SECRET.
+
+***
+
+### `securityToken`<sup>Optional</sup> <a name="securityToken" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.securityToken"></a>
+
+- *Type:* java.lang.String
+
+(Optional) STS access token.
+
+It supports environment variable ALICLOUD\_SECURITY\_TOKEN.
+
+***
+
+### `sharedCredentialsFile`<sup>Optional</sup> <a name="sharedCredentialsFile" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.sharedCredentialsFile"></a>
+
+- *Type:* java.lang.String
+
+(Optional, Available in 0.12.8+) This is the path to the shared credentials file. It can also be sourced from the ALICLOUD\_SHARED\_CREDENTIALS\_FILE environment variable. If this is not set and a profile is specified, ~/.aliyun/config.json will be used.
+
+***
+
+### `stsEndpoint`<sup>Optional</sup> <a name="stsEndpoint" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.stsEndpoint"></a>
+
+- *Type:* java.lang.String
+
+(Optional, Available in 1.0.11+) Custom endpoint for the AliCloud Security Token Service (STS) API. It supports environment variable ALICLOUD\_STS\_ENDPOINT.
+
+***
+
+### `tablestoreEndpoint`<sup>Optional</sup> <a name="tablestoreEndpoint" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.tablestoreEndpoint"></a>
+
+- *Type:* java.lang.String
+
+(Optional) A custom endpoint for the TableStore API.
+
+***
+
+### `tablestoreTable`<sup>Optional</sup> <a name="tablestoreTable" id="cdktn.DataTerraformRemoteStateOss.Initializer.parameter.tablestoreTable"></a>
+
+- *Type:* java.lang.String
+
+(Optional) A TableStore table for state locking and consistency.
+
+The table must have a primary key named LockID of type String.
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.toHclTerraform">toHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.get">get</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.getBoolean">getBoolean</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.getList">getList</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.getNumber">getNumber</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.getString">getString</a></code> | *No description.* |
+
+***
+
+### `toString` <a name="toString" id="cdktn.DataTerraformRemoteStateOss.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `addOverride` <a name="addOverride" id="cdktn.DataTerraformRemoteStateOss.addOverride"></a>
+
+```java
+public void addOverride(java.lang.String path, java.lang.Object value)
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.DataTerraformRemoteStateOss.addOverride.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.DataTerraformRemoteStateOss.addOverride.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `overrideLogicalId` <a name="overrideLogicalId" id="cdktn.DataTerraformRemoteStateOss.overrideLogicalId"></a>
+
+```java
+public void overrideLogicalId(java.lang.String newLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.DataTerraformRemoteStateOss.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* java.lang.String
+
+The new logical ID to use for this stack element.
+
+***
+
+### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktn.DataTerraformRemoteStateOss.resetOverrideLogicalId"></a>
+
+```java
+public void resetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.DataTerraformRemoteStateOss.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+Adds this resource to the terraform JSON output.
+
+### `toMetadata` <a name="toMetadata" id="cdktn.DataTerraformRemoteStateOss.toMetadata"></a>
+
+```java
+public java.lang.Object toMetadata()
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.DataTerraformRemoteStateOss.toTerraform"></a>
+
+```java
+public java.lang.Object toTerraform()
+```
+
+Adds this resource to the terraform JSON output.
+
+### `get` <a name="get" id="cdktn.DataTerraformRemoteStateOss.get"></a>
+
+```java
+public IResolvable get(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateOss.get.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getBoolean` <a name="getBoolean" id="cdktn.DataTerraformRemoteStateOss.getBoolean"></a>
+
+```java
+public IResolvable getBoolean(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateOss.getBoolean.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getList` <a name="getList" id="cdktn.DataTerraformRemoteStateOss.getList"></a>
+
+```java
+public java.util.List<java.lang.String> getList(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateOss.getList.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getNumber` <a name="getNumber" id="cdktn.DataTerraformRemoteStateOss.getNumber"></a>
+
+```java
+public java.lang.Number getNumber(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateOss.getNumber.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getString` <a name="getString" id="cdktn.DataTerraformRemoteStateOss.getString"></a>
+
+```java
+public java.lang.String getString(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateOss.getString.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.DataTerraformRemoteStateOss.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.DataTerraformRemoteStateOss;
+
+DataTerraformRemoteStateOss.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateOss.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isTerraformElement` <a name="isTerraformElement" id="cdktn.DataTerraformRemoteStateOss.isTerraformElement"></a>
+
+```java
+import io.cdktn.cdktn.DataTerraformRemoteStateOss;
+
+DataTerraformRemoteStateOss.isTerraformElement(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateOss.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.property.cdktfStack">cdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.DataTerraformRemoteStateOss.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktn.DataTerraformRemoteStateOss.property.cdktfStack"></a>
+
+```java
+public TerraformStack getCdktfStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.DataTerraformRemoteStateOss.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.DataTerraformRemoteStateOss.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateOss.property.tfResourceType">tfResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="cdktn.DataTerraformRemoteStateOss.property.tfResourceType"></a>
+
+```java
+public java.lang.String getTfResourceType();
+```
+
+- *Type:* java.lang.String
+
+***
+

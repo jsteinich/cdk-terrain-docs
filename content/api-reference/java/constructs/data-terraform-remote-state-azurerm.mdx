@@ -1,0 +1,637 @@
+---
+title: "Java: DataTerraformRemoteStateAzurerm"
+sidebarTitle: DataTerraformRemoteStateAzurerm
+description: CDKTN Core API Reference for DataTerraformRemoteStateAzurerm in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.DataTerraformRemoteStateAzurerm;
+
+DataTerraformRemoteStateAzurerm.Builder.create(Construct scope, java.lang.String id)
+//  .defaults(java.util.Map<java.lang.String, java.lang.Object>)
+//  .workspace(java.lang.String)
+    .containerName(java.lang.String)
+    .key(java.lang.String)
+    .storageAccountName(java.lang.String)
+//  .accessKey(java.lang.String)
+//  .clientCertificatePassword(java.lang.String)
+//  .clientCertificatePath(java.lang.String)
+//  .clientId(java.lang.String)
+//  .clientSecret(java.lang.String)
+//  .endpoint(java.lang.String)
+//  .environment(java.lang.String)
+//  .metadataHost(java.lang.String)
+//  .msiEndpoint(java.lang.String)
+//  .oidcRequestToken(java.lang.String)
+//  .oidcRequestUrl(java.lang.String)
+//  .oidcToken(java.lang.String)
+//  .oidcTokenFilePath(java.lang.String)
+//  .resourceGroupName(java.lang.String)
+//  .sasToken(java.lang.String)
+//  .snapshot(java.lang.Boolean)
+//  .subscriptionId(java.lang.String)
+//  .tenantId(java.lang.String)
+//  .useAzureadAuth(java.lang.Boolean)
+//  .useMicrosoftGraph(java.lang.Boolean)
+//  .useMsi(java.lang.Boolean)
+//  .useOidc(java.lang.Boolean)
+    .build();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.defaults">defaults</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.workspace">workspace</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.containerName">containerName</a></code> | <code>java.lang.String</code> | (Required) The Name of the Storage Container within the Storage Account. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.key">key</a></code> | <code>java.lang.String</code> | (Required) The name of the Blob used to retrieve/store Terraform's State file inside the Storage Container. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.storageAccountName">storageAccountName</a></code> | <code>java.lang.String</code> | (Required) The Name of the Storage Account. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.accessKey">accessKey</a></code> | <code>java.lang.String</code> | access\_key - (Optional) The Access Key used to access the Blob Storage Account. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientCertificatePassword">clientCertificatePassword</a></code> | <code>java.lang.String</code> | (Optional) The password associated with the Client Certificate specified in client\_certificate\_path. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientCertificatePath">clientCertificatePath</a></code> | <code>java.lang.String</code> | (Optional) The path to the PFX file used as the Client Certificate when authenticating as a Service Principal. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientId">clientId</a></code> | <code>java.lang.String</code> | (Optional) The Client ID of the Service Principal. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientSecret">clientSecret</a></code> | <code>java.lang.String</code> | (Optional) The Client Secret of the Service Principal. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.endpoint">endpoint</a></code> | <code>java.lang.String</code> | (Optional) The Custom Endpoint for Azure Resource Manager. This can also be sourced from the ARM\_ENDPOINT environment variable. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.environment">environment</a></code> | <code>java.lang.String</code> | (Optional) The Azure Environment which should be used. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.metadataHost">metadataHost</a></code> | <code>java.lang.String</code> | (Optional) The Hostname of the Azure Metadata Service (for example management.azure.com), used to obtain the Cloud Environment when using a Custom Azure Environment. This can also be sourced from the ARM\_METADATA\_HOSTNAME Environment Variable.). |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.msiEndpoint">msiEndpoint</a></code> | <code>java.lang.String</code> | (Optional) The path to a custom Managed Service Identity endpoint which is automatically determined if not specified. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcRequestToken">oidcRequestToken</a></code> | <code>java.lang.String</code> | (Optional) The bearer token for the request to the OIDC provider. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcRequestUrl">oidcRequestUrl</a></code> | <code>java.lang.String</code> | (Optional) The URL for the OIDC provider from which to request an ID token. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcToken">oidcToken</a></code> | <code>java.lang.String</code> | (Optional) The ID token when authenticating using OpenID Connect (OIDC). |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcTokenFilePath">oidcTokenFilePath</a></code> | <code>java.lang.String</code> | (Optional) The path to a file containing an ID token when authenticating using OpenID Connect (OIDC). |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | (Required) The Name of the Resource Group in which the Storage Account exists. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.sasToken">sasToken</a></code> | <code>java.lang.String</code> | (Optional) The SAS Token used to access the Blob Storage Account. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.snapshot">snapshot</a></code> | <code>java.lang.Boolean</code> | (Optional) Should the Blob used to store the Terraform Statefile be snapshotted before use? |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.subscriptionId">subscriptionId</a></code> | <code>java.lang.String</code> | (Optional) The Subscription ID in which the Storage Account exists. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.tenantId">tenantId</a></code> | <code>java.lang.String</code> | (Optional) The Tenant ID in which the Subscription exists. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useAzureadAuth">useAzureadAuth</a></code> | <code>java.lang.Boolean</code> | (Optional) Should AzureAD Authentication be used to access the Blob Storage Account. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useMicrosoftGraph">useMicrosoftGraph</a></code> | <code>java.lang.Boolean</code> | (Optional) Should MSAL be used for authentication instead of ADAL, and should Microsoft Graph be used instead of Azure Active Directory Graph? |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useMsi">useMsi</a></code> | <code>java.lang.Boolean</code> | (Optional) Should Managed Service Identity authentication be used? |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useOidc">useOidc</a></code> | <code>java.lang.Boolean</code> | (Optional) Should OIDC authentication be used? This can also be sourced from the ARM\_USE\_OIDC environment variable. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.defaults"></a>
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.workspace"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `containerName`<sup>Required</sup> <a name="containerName" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.containerName"></a>
+
+- *Type:* java.lang.String
+
+(Required) The Name of the Storage Container within the Storage Account.
+
+***
+
+### `key`<sup>Required</sup> <a name="key" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.key"></a>
+
+- *Type:* java.lang.String
+
+(Required) The name of the Blob used to retrieve/store Terraform's State file inside the Storage Container.
+
+***
+
+### `storageAccountName`<sup>Required</sup> <a name="storageAccountName" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.storageAccountName"></a>
+
+- *Type:* java.lang.String
+
+(Required) The Name of the Storage Account.
+
+***
+
+### `accessKey`<sup>Optional</sup> <a name="accessKey" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.accessKey"></a>
+
+- *Type:* java.lang.String
+
+access\_key - (Optional) The Access Key used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_ACCESS\_KEY environment variable.
+
+***
+
+### `clientCertificatePassword`<sup>Optional</sup> <a name="clientCertificatePassword" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientCertificatePassword"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The password associated with the Client Certificate specified in client\_certificate\_path.
+
+This can also be sourced from the
+ARM\_CLIENT\_CERTIFICATE\_PASSWORD environment variable.
+
+***
+
+### `clientCertificatePath`<sup>Optional</sup> <a name="clientCertificatePath" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientCertificatePath"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The path to the PFX file used as the Client Certificate when authenticating as a Service Principal.
+
+This can also be sourced from the
+ARM\_CLIENT\_CERTIFICATE\_PATH environment variable.
+
+***
+
+### `clientId`<sup>Optional</sup> <a name="clientId" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientId"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The Client ID of the Service Principal.
+
+This can also be sourced from the ARM\_CLIENT\_ID environment variable.
+
+***
+
+### `clientSecret`<sup>Optional</sup> <a name="clientSecret" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientSecret"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The Client Secret of the Service Principal.
+
+This can also be sourced from the ARM\_CLIENT\_SECRET environment variable.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.endpoint"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The Custom Endpoint for Azure Resource Manager. This can also be sourced from the ARM\_ENDPOINT environment variable.
+
+NOTE: An endpoint should only be configured when using Azure Stack.
+
+***
+
+### `environment`<sup>Optional</sup> <a name="environment" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.environment"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The Azure Environment which should be used.
+
+This can also be sourced from the ARM\_ENVIRONMENT environment variable.
+Possible values are public, china, german, stack and usgovernment. Defaults to public.
+
+***
+
+### `metadataHost`<sup>Optional</sup> <a name="metadataHost" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.metadataHost"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The Hostname of the Azure Metadata Service (for example management.azure.com), used to obtain the Cloud Environment when using a Custom Azure Environment. This can also be sourced from the ARM\_METADATA\_HOSTNAME Environment Variable.).
+
+***
+
+### `msiEndpoint`<sup>Optional</sup> <a name="msiEndpoint" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.msiEndpoint"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The path to a custom Managed Service Identity endpoint which is automatically determined if not specified.
+
+This can also be sourced from the ARM\_MSI\_ENDPOINT environment variable.
+
+***
+
+### `oidcRequestToken`<sup>Optional</sup> <a name="oidcRequestToken" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcRequestToken"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The bearer token for the request to the OIDC provider.
+
+This can
+also be sourced from the ARM\_OIDC\_REQUEST\_TOKEN or
+ACTIONS\_ID\_TOKEN\_REQUEST\_TOKEN environment variables.
+
+***
+
+### `oidcRequestUrl`<sup>Optional</sup> <a name="oidcRequestUrl" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcRequestUrl"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The URL for the OIDC provider from which to request an ID token.
+
+This can also be sourced from the ARM\_OIDC\_REQUEST\_URL or
+ACTIONS\_ID\_TOKEN\_REQUEST\_URL environment variables.
+
+***
+
+### `oidcToken`<sup>Optional</sup> <a name="oidcToken" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcToken"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The ID token when authenticating using OpenID Connect (OIDC).
+
+This can also be sourced from the ARM\_OIDC\_TOKEN environment variable.
+
+***
+
+### `oidcTokenFilePath`<sup>Optional</sup> <a name="oidcTokenFilePath" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcTokenFilePath"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The path to a file containing an ID token when authenticating using OpenID Connect (OIDC).
+
+This can also be sourced from the ARM\_OIDC\_TOKEN\_FILE\_PATH environment variable.
+
+***
+
+### `resourceGroupName`<sup>Optional</sup> <a name="resourceGroupName" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.resourceGroupName"></a>
+
+- *Type:* java.lang.String
+
+(Required) The Name of the Resource Group in which the Storage Account exists.
+
+***
+
+### `sasToken`<sup>Optional</sup> <a name="sasToken" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.sasToken"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The SAS Token used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_SAS\_TOKEN environment variable.
+
+***
+
+### `snapshot`<sup>Optional</sup> <a name="snapshot" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.snapshot"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Should the Blob used to store the Terraform Statefile be snapshotted before use?
+
+Defaults to false. This value can also be sourced
+from the ARM\_SNAPSHOT environment variable.
+
+***
+
+### `subscriptionId`<sup>Optional</sup> <a name="subscriptionId" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.subscriptionId"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The Subscription ID in which the Storage Account exists.
+
+This can also be sourced from the ARM\_SUBSCRIPTION\_ID environment variable.
+
+***
+
+### `tenantId`<sup>Optional</sup> <a name="tenantId" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.tenantId"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The Tenant ID in which the Subscription exists.
+
+This can also be sourced from the ARM\_TENANT\_ID environment variable.
+
+***
+
+### `useAzureadAuth`<sup>Optional</sup> <a name="useAzureadAuth" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useAzureadAuth"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Should AzureAD Authentication be used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_USE\_AZUREAD environment
+variable.
+
+Note: When using AzureAD for Authentication to Storage you also need to
+ensure the Storage Blob Data Owner role is assigned.
+
+***
+
+### `useMicrosoftGraph`<sup>Optional</sup> <a name="useMicrosoftGraph" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useMicrosoftGraph"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Should MSAL be used for authentication instead of ADAL, and should Microsoft Graph be used instead of Azure Active Directory Graph?
+
+Defaults to true.
+
+Note: In Terraform 1.2 the Azure Backend uses MSAL (and Microsoft Graph)
+rather than ADAL (and Azure Active Directory Graph) for authentication by
+default - you can disable this by setting use\_microsoft\_graph to false.
+This setting will be removed in Terraform 1.3, due to Microsoft's
+deprecation of ADAL.
+
+***
+
+### `useMsi`<sup>Optional</sup> <a name="useMsi" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useMsi"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Should Managed Service Identity authentication be used?
+
+This can also be sourced from the ARM\_USE\_MSI environment variable.
+
+***
+
+### `useOidc`<sup>Optional</sup> <a name="useOidc" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useOidc"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) Should OIDC authentication be used? This can also be sourced from the ARM\_USE\_OIDC environment variable.
+
+Note: When using OIDC for authentication, use\_microsoft\_graph
+must be set to true (which is the default).
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.toHclTerraform">toHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.get">get</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.getBoolean">getBoolean</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.getList">getList</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.getNumber">getNumber</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.getString">getString</a></code> | *No description.* |
+
+***
+
+### `toString` <a name="toString" id="cdktn.DataTerraformRemoteStateAzurerm.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `addOverride` <a name="addOverride" id="cdktn.DataTerraformRemoteStateAzurerm.addOverride"></a>
+
+```java
+public void addOverride(java.lang.String path, java.lang.Object value)
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.DataTerraformRemoteStateAzurerm.addOverride.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.DataTerraformRemoteStateAzurerm.addOverride.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `overrideLogicalId` <a name="overrideLogicalId" id="cdktn.DataTerraformRemoteStateAzurerm.overrideLogicalId"></a>
+
+```java
+public void overrideLogicalId(java.lang.String newLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.DataTerraformRemoteStateAzurerm.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* java.lang.String
+
+The new logical ID to use for this stack element.
+
+***
+
+### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktn.DataTerraformRemoteStateAzurerm.resetOverrideLogicalId"></a>
+
+```java
+public void resetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.DataTerraformRemoteStateAzurerm.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+Adds this resource to the terraform JSON output.
+
+### `toMetadata` <a name="toMetadata" id="cdktn.DataTerraformRemoteStateAzurerm.toMetadata"></a>
+
+```java
+public java.lang.Object toMetadata()
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.DataTerraformRemoteStateAzurerm.toTerraform"></a>
+
+```java
+public java.lang.Object toTerraform()
+```
+
+Adds this resource to the terraform JSON output.
+
+### `get` <a name="get" id="cdktn.DataTerraformRemoteStateAzurerm.get"></a>
+
+```java
+public IResolvable get(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateAzurerm.get.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getBoolean` <a name="getBoolean" id="cdktn.DataTerraformRemoteStateAzurerm.getBoolean"></a>
+
+```java
+public IResolvable getBoolean(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateAzurerm.getBoolean.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getList` <a name="getList" id="cdktn.DataTerraformRemoteStateAzurerm.getList"></a>
+
+```java
+public java.util.List<java.lang.String> getList(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateAzurerm.getList.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getNumber` <a name="getNumber" id="cdktn.DataTerraformRemoteStateAzurerm.getNumber"></a>
+
+```java
+public java.lang.Number getNumber(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateAzurerm.getNumber.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getString` <a name="getString" id="cdktn.DataTerraformRemoteStateAzurerm.getString"></a>
+
+```java
+public java.lang.String getString(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateAzurerm.getString.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.DataTerraformRemoteStateAzurerm.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.DataTerraformRemoteStateAzurerm;
+
+DataTerraformRemoteStateAzurerm.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateAzurerm.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isTerraformElement` <a name="isTerraformElement" id="cdktn.DataTerraformRemoteStateAzurerm.isTerraformElement"></a>
+
+```java
+import io.cdktn.cdktn.DataTerraformRemoteStateAzurerm;
+
+DataTerraformRemoteStateAzurerm.isTerraformElement(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateAzurerm.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.property.cdktfStack">cdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.DataTerraformRemoteStateAzurerm.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktn.DataTerraformRemoteStateAzurerm.property.cdktfStack"></a>
+
+```java
+public TerraformStack getCdktfStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.DataTerraformRemoteStateAzurerm.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.DataTerraformRemoteStateAzurerm.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.property.tfResourceType">tfResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="cdktn.DataTerraformRemoteStateAzurerm.property.tfResourceType"></a>
+
+```java
+public java.lang.String getTfResourceType();
+```
+
+- *Type:* java.lang.String
+
+***
+

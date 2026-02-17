@@ -1,0 +1,357 @@
+---
+title: "Go: Testing"
+sidebarTitle: Testing
+description: CDKTN Core API Reference for Testing in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Testing utilities for cdktf applications.
+
+## Initializers <a name="Initializers" id="cdktn.Testing.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewTesting() Testing
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Testing.app">App</a></code> | Returns an app for testing with the following properties: - Output directory is a temp dir. |
+| <code><a href="#cdktn.Testing.enableFutureFlags">EnableFutureFlags</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.fakeCdktfJsonPath">FakeCdktfJsonPath</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.fullSynth">FullSynth</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.renderConstructTree">RenderConstructTree</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.setupJest">SetupJest</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.stubVersion">StubVersion</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.synth">Synth</a></code> | Returns the Terraform synthesized JSON. |
+| <code><a href="#cdktn.Testing.synthHcl">SynthHcl</a></code> | Returns the Terraform synthesized JSON. |
+| <code><a href="#cdktn.Testing.synthScope">SynthScope</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toBeValidTerraform">ToBeValidTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveDataSource">ToHaveDataSource</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveDataSourceWithProperties">ToHaveDataSourceWithProperties</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveProvider">ToHaveProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveProviderWithProperties">ToHaveProviderWithProperties</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveResource">ToHaveResource</a></code> | *No description.* |
+| <code><a href="#cdktn.Testing.toHaveResourceWithProperties">ToHaveResourceWithProperties</a></code> | *No description.* |
+
+***
+
+### `App` <a name="App" id="cdktn.Testing.app"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_App(options TestingAppConfig) App
+```
+
+Returns an app for testing with the following properties: - Output directory is a temp dir.
+
+#### `options`<sup>Optional</sup> <a name="options" id="cdktn.Testing.app.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.TestingAppConfig">TestingAppConfig</a>
+
+***
+
+### `EnableFutureFlags` <a name="EnableFutureFlags" id="cdktn.Testing.enableFutureFlags"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_EnableFutureFlags(app App) App
+```
+
+#### `app`<sup>Required</sup> <a name="app" id="cdktn.Testing.enableFutureFlags.parameter.app"></a>
+
+- *Type:* <a href="#cdktn.App">App</a>
+
+***
+
+### `FakeCdktfJsonPath` <a name="FakeCdktfJsonPath" id="cdktn.Testing.fakeCdktfJsonPath"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_FakeCdktfJsonPath(app App) App
+```
+
+#### `app`<sup>Required</sup> <a name="app" id="cdktn.Testing.fakeCdktfJsonPath.parameter.app"></a>
+
+- *Type:* <a href="#cdktn.App">App</a>
+
+***
+
+### `FullSynth` <a name="FullSynth" id="cdktn.Testing.fullSynth"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_FullSynth(stack TerraformStack) *string
+```
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.Testing.fullSynth.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `RenderConstructTree` <a name="RenderConstructTree" id="cdktn.Testing.renderConstructTree"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_RenderConstructTree(construct IConstruct) *string
+```
+
+#### `construct`<sup>Required</sup> <a name="construct" id="cdktn.Testing.renderConstructTree.parameter.construct"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.IConstruct
+
+***
+
+### `SetupJest` <a name="SetupJest" id="cdktn.Testing.setupJest"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_SetupJest()
+```
+
+### `StubVersion` <a name="StubVersion" id="cdktn.Testing.stubVersion"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_StubVersion(app App) App
+```
+
+#### `app`<sup>Required</sup> <a name="app" id="cdktn.Testing.stubVersion.parameter.app"></a>
+
+- *Type:* <a href="#cdktn.App">App</a>
+
+***
+
+### `Synth` <a name="Synth" id="cdktn.Testing.synth"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_Synth(stack TerraformStack, runValidations *bool) *string
+```
+
+Returns the Terraform synthesized JSON.
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.Testing.synth.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `runValidations`<sup>Optional</sup> <a name="runValidations" id="cdktn.Testing.synth.parameter.runValidations"></a>
+
+- *Type:* \*bool
+
+***
+
+### `SynthHcl` <a name="SynthHcl" id="cdktn.Testing.synthHcl"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_SynthHcl(stack TerraformStack, runValidations *bool, returnMetadata *bool) interface{}
+```
+
+Returns the Terraform synthesized JSON.
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.Testing.synthHcl.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `runValidations`<sup>Optional</sup> <a name="runValidations" id="cdktn.Testing.synthHcl.parameter.runValidations"></a>
+
+- *Type:* \*bool
+
+***
+
+#### `returnMetadata`<sup>Optional</sup> <a name="returnMetadata" id="cdktn.Testing.synthHcl.parameter.returnMetadata"></a>
+
+- *Type:* \*bool
+
+***
+
+### `SynthScope` <a name="SynthScope" id="cdktn.Testing.synthScope"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_SynthScope(fn IScopeCallback) *string
+```
+
+#### `fn`<sup>Required</sup> <a name="fn" id="cdktn.Testing.synthScope.parameter.fn"></a>
+
+- *Type:* <a href="#cdktn.IScopeCallback">IScopeCallback</a>
+
+***
+
+### `ToBeValidTerraform` <a name="ToBeValidTerraform" id="cdktn.Testing.toBeValidTerraform"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_ToBeValidTerraform(received *string) *bool
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toBeValidTerraform.parameter.received"></a>
+
+- *Type:* \*string
+
+***
+
+### `ToHaveDataSource` <a name="ToHaveDataSource" id="cdktn.Testing.toHaveDataSource"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_ToHaveDataSource(received *string, resourceType *string) *bool
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveDataSource.parameter.received"></a>
+
+- *Type:* \*string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveDataSource.parameter.resourceType"></a>
+
+- *Type:* \*string
+
+***
+
+### `ToHaveDataSourceWithProperties` <a name="ToHaveDataSourceWithProperties" id="cdktn.Testing.toHaveDataSourceWithProperties"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_ToHaveDataSourceWithProperties(received *string, resourceType *string, properties *map[string]interface{}) *bool
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveDataSourceWithProperties.parameter.received"></a>
+
+- *Type:* \*string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveDataSourceWithProperties.parameter.resourceType"></a>
+
+- *Type:* \*string
+
+***
+
+#### `properties`<sup>Optional</sup> <a name="properties" id="cdktn.Testing.toHaveDataSourceWithProperties.parameter.properties"></a>
+
+- *Type:* \*map\[string]interface\{}
+
+***
+
+### `ToHaveProvider` <a name="ToHaveProvider" id="cdktn.Testing.toHaveProvider"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_ToHaveProvider(received *string, resourceType *string) *bool
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveProvider.parameter.received"></a>
+
+- *Type:* \*string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveProvider.parameter.resourceType"></a>
+
+- *Type:* \*string
+
+***
+
+### `ToHaveProviderWithProperties` <a name="ToHaveProviderWithProperties" id="cdktn.Testing.toHaveProviderWithProperties"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_ToHaveProviderWithProperties(received *string, resourceType *string, properties *map[string]interface{}) *bool
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveProviderWithProperties.parameter.received"></a>
+
+- *Type:* \*string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveProviderWithProperties.parameter.resourceType"></a>
+
+- *Type:* \*string
+
+***
+
+#### `properties`<sup>Optional</sup> <a name="properties" id="cdktn.Testing.toHaveProviderWithProperties.parameter.properties"></a>
+
+- *Type:* \*map\[string]interface\{}
+
+***
+
+### `ToHaveResource` <a name="ToHaveResource" id="cdktn.Testing.toHaveResource"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_ToHaveResource(received *string, resourceType *string) *bool
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveResource.parameter.received"></a>
+
+- *Type:* \*string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveResource.parameter.resourceType"></a>
+
+- *Type:* \*string
+
+***
+
+### `ToHaveResourceWithProperties` <a name="ToHaveResourceWithProperties" id="cdktn.Testing.toHaveResourceWithProperties"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Testing_ToHaveResourceWithProperties(received *string, resourceType *string, properties *map[string]interface{}) *bool
+```
+
+#### `received`<sup>Required</sup> <a name="received" id="cdktn.Testing.toHaveResourceWithProperties.parameter.received"></a>
+
+- *Type:* \*string
+
+***
+
+#### `resourceType`<sup>Required</sup> <a name="resourceType" id="cdktn.Testing.toHaveResourceWithProperties.parameter.resourceType"></a>
+
+- *Type:* \*string
+
+***
+
+#### `properties`<sup>Optional</sup> <a name="properties" id="cdktn.Testing.toHaveResourceWithProperties.parameter.properties"></a>
+
+- *Type:* \*map\[string]interface\{}
+
+***
+

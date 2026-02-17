@@ -1,0 +1,54 @@
+---
+title: "Python: Precondition"
+sidebarTitle: Precondition
+description: CDKTN Core API Reference for Precondition in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Terraform checks a precondition before evaluating the object it is associated with.
+
+## Initializer <a name="Initializer" id="cdktn.Precondition.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.Precondition(
+  condition: typing.Any,
+  error_message: str
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Precondition.property.condition">condition</a></code> | <code>typing.Any</code> | This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not. |
+| <code><a href="#cdktn.Precondition.property.errorMessage">error\_message</a></code> | <code>str</code> | This contains the text that Terraform will include as part of error messages when it detects an unmet condition. |
+
+***
+
+### `condition`<sup>Required</sup> <a name="condition" id="cdktn.Precondition.property.condition"></a>
+
+```python
+condition: typing.Any
+```
+
+- *Type:* typing.Any
+
+This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not.
+
+***
+
+### `error_message`<sup>Required</sup> <a name="error_message" id="cdktn.Precondition.property.errorMessage"></a>
+
+```python
+error_message: str
+```
+
+- *Type:* str
+
+This contains the text that Terraform will include as part of error messages when it detects an unmet condition.
+
+***
+

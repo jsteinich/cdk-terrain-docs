@@ -1,0 +1,140 @@
+---
+title: "Go: DataConfig"
+sidebarTitle: DataConfig
+description: CDKTN Core API Reference for DataConfig in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.DataConfig.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+&cdktn.DataConfig {
+	Connection: interface{},
+	Count: interface{},
+	DependsOn: *[]github.com/open-constructs/cdk-terrain-go/cdktn.ITerraformDependable,
+	ForEach: github.com/open-constructs/cdk-terrain-go/cdktn.ITerraformIterator,
+	Lifecycle: github.com/open-constructs/cdk-terrain-go/cdktn.TerraformResourceLifecycle,
+	Provider: github.com/open-constructs/cdk-terrain-go/cdktn.TerraformProvider,
+	Provisioners: *[]interface{},
+	Input: *map[string]interface{},
+	TriggersReplace: *map[string]interface{},
+}
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataConfig.property.connection">Connection</a></code> | <code>interface\{}</code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.count">Count</a></code> | <code>interface\{}</code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.dependsOn">DependsOn</a></code> | <code>*\[]<a href="#cdktn.ITerraformDependable">ITerraformDependable</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.forEach">ForEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.lifecycle">Lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.provider">Provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.provisioners">Provisioners</a></code> | <code>*\[]interface\{}</code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.input">Input</a></code> | <code>\*map\[string]interface\{}</code> | (Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply. |
+| <code><a href="#cdktn.DataConfig.property.triggersReplace">TriggersReplace</a></code> | <code>\*map\[string]interface\{}</code> | (Optional) A value which is stored in the instance state, and will force replacement when the value changes. |
+
+***
+
+### `Connection`<sup>Optional</sup> <a name="Connection" id="cdktn.DataConfig.property.connection"></a>
+
+```go
+Connection interface{}
+```
+
+- *Type:* interface\{}
+
+***
+
+### `Count`<sup>Optional</sup> <a name="Count" id="cdktn.DataConfig.property.count"></a>
+
+```go
+Count interface{}
+```
+
+- *Type:* interface\{}
+
+***
+
+### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="cdktn.DataConfig.property.dependsOn"></a>
+
+```go
+DependsOn *[]ITerraformDependable
+```
+
+- *Type:* \*\[]<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>
+
+***
+
+### `ForEach`<sup>Optional</sup> <a name="ForEach" id="cdktn.DataConfig.property.forEach"></a>
+
+```go
+ForEach ITerraformIterator
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="cdktn.DataConfig.property.lifecycle"></a>
+
+```go
+Lifecycle TerraformResourceLifecycle
+```
+
+- *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
+
+***
+
+### `Provider`<sup>Optional</sup> <a name="Provider" id="cdktn.DataConfig.property.provider"></a>
+
+```go
+Provider TerraformProvider
+```
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="cdktn.DataConfig.property.provisioners"></a>
+
+```go
+Provisioners *[]interface{}
+```
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Input`<sup>Optional</sup> <a name="Input" id="cdktn.DataConfig.property.input"></a>
+
+```go
+Input *map[string]interface{}
+```
+
+- *Type:* \*map\[string]interface\{}
+
+(Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#input
+
+***
+
+### `TriggersReplace`<sup>Optional</sup> <a name="TriggersReplace" id="cdktn.DataConfig.property.triggersReplace"></a>
+
+```go
+TriggersReplace *map[string]interface{}
+```
+
+- *Type:* \*map\[string]interface\{}
+
+(Optional) A value which is stored in the instance state, and will force replacement when the value changes.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#triggers\_replace
+
+***
+

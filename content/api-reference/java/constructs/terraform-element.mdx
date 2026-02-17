@@ -1,0 +1,232 @@
+---
+title: "Java: TerraformElement"
+sidebarTitle: TerraformElement
+description: CDKTN Core API Reference for TerraformElement in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.TerraformElement.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.TerraformElement;
+
+new TerraformElement(Construct scope, java.lang.String id);,new TerraformElement(Construct scope, java.lang.String id, java.lang.String elementType);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformElement.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.Initializer.parameter.elementType">elementType</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.TerraformElement.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.TerraformElement.Initializer.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `elementType`<sup>Optional</sup> <a name="elementType" id="cdktn.TerraformElement.Initializer.parameter.elementType"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformElement.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformElement.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.TerraformElement.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.TerraformElement.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.toTerraform">toTerraform</a></code> | *No description.* |
+
+***
+
+### `toString` <a name="toString" id="cdktn.TerraformElement.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `addOverride` <a name="addOverride" id="cdktn.TerraformElement.addOverride"></a>
+
+```java
+public void addOverride(java.lang.String path, java.lang.Object value)
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.TerraformElement.addOverride.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformElement.addOverride.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `overrideLogicalId` <a name="overrideLogicalId" id="cdktn.TerraformElement.overrideLogicalId"></a>
+
+```java
+public void overrideLogicalId(java.lang.String newLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.TerraformElement.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* java.lang.String
+
+The new logical ID to use for this stack element.
+
+***
+
+### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktn.TerraformElement.resetOverrideLogicalId"></a>
+
+```java
+public void resetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.TerraformElement.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+### `toMetadata` <a name="toMetadata" id="cdktn.TerraformElement.toMetadata"></a>
+
+```java
+public java.lang.Object toMetadata()
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.TerraformElement.toTerraform"></a>
+
+```java
+public java.lang.Object toTerraform()
+```
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformElement.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformElement.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.TerraformElement.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.TerraformElement;
+
+TerraformElement.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformElement.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isTerraformElement` <a name="isTerraformElement" id="cdktn.TerraformElement.isTerraformElement"></a>
+
+```java
+import io.cdktn.cdktn.TerraformElement;
+
+TerraformElement.isTerraformElement(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformElement.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformElement.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformElement.property.cdktfStack">cdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.TerraformElement.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktn.TerraformElement.property.cdktfStack"></a>
+
+```java
+public TerraformStack getCdktfStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.TerraformElement.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.TerraformElement.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+

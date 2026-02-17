@@ -1,0 +1,99 @@
+---
+title: "Python: TerraformOutputConfig"
+sidebarTitle: TerraformOutputConfig
+description: CDKTN Core API Reference for TerraformOutputConfig in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.TerraformOutputConfig.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformOutputConfig(
+  value: typing.Any,
+  depends_on: typing.List[ITerraformDependable] = None,
+  description: str = None,
+  precondition: Precondition = None,
+  sensitive: bool = None,
+  static_id: bool = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformOutputConfig.property.value">value</a></code> | <code>typing.Any</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutputConfig.property.dependsOn">depends\_on</a></code> | <code>typing.List\[<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutputConfig.property.description">description</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutputConfig.property.precondition">precondition</a></code> | <code><a href="#cdktn.Precondition">Precondition</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutputConfig.property.sensitive">sensitive</a></code> | <code>bool</code> | *No description.* |
+| <code><a href="#cdktn.TerraformOutputConfig.property.staticId">static\_id</a></code> | <code>bool</code> | If set to true the synthesized Terraform Output will be named after the `id` passed to the constructor instead of the default (TerraformOutput.friendlyUniqueId). |
+
+***
+
+### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformOutputConfig.property.value"></a>
+
+```python
+value: typing.Any
+```
+
+- *Type:* typing.Any
+
+***
+
+### `depends_on`<sup>Optional</sup> <a name="depends_on" id="cdktn.TerraformOutputConfig.property.dependsOn"></a>
+
+```python
+depends_on: typing.List[ITerraformDependable]
+```
+
+- *Type:* typing.List\[<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>]
+
+***
+
+### `description`<sup>Optional</sup> <a name="description" id="cdktn.TerraformOutputConfig.property.description"></a>
+
+```python
+description: str
+```
+
+- *Type:* str
+
+***
+
+### `precondition`<sup>Optional</sup> <a name="precondition" id="cdktn.TerraformOutputConfig.property.precondition"></a>
+
+```python
+precondition: Precondition
+```
+
+- *Type:* <a href="#cdktn.Precondition">Precondition</a>
+
+***
+
+### `sensitive`<sup>Optional</sup> <a name="sensitive" id="cdktn.TerraformOutputConfig.property.sensitive"></a>
+
+```python
+sensitive: bool
+```
+
+- *Type:* bool
+
+***
+
+### `static_id`<sup>Optional</sup> <a name="static_id" id="cdktn.TerraformOutputConfig.property.staticId"></a>
+
+```python
+static_id: bool
+```
+
+- *Type:* bool
+- *Default:* false
+
+If set to true the synthesized Terraform Output will be named after the `id` passed to the constructor instead of the default (TerraformOutput.friendlyUniqueId).
+
+***
+

@@ -1,0 +1,507 @@
+---
+title: "Python: DataTerraformRemoteStateCos"
+sidebarTitle: DataTerraformRemoteStateCos
+description: CDKTN Core API Reference for DataTerraformRemoteStateCos in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.DataTerraformRemoteStateCos.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateCos(
+  scope: Construct,
+  id: str,
+  defaults: typing.Mapping[typing.Any] = None,
+  workspace: str = None,
+  bucket: str,
+  accelerate: bool = None,
+  acl: str = None,
+  assume_role: CosBackendAssumeRole = None,
+  domain: str = None,
+  encrypt: bool = None,
+  endpoint: str = None,
+  key: str = None,
+  prefix: str = None,
+  region: str = None,
+  secret_id: str = None,
+  secret_key: str = None,
+  security_token: str = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.defaults">defaults</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.workspace">workspace</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.bucket">bucket</a></code> | <code>str</code> | (Required) The name of the COS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.accelerate">accelerate</a></code> | <code>bool</code> | (Optional) Whether to enable global Acceleration. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.acl">acl</a></code> | <code>str</code> | (Optional) Object ACL to be applied to the state file, allows private and public-read. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.assumeRole">assume\_role</a></code> | <code><a href="#cdktn.CosBackendAssumeRole">CosBackendAssumeRole</a></code> | (Optional) The assume\_role block. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.domain">domain</a></code> | <code>str</code> | (Optional) The root domain of the API request. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.encrypt">encrypt</a></code> | <code>bool</code> | (Optional) Whether to enable server side encryption of the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.endpoint">endpoint</a></code> | <code>str</code> | (Optional) The Custom Endpoint for the COS backend. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.key">key</a></code> | <code>str</code> | (Optional) The path for saving the state file in bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.prefix">prefix</a></code> | <code>str</code> | (Optional) The directory for saving the state file in bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.region">region</a></code> | <code>str</code> | (Optional) The region of the COS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.secretId">secret\_id</a></code> | <code>str</code> | (Optional) Secret id of Tencent Cloud. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.secretKey">secret\_key</a></code> | <code>str</code> | (Optional) Secret key of Tencent Cloud. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.Initializer.parameter.securityToken">security\_token</a></code> | <code>str</code> | (Optional) TencentCloud Security Token of temporary access credentials. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.defaults"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.workspace"></a>
+
+- *Type:* str
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.bucket"></a>
+
+- *Type:* str
+
+(Required) The name of the COS bucket.
+
+You shall manually create it first.
+
+***
+
+### `accelerate`<sup>Optional</sup> <a name="accelerate" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.accelerate"></a>
+
+- *Type:* bool
+
+(Optional) Whether to enable global Acceleration.
+
+Defaults to false.
+
+***
+
+### `acl`<sup>Optional</sup> <a name="acl" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.acl"></a>
+
+- *Type:* str
+
+(Optional) Object ACL to be applied to the state file, allows private and public-read.
+
+Defaults to private.
+
+***
+
+### `assume_role`<sup>Optional</sup> <a name="assume_role" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.assumeRole"></a>
+
+- *Type:* <a href="#cdktn.CosBackendAssumeRole">CosBackendAssumeRole</a>
+
+(Optional) The assume\_role block.
+
+If provided, terraform will attempt to assume this role using the supplied credentials.
+
+***
+
+### `domain`<sup>Optional</sup> <a name="domain" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.domain"></a>
+
+- *Type:* str
+
+(Optional) The root domain of the API request.
+
+Defaults to tencentcloudapi.com.
+It supports the environment variable TENCENTCLOUD\_DOMAIN.
+
+***
+
+### `encrypt`<sup>Optional</sup> <a name="encrypt" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.encrypt"></a>
+
+- *Type:* bool
+
+(Optional) Whether to enable server side encryption of the state file.
+
+If it is true, COS will use 'AES256' encryption algorithm to encrypt state file.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.endpoint"></a>
+
+- *Type:* str
+
+(Optional) The Custom Endpoint for the COS backend.
+
+It supports the environment variable TENCENTCLOUD\_ENDPOINT.
+
+***
+
+### `key`<sup>Optional</sup> <a name="key" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.key"></a>
+
+- *Type:* str
+
+(Optional) The path for saving the state file in bucket.
+
+Defaults to terraform.tfstate.
+
+***
+
+### `prefix`<sup>Optional</sup> <a name="prefix" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.prefix"></a>
+
+- *Type:* str
+
+(Optional) The directory for saving the state file in bucket.
+
+Default to "env:".
+
+***
+
+### `region`<sup>Optional</sup> <a name="region" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.region"></a>
+
+- *Type:* str
+
+(Optional) The region of the COS bucket.
+
+It supports environment variables TENCENTCLOUD\_REGION.
+
+***
+
+### `secret_id`<sup>Optional</sup> <a name="secret_id" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.secretId"></a>
+
+- *Type:* str
+
+(Optional) Secret id of Tencent Cloud.
+
+It supports environment variables TENCENTCLOUD\_SECRET\_ID.
+
+***
+
+### `secret_key`<sup>Optional</sup> <a name="secret_key" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.secretKey"></a>
+
+- *Type:* str
+
+(Optional) Secret key of Tencent Cloud.
+
+It supports environment variables TENCENTCLOUD\_SECRET\_KEY.
+
+***
+
+### `security_token`<sup>Optional</sup> <a name="security_token" id="cdktn.DataTerraformRemoteStateCos.Initializer.parameter.securityToken"></a>
+
+- *Type:* str
+
+(Optional) TencentCloud Security Token of temporary access credentials.
+
+It supports environment variables TENCENTCLOUD\_SECURITY\_TOKEN.
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.addOverride">add\_override</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.overrideLogicalId">override\_logical\_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.resetOverrideLogicalId">reset\_override\_logical\_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.toHclTerraform">to\_hcl\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.toMetadata">to\_metadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.toTerraform">to\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.get">get</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.getBoolean">get\_boolean</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.getList">get\_list</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.getNumber">get\_number</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.getString">get\_string</a></code> | *No description.* |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.DataTerraformRemoteStateCos.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `add_override` <a name="add_override" id="cdktn.DataTerraformRemoteStateCos.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.DataTerraformRemoteStateCos.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.DataTerraformRemoteStateCos.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `override_logical_id` <a name="override_logical_id" id="cdktn.DataTerraformRemoteStateCos.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="cdktn.DataTerraformRemoteStateCos.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+***
+
+### `reset_override_logical_id` <a name="reset_override_logical_id" id="cdktn.DataTerraformRemoteStateCos.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.DataTerraformRemoteStateCos.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `to_metadata` <a name="to_metadata" id="cdktn.DataTerraformRemoteStateCos.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+### `to_terraform` <a name="to_terraform" id="cdktn.DataTerraformRemoteStateCos.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `get` <a name="get" id="cdktn.DataTerraformRemoteStateCos.get"></a>
+
+```python
+def get(
+  output: str
+) -> IResolvable
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateCos.get.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_boolean` <a name="get_boolean" id="cdktn.DataTerraformRemoteStateCos.getBoolean"></a>
+
+```python
+def get_boolean(
+  output: str
+) -> IResolvable
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateCos.getBoolean.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_list` <a name="get_list" id="cdktn.DataTerraformRemoteStateCos.getList"></a>
+
+```python
+def get_list(
+  output: str
+) -> typing.List[str]
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateCos.getList.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_number` <a name="get_number" id="cdktn.DataTerraformRemoteStateCos.getNumber"></a>
+
+```python
+def get_number(
+  output: str
+) -> typing.Union[int, float]
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateCos.getNumber.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_string` <a name="get_string" id="cdktn.DataTerraformRemoteStateCos.getString"></a>
+
+```python
+def get_string(
+  output: str
+) -> str
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateCos.getString.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.isTerraformElement">is\_terraform\_element</a></code> | *No description.* |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.DataTerraformRemoteStateCos.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateCos.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateCos.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_terraform_element` <a name="is_terraform_element" id="cdktn.DataTerraformRemoteStateCos.isTerraformElement"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateCos.is_terraform_element(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateCos.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.property.cdktfStack">cdktf\_stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.property.friendlyUniqueId">friendly\_unique\_id</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.DataTerraformRemoteStateCos.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="cdktn.DataTerraformRemoteStateCos.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.DataTerraformRemoteStateCos.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+
+### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="cdktn.DataTerraformRemoteStateCos.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateCos.property.tfResourceType">tfResourceType</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="cdktn.DataTerraformRemoteStateCos.property.tfResourceType"></a>
+
+```python
+tfResourceType: str
+```
+
+- *Type:* str
+
+***
+

@@ -1,0 +1,130 @@
+---
+title: "Typescript: DataConfig"
+sidebarTitle: DataConfig
+description: CDKTN Core API Reference for DataConfig in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.DataConfig.Initializer"></a>
+
+```typescript
+import { DataConfig } from 'cdktn'
+
+const dataConfig: DataConfig = { ... }
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataConfig.property.connection">connection</a></code> | <code><a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a> &#124; <a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.count">count</a></code> | <code>number &#124; <a href="#cdktn.TerraformCount">TerraformCount</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.dependsOn">dependsOn</a></code> | <code><a href="#cdktn.ITerraformDependable">ITerraformDependable</a>\[]</code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.forEach">forEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.lifecycle">lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.provider">provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.provisioners">provisioners</a></code> | <code><a href="#cdktn.FileProvisioner">FileProvisioner</a> &#124; <a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a> &#124; <a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>\[]</code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.input">input</a></code> | <code>\{\[ key: string ]: any}</code> | (Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply. |
+| <code><a href="#cdktn.DataConfig.property.triggersReplace">triggersReplace</a></code> | <code>\{\[ key: string ]: any}</code> | (Optional) A value which is stored in the instance state, and will force replacement when the value changes. |
+
+***
+
+### `connection`<sup>Optional</sup> <a name="connection" id="cdktn.DataConfig.property.connection"></a>
+
+```typescript
+public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
+```
+
+- *Type:* <a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a> | <a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a>
+
+***
+
+### `count`<sup>Optional</sup> <a name="count" id="cdktn.DataConfig.property.count"></a>
+
+```typescript
+public readonly count: number | TerraformCount;
+```
+
+- *Type:* number | <a href="#cdktn.TerraformCount">TerraformCount</a>
+
+***
+
+### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="cdktn.DataConfig.property.dependsOn"></a>
+
+```typescript
+public readonly dependsOn: ITerraformDependable[];
+```
+
+- *Type:* <a href="#cdktn.ITerraformDependable">ITerraformDependable</a>\[]
+
+***
+
+### `forEach`<sup>Optional</sup> <a name="forEach" id="cdktn.DataConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="cdktn.DataConfig.property.lifecycle"></a>
+
+```typescript
+public readonly lifecycle: TerraformResourceLifecycle;
+```
+
+- *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
+
+***
+
+### `provider`<sup>Optional</sup> <a name="provider" id="cdktn.DataConfig.property.provider"></a>
+
+```typescript
+public readonly provider: TerraformProvider;
+```
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### `provisioners`<sup>Optional</sup> <a name="provisioners" id="cdktn.DataConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
+```
+
+- *Type:* <a href="#cdktn.FileProvisioner">FileProvisioner</a> | <a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a> | <a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>\[]
+
+***
+
+### `input`<sup>Optional</sup> <a name="input" id="cdktn.DataConfig.property.input"></a>
+
+```typescript
+public readonly input: {[ key: string ]: any};
+```
+
+- *Type:* \{\[ key: string ]: any}
+
+(Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#input
+
+***
+
+### `triggersReplace`<sup>Optional</sup> <a name="triggersReplace" id="cdktn.DataConfig.property.triggersReplace"></a>
+
+```typescript
+public readonly triggersReplace: {[ key: string ]: any};
+```
+
+- *Type:* \{\[ key: string ]: any}
+
+(Optional) A value which is stored in the instance state, and will force replacement when the value changes.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#triggers\_replace
+
+***
+

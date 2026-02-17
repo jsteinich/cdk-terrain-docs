@@ -1,0 +1,140 @@
+---
+title: "Python: IResolveContext"
+sidebarTitle: IResolveContext
+description: CDKTN Core API Reference for IResolveContext in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implemented By:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+Current resolution context for tokens.
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.IResolveContext.registerPostProcessor">register\_post\_processor</a></code> | Use this postprocessor after the entire token structure has been resolved. |
+| <code><a href="#cdktn.IResolveContext.resolve">resolve</a></code> | Resolve an inner object. |
+
+***
+
+### `register_post_processor` <a name="register_post_processor" id="cdktn.IResolveContext.registerPostProcessor"></a>
+
+```python
+def register_post_processor(
+  post_processor: IPostProcessor
+) -> None
+```
+
+Use this postprocessor after the entire token structure has been resolved.
+
+#### `post_processor`<sup>Required</sup> <a name="post_processor" id="cdktn.IResolveContext.registerPostProcessor.parameter.postProcessor"></a>
+
+- *Type:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+***
+
+### `resolve` <a name="resolve" id="cdktn.IResolveContext.resolve"></a>
+
+```python
+def resolve(
+  x: typing.Any
+) -> typing.Any
+```
+
+Resolve an inner object.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.IResolveContext.resolve.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.IResolveContext.property.preparing">preparing</a></code> | <code>bool</code> | True when we are still preparing, false if we're rendering the final output. |
+| <code><a href="#cdktn.IResolveContext.property.scope">scope</a></code> | <code>constructs.IConstruct</code> | The scope from which resolution has been initiated. |
+| <code><a href="#cdktn.IResolveContext.property.ignoreEscapes">ignore\_escapes</a></code> | <code>bool</code> | True when $\{} should not be parsed, and treated as literals. |
+| <code><a href="#cdktn.IResolveContext.property.iteratorContext">iterator\_context</a></code> | <code>str</code> | TerraformIterators can be passed for block attributes and normal list attributes both require different handling when the iterable variable is accessed e.g. a dynamic block needs each.key while a for expression just needs key. |
+| <code><a href="#cdktn.IResolveContext.property.suppressBraces">suppress\_braces</a></code> | <code>bool</code> | True when $\{} should be ommitted (because already inside them), false otherwise. |
+| <code><a href="#cdktn.IResolveContext.property.warnEscapes">warn\_escapes</a></code> | <code>bool</code> | True when $\{} should not be included in the string to be resolved, outputs a warning. |
+
+***
+
+### `preparing`<sup>Required</sup> <a name="preparing" id="cdktn.IResolveContext.property.preparing"></a>
+
+```python
+preparing: bool
+```
+
+- *Type:* bool
+
+True when we are still preparing, false if we're rendering the final output.
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.IResolveContext.property.scope"></a>
+
+```python
+scope: IConstruct
+```
+
+- *Type:* constructs.IConstruct
+
+The scope from which resolution has been initiated.
+
+***
+
+### `ignore_escapes`<sup>Optional</sup> <a name="ignore_escapes" id="cdktn.IResolveContext.property.ignoreEscapes"></a>
+
+```python
+ignore_escapes: bool
+```
+
+- *Type:* bool
+
+True when $\{} should not be parsed, and treated as literals.
+
+***
+
+### `iterator_context`<sup>Optional</sup> <a name="iterator_context" id="cdktn.IResolveContext.property.iteratorContext"></a>
+
+```python
+iterator_context: str
+```
+
+- *Type:* str
+
+TerraformIterators can be passed for block attributes and normal list attributes both require different handling when the iterable variable is accessed e.g. a dynamic block needs each.key while a for expression just needs key.
+
+***
+
+### `suppress_braces`<sup>Optional</sup> <a name="suppress_braces" id="cdktn.IResolveContext.property.suppressBraces"></a>
+
+```python
+suppress_braces: bool
+```
+
+- *Type:* bool
+
+True when $\{} should be ommitted (because already inside them), false otherwise.
+
+***
+
+### `warn_escapes`<sup>Optional</sup> <a name="warn_escapes" id="cdktn.IResolveContext.property.warnEscapes"></a>
+
+```python
+warn_escapes: bool
+```
+
+- *Type:* bool
+
+True when $\{} should not be included in the string to be resolved, outputs a warning.
+
+Default: false
+
+***
+

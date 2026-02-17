@@ -1,0 +1,658 @@
+---
+title: "Python: DataTerraformRemoteStateAzurerm"
+sidebarTitle: DataTerraformRemoteStateAzurerm
+description: CDKTN Core API Reference for DataTerraformRemoteStateAzurerm in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateAzurerm(
+  scope: Construct,
+  id: str,
+  defaults: typing.Mapping[typing.Any] = None,
+  workspace: str = None,
+  container_name: str,
+  key: str,
+  storage_account_name: str,
+  access_key: str = None,
+  client_certificate_password: str = None,
+  client_certificate_path: str = None,
+  client_id: str = None,
+  client_secret: str = None,
+  endpoint: str = None,
+  environment: str = None,
+  metadata_host: str = None,
+  msi_endpoint: str = None,
+  oidc_request_token: str = None,
+  oidc_request_url: str = None,
+  oidc_token: str = None,
+  oidc_token_file_path: str = None,
+  resource_group_name: str = None,
+  sas_token: str = None,
+  snapshot: bool = None,
+  subscription_id: str = None,
+  tenant_id: str = None,
+  use_azuread_auth: bool = None,
+  use_microsoft_graph: bool = None,
+  use_msi: bool = None,
+  use_oidc: bool = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.defaults">defaults</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.workspace">workspace</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.containerName">container\_name</a></code> | <code>str</code> | (Required) The Name of the Storage Container within the Storage Account. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.key">key</a></code> | <code>str</code> | (Required) The name of the Blob used to retrieve/store Terraform's State file inside the Storage Container. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.storageAccountName">storage\_account\_name</a></code> | <code>str</code> | (Required) The Name of the Storage Account. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.accessKey">access\_key</a></code> | <code>str</code> | access\_key - (Optional) The Access Key used to access the Blob Storage Account. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientCertificatePassword">client\_certificate\_password</a></code> | <code>str</code> | (Optional) The password associated with the Client Certificate specified in client\_certificate\_path. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientCertificatePath">client\_certificate\_path</a></code> | <code>str</code> | (Optional) The path to the PFX file used as the Client Certificate when authenticating as a Service Principal. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientId">client\_id</a></code> | <code>str</code> | (Optional) The Client ID of the Service Principal. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientSecret">client\_secret</a></code> | <code>str</code> | (Optional) The Client Secret of the Service Principal. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.endpoint">endpoint</a></code> | <code>str</code> | (Optional) The Custom Endpoint for Azure Resource Manager. This can also be sourced from the ARM\_ENDPOINT environment variable. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.environment">environment</a></code> | <code>str</code> | (Optional) The Azure Environment which should be used. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.metadataHost">metadata\_host</a></code> | <code>str</code> | (Optional) The Hostname of the Azure Metadata Service (for example management.azure.com), used to obtain the Cloud Environment when using a Custom Azure Environment. This can also be sourced from the ARM\_METADATA\_HOSTNAME Environment Variable.). |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.msiEndpoint">msi\_endpoint</a></code> | <code>str</code> | (Optional) The path to a custom Managed Service Identity endpoint which is automatically determined if not specified. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcRequestToken">oidc\_request\_token</a></code> | <code>str</code> | (Optional) The bearer token for the request to the OIDC provider. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcRequestUrl">oidc\_request\_url</a></code> | <code>str</code> | (Optional) The URL for the OIDC provider from which to request an ID token. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcToken">oidc\_token</a></code> | <code>str</code> | (Optional) The ID token when authenticating using OpenID Connect (OIDC). |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcTokenFilePath">oidc\_token\_file\_path</a></code> | <code>str</code> | (Optional) The path to a file containing an ID token when authenticating using OpenID Connect (OIDC). |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.resourceGroupName">resource\_group\_name</a></code> | <code>str</code> | (Required) The Name of the Resource Group in which the Storage Account exists. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.sasToken">sas\_token</a></code> | <code>str</code> | (Optional) The SAS Token used to access the Blob Storage Account. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.snapshot">snapshot</a></code> | <code>bool</code> | (Optional) Should the Blob used to store the Terraform Statefile be snapshotted before use? |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.subscriptionId">subscription\_id</a></code> | <code>str</code> | (Optional) The Subscription ID in which the Storage Account exists. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.tenantId">tenant\_id</a></code> | <code>str</code> | (Optional) The Tenant ID in which the Subscription exists. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useAzureadAuth">use\_azuread\_auth</a></code> | <code>bool</code> | (Optional) Should AzureAD Authentication be used to access the Blob Storage Account. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useMicrosoftGraph">use\_microsoft\_graph</a></code> | <code>bool</code> | (Optional) Should MSAL be used for authentication instead of ADAL, and should Microsoft Graph be used instead of Azure Active Directory Graph? |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useMsi">use\_msi</a></code> | <code>bool</code> | (Optional) Should Managed Service Identity authentication be used? |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useOidc">use\_oidc</a></code> | <code>bool</code> | (Optional) Should OIDC authentication be used? This can also be sourced from the ARM\_USE\_OIDC environment variable. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.defaults"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.workspace"></a>
+
+- *Type:* str
+
+***
+
+### `container_name`<sup>Required</sup> <a name="container_name" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.containerName"></a>
+
+- *Type:* str
+
+(Required) The Name of the Storage Container within the Storage Account.
+
+***
+
+### `key`<sup>Required</sup> <a name="key" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.key"></a>
+
+- *Type:* str
+
+(Required) The name of the Blob used to retrieve/store Terraform's State file inside the Storage Container.
+
+***
+
+### `storage_account_name`<sup>Required</sup> <a name="storage_account_name" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.storageAccountName"></a>
+
+- *Type:* str
+
+(Required) The Name of the Storage Account.
+
+***
+
+### `access_key`<sup>Optional</sup> <a name="access_key" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.accessKey"></a>
+
+- *Type:* str
+
+access\_key - (Optional) The Access Key used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_ACCESS\_KEY environment variable.
+
+***
+
+### `client_certificate_password`<sup>Optional</sup> <a name="client_certificate_password" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientCertificatePassword"></a>
+
+- *Type:* str
+
+(Optional) The password associated with the Client Certificate specified in client\_certificate\_path.
+
+This can also be sourced from the
+ARM\_CLIENT\_CERTIFICATE\_PASSWORD environment variable.
+
+***
+
+### `client_certificate_path`<sup>Optional</sup> <a name="client_certificate_path" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientCertificatePath"></a>
+
+- *Type:* str
+
+(Optional) The path to the PFX file used as the Client Certificate when authenticating as a Service Principal.
+
+This can also be sourced from the
+ARM\_CLIENT\_CERTIFICATE\_PATH environment variable.
+
+***
+
+### `client_id`<sup>Optional</sup> <a name="client_id" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientId"></a>
+
+- *Type:* str
+
+(Optional) The Client ID of the Service Principal.
+
+This can also be sourced from the ARM\_CLIENT\_ID environment variable.
+
+***
+
+### `client_secret`<sup>Optional</sup> <a name="client_secret" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.clientSecret"></a>
+
+- *Type:* str
+
+(Optional) The Client Secret of the Service Principal.
+
+This can also be sourced from the ARM\_CLIENT\_SECRET environment variable.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.endpoint"></a>
+
+- *Type:* str
+
+(Optional) The Custom Endpoint for Azure Resource Manager. This can also be sourced from the ARM\_ENDPOINT environment variable.
+
+NOTE: An endpoint should only be configured when using Azure Stack.
+
+***
+
+### `environment`<sup>Optional</sup> <a name="environment" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.environment"></a>
+
+- *Type:* str
+
+(Optional) The Azure Environment which should be used.
+
+This can also be sourced from the ARM\_ENVIRONMENT environment variable.
+Possible values are public, china, german, stack and usgovernment. Defaults to public.
+
+***
+
+### `metadata_host`<sup>Optional</sup> <a name="metadata_host" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.metadataHost"></a>
+
+- *Type:* str
+
+(Optional) The Hostname of the Azure Metadata Service (for example management.azure.com), used to obtain the Cloud Environment when using a Custom Azure Environment. This can also be sourced from the ARM\_METADATA\_HOSTNAME Environment Variable.).
+
+***
+
+### `msi_endpoint`<sup>Optional</sup> <a name="msi_endpoint" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.msiEndpoint"></a>
+
+- *Type:* str
+
+(Optional) The path to a custom Managed Service Identity endpoint which is automatically determined if not specified.
+
+This can also be sourced from the ARM\_MSI\_ENDPOINT environment variable.
+
+***
+
+### `oidc_request_token`<sup>Optional</sup> <a name="oidc_request_token" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcRequestToken"></a>
+
+- *Type:* str
+
+(Optional) The bearer token for the request to the OIDC provider.
+
+This can
+also be sourced from the ARM\_OIDC\_REQUEST\_TOKEN or
+ACTIONS\_ID\_TOKEN\_REQUEST\_TOKEN environment variables.
+
+***
+
+### `oidc_request_url`<sup>Optional</sup> <a name="oidc_request_url" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcRequestUrl"></a>
+
+- *Type:* str
+
+(Optional) The URL for the OIDC provider from which to request an ID token.
+
+This can also be sourced from the ARM\_OIDC\_REQUEST\_URL or
+ACTIONS\_ID\_TOKEN\_REQUEST\_URL environment variables.
+
+***
+
+### `oidc_token`<sup>Optional</sup> <a name="oidc_token" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcToken"></a>
+
+- *Type:* str
+
+(Optional) The ID token when authenticating using OpenID Connect (OIDC).
+
+This can also be sourced from the ARM\_OIDC\_TOKEN environment variable.
+
+***
+
+### `oidc_token_file_path`<sup>Optional</sup> <a name="oidc_token_file_path" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.oidcTokenFilePath"></a>
+
+- *Type:* str
+
+(Optional) The path to a file containing an ID token when authenticating using OpenID Connect (OIDC).
+
+This can also be sourced from the ARM\_OIDC\_TOKEN\_FILE\_PATH environment variable.
+
+***
+
+### `resource_group_name`<sup>Optional</sup> <a name="resource_group_name" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.resourceGroupName"></a>
+
+- *Type:* str
+
+(Required) The Name of the Resource Group in which the Storage Account exists.
+
+***
+
+### `sas_token`<sup>Optional</sup> <a name="sas_token" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.sasToken"></a>
+
+- *Type:* str
+
+(Optional) The SAS Token used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_SAS\_TOKEN environment variable.
+
+***
+
+### `snapshot`<sup>Optional</sup> <a name="snapshot" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.snapshot"></a>
+
+- *Type:* bool
+
+(Optional) Should the Blob used to store the Terraform Statefile be snapshotted before use?
+
+Defaults to false. This value can also be sourced
+from the ARM\_SNAPSHOT environment variable.
+
+***
+
+### `subscription_id`<sup>Optional</sup> <a name="subscription_id" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.subscriptionId"></a>
+
+- *Type:* str
+
+(Optional) The Subscription ID in which the Storage Account exists.
+
+This can also be sourced from the ARM\_SUBSCRIPTION\_ID environment variable.
+
+***
+
+### `tenant_id`<sup>Optional</sup> <a name="tenant_id" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.tenantId"></a>
+
+- *Type:* str
+
+(Optional) The Tenant ID in which the Subscription exists.
+
+This can also be sourced from the ARM\_TENANT\_ID environment variable.
+
+***
+
+### `use_azuread_auth`<sup>Optional</sup> <a name="use_azuread_auth" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useAzureadAuth"></a>
+
+- *Type:* bool
+
+(Optional) Should AzureAD Authentication be used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_USE\_AZUREAD environment
+variable.
+
+Note: When using AzureAD for Authentication to Storage you also need to
+ensure the Storage Blob Data Owner role is assigned.
+
+***
+
+### `use_microsoft_graph`<sup>Optional</sup> <a name="use_microsoft_graph" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useMicrosoftGraph"></a>
+
+- *Type:* bool
+
+(Optional) Should MSAL be used for authentication instead of ADAL, and should Microsoft Graph be used instead of Azure Active Directory Graph?
+
+Defaults to true.
+
+Note: In Terraform 1.2 the Azure Backend uses MSAL (and Microsoft Graph)
+rather than ADAL (and Azure Active Directory Graph) for authentication by
+default - you can disable this by setting use\_microsoft\_graph to false.
+This setting will be removed in Terraform 1.3, due to Microsoft's
+deprecation of ADAL.
+
+***
+
+### `use_msi`<sup>Optional</sup> <a name="use_msi" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useMsi"></a>
+
+- *Type:* bool
+
+(Optional) Should Managed Service Identity authentication be used?
+
+This can also be sourced from the ARM\_USE\_MSI environment variable.
+
+***
+
+### `use_oidc`<sup>Optional</sup> <a name="use_oidc" id="cdktn.DataTerraformRemoteStateAzurerm.Initializer.parameter.useOidc"></a>
+
+- *Type:* bool
+
+(Optional) Should OIDC authentication be used? This can also be sourced from the ARM\_USE\_OIDC environment variable.
+
+Note: When using OIDC for authentication, use\_microsoft\_graph
+must be set to true (which is the default).
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.addOverride">add\_override</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.overrideLogicalId">override\_logical\_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.resetOverrideLogicalId">reset\_override\_logical\_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.toHclTerraform">to\_hcl\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.toMetadata">to\_metadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.toTerraform">to\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.get">get</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.getBoolean">get\_boolean</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.getList">get\_list</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.getNumber">get\_number</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.getString">get\_string</a></code> | *No description.* |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.DataTerraformRemoteStateAzurerm.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `add_override` <a name="add_override" id="cdktn.DataTerraformRemoteStateAzurerm.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.DataTerraformRemoteStateAzurerm.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.DataTerraformRemoteStateAzurerm.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `override_logical_id` <a name="override_logical_id" id="cdktn.DataTerraformRemoteStateAzurerm.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="cdktn.DataTerraformRemoteStateAzurerm.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+***
+
+### `reset_override_logical_id` <a name="reset_override_logical_id" id="cdktn.DataTerraformRemoteStateAzurerm.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.DataTerraformRemoteStateAzurerm.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `to_metadata` <a name="to_metadata" id="cdktn.DataTerraformRemoteStateAzurerm.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+### `to_terraform` <a name="to_terraform" id="cdktn.DataTerraformRemoteStateAzurerm.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `get` <a name="get" id="cdktn.DataTerraformRemoteStateAzurerm.get"></a>
+
+```python
+def get(
+  output: str
+) -> IResolvable
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateAzurerm.get.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_boolean` <a name="get_boolean" id="cdktn.DataTerraformRemoteStateAzurerm.getBoolean"></a>
+
+```python
+def get_boolean(
+  output: str
+) -> IResolvable
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateAzurerm.getBoolean.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_list` <a name="get_list" id="cdktn.DataTerraformRemoteStateAzurerm.getList"></a>
+
+```python
+def get_list(
+  output: str
+) -> typing.List[str]
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateAzurerm.getList.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_number` <a name="get_number" id="cdktn.DataTerraformRemoteStateAzurerm.getNumber"></a>
+
+```python
+def get_number(
+  output: str
+) -> typing.Union[int, float]
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateAzurerm.getNumber.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_string` <a name="get_string" id="cdktn.DataTerraformRemoteStateAzurerm.getString"></a>
+
+```python
+def get_string(
+  output: str
+) -> str
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateAzurerm.getString.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.isTerraformElement">is\_terraform\_element</a></code> | *No description.* |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.DataTerraformRemoteStateAzurerm.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateAzurerm.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateAzurerm.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_terraform_element` <a name="is_terraform_element" id="cdktn.DataTerraformRemoteStateAzurerm.isTerraformElement"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateAzurerm.is_terraform_element(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateAzurerm.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.property.cdktfStack">cdktf\_stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.property.friendlyUniqueId">friendly\_unique\_id</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.DataTerraformRemoteStateAzurerm.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="cdktn.DataTerraformRemoteStateAzurerm.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.DataTerraformRemoteStateAzurerm.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+
+### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="cdktn.DataTerraformRemoteStateAzurerm.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateAzurerm.property.tfResourceType">tfResourceType</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="cdktn.DataTerraformRemoteStateAzurerm.property.tfResourceType"></a>
+
+```python
+tfResourceType: str
+```
+
+- *Type:* str
+
+***
+

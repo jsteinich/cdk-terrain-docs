@@ -1,0 +1,360 @@
+---
+title: "Java: DataTerraformRemoteStateOssConfig"
+sidebarTitle: DataTerraformRemoteStateOssConfig
+description: CDKTN Core API Reference for DataTerraformRemoteStateOssConfig in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.DataTerraformRemoteStateOssConfig.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.DataTerraformRemoteStateOssConfig;
+
+DataTerraformRemoteStateOssConfig.builder()
+//  .defaults(java.util.Map<java.lang.String, java.lang.Object>)
+//  .workspace(java.lang.String)
+    .bucket(java.lang.String)
+//  .accessKey(java.lang.String)
+//  .acl(java.lang.String)
+//  .assumeRole(OssAssumeRole)
+//  .assumeRolePolicy(java.lang.String)
+//  .assumeRoleRoleArn(java.lang.String)
+//  .assumeRoleSessionExpiration(java.lang.Number)
+//  .assumeRoleSessionName(java.lang.String)
+//  .ecsRoleName(java.lang.String)
+//  .encrypt(java.lang.Boolean)
+//  .endpoint(java.lang.String)
+//  .key(java.lang.String)
+//  .prefix(java.lang.String)
+//  .profile(java.lang.String)
+//  .region(java.lang.String)
+//  .secretKey(java.lang.String)
+//  .securityToken(java.lang.String)
+//  .sharedCredentialsFile(java.lang.String)
+//  .stsEndpoint(java.lang.String)
+//  .tablestoreEndpoint(java.lang.String)
+//  .tablestoreTable(java.lang.String)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.defaults">defaults</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.workspace">workspace</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.bucket">bucket</a></code> | <code>java.lang.String</code> | (Required) The name of the OSS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.accessKey">accessKey</a></code> | <code>java.lang.String</code> | (Optional) Alibaba Cloud access key. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.acl">acl</a></code> | <code>java.lang.String</code> | (Optional) Object ACL to be applied to the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.assumeRole">assumeRole</a></code> | <code><a href="#cdktn.OssAssumeRole">OssAssumeRole</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.assumeRolePolicy">assumeRolePolicy</a></code> | <code>java.lang.String</code> | (Optional, Available in 1.1.0+) A more restrictive policy to apply to the temporary credentials. This gives you a way to further restrict the permissions for the resulting temporary security credentials. You cannot use this policy to grant permissions that exceed those of the role that is being assumed. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.assumeRoleRoleArn">assumeRoleRoleArn</a></code> | <code>java.lang.String</code> | (Optional, Available in 1.1.0+) The ARN of the role to assume. If ARN is set to an empty string, it does not perform role switching. It supports the environment variable ALICLOUD\_ASSUME\_ROLE\_ARN. Terraform executes configuration on account with provided credentials. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.assumeRoleSessionExpiration">assumeRoleSessionExpiration</a></code> | <code>java.lang.Number</code> | (Optional, Available in 1.1.0+) The time after which the established session for assuming role expires. Valid value range: \[900-3600] seconds. Default to 3600 (in this case Alibaba Cloud uses its own default value). It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_EXPIRATION. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.assumeRoleSessionName">assumeRoleSessionName</a></code> | <code>java.lang.String</code> | (Optional, Available in 1.1.0+) The session name to use when assuming the role. If omitted, 'terraform' is passed to the AssumeRole call as session name. It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_NAME. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.ecsRoleName">ecsRoleName</a></code> | <code>java.lang.String</code> | (Optional, Available in 0.12.14+) The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section of the Alibaba Cloud console. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.encrypt">encrypt</a></code> | <code>java.lang.Boolean</code> | (Optional) Whether to enable server side encryption of the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.endpoint">endpoint</a></code> | <code>java.lang.String</code> | (Optional) A custom endpoint for the OSS API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.key">key</a></code> | <code>java.lang.String</code> | (Optional) The name of the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.prefix">prefix</a></code> | <code>java.lang.String</code> | (Optional) The path directory of the state file will be stored. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.profile">profile</a></code> | <code>java.lang.String</code> | (Optional, Available in 0.12.8+) This is the Alibaba Cloud profile name as set in the shared credentials file. It can also be sourced from the ALICLOUD\_PROFILE environment variable. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.region">region</a></code> | <code>java.lang.String</code> | (Optional) The region of the OSS bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.secretKey">secretKey</a></code> | <code>java.lang.String</code> | (Optional) Alibaba Cloud secret access key. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.securityToken">securityToken</a></code> | <code>java.lang.String</code> | (Optional) STS access token. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.sharedCredentialsFile">sharedCredentialsFile</a></code> | <code>java.lang.String</code> | (Optional, Available in 0.12.8+) This is the path to the shared credentials file. It can also be sourced from the ALICLOUD\_SHARED\_CREDENTIALS\_FILE environment variable. If this is not set and a profile is specified, ~/.aliyun/config.json will be used. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.stsEndpoint">stsEndpoint</a></code> | <code>java.lang.String</code> | (Optional, Available in 1.0.11+) Custom endpoint for the AliCloud Security Token Service (STS) API. It supports environment variable ALICLOUD\_STS\_ENDPOINT. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.tablestoreEndpoint">tablestoreEndpoint</a></code> | <code>java.lang.String</code> | (Optional) A custom endpoint for the TableStore API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateOssConfig.property.tablestoreTable">tablestoreTable</a></code> | <code>java.lang.String</code> | (Optional) A TableStore table for state locking and consistency. |
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateOssConfig.property.defaults"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getDefaults();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateOssConfig.property.workspace"></a>
+
+```java
+public java.lang.String getWorkspace();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.DataTerraformRemoteStateOssConfig.property.bucket"></a>
+
+```java
+public java.lang.String getBucket();
+```
+
+- *Type:* java.lang.String
+
+(Required) The name of the OSS bucket.
+
+***
+
+### `accessKey`<sup>Optional</sup> <a name="accessKey" id="cdktn.DataTerraformRemoteStateOssConfig.property.accessKey"></a>
+
+```java
+public java.lang.String getAccessKey();
+```
+
+- *Type:* java.lang.String
+
+(Optional) Alibaba Cloud access key.
+
+It supports environment variables ALICLOUD\_ACCESS\_KEY and ALICLOUD\_ACCESS\_KEY\_ID.
+
+***
+
+### `acl`<sup>Optional</sup> <a name="acl" id="cdktn.DataTerraformRemoteStateOssConfig.property.acl"></a>
+
+```java
+public java.lang.String getAcl();
+```
+
+- *Type:* java.lang.String
+
+(Optional) Object ACL to be applied to the state file.
+
+***
+
+### ~~`assumeRole`~~<sup>Optional</sup> <a name="assumeRole" id="cdktn.DataTerraformRemoteStateOssConfig.property.assumeRole"></a>
+
+- *Deprecated:* Use flattened assume role options
+
+```java
+public OssAssumeRole getAssumeRole();
+```
+
+- *Type:* <a href="#cdktn.OssAssumeRole">OssAssumeRole</a>
+
+***
+
+### `assumeRolePolicy`<sup>Optional</sup> <a name="assumeRolePolicy" id="cdktn.DataTerraformRemoteStateOssConfig.property.assumeRolePolicy"></a>
+
+```java
+public java.lang.String getAssumeRolePolicy();
+```
+
+- *Type:* java.lang.String
+
+(Optional, Available in 1.1.0+) A more restrictive policy to apply to the temporary credentials. This gives you a way to further restrict the permissions for the resulting temporary security credentials. You cannot use this policy to grant permissions that exceed those of the role that is being assumed.
+
+***
+
+### `assumeRoleRoleArn`<sup>Optional</sup> <a name="assumeRoleRoleArn" id="cdktn.DataTerraformRemoteStateOssConfig.property.assumeRoleRoleArn"></a>
+
+```java
+public java.lang.String getAssumeRoleRoleArn();
+```
+
+- *Type:* java.lang.String
+
+(Optional, Available in 1.1.0+) The ARN of the role to assume. If ARN is set to an empty string, it does not perform role switching. It supports the environment variable ALICLOUD\_ASSUME\_ROLE\_ARN. Terraform executes configuration on account with provided credentials.
+
+***
+
+### `assumeRoleSessionExpiration`<sup>Optional</sup> <a name="assumeRoleSessionExpiration" id="cdktn.DataTerraformRemoteStateOssConfig.property.assumeRoleSessionExpiration"></a>
+
+```java
+public java.lang.Number getAssumeRoleSessionExpiration();
+```
+
+- *Type:* java.lang.Number
+
+(Optional, Available in 1.1.0+) The time after which the established session for assuming role expires. Valid value range: \[900-3600] seconds. Default to 3600 (in this case Alibaba Cloud uses its own default value). It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_EXPIRATION.
+
+***
+
+### `assumeRoleSessionName`<sup>Optional</sup> <a name="assumeRoleSessionName" id="cdktn.DataTerraformRemoteStateOssConfig.property.assumeRoleSessionName"></a>
+
+```java
+public java.lang.String getAssumeRoleSessionName();
+```
+
+- *Type:* java.lang.String
+
+(Optional, Available in 1.1.0+) The session name to use when assuming the role. If omitted, 'terraform' is passed to the AssumeRole call as session name. It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_NAME.
+
+***
+
+### `ecsRoleName`<sup>Optional</sup> <a name="ecsRoleName" id="cdktn.DataTerraformRemoteStateOssConfig.property.ecsRoleName"></a>
+
+```java
+public java.lang.String getEcsRoleName();
+```
+
+- *Type:* java.lang.String
+
+(Optional, Available in 0.12.14+) The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section of the Alibaba Cloud console.
+
+***
+
+### `encrypt`<sup>Optional</sup> <a name="encrypt" id="cdktn.DataTerraformRemoteStateOssConfig.property.encrypt"></a>
+
+```java
+public java.lang.Boolean getEncrypt();
+```
+
+- *Type:* java.lang.Boolean
+
+(Optional) Whether to enable server side encryption of the state file.
+
+If it is true, OSS will use 'AES256' encryption algorithm to encrypt state file.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.DataTerraformRemoteStateOssConfig.property.endpoint"></a>
+
+```java
+public java.lang.String getEndpoint();
+```
+
+- *Type:* java.lang.String
+
+(Optional) A custom endpoint for the OSS API.
+
+It supports environment variables ALICLOUD\_OSS\_ENDPOINT and OSS\_ENDPOINT.
+
+***
+
+### `key`<sup>Optional</sup> <a name="key" id="cdktn.DataTerraformRemoteStateOssConfig.property.key"></a>
+
+```java
+public java.lang.String getKey();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The name of the state file.
+
+Defaults to terraform.tfstate.
+
+***
+
+### `prefix`<sup>Optional</sup> <a name="prefix" id="cdktn.DataTerraformRemoteStateOssConfig.property.prefix"></a>
+
+```java
+public java.lang.String getPrefix();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The path directory of the state file will be stored.
+
+Default to "env:".
+
+***
+
+### `profile`<sup>Optional</sup> <a name="profile" id="cdktn.DataTerraformRemoteStateOssConfig.property.profile"></a>
+
+```java
+public java.lang.String getProfile();
+```
+
+- *Type:* java.lang.String
+
+(Optional, Available in 0.12.8+) This is the Alibaba Cloud profile name as set in the shared credentials file. It can also be sourced from the ALICLOUD\_PROFILE environment variable.
+
+***
+
+### `region`<sup>Optional</sup> <a name="region" id="cdktn.DataTerraformRemoteStateOssConfig.property.region"></a>
+
+```java
+public java.lang.String getRegion();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The region of the OSS bucket.
+
+It supports environment variables ALICLOUD\_REGION and ALICLOUD\_DEFAULT\_REGION.
+
+***
+
+### `secretKey`<sup>Optional</sup> <a name="secretKey" id="cdktn.DataTerraformRemoteStateOssConfig.property.secretKey"></a>
+
+```java
+public java.lang.String getSecretKey();
+```
+
+- *Type:* java.lang.String
+
+(Optional) Alibaba Cloud secret access key.
+
+It supports environment variables ALICLOUD\_SECRET\_KEY and ALICLOUD\_ACCESS\_KEY\_SECRET.
+
+***
+
+### `securityToken`<sup>Optional</sup> <a name="securityToken" id="cdktn.DataTerraformRemoteStateOssConfig.property.securityToken"></a>
+
+```java
+public java.lang.String getSecurityToken();
+```
+
+- *Type:* java.lang.String
+
+(Optional) STS access token.
+
+It supports environment variable ALICLOUD\_SECURITY\_TOKEN.
+
+***
+
+### `sharedCredentialsFile`<sup>Optional</sup> <a name="sharedCredentialsFile" id="cdktn.DataTerraformRemoteStateOssConfig.property.sharedCredentialsFile"></a>
+
+```java
+public java.lang.String getSharedCredentialsFile();
+```
+
+- *Type:* java.lang.String
+
+(Optional, Available in 0.12.8+) This is the path to the shared credentials file. It can also be sourced from the ALICLOUD\_SHARED\_CREDENTIALS\_FILE environment variable. If this is not set and a profile is specified, ~/.aliyun/config.json will be used.
+
+***
+
+### `stsEndpoint`<sup>Optional</sup> <a name="stsEndpoint" id="cdktn.DataTerraformRemoteStateOssConfig.property.stsEndpoint"></a>
+
+```java
+public java.lang.String getStsEndpoint();
+```
+
+- *Type:* java.lang.String
+
+(Optional, Available in 1.0.11+) Custom endpoint for the AliCloud Security Token Service (STS) API. It supports environment variable ALICLOUD\_STS\_ENDPOINT.
+
+***
+
+### `tablestoreEndpoint`<sup>Optional</sup> <a name="tablestoreEndpoint" id="cdktn.DataTerraformRemoteStateOssConfig.property.tablestoreEndpoint"></a>
+
+```java
+public java.lang.String getTablestoreEndpoint();
+```
+
+- *Type:* java.lang.String
+
+(Optional) A custom endpoint for the TableStore API.
+
+***
+
+### `tablestoreTable`<sup>Optional</sup> <a name="tablestoreTable" id="cdktn.DataTerraformRemoteStateOssConfig.property.tablestoreTable"></a>
+
+```java
+public java.lang.String getTablestoreTable();
+```
+
+- *Type:* java.lang.String
+
+(Optional) A TableStore table for state locking and consistency.
+
+The table must have a primary key named LockID of type String.
+
+***
+

@@ -1,0 +1,54 @@
+---
+title: "CSharp: TerraformVariableValidationConfig"
+sidebarTitle: TerraformVariableValidationConfig
+description: CDKTN Core API Reference for TerraformVariableValidationConfig in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Add one or more validation blocks within the variable block to specify custom conditions.
+
+## Initializer <a name="Initializer" id="cdktn.TerraformVariableValidationConfig.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new TerraformVariableValidationConfig {
+    object Condition,
+    string ErrorMessage
+};
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformVariableValidationConfig.property.condition">Condition</a></code> | <code>object</code> | This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not. |
+| <code><a href="#cdktn.TerraformVariableValidationConfig.property.errorMessage">ErrorMessage</a></code> | <code>string</code> | This contains the text that Terraform will include as part of error messages when it detects an unmet condition. |
+
+***
+
+### `Condition`<sup>Required</sup> <a name="Condition" id="cdktn.TerraformVariableValidationConfig.property.condition"></a>
+
+```csharp
+public object Condition { get; set; }
+```
+
+- *Type:* object
+
+This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not.
+
+***
+
+### `ErrorMessage`<sup>Required</sup> <a name="ErrorMessage" id="cdktn.TerraformVariableValidationConfig.property.errorMessage"></a>
+
+```csharp
+public string ErrorMessage { get; set; }
+```
+
+- *Type:* string
+
+This contains the text that Terraform will include as part of error messages when it detects an unmet condition.
+
+***
+

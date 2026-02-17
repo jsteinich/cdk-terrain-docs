@@ -1,0 +1,250 @@
+---
+title: "Go: App"
+sidebarTitle: App
+description: CDKTN Core API Reference for App in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Represents a cdktn application.
+
+## Initializers <a name="Initializers" id="cdktn.App.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewApp(config AppConfig) App
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.App.Initializer.parameter.config">config</a></code> | <code><a href="#cdktn.AppConfig">AppConfig</a></code> | configuration. |
+
+***
+
+### `config`<sup>Optional</sup> <a name="config" id="cdktn.App.Initializer.parameter.config"></a>
+
+- *Type:* <a href="#cdktn.AppConfig">AppConfig</a>
+
+configuration.
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.App.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.App.crossStackReference">CrossStackReference</a></code> | Creates a reference from one stack to another, invoked on prepareStack since it creates extra resources. |
+| <code><a href="#cdktn.App.synth">Synth</a></code> | Synthesizes all resources to the output directory. |
+
+***
+
+### `ToString` <a name="ToString" id="cdktn.App.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Returns a string representation of this construct.
+
+### `CrossStackReference` <a name="CrossStackReference" id="cdktn.App.crossStackReference"></a>
+
+```go
+func CrossStackReference(fromStack TerraformStack, toStack TerraformStack, identifier *string) *string
+```
+
+Creates a reference from one stack to another, invoked on prepareStack since it creates extra resources.
+
+#### `fromStack`<sup>Required</sup> <a name="fromStack" id="cdktn.App.crossStackReference.parameter.fromStack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `toStack`<sup>Required</sup> <a name="toStack" id="cdktn.App.crossStackReference.parameter.toStack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `identifier`<sup>Required</sup> <a name="identifier" id="cdktn.App.crossStackReference.parameter.identifier"></a>
+
+- *Type:* \*string
+
+***
+
+### `Synth` <a name="Synth" id="cdktn.App.synth"></a>
+
+```go
+func Synth()
+```
+
+Synthesizes all resources to the output directory.
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.App.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.App.isApp">IsApp</a></code> | *No description.* |
+| <code><a href="#cdktn.App.of">Of</a></code> | *No description.* |
+
+***
+
+### `IsConstruct` <a name="IsConstruct" id="cdktn.App.isConstruct"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.App_IsConstruct(x interface{}) *bool
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.App.isConstruct.parameter.x"></a>
+
+- *Type:* interface\{}
+
+Any object.
+
+***
+
+### `IsApp` <a name="IsApp" id="cdktn.App.isApp"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.App_IsApp(x interface{}) *bool
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.App.isApp.parameter.x"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Of` <a name="Of" id="cdktn.App.of"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.App_Of(construct IConstruct) App
+```
+
+#### `construct`<sup>Required</sup> <a name="construct" id="cdktn.App.of.parameter.construct"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.IConstruct
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.App.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
+| <code><a href="#cdktn.App.property.hclOutput">HclOutput</a></code> | <code>\*bool</code> | *No description.* |
+| <code><a href="#cdktn.App.property.manifest">Manifest</a></code> | <code><a href="#cdktn.Manifest">Manifest</a></code> | *No description.* |
+| <code><a href="#cdktn.App.property.outdir">Outdir</a></code> | <code>\*string</code> | The output directory into which resources will be synthesized. |
+| <code><a href="#cdktn.App.property.skipBackendValidation">SkipBackendValidation</a></code> | <code>\*bool</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#cdktn.App.property.skipValidation">SkipValidation</a></code> | <code>\*bool</code> | Whether to skip all validations during synthesis of the app. |
+| <code><a href="#cdktn.App.property.targetStackId">TargetStackId</a></code> | <code>\*string</code> | The stack which will be synthesized. |
+
+***
+
+### `Node`<sup>Required</sup> <a name="Node" id="cdktn.App.property.node"></a>
+
+```go
+func Node() Node
+```
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Node
+
+The tree node.
+
+***
+
+### `HclOutput`<sup>Required</sup> <a name="HclOutput" id="cdktn.App.property.hclOutput"></a>
+
+```go
+func HclOutput() *bool
+```
+
+- *Type:* \*bool
+
+***
+
+### `Manifest`<sup>Required</sup> <a name="Manifest" id="cdktn.App.property.manifest"></a>
+
+```go
+func Manifest() Manifest
+```
+
+- *Type:* <a href="#cdktn.Manifest">Manifest</a>
+
+***
+
+### `Outdir`<sup>Required</sup> <a name="Outdir" id="cdktn.App.property.outdir"></a>
+
+```go
+func Outdir() *string
+```
+
+- *Type:* \*string
+
+The output directory into which resources will be synthesized.
+
+***
+
+### `SkipBackendValidation`<sup>Required</sup> <a name="SkipBackendValidation" id="cdktn.App.property.skipBackendValidation"></a>
+
+```go
+func SkipBackendValidation() *bool
+```
+
+- *Type:* \*bool
+
+Whether to skip backend validation during synthesis of the app.
+
+***
+
+### `SkipValidation`<sup>Required</sup> <a name="SkipValidation" id="cdktn.App.property.skipValidation"></a>
+
+```go
+func SkipValidation() *bool
+```
+
+- *Type:* \*bool
+
+Whether to skip all validations during synthesis of the app.
+
+***
+
+### `TargetStackId`<sup>Optional</sup> <a name="TargetStackId" id="cdktn.App.property.targetStackId"></a>
+
+```go
+func TargetStackId() *string
+```
+
+- *Type:* \*string
+
+The stack which will be synthesized.
+
+If not set, all stacks will be synthesized.
+
+***
+

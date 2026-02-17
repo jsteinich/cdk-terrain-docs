@@ -1,0 +1,140 @@
+---
+title: "CSharp: DataConfig"
+sidebarTitle: DataConfig
+description: CDKTN Core API Reference for DataConfig in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.DataConfig.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new DataConfig {
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
+    ITerraformDependable[] DependsOn = null,
+    ITerraformIterator ForEach = null,
+    TerraformResourceLifecycle Lifecycle = null,
+    TerraformProvider Provider = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
+    System.Collections.Generic.IDictionary<string, object> Input = null,
+    System.Collections.Generic.IDictionary<string, object> TriggersReplace = null
+};
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataConfig.property.connection">Connection</a></code> | <code><a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a>&#124;<a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.count">Count</a></code> | <code>double&#124;<a href="#cdktn.TerraformCount">TerraformCount</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.dependsOn">DependsOn</a></code> | <code><a href="#cdktn.ITerraformDependable">ITerraformDependable</a>\[]</code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.forEach">ForEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.lifecycle">Lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.provider">Provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.provisioners">Provisioners</a></code> | <code><a href="#cdktn.FileProvisioner">FileProvisioner</a>&#124;<a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a>&#124;<a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>\[]</code> | *No description.* |
+| <code><a href="#cdktn.DataConfig.property.input">Input</a></code> | <code>System.Collections.Generic.IDictionary&lt; string, object ></code> | (Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply. |
+| <code><a href="#cdktn.DataConfig.property.triggersReplace">TriggersReplace</a></code> | <code>System.Collections.Generic.IDictionary&lt; string, object ></code> | (Optional) A value which is stored in the instance state, and will force replacement when the value changes. |
+
+***
+
+### `Connection`<sup>Optional</sup> <a name="Connection" id="cdktn.DataConfig.property.connection"></a>
+
+```csharp
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
+```
+
+- *Type:* <a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a>|<a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a>
+
+***
+
+### `Count`<sup>Optional</sup> <a name="Count" id="cdktn.DataConfig.property.count"></a>
+
+```csharp
+public double|TerraformCount Count { get; set; }
+```
+
+- *Type:* double|<a href="#cdktn.TerraformCount">TerraformCount</a>
+
+***
+
+### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="cdktn.DataConfig.property.dependsOn"></a>
+
+```csharp
+public ITerraformDependable[] DependsOn { get; set; }
+```
+
+- *Type:* <a href="#cdktn.ITerraformDependable">ITerraformDependable</a>\[]
+
+***
+
+### `ForEach`<sup>Optional</sup> <a name="ForEach" id="cdktn.DataConfig.property.forEach"></a>
+
+```csharp
+public ITerraformIterator ForEach { get; set; }
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="cdktn.DataConfig.property.lifecycle"></a>
+
+```csharp
+public TerraformResourceLifecycle Lifecycle { get; set; }
+```
+
+- *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
+
+***
+
+### `Provider`<sup>Optional</sup> <a name="Provider" id="cdktn.DataConfig.property.provider"></a>
+
+```csharp
+public TerraformProvider Provider { get; set; }
+```
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+
+### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="cdktn.DataConfig.property.provisioners"></a>
+
+```csharp
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
+```
+
+- *Type:* <a href="#cdktn.FileProvisioner">FileProvisioner</a>|<a href="#cdktn.LocalExecProvisioner">LocalExecProvisioner</a>|<a href="#cdktn.RemoteExecProvisioner">RemoteExecProvisioner</a>\[]
+
+***
+
+### `Input`<sup>Optional</sup> <a name="Input" id="cdktn.DataConfig.property.input"></a>
+
+```csharp
+public System.Collections.Generic.IDictionary<string, object> Input { get; set; }
+```
+
+- *Type:* System.Collections.Generic.IDictionary&lt; string, object >
+
+(Optional) A value which will be stored in the instance state, and reflected in the output attribute after apply.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#input
+
+***
+
+### `TriggersReplace`<sup>Optional</sup> <a name="TriggersReplace" id="cdktn.DataConfig.property.triggersReplace"></a>
+
+```csharp
+public System.Collections.Generic.IDictionary<string, object> TriggersReplace { get; set; }
+```
+
+- *Type:* System.Collections.Generic.IDictionary&lt; string, object >
+
+(Optional) A value which is stored in the instance state, and will force replacement when the value changes.
+
+https://developer.hashicorp.com/terraform/language/resources/terraform-data#triggers\_replace
+
+***
+

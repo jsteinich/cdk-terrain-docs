@@ -1,0 +1,497 @@
+---
+title: "Go: ListTerraformIterator"
+sidebarTitle: ListTerraformIterator
+description: CDKTN Core API Reference for ListTerraformIterator in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.ListTerraformIterator.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewListTerraformIterator(list interface{}) ListTerraformIterator
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.ListTerraformIterator.Initializer.parameter.list">list</a></code> | <code>interface\{}</code> | *No description.* |
+
+***
+
+### `list`<sup>Required</sup> <a name="list" id="cdktn.ListTerraformIterator.Initializer.parameter.list"></a>
+
+- *Type:* interface\{}
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.ListTerraformIterator.dynamic">Dynamic</a></code> | Creates a dynamic expression that can be used to loop over this iterator in a dynamic block. |
+| <code><a href="#cdktn.ListTerraformIterator.forExpressionForList">ForExpressionForList</a></code> | Creates a for expression that results in a list. |
+| <code><a href="#cdktn.ListTerraformIterator.forExpressionForMap">ForExpressionForMap</a></code> | Creates a for expression that results in a map. |
+| <code><a href="#cdktn.ListTerraformIterator.getAny">GetAny</a></code> | *No description.* |
+| <code><a href="#cdktn.ListTerraformIterator.getAnyMap">GetAnyMap</a></code> | *No description.* |
+| <code><a href="#cdktn.ListTerraformIterator.getBoolean">GetBoolean</a></code> | *No description.* |
+| <code><a href="#cdktn.ListTerraformIterator.getBooleanMap">GetBooleanMap</a></code> | *No description.* |
+| <code><a href="#cdktn.ListTerraformIterator.getList">GetList</a></code> | *No description.* |
+| <code><a href="#cdktn.ListTerraformIterator.getMap">GetMap</a></code> | *No description.* |
+| <code><a href="#cdktn.ListTerraformIterator.getNumber">GetNumber</a></code> | *No description.* |
+| <code><a href="#cdktn.ListTerraformIterator.getNumberList">GetNumberList</a></code> | *No description.* |
+| <code><a href="#cdktn.ListTerraformIterator.getNumberMap">GetNumberMap</a></code> | *No description.* |
+| <code><a href="#cdktn.ListTerraformIterator.getString">GetString</a></code> | *No description.* |
+| <code><a href="#cdktn.ListTerraformIterator.getStringMap">GetStringMap</a></code> | *No description.* |
+| <code><a href="#cdktn.ListTerraformIterator.keys">Keys</a></code> | Creates a for expression that maps the iterators to its keys. |
+| <code><a href="#cdktn.ListTerraformIterator.pluckProperty">PluckProperty</a></code> | Creates a for expression that accesses the key on each element of the iterator. |
+| <code><a href="#cdktn.ListTerraformIterator.values">Values</a></code> | Creates a for expression that maps the iterators to its value in case it is a map. |
+
+***
+
+### `Dynamic` <a name="Dynamic" id="cdktn.ListTerraformIterator.dynamic"></a>
+
+```go
+func Dynamic(attributes *map[string]interface{}) IResolvable
+```
+
+Creates a dynamic expression that can be used to loop over this iterator in a dynamic block.
+
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+See https://developer.hashicorp.com/terraform/cdktf/concepts/iterators#using-iterators-for-list-attributes
+
+#### `attributes`<sup>Required</sup> <a name="attributes" id="cdktn.ListTerraformIterator.dynamic.parameter.attributes"></a>
+
+- *Type:* \*map\[string]interface\{}
+
+***
+
+### `ForExpressionForList` <a name="ForExpressionForList" id="cdktn.ListTerraformIterator.forExpressionForList"></a>
+
+```go
+func ForExpressionForList(expression interface{}) IResolvable
+```
+
+Creates a for expression that results in a list.
+
+This method allows you to create every possible for expression, but requires more knowledge about
+Terraform's for expression syntax.
+For the most common use cases you can use keys(), values(), and pluckProperty() instead.
+
+You may write any valid Terraform for each expression, e.g.
+`TerraformIterator.fromList(myIteratorSourceVar).forExpressionForList("val.foo if val.bar == true")`
+will result in `[ for key, val in var.myIteratorSource: val.foo if val.bar == true ]`.
+
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+
+#### `expression`<sup>Required</sup> <a name="expression" id="cdktn.ListTerraformIterator.forExpressionForList.parameter.expression"></a>
+
+- *Type:* interface\{}
+
+The expression to use in the for mapping.
+
+***
+
+### `ForExpressionForMap` <a name="ForExpressionForMap" id="cdktn.ListTerraformIterator.forExpressionForMap"></a>
+
+```go
+func ForExpressionForMap(keyExpression interface{}, valueExpression interface{}) IResolvable
+```
+
+Creates a for expression that results in a map.
+
+This method allows you to create every possible for expression, but requires more knowledge about
+Terraforms for expression syntax.
+For the most common use cases you can use keys(), values(), and pluckProperty instead.
+
+You may write any valid Terraform for each expression, e.g.
+`TerraformIterator.fromMap(myIteratorSourceVar).forExpressionForMap("key", "val.foo if val.bar == true")`
+will result in `\{ for key, val in var.myIteratorSource: key => val.foo if val.bar == true }`.
+
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+
+#### `keyExpression`<sup>Required</sup> <a name="keyExpression" id="cdktn.ListTerraformIterator.forExpressionForMap.parameter.keyExpression"></a>
+
+- *Type:* interface\{}
+
+The expression to use as key in the for mapping.
+
+***
+
+#### `valueExpression`<sup>Required</sup> <a name="valueExpression" id="cdktn.ListTerraformIterator.forExpressionForMap.parameter.valueExpression"></a>
+
+- *Type:* interface\{}
+
+The expression to use as value in the for mapping.
+
+***
+
+### `GetAny` <a name="GetAny" id="cdktn.ListTerraformIterator.getAny"></a>
+
+```go
+func GetAny(attribute *string) IResolvable
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.ListTerraformIterator.getAny.parameter.attribute"></a>
+
+- *Type:* \*string
+
+name of the property to retrieve.
+
+***
+
+### `GetAnyMap` <a name="GetAnyMap" id="cdktn.ListTerraformIterator.getAnyMap"></a>
+
+```go
+func GetAnyMap(attribute *string) *map[string]interface{}
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.ListTerraformIterator.getAnyMap.parameter.attribute"></a>
+
+- *Type:* \*string
+
+name of the property to retrieve.
+
+***
+
+### `GetBoolean` <a name="GetBoolean" id="cdktn.ListTerraformIterator.getBoolean"></a>
+
+```go
+func GetBoolean(attribute *string) IResolvable
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.ListTerraformIterator.getBoolean.parameter.attribute"></a>
+
+- *Type:* \*string
+
+name of the property to retrieve.
+
+***
+
+### `GetBooleanMap` <a name="GetBooleanMap" id="cdktn.ListTerraformIterator.getBooleanMap"></a>
+
+```go
+func GetBooleanMap(attribute *string) *map[string]*bool
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.ListTerraformIterator.getBooleanMap.parameter.attribute"></a>
+
+- *Type:* \*string
+
+name of the property to retrieve.
+
+***
+
+### `GetList` <a name="GetList" id="cdktn.ListTerraformIterator.getList"></a>
+
+```go
+func GetList(attribute *string) *[]*string
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.ListTerraformIterator.getList.parameter.attribute"></a>
+
+- *Type:* \*string
+
+name of the property to retrieve.
+
+***
+
+### `GetMap` <a name="GetMap" id="cdktn.ListTerraformIterator.getMap"></a>
+
+```go
+func GetMap(attribute *string) *map[string]interface{}
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.ListTerraformIterator.getMap.parameter.attribute"></a>
+
+- *Type:* \*string
+
+name of the property to retrieve.
+
+***
+
+### `GetNumber` <a name="GetNumber" id="cdktn.ListTerraformIterator.getNumber"></a>
+
+```go
+func GetNumber(attribute *string) *f64
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.ListTerraformIterator.getNumber.parameter.attribute"></a>
+
+- *Type:* \*string
+
+name of the property to retrieve.
+
+***
+
+### `GetNumberList` <a name="GetNumberList" id="cdktn.ListTerraformIterator.getNumberList"></a>
+
+```go
+func GetNumberList(attribute *string) *[]*f64
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.ListTerraformIterator.getNumberList.parameter.attribute"></a>
+
+- *Type:* \*string
+
+name of the property to retrieve.
+
+***
+
+### `GetNumberMap` <a name="GetNumberMap" id="cdktn.ListTerraformIterator.getNumberMap"></a>
+
+```go
+func GetNumberMap(attribute *string) *map[string]*f64
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.ListTerraformIterator.getNumberMap.parameter.attribute"></a>
+
+- *Type:* \*string
+
+name of the property to retrieve.
+
+***
+
+### `GetString` <a name="GetString" id="cdktn.ListTerraformIterator.getString"></a>
+
+```go
+func GetString(attribute *string) *string
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.ListTerraformIterator.getString.parameter.attribute"></a>
+
+- *Type:* \*string
+
+name of the property to retrieve.
+
+***
+
+### `GetStringMap` <a name="GetStringMap" id="cdktn.ListTerraformIterator.getStringMap"></a>
+
+```go
+func GetStringMap(attribute *string) *map[string]*string
+```
+
+#### `attribute`<sup>Required</sup> <a name="attribute" id="cdktn.ListTerraformIterator.getStringMap.parameter.attribute"></a>
+
+- *Type:* \*string
+
+name of the property to retrieve.
+
+***
+
+### `Keys` <a name="Keys" id="cdktn.ListTerraformIterator.keys"></a>
+
+```go
+func Keys() IResolvable
+```
+
+Creates a for expression that maps the iterators to its keys.
+
+For lists these would be the indices, for maps the keys.
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+
+### `PluckProperty` <a name="PluckProperty" id="cdktn.ListTerraformIterator.pluckProperty"></a>
+
+```go
+func PluckProperty(property *string) IResolvable
+```
+
+Creates a for expression that accesses the key on each element of the iterator.
+
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+
+#### `property`<sup>Required</sup> <a name="property" id="cdktn.ListTerraformIterator.pluckProperty.parameter.property"></a>
+
+- *Type:* \*string
+
+The property of the iterators values to map to.
+
+***
+
+### `Values` <a name="Values" id="cdktn.ListTerraformIterator.values"></a>
+
+```go
+func Values() IResolvable
+```
+
+Creates a for expression that maps the iterators to its value in case it is a map.
+
+For lists these would stay the same.
+As this returns an IResolvable you might need to wrap the output in
+a Token, e.g. `Token.asString`.
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.ListTerraformIterator.fromComplexList">FromComplexList</a></code> | Creates a new iterator from a complex list. |
+| <code><a href="#cdktn.ListTerraformIterator.fromDataSources">FromDataSources</a></code> | Creates a new iterator from a data source that has been created with the `for_each` argument. |
+| <code><a href="#cdktn.ListTerraformIterator.fromList">FromList</a></code> | Creates a new iterator from a list. |
+| <code><a href="#cdktn.ListTerraformIterator.fromMap">FromMap</a></code> | Creates a new iterator from a map. |
+| <code><a href="#cdktn.ListTerraformIterator.fromResources">FromResources</a></code> | Creates a new iterator from a resource that has been created with the `for_each` argument. |
+
+***
+
+### `FromComplexList` <a name="FromComplexList" id="cdktn.ListTerraformIterator.fromComplexList"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.ListTerraformIterator_FromComplexList(list interface{}, mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creates a new iterator from a complex list.
+
+One example for this would be a list of maps.
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+*Example*
+
+```go
+// Example automatically generated from non-compiling source. May contain errors.
+cert := NewAcmCertificate(this, jsii.String("cert"), map[string]*string{
+	"domainName": jsii.String("example.com"),
+	"validationMethod": jsii.String("DNS"),
+})
+
+dvoIterator := terraformIterator_FromComplexList(cert.domainValidationOptions, jsii.String("domain_name"))
+
+NewRoute53Record(this, jsii.String("record"), map[string]interface{}{
+	"allowOverwrite": jsii.Boolean(true),
+	"name": dvoIterator.getString(jsii.String("name")),
+	"records": []interface{}{
+		dvoIterator.getString(jsii.String("record")),
+	},
+	"ttl": jsii.Number(60),
+	"type": dvoIterator.getString(jsii.String("type")),
+	"zoneId": Token_asString(dataAwsRoute53ZoneExample.zoneId),
+	"forEach": dvoIterator,
+})
+```
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.ListTerraformIterator.fromComplexList.parameter.list"></a>
+
+- *Type:* interface\{}
+
+the list to iterate over.
+
+***
+
+#### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="cdktn.ListTerraformIterator.fromComplexList.parameter.mapKeyAttributeName"></a>
+
+- *Type:* \*string
+
+the name of the attribute that should be used as the key in the map.
+
+Visit https://developer.hashicorp.com/terraform/cdktf/concepts/iterators#using-iterators-on-complex-lists for more information.
+
+***
+
+### `FromDataSources` <a name="FromDataSources" id="cdktn.ListTerraformIterator.fromDataSources"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.ListTerraformIterator_FromDataSources(resource ITerraformResource) ResourceTerraformIterator
+```
+
+Creates a new iterator from a data source that has been created with the `for_each` argument.
+
+#### `resource`<sup>Required</sup> <a name="resource" id="cdktn.ListTerraformIterator.fromDataSources.parameter.resource"></a>
+
+- *Type:* <a href="#cdktn.ITerraformResource">ITerraformResource</a>
+
+***
+
+### `FromList` <a name="FromList" id="cdktn.ListTerraformIterator.fromList"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.ListTerraformIterator_FromList(list interface{}) ListTerraformIterator
+```
+
+Creates a new iterator from a list.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.ListTerraformIterator.fromList.parameter.list"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `FromMap` <a name="FromMap" id="cdktn.ListTerraformIterator.fromMap"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.ListTerraformIterator_FromMap(map interface{}) MapTerraformIterator
+```
+
+Creates a new iterator from a map.
+
+#### `map`<sup>Required</sup> <a name="map" id="cdktn.ListTerraformIterator.fromMap.parameter.map"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `FromResources` <a name="FromResources" id="cdktn.ListTerraformIterator.fromResources"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.ListTerraformIterator_FromResources(resource ITerraformResource) ResourceTerraformIterator
+```
+
+Creates a new iterator from a resource that has been created with the `for_each` argument.
+
+#### `resource`<sup>Required</sup> <a name="resource" id="cdktn.ListTerraformIterator.fromResources.parameter.resource"></a>
+
+- *Type:* <a href="#cdktn.ITerraformResource">ITerraformResource</a>
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.ListTerraformIterator.property.key">Key</a></code> | <code>interface\{}</code> | Returns the currently entry in the list or set that is being iterated over. |
+| <code><a href="#cdktn.ListTerraformIterator.property.value">Value</a></code> | <code>interface\{}</code> | Returns the value of the current item iterated over. |
+
+***
+
+### `Key`<sup>Required</sup> <a name="Key" id="cdktn.ListTerraformIterator.property.key"></a>
+
+```go
+func Key() interface{}
+```
+
+- *Type:* interface\{}
+
+Returns the currently entry in the list or set that is being iterated over.
+
+For lists this is the same as `iterator.value`. If you need the index,
+use count via `TerraformCount`:
+https://developer.hashicorp.com/terraform/cdktf/concepts/iterators#using-count
+
+***
+
+### `Value`<sup>Required</sup> <a name="Value" id="cdktn.ListTerraformIterator.property.value"></a>
+
+```go
+func Value() interface{}
+```
+
+- *Type:* interface\{}
+
+Returns the value of the current item iterated over.
+
+***
+

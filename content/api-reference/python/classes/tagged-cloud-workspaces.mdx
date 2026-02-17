@@ -1,0 +1,92 @@
+---
+title: "Python: TaggedCloudWorkspaces"
+sidebarTitle: TaggedCloudWorkspaces
+description: CDKTN Core API Reference for TaggedCloudWorkspaces in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+A set of Terraform Cloud workspace tags.
+
+You will be able to use this working directory with any workspaces that have all of the specified tags, and can use the terraform workspace commands to switch between them or create new workspaces. New workspaces will automatically have the specified tags. This option conflicts with name.
+
+## Initializers <a name="Initializers" id="cdktn.TaggedCloudWorkspaces.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.TaggedCloudWorkspaces(
+  tags: typing.List[str],
+  project: str = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TaggedCloudWorkspaces.Initializer.parameter.tags">tags</a></code> | <code>typing.List\[str]</code> | *No description.* |
+| <code><a href="#cdktn.TaggedCloudWorkspaces.Initializer.parameter.project">project</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `tags`<sup>Required</sup> <a name="tags" id="cdktn.TaggedCloudWorkspaces.Initializer.parameter.tags"></a>
+
+- *Type:* typing.List\[str]
+
+***
+
+### `project`<sup>Optional</sup> <a name="project" id="cdktn.TaggedCloudWorkspaces.Initializer.parameter.project"></a>
+
+- *Type:* str
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TaggedCloudWorkspaces.toTerraform">to\_terraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TaggedCloudWorkspaces.toHclTerraform">to\_hcl\_terraform</a></code> | *No description.* |
+
+***
+
+### `to_terraform` <a name="to_terraform" id="cdktn.TaggedCloudWorkspaces.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.TaggedCloudWorkspaces.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TaggedCloudWorkspaces.property.tags">tags</a></code> | <code>typing.List\[str]</code> | *No description.* |
+| <code><a href="#cdktn.TaggedCloudWorkspaces.property.project">project</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `tags`<sup>Required</sup> <a name="tags" id="cdktn.TaggedCloudWorkspaces.property.tags"></a>
+
+```python
+tags: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+***
+
+### `project`<sup>Optional</sup> <a name="project" id="cdktn.TaggedCloudWorkspaces.property.project"></a>
+
+```python
+project: str
+```
+
+- *Type:* str
+
+***
+

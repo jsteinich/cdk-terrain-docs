@@ -1,0 +1,352 @@
+---
+title: "CSharp: Token"
+sidebarTitle: Token
+description: CDKTN Core API Reference for Token in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Represents a special or lazily-evaluated value.
+
+Can be used to delay evaluation of a certain value in case, for example,
+that it requires some context or late-bound data. Can also be used to
+mark values that need special processing at document rendering time.
+
+Tokens can be embedded into strings while retaining their original
+semantics.
+
+## Initializers <a name="Initializers" id="cdktn.Token.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new Token();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Token.asAny">AsAny</a></code> | Return a resolvable representation of the given value. |
+| <code><a href="#cdktn.Token.asAnyMap">AsAnyMap</a></code> | Return a reversible map representation of this token. |
+| <code><a href="#cdktn.Token.asBooleanMap">AsBooleanMap</a></code> | Return a reversible map representation of this token. |
+| <code><a href="#cdktn.Token.asList">AsList</a></code> | Return a reversible list representation of this token. |
+| <code><a href="#cdktn.Token.asMap">AsMap</a></code> | Return a reversible map representation of this token. |
+| <code><a href="#cdktn.Token.asNumber">AsNumber</a></code> | Return a reversible number representation of this token. |
+| <code><a href="#cdktn.Token.asNumberList">AsNumberList</a></code> | Return a reversible list representation of this token. |
+| <code><a href="#cdktn.Token.asNumberMap">AsNumberMap</a></code> | Return a reversible map representation of this token. |
+| <code><a href="#cdktn.Token.asString">AsString</a></code> | Return a reversible string representation of this token. |
+| <code><a href="#cdktn.Token.asStringMap">AsStringMap</a></code> | Return a reversible map representation of this token. |
+| <code><a href="#cdktn.Token.isUnresolved">IsUnresolved</a></code> | Returns true if obj represents an unresolved value. |
+| <code><a href="#cdktn.Token.nullValue">NullValue</a></code> | Return a Token containing a `null` value. |
+
+***
+
+### `AsAny` <a name="AsAny" id="cdktn.Token.asAny"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.AsAny(object Value);
+```
+
+Return a resolvable representation of the given value.
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.Token.asAny.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+### `AsAnyMap` <a name="AsAnyMap" id="cdktn.Token.asAnyMap"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.AsAnyMap(object Value, EncodingOptions Options = null);
+```
+
+Return a reversible map representation of this token.
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.Token.asAnyMap.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+#### `Options`<sup>Optional</sup> <a name="Options" id="cdktn.Token.asAnyMap.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.EncodingOptions">EncodingOptions</a>
+
+***
+
+### `AsBooleanMap` <a name="AsBooleanMap" id="cdktn.Token.asBooleanMap"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.AsBooleanMap(object Value, EncodingOptions Options = null);
+```
+
+Return a reversible map representation of this token.
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.Token.asBooleanMap.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+#### `Options`<sup>Optional</sup> <a name="Options" id="cdktn.Token.asBooleanMap.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.EncodingOptions">EncodingOptions</a>
+
+***
+
+### `AsList` <a name="AsList" id="cdktn.Token.asList"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.AsList(object Value, EncodingOptions Options = null);
+```
+
+Return a reversible list representation of this token.
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.Token.asList.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+#### `Options`<sup>Optional</sup> <a name="Options" id="cdktn.Token.asList.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.EncodingOptions">EncodingOptions</a>
+
+***
+
+### `AsMap` <a name="AsMap" id="cdktn.Token.asMap"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.AsMap(object Value, object MapValue, EncodingOptions Options = null);
+```
+
+Return a reversible map representation of this token.
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.Token.asMap.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+#### `MapValue`<sup>Required</sup> <a name="MapValue" id="cdktn.Token.asMap.parameter.mapValue"></a>
+
+- *Type:* object
+
+***
+
+#### `Options`<sup>Optional</sup> <a name="Options" id="cdktn.Token.asMap.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.EncodingOptions">EncodingOptions</a>
+
+***
+
+### `AsNumber` <a name="AsNumber" id="cdktn.Token.asNumber"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.AsNumber(object Value);
+```
+
+Return a reversible number representation of this token.
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.Token.asNumber.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+### `AsNumberList` <a name="AsNumberList" id="cdktn.Token.asNumberList"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.AsNumberList(object Value);
+```
+
+Return a reversible list representation of this token.
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.Token.asNumberList.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+### `AsNumberMap` <a name="AsNumberMap" id="cdktn.Token.asNumberMap"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.AsNumberMap(object Value, EncodingOptions Options = null);
+```
+
+Return a reversible map representation of this token.
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.Token.asNumberMap.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+#### `Options`<sup>Optional</sup> <a name="Options" id="cdktn.Token.asNumberMap.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.EncodingOptions">EncodingOptions</a>
+
+***
+
+### `AsString` <a name="AsString" id="cdktn.Token.asString"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.AsString(object Value, EncodingOptions Options = null);
+```
+
+Return a reversible string representation of this token.
+
+If the Token is initialized with a literal, the stringified value of the
+literal is returned. Otherwise, a special quoted string representation
+of the Token is returned that can be embedded into other strings.
+
+Strings with quoted Tokens in them can be restored back into
+complex values with the Tokens restored by calling `resolve()`
+on the string.
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.Token.asString.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+#### `Options`<sup>Optional</sup> <a name="Options" id="cdktn.Token.asString.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.EncodingOptions">EncodingOptions</a>
+
+***
+
+### `AsStringMap` <a name="AsStringMap" id="cdktn.Token.asStringMap"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.AsStringMap(object Value, EncodingOptions Options = null);
+```
+
+Return a reversible map representation of this token.
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.Token.asStringMap.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+#### `Options`<sup>Optional</sup> <a name="Options" id="cdktn.Token.asStringMap.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.EncodingOptions">EncodingOptions</a>
+
+***
+
+### `IsUnresolved` <a name="IsUnresolved" id="cdktn.Token.isUnresolved"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.IsUnresolved(object Obj);
+```
+
+Returns true if obj represents an unresolved value.
+
+One of these must be true:
+
+- `obj` is an IResolvable
+- `obj` is a string containing at least one encoded `IResolvable`
+- `obj` is either an encoded number or list
+
+This does NOT recurse into lists or objects to see if they
+containing resolvables.
+
+#### `Obj`<sup>Required</sup> <a name="Obj" id="cdktn.Token.isUnresolved.parameter.obj"></a>
+
+- *Type:* object
+
+The object to test.
+
+***
+
+### `NullValue` <a name="NullValue" id="cdktn.Token.nullValue"></a>
+
+```csharp
+using Io.Cdktn;
+
+Token.NullValue();
+```
+
+Return a Token containing a `null` value.
+
+Note: This is different than `undefined`, `nil`, `None` or similar
+as it will end up in the Terraform config and can be used to explicitly
+not set an attribute (which is sometimes required by Terraform providers)
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Token.property.ANY_MAP_TOKEN_VALUE">AnyMapTokenValue</a></code> | <code>string</code> | Any map token representation. |
+| <code><a href="#cdktn.Token.property.NUMBER_MAP_TOKEN_VALUE">NumberMapTokenValue</a></code> | <code>double</code> | Number Map token value representation. |
+| <code><a href="#cdktn.Token.property.STRING_MAP_TOKEN_VALUE">StringMapTokenValue</a></code> | <code>string</code> | String Map token value representation. |
+
+***
+
+### `AnyMapTokenValue`<sup>Required</sup> <a name="AnyMapTokenValue" id="cdktn.Token.property.ANY_MAP_TOKEN_VALUE"></a>
+
+```csharp
+public string AnyMapTokenValue { get; }
+```
+
+- *Type:* string
+
+Any map token representation.
+
+***
+
+### `NumberMapTokenValue`<sup>Required</sup> <a name="NumberMapTokenValue" id="cdktn.Token.property.NUMBER_MAP_TOKEN_VALUE"></a>
+
+```csharp
+public double NumberMapTokenValue { get; }
+```
+
+- *Type:* double
+
+Number Map token value representation.
+
+***
+
+### `StringMapTokenValue`<sup>Required</sup> <a name="StringMapTokenValue" id="cdktn.Token.property.STRING_MAP_TOKEN_VALUE"></a>
+
+```csharp
+public string StringMapTokenValue { get; }
+```
+
+- *Type:* string
+
+String Map token value representation.
+
+***
+

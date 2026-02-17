@@ -1,0 +1,55 @@
+---
+title: "Typescript: LocalBackendConfig"
+sidebarTitle: LocalBackendConfig
+description: CDKTN Core API Reference for LocalBackendConfig in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+The local backend stores state on the local filesystem, locks that state using system APIs, and performs operations locally.
+
+Read more about this backend in the Terraform docs:
+https://developer.hashicorp.com/terraform/language/settings/backends/local
+
+## Initializer <a name="Initializer" id="cdktn.LocalBackendConfig.Initializer"></a>
+
+```typescript
+import { LocalBackendConfig } from 'cdktn'
+
+const localBackendConfig: LocalBackendConfig = { ... }
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.LocalBackendConfig.property.path">path</a></code> | <code>string</code> | Path where the state file is stored. |
+| <code><a href="#cdktn.LocalBackendConfig.property.workspaceDir">workspaceDir</a></code> | <code>string</code> | (Optional) The path to non-default workspaces. |
+
+***
+
+### `path`<sup>Optional</sup> <a name="path" id="cdktn.LocalBackendConfig.property.path"></a>
+
+```typescript
+public readonly path: string;
+```
+
+- *Type:* string
+- *Default:* defaults to terraform.$\{stackId}.tfstate
+
+Path where the state file is stored.
+
+***
+
+### `workspaceDir`<sup>Optional</sup> <a name="workspaceDir" id="cdktn.LocalBackendConfig.property.workspaceDir"></a>
+
+```typescript
+public readonly workspaceDir: string;
+```
+
+- *Type:* string
+
+(Optional) The path to non-default workspaces.
+
+***
+

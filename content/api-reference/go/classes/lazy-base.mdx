@@ -1,0 +1,102 @@
+---
+title: "Go: LazyBase"
+sidebarTitle: LazyBase
+description: CDKTN Core API Reference for LazyBase in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+## Initializers <a name="Initializers" id="cdktn.LazyBase.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewLazyBase() LazyBase
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.LazyBase.addPostProcessor">AddPostProcessor</a></code> | *No description.* |
+| <code><a href="#cdktn.LazyBase.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#cdktn.LazyBase.toJSON">ToJSON</a></code> | Turn this Token into JSON. |
+| <code><a href="#cdktn.LazyBase.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+
+***
+
+### `AddPostProcessor` <a name="AddPostProcessor" id="cdktn.LazyBase.addPostProcessor"></a>
+
+```go
+func AddPostProcessor(postProcessor IPostProcessor)
+```
+
+#### `postProcessor`<sup>Required</sup> <a name="postProcessor" id="cdktn.LazyBase.addPostProcessor.parameter.postProcessor"></a>
+
+- *Type:* <a href="#cdktn.IPostProcessor">IPostProcessor</a>
+
+***
+
+### `Resolve` <a name="Resolve" id="cdktn.LazyBase.resolve"></a>
+
+```go
+func Resolve(context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+#### `context`<sup>Required</sup> <a name="context" id="cdktn.LazyBase.resolve.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `ToJSON` <a name="ToJSON" id="cdktn.LazyBase.toJSON"></a>
+
+```go
+func ToJSON() interface{}
+```
+
+Turn this Token into JSON.
+
+Called automatically when JSON.stringify() is called on a Token.
+
+### `ToString` <a name="ToString" id="cdktn.LazyBase.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.LazyBase.property.creationStack">CreationStack</a></code> | <code>\*\[]\*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+
+***
+
+### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="cdktn.LazyBase.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* \*\[]\*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+***
+

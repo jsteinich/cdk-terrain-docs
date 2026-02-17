@@ -1,0 +1,151 @@
+---
+title: "Python: StringMapList"
+sidebarTitle: StringMapList
+description: CDKTN Core API Reference for StringMapList in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.StringMapList.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.StringMapList(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  wraps_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.StringMapList.Initializer.parameter.terraformResource">terraform\_resource</a></code> | <code><a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a></code> | *No description.* |
+| <code><a href="#cdktn.StringMapList.Initializer.parameter.terraformAttribute">terraform\_attribute</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.StringMapList.Initializer.parameter.wrapsSet">wraps\_set</a></code> | <code>bool</code> | *No description.* |
+
+***
+
+### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="cdktn.StringMapList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* <a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a>
+
+***
+
+### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.StringMapList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+### `wraps_set`<sup>Required</sup> <a name="wraps_set" id="cdktn.StringMapList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.StringMapList.computeFqn">compute\_fqn</a></code> | *No description.* |
+| <code><a href="#cdktn.StringMapList.interpolationForAttribute">interpolation\_for\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.StringMapList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#cdktn.StringMapList.toString">to\_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#cdktn.StringMapList.get">get</a></code> | *No description.* |
+
+***
+
+### `compute_fqn` <a name="compute_fqn" id="cdktn.StringMapList.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="cdktn.StringMapList.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+#### `property`<sup>Required</sup> <a name="property" id="cdktn.StringMapList.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+***
+
+### `resolve` <a name="resolve" id="cdktn.StringMapList.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+#### `_context`<sup>Required</sup> <a name="_context" id="cdktn.StringMapList.resolve.parameter._context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.StringMapList.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+### `get` <a name="get" id="cdktn.StringMapList.get"></a>
+
+```python
+def get(
+  index: typing.Union[int, float]
+) -> StringMap
+```
+
+#### `index`<sup>Required</sup> <a name="index" id="cdktn.StringMapList.get.parameter.index"></a>
+
+- *Type:* typing.Union\[int, float]
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.StringMapList.property.creationStack">creation\_stack</a></code> | <code>typing.List\[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#cdktn.StringMapList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="cdktn.StringMapList.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.StringMapList.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+

@@ -1,0 +1,102 @@
+---
+title: "Typescript: FileProvisioner"
+sidebarTitle: FileProvisioner
+description: CDKTN Core API Reference for FileProvisioner in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+The file provisioner copies files or directories from the machine running Terraform to the newly created resource.
+
+The file provisioner supports both ssh and winrm type connections.
+
+See [file](https://developer.hashicorp.com/terraform/language/resources/provisioners/file)
+
+## Initializer <a name="Initializer" id="cdktn.FileProvisioner.Initializer"></a>
+
+```typescript
+import { FileProvisioner } from 'cdktn'
+
+const fileProvisioner: FileProvisioner = { ... }
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.FileProvisioner.property.destination">destination</a></code> | <code>string</code> | The source file or directory. |
+| <code><a href="#cdktn.FileProvisioner.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.FileProvisioner.property.connection">connection</a></code> | <code><a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a> &#124; <a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a></code> | Most provisioners require access to the remote resource via SSH or WinRM and expect a nested connection block with details about how to connect. |
+| <code><a href="#cdktn.FileProvisioner.property.content">content</a></code> | <code>string</code> | The destination path to write to on the remote system. |
+| <code><a href="#cdktn.FileProvisioner.property.source">source</a></code> | <code>string</code> | The direct content to copy on the destination. |
+
+***
+
+### `destination`<sup>Required</sup> <a name="destination" id="cdktn.FileProvisioner.property.destination"></a>
+
+```typescript
+public readonly destination: string;
+```
+
+- *Type:* string
+
+The source file or directory.
+
+Specify it either relative to the current working directory or as an absolute path.
+This argument cannot be combined with content.
+
+***
+
+### `type`<sup>Required</sup> <a name="type" id="cdktn.FileProvisioner.property.type"></a>
+
+```typescript
+public readonly type: string;
+```
+
+- *Type:* string
+
+***
+
+### `connection`<sup>Optional</sup> <a name="connection" id="cdktn.FileProvisioner.property.connection"></a>
+
+```typescript
+public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
+```
+
+- *Type:* <a href="#cdktn.SSHProvisionerConnection">SSHProvisionerConnection</a> | <a href="#cdktn.WinrmProvisionerConnection">WinrmProvisionerConnection</a>
+
+Most provisioners require access to the remote resource via SSH or WinRM and expect a nested connection block with details about how to connect.
+
+***
+
+### `content`<sup>Optional</sup> <a name="content" id="cdktn.FileProvisioner.property.content"></a>
+
+```typescript
+public readonly content: string;
+```
+
+- *Type:* string
+
+The destination path to write to on the remote system.
+
+See Destination Paths below for more information.
+
+***
+
+### `source`<sup>Optional</sup> <a name="source" id="cdktn.FileProvisioner.property.source"></a>
+
+```typescript
+public readonly source: string;
+```
+
+- *Type:* string
+
+The direct content to copy on the destination.
+
+If destination is a file, the content will be written on that file.
+In case of a directory, a file named tf-file-content is created inside that directory.
+We recommend using a file as the destination when using content.
+This argument cannot be combined with source.
+
+***
+

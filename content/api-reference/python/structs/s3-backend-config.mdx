@@ -1,0 +1,853 @@
+---
+title: "Python: S3BackendConfig"
+sidebarTitle: S3BackendConfig
+description: CDKTN Core API Reference for S3BackendConfig in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Stores the state as a given key in a given bucket on Amazon S3.
+
+This backend
+also supports state locking and consistency checking via Dynamo DB, which
+can be enabled by setting the dynamodb\_table field to an existing DynamoDB
+table name. A single DynamoDB table can be used to lock multiple remote
+state files. Terraform generates key names that include the values of the
+bucket and key variables.
+
+Warning! It is highly recommended that you enable Bucket Versioning on the
+S3 bucket to allow for state recovery in the case of accidental deletions
+and human error.
+
+Read more about this backend in the Terraform docs:
+https://developer.hashicorp.com/terraform/language/settings/backends/s3
+
+## Initializer <a name="Initializer" id="cdktn.S3BackendConfig.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.S3BackendConfig(
+  bucket: str,
+  key: str,
+  access_key: str = None,
+  acl: str = None,
+  allowed_account_ids: typing.List[str] = None,
+  assume_role: S3BackendAssumeRoleConfig = None,
+  assume_role_policy: str = None,
+  assume_role_policy_arns: typing.List[str] = None,
+  assume_role_tags: typing.Mapping[str] = None,
+  assume_role_transitive_tag_keys: typing.List[str] = None,
+  assume_role_with_web_identity: S3BackendAssumeRoleWithWebIdentityConfig = None,
+  custom_ca_bundle: str = None,
+  dynamodb_endpoint: str = None,
+  dynamodb_table: str = None,
+  ec2_metadata_service_endpoint: str = None,
+  ec2_metadata_service_endpoint_mode: str = None,
+  encrypt: bool = None,
+  endpoint: str = None,
+  endpoints: S3BackendEndpointConfig = None,
+  external_id: str = None,
+  forbidden_account_ids: typing.List[str] = None,
+  force_path_style: bool = None,
+  http_proxy: str = None,
+  https_proxy: str = None,
+  iam_endpoint: str = None,
+  insecure: bool = None,
+  kms_key_id: str = None,
+  max_retries: typing.Union[int, float] = None,
+  no_proxy: str = None,
+  profile: str = None,
+  region: str = None,
+  retry_mode: str = None,
+  role_arn: str = None,
+  secret_key: str = None,
+  session_name: str = None,
+  shared_config_files: typing.List[str] = None,
+  shared_credentials_file: str = None,
+  shared_credentials_files: typing.List[str] = None,
+  skip_credentials_validation: bool = None,
+  skip_metadata_api_check: bool = None,
+  skip_region_validation: bool = None,
+  skip_requesting_account_id: bool = None,
+  skip_s3_checksum: bool = None,
+  sse_customer_key: str = None,
+  sts_endpoint: str = None,
+  sts_region: str = None,
+  token: str = None,
+  use_legacy_workflow: bool = None,
+  use_path_style: bool = None,
+  workspace_key_prefix: str = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.S3BackendConfig.property.bucket">bucket</a></code> | <code>str</code> | Name of the S3 Bucket. |
+| <code><a href="#cdktn.S3BackendConfig.property.key">key</a></code> | <code>str</code> | Path to the state file inside the S3 Bucket. |
+| <code><a href="#cdktn.S3BackendConfig.property.accessKey">access\_key</a></code> | <code>str</code> | (Optional) AWS access key. |
+| <code><a href="#cdktn.S3BackendConfig.property.acl">acl</a></code> | <code>str</code> | (Optional) Canned ACL to be applied to the state file. |
+| <code><a href="#cdktn.S3BackendConfig.property.allowedAccountIds">allowed\_account\_ids</a></code> | <code>typing.List\[str]</code> | (Optional) List of allowed AWS account IDs to prevent potential destruction of a live environment. |
+| <code><a href="#cdktn.S3BackendConfig.property.assumeRole">assume\_role</a></code> | <code><a href="#cdktn.S3BackendAssumeRoleConfig">S3BackendAssumeRoleConfig</a></code> | Assuming an IAM Role can be configured in two ways. |
+| <code><a href="#cdktn.S3BackendConfig.property.assumeRolePolicy">assume\_role\_policy</a></code> | <code>str</code> | (Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3BackendConfig.property.assumeRolePolicyArns">assume\_role\_policy\_arns</a></code> | <code>typing.List\[str]</code> | (Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3BackendConfig.property.assumeRoleTags">assume\_role\_tags</a></code> | <code>typing.Mapping\[str]</code> | (Optional) Map of assume role session tags. |
+| <code><a href="#cdktn.S3BackendConfig.property.assumeRoleTransitiveTagKeys">assume\_role\_transitive\_tag\_keys</a></code> | <code>typing.List\[str]</code> | (Optional) Set of assume role session tag keys to pass to any subsequent sessions. |
+| <code><a href="#cdktn.S3BackendConfig.property.assumeRoleWithWebIdentity">assume\_role\_with\_web\_identity</a></code> | <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig">S3BackendAssumeRoleWithWebIdentityConfig</a></code> | Assume Role With Web Identity Configuration. |
+| <code><a href="#cdktn.S3BackendConfig.property.customCaBundle">custom\_ca\_bundle</a></code> | <code>str</code> | (Optional) File containing custom root and intermediate certificates. |
+| <code><a href="#cdktn.S3BackendConfig.property.dynamodbEndpoint">dynamodb\_endpoint</a></code> | <code>str</code> | (Optional) Custom endpoint for the AWS DynamoDB API. |
+| <code><a href="#cdktn.S3BackendConfig.property.dynamodbTable">dynamodb\_table</a></code> | <code>str</code> | (Optional) Name of DynamoDB Table to use for state locking and consistency. |
+| <code><a href="#cdktn.S3BackendConfig.property.ec2MetadataServiceEndpoint">ec2\_metadata\_service\_endpoint</a></code> | <code>str</code> | Optional) Custom endpoint URL for the EC2 Instance Metadata Service (IMDS) API. |
+| <code><a href="#cdktn.S3BackendConfig.property.ec2MetadataServiceEndpointMode">ec2\_metadata\_service\_endpoint\_mode</a></code> | <code>str</code> | (Optional) Mode to use in communicating with the metadata service. |
+| <code><a href="#cdktn.S3BackendConfig.property.encrypt">encrypt</a></code> | <code>bool</code> | (Optional) Enable server side encryption of the state file. |
+| <code><a href="#cdktn.S3BackendConfig.property.endpoint">endpoint</a></code> | <code>str</code> | (Optional) Custom endpoint for the AWS S3 API. |
+| <code><a href="#cdktn.S3BackendConfig.property.endpoints">endpoints</a></code> | <code><a href="#cdktn.S3BackendEndpointConfig">S3BackendEndpointConfig</a></code> | (Optional) The endpoint configuration block. |
+| <code><a href="#cdktn.S3BackendConfig.property.externalId">external\_id</a></code> | <code>str</code> | (Optional) External identifier to use when assuming the role. |
+| <code><a href="#cdktn.S3BackendConfig.property.forbiddenAccountIds">forbidden\_account\_ids</a></code> | <code>typing.List\[str]</code> | (Optional) List of forbidden AWS account IDs to prevent potential destruction of a live environment. |
+| <code><a href="#cdktn.S3BackendConfig.property.forcePathStyle">force\_path\_style</a></code> | <code>bool</code> | (Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >). |
+| <code><a href="#cdktn.S3BackendConfig.property.httpProxy">http\_proxy</a></code> | <code>str</code> | (Optional) URL of a proxy to use for HTTP requests when accessing the AWS API. |
+| <code><a href="#cdktn.S3BackendConfig.property.httpsProxy">https\_proxy</a></code> | <code>str</code> | (Optional) URL of a proxy to use for HTTPS requests when accessing the AWS API. |
+| <code><a href="#cdktn.S3BackendConfig.property.iamEndpoint">iam\_endpoint</a></code> | <code>str</code> | (Optional) Custom endpoint for the AWS Identity and Access Management (IAM) API. |
+| <code><a href="#cdktn.S3BackendConfig.property.insecure">insecure</a></code> | <code>bool</code> | Optional) Whether to explicitly allow the backend to perform "insecure" SSL requests. |
+| <code><a href="#cdktn.S3BackendConfig.property.kmsKeyId">kms\_key\_id</a></code> | <code>str</code> | (Optional) Amazon Resource Name (ARN) of a Key Management Service (KMS) Key to use for encrypting the state. |
+| <code><a href="#cdktn.S3BackendConfig.property.maxRetries">max\_retries</a></code> | <code>typing.Union\[int, float]</code> | (Optional) The maximum number of times an AWS API request is retried on retryable failure. |
+| <code><a href="#cdktn.S3BackendConfig.property.noProxy">no\_proxy</a></code> | <code>str</code> | (Optional) Comma-separated list of hosts that should not use HTTP or HTTPS proxies. |
+| <code><a href="#cdktn.S3BackendConfig.property.profile">profile</a></code> | <code>str</code> | (Optional) Name of AWS profile in AWS shared credentials file (e.g. ~/.aws/credentials) or AWS shared configuration file (e.g. ~/.aws/config) to use for credentials and/or configuration. This can also be sourced from the AWS\_PROFILE environment variable. |
+| <code><a href="#cdktn.S3BackendConfig.property.region">region</a></code> | <code>str</code> | AWS Region of the S3 Bucket and DynamoDB Table (if used). |
+| <code><a href="#cdktn.S3BackendConfig.property.retryMode">retry\_mode</a></code> | <code>str</code> | (Optional) Specifies how retries are attempted. |
+| <code><a href="#cdktn.S3BackendConfig.property.roleArn">role\_arn</a></code> | <code>str</code> | (Optional) Amazon Resource Name (ARN) of the IAM Role to assume. |
+| <code><a href="#cdktn.S3BackendConfig.property.secretKey">secret\_key</a></code> | <code>str</code> | (Optional) AWS secret access key. |
+| <code><a href="#cdktn.S3BackendConfig.property.sessionName">session\_name</a></code> | <code>str</code> | (Optional) Session name to use when assuming the role. |
+| <code><a href="#cdktn.S3BackendConfig.property.sharedConfigFiles">shared\_config\_files</a></code> | <code>typing.List\[str]</code> | (Optional) List of paths to AWS shared configuration files. |
+| <code><a href="#cdktn.S3BackendConfig.property.sharedCredentialsFile">shared\_credentials\_file</a></code> | <code>str</code> | (Optional) Path to the AWS shared credentials file. |
+| <code><a href="#cdktn.S3BackendConfig.property.sharedCredentialsFiles">shared\_credentials\_files</a></code> | <code>typing.List\[str]</code> | (Optional) List of paths to AWS shared credentials files. |
+| <code><a href="#cdktn.S3BackendConfig.property.skipCredentialsValidation">skip\_credentials\_validation</a></code> | <code>bool</code> | (Optional) Skip credentials validation via the STS API. |
+| <code><a href="#cdktn.S3BackendConfig.property.skipMetadataApiCheck">skip\_metadata\_api\_check</a></code> | <code>bool</code> | (Optional) Skip usage of EC2 Metadata API. |
+| <code><a href="#cdktn.S3BackendConfig.property.skipRegionValidation">skip\_region\_validation</a></code> | <code>bool</code> | (Optional) Skip validation of provided region name. |
+| <code><a href="#cdktn.S3BackendConfig.property.skipRequestingAccountId">skip\_requesting\_account\_id</a></code> | <code>bool</code> | (Optional) Whether to skip requesting the account ID. |
+| <code><a href="#cdktn.S3BackendConfig.property.skipS3Checksum">skip\_s3\_checksum</a></code> | <code>bool</code> | (Optional) Do not include checksum when uploading S3 Objects. |
+| <code><a href="#cdktn.S3BackendConfig.property.sseCustomerKey">sse\_customer\_key</a></code> | <code>str</code> | (Optional) The key to use for encrypting state with Server-Side Encryption with Customer-Provided Keys (SSE-C). |
+| <code><a href="#cdktn.S3BackendConfig.property.stsEndpoint">sts\_endpoint</a></code> | <code>str</code> | (Optional) Custom endpoint for the AWS Security Token Service (STS) API. |
+| <code><a href="#cdktn.S3BackendConfig.property.stsRegion">sts\_region</a></code> | <code>str</code> | (Optional) AWS region for STS. |
+| <code><a href="#cdktn.S3BackendConfig.property.token">token</a></code> | <code>str</code> | (Optional) Multi-Factor Authentication (MFA) token. |
+| <code><a href="#cdktn.S3BackendConfig.property.useLegacyWorkflow">use\_legacy\_workflow</a></code> | <code>bool</code> | (Optional) Use the legacy authentication workflow, preferring environment variables over backend configuration. |
+| <code><a href="#cdktn.S3BackendConfig.property.usePathStyle">use\_path\_style</a></code> | <code>bool</code> | (Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >). |
+| <code><a href="#cdktn.S3BackendConfig.property.workspaceKeyPrefix">workspace\_key\_prefix</a></code> | <code>str</code> | (Optional) Prefix applied to the state path inside the bucket. |
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.S3BackendConfig.property.bucket"></a>
+
+```python
+bucket: str
+```
+
+- *Type:* str
+
+Name of the S3 Bucket.
+
+***
+
+### `key`<sup>Required</sup> <a name="key" id="cdktn.S3BackendConfig.property.key"></a>
+
+```python
+key: str
+```
+
+- *Type:* str
+
+Path to the state file inside the S3 Bucket.
+
+When using a non-default workspace, the state path will be /workspace\_key\_prefix/workspace\_name/key
+
+***
+
+### `access_key`<sup>Optional</sup> <a name="access_key" id="cdktn.S3BackendConfig.property.accessKey"></a>
+
+```python
+access_key: str
+```
+
+- *Type:* str
+
+(Optional) AWS access key.
+
+If configured, must also configure secret\_key.
+This can also be sourced from
+the AWS\_ACCESS\_KEY\_ID environment variable,
+AWS shared credentials file (e.g. ~/.aws/credentials),
+or AWS shared configuration file (e.g. ~/.aws/config).
+
+***
+
+### `acl`<sup>Optional</sup> <a name="acl" id="cdktn.S3BackendConfig.property.acl"></a>
+
+```python
+acl: str
+```
+
+- *Type:* str
+
+(Optional) Canned ACL to be applied to the state file.
+
+***
+
+### `allowed_account_ids`<sup>Optional</sup> <a name="allowed_account_ids" id="cdktn.S3BackendConfig.property.allowedAccountIds"></a>
+
+```python
+allowed_account_ids: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+(Optional) List of allowed AWS account IDs to prevent potential destruction of a live environment.
+
+Conflicts with forbidden\_account\_ids.
+
+***
+
+### `assume_role`<sup>Optional</sup> <a name="assume_role" id="cdktn.S3BackendConfig.property.assumeRole"></a>
+
+```python
+assume_role: S3BackendAssumeRoleConfig
+```
+
+- *Type:* <a href="#cdktn.S3BackendAssumeRoleConfig">S3BackendAssumeRoleConfig</a>
+
+Assuming an IAM Role can be configured in two ways.
+
+The preferred way is to use the argument assume\_role, the other, which is deprecated, is with arguments at the top level.
+
+***
+
+### ~~`assume_role_policy`~~<sup>Optional</sup> <a name="assume_role_policy" id="cdktn.S3BackendConfig.property.assumeRolePolicy"></a>
+
+- *Deprecated:* Use assumeRole.policy instead.
+
+```python
+assume_role_policy: str
+```
+
+- *Type:* str
+
+(Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### ~~`assume_role_policy_arns`~~<sup>Optional</sup> <a name="assume_role_policy_arns" id="cdktn.S3BackendConfig.property.assumeRolePolicyArns"></a>
+
+- *Deprecated:* Use assumeRole.policyArns instead.
+
+```python
+assume_role_policy_arns: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+(Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### ~~`assume_role_tags`~~<sup>Optional</sup> <a name="assume_role_tags" id="cdktn.S3BackendConfig.property.assumeRoleTags"></a>
+
+- *Deprecated:* Use assumeRole.tags instead.
+
+```python
+assume_role_tags: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping\[str]
+
+(Optional) Map of assume role session tags.
+
+***
+
+### ~~`assume_role_transitive_tag_keys`~~<sup>Optional</sup> <a name="assume_role_transitive_tag_keys" id="cdktn.S3BackendConfig.property.assumeRoleTransitiveTagKeys"></a>
+
+- *Deprecated:* Use assumeRole.transitiveTagKeys instead.
+
+```python
+assume_role_transitive_tag_keys: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+(Optional) Set of assume role session tag keys to pass to any subsequent sessions.
+
+***
+
+### `assume_role_with_web_identity`<sup>Optional</sup> <a name="assume_role_with_web_identity" id="cdktn.S3BackendConfig.property.assumeRoleWithWebIdentity"></a>
+
+```python
+assume_role_with_web_identity: S3BackendAssumeRoleWithWebIdentityConfig
+```
+
+- *Type:* <a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig">S3BackendAssumeRoleWithWebIdentityConfig</a>
+
+Assume Role With Web Identity Configuration.
+
+***
+
+### `custom_ca_bundle`<sup>Optional</sup> <a name="custom_ca_bundle" id="cdktn.S3BackendConfig.property.customCaBundle"></a>
+
+```python
+custom_ca_bundle: str
+```
+
+- *Type:* str
+
+(Optional) File containing custom root and intermediate certificates.
+
+Can also be set using the AWS\_CA\_BUNDLE environment variable.
+Setting ca\_bundle in the shared config file is not supported.
+
+***
+
+### ~~`dynamodb_endpoint`~~<sup>Optional</sup> <a name="dynamodb_endpoint" id="cdktn.S3BackendConfig.property.dynamodbEndpoint"></a>
+
+- *Deprecated:* Use endpoints.dynamodb instead
+
+```python
+dynamodb_endpoint: str
+```
+
+- *Type:* str
+
+(Optional) Custom endpoint for the AWS DynamoDB API.
+
+This can also be sourced from the AWS\_DYNAMODB\_ENDPOINT environment variable.
+
+***
+
+### `dynamodb_table`<sup>Optional</sup> <a name="dynamodb_table" id="cdktn.S3BackendConfig.property.dynamodbTable"></a>
+
+```python
+dynamodb_table: str
+```
+
+- *Type:* str
+
+(Optional) Name of DynamoDB Table to use for state locking and consistency.
+
+The table must have a partition key named LockID with type of String.
+If not configured, state locking will be disabled.
+
+***
+
+### `ec2_metadata_service_endpoint`<sup>Optional</sup> <a name="ec2_metadata_service_endpoint" id="cdktn.S3BackendConfig.property.ec2MetadataServiceEndpoint"></a>
+
+```python
+ec2_metadata_service_endpoint: str
+```
+
+- *Type:* str
+
+Optional) Custom endpoint URL for the EC2 Instance Metadata Service (IMDS) API.
+
+Can also be set with the AWS\_EC2\_METADATA\_SERVICE\_ENDPOINT environment variable.
+
+***
+
+### `ec2_metadata_service_endpoint_mode`<sup>Optional</sup> <a name="ec2_metadata_service_endpoint_mode" id="cdktn.S3BackendConfig.property.ec2MetadataServiceEndpointMode"></a>
+
+```python
+ec2_metadata_service_endpoint_mode: str
+```
+
+- *Type:* str
+
+(Optional) Mode to use in communicating with the metadata service.
+
+Valid values are IPv4 and IPv6.
+Can also be set with the AWS\_EC2\_METADATA\_SERVICE\_ENDPOINT\_MODE environment variable.
+
+***
+
+### `encrypt`<sup>Optional</sup> <a name="encrypt" id="cdktn.S3BackendConfig.property.encrypt"></a>
+
+```python
+encrypt: bool
+```
+
+- *Type:* bool
+
+(Optional) Enable server side encryption of the state file.
+
+***
+
+### ~~`endpoint`~~<sup>Optional</sup> <a name="endpoint" id="cdktn.S3BackendConfig.property.endpoint"></a>
+
+- *Deprecated:* Use endpoints.s3 instead
+
+```python
+endpoint: str
+```
+
+- *Type:* str
+
+(Optional) Custom endpoint for the AWS S3 API.
+
+This can also be sourced from the AWS\_S3\_ENDPOINT environment variable.
+
+***
+
+### `endpoints`<sup>Optional</sup> <a name="endpoints" id="cdktn.S3BackendConfig.property.endpoints"></a>
+
+```python
+endpoints: S3BackendEndpointConfig
+```
+
+- *Type:* <a href="#cdktn.S3BackendEndpointConfig">S3BackendEndpointConfig</a>
+
+(Optional) The endpoint configuration block.
+
+***
+
+### ~~`external_id`~~<sup>Optional</sup> <a name="external_id" id="cdktn.S3BackendConfig.property.externalId"></a>
+
+- *Deprecated:* Use assume\_role.external\_id instead.
+
+```python
+external_id: str
+```
+
+- *Type:* str
+
+(Optional) External identifier to use when assuming the role.
+
+***
+
+### `forbidden_account_ids`<sup>Optional</sup> <a name="forbidden_account_ids" id="cdktn.S3BackendConfig.property.forbiddenAccountIds"></a>
+
+```python
+forbidden_account_ids: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+(Optional) List of forbidden AWS account IDs to prevent potential destruction of a live environment.
+
+Conflicts with allowed\_account\_ids.
+
+***
+
+### ~~`force_path_style`~~<sup>Optional</sup> <a name="force_path_style" id="cdktn.S3BackendConfig.property.forcePathStyle"></a>
+
+- *Deprecated:* Use usePathStyle instead
+
+```python
+force_path_style: bool
+```
+
+- *Type:* bool
+
+(Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >).
+
+***
+
+### `http_proxy`<sup>Optional</sup> <a name="http_proxy" id="cdktn.S3BackendConfig.property.httpProxy"></a>
+
+```python
+http_proxy: str
+```
+
+- *Type:* str
+
+(Optional) URL of a proxy to use for HTTP requests when accessing the AWS API.
+
+Can also be set using the HTTP\_PROXY or http\_proxy environment variables.
+
+***
+
+### `https_proxy`<sup>Optional</sup> <a name="https_proxy" id="cdktn.S3BackendConfig.property.httpsProxy"></a>
+
+```python
+https_proxy: str
+```
+
+- *Type:* str
+
+(Optional) URL of a proxy to use for HTTPS requests when accessing the AWS API.
+
+Can also be set using the HTTPS\_PROXY or https\_proxy environment variables.
+
+***
+
+### ~~`iam_endpoint`~~<sup>Optional</sup> <a name="iam_endpoint" id="cdktn.S3BackendConfig.property.iamEndpoint"></a>
+
+- *Deprecated:* Use endpoints.iam instead
+
+```python
+iam_endpoint: str
+```
+
+- *Type:* str
+
+(Optional) Custom endpoint for the AWS Identity and Access Management (IAM) API.
+
+This can also be sourced from the AWS\_IAM\_ENDPOINT environment variable.
+
+***
+
+### `insecure`<sup>Optional</sup> <a name="insecure" id="cdktn.S3BackendConfig.property.insecure"></a>
+
+```python
+insecure: bool
+```
+
+- *Type:* bool
+
+Optional) Whether to explicitly allow the backend to perform "insecure" SSL requests.
+
+If omitted, the default value is false.
+
+***
+
+### `kms_key_id`<sup>Optional</sup> <a name="kms_key_id" id="cdktn.S3BackendConfig.property.kmsKeyId"></a>
+
+```python
+kms_key_id: str
+```
+
+- *Type:* str
+
+(Optional) Amazon Resource Name (ARN) of a Key Management Service (KMS) Key to use for encrypting the state.
+
+Note that if this value is specified,
+Terraform will need kms:Encrypt, kms:Decrypt and kms:GenerateDataKey permissions on this KMS key.
+
+***
+
+### `max_retries`<sup>Optional</sup> <a name="max_retries" id="cdktn.S3BackendConfig.property.maxRetries"></a>
+
+```python
+max_retries: typing.Union[int, float]
+```
+
+- *Type:* typing.Union\[int, float]
+
+(Optional) The maximum number of times an AWS API request is retried on retryable failure.
+
+Defaults to 5.
+
+***
+
+### `no_proxy`<sup>Optional</sup> <a name="no_proxy" id="cdktn.S3BackendConfig.property.noProxy"></a>
+
+```python
+no_proxy: str
+```
+
+- *Type:* str
+
+(Optional) Comma-separated list of hosts that should not use HTTP or HTTPS proxies.
+
+Each value can be one of:
+
+- A domain name
+- An IP address
+- A CIDR address
+- An asterisk (\*), to indicate that no proxying should be performed Domain name and IP address values can also include a port number.
+  Can also be set using the NO\_PROXY or no\_proxy environment variables.
+
+***
+
+### `profile`<sup>Optional</sup> <a name="profile" id="cdktn.S3BackendConfig.property.profile"></a>
+
+```python
+profile: str
+```
+
+- *Type:* str
+
+(Optional) Name of AWS profile in AWS shared credentials file (e.g. ~/.aws/credentials) or AWS shared configuration file (e.g. ~/.aws/config) to use for credentials and/or configuration. This can also be sourced from the AWS\_PROFILE environment variable.
+
+***
+
+### `region`<sup>Optional</sup> <a name="region" id="cdktn.S3BackendConfig.property.region"></a>
+
+```python
+region: str
+```
+
+- *Type:* str
+
+AWS Region of the S3 Bucket and DynamoDB Table (if used).
+
+This can also
+be sourced from the AWS\_DEFAULT\_REGION and AWS\_REGION environment
+variables.
+
+***
+
+### `retry_mode`<sup>Optional</sup> <a name="retry_mode" id="cdktn.S3BackendConfig.property.retryMode"></a>
+
+```python
+retry_mode: str
+```
+
+- *Type:* str
+
+(Optional) Specifies how retries are attempted.
+
+Valid values are standard and adaptive.
+Can also be configured using the AWS\_RETRY\_MODE environment variable or the shared config file parameter retry\_mode.
+
+***
+
+### ~~`role_arn`~~<sup>Optional</sup> <a name="role_arn" id="cdktn.S3BackendConfig.property.roleArn"></a>
+
+- *Deprecated:* Use assumeRole.roleArn instead.
+
+```python
+role_arn: str
+```
+
+- *Type:* str
+
+(Optional) Amazon Resource Name (ARN) of the IAM Role to assume.
+
+***
+
+### `secret_key`<sup>Optional</sup> <a name="secret_key" id="cdktn.S3BackendConfig.property.secretKey"></a>
+
+```python
+secret_key: str
+```
+
+- *Type:* str
+
+(Optional) AWS secret access key.
+
+If configured, must also configure access\_key.
+This can also be sourced from
+the AWS\_SECRET\_ACCESS\_KEY environment variable,
+AWS shared credentials file (e.g. ~/.aws/credentials),
+or AWS shared configuration file (e.g. ~/.aws/config)
+
+***
+
+### ~~`session_name`~~<sup>Optional</sup> <a name="session_name" id="cdktn.S3BackendConfig.property.sessionName"></a>
+
+- *Deprecated:* Use assumeRole.sessionName instead.
+
+```python
+session_name: str
+```
+
+- *Type:* str
+
+(Optional) Session name to use when assuming the role.
+
+***
+
+### `shared_config_files`<sup>Optional</sup> <a name="shared_config_files" id="cdktn.S3BackendConfig.property.sharedConfigFiles"></a>
+
+```python
+shared_config_files: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+(Optional) List of paths to AWS shared configuration files.
+
+Defaults to ~/.aws/config.
+
+***
+
+### `shared_credentials_file`<sup>Optional</sup> <a name="shared_credentials_file" id="cdktn.S3BackendConfig.property.sharedCredentialsFile"></a>
+
+```python
+shared_credentials_file: str
+```
+
+- *Type:* str
+
+(Optional) Path to the AWS shared credentials file.
+
+Defaults to ~/.aws/credentials.
+
+***
+
+### `shared_credentials_files`<sup>Optional</sup> <a name="shared_credentials_files" id="cdktn.S3BackendConfig.property.sharedCredentialsFiles"></a>
+
+```python
+shared_credentials_files: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+(Optional) List of paths to AWS shared credentials files.
+
+Defaults to ~/.aws/credentials.
+
+***
+
+### `skip_credentials_validation`<sup>Optional</sup> <a name="skip_credentials_validation" id="cdktn.S3BackendConfig.property.skipCredentialsValidation"></a>
+
+```python
+skip_credentials_validation: bool
+```
+
+- *Type:* bool
+
+(Optional) Skip credentials validation via the STS API.
+
+***
+
+### `skip_metadata_api_check`<sup>Optional</sup> <a name="skip_metadata_api_check" id="cdktn.S3BackendConfig.property.skipMetadataApiCheck"></a>
+
+```python
+skip_metadata_api_check: bool
+```
+
+- *Type:* bool
+
+(Optional) Skip usage of EC2 Metadata API.
+
+***
+
+### `skip_region_validation`<sup>Optional</sup> <a name="skip_region_validation" id="cdktn.S3BackendConfig.property.skipRegionValidation"></a>
+
+```python
+skip_region_validation: bool
+```
+
+- *Type:* bool
+
+(Optional) Skip validation of provided region name.
+
+***
+
+### `skip_requesting_account_id`<sup>Optional</sup> <a name="skip_requesting_account_id" id="cdktn.S3BackendConfig.property.skipRequestingAccountId"></a>
+
+```python
+skip_requesting_account_id: bool
+```
+
+- *Type:* bool
+
+(Optional) Whether to skip requesting the account ID.
+
+Useful for AWS API implementations that do not have the IAM, STS API, or metadata API.
+
+***
+
+### `skip_s3_checksum`<sup>Optional</sup> <a name="skip_s3_checksum" id="cdktn.S3BackendConfig.property.skipS3Checksum"></a>
+
+```python
+skip_s3_checksum: bool
+```
+
+- *Type:* bool
+
+(Optional) Do not include checksum when uploading S3 Objects.
+
+Useful for some S3-Compatible APIs.
+
+***
+
+### `sse_customer_key`<sup>Optional</sup> <a name="sse_customer_key" id="cdktn.S3BackendConfig.property.sseCustomerKey"></a>
+
+```python
+sse_customer_key: str
+```
+
+- *Type:* str
+
+(Optional) The key to use for encrypting state with Server-Side Encryption with Customer-Provided Keys (SSE-C).
+
+This is the base64-encoded value of the key, which must decode to 256 bits.
+This can also be sourced from the AWS\_SSE\_CUSTOMER\_KEY environment variable,
+which is recommended due to the sensitivity of the value.
+Setting it inside a terraform file will cause it to be persisted to disk in terraform.tfstate.
+
+***
+
+### ~~`sts_endpoint`~~<sup>Optional</sup> <a name="sts_endpoint" id="cdktn.S3BackendConfig.property.stsEndpoint"></a>
+
+- *Deprecated:* Use endpoints.sts instead
+
+```python
+sts_endpoint: str
+```
+
+- *Type:* str
+
+(Optional) Custom endpoint for the AWS Security Token Service (STS) API.
+
+This can also be sourced from the AWS\_STS\_ENDPOINT environment variable.
+
+***
+
+### `sts_region`<sup>Optional</sup> <a name="sts_region" id="cdktn.S3BackendConfig.property.stsRegion"></a>
+
+```python
+sts_region: str
+```
+
+- *Type:* str
+
+(Optional) AWS region for STS.
+
+If unset, AWS will use the same region for STS as other non-STS operations.
+
+***
+
+### `token`<sup>Optional</sup> <a name="token" id="cdktn.S3BackendConfig.property.token"></a>
+
+```python
+token: str
+```
+
+- *Type:* str
+
+(Optional) Multi-Factor Authentication (MFA) token.
+
+This can also be sourced from the AWS\_SESSION\_TOKEN environment variable.
+
+***
+
+### `use_legacy_workflow`<sup>Optional</sup> <a name="use_legacy_workflow" id="cdktn.S3BackendConfig.property.useLegacyWorkflow"></a>
+
+```python
+use_legacy_workflow: bool
+```
+
+- *Type:* bool
+
+(Optional) Use the legacy authentication workflow, preferring environment variables over backend configuration.
+
+Defaults to true.
+This behavior does not align with the authentication flow of the AWS CLI or SDK's, and will be removed in the future.
+
+***
+
+### `use_path_style`<sup>Optional</sup> <a name="use_path_style" id="cdktn.S3BackendConfig.property.usePathStyle"></a>
+
+```python
+use_path_style: bool
+```
+
+- *Type:* bool
+
+(Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >).
+
+***
+
+### `workspace_key_prefix`<sup>Optional</sup> <a name="workspace_key_prefix" id="cdktn.S3BackendConfig.property.workspaceKeyPrefix"></a>
+
+```python
+workspace_key_prefix: str
+```
+
+- *Type:* str
+
+(Optional) Prefix applied to the state path inside the bucket.
+
+This is only relevant when using a non-default workspace. Defaults to env:
+
+***
+

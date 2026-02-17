@@ -1,0 +1,419 @@
+---
+title: "Go: TerraformHclModule"
+sidebarTitle: TerraformHclModule
+description: CDKTN Core API Reference for TerraformHclModule in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.TerraformHclModule.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewTerraformHclModule(scope Construct, id *string, options TerraformHclModuleConfig) TerraformHclModule
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.scope">scope</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.id">id</a></code> | <code>\*string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.options">options</a></code> | <code><a href="#cdktn.TerraformHclModuleConfig">TerraformHclModuleConfig</a></code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.TerraformHclModule.Initializer.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.TerraformHclModule.Initializer.parameter.id"></a>
+
+- *Type:* \*string
+
+***
+
+### `options`<sup>Required</sup> <a name="options" id="cdktn.TerraformHclModule.Initializer.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.TerraformHclModuleConfig">TerraformHclModuleConfig</a>
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformHclModule.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformHclModule.addOverride">AddOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.TerraformHclModule.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.TerraformHclModule.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.toMetadata">ToMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.toTerraform">ToTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.addProvider">AddProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.getString">GetString</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.interpolationForOutput">InterpolationForOutput</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.get">Get</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.getBoolean">GetBoolean</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.getList">GetList</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.getNumber">GetNumber</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.set">Set</a></code> | *No description.* |
+
+***
+
+### `ToString` <a name="ToString" id="cdktn.TerraformHclModule.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Returns a string representation of this construct.
+
+### `AddOverride` <a name="AddOverride" id="cdktn.TerraformHclModule.addOverride"></a>
+
+```go
+func AddOverride(path *string, value interface{})
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.TerraformHclModule.addOverride.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformHclModule.addOverride.parameter.value"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `OverrideLogicalId` <a name="OverrideLogicalId" id="cdktn.TerraformHclModule.overrideLogicalId"></a>
+
+```go
+func OverrideLogicalId(newLogicalId *string)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.TerraformHclModule.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* \*string
+
+The new logical ID to use for this stack element.
+
+***
+
+### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="cdktn.TerraformHclModule.resetOverrideLogicalId"></a>
+
+```go
+func ResetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `ToHclTerraform` <a name="ToHclTerraform" id="cdktn.TerraformHclModule.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+### `ToMetadata` <a name="ToMetadata" id="cdktn.TerraformHclModule.toMetadata"></a>
+
+```go
+func ToMetadata() interface{}
+```
+
+### `ToTerraform` <a name="ToTerraform" id="cdktn.TerraformHclModule.toTerraform"></a>
+
+```go
+func ToTerraform() interface{}
+```
+
+### `AddProvider` <a name="AddProvider" id="cdktn.TerraformHclModule.addProvider"></a>
+
+```go
+func AddProvider(provider interface{})
+```
+
+#### `provider`<sup>Required</sup> <a name="provider" id="cdktn.TerraformHclModule.addProvider.parameter.provider"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `GetString` <a name="GetString" id="cdktn.TerraformHclModule.getString"></a>
+
+```go
+func GetString(output *string) *string
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.TerraformHclModule.getString.parameter.output"></a>
+
+- *Type:* \*string
+
+***
+
+### `InterpolationForOutput` <a name="InterpolationForOutput" id="cdktn.TerraformHclModule.interpolationForOutput"></a>
+
+```go
+func InterpolationForOutput(moduleOutput *string) IResolvable
+```
+
+#### `moduleOutput`<sup>Required</sup> <a name="moduleOutput" id="cdktn.TerraformHclModule.interpolationForOutput.parameter.moduleOutput"></a>
+
+- *Type:* \*string
+
+***
+
+### `Get` <a name="Get" id="cdktn.TerraformHclModule.get"></a>
+
+```go
+func Get(output *string) interface{}
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.TerraformHclModule.get.parameter.output"></a>
+
+- *Type:* \*string
+
+***
+
+### `GetBoolean` <a name="GetBoolean" id="cdktn.TerraformHclModule.getBoolean"></a>
+
+```go
+func GetBoolean(output *string) IResolvable
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.TerraformHclModule.getBoolean.parameter.output"></a>
+
+- *Type:* \*string
+
+***
+
+### `GetList` <a name="GetList" id="cdktn.TerraformHclModule.getList"></a>
+
+```go
+func GetList(output *string) *[]*string
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.TerraformHclModule.getList.parameter.output"></a>
+
+- *Type:* \*string
+
+***
+
+### `GetNumber` <a name="GetNumber" id="cdktn.TerraformHclModule.getNumber"></a>
+
+```go
+func GetNumber(output *string) *f64
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.TerraformHclModule.getNumber.parameter.output"></a>
+
+- *Type:* \*string
+
+***
+
+### `Set` <a name="Set" id="cdktn.TerraformHclModule.set"></a>
+
+```go
+func Set(variable *string, value interface{})
+```
+
+#### `variable`<sup>Required</sup> <a name="variable" id="cdktn.TerraformHclModule.set.parameter.variable"></a>
+
+- *Type:* \*string
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformHclModule.set.parameter.value"></a>
+
+- *Type:* interface\{}
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformHclModule.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformHclModule.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
+
+***
+
+### `IsConstruct` <a name="IsConstruct" id="cdktn.TerraformHclModule.isConstruct"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.TerraformHclModule_IsConstruct(x interface{}) *bool
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformHclModule.isConstruct.parameter.x"></a>
+
+- *Type:* interface\{}
+
+Any object.
+
+***
+
+### `IsTerraformElement` <a name="IsTerraformElement" id="cdktn.TerraformHclModule.isTerraformElement"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.TerraformHclModule_IsTerraformElement(x interface{}) *bool
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformHclModule.isTerraformElement.parameter.x"></a>
+
+- *Type:* interface\{}
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformHclModule.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformHclModule.property.cdktfStack">CdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.fqn">Fqn</a></code> | <code>\*string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>\*string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.source">Source</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.providers">Providers</a></code> | <code>*\[]interface\{}</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.skipAssetCreationFromLocalModules">SkipAssetCreationFromLocalModules</a></code> | <code>\*bool</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.version">Version</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.dependsOn">DependsOn</a></code> | <code>*\[]\*string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.forEach">ForEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.variables">Variables</a></code> | <code>\*map\[string]interface\{}</code> | *No description.* |
+
+***
+
+### `Node`<sup>Required</sup> <a name="Node" id="cdktn.TerraformHclModule.property.node"></a>
+
+```go
+func Node() Node
+```
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Node
+
+The tree node.
+
+***
+
+### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="cdktn.TerraformHclModule.property.cdktfStack"></a>
+
+```go
+func CdktfStack() TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `Fqn`<sup>Required</sup> <a name="Fqn" id="cdktn.TerraformHclModule.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* \*string
+
+***
+
+### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="cdktn.TerraformHclModule.property.friendlyUniqueId"></a>
+
+```go
+func FriendlyUniqueId() *string
+```
+
+- *Type:* \*string
+
+***
+
+### `Source`<sup>Required</sup> <a name="Source" id="cdktn.TerraformHclModule.property.source"></a>
+
+```go
+func Source() *string
+```
+
+- *Type:* \*string
+
+***
+
+### `Providers`<sup>Optional</sup> <a name="Providers" id="cdktn.TerraformHclModule.property.providers"></a>
+
+```go
+func Providers() *[]interface{}
+```
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `SkipAssetCreationFromLocalModules`<sup>Optional</sup> <a name="SkipAssetCreationFromLocalModules" id="cdktn.TerraformHclModule.property.skipAssetCreationFromLocalModules"></a>
+
+```go
+func SkipAssetCreationFromLocalModules() *bool
+```
+
+- *Type:* \*bool
+
+***
+
+### `Version`<sup>Optional</sup> <a name="Version" id="cdktn.TerraformHclModule.property.version"></a>
+
+```go
+func Version() *string
+```
+
+- *Type:* \*string
+
+***
+
+### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="cdktn.TerraformHclModule.property.dependsOn"></a>
+
+```go
+func DependsOn() *[]*string
+```
+
+- *Type:* \*\[]\*string
+
+***
+
+### `ForEach`<sup>Optional</sup> <a name="ForEach" id="cdktn.TerraformHclModule.property.forEach"></a>
+
+```go
+func ForEach() ITerraformIterator
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `Variables`<sup>Optional</sup> <a name="Variables" id="cdktn.TerraformHclModule.property.variables"></a>
+
+```go
+func Variables() *map[string]interface{}
+```
+
+- *Type:* \*map\[string]interface\{}
+
+***
+

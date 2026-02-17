@@ -1,0 +1,115 @@
+---
+title: "Typescript: AppConfig"
+sidebarTitle: AppConfig
+description: CDKTN Core API Reference for AppConfig in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.AppConfig.Initializer"></a>
+
+```typescript
+import { AppConfig } from 'cdktn'
+
+const appConfig: AppConfig = { ... }
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.AppConfig.property.context">context</a></code> | <code>\{\[ key: string ]: any}</code> | Additional context values for the application. |
+| <code><a href="#cdktn.AppConfig.property.hclOutput">hclOutput</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#cdktn.AppConfig.property.outdir">outdir</a></code> | <code>string</code> | The directory to output Terraform resources. |
+| <code><a href="#cdktn.AppConfig.property.skipBackendValidation">skipBackendValidation</a></code> | <code>boolean</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#cdktn.AppConfig.property.skipValidation">skipValidation</a></code> | <code>boolean</code> | Whether to skip all validations during synthesis of the app. |
+| <code><a href="#cdktn.AppConfig.property.stackTraces">stackTraces</a></code> | <code>boolean</code> | *No description.* |
+
+***
+
+### `context`<sup>Optional</sup> <a name="context" id="cdktn.AppConfig.property.context"></a>
+
+```typescript
+public readonly context: {[ key: string ]: any};
+```
+
+- *Type:* \{\[ key: string ]: any}
+- *Default:* no additional context
+
+Additional context values for the application.
+
+Context set by the CLI or the `context` key in `cdktf.json` has precedence.
+
+Context can be read from any construct using `node.getContext(key)`.
+
+***
+
+### `hclOutput`<sup>Optional</sup> <a name="hclOutput" id="cdktn.AppConfig.property.hclOutput"></a>
+
+```typescript
+public readonly hclOutput: boolean;
+```
+
+- *Type:* boolean
+
+***
+
+### `outdir`<sup>Optional</sup> <a name="outdir" id="cdktn.AppConfig.property.outdir"></a>
+
+```typescript
+public readonly outdir: string;
+```
+
+- *Type:* string
+- *Default:* CDKTF\_OUTDIR if defined, otherwise "cdktf.out"
+
+The directory to output Terraform resources.
+
+If you are using the CDKTN CLI, this value is automatically set from one of the following three sources:
+
+- The `-o` / `--output` CLI option
+- The `CDKTF_OUTDIR` environment variable
+- The `outdir` key in `cdktf.json`
+
+If you are using the CDKTN CLI and want to set a different value here, you will also need to set the same value via one of the three ways specified above.
+
+The most common case to set this value is when you are using the CDKTN library directly (e.g. when writing unit tests).
+
+***
+
+### `skipBackendValidation`<sup>Optional</sup> <a name="skipBackendValidation" id="cdktn.AppConfig.property.skipBackendValidation"></a>
+
+```typescript
+public readonly skipBackendValidation: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether to skip backend validation during synthesis of the app.
+
+***
+
+### `skipValidation`<sup>Optional</sup> <a name="skipValidation" id="cdktn.AppConfig.property.skipValidation"></a>
+
+```typescript
+public readonly skipValidation: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Whether to skip all validations during synthesis of the app.
+
+***
+
+### `stackTraces`<sup>Optional</sup> <a name="stackTraces" id="cdktn.AppConfig.property.stackTraces"></a>
+
+```typescript
+public readonly stackTraces: boolean;
+```
+
+- *Type:* boolean
+
+***
+

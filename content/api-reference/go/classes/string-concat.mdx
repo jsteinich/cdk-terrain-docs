@@ -1,0 +1,55 @@
+---
+title: "Go: StringConcat"
+sidebarTitle: StringConcat
+description: CDKTN Core API Reference for StringConcat in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.IFragmentConcatenator">IFragmentConcatenator</a>
+
+Converts all fragments to strings and concats those.
+
+Drops 'undefined's.
+
+## Initializers <a name="Initializers" id="cdktn.StringConcat.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewStringConcat() StringConcat
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.StringConcat.join">Join</a></code> | Concatenates string fragments. |
+
+***
+
+### `Join` <a name="Join" id="cdktn.StringConcat.join"></a>
+
+```go
+func Join(left interface{}, right interface{}) interface{}
+```
+
+Concatenates string fragments.
+
+#### `left`<sup>Required</sup> <a name="left" id="cdktn.StringConcat.join.parameter.left"></a>
+
+- *Type:* interface\{}
+
+***
+
+#### `right`<sup>Required</sup> <a name="right" id="cdktn.StringConcat.join.parameter.right"></a>
+
+- *Type:* interface\{}
+
+***
+

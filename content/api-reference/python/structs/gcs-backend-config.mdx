@@ -1,0 +1,181 @@
+---
+title: "Python: GcsBackendConfig"
+sidebarTitle: GcsBackendConfig
+description: CDKTN Core API Reference for GcsBackendConfig in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Stores the state as an object in a configurable prefix in a pre-existing bucket on Google Cloud Storage (GCS).
+
+The bucket must exist prior to configuring the backend.
+
+This backend supports state locking.
+
+Warning! It is highly recommended that you enable Object Versioning on the GCS bucket
+to allow for state recovery in the case of accidental deletions and human error.
+
+Read more about this backend in the Terraform docs:
+https://developer.hashicorp.com/terraform/language/settings/backends/gcs
+
+## Initializer <a name="Initializer" id="cdktn.GcsBackendConfig.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.GcsBackendConfig(
+  bucket: str,
+  access_token: str = None,
+  credentials: str = None,
+  encryption_key: str = None,
+  impersonate_service_account: str = None,
+  impersonate_service_account_delegates: typing.List[str] = None,
+  kms_encryption_key: str = None,
+  prefix: str = None,
+  storeage_custom_endpoint: str = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.GcsBackendConfig.property.bucket">bucket</a></code> | <code>str</code> | (Required) The name of the GCS bucket. |
+| <code><a href="#cdktn.GcsBackendConfig.property.accessToken">access\_token</a></code> | <code>str</code> | (Optional) A temporary \[OAuth 2.0 access token] obtained from the Google Authorization server, i.e. the Authorization: Bearer token used to authenticate HTTP requests to GCP APIs. This is an alternative to credentials. If both are specified, access\_token will be used over the credentials field. |
+| <code><a href="#cdktn.GcsBackendConfig.property.credentials">credentials</a></code> | <code>str</code> | (Optional) Local path to Google Cloud Platform account credentials in JSON format. |
+| <code><a href="#cdktn.GcsBackendConfig.property.encryptionKey">encryption\_key</a></code> | <code>str</code> | (Optional) A 32 byte base64 encoded 'customer supplied encryption key' used to encrypt all state. |
+| <code><a href="#cdktn.GcsBackendConfig.property.impersonateServiceAccount">impersonate\_service\_account</a></code> | <code>str</code> | (Optional) The service account to impersonate for accessing the State Bucket. |
+| <code><a href="#cdktn.GcsBackendConfig.property.impersonateServiceAccountDelegates">impersonate\_service\_account\_delegates</a></code> | <code>typing.List\[str]</code> | (Optional) The delegation chain for an impersonating a service account. |
+| <code><a href="#cdktn.GcsBackendConfig.property.kmsEncryptionKey">kms\_encryption\_key</a></code> | <code>str</code> | (Optional) A Cloud KMS key ('customer-managed encryption key') used when reading and writing state files in the bucket. |
+| <code><a href="#cdktn.GcsBackendConfig.property.prefix">prefix</a></code> | <code>str</code> | (Optional) GCS prefix inside the bucket. |
+| <code><a href="#cdktn.GcsBackendConfig.property.storeageCustomEndpoint">storeage\_custom\_endpoint</a></code> | <code>str</code> | (Optional) A URL containing three parts: the protocol, the DNS name pointing to a Private Service Connect endpoint, and the path for the Cloud Storage API (/storage/v1/b). |
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.GcsBackendConfig.property.bucket"></a>
+
+```python
+bucket: str
+```
+
+- *Type:* str
+
+(Required) The name of the GCS bucket.
+
+This name must be globally unique.
+
+***
+
+### `access_token`<sup>Optional</sup> <a name="access_token" id="cdktn.GcsBackendConfig.property.accessToken"></a>
+
+```python
+access_token: str
+```
+
+- *Type:* str
+
+(Optional) A temporary \[OAuth 2.0 access token] obtained from the Google Authorization server, i.e. the Authorization: Bearer token used to authenticate HTTP requests to GCP APIs. This is an alternative to credentials. If both are specified, access\_token will be used over the credentials field.
+
+***
+
+### `credentials`<sup>Optional</sup> <a name="credentials" id="cdktn.GcsBackendConfig.property.credentials"></a>
+
+```python
+credentials: str
+```
+
+- *Type:* str
+
+(Optional) Local path to Google Cloud Platform account credentials in JSON format.
+
+If unset, Google Application Default Credentials are used.
+The provided credentials must have Storage Object Admin role on the bucket.
+
+Warning: if using the Google Cloud Platform provider as well,
+it will also pick up the GOOGLE\_CREDENTIALS environment variable.
+
+***
+
+### `encryption_key`<sup>Optional</sup> <a name="encryption_key" id="cdktn.GcsBackendConfig.property.encryptionKey"></a>
+
+```python
+encryption_key: str
+```
+
+- *Type:* str
+
+(Optional) A 32 byte base64 encoded 'customer supplied encryption key' used to encrypt all state.
+
+***
+
+### `impersonate_service_account`<sup>Optional</sup> <a name="impersonate_service_account" id="cdktn.GcsBackendConfig.property.impersonateServiceAccount"></a>
+
+```python
+impersonate_service_account: str
+```
+
+- *Type:* str
+
+(Optional) The service account to impersonate for accessing the State Bucket.
+
+You must have roles/iam.serviceAccountTokenCreator role on that account for the impersonation to succeed.
+If you are using a delegation chain, you can specify that using the impersonate\_service\_account\_delegates field.
+Alternatively, this can be specified using the GOOGLE\_IMPERSONATE\_SERVICE\_ACCOUNT environment variable.
+
+***
+
+### `impersonate_service_account_delegates`<sup>Optional</sup> <a name="impersonate_service_account_delegates" id="cdktn.GcsBackendConfig.property.impersonateServiceAccountDelegates"></a>
+
+```python
+impersonate_service_account_delegates: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+(Optional) The delegation chain for an impersonating a service account.
+
+***
+
+### `kms_encryption_key`<sup>Optional</sup> <a name="kms_encryption_key" id="cdktn.GcsBackendConfig.property.kmsEncryptionKey"></a>
+
+```python
+kms_encryption_key: str
+```
+
+- *Type:* str
+
+(Optional) A Cloud KMS key ('customer-managed encryption key') used when reading and writing state files in the bucket.
+
+Format should be projects/\{\{project}}/locations/\{\{location}}/keyRings/\{\{keyRing}}/cryptoKeys/\{\{name}}.
+For more information, including IAM requirements, see [Customer-managed Encryption Keys](https://cloud.google.com/storage/docs/encryption/customer-managed-keys).
+
+***
+
+### `prefix`<sup>Optional</sup> <a name="prefix" id="cdktn.GcsBackendConfig.property.prefix"></a>
+
+```python
+prefix: str
+```
+
+- *Type:* str
+
+(Optional) GCS prefix inside the bucket.
+
+Named states for workspaces are stored in an object called &lt; prefix >/&lt; name >.tfstate.
+
+***
+
+### `storeage_custom_endpoint`<sup>Optional</sup> <a name="storeage_custom_endpoint" id="cdktn.GcsBackendConfig.property.storeageCustomEndpoint"></a>
+
+```python
+storeage_custom_endpoint: str
+```
+
+- *Type:* str
+
+(Optional) A URL containing three parts: the protocol, the DNS name pointing to a Private Service Connect endpoint, and the path for the Cloud Storage API (/storage/v1/b).
+
+[See here for more details](https://developer.hashicorp.com/terraform/language/settings/backends/gcs#storage_custom_endpoint)
+
+***
+

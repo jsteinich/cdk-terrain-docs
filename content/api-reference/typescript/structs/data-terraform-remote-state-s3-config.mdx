@@ -1,0 +1,808 @@
+---
+title: "Typescript: DataTerraformRemoteStateS3Config"
+sidebarTitle: DataTerraformRemoteStateS3Config
+description: CDKTN Core API Reference for DataTerraformRemoteStateS3Config in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.DataTerraformRemoteStateS3Config.Initializer"></a>
+
+```typescript
+import { DataTerraformRemoteStateS3Config } from 'cdktn'
+
+const dataTerraformRemoteStateS3Config: DataTerraformRemoteStateS3Config = { ... }
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.defaults">defaults</a></code> | <code>\{\[ key: string ]: any}</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.workspace">workspace</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.bucket">bucket</a></code> | <code>string</code> | Name of the S3 Bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.key">key</a></code> | <code>string</code> | Path to the state file inside the S3 Bucket. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.accessKey">accessKey</a></code> | <code>string</code> | (Optional) AWS access key. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.acl">acl</a></code> | <code>string</code> | (Optional) Canned ACL to be applied to the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.allowedAccountIds">allowedAccountIds</a></code> | <code>string\[]</code> | (Optional) List of allowed AWS account IDs to prevent potential destruction of a live environment. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.assumeRole">assumeRole</a></code> | <code><a href="#cdktn.S3BackendAssumeRoleConfig">S3BackendAssumeRoleConfig</a></code> | Assuming an IAM Role can be configured in two ways. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.assumeRolePolicy">assumeRolePolicy</a></code> | <code>string</code> | (Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.assumeRolePolicyArns">assumeRolePolicyArns</a></code> | <code>string\[]</code> | (Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.assumeRoleTags">assumeRoleTags</a></code> | <code>\{\[ key: string ]: string}</code> | (Optional) Map of assume role session tags. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.assumeRoleTransitiveTagKeys">assumeRoleTransitiveTagKeys</a></code> | <code>string\[]</code> | (Optional) Set of assume role session tag keys to pass to any subsequent sessions. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.assumeRoleWithWebIdentity">assumeRoleWithWebIdentity</a></code> | <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig">S3BackendAssumeRoleWithWebIdentityConfig</a></code> | Assume Role With Web Identity Configuration. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.customCaBundle">customCaBundle</a></code> | <code>string</code> | (Optional) File containing custom root and intermediate certificates. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.dynamodbEndpoint">dynamodbEndpoint</a></code> | <code>string</code> | (Optional) Custom endpoint for the AWS DynamoDB API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.dynamodbTable">dynamodbTable</a></code> | <code>string</code> | (Optional) Name of DynamoDB Table to use for state locking and consistency. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.ec2MetadataServiceEndpoint">ec2MetadataServiceEndpoint</a></code> | <code>string</code> | Optional) Custom endpoint URL for the EC2 Instance Metadata Service (IMDS) API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.ec2MetadataServiceEndpointMode">ec2MetadataServiceEndpointMode</a></code> | <code>string</code> | (Optional) Mode to use in communicating with the metadata service. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.encrypt">encrypt</a></code> | <code>boolean</code> | (Optional) Enable server side encryption of the state file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.endpoint">endpoint</a></code> | <code>string</code> | (Optional) Custom endpoint for the AWS S3 API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.endpoints">endpoints</a></code> | <code><a href="#cdktn.S3BackendEndpointConfig">S3BackendEndpointConfig</a></code> | (Optional) The endpoint configuration block. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.externalId">externalId</a></code> | <code>string</code> | (Optional) External identifier to use when assuming the role. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.forbiddenAccountIds">forbiddenAccountIds</a></code> | <code>string\[]</code> | (Optional) List of forbidden AWS account IDs to prevent potential destruction of a live environment. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.forcePathStyle">forcePathStyle</a></code> | <code>boolean</code> | (Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >). |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.httpProxy">httpProxy</a></code> | <code>string</code> | (Optional) URL of a proxy to use for HTTP requests when accessing the AWS API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.httpsProxy">httpsProxy</a></code> | <code>string</code> | (Optional) URL of a proxy to use for HTTPS requests when accessing the AWS API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.iamEndpoint">iamEndpoint</a></code> | <code>string</code> | (Optional) Custom endpoint for the AWS Identity and Access Management (IAM) API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.insecure">insecure</a></code> | <code>boolean</code> | Optional) Whether to explicitly allow the backend to perform "insecure" SSL requests. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.kmsKeyId">kmsKeyId</a></code> | <code>string</code> | (Optional) Amazon Resource Name (ARN) of a Key Management Service (KMS) Key to use for encrypting the state. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.maxRetries">maxRetries</a></code> | <code>number</code> | (Optional) The maximum number of times an AWS API request is retried on retryable failure. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.noProxy">noProxy</a></code> | <code>string</code> | (Optional) Comma-separated list of hosts that should not use HTTP or HTTPS proxies. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.profile">profile</a></code> | <code>string</code> | (Optional) Name of AWS profile in AWS shared credentials file (e.g. ~/.aws/credentials) or AWS shared configuration file (e.g. ~/.aws/config) to use for credentials and/or configuration. This can also be sourced from the AWS\_PROFILE environment variable. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.region">region</a></code> | <code>string</code> | AWS Region of the S3 Bucket and DynamoDB Table (if used). |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.retryMode">retryMode</a></code> | <code>string</code> | (Optional) Specifies how retries are attempted. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.roleArn">roleArn</a></code> | <code>string</code> | (Optional) Amazon Resource Name (ARN) of the IAM Role to assume. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.secretKey">secretKey</a></code> | <code>string</code> | (Optional) AWS secret access key. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.sessionName">sessionName</a></code> | <code>string</code> | (Optional) Session name to use when assuming the role. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.sharedConfigFiles">sharedConfigFiles</a></code> | <code>string\[]</code> | (Optional) List of paths to AWS shared configuration files. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.sharedCredentialsFile">sharedCredentialsFile</a></code> | <code>string</code> | (Optional) Path to the AWS shared credentials file. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.sharedCredentialsFiles">sharedCredentialsFiles</a></code> | <code>string\[]</code> | (Optional) List of paths to AWS shared credentials files. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.skipCredentialsValidation">skipCredentialsValidation</a></code> | <code>boolean</code> | (Optional) Skip credentials validation via the STS API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.skipMetadataApiCheck">skipMetadataApiCheck</a></code> | <code>boolean</code> | (Optional) Skip usage of EC2 Metadata API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.skipRegionValidation">skipRegionValidation</a></code> | <code>boolean</code> | (Optional) Skip validation of provided region name. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.skipRequestingAccountId">skipRequestingAccountId</a></code> | <code>boolean</code> | (Optional) Whether to skip requesting the account ID. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.skipS3Checksum">skipS3Checksum</a></code> | <code>boolean</code> | (Optional) Do not include checksum when uploading S3 Objects. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.sseCustomerKey">sseCustomerKey</a></code> | <code>string</code> | (Optional) The key to use for encrypting state with Server-Side Encryption with Customer-Provided Keys (SSE-C). |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.stsEndpoint">stsEndpoint</a></code> | <code>string</code> | (Optional) Custom endpoint for the AWS Security Token Service (STS) API. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.stsRegion">stsRegion</a></code> | <code>string</code> | (Optional) AWS region for STS. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.token">token</a></code> | <code>string</code> | (Optional) Multi-Factor Authentication (MFA) token. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.useLegacyWorkflow">useLegacyWorkflow</a></code> | <code>boolean</code> | (Optional) Use the legacy authentication workflow, preferring environment variables over backend configuration. |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.usePathStyle">usePathStyle</a></code> | <code>boolean</code> | (Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >). |
+| <code><a href="#cdktn.DataTerraformRemoteStateS3Config.property.workspaceKeyPrefix">workspaceKeyPrefix</a></code> | <code>string</code> | (Optional) Prefix applied to the state path inside the bucket. |
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateS3Config.property.defaults"></a>
+
+```typescript
+public readonly defaults: {[ key: string ]: any};
+```
+
+- *Type:* \{\[ key: string ]: any}
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateS3Config.property.workspace"></a>
+
+```typescript
+public readonly workspace: string;
+```
+
+- *Type:* string
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.DataTerraformRemoteStateS3Config.property.bucket"></a>
+
+```typescript
+public readonly bucket: string;
+```
+
+- *Type:* string
+
+Name of the S3 Bucket.
+
+***
+
+### `key`<sup>Required</sup> <a name="key" id="cdktn.DataTerraformRemoteStateS3Config.property.key"></a>
+
+```typescript
+public readonly key: string;
+```
+
+- *Type:* string
+
+Path to the state file inside the S3 Bucket.
+
+When using a non-default workspace, the state path will be /workspace\_key\_prefix/workspace\_name/key
+
+***
+
+### `accessKey`<sup>Optional</sup> <a name="accessKey" id="cdktn.DataTerraformRemoteStateS3Config.property.accessKey"></a>
+
+```typescript
+public readonly accessKey: string;
+```
+
+- *Type:* string
+
+(Optional) AWS access key.
+
+If configured, must also configure secret\_key.
+This can also be sourced from
+the AWS\_ACCESS\_KEY\_ID environment variable,
+AWS shared credentials file (e.g. ~/.aws/credentials),
+or AWS shared configuration file (e.g. ~/.aws/config).
+
+***
+
+### `acl`<sup>Optional</sup> <a name="acl" id="cdktn.DataTerraformRemoteStateS3Config.property.acl"></a>
+
+```typescript
+public readonly acl: string;
+```
+
+- *Type:* string
+
+(Optional) Canned ACL to be applied to the state file.
+
+***
+
+### `allowedAccountIds`<sup>Optional</sup> <a name="allowedAccountIds" id="cdktn.DataTerraformRemoteStateS3Config.property.allowedAccountIds"></a>
+
+```typescript
+public readonly allowedAccountIds: string[];
+```
+
+- *Type:* string\[]
+
+(Optional) List of allowed AWS account IDs to prevent potential destruction of a live environment.
+
+Conflicts with forbidden\_account\_ids.
+
+***
+
+### `assumeRole`<sup>Optional</sup> <a name="assumeRole" id="cdktn.DataTerraformRemoteStateS3Config.property.assumeRole"></a>
+
+```typescript
+public readonly assumeRole: S3BackendAssumeRoleConfig;
+```
+
+- *Type:* <a href="#cdktn.S3BackendAssumeRoleConfig">S3BackendAssumeRoleConfig</a>
+
+Assuming an IAM Role can be configured in two ways.
+
+The preferred way is to use the argument assume\_role, the other, which is deprecated, is with arguments at the top level.
+
+***
+
+### ~~`assumeRolePolicy`~~<sup>Optional</sup> <a name="assumeRolePolicy" id="cdktn.DataTerraformRemoteStateS3Config.property.assumeRolePolicy"></a>
+
+- *Deprecated:* Use assumeRole.policy instead.
+
+```typescript
+public readonly assumeRolePolicy: string;
+```
+
+- *Type:* string
+
+(Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### ~~`assumeRolePolicyArns`~~<sup>Optional</sup> <a name="assumeRolePolicyArns" id="cdktn.DataTerraformRemoteStateS3Config.property.assumeRolePolicyArns"></a>
+
+- *Deprecated:* Use assumeRole.policyArns instead.
+
+```typescript
+public readonly assumeRolePolicyArns: string[];
+```
+
+- *Type:* string\[]
+
+(Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### ~~`assumeRoleTags`~~<sup>Optional</sup> <a name="assumeRoleTags" id="cdktn.DataTerraformRemoteStateS3Config.property.assumeRoleTags"></a>
+
+- *Deprecated:* Use assumeRole.tags instead.
+
+```typescript
+public readonly assumeRoleTags: {[ key: string ]: string};
+```
+
+- *Type:* \{\[ key: string ]: string}
+
+(Optional) Map of assume role session tags.
+
+***
+
+### ~~`assumeRoleTransitiveTagKeys`~~<sup>Optional</sup> <a name="assumeRoleTransitiveTagKeys" id="cdktn.DataTerraformRemoteStateS3Config.property.assumeRoleTransitiveTagKeys"></a>
+
+- *Deprecated:* Use assumeRole.transitiveTagKeys instead.
+
+```typescript
+public readonly assumeRoleTransitiveTagKeys: string[];
+```
+
+- *Type:* string\[]
+
+(Optional) Set of assume role session tag keys to pass to any subsequent sessions.
+
+***
+
+### `assumeRoleWithWebIdentity`<sup>Optional</sup> <a name="assumeRoleWithWebIdentity" id="cdktn.DataTerraformRemoteStateS3Config.property.assumeRoleWithWebIdentity"></a>
+
+```typescript
+public readonly assumeRoleWithWebIdentity: S3BackendAssumeRoleWithWebIdentityConfig;
+```
+
+- *Type:* <a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig">S3BackendAssumeRoleWithWebIdentityConfig</a>
+
+Assume Role With Web Identity Configuration.
+
+***
+
+### `customCaBundle`<sup>Optional</sup> <a name="customCaBundle" id="cdktn.DataTerraformRemoteStateS3Config.property.customCaBundle"></a>
+
+```typescript
+public readonly customCaBundle: string;
+```
+
+- *Type:* string
+
+(Optional) File containing custom root and intermediate certificates.
+
+Can also be set using the AWS\_CA\_BUNDLE environment variable.
+Setting ca\_bundle in the shared config file is not supported.
+
+***
+
+### ~~`dynamodbEndpoint`~~<sup>Optional</sup> <a name="dynamodbEndpoint" id="cdktn.DataTerraformRemoteStateS3Config.property.dynamodbEndpoint"></a>
+
+- *Deprecated:* Use endpoints.dynamodb instead
+
+```typescript
+public readonly dynamodbEndpoint: string;
+```
+
+- *Type:* string
+
+(Optional) Custom endpoint for the AWS DynamoDB API.
+
+This can also be sourced from the AWS\_DYNAMODB\_ENDPOINT environment variable.
+
+***
+
+### `dynamodbTable`<sup>Optional</sup> <a name="dynamodbTable" id="cdktn.DataTerraformRemoteStateS3Config.property.dynamodbTable"></a>
+
+```typescript
+public readonly dynamodbTable: string;
+```
+
+- *Type:* string
+
+(Optional) Name of DynamoDB Table to use for state locking and consistency.
+
+The table must have a partition key named LockID with type of String.
+If not configured, state locking will be disabled.
+
+***
+
+### `ec2MetadataServiceEndpoint`<sup>Optional</sup> <a name="ec2MetadataServiceEndpoint" id="cdktn.DataTerraformRemoteStateS3Config.property.ec2MetadataServiceEndpoint"></a>
+
+```typescript
+public readonly ec2MetadataServiceEndpoint: string;
+```
+
+- *Type:* string
+
+Optional) Custom endpoint URL for the EC2 Instance Metadata Service (IMDS) API.
+
+Can also be set with the AWS\_EC2\_METADATA\_SERVICE\_ENDPOINT environment variable.
+
+***
+
+### `ec2MetadataServiceEndpointMode`<sup>Optional</sup> <a name="ec2MetadataServiceEndpointMode" id="cdktn.DataTerraformRemoteStateS3Config.property.ec2MetadataServiceEndpointMode"></a>
+
+```typescript
+public readonly ec2MetadataServiceEndpointMode: string;
+```
+
+- *Type:* string
+
+(Optional) Mode to use in communicating with the metadata service.
+
+Valid values are IPv4 and IPv6.
+Can also be set with the AWS\_EC2\_METADATA\_SERVICE\_ENDPOINT\_MODE environment variable.
+
+***
+
+### `encrypt`<sup>Optional</sup> <a name="encrypt" id="cdktn.DataTerraformRemoteStateS3Config.property.encrypt"></a>
+
+```typescript
+public readonly encrypt: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Enable server side encryption of the state file.
+
+***
+
+### ~~`endpoint`~~<sup>Optional</sup> <a name="endpoint" id="cdktn.DataTerraformRemoteStateS3Config.property.endpoint"></a>
+
+- *Deprecated:* Use endpoints.s3 instead
+
+```typescript
+public readonly endpoint: string;
+```
+
+- *Type:* string
+
+(Optional) Custom endpoint for the AWS S3 API.
+
+This can also be sourced from the AWS\_S3\_ENDPOINT environment variable.
+
+***
+
+### `endpoints`<sup>Optional</sup> <a name="endpoints" id="cdktn.DataTerraformRemoteStateS3Config.property.endpoints"></a>
+
+```typescript
+public readonly endpoints: S3BackendEndpointConfig;
+```
+
+- *Type:* <a href="#cdktn.S3BackendEndpointConfig">S3BackendEndpointConfig</a>
+
+(Optional) The endpoint configuration block.
+
+***
+
+### ~~`externalId`~~<sup>Optional</sup> <a name="externalId" id="cdktn.DataTerraformRemoteStateS3Config.property.externalId"></a>
+
+- *Deprecated:* Use assume\_role.external\_id instead.
+
+```typescript
+public readonly externalId: string;
+```
+
+- *Type:* string
+
+(Optional) External identifier to use when assuming the role.
+
+***
+
+### `forbiddenAccountIds`<sup>Optional</sup> <a name="forbiddenAccountIds" id="cdktn.DataTerraformRemoteStateS3Config.property.forbiddenAccountIds"></a>
+
+```typescript
+public readonly forbiddenAccountIds: string[];
+```
+
+- *Type:* string\[]
+
+(Optional) List of forbidden AWS account IDs to prevent potential destruction of a live environment.
+
+Conflicts with allowed\_account\_ids.
+
+***
+
+### ~~`forcePathStyle`~~<sup>Optional</sup> <a name="forcePathStyle" id="cdktn.DataTerraformRemoteStateS3Config.property.forcePathStyle"></a>
+
+- *Deprecated:* Use usePathStyle instead
+
+```typescript
+public readonly forcePathStyle: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >).
+
+***
+
+### `httpProxy`<sup>Optional</sup> <a name="httpProxy" id="cdktn.DataTerraformRemoteStateS3Config.property.httpProxy"></a>
+
+```typescript
+public readonly httpProxy: string;
+```
+
+- *Type:* string
+
+(Optional) URL of a proxy to use for HTTP requests when accessing the AWS API.
+
+Can also be set using the HTTP\_PROXY or http\_proxy environment variables.
+
+***
+
+### `httpsProxy`<sup>Optional</sup> <a name="httpsProxy" id="cdktn.DataTerraformRemoteStateS3Config.property.httpsProxy"></a>
+
+```typescript
+public readonly httpsProxy: string;
+```
+
+- *Type:* string
+
+(Optional) URL of a proxy to use for HTTPS requests when accessing the AWS API.
+
+Can also be set using the HTTPS\_PROXY or https\_proxy environment variables.
+
+***
+
+### ~~`iamEndpoint`~~<sup>Optional</sup> <a name="iamEndpoint" id="cdktn.DataTerraformRemoteStateS3Config.property.iamEndpoint"></a>
+
+- *Deprecated:* Use endpoints.iam instead
+
+```typescript
+public readonly iamEndpoint: string;
+```
+
+- *Type:* string
+
+(Optional) Custom endpoint for the AWS Identity and Access Management (IAM) API.
+
+This can also be sourced from the AWS\_IAM\_ENDPOINT environment variable.
+
+***
+
+### `insecure`<sup>Optional</sup> <a name="insecure" id="cdktn.DataTerraformRemoteStateS3Config.property.insecure"></a>
+
+```typescript
+public readonly insecure: boolean;
+```
+
+- *Type:* boolean
+
+Optional) Whether to explicitly allow the backend to perform "insecure" SSL requests.
+
+If omitted, the default value is false.
+
+***
+
+### `kmsKeyId`<sup>Optional</sup> <a name="kmsKeyId" id="cdktn.DataTerraformRemoteStateS3Config.property.kmsKeyId"></a>
+
+```typescript
+public readonly kmsKeyId: string;
+```
+
+- *Type:* string
+
+(Optional) Amazon Resource Name (ARN) of a Key Management Service (KMS) Key to use for encrypting the state.
+
+Note that if this value is specified,
+Terraform will need kms:Encrypt, kms:Decrypt and kms:GenerateDataKey permissions on this KMS key.
+
+***
+
+### `maxRetries`<sup>Optional</sup> <a name="maxRetries" id="cdktn.DataTerraformRemoteStateS3Config.property.maxRetries"></a>
+
+```typescript
+public readonly maxRetries: number;
+```
+
+- *Type:* number
+
+(Optional) The maximum number of times an AWS API request is retried on retryable failure.
+
+Defaults to 5.
+
+***
+
+### `noProxy`<sup>Optional</sup> <a name="noProxy" id="cdktn.DataTerraformRemoteStateS3Config.property.noProxy"></a>
+
+```typescript
+public readonly noProxy: string;
+```
+
+- *Type:* string
+
+(Optional) Comma-separated list of hosts that should not use HTTP or HTTPS proxies.
+
+Each value can be one of:
+
+- A domain name
+- An IP address
+- A CIDR address
+- An asterisk (\*), to indicate that no proxying should be performed Domain name and IP address values can also include a port number.
+  Can also be set using the NO\_PROXY or no\_proxy environment variables.
+
+***
+
+### `profile`<sup>Optional</sup> <a name="profile" id="cdktn.DataTerraformRemoteStateS3Config.property.profile"></a>
+
+```typescript
+public readonly profile: string;
+```
+
+- *Type:* string
+
+(Optional) Name of AWS profile in AWS shared credentials file (e.g. ~/.aws/credentials) or AWS shared configuration file (e.g. ~/.aws/config) to use for credentials and/or configuration. This can also be sourced from the AWS\_PROFILE environment variable.
+
+***
+
+### `region`<sup>Optional</sup> <a name="region" id="cdktn.DataTerraformRemoteStateS3Config.property.region"></a>
+
+```typescript
+public readonly region: string;
+```
+
+- *Type:* string
+
+AWS Region of the S3 Bucket and DynamoDB Table (if used).
+
+This can also
+be sourced from the AWS\_DEFAULT\_REGION and AWS\_REGION environment
+variables.
+
+***
+
+### `retryMode`<sup>Optional</sup> <a name="retryMode" id="cdktn.DataTerraformRemoteStateS3Config.property.retryMode"></a>
+
+```typescript
+public readonly retryMode: string;
+```
+
+- *Type:* string
+
+(Optional) Specifies how retries are attempted.
+
+Valid values are standard and adaptive.
+Can also be configured using the AWS\_RETRY\_MODE environment variable or the shared config file parameter retry\_mode.
+
+***
+
+### ~~`roleArn`~~<sup>Optional</sup> <a name="roleArn" id="cdktn.DataTerraformRemoteStateS3Config.property.roleArn"></a>
+
+- *Deprecated:* Use assumeRole.roleArn instead.
+
+```typescript
+public readonly roleArn: string;
+```
+
+- *Type:* string
+
+(Optional) Amazon Resource Name (ARN) of the IAM Role to assume.
+
+***
+
+### `secretKey`<sup>Optional</sup> <a name="secretKey" id="cdktn.DataTerraformRemoteStateS3Config.property.secretKey"></a>
+
+```typescript
+public readonly secretKey: string;
+```
+
+- *Type:* string
+
+(Optional) AWS secret access key.
+
+If configured, must also configure access\_key.
+This can also be sourced from
+the AWS\_SECRET\_ACCESS\_KEY environment variable,
+AWS shared credentials file (e.g. ~/.aws/credentials),
+or AWS shared configuration file (e.g. ~/.aws/config)
+
+***
+
+### ~~`sessionName`~~<sup>Optional</sup> <a name="sessionName" id="cdktn.DataTerraformRemoteStateS3Config.property.sessionName"></a>
+
+- *Deprecated:* Use assumeRole.sessionName instead.
+
+```typescript
+public readonly sessionName: string;
+```
+
+- *Type:* string
+
+(Optional) Session name to use when assuming the role.
+
+***
+
+### `sharedConfigFiles`<sup>Optional</sup> <a name="sharedConfigFiles" id="cdktn.DataTerraformRemoteStateS3Config.property.sharedConfigFiles"></a>
+
+```typescript
+public readonly sharedConfigFiles: string[];
+```
+
+- *Type:* string\[]
+
+(Optional) List of paths to AWS shared configuration files.
+
+Defaults to ~/.aws/config.
+
+***
+
+### `sharedCredentialsFile`<sup>Optional</sup> <a name="sharedCredentialsFile" id="cdktn.DataTerraformRemoteStateS3Config.property.sharedCredentialsFile"></a>
+
+```typescript
+public readonly sharedCredentialsFile: string;
+```
+
+- *Type:* string
+
+(Optional) Path to the AWS shared credentials file.
+
+Defaults to ~/.aws/credentials.
+
+***
+
+### `sharedCredentialsFiles`<sup>Optional</sup> <a name="sharedCredentialsFiles" id="cdktn.DataTerraformRemoteStateS3Config.property.sharedCredentialsFiles"></a>
+
+```typescript
+public readonly sharedCredentialsFiles: string[];
+```
+
+- *Type:* string\[]
+
+(Optional) List of paths to AWS shared credentials files.
+
+Defaults to ~/.aws/credentials.
+
+***
+
+### `skipCredentialsValidation`<sup>Optional</sup> <a name="skipCredentialsValidation" id="cdktn.DataTerraformRemoteStateS3Config.property.skipCredentialsValidation"></a>
+
+```typescript
+public readonly skipCredentialsValidation: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Skip credentials validation via the STS API.
+
+***
+
+### `skipMetadataApiCheck`<sup>Optional</sup> <a name="skipMetadataApiCheck" id="cdktn.DataTerraformRemoteStateS3Config.property.skipMetadataApiCheck"></a>
+
+```typescript
+public readonly skipMetadataApiCheck: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Skip usage of EC2 Metadata API.
+
+***
+
+### `skipRegionValidation`<sup>Optional</sup> <a name="skipRegionValidation" id="cdktn.DataTerraformRemoteStateS3Config.property.skipRegionValidation"></a>
+
+```typescript
+public readonly skipRegionValidation: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Skip validation of provided region name.
+
+***
+
+### `skipRequestingAccountId`<sup>Optional</sup> <a name="skipRequestingAccountId" id="cdktn.DataTerraformRemoteStateS3Config.property.skipRequestingAccountId"></a>
+
+```typescript
+public readonly skipRequestingAccountId: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Whether to skip requesting the account ID.
+
+Useful for AWS API implementations that do not have the IAM, STS API, or metadata API.
+
+***
+
+### `skipS3Checksum`<sup>Optional</sup> <a name="skipS3Checksum" id="cdktn.DataTerraformRemoteStateS3Config.property.skipS3Checksum"></a>
+
+```typescript
+public readonly skipS3Checksum: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Do not include checksum when uploading S3 Objects.
+
+Useful for some S3-Compatible APIs.
+
+***
+
+### `sseCustomerKey`<sup>Optional</sup> <a name="sseCustomerKey" id="cdktn.DataTerraformRemoteStateS3Config.property.sseCustomerKey"></a>
+
+```typescript
+public readonly sseCustomerKey: string;
+```
+
+- *Type:* string
+
+(Optional) The key to use for encrypting state with Server-Side Encryption with Customer-Provided Keys (SSE-C).
+
+This is the base64-encoded value of the key, which must decode to 256 bits.
+This can also be sourced from the AWS\_SSE\_CUSTOMER\_KEY environment variable,
+which is recommended due to the sensitivity of the value.
+Setting it inside a terraform file will cause it to be persisted to disk in terraform.tfstate.
+
+***
+
+### ~~`stsEndpoint`~~<sup>Optional</sup> <a name="stsEndpoint" id="cdktn.DataTerraformRemoteStateS3Config.property.stsEndpoint"></a>
+
+- *Deprecated:* Use endpoints.sts instead
+
+```typescript
+public readonly stsEndpoint: string;
+```
+
+- *Type:* string
+
+(Optional) Custom endpoint for the AWS Security Token Service (STS) API.
+
+This can also be sourced from the AWS\_STS\_ENDPOINT environment variable.
+
+***
+
+### `stsRegion`<sup>Optional</sup> <a name="stsRegion" id="cdktn.DataTerraformRemoteStateS3Config.property.stsRegion"></a>
+
+```typescript
+public readonly stsRegion: string;
+```
+
+- *Type:* string
+
+(Optional) AWS region for STS.
+
+If unset, AWS will use the same region for STS as other non-STS operations.
+
+***
+
+### `token`<sup>Optional</sup> <a name="token" id="cdktn.DataTerraformRemoteStateS3Config.property.token"></a>
+
+```typescript
+public readonly token: string;
+```
+
+- *Type:* string
+
+(Optional) Multi-Factor Authentication (MFA) token.
+
+This can also be sourced from the AWS\_SESSION\_TOKEN environment variable.
+
+***
+
+### `useLegacyWorkflow`<sup>Optional</sup> <a name="useLegacyWorkflow" id="cdktn.DataTerraformRemoteStateS3Config.property.useLegacyWorkflow"></a>
+
+```typescript
+public readonly useLegacyWorkflow: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Use the legacy authentication workflow, preferring environment variables over backend configuration.
+
+Defaults to true.
+This behavior does not align with the authentication flow of the AWS CLI or SDK's, and will be removed in the future.
+
+***
+
+### `usePathStyle`<sup>Optional</sup> <a name="usePathStyle" id="cdktn.DataTerraformRemoteStateS3Config.property.usePathStyle"></a>
+
+```typescript
+public readonly usePathStyle: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Enable path-style S3 URLs (https://&lt; HOST >/&lt; BUCKET > instead of https://&lt; BUCKET >.&lt; HOST >).
+
+***
+
+### `workspaceKeyPrefix`<sup>Optional</sup> <a name="workspaceKeyPrefix" id="cdktn.DataTerraformRemoteStateS3Config.property.workspaceKeyPrefix"></a>
+
+```typescript
+public readonly workspaceKeyPrefix: string;
+```
+
+- *Type:* string
+
+(Optional) Prefix applied to the state path inside the bucket.
+
+This is only relevant when using a non-default workspace. Defaults to env:
+
+***
+

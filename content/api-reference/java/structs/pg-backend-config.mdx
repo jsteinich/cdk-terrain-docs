@@ -1,0 +1,108 @@
+---
+title: "Java: PgBackendConfig"
+sidebarTitle: PgBackendConfig
+description: CDKTN Core API Reference for PgBackendConfig in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.PgBackendConfig.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.PgBackendConfig;
+
+PgBackendConfig.builder()
+    .connStr(java.lang.String)
+//  .schemaName(java.lang.String)
+//  .skipIndexCreation(java.lang.Boolean)
+//  .skipSchemaCreation(java.lang.Boolean)
+//  .skipTableCreation(java.lang.Boolean)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.PgBackendConfig.property.connStr">connStr</a></code> | <code>java.lang.String</code> | Postgres connection string; |
+| <code><a href="#cdktn.PgBackendConfig.property.schemaName">schemaName</a></code> | <code>java.lang.String</code> | Name of the automatically-managed Postgres schema, default to terraform\_remote\_state. |
+| <code><a href="#cdktn.PgBackendConfig.property.skipIndexCreation">skipIndexCreation</a></code> | <code>java.lang.Boolean</code> | If set to true, the Postgres index must already exist. |
+| <code><a href="#cdktn.PgBackendConfig.property.skipSchemaCreation">skipSchemaCreation</a></code> | <code>java.lang.Boolean</code> | If set to true, the Postgres schema must already exist. |
+| <code><a href="#cdktn.PgBackendConfig.property.skipTableCreation">skipTableCreation</a></code> | <code>java.lang.Boolean</code> | If set to true, the Postgres table must already exist. |
+
+***
+
+### `connStr`<sup>Required</sup> <a name="connStr" id="cdktn.PgBackendConfig.property.connStr"></a>
+
+```java
+public java.lang.String getConnStr();
+```
+
+- *Type:* java.lang.String
+
+Postgres connection string;
+
+a postgres:// URL.
+The PG\_CONN\_STR and standard libpq environment variables can also be used to indicate how to connect to the PostgreSQL database.
+
+***
+
+### `schemaName`<sup>Optional</sup> <a name="schemaName" id="cdktn.PgBackendConfig.property.schemaName"></a>
+
+```java
+public java.lang.String getSchemaName();
+```
+
+- *Type:* java.lang.String
+
+Name of the automatically-managed Postgres schema, default to terraform\_remote\_state.
+
+Can also be set using the PG\_SCHEMA\_NAME environment variable.
+
+***
+
+### `skipIndexCreation`<sup>Optional</sup> <a name="skipIndexCreation" id="cdktn.PgBackendConfig.property.skipIndexCreation"></a>
+
+```java
+public java.lang.Boolean getSkipIndexCreation();
+```
+
+- *Type:* java.lang.Boolean
+
+If set to true, the Postgres index must already exist.
+
+Can also be set using the PG\_SKIP\_INDEX\_CREATION environment variable.
+Terraform won't try to create the index, this is useful when it has already been created by a database administrator.
+
+***
+
+### `skipSchemaCreation`<sup>Optional</sup> <a name="skipSchemaCreation" id="cdktn.PgBackendConfig.property.skipSchemaCreation"></a>
+
+```java
+public java.lang.Boolean getSkipSchemaCreation();
+```
+
+- *Type:* java.lang.Boolean
+
+If set to true, the Postgres schema must already exist.
+
+Can also be set using the PG\_SKIP\_SCHEMA\_CREATION environment variable.
+Terraform won't try to create the schema, this is useful when it has already been created by a database administrator.
+
+***
+
+### `skipTableCreation`<sup>Optional</sup> <a name="skipTableCreation" id="cdktn.PgBackendConfig.property.skipTableCreation"></a>
+
+```java
+public java.lang.Boolean getSkipTableCreation();
+```
+
+- *Type:* java.lang.Boolean
+
+If set to true, the Postgres table must already exist.
+
+Can also be set using the PG\_SKIP\_TABLE\_CREATION environment variable.
+Terraform won't try to create the table, this is useful when it has already been created by a database administrator.
+
+***
+

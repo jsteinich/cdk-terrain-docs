@@ -1,0 +1,183 @@
+---
+title: "Typescript: WinrmProvisionerConnection"
+sidebarTitle: WinrmProvisionerConnection
+description: CDKTN Core API Reference for WinrmProvisionerConnection in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Most provisioners require access to the remote resource via SSH or WinRM and expect a nested connection block with details about how to connect.
+
+See [connection](https://developer.hashicorp.com/terraform/language/resources/provisioners/connection)
+
+## Initializer <a name="Initializer" id="cdktn.WinrmProvisionerConnection.Initializer"></a>
+
+```typescript
+import { WinrmProvisionerConnection } from 'cdktn'
+
+const winrmProvisionerConnection: WinrmProvisionerConnection = { ... }
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.WinrmProvisionerConnection.property.host">host</a></code> | <code>string</code> | The address of the resource to connect to. |
+| <code><a href="#cdktn.WinrmProvisionerConnection.property.type">type</a></code> | <code>string</code> | The connection type. |
+| <code><a href="#cdktn.WinrmProvisionerConnection.property.cacert">cacert</a></code> | <code>string</code> | The CA certificate to validate against. |
+| <code><a href="#cdktn.WinrmProvisionerConnection.property.https">https</a></code> | <code>boolean</code> | Set to true to connect using HTTPS instead of HTTP. |
+| <code><a href="#cdktn.WinrmProvisionerConnection.property.insecure">insecure</a></code> | <code>boolean</code> | Set to true to skip validating the HTTPS certificate chain. |
+| <code><a href="#cdktn.WinrmProvisionerConnection.property.password">password</a></code> | <code>string</code> | The password to use for the connection. |
+| <code><a href="#cdktn.WinrmProvisionerConnection.property.port">port</a></code> | <code>number</code> | The port to connect to. |
+| <code><a href="#cdktn.WinrmProvisionerConnection.property.scriptPath">scriptPath</a></code> | <code>string</code> | The path used to copy scripts meant for remote execution. |
+| <code><a href="#cdktn.WinrmProvisionerConnection.property.timeout">timeout</a></code> | <code>string</code> | The timeout to wait for the connection to become available. |
+| <code><a href="#cdktn.WinrmProvisionerConnection.property.useNtlm">useNtlm</a></code> | <code>boolean</code> | Set to true to use NTLM authentication rather than default (basic authentication), removing the requirement for basic authentication to be enabled within the target guest. |
+| <code><a href="#cdktn.WinrmProvisionerConnection.property.user">user</a></code> | <code>string</code> | The user to use for the connection. |
+
+***
+
+### `host`<sup>Required</sup> <a name="host" id="cdktn.WinrmProvisionerConnection.property.host"></a>
+
+```typescript
+public readonly host: string;
+```
+
+- *Type:* string
+
+The address of the resource to connect to.
+
+***
+
+### `type`<sup>Required</sup> <a name="type" id="cdktn.WinrmProvisionerConnection.property.type"></a>
+
+```typescript
+public readonly type: string;
+```
+
+- *Type:* string
+
+The connection type.
+
+Valid values are "ssh" and "winrm".
+Provisioners typically assume that the remote system runs Microsoft Windows when using WinRM.
+Behaviors based on the SSH target\_platform will force Windows-specific behavior for WinRM, unless otherwise specified.
+
+***
+
+### `cacert`<sup>Optional</sup> <a name="cacert" id="cdktn.WinrmProvisionerConnection.property.cacert"></a>
+
+```typescript
+public readonly cacert: string;
+```
+
+- *Type:* string
+
+The CA certificate to validate against.
+
+***
+
+### `https`<sup>Optional</sup> <a name="https" id="cdktn.WinrmProvisionerConnection.property.https"></a>
+
+```typescript
+public readonly https: boolean;
+```
+
+- *Type:* boolean
+
+Set to true to connect using HTTPS instead of HTTP.
+
+***
+
+### `insecure`<sup>Optional</sup> <a name="insecure" id="cdktn.WinrmProvisionerConnection.property.insecure"></a>
+
+```typescript
+public readonly insecure: boolean;
+```
+
+- *Type:* boolean
+
+Set to true to skip validating the HTTPS certificate chain.
+
+***
+
+### `password`<sup>Optional</sup> <a name="password" id="cdktn.WinrmProvisionerConnection.property.password"></a>
+
+```typescript
+public readonly password: string;
+```
+
+- *Type:* string
+
+The password to use for the connection.
+
+***
+
+### `port`<sup>Optional</sup> <a name="port" id="cdktn.WinrmProvisionerConnection.property.port"></a>
+
+```typescript
+public readonly port: number;
+```
+
+- *Type:* number
+- *Default:* 22
+
+The port to connect to.
+
+***
+
+### `scriptPath`<sup>Optional</sup> <a name="scriptPath" id="cdktn.WinrmProvisionerConnection.property.scriptPath"></a>
+
+```typescript
+public readonly scriptPath: string;
+```
+
+- *Type:* string
+
+The path used to copy scripts meant for remote execution.
+
+Refer to [How Provisioners Execute Remote Scripts below for more details](https://developer.hashicorp.com/terraform/language/resources/provisioners/connection#how-provisioners-execute-remote-scripts)
+
+***
+
+### `timeout`<sup>Optional</sup> <a name="timeout" id="cdktn.WinrmProvisionerConnection.property.timeout"></a>
+
+```typescript
+public readonly timeout: string;
+```
+
+- *Type:* string
+- *Default:* 5m
+
+The timeout to wait for the connection to become available.
+
+Should be provided as a string (e.g., "30s" or "5m".)
+
+***
+
+### `useNtlm`<sup>Optional</sup> <a name="useNtlm" id="cdktn.WinrmProvisionerConnection.property.useNtlm"></a>
+
+```typescript
+public readonly useNtlm: boolean;
+```
+
+- *Type:* boolean
+
+Set to true to use NTLM authentication rather than default (basic authentication), removing the requirement for basic authentication to be enabled within the target guest.
+
+Refer to Authentication for Remote Connections in the Windows App Development documentation for more details.
+
+***
+
+### `user`<sup>Optional</sup> <a name="user" id="cdktn.WinrmProvisionerConnection.property.user"></a>
+
+```typescript
+public readonly user: string;
+```
+
+- *Type:* string
+- *Default:* root
+
+The user to use for the connection.
+
+***
+

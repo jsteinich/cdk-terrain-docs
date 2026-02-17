@@ -1,0 +1,143 @@
+---
+title: "Python: BooleanListMap"
+sidebarTitle: BooleanListMap
+description: CDKTN Core API Reference for BooleanListMap in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.BooleanListMap.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.BooleanListMap(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.BooleanListMap.Initializer.parameter.terraformResource">terraform\_resource</a></code> | <code><a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a></code> | *No description.* |
+| <code><a href="#cdktn.BooleanListMap.Initializer.parameter.terraformAttribute">terraform\_attribute</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="cdktn.BooleanListMap.Initializer.parameter.terraformResource"></a>
+
+- *Type:* <a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a>
+
+***
+
+### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="cdktn.BooleanListMap.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.BooleanListMap.computeFqn">compute\_fqn</a></code> | *No description.* |
+| <code><a href="#cdktn.BooleanListMap.interpolationForAttribute">interpolation\_for\_attribute</a></code> | *No description.* |
+| <code><a href="#cdktn.BooleanListMap.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#cdktn.BooleanListMap.toString">to\_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#cdktn.BooleanListMap.get">get</a></code> | *No description.* |
+
+***
+
+### `compute_fqn` <a name="compute_fqn" id="cdktn.BooleanListMap.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="cdktn.BooleanListMap.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+#### `property`<sup>Required</sup> <a name="property" id="cdktn.BooleanListMap.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+***
+
+### `resolve` <a name="resolve" id="cdktn.BooleanListMap.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+#### `_context`<sup>Required</sup> <a name="_context" id="cdktn.BooleanListMap.resolve.parameter._context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.BooleanListMap.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+### `get` <a name="get" id="cdktn.BooleanListMap.get"></a>
+
+```python
+def get(
+  key: str
+) -> IResolvable
+```
+
+#### `key`<sup>Required</sup> <a name="key" id="cdktn.BooleanListMap.get.parameter.key"></a>
+
+- *Type:* str
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.BooleanListMap.property.creationStack">creation\_stack</a></code> | <code>typing.List\[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#cdktn.BooleanListMap.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="cdktn.BooleanListMap.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.BooleanListMap.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+

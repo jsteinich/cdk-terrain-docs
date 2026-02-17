@@ -1,0 +1,327 @@
+---
+title: "Java: PgBackend"
+sidebarTitle: PgBackend
+description: CDKTN Core API Reference for PgBackend in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.PgBackend.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.PgBackend;
+
+PgBackend.Builder.create(Construct scope)
+    .connStr(java.lang.String)
+//  .schemaName(java.lang.String)
+//  .skipIndexCreation(java.lang.Boolean)
+//  .skipSchemaCreation(java.lang.Boolean)
+//  .skipTableCreation(java.lang.Boolean)
+    .build();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.connStr">connStr</a></code> | <code>java.lang.String</code> | Postgres connection string; |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.schemaName">schemaName</a></code> | <code>java.lang.String</code> | Name of the automatically-managed Postgres schema, default to terraform\_remote\_state. |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.skipIndexCreation">skipIndexCreation</a></code> | <code>java.lang.Boolean</code> | If set to true, the Postgres index must already exist. |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.skipSchemaCreation">skipSchemaCreation</a></code> | <code>java.lang.Boolean</code> | If set to true, the Postgres schema must already exist. |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.skipTableCreation">skipTableCreation</a></code> | <code>java.lang.Boolean</code> | If set to true, the Postgres table must already exist. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.PgBackend.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+### `connStr`<sup>Required</sup> <a name="connStr" id="cdktn.PgBackend.Initializer.parameter.connStr"></a>
+
+- *Type:* java.lang.String
+
+Postgres connection string;
+
+a postgres:// URL.
+The PG\_CONN\_STR and standard libpq environment variables can also be used to indicate how to connect to the PostgreSQL database.
+
+***
+
+### `schemaName`<sup>Optional</sup> <a name="schemaName" id="cdktn.PgBackend.Initializer.parameter.schemaName"></a>
+
+- *Type:* java.lang.String
+
+Name of the automatically-managed Postgres schema, default to terraform\_remote\_state.
+
+Can also be set using the PG\_SCHEMA\_NAME environment variable.
+
+***
+
+### `skipIndexCreation`<sup>Optional</sup> <a name="skipIndexCreation" id="cdktn.PgBackend.Initializer.parameter.skipIndexCreation"></a>
+
+- *Type:* java.lang.Boolean
+
+If set to true, the Postgres index must already exist.
+
+Can also be set using the PG\_SKIP\_INDEX\_CREATION environment variable.
+Terraform won't try to create the index, this is useful when it has already been created by a database administrator.
+
+***
+
+### `skipSchemaCreation`<sup>Optional</sup> <a name="skipSchemaCreation" id="cdktn.PgBackend.Initializer.parameter.skipSchemaCreation"></a>
+
+- *Type:* java.lang.Boolean
+
+If set to true, the Postgres schema must already exist.
+
+Can also be set using the PG\_SKIP\_SCHEMA\_CREATION environment variable.
+Terraform won't try to create the schema, this is useful when it has already been created by a database administrator.
+
+***
+
+### `skipTableCreation`<sup>Optional</sup> <a name="skipTableCreation" id="cdktn.PgBackend.Initializer.parameter.skipTableCreation"></a>
+
+- *Type:* java.lang.Boolean
+
+If set to true, the Postgres table must already exist.
+
+Can also be set using the PG\_SKIP\_TABLE\_CREATION environment variable.
+Terraform won't try to create the table, this is useful when it has already been created by a database administrator.
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.PgBackend.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.PgBackend.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.PgBackend.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.PgBackend.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.PgBackend.getRemoteStateDataSource">getRemoteStateDataSource</a></code> | Creates a TerraformRemoteState resource that accesses this backend. |
+
+***
+
+### `toString` <a name="toString" id="cdktn.PgBackend.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `addOverride` <a name="addOverride" id="cdktn.PgBackend.addOverride"></a>
+
+```java
+public void addOverride(java.lang.String path, java.lang.Object value)
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.PgBackend.addOverride.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.PgBackend.addOverride.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `overrideLogicalId` <a name="overrideLogicalId" id="cdktn.PgBackend.overrideLogicalId"></a>
+
+```java
+public void overrideLogicalId(java.lang.String newLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.PgBackend.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* java.lang.String
+
+The new logical ID to use for this stack element.
+
+***
+
+### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktn.PgBackend.resetOverrideLogicalId"></a>
+
+```java
+public void resetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.PgBackend.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+### `toMetadata` <a name="toMetadata" id="cdktn.PgBackend.toMetadata"></a>
+
+```java
+public java.lang.Object toMetadata()
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.PgBackend.toTerraform"></a>
+
+```java
+public java.lang.Object toTerraform()
+```
+
+Adds this resource to the terraform JSON output.
+
+### `getRemoteStateDataSource` <a name="getRemoteStateDataSource" id="cdktn.PgBackend.getRemoteStateDataSource"></a>
+
+```java
+public TerraformRemoteState getRemoteStateDataSource(Construct scope, java.lang.String name, java.lang.String _fromStack)
+```
+
+Creates a TerraformRemoteState resource that accesses this backend.
+
+#### `scope`<sup>Required</sup> <a name="scope" id="cdktn.PgBackend.getRemoteStateDataSource.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+#### `name`<sup>Required</sup> <a name="name" id="cdktn.PgBackend.getRemoteStateDataSource.parameter.name"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `_fromStack`<sup>Required</sup> <a name="_fromStack" id="cdktn.PgBackend.getRemoteStateDataSource.parameter._fromStack"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.PgBackend.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.PgBackend.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.isBackend">isBackend</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.PgBackend.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.PgBackend;
+
+PgBackend.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.PgBackend.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isTerraformElement` <a name="isTerraformElement" id="cdktn.PgBackend.isTerraformElement"></a>
+
+```java
+import io.cdktn.cdktn.PgBackend;
+
+PgBackend.isTerraformElement(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.PgBackend.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `isBackend` <a name="isBackend" id="cdktn.PgBackend.isBackend"></a>
+
+```java
+import io.cdktn.cdktn.PgBackend;
+
+PgBackend.isBackend(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.PgBackend.isBackend.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.PgBackend.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.PgBackend.property.cdktfStack">cdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.PgBackend.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktn.PgBackend.property.cdktfStack"></a>
+
+```java
+public TerraformStack getCdktfStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.PgBackend.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.PgBackend.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+

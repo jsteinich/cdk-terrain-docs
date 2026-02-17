@@ -1,0 +1,271 @@
+---
+title: "CSharp: CloudBackend"
+sidebarTitle: CloudBackend
+description: CDKTN Core API Reference for CloudBackend in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+The Cloud Backend synthesizes a [cloud block](https://developer.hashicorp.com/terraform/cli/cloud/settings#the-cloud-block). The cloud block is a nested block within the top-level terraform settings block. It specifies which Terraform Cloud workspaces to use for the current working directory. The cloud block only affects Terraform CLI's behavior. When Terraform Cloud uses a configuration that contains a cloud block - for example, when a workspace is configured to use a VCS provider directly - it ignores the block and behaves according to its own workspace settings.
+
+## Initializers <a name="Initializers" id="cdktn.CloudBackend.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new CloudBackend(Construct Scope, CloudBackendConfig Props);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.CloudBackend.Initializer.parameter.scope">Scope</a></code> | <code>Constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.CloudBackend.Initializer.parameter.props">Props</a></code> | <code><a href="#cdktn.CloudBackendConfig">CloudBackendConfig</a></code> | *No description.* |
+
+***
+
+### `Scope`<sup>Required</sup> <a name="Scope" id="cdktn.CloudBackend.Initializer.parameter.scope"></a>
+
+- *Type:* Constructs.Construct
+
+***
+
+### `Props`<sup>Required</sup> <a name="Props" id="cdktn.CloudBackend.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#cdktn.CloudBackendConfig">CloudBackendConfig</a>
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.CloudBackend.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.CloudBackend.addOverride">AddOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.CloudBackend.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.CloudBackend.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.CloudBackend.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.CloudBackend.toMetadata">ToMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.CloudBackend.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.CloudBackend.getRemoteStateDataSource">GetRemoteStateDataSource</a></code> | Creates a TerraformRemoteState resource that accesses this backend. |
+
+***
+
+### `ToString` <a name="ToString" id="cdktn.CloudBackend.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Returns a string representation of this construct.
+
+### `AddOverride` <a name="AddOverride" id="cdktn.CloudBackend.addOverride"></a>
+
+```csharp
+private void AddOverride(string Path, object Value)
+```
+
+#### `Path`<sup>Required</sup> <a name="Path" id="cdktn.CloudBackend.addOverride.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+#### `Value`<sup>Required</sup> <a name="Value" id="cdktn.CloudBackend.addOverride.parameter.value"></a>
+
+- *Type:* object
+
+***
+
+### `OverrideLogicalId` <a name="OverrideLogicalId" id="cdktn.CloudBackend.overrideLogicalId"></a>
+
+```csharp
+private void OverrideLogicalId(string NewLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `NewLogicalId`<sup>Required</sup> <a name="NewLogicalId" id="cdktn.CloudBackend.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* string
+
+The new logical ID to use for this stack element.
+
+***
+
+### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="cdktn.CloudBackend.resetOverrideLogicalId"></a>
+
+```csharp
+private void ResetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `ToHclTerraform` <a name="ToHclTerraform" id="cdktn.CloudBackend.toHclTerraform"></a>
+
+```csharp
+private object ToHclTerraform()
+```
+
+### `ToMetadata` <a name="ToMetadata" id="cdktn.CloudBackend.toMetadata"></a>
+
+```csharp
+private object ToMetadata()
+```
+
+### `ToTerraform` <a name="ToTerraform" id="cdktn.CloudBackend.toTerraform"></a>
+
+```csharp
+private object ToTerraform()
+```
+
+Adds this resource to the terraform JSON output.
+
+### `GetRemoteStateDataSource` <a name="GetRemoteStateDataSource" id="cdktn.CloudBackend.getRemoteStateDataSource"></a>
+
+```csharp
+private TerraformRemoteState GetRemoteStateDataSource(Construct Scope, string Name, string FromStack)
+```
+
+Creates a TerraformRemoteState resource that accesses this backend.
+
+#### `Scope`<sup>Required</sup> <a name="Scope" id="cdktn.CloudBackend.getRemoteStateDataSource.parameter.scope"></a>
+
+- *Type:* Constructs.Construct
+
+***
+
+#### `Name`<sup>Required</sup> <a name="Name" id="cdktn.CloudBackend.getRemoteStateDataSource.parameter.name"></a>
+
+- *Type:* string
+
+***
+
+#### `FromStack`<sup>Required</sup> <a name="FromStack" id="cdktn.CloudBackend.getRemoteStateDataSource.parameter._fromStack"></a>
+
+- *Type:* string
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.CloudBackend.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.CloudBackend.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
+| <code><a href="#cdktn.CloudBackend.isBackend">IsBackend</a></code> | *No description.* |
+
+***
+
+### `IsConstruct` <a name="IsConstruct" id="cdktn.CloudBackend.isConstruct"></a>
+
+```csharp
+using Io.Cdktn;
+
+CloudBackend.IsConstruct(object X);
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `X`<sup>Required</sup> <a name="X" id="cdktn.CloudBackend.isConstruct.parameter.x"></a>
+
+- *Type:* object
+
+Any object.
+
+***
+
+### `IsTerraformElement` <a name="IsTerraformElement" id="cdktn.CloudBackend.isTerraformElement"></a>
+
+```csharp
+using Io.Cdktn;
+
+CloudBackend.IsTerraformElement(object X);
+```
+
+#### `X`<sup>Required</sup> <a name="X" id="cdktn.CloudBackend.isTerraformElement.parameter.x"></a>
+
+- *Type:* object
+
+***
+
+### `IsBackend` <a name="IsBackend" id="cdktn.CloudBackend.isBackend"></a>
+
+```csharp
+using Io.Cdktn;
+
+CloudBackend.IsBackend(object X);
+```
+
+#### `X`<sup>Required</sup> <a name="X" id="cdktn.CloudBackend.isBackend.parameter.x"></a>
+
+- *Type:* object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.CloudBackend.property.node">Node</a></code> | <code>Constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.CloudBackend.property.cdktfStack">CdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.CloudBackend.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.CloudBackend.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+
+***
+
+### `Node`<sup>Required</sup> <a name="Node" id="cdktn.CloudBackend.property.node"></a>
+
+```csharp
+public Node Node { get; }
+```
+
+- *Type:* Constructs.Node
+
+The tree node.
+
+***
+
+### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="cdktn.CloudBackend.property.cdktfStack"></a>
+
+```csharp
+public TerraformStack CdktfStack { get; }
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `Fqn`<sup>Required</sup> <a name="Fqn" id="cdktn.CloudBackend.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+***
+
+### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="cdktn.CloudBackend.property.friendlyUniqueId"></a>
+
+```csharp
+public string FriendlyUniqueId { get; }
+```
+
+- *Type:* string
+
+***
+

@@ -1,0 +1,2161 @@
+---
+title: "Typescript: FnGenerated"
+sidebarTitle: FnGenerated
+description: CDKTN Core API Reference for FnGenerated in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.FnGenerated.Initializer"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+new FnGenerated()
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.FnGenerated.abs">abs</a></code> | [abs](https://developer.hashicorp.com/terraform/language/functions/abs) returns the absolute value of the given number. In other words, if the number is zero or positive then it is returned as-is, but if it is negative then it is multiplied by -1 to make it positive before returning it. |
+| <code><a href="#cdktn.FnGenerated.abspath">abspath</a></code> | [abspath](https://developer.hashicorp.com/terraform/language/functions/abspath) takes a string containing a filesystem path and converts it to an absolute path. That is, if the path is not absolute, it will be joined with the current working directory. |
+| <code><a href="#cdktn.FnGenerated.alltrue">alltrue</a></code> | [alltrue](https://developer.hashicorp.com/terraform/language/functions/alltrue) returns `true` if all elements in a given collection are `true` or `"true"`. It also returns `true` if the collection is empty. |
+| <code><a href="#cdktn.FnGenerated.anytrue">anytrue</a></code> | [anytrue](https://developer.hashicorp.com/terraform/language/functions/anytrue) returns `true` if any element in a given collection is `true` or `"true"`. It also returns `false` if the collection is empty. |
+| <code><a href="#cdktn.FnGenerated.base64decode">base64decode</a></code> | [base64decode](https://developer.hashicorp.com/terraform/language/functions/base64decode) takes a string containing a Base64 character sequence and returns the original string. |
+| <code><a href="#cdktn.FnGenerated.base64encode">base64encode</a></code> | [base64encode](https://developer.hashicorp.com/terraform/language/functions/base64encode) applies Base64 encoding to a string. |
+| <code><a href="#cdktn.FnGenerated.base64gzip">base64gzip</a></code> | [base64gzip](https://developer.hashicorp.com/terraform/language/functions/base64gzip) compresses a string with gzip and then encodes the result in Base64 encoding. |
+| <code><a href="#cdktn.FnGenerated.base64sha256">base64sha256</a></code> | [base64sha256](https://developer.hashicorp.com/terraform/language/functions/base64sha256) computes the SHA256 hash of a given string and encodes it with Base64. This is not equivalent to `base64encode(sha256("test"))` since `sha256()` returns hexadecimal representation. |
+| <code><a href="#cdktn.FnGenerated.base64sha512">base64sha512</a></code> | [base64sha512](https://developer.hashicorp.com/terraform/language/functions/base64sha512) computes the SHA512 hash of a given string and encodes it with Base64. This is not equivalent to `base64encode(sha512("test"))` since `sha512()` returns hexadecimal representation. |
+| <code><a href="#cdktn.FnGenerated.basename">basename</a></code> | [basename](https://developer.hashicorp.com/terraform/language/functions/basename) takes a string containing a filesystem path and removes all except the last portion from it. |
+| <code><a href="#cdktn.FnGenerated.can">can</a></code> | [can](https://developer.hashicorp.com/terraform/language/functions/can) evaluates the given expression and returns a boolean value indicating whether the expression produced a result without any errors. |
+| <code><a href="#cdktn.FnGenerated.ceil">ceil</a></code> | [ceil](https://developer.hashicorp.com/terraform/language/functions/ceil) returns the closest whole number that is greater than or equal to the given value, which may be a fraction. |
+| <code><a href="#cdktn.FnGenerated.chomp">chomp</a></code> | [chomp](https://developer.hashicorp.com/terraform/language/functions/chomp) removes newline characters at the end of a string. |
+| <code><a href="#cdktn.FnGenerated.chunklist">chunklist</a></code> | [chunklist](https://developer.hashicorp.com/terraform/language/functions/chunklist) splits a single list into fixed-size chunks, returning a list of lists. |
+| <code><a href="#cdktn.FnGenerated.cidrhost">cidrhost</a></code> | [cidrhost](https://developer.hashicorp.com/terraform/language/functions/cidrhost) calculates a full host IP address for a given host number within a given IP network address prefix. |
+| <code><a href="#cdktn.FnGenerated.cidrnetmask">cidrnetmask</a></code> | [cidrnetmask](https://developer.hashicorp.com/terraform/language/functions/cidrnetmask) converts an IPv4 address prefix given in CIDR notation into a subnet mask address. |
+| <code><a href="#cdktn.FnGenerated.cidrsubnet">cidrsubnet</a></code> | [cidrsubnet](https://developer.hashicorp.com/terraform/language/functions/cidrsubnet) calculates a subnet address within given IP network address prefix. |
+| <code><a href="#cdktn.FnGenerated.cidrsubnets">cidrsubnets</a></code> | [cidrsubnets](https://developer.hashicorp.com/terraform/language/functions/cidrsubnets) calculates a sequence of consecutive IP address ranges within a particular CIDR prefix. |
+| <code><a href="#cdktn.FnGenerated.coalesce">coalesce</a></code> | [coalesce](https://developer.hashicorp.com/terraform/language/functions/coalesce) takes any number of arguments and returns the first one that isn't null or an empty string. |
+| <code><a href="#cdktn.FnGenerated.coalescelist">coalescelist</a></code> | [coalescelist](https://developer.hashicorp.com/terraform/language/functions/coalescelist) takes any number of list arguments and returns the first one that isn't empty. |
+| <code><a href="#cdktn.FnGenerated.compact">compact</a></code> | [compact](https://developer.hashicorp.com/terraform/language/functions/compact) takes a list of strings and returns a new list with any empty string elements removed. |
+| <code><a href="#cdktn.FnGenerated.concat">concat</a></code> | [concat](https://developer.hashicorp.com/terraform/language/functions/concat) takes two or more lists and combines them into a single list. |
+| <code><a href="#cdktn.FnGenerated.contains">contains</a></code> | [contains](https://developer.hashicorp.com/terraform/language/functions/contains) determines whether a given list or set contains a given single value as one of its elements. |
+| <code><a href="#cdktn.FnGenerated.csvdecode">csvdecode</a></code> | [csvdecode](https://developer.hashicorp.com/terraform/language/functions/csvdecode) decodes a string containing CSV-formatted data and produces a list of maps representing that data. |
+| <code><a href="#cdktn.FnGenerated.dirname">dirname</a></code> | [dirname](https://developer.hashicorp.com/terraform/language/functions/dirname) takes a string containing a filesystem path and removes the last portion from it. |
+| <code><a href="#cdktn.FnGenerated.distinct">distinct</a></code> | [distinct](https://developer.hashicorp.com/terraform/language/functions/distinct) takes a list and returns a new list with any duplicate elements removed. |
+| <code><a href="#cdktn.FnGenerated.element">element</a></code> | [element](https://developer.hashicorp.com/terraform/language/functions/element) retrieves a single element from a list. |
+| <code><a href="#cdktn.FnGenerated.endswith">endswith</a></code> | [endswith](https://developer.hashicorp.com/terraform/language/functions/endswith) takes two values: a string to check and a suffix string. The function returns true if the first string ends with that exact suffix. |
+| <code><a href="#cdktn.FnGenerated.file">file</a></code> | [file](https://developer.hashicorp.com/terraform/language/functions/file) reads the contents of a file at the given path and returns them as a string. |
+| <code><a href="#cdktn.FnGenerated.filebase64">filebase64</a></code> | [filebase64](https://developer.hashicorp.com/terraform/language/functions/filebase64) reads the contents of a file at the given path and returns them as a base64-encoded string. |
+| <code><a href="#cdktn.FnGenerated.filebase64sha256">filebase64sha256</a></code> | [filebase64sha256](https://developer.hashicorp.com/terraform/language/functions/filebase64sha256) is a variant of `base64sha256` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.FnGenerated.filebase64sha512">filebase64sha512</a></code> | [filebase64sha512](https://developer.hashicorp.com/terraform/language/functions/filebase64sha512) is a variant of `base64sha512` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.FnGenerated.fileexists">fileexists</a></code> | [fileexists](https://developer.hashicorp.com/terraform/language/functions/fileexists) determines whether a file exists at a given path. |
+| <code><a href="#cdktn.FnGenerated.filemd5">filemd5</a></code> | [filemd5](https://developer.hashicorp.com/terraform/language/functions/filemd5) is a variant of `md5` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.FnGenerated.fileset">fileset</a></code> | [fileset](https://developer.hashicorp.com/terraform/language/functions/fileset) enumerates a set of regular file names given a path and pattern. The path is automatically removed from the resulting set of file names and any result still containing path separators always returns forward slash (`/`) as the path separator for cross-system compatibility. |
+| <code><a href="#cdktn.FnGenerated.filesha1">filesha1</a></code> | [filesha1](https://developer.hashicorp.com/terraform/language/functions/filesha1) is a variant of `sha1` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.FnGenerated.filesha256">filesha256</a></code> | [filesha256](https://developer.hashicorp.com/terraform/language/functions/filesha256) is a variant of `sha256` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.FnGenerated.filesha512">filesha512</a></code> | [filesha512](https://developer.hashicorp.com/terraform/language/functions/filesha512) is a variant of `sha512` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.FnGenerated.flatten">flatten</a></code> | [flatten](https://developer.hashicorp.com/terraform/language/functions/flatten) takes a list and replaces any elements that are lists with a flattened sequence of the list contents. |
+| <code><a href="#cdktn.FnGenerated.floor">floor</a></code> | [floor](https://developer.hashicorp.com/terraform/language/functions/floor) returns the closest whole number that is less than or equal to the given value, which may be a fraction. |
+| <code><a href="#cdktn.FnGenerated.format">format</a></code> | The [format](https://developer.hashicorp.com/terraform/language/functions/format) function produces a string by formatting a number of other values according to a specification string. It is similar to the `printf` function in C, and other similar functions in other programming languages. |
+| <code><a href="#cdktn.FnGenerated.formatdate">formatdate</a></code> | [formatdate](https://developer.hashicorp.com/terraform/language/functions/formatdate) converts a timestamp into a different time format. |
+| <code><a href="#cdktn.FnGenerated.formatlist">formatlist</a></code> | [formatlist](https://developer.hashicorp.com/terraform/language/functions/formatlist) produces a list of strings by formatting a number of other values according to a specification string. |
+| <code><a href="#cdktn.FnGenerated.indent">indent</a></code> | [indent](https://developer.hashicorp.com/terraform/language/functions/indent) adds a given number of spaces to the beginnings of all but the first line in a given multi-line string. |
+| <code><a href="#cdktn.FnGenerated.index">index</a></code> | [index](https://developer.hashicorp.com/terraform/language/functions/index) finds the element index for a given value in a list. |
+| <code><a href="#cdktn.FnGenerated.jsondecode">jsondecode</a></code> | [jsondecode](https://developer.hashicorp.com/terraform/language/functions/jsondecode) interprets a given string as JSON, returning a representation of the result of decoding that string. |
+| <code><a href="#cdktn.FnGenerated.jsonencode">jsonencode</a></code> | [jsonencode](https://developer.hashicorp.com/terraform/language/functions/jsonencode) encodes a given value to a string using JSON syntax. |
+| <code><a href="#cdktn.FnGenerated.keys">keys</a></code> | [keys](https://developer.hashicorp.com/terraform/language/functions/keys) takes a map and returns a list containing the keys from that map. |
+| <code><a href="#cdktn.FnGenerated.lengthOf">lengthOf</a></code> | [length](https://developer.hashicorp.com/terraform/language/functions/length) determines the length of a given list, map, or string. |
+| <code><a href="#cdktn.FnGenerated.log">log</a></code> | [log](https://developer.hashicorp.com/terraform/language/functions/log) returns the logarithm of a given number in a given base. |
+| <code><a href="#cdktn.FnGenerated.lower">lower</a></code> | [lower](https://developer.hashicorp.com/terraform/language/functions/lower) converts all cased letters in the given string to lowercase. |
+| <code><a href="#cdktn.FnGenerated.matchkeys">matchkeys</a></code> | [matchkeys](https://developer.hashicorp.com/terraform/language/functions/matchkeys) constructs a new list by taking a subset of elements from one list whose indexes match the corresponding indexes of values in another list. |
+| <code><a href="#cdktn.FnGenerated.max">max</a></code> | [max](https://developer.hashicorp.com/terraform/language/functions/max) takes one or more numbers and returns the greatest number from the set. |
+| <code><a href="#cdktn.FnGenerated.md5">md5</a></code> | [md5](https://developer.hashicorp.com/terraform/language/functions/md5) computes the MD5 hash of a given string and encodes it with hexadecimal digits. |
+| <code><a href="#cdktn.FnGenerated.merge">merge</a></code> | [merge](https://developer.hashicorp.com/terraform/language/functions/merge) takes an arbitrary number of maps or objects, and returns a single map or object that contains a merged set of elements from all arguments. |
+| <code><a href="#cdktn.FnGenerated.min">min</a></code> | [min](https://developer.hashicorp.com/terraform/language/functions/min) takes one or more numbers and returns the smallest number from the set. |
+| <code><a href="#cdktn.FnGenerated.nonsensitive">nonsensitive</a></code> | [nonsensitive](https://developer.hashicorp.com/terraform/language/functions/nonsensitive) takes a sensitive value and returns a copy of that value with the sensitive marking removed, thereby exposing the sensitive value. |
+| <code><a href="#cdktn.FnGenerated.one">one</a></code> | [one](https://developer.hashicorp.com/terraform/language/functions/one) takes a list, set, or tuple value with either zero or one elements. If the collection is empty, `one` returns `null`. Otherwise, `one` returns the first element. If there are two or more elements then `one` will return an error. |
+| <code><a href="#cdktn.FnGenerated.parseint">parseint</a></code> | [parseint](https://developer.hashicorp.com/terraform/language/functions/parseint) parses the given string as a representation of an integer in the specified base and returns the resulting number. The base must be between 2 and 62 inclusive. |
+| <code><a href="#cdktn.FnGenerated.pathexpand">pathexpand</a></code> | [pathexpand](https://developer.hashicorp.com/terraform/language/functions/pathexpand) takes a filesystem path that might begin with a `~` segment, and if so it replaces that segment with the current user's home directory path. |
+| <code><a href="#cdktn.FnGenerated.plantimestamp">plantimestamp</a></code> | [plantimestamp](https://developer.hashicorp.com/terraform/language/functions/plantimestamp) returns a UTC timestamp string in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, fixed to a constant time representing the time of the plan. |
+| <code><a href="#cdktn.FnGenerated.pow">pow</a></code> | [pow](https://developer.hashicorp.com/terraform/language/functions/pow) calculates an exponent, by raising its first argument to the power of the second argument. |
+| <code><a href="#cdktn.FnGenerated.regex">regex</a></code> | [regex](https://developer.hashicorp.com/terraform/language/functions/regex) applies a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) to a string and returns the matching substrings. |
+| <code><a href="#cdktn.FnGenerated.regexall">regexall</a></code> | [regexall](https://developer.hashicorp.com/terraform/language/functions/regexall) applies a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) to a string and returns a list of all matches. |
+| <code><a href="#cdktn.FnGenerated.replace">replace</a></code> | [replace](https://developer.hashicorp.com/terraform/language/functions/replace) searches a given string for another given substring, and replaces each occurrence with a given replacement string. |
+| <code><a href="#cdktn.FnGenerated.reverse">reverse</a></code> | [reverse](https://developer.hashicorp.com/terraform/language/functions/reverse) takes a sequence and produces a new sequence of the same length with all of the same elements as the given sequence but in reverse order. |
+| <code><a href="#cdktn.FnGenerated.rsadecrypt">rsadecrypt</a></code> | [rsadecrypt](https://developer.hashicorp.com/terraform/language/functions/rsadecrypt) decrypts an RSA-encrypted ciphertext, returning the corresponding cleartext. |
+| <code><a href="#cdktn.FnGenerated.sensitive">sensitive</a></code> | [sensitive](https://developer.hashicorp.com/terraform/language/functions/sensitive) takes any value and returns a copy of it marked so that Terraform will treat it as sensitive, with the same meaning and behavior as for [sensitive input variables](/terraform/language/values/variables#suppressing-values-in-cli-output). |
+| <code><a href="#cdktn.FnGenerated.setintersection">setintersection</a></code> | The [setintersection](https://developer.hashicorp.com/terraform/language/functions/setintersection) function takes multiple sets and produces a single set containing only the elements that all of the given sets have in common. In other words, it computes the [intersection](https://en.wikipedia.org/wiki/Intersection_\(set_theory\)) of the sets. |
+| <code><a href="#cdktn.FnGenerated.setproduct">setproduct</a></code> | The [setproduct](https://developer.hashicorp.com/terraform/language/functions/setproduct) function finds all of the possible combinations of elements from all of the given sets by computing the [Cartesian product](https://en.wikipedia.org/wiki/Cartesian_product). |
+| <code><a href="#cdktn.FnGenerated.setsubtract">setsubtract</a></code> | The [setsubtract](https://developer.hashicorp.com/terraform/language/functions/setsubtract) function returns a new set containing the elements from the first set that are not present in the second set. In other words, it computes the [relative complement](https://en.wikipedia.org/wiki/Complement_\(set_theory\)#Relative_complement) of the second set. |
+| <code><a href="#cdktn.FnGenerated.setunion">setunion</a></code> | The [setunion](https://developer.hashicorp.com/terraform/language/functions/setunion) function takes multiple sets and produces a single set containing the elements from all of the given sets. In other words, it computes the [union](https://en.wikipedia.org/wiki/Union_\(set_theory\)) of the sets. |
+| <code><a href="#cdktn.FnGenerated.sha1">sha1</a></code> | [sha1](https://developer.hashicorp.com/terraform/language/functions/sha1) computes the SHA1 hash of a given string and encodes it with hexadecimal digits. |
+| <code><a href="#cdktn.FnGenerated.sha256">sha256</a></code> | [sha256](https://developer.hashicorp.com/terraform/language/functions/sha256) computes the SHA256 hash of a given string and encodes it with hexadecimal digits. |
+| <code><a href="#cdktn.FnGenerated.sha512">sha512</a></code> | [sha512](https://developer.hashicorp.com/terraform/language/functions/sha512) computes the SHA512 hash of a given string and encodes it with hexadecimal digits. |
+| <code><a href="#cdktn.FnGenerated.signum">signum</a></code> | [signum](https://developer.hashicorp.com/terraform/language/functions/signum) determines the sign of a number, returning a number between -1 and 1 to represent the sign. |
+| <code><a href="#cdktn.FnGenerated.slice">slice</a></code> | [slice](https://developer.hashicorp.com/terraform/language/functions/slice) extracts some consecutive elements from within a list. |
+| <code><a href="#cdktn.FnGenerated.sort">sort</a></code> | [sort](https://developer.hashicorp.com/terraform/language/functions/sort) takes a list of strings and returns a new list with those strings sorted lexicographically. |
+| <code><a href="#cdktn.FnGenerated.split">split</a></code> | [split](https://developer.hashicorp.com/terraform/language/functions/split) produces a list by dividing a given string at all occurrences of a given separator. |
+| <code><a href="#cdktn.FnGenerated.startswith">startswith</a></code> | [startswith](https://developer.hashicorp.com/terraform/language/functions/startswith) takes two values: a string to check and a prefix string. The function returns true if the string begins with that exact prefix. |
+| <code><a href="#cdktn.FnGenerated.strcontains">strcontains</a></code> | [strcontains](https://developer.hashicorp.com/terraform/language/functions/strcontains) takes two values: a string to check and an expected substring. The function returns true if the string has the substring contained within it. |
+| <code><a href="#cdktn.FnGenerated.strrev">strrev</a></code> | [strrev](https://developer.hashicorp.com/terraform/language/functions/strrev) reverses the characters in a string. Note that the characters are treated as *Unicode characters* (in technical terms, Unicode [grapheme cluster boundaries](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries) are respected). |
+| <code><a href="#cdktn.FnGenerated.substr">substr</a></code> | [substr](https://developer.hashicorp.com/terraform/language/functions/substr) extracts a substring from a given string by offset and (maximum) length. |
+| <code><a href="#cdktn.FnGenerated.sum">sum</a></code> | [sum](https://developer.hashicorp.com/terraform/language/functions/sum) takes a list or set of numbers and returns the sum of those numbers. |
+| <code><a href="#cdktn.FnGenerated.templatefile">templatefile</a></code> | [templatefile](https://developer.hashicorp.com/terraform/language/functions/templatefile) reads the file at the given path and renders its content as a template using a supplied set of template variables. |
+| <code><a href="#cdktn.FnGenerated.textdecodebase64">textdecodebase64</a></code> | [textdecodebase64](https://developer.hashicorp.com/terraform/language/functions/textdecodebase64) function decodes a string that was previously Base64-encoded, and then interprets the result as characters in a specified character encoding. |
+| <code><a href="#cdktn.FnGenerated.textencodebase64">textencodebase64</a></code> | [textencodebase64](https://developer.hashicorp.com/terraform/language/functions/textencodebase64) encodes the unicode characters in a given string using a specified character encoding, returning the result base64 encoded because Terraform language strings are always sequences of unicode characters. |
+| <code><a href="#cdktn.FnGenerated.timeadd">timeadd</a></code> | [timeadd](https://developer.hashicorp.com/terraform/language/functions/timeadd) adds a duration to a timestamp, returning a new timestamp. |
+| <code><a href="#cdktn.FnGenerated.timecmp">timecmp</a></code> | [timecmp](https://developer.hashicorp.com/terraform/language/functions/timecmp) compares two timestamps and returns a number that represents the ordering of the instants those timestamps represent. |
+| <code><a href="#cdktn.FnGenerated.timestamp">timestamp</a></code> | [timestamp](https://developer.hashicorp.com/terraform/language/functions/timestamp) returns a UTC timestamp string in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| <code><a href="#cdktn.FnGenerated.title">title</a></code> | [title](https://developer.hashicorp.com/terraform/language/functions/title) converts the first letter of each word in the given string to uppercase. |
+| <code><a href="#cdktn.FnGenerated.tobool">tobool</a></code> | [tobool](https://developer.hashicorp.com/terraform/language/functions/tobool) converts its argument to a boolean value. |
+| <code><a href="#cdktn.FnGenerated.tolist">tolist</a></code> | [tolist](https://developer.hashicorp.com/terraform/language/functions/tolist) converts its argument to a list value. |
+| <code><a href="#cdktn.FnGenerated.tomap">tomap</a></code> | [tomap](https://developer.hashicorp.com/terraform/language/functions/tomap) converts its argument to a map value. |
+| <code><a href="#cdktn.FnGenerated.tonumber">tonumber</a></code> | [tonumber](https://developer.hashicorp.com/terraform/language/functions/tonumber) converts its argument to a number value. |
+| <code><a href="#cdktn.FnGenerated.toset">toset</a></code> | [toset](https://developer.hashicorp.com/terraform/language/functions/toset) converts its argument to a set value. |
+| <code><a href="#cdktn.FnGenerated.tostring">tostring</a></code> | [tostring](https://developer.hashicorp.com/terraform/language/functions/tostring) converts its argument to a string value. |
+| <code><a href="#cdktn.FnGenerated.transpose">transpose</a></code> | [transpose](https://developer.hashicorp.com/terraform/language/functions/transpose) takes a map of lists of strings and swaps the keys and values to produce a new map of lists of strings. |
+| <code><a href="#cdktn.FnGenerated.trim">trim</a></code> | [trim](https://developer.hashicorp.com/terraform/language/functions/trim) removes the specified set of characters from the start and end of the given string. |
+| <code><a href="#cdktn.FnGenerated.trimprefix">trimprefix</a></code> | [trimprefix](https://developer.hashicorp.com/terraform/language/functions/trimprefix) removes the specified prefix from the start of the given string. If the string does not start with the prefix, the string is returned unchanged. |
+| <code><a href="#cdktn.FnGenerated.trimspace">trimspace</a></code> | [trimspace](https://developer.hashicorp.com/terraform/language/functions/trimspace) removes any space characters from the start and end of the given string. |
+| <code><a href="#cdktn.FnGenerated.trimsuffix">trimsuffix</a></code> | [trimsuffix](https://developer.hashicorp.com/terraform/language/functions/trimsuffix) removes the specified suffix from the end of the given string. |
+| <code><a href="#cdktn.FnGenerated.try">try</a></code> | [try](https://developer.hashicorp.com/terraform/language/functions/try) evaluates all of its argument expressions in turn and returns the result of the first one that does not produce any errors. |
+| <code><a href="#cdktn.FnGenerated.upper">upper</a></code> | [upper](https://developer.hashicorp.com/terraform/language/functions/upper) converts all cased letters in the given string to uppercase. |
+| <code><a href="#cdktn.FnGenerated.urlencode">urlencode</a></code> | [urlencode](https://developer.hashicorp.com/terraform/language/functions/urlencode) applies URL encoding to a given string. |
+| <code><a href="#cdktn.FnGenerated.uuid">uuid</a></code> | [uuid](https://developer.hashicorp.com/terraform/language/functions/uuid) generates a unique identifier string. |
+| <code><a href="#cdktn.FnGenerated.uuidv5">uuidv5</a></code> | [uuidv5](https://developer.hashicorp.com/terraform/language/functions/uuidv5) generates a *name-based* UUID, as described in [RFC 4122 section 4.3](https://tools.ietf.org/html/rfc4122#section-4.3), also known as a "version 5" UUID. |
+| <code><a href="#cdktn.FnGenerated.values">values</a></code> | [values](https://developer.hashicorp.com/terraform/language/functions/values) takes a map and returns a list containing the values of the elements in that map. |
+| <code><a href="#cdktn.FnGenerated.yamldecode">yamldecode</a></code> | [yamldecode](https://developer.hashicorp.com/terraform/language/functions/yamldecode) parses a string as a subset of YAML, and produces a representation of its value. |
+| <code><a href="#cdktn.FnGenerated.yamlencode">yamlencode</a></code> | [yamlencode](https://developer.hashicorp.com/terraform/language/functions/yamlencode) encodes a given value to a string using [YAML 1.2](https://yaml.org/spec/1.2/spec.html) block syntax. |
+| <code><a href="#cdktn.FnGenerated.zipmap">zipmap</a></code> | [zipmap](https://developer.hashicorp.com/terraform/language/functions/zipmap) constructs a map from a list of keys and a corresponding list of values. |
+
+***
+
+### `abs` <a name="abs" id="cdktn.FnGenerated.abs"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.abs(num: number)
+```
+
+[abs](https://developer.hashicorp.com/terraform/language/functions/abs) returns the absolute value of the given number. In other words, if the number is zero or positive then it is returned as-is, but if it is negative then it is multiplied by -1 to make it positive before returning it.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.FnGenerated.abs.parameter.num"></a>
+
+- *Type:* number
+
+***
+
+### `abspath` <a name="abspath" id="cdktn.FnGenerated.abspath"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.abspath(path: string)
+```
+
+[abspath](https://developer.hashicorp.com/terraform/language/functions/abspath) takes a string containing a filesystem path and converts it to an absolute path. That is, if the path is not absolute, it will be joined with the current working directory.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.abspath.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `alltrue` <a name="alltrue" id="cdktn.FnGenerated.alltrue"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.alltrue(list: any[])
+```
+
+[alltrue](https://developer.hashicorp.com/terraform/language/functions/alltrue) returns `true` if all elements in a given collection are `true` or `"true"`. It also returns `true` if the collection is empty.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.alltrue.parameter.list"></a>
+
+- *Type:* any\[]
+
+***
+
+### `anytrue` <a name="anytrue" id="cdktn.FnGenerated.anytrue"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.anytrue(list: any[])
+```
+
+[anytrue](https://developer.hashicorp.com/terraform/language/functions/anytrue) returns `true` if any element in a given collection is `true` or `"true"`. It also returns `false` if the collection is empty.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.anytrue.parameter.list"></a>
+
+- *Type:* any\[]
+
+***
+
+### `base64decode` <a name="base64decode" id="cdktn.FnGenerated.base64decode"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.base64decode(str: string)
+```
+
+[base64decode](https://developer.hashicorp.com/terraform/language/functions/base64decode) takes a string containing a Base64 character sequence and returns the original string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.base64decode.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `base64encode` <a name="base64encode" id="cdktn.FnGenerated.base64encode"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.base64encode(str: string)
+```
+
+[base64encode](https://developer.hashicorp.com/terraform/language/functions/base64encode) applies Base64 encoding to a string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.base64encode.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `base64gzip` <a name="base64gzip" id="cdktn.FnGenerated.base64gzip"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.base64gzip(str: string)
+```
+
+[base64gzip](https://developer.hashicorp.com/terraform/language/functions/base64gzip) compresses a string with gzip and then encodes the result in Base64 encoding.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.base64gzip.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `base64sha256` <a name="base64sha256" id="cdktn.FnGenerated.base64sha256"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.base64sha256(str: string)
+```
+
+[base64sha256](https://developer.hashicorp.com/terraform/language/functions/base64sha256) computes the SHA256 hash of a given string and encodes it with Base64. This is not equivalent to `base64encode(sha256("test"))` since `sha256()` returns hexadecimal representation.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.base64sha256.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `base64sha512` <a name="base64sha512" id="cdktn.FnGenerated.base64sha512"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.base64sha512(str: string)
+```
+
+[base64sha512](https://developer.hashicorp.com/terraform/language/functions/base64sha512) computes the SHA512 hash of a given string and encodes it with Base64. This is not equivalent to `base64encode(sha512("test"))` since `sha512()` returns hexadecimal representation.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.base64sha512.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `basename` <a name="basename" id="cdktn.FnGenerated.basename"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.basename(path: string)
+```
+
+[basename](https://developer.hashicorp.com/terraform/language/functions/basename) takes a string containing a filesystem path and removes all except the last portion from it.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.basename.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `can` <a name="can" id="cdktn.FnGenerated.can"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.can(expression: any)
+```
+
+[can](https://developer.hashicorp.com/terraform/language/functions/can) evaluates the given expression and returns a boolean value indicating whether the expression produced a result without any errors.
+
+#### `expression`<sup>Required</sup> <a name="expression" id="cdktn.FnGenerated.can.parameter.expression"></a>
+
+- *Type:* any
+
+***
+
+### `ceil` <a name="ceil" id="cdktn.FnGenerated.ceil"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.ceil(num: number)
+```
+
+[ceil](https://developer.hashicorp.com/terraform/language/functions/ceil) returns the closest whole number that is greater than or equal to the given value, which may be a fraction.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.FnGenerated.ceil.parameter.num"></a>
+
+- *Type:* number
+
+***
+
+### `chomp` <a name="chomp" id="cdktn.FnGenerated.chomp"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.chomp(str: string)
+```
+
+[chomp](https://developer.hashicorp.com/terraform/language/functions/chomp) removes newline characters at the end of a string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.chomp.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `chunklist` <a name="chunklist" id="cdktn.FnGenerated.chunklist"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.chunklist(list: any[], size: number)
+```
+
+[chunklist](https://developer.hashicorp.com/terraform/language/functions/chunklist) splits a single list into fixed-size chunks, returning a list of lists.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.chunklist.parameter.list"></a>
+
+- *Type:* any\[]
+
+***
+
+#### `size`<sup>Required</sup> <a name="size" id="cdktn.FnGenerated.chunklist.parameter.size"></a>
+
+- *Type:* number
+
+***
+
+### `cidrhost` <a name="cidrhost" id="cdktn.FnGenerated.cidrhost"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.cidrhost(prefix: string, hostnum: number)
+```
+
+[cidrhost](https://developer.hashicorp.com/terraform/language/functions/cidrhost) calculates a full host IP address for a given host number within a given IP network address prefix.
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.FnGenerated.cidrhost.parameter.prefix"></a>
+
+- *Type:* string
+
+***
+
+#### `hostnum`<sup>Required</sup> <a name="hostnum" id="cdktn.FnGenerated.cidrhost.parameter.hostnum"></a>
+
+- *Type:* number
+
+***
+
+### `cidrnetmask` <a name="cidrnetmask" id="cdktn.FnGenerated.cidrnetmask"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.cidrnetmask(prefix: string)
+```
+
+[cidrnetmask](https://developer.hashicorp.com/terraform/language/functions/cidrnetmask) converts an IPv4 address prefix given in CIDR notation into a subnet mask address.
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.FnGenerated.cidrnetmask.parameter.prefix"></a>
+
+- *Type:* string
+
+***
+
+### `cidrsubnet` <a name="cidrsubnet" id="cdktn.FnGenerated.cidrsubnet"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.cidrsubnet(prefix: string, newbits: number, netnum: number)
+```
+
+[cidrsubnet](https://developer.hashicorp.com/terraform/language/functions/cidrsubnet) calculates a subnet address within given IP network address prefix.
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.FnGenerated.cidrsubnet.parameter.prefix"></a>
+
+- *Type:* string
+
+***
+
+#### `newbits`<sup>Required</sup> <a name="newbits" id="cdktn.FnGenerated.cidrsubnet.parameter.newbits"></a>
+
+- *Type:* number
+
+***
+
+#### `netnum`<sup>Required</sup> <a name="netnum" id="cdktn.FnGenerated.cidrsubnet.parameter.netnum"></a>
+
+- *Type:* number
+
+***
+
+### `cidrsubnets` <a name="cidrsubnets" id="cdktn.FnGenerated.cidrsubnets"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.cidrsubnets(prefix: string, newbits: number[])
+```
+
+[cidrsubnets](https://developer.hashicorp.com/terraform/language/functions/cidrsubnets) calculates a sequence of consecutive IP address ranges within a particular CIDR prefix.
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.FnGenerated.cidrsubnets.parameter.prefix"></a>
+
+- *Type:* string
+
+***
+
+#### `newbits`<sup>Required</sup> <a name="newbits" id="cdktn.FnGenerated.cidrsubnets.parameter.newbits"></a>
+
+- *Type:* number\[]
+
+***
+
+### `coalesce` <a name="coalesce" id="cdktn.FnGenerated.coalesce"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.coalesce(vals: any[])
+```
+
+[coalesce](https://developer.hashicorp.com/terraform/language/functions/coalesce) takes any number of arguments and returns the first one that isn't null or an empty string.
+
+#### `vals`<sup>Required</sup> <a name="vals" id="cdktn.FnGenerated.coalesce.parameter.vals"></a>
+
+- *Type:* any\[]
+
+***
+
+### `coalescelist` <a name="coalescelist" id="cdktn.FnGenerated.coalescelist"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.coalescelist(vals: any[])
+```
+
+[coalescelist](https://developer.hashicorp.com/terraform/language/functions/coalescelist) takes any number of list arguments and returns the first one that isn't empty.
+
+#### `vals`<sup>Required</sup> <a name="vals" id="cdktn.FnGenerated.coalescelist.parameter.vals"></a>
+
+- *Type:* any\[]
+
+***
+
+### `compact` <a name="compact" id="cdktn.FnGenerated.compact"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.compact(list: string[])
+```
+
+[compact](https://developer.hashicorp.com/terraform/language/functions/compact) takes a list of strings and returns a new list with any empty string elements removed.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.compact.parameter.list"></a>
+
+- *Type:* string\[]
+
+***
+
+### `concat` <a name="concat" id="cdktn.FnGenerated.concat"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.concat(seqs: any[])
+```
+
+[concat](https://developer.hashicorp.com/terraform/language/functions/concat) takes two or more lists and combines them into a single list.
+
+#### `seqs`<sup>Required</sup> <a name="seqs" id="cdktn.FnGenerated.concat.parameter.seqs"></a>
+
+- *Type:* any\[]
+
+***
+
+### `contains` <a name="contains" id="cdktn.FnGenerated.contains"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.contains(list: any, value: any)
+```
+
+[contains](https://developer.hashicorp.com/terraform/language/functions/contains) determines whether a given list or set contains a given single value as one of its elements.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.contains.parameter.list"></a>
+
+- *Type:* any
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.FnGenerated.contains.parameter.value"></a>
+
+- *Type:* any
+
+***
+
+### `csvdecode` <a name="csvdecode" id="cdktn.FnGenerated.csvdecode"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.csvdecode(str: string)
+```
+
+[csvdecode](https://developer.hashicorp.com/terraform/language/functions/csvdecode) decodes a string containing CSV-formatted data and produces a list of maps representing that data.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.csvdecode.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `dirname` <a name="dirname" id="cdktn.FnGenerated.dirname"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.dirname(path: string)
+```
+
+[dirname](https://developer.hashicorp.com/terraform/language/functions/dirname) takes a string containing a filesystem path and removes the last portion from it.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.dirname.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `distinct` <a name="distinct" id="cdktn.FnGenerated.distinct"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.distinct(list: any[])
+```
+
+[distinct](https://developer.hashicorp.com/terraform/language/functions/distinct) takes a list and returns a new list with any duplicate elements removed.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.distinct.parameter.list"></a>
+
+- *Type:* any\[]
+
+***
+
+### `element` <a name="element" id="cdktn.FnGenerated.element"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.element(list: any, index: number)
+```
+
+[element](https://developer.hashicorp.com/terraform/language/functions/element) retrieves a single element from a list.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.element.parameter.list"></a>
+
+- *Type:* any
+
+***
+
+#### `index`<sup>Required</sup> <a name="index" id="cdktn.FnGenerated.element.parameter.index"></a>
+
+- *Type:* number
+
+***
+
+### `endswith` <a name="endswith" id="cdktn.FnGenerated.endswith"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.endswith(str: string, suffix: string)
+```
+
+[endswith](https://developer.hashicorp.com/terraform/language/functions/endswith) takes two values: a string to check and a suffix string. The function returns true if the first string ends with that exact suffix.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.endswith.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+#### `suffix`<sup>Required</sup> <a name="suffix" id="cdktn.FnGenerated.endswith.parameter.suffix"></a>
+
+- *Type:* string
+
+***
+
+### `file` <a name="file" id="cdktn.FnGenerated.file"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.file(path: string)
+```
+
+[file](https://developer.hashicorp.com/terraform/language/functions/file) reads the contents of a file at the given path and returns them as a string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.file.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `filebase64` <a name="filebase64" id="cdktn.FnGenerated.filebase64"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.filebase64(path: string)
+```
+
+[filebase64](https://developer.hashicorp.com/terraform/language/functions/filebase64) reads the contents of a file at the given path and returns them as a base64-encoded string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.filebase64.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `filebase64sha256` <a name="filebase64sha256" id="cdktn.FnGenerated.filebase64sha256"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.filebase64sha256(path: string)
+```
+
+[filebase64sha256](https://developer.hashicorp.com/terraform/language/functions/filebase64sha256) is a variant of `base64sha256` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.filebase64sha256.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `filebase64sha512` <a name="filebase64sha512" id="cdktn.FnGenerated.filebase64sha512"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.filebase64sha512(path: string)
+```
+
+[filebase64sha512](https://developer.hashicorp.com/terraform/language/functions/filebase64sha512) is a variant of `base64sha512` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.filebase64sha512.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `fileexists` <a name="fileexists" id="cdktn.FnGenerated.fileexists"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.fileexists(path: string)
+```
+
+[fileexists](https://developer.hashicorp.com/terraform/language/functions/fileexists) determines whether a file exists at a given path.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.fileexists.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `filemd5` <a name="filemd5" id="cdktn.FnGenerated.filemd5"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.filemd5(path: string)
+```
+
+[filemd5](https://developer.hashicorp.com/terraform/language/functions/filemd5) is a variant of `md5` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.filemd5.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `fileset` <a name="fileset" id="cdktn.FnGenerated.fileset"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.fileset(path: string, pattern: string)
+```
+
+[fileset](https://developer.hashicorp.com/terraform/language/functions/fileset) enumerates a set of regular file names given a path and pattern. The path is automatically removed from the resulting set of file names and any result still containing path separators always returns forward slash (`/`) as the path separator for cross-system compatibility.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.fileset.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+#### `pattern`<sup>Required</sup> <a name="pattern" id="cdktn.FnGenerated.fileset.parameter.pattern"></a>
+
+- *Type:* string
+
+***
+
+### `filesha1` <a name="filesha1" id="cdktn.FnGenerated.filesha1"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.filesha1(path: string)
+```
+
+[filesha1](https://developer.hashicorp.com/terraform/language/functions/filesha1) is a variant of `sha1` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.filesha1.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `filesha256` <a name="filesha256" id="cdktn.FnGenerated.filesha256"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.filesha256(path: string)
+```
+
+[filesha256](https://developer.hashicorp.com/terraform/language/functions/filesha256) is a variant of `sha256` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.filesha256.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `filesha512` <a name="filesha512" id="cdktn.FnGenerated.filesha512"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.filesha512(path: string)
+```
+
+[filesha512](https://developer.hashicorp.com/terraform/language/functions/filesha512) is a variant of `sha512` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.filesha512.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `flatten` <a name="flatten" id="cdktn.FnGenerated.flatten"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.flatten(list: any)
+```
+
+[flatten](https://developer.hashicorp.com/terraform/language/functions/flatten) takes a list and replaces any elements that are lists with a flattened sequence of the list contents.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.flatten.parameter.list"></a>
+
+- *Type:* any
+
+***
+
+### `floor` <a name="floor" id="cdktn.FnGenerated.floor"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.floor(num: number)
+```
+
+[floor](https://developer.hashicorp.com/terraform/language/functions/floor) returns the closest whole number that is less than or equal to the given value, which may be a fraction.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.FnGenerated.floor.parameter.num"></a>
+
+- *Type:* number
+
+***
+
+### `format` <a name="format" id="cdktn.FnGenerated.format"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.format(format: string, args: any[])
+```
+
+The [format](https://developer.hashicorp.com/terraform/language/functions/format) function produces a string by formatting a number of other values according to a specification string. It is similar to the `printf` function in C, and other similar functions in other programming languages.
+
+#### `format`<sup>Required</sup> <a name="format" id="cdktn.FnGenerated.format.parameter.format"></a>
+
+- *Type:* string
+
+***
+
+#### `args`<sup>Required</sup> <a name="args" id="cdktn.FnGenerated.format.parameter.args"></a>
+
+- *Type:* any\[]
+
+***
+
+### `formatdate` <a name="formatdate" id="cdktn.FnGenerated.formatdate"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.formatdate(format: string, time: string)
+```
+
+[formatdate](https://developer.hashicorp.com/terraform/language/functions/formatdate) converts a timestamp into a different time format.
+
+#### `format`<sup>Required</sup> <a name="format" id="cdktn.FnGenerated.formatdate.parameter.format"></a>
+
+- *Type:* string
+
+***
+
+#### `time`<sup>Required</sup> <a name="time" id="cdktn.FnGenerated.formatdate.parameter.time"></a>
+
+- *Type:* string
+
+***
+
+### `formatlist` <a name="formatlist" id="cdktn.FnGenerated.formatlist"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.formatlist(format: string, args: any[])
+```
+
+[formatlist](https://developer.hashicorp.com/terraform/language/functions/formatlist) produces a list of strings by formatting a number of other values according to a specification string.
+
+#### `format`<sup>Required</sup> <a name="format" id="cdktn.FnGenerated.formatlist.parameter.format"></a>
+
+- *Type:* string
+
+***
+
+#### `args`<sup>Required</sup> <a name="args" id="cdktn.FnGenerated.formatlist.parameter.args"></a>
+
+- *Type:* any\[]
+
+***
+
+### `indent` <a name="indent" id="cdktn.FnGenerated.indent"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.indent(spaces: number, str: string)
+```
+
+[indent](https://developer.hashicorp.com/terraform/language/functions/indent) adds a given number of spaces to the beginnings of all but the first line in a given multi-line string.
+
+#### `spaces`<sup>Required</sup> <a name="spaces" id="cdktn.FnGenerated.indent.parameter.spaces"></a>
+
+- *Type:* number
+
+***
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.indent.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `index` <a name="index" id="cdktn.FnGenerated.index"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.index(list: any, value: any)
+```
+
+[index](https://developer.hashicorp.com/terraform/language/functions/index) finds the element index for a given value in a list.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.index.parameter.list"></a>
+
+- *Type:* any
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.FnGenerated.index.parameter.value"></a>
+
+- *Type:* any
+
+***
+
+### `jsondecode` <a name="jsondecode" id="cdktn.FnGenerated.jsondecode"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.jsondecode(str: string)
+```
+
+[jsondecode](https://developer.hashicorp.com/terraform/language/functions/jsondecode) interprets a given string as JSON, returning a representation of the result of decoding that string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.jsondecode.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `jsonencode` <a name="jsonencode" id="cdktn.FnGenerated.jsonencode"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.jsonencode(val: any)
+```
+
+[jsonencode](https://developer.hashicorp.com/terraform/language/functions/jsonencode) encodes a given value to a string using JSON syntax.
+
+#### `val`<sup>Required</sup> <a name="val" id="cdktn.FnGenerated.jsonencode.parameter.val"></a>
+
+- *Type:* any
+
+***
+
+### `keys` <a name="keys" id="cdktn.FnGenerated.keys"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.keys(inputMap: any)
+```
+
+[keys](https://developer.hashicorp.com/terraform/language/functions/keys) takes a map and returns a list containing the keys from that map.
+
+#### `inputMap`<sup>Required</sup> <a name="inputMap" id="cdktn.FnGenerated.keys.parameter.inputMap"></a>
+
+- *Type:* any
+
+***
+
+### `lengthOf` <a name="lengthOf" id="cdktn.FnGenerated.lengthOf"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.lengthOf(value: any)
+```
+
+[length](https://developer.hashicorp.com/terraform/language/functions/length) determines the length of a given list, map, or string.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.FnGenerated.lengthOf.parameter.value"></a>
+
+- *Type:* any
+
+***
+
+### `log` <a name="log" id="cdktn.FnGenerated.log"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.log(num: number, base: number)
+```
+
+[log](https://developer.hashicorp.com/terraform/language/functions/log) returns the logarithm of a given number in a given base.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.FnGenerated.log.parameter.num"></a>
+
+- *Type:* number
+
+***
+
+#### `base`<sup>Required</sup> <a name="base" id="cdktn.FnGenerated.log.parameter.base"></a>
+
+- *Type:* number
+
+***
+
+### `lower` <a name="lower" id="cdktn.FnGenerated.lower"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.lower(str: string)
+```
+
+[lower](https://developer.hashicorp.com/terraform/language/functions/lower) converts all cased letters in the given string to lowercase.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.lower.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `matchkeys` <a name="matchkeys" id="cdktn.FnGenerated.matchkeys"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.matchkeys(values: any[], keys: any[], searchset: any[])
+```
+
+[matchkeys](https://developer.hashicorp.com/terraform/language/functions/matchkeys) constructs a new list by taking a subset of elements from one list whose indexes match the corresponding indexes of values in another list.
+
+#### `values`<sup>Required</sup> <a name="values" id="cdktn.FnGenerated.matchkeys.parameter.values"></a>
+
+- *Type:* any\[]
+
+***
+
+#### `keys`<sup>Required</sup> <a name="keys" id="cdktn.FnGenerated.matchkeys.parameter.keys"></a>
+
+- *Type:* any\[]
+
+***
+
+#### `searchset`<sup>Required</sup> <a name="searchset" id="cdktn.FnGenerated.matchkeys.parameter.searchset"></a>
+
+- *Type:* any\[]
+
+***
+
+### `max` <a name="max" id="cdktn.FnGenerated.max"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.max(numbers: number[])
+```
+
+[max](https://developer.hashicorp.com/terraform/language/functions/max) takes one or more numbers and returns the greatest number from the set.
+
+#### `numbers`<sup>Required</sup> <a name="numbers" id="cdktn.FnGenerated.max.parameter.numbers"></a>
+
+- *Type:* number\[]
+
+***
+
+### `md5` <a name="md5" id="cdktn.FnGenerated.md5"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.md5(str: string)
+```
+
+[md5](https://developer.hashicorp.com/terraform/language/functions/md5) computes the MD5 hash of a given string and encodes it with hexadecimal digits.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.md5.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `merge` <a name="merge" id="cdktn.FnGenerated.merge"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.merge(maps: any[])
+```
+
+[merge](https://developer.hashicorp.com/terraform/language/functions/merge) takes an arbitrary number of maps or objects, and returns a single map or object that contains a merged set of elements from all arguments.
+
+#### `maps`<sup>Required</sup> <a name="maps" id="cdktn.FnGenerated.merge.parameter.maps"></a>
+
+- *Type:* any\[]
+
+***
+
+### `min` <a name="min" id="cdktn.FnGenerated.min"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.min(numbers: number[])
+```
+
+[min](https://developer.hashicorp.com/terraform/language/functions/min) takes one or more numbers and returns the smallest number from the set.
+
+#### `numbers`<sup>Required</sup> <a name="numbers" id="cdktn.FnGenerated.min.parameter.numbers"></a>
+
+- *Type:* number\[]
+
+***
+
+### `nonsensitive` <a name="nonsensitive" id="cdktn.FnGenerated.nonsensitive"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.nonsensitive(value: any)
+```
+
+[nonsensitive](https://developer.hashicorp.com/terraform/language/functions/nonsensitive) takes a sensitive value and returns a copy of that value with the sensitive marking removed, thereby exposing the sensitive value.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.FnGenerated.nonsensitive.parameter.value"></a>
+
+- *Type:* any
+
+***
+
+### `one` <a name="one" id="cdktn.FnGenerated.one"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.one(list: any)
+```
+
+[one](https://developer.hashicorp.com/terraform/language/functions/one) takes a list, set, or tuple value with either zero or one elements. If the collection is empty, `one` returns `null`. Otherwise, `one` returns the first element. If there are two or more elements then `one` will return an error.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.one.parameter.list"></a>
+
+- *Type:* any
+
+***
+
+### `parseint` <a name="parseint" id="cdktn.FnGenerated.parseint"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.parseint(number: any, base: number)
+```
+
+[parseint](https://developer.hashicorp.com/terraform/language/functions/parseint) parses the given string as a representation of an integer in the specified base and returns the resulting number. The base must be between 2 and 62 inclusive.
+
+#### `number`<sup>Required</sup> <a name="number" id="cdktn.FnGenerated.parseint.parameter.number"></a>
+
+- *Type:* any
+
+***
+
+#### `base`<sup>Required</sup> <a name="base" id="cdktn.FnGenerated.parseint.parameter.base"></a>
+
+- *Type:* number
+
+***
+
+### `pathexpand` <a name="pathexpand" id="cdktn.FnGenerated.pathexpand"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.pathexpand(path: string)
+```
+
+[pathexpand](https://developer.hashicorp.com/terraform/language/functions/pathexpand) takes a filesystem path that might begin with a `~` segment, and if so it replaces that segment with the current user's home directory path.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.pathexpand.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+### `plantimestamp` <a name="plantimestamp" id="cdktn.FnGenerated.plantimestamp"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.plantimestamp()
+```
+
+[plantimestamp](https://developer.hashicorp.com/terraform/language/functions/plantimestamp) returns a UTC timestamp string in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, fixed to a constant time representing the time of the plan.
+
+### `pow` <a name="pow" id="cdktn.FnGenerated.pow"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.pow(num: number, power: number)
+```
+
+[pow](https://developer.hashicorp.com/terraform/language/functions/pow) calculates an exponent, by raising its first argument to the power of the second argument.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.FnGenerated.pow.parameter.num"></a>
+
+- *Type:* number
+
+***
+
+#### `power`<sup>Required</sup> <a name="power" id="cdktn.FnGenerated.pow.parameter.power"></a>
+
+- *Type:* number
+
+***
+
+### `regex` <a name="regex" id="cdktn.FnGenerated.regex"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.regex(pattern: string, str: string)
+```
+
+[regex](https://developer.hashicorp.com/terraform/language/functions/regex) applies a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) to a string and returns the matching substrings.
+
+#### `pattern`<sup>Required</sup> <a name="pattern" id="cdktn.FnGenerated.regex.parameter.pattern"></a>
+
+- *Type:* string
+
+***
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.regex.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `regexall` <a name="regexall" id="cdktn.FnGenerated.regexall"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.regexall(pattern: string, str: string)
+```
+
+[regexall](https://developer.hashicorp.com/terraform/language/functions/regexall) applies a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) to a string and returns a list of all matches.
+
+#### `pattern`<sup>Required</sup> <a name="pattern" id="cdktn.FnGenerated.regexall.parameter.pattern"></a>
+
+- *Type:* string
+
+***
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.regexall.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `replace` <a name="replace" id="cdktn.FnGenerated.replace"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.replace(str: string, substr: string, replace: string)
+```
+
+[replace](https://developer.hashicorp.com/terraform/language/functions/replace) searches a given string for another given substring, and replaces each occurrence with a given replacement string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.replace.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+#### `substr`<sup>Required</sup> <a name="substr" id="cdktn.FnGenerated.replace.parameter.substr"></a>
+
+- *Type:* string
+
+***
+
+#### `replace`<sup>Required</sup> <a name="replace" id="cdktn.FnGenerated.replace.parameter.replace"></a>
+
+- *Type:* string
+
+***
+
+### `reverse` <a name="reverse" id="cdktn.FnGenerated.reverse"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.reverse(list: any)
+```
+
+[reverse](https://developer.hashicorp.com/terraform/language/functions/reverse) takes a sequence and produces a new sequence of the same length with all of the same elements as the given sequence but in reverse order.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.reverse.parameter.list"></a>
+
+- *Type:* any
+
+***
+
+### `rsadecrypt` <a name="rsadecrypt" id="cdktn.FnGenerated.rsadecrypt"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.rsadecrypt(ciphertext: string, privatekey: string)
+```
+
+[rsadecrypt](https://developer.hashicorp.com/terraform/language/functions/rsadecrypt) decrypts an RSA-encrypted ciphertext, returning the corresponding cleartext.
+
+#### `ciphertext`<sup>Required</sup> <a name="ciphertext" id="cdktn.FnGenerated.rsadecrypt.parameter.ciphertext"></a>
+
+- *Type:* string
+
+***
+
+#### `privatekey`<sup>Required</sup> <a name="privatekey" id="cdktn.FnGenerated.rsadecrypt.parameter.privatekey"></a>
+
+- *Type:* string
+
+***
+
+### `sensitive` <a name="sensitive" id="cdktn.FnGenerated.sensitive"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.sensitive(value: any)
+```
+
+[sensitive](https://developer.hashicorp.com/terraform/language/functions/sensitive) takes any value and returns a copy of it marked so that Terraform will treat it as sensitive, with the same meaning and behavior as for [sensitive input variables](/terraform/language/values/variables#suppressing-values-in-cli-output).
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.FnGenerated.sensitive.parameter.value"></a>
+
+- *Type:* any
+
+***
+
+### `setintersection` <a name="setintersection" id="cdktn.FnGenerated.setintersection"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.setintersection(first_set: any[], other_sets: any[][])
+```
+
+The [setintersection](https://developer.hashicorp.com/terraform/language/functions/setintersection) function takes multiple sets and produces a single set containing only the elements that all of the given sets have in common. In other words, it computes the [intersection](https://en.wikipedia.org/wiki/Intersection_\(set_theory\)) of the sets.
+
+#### `first_set`<sup>Required</sup> <a name="first_set" id="cdktn.FnGenerated.setintersection.parameter.first_set"></a>
+
+- *Type:* any\[]
+
+***
+
+#### `other_sets`<sup>Required</sup> <a name="other_sets" id="cdktn.FnGenerated.setintersection.parameter.other_sets"></a>
+
+- *Type:* any\[]\[]
+
+***
+
+### `setproduct` <a name="setproduct" id="cdktn.FnGenerated.setproduct"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.setproduct(sets: any[])
+```
+
+The [setproduct](https://developer.hashicorp.com/terraform/language/functions/setproduct) function finds all of the possible combinations of elements from all of the given sets by computing the [Cartesian product](https://en.wikipedia.org/wiki/Cartesian_product).
+
+#### `sets`<sup>Required</sup> <a name="sets" id="cdktn.FnGenerated.setproduct.parameter.sets"></a>
+
+- *Type:* any\[]
+
+***
+
+### `setsubtract` <a name="setsubtract" id="cdktn.FnGenerated.setsubtract"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.setsubtract(a: any[], b: any[])
+```
+
+The [setsubtract](https://developer.hashicorp.com/terraform/language/functions/setsubtract) function returns a new set containing the elements from the first set that are not present in the second set. In other words, it computes the [relative complement](https://en.wikipedia.org/wiki/Complement_\(set_theory\)#Relative_complement) of the second set.
+
+#### `a`<sup>Required</sup> <a name="a" id="cdktn.FnGenerated.setsubtract.parameter.a"></a>
+
+- *Type:* any\[]
+
+***
+
+#### `b`<sup>Required</sup> <a name="b" id="cdktn.FnGenerated.setsubtract.parameter.b"></a>
+
+- *Type:* any\[]
+
+***
+
+### `setunion` <a name="setunion" id="cdktn.FnGenerated.setunion"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.setunion(first_set: any[], other_sets: any[][])
+```
+
+The [setunion](https://developer.hashicorp.com/terraform/language/functions/setunion) function takes multiple sets and produces a single set containing the elements from all of the given sets. In other words, it computes the [union](https://en.wikipedia.org/wiki/Union_\(set_theory\)) of the sets.
+
+#### `first_set`<sup>Required</sup> <a name="first_set" id="cdktn.FnGenerated.setunion.parameter.first_set"></a>
+
+- *Type:* any\[]
+
+***
+
+#### `other_sets`<sup>Required</sup> <a name="other_sets" id="cdktn.FnGenerated.setunion.parameter.other_sets"></a>
+
+- *Type:* any\[]\[]
+
+***
+
+### `sha1` <a name="sha1" id="cdktn.FnGenerated.sha1"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.sha1(str: string)
+```
+
+[sha1](https://developer.hashicorp.com/terraform/language/functions/sha1) computes the SHA1 hash of a given string and encodes it with hexadecimal digits.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.sha1.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `sha256` <a name="sha256" id="cdktn.FnGenerated.sha256"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.sha256(str: string)
+```
+
+[sha256](https://developer.hashicorp.com/terraform/language/functions/sha256) computes the SHA256 hash of a given string and encodes it with hexadecimal digits.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.sha256.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `sha512` <a name="sha512" id="cdktn.FnGenerated.sha512"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.sha512(str: string)
+```
+
+[sha512](https://developer.hashicorp.com/terraform/language/functions/sha512) computes the SHA512 hash of a given string and encodes it with hexadecimal digits.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.sha512.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `signum` <a name="signum" id="cdktn.FnGenerated.signum"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.signum(num: number)
+```
+
+[signum](https://developer.hashicorp.com/terraform/language/functions/signum) determines the sign of a number, returning a number between -1 and 1 to represent the sign.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.FnGenerated.signum.parameter.num"></a>
+
+- *Type:* number
+
+***
+
+### `slice` <a name="slice" id="cdktn.FnGenerated.slice"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.slice(list: any, start_index: number, end_index: number)
+```
+
+[slice](https://developer.hashicorp.com/terraform/language/functions/slice) extracts some consecutive elements from within a list.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.slice.parameter.list"></a>
+
+- *Type:* any
+
+***
+
+#### `start_index`<sup>Required</sup> <a name="start_index" id="cdktn.FnGenerated.slice.parameter.start_index"></a>
+
+- *Type:* number
+
+***
+
+#### `end_index`<sup>Required</sup> <a name="end_index" id="cdktn.FnGenerated.slice.parameter.end_index"></a>
+
+- *Type:* number
+
+***
+
+### `sort` <a name="sort" id="cdktn.FnGenerated.sort"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.sort(list: string[])
+```
+
+[sort](https://developer.hashicorp.com/terraform/language/functions/sort) takes a list of strings and returns a new list with those strings sorted lexicographically.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.sort.parameter.list"></a>
+
+- *Type:* string\[]
+
+***
+
+### `split` <a name="split" id="cdktn.FnGenerated.split"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.split(separator: string, str: string)
+```
+
+[split](https://developer.hashicorp.com/terraform/language/functions/split) produces a list by dividing a given string at all occurrences of a given separator.
+
+#### `separator`<sup>Required</sup> <a name="separator" id="cdktn.FnGenerated.split.parameter.separator"></a>
+
+- *Type:* string
+
+***
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.split.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `startswith` <a name="startswith" id="cdktn.FnGenerated.startswith"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.startswith(str: string, prefix: string)
+```
+
+[startswith](https://developer.hashicorp.com/terraform/language/functions/startswith) takes two values: a string to check and a prefix string. The function returns true if the string begins with that exact prefix.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.startswith.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.FnGenerated.startswith.parameter.prefix"></a>
+
+- *Type:* string
+
+***
+
+### `strcontains` <a name="strcontains" id="cdktn.FnGenerated.strcontains"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.strcontains(str: string, substr: string)
+```
+
+[strcontains](https://developer.hashicorp.com/terraform/language/functions/strcontains) takes two values: a string to check and an expected substring. The function returns true if the string has the substring contained within it.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.strcontains.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+#### `substr`<sup>Required</sup> <a name="substr" id="cdktn.FnGenerated.strcontains.parameter.substr"></a>
+
+- *Type:* string
+
+***
+
+### `strrev` <a name="strrev" id="cdktn.FnGenerated.strrev"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.strrev(str: string)
+```
+
+[strrev](https://developer.hashicorp.com/terraform/language/functions/strrev) reverses the characters in a string. Note that the characters are treated as *Unicode characters* (in technical terms, Unicode [grapheme cluster boundaries](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries) are respected).
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.strrev.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `substr` <a name="substr" id="cdktn.FnGenerated.substr"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.substr(str: string, offset: number, length: number)
+```
+
+[substr](https://developer.hashicorp.com/terraform/language/functions/substr) extracts a substring from a given string by offset and (maximum) length.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.substr.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+#### `offset`<sup>Required</sup> <a name="offset" id="cdktn.FnGenerated.substr.parameter.offset"></a>
+
+- *Type:* number
+
+***
+
+#### `length`<sup>Required</sup> <a name="length" id="cdktn.FnGenerated.substr.parameter.length"></a>
+
+- *Type:* number
+
+***
+
+### `sum` <a name="sum" id="cdktn.FnGenerated.sum"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.sum(list: any)
+```
+
+[sum](https://developer.hashicorp.com/terraform/language/functions/sum) takes a list or set of numbers and returns the sum of those numbers.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.FnGenerated.sum.parameter.list"></a>
+
+- *Type:* any
+
+***
+
+### `templatefile` <a name="templatefile" id="cdktn.FnGenerated.templatefile"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.templatefile(path: string, vars: any)
+```
+
+[templatefile](https://developer.hashicorp.com/terraform/language/functions/templatefile) reads the file at the given path and renders its content as a template using a supplied set of template variables.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.FnGenerated.templatefile.parameter.path"></a>
+
+- *Type:* string
+
+***
+
+#### `vars`<sup>Required</sup> <a name="vars" id="cdktn.FnGenerated.templatefile.parameter.vars"></a>
+
+- *Type:* any
+
+***
+
+### `textdecodebase64` <a name="textdecodebase64" id="cdktn.FnGenerated.textdecodebase64"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.textdecodebase64(source: string, encoding: string)
+```
+
+[textdecodebase64](https://developer.hashicorp.com/terraform/language/functions/textdecodebase64) function decodes a string that was previously Base64-encoded, and then interprets the result as characters in a specified character encoding.
+
+#### `source`<sup>Required</sup> <a name="source" id="cdktn.FnGenerated.textdecodebase64.parameter.source"></a>
+
+- *Type:* string
+
+***
+
+#### `encoding`<sup>Required</sup> <a name="encoding" id="cdktn.FnGenerated.textdecodebase64.parameter.encoding"></a>
+
+- *Type:* string
+
+***
+
+### `textencodebase64` <a name="textencodebase64" id="cdktn.FnGenerated.textencodebase64"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.textencodebase64(str: string, encoding: string)
+```
+
+[textencodebase64](https://developer.hashicorp.com/terraform/language/functions/textencodebase64) encodes the unicode characters in a given string using a specified character encoding, returning the result base64 encoded because Terraform language strings are always sequences of unicode characters.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.textencodebase64.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+#### `encoding`<sup>Required</sup> <a name="encoding" id="cdktn.FnGenerated.textencodebase64.parameter.encoding"></a>
+
+- *Type:* string
+
+***
+
+### `timeadd` <a name="timeadd" id="cdktn.FnGenerated.timeadd"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.timeadd(timestamp: string, duration: string)
+```
+
+[timeadd](https://developer.hashicorp.com/terraform/language/functions/timeadd) adds a duration to a timestamp, returning a new timestamp.
+
+#### `timestamp`<sup>Required</sup> <a name="timestamp" id="cdktn.FnGenerated.timeadd.parameter.timestamp"></a>
+
+- *Type:* string
+
+***
+
+#### `duration`<sup>Required</sup> <a name="duration" id="cdktn.FnGenerated.timeadd.parameter.duration"></a>
+
+- *Type:* string
+
+***
+
+### `timecmp` <a name="timecmp" id="cdktn.FnGenerated.timecmp"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.timecmp(timestamp_a: string, timestamp_b: string)
+```
+
+[timecmp](https://developer.hashicorp.com/terraform/language/functions/timecmp) compares two timestamps and returns a number that represents the ordering of the instants those timestamps represent.
+
+#### `timestamp_a`<sup>Required</sup> <a name="timestamp_a" id="cdktn.FnGenerated.timecmp.parameter.timestamp_a"></a>
+
+- *Type:* string
+
+***
+
+#### `timestamp_b`<sup>Required</sup> <a name="timestamp_b" id="cdktn.FnGenerated.timecmp.parameter.timestamp_b"></a>
+
+- *Type:* string
+
+***
+
+### `timestamp` <a name="timestamp" id="cdktn.FnGenerated.timestamp"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.timestamp()
+```
+
+[timestamp](https://developer.hashicorp.com/terraform/language/functions/timestamp) returns a UTC timestamp string in [RFC 3339](https://tools.ietf.org/html/rfc3339) format.
+
+### `title` <a name="title" id="cdktn.FnGenerated.title"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.title(str: string)
+```
+
+[title](https://developer.hashicorp.com/terraform/language/functions/title) converts the first letter of each word in the given string to uppercase.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.title.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `tobool` <a name="tobool" id="cdktn.FnGenerated.tobool"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.tobool(v: any)
+```
+
+[tobool](https://developer.hashicorp.com/terraform/language/functions/tobool) converts its argument to a boolean value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.FnGenerated.tobool.parameter.v"></a>
+
+- *Type:* any
+
+***
+
+### `tolist` <a name="tolist" id="cdktn.FnGenerated.tolist"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.tolist(v: any)
+```
+
+[tolist](https://developer.hashicorp.com/terraform/language/functions/tolist) converts its argument to a list value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.FnGenerated.tolist.parameter.v"></a>
+
+- *Type:* any
+
+***
+
+### `tomap` <a name="tomap" id="cdktn.FnGenerated.tomap"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.tomap(v: any)
+```
+
+[tomap](https://developer.hashicorp.com/terraform/language/functions/tomap) converts its argument to a map value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.FnGenerated.tomap.parameter.v"></a>
+
+- *Type:* any
+
+***
+
+### `tonumber` <a name="tonumber" id="cdktn.FnGenerated.tonumber"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.tonumber(v: any)
+```
+
+[tonumber](https://developer.hashicorp.com/terraform/language/functions/tonumber) converts its argument to a number value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.FnGenerated.tonumber.parameter.v"></a>
+
+- *Type:* any
+
+***
+
+### `toset` <a name="toset" id="cdktn.FnGenerated.toset"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.toset(v: any)
+```
+
+[toset](https://developer.hashicorp.com/terraform/language/functions/toset) converts its argument to a set value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.FnGenerated.toset.parameter.v"></a>
+
+- *Type:* any
+
+***
+
+### `tostring` <a name="tostring" id="cdktn.FnGenerated.tostring"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.tostring(v: any)
+```
+
+[tostring](https://developer.hashicorp.com/terraform/language/functions/tostring) converts its argument to a string value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.FnGenerated.tostring.parameter.v"></a>
+
+- *Type:* any
+
+***
+
+### `transpose` <a name="transpose" id="cdktn.FnGenerated.transpose"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.transpose(values: any)
+```
+
+[transpose](https://developer.hashicorp.com/terraform/language/functions/transpose) takes a map of lists of strings and swaps the keys and values to produce a new map of lists of strings.
+
+#### `values`<sup>Required</sup> <a name="values" id="cdktn.FnGenerated.transpose.parameter.values"></a>
+
+- *Type:* any
+
+***
+
+### `trim` <a name="trim" id="cdktn.FnGenerated.trim"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.trim(str: string, cutset: string)
+```
+
+[trim](https://developer.hashicorp.com/terraform/language/functions/trim) removes the specified set of characters from the start and end of the given string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.trim.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+#### `cutset`<sup>Required</sup> <a name="cutset" id="cdktn.FnGenerated.trim.parameter.cutset"></a>
+
+- *Type:* string
+
+***
+
+### `trimprefix` <a name="trimprefix" id="cdktn.FnGenerated.trimprefix"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.trimprefix(str: string, prefix: string)
+```
+
+[trimprefix](https://developer.hashicorp.com/terraform/language/functions/trimprefix) removes the specified prefix from the start of the given string. If the string does not start with the prefix, the string is returned unchanged.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.trimprefix.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.FnGenerated.trimprefix.parameter.prefix"></a>
+
+- *Type:* string
+
+***
+
+### `trimspace` <a name="trimspace" id="cdktn.FnGenerated.trimspace"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.trimspace(str: string)
+```
+
+[trimspace](https://developer.hashicorp.com/terraform/language/functions/trimspace) removes any space characters from the start and end of the given string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.trimspace.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `trimsuffix` <a name="trimsuffix" id="cdktn.FnGenerated.trimsuffix"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.trimsuffix(str: string, suffix: string)
+```
+
+[trimsuffix](https://developer.hashicorp.com/terraform/language/functions/trimsuffix) removes the specified suffix from the end of the given string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.trimsuffix.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+#### `suffix`<sup>Required</sup> <a name="suffix" id="cdktn.FnGenerated.trimsuffix.parameter.suffix"></a>
+
+- *Type:* string
+
+***
+
+### `try` <a name="try" id="cdktn.FnGenerated.try"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.try(expressions: any[])
+```
+
+[try](https://developer.hashicorp.com/terraform/language/functions/try) evaluates all of its argument expressions in turn and returns the result of the first one that does not produce any errors.
+
+#### `expressions`<sup>Required</sup> <a name="expressions" id="cdktn.FnGenerated.try.parameter.expressions"></a>
+
+- *Type:* any\[]
+
+***
+
+### `upper` <a name="upper" id="cdktn.FnGenerated.upper"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.upper(str: string)
+```
+
+[upper](https://developer.hashicorp.com/terraform/language/functions/upper) converts all cased letters in the given string to uppercase.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.upper.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `urlencode` <a name="urlencode" id="cdktn.FnGenerated.urlencode"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.urlencode(str: string)
+```
+
+[urlencode](https://developer.hashicorp.com/terraform/language/functions/urlencode) applies URL encoding to a given string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.FnGenerated.urlencode.parameter.str"></a>
+
+- *Type:* string
+
+***
+
+### `uuid` <a name="uuid" id="cdktn.FnGenerated.uuid"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.uuid()
+```
+
+[uuid](https://developer.hashicorp.com/terraform/language/functions/uuid) generates a unique identifier string.
+
+### `uuidv5` <a name="uuidv5" id="cdktn.FnGenerated.uuidv5"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.uuidv5(namespace: string, name: string)
+```
+
+[uuidv5](https://developer.hashicorp.com/terraform/language/functions/uuidv5) generates a *name-based* UUID, as described in [RFC 4122 section 4.3](https://tools.ietf.org/html/rfc4122#section-4.3), also known as a "version 5" UUID.
+
+#### `namespace`<sup>Required</sup> <a name="namespace" id="cdktn.FnGenerated.uuidv5.parameter.namespace"></a>
+
+- *Type:* string
+
+***
+
+#### `name`<sup>Required</sup> <a name="name" id="cdktn.FnGenerated.uuidv5.parameter.name"></a>
+
+- *Type:* string
+
+***
+
+### `values` <a name="values" id="cdktn.FnGenerated.values"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.values(mapping: any)
+```
+
+[values](https://developer.hashicorp.com/terraform/language/functions/values) takes a map and returns a list containing the values of the elements in that map.
+
+#### `mapping`<sup>Required</sup> <a name="mapping" id="cdktn.FnGenerated.values.parameter.mapping"></a>
+
+- *Type:* any
+
+***
+
+### `yamldecode` <a name="yamldecode" id="cdktn.FnGenerated.yamldecode"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.yamldecode(src: string)
+```
+
+[yamldecode](https://developer.hashicorp.com/terraform/language/functions/yamldecode) parses a string as a subset of YAML, and produces a representation of its value.
+
+#### `src`<sup>Required</sup> <a name="src" id="cdktn.FnGenerated.yamldecode.parameter.src"></a>
+
+- *Type:* string
+
+***
+
+### `yamlencode` <a name="yamlencode" id="cdktn.FnGenerated.yamlencode"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.yamlencode(value: any)
+```
+
+[yamlencode](https://developer.hashicorp.com/terraform/language/functions/yamlencode) encodes a given value to a string using [YAML 1.2](https://yaml.org/spec/1.2/spec.html) block syntax.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.FnGenerated.yamlencode.parameter.value"></a>
+
+- *Type:* any
+
+***
+
+### `zipmap` <a name="zipmap" id="cdktn.FnGenerated.zipmap"></a>
+
+```typescript
+import { FnGenerated } from 'cdktn'
+
+FnGenerated.zipmap(keys: string[], values: any)
+```
+
+[zipmap](https://developer.hashicorp.com/terraform/language/functions/zipmap) constructs a map from a list of keys and a corresponding list of values.
+
+#### `keys`<sup>Required</sup> <a name="keys" id="cdktn.FnGenerated.zipmap.parameter.keys"></a>
+
+- *Type:* string\[]
+
+***
+
+#### `values`<sup>Required</sup> <a name="values" id="cdktn.FnGenerated.zipmap.parameter.values"></a>
+
+- *Type:* any
+
+***
+

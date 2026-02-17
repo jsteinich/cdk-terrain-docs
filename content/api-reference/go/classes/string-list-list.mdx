@@ -1,0 +1,145 @@
+---
+title: "Go: StringListList"
+sidebarTitle: StringListList
+description: CDKTN Core API Reference for StringListList in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.StringListList.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewStringListList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StringListList
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.StringListList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code><a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a></code> | *No description.* |
+| <code><a href="#cdktn.StringListList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>\*string</code> | *No description.* |
+| <code><a href="#cdktn.StringListList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>\*bool</code> | *No description.* |
+
+***
+
+### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="cdktn.StringListList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* <a href="#cdktn.IInterpolatingParent">IInterpolatingParent</a>
+
+***
+
+### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="cdktn.StringListList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* \*string
+
+***
+
+### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="cdktn.StringListList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* \*bool
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.StringListList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#cdktn.StringListList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#cdktn.StringListList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#cdktn.StringListList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#cdktn.StringListList.get">Get</a></code> | *No description.* |
+
+***
+
+### `AllWithMapKey` <a name="AllWithMapKey" id="cdktn.StringListList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+#### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="cdktn.StringListList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* \*string
+
+***
+
+### `ComputeFqn` <a name="ComputeFqn" id="cdktn.StringListList.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+### `Resolve` <a name="Resolve" id="cdktn.StringListList.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+#### `_context`<sup>Required</sup> <a name="_context" id="cdktn.StringListList.resolve.parameter._context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+### `ToString` <a name="ToString" id="cdktn.StringListList.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+### `Get` <a name="Get" id="cdktn.StringListList.get"></a>
+
+```go
+func Get(index *f64) *[]*string
+```
+
+#### `index`<sup>Required</sup> <a name="index" id="cdktn.StringListList.get.parameter.index"></a>
+
+- *Type:* \*f64
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.StringListList.property.creationStack">CreationStack</a></code> | <code>\*\[]\*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#cdktn.StringListList.property.fqn">Fqn</a></code> | <code>\*string</code> | *No description.* |
+
+***
+
+### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="cdktn.StringListList.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* \*\[]\*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+***
+
+### `Fqn`<sup>Required</sup> <a name="Fqn" id="cdktn.StringListList.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* \*string
+
+***
+

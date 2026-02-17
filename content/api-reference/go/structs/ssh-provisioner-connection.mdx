@@ -1,0 +1,415 @@
+---
+title: "Go: SSHProvisionerConnection"
+sidebarTitle: SSHProvisionerConnection
+description: CDKTN Core API Reference for SSHProvisionerConnection in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Most provisioners require access to the remote resource via SSH or WinRM and expect a nested connection block with details about how to connect.
+
+Refer to [connection](https://developer.hashicorp.com/terraform/language/resources/provisioners/connection)
+
+## Initializer <a name="Initializer" id="cdktn.SSHProvisionerConnection.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+&cdktn.SSHProvisionerConnection {
+	Host: *string,
+	Type: *string,
+	Agent: *string,
+	AgentIdentity: *string,
+	BastionCertificate: *string,
+	BastionHost: *string,
+	BastionHostKey: *string,
+	BastionPassword: *string,
+	BastionPort: *f64,
+	BastionPrivateKey: *string,
+	BastionUser: *string,
+	Certificate: *string,
+	HostKey: *string,
+	Password: *string,
+	Port: *f64,
+	PrivateKey: *string,
+	ProxyHost: *string,
+	ProxyPort: *f64,
+	ProxyScheme: *string,
+	ProxyUserName: *string,
+	ProxyUserPassword: *string,
+	ScriptPath: *string,
+	TargetPlatform: *string,
+	Timeout: *string,
+	User: *string,
+}
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.host">Host</a></code> | <code>\*string</code> | The address of the resource to connect to. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.type">Type</a></code> | <code>\*string</code> | The connection type. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.agent">Agent</a></code> | <code>\*string</code> | Set to false to disable using ssh-agent to authenticate. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.agentIdentity">AgentIdentity</a></code> | <code>\*string</code> | The preferred identity from the ssh agent for authentication. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.bastionCertificate">BastionCertificate</a></code> | <code>\*string</code> | The contents of a signed CA Certificate. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.bastionHost">BastionHost</a></code> | <code>\*string</code> | Setting this enables the bastion Host connection. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.bastionHostKey">BastionHostKey</a></code> | <code>\*string</code> | The public key from the remote host or the signing CA, used to verify the host connection. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.bastionPassword">BastionPassword</a></code> | <code>\*string</code> | The password to use for the bastion host. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.bastionPort">BastionPort</a></code> | <code>\*f64</code> | The port to use connect to the bastion host. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.bastionPrivateKey">BastionPrivateKey</a></code> | <code>\*string</code> | The contents of an SSH key file to use for the bastion host. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.bastionUser">BastionUser</a></code> | <code>\*string</code> | The user for the connection to the bastion host. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.certificate">Certificate</a></code> | <code>\*string</code> | The contents of a signed CA Certificate. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.hostKey">HostKey</a></code> | <code>\*string</code> | The public key from the remote host or the signing CA, used to verify the connection. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.password">Password</a></code> | <code>\*string</code> | The password to use for the connection. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.port">Port</a></code> | <code>\*f64</code> | The port to connect to. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.privateKey">PrivateKey</a></code> | <code>\*string</code> | The contents of an SSH key to use for the connection. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.proxyHost">ProxyHost</a></code> | <code>\*string</code> | Setting this enables the SSH over HTTP connection. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.proxyPort">ProxyPort</a></code> | <code>\*f64</code> | The port to use connect to the proxy host. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.proxyScheme">ProxyScheme</a></code> | <code>\*string</code> | The ssh connection also supports the following fields to facilitate connections by SSH over HTTP proxy. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.proxyUserName">ProxyUserName</a></code> | <code>\*string</code> | The username to use connect to the private proxy host. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.proxyUserPassword">ProxyUserPassword</a></code> | <code>\*string</code> | The password to use connect to the private proxy host. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.scriptPath">ScriptPath</a></code> | <code>\*string</code> | The path used to copy scripts meant for remote execution. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.targetPlatform">TargetPlatform</a></code> | <code>\*string</code> | The target platform to connect to. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.timeout">Timeout</a></code> | <code>\*string</code> | The timeout to wait for the connection to become available. |
+| <code><a href="#cdktn.SSHProvisionerConnection.property.user">User</a></code> | <code>\*string</code> | The user to use for the connection. |
+
+***
+
+### `Host`<sup>Required</sup> <a name="Host" id="cdktn.SSHProvisionerConnection.property.host"></a>
+
+```go
+Host *string
+```
+
+- *Type:* \*string
+
+The address of the resource to connect to.
+
+***
+
+### `Type`<sup>Required</sup> <a name="Type" id="cdktn.SSHProvisionerConnection.property.type"></a>
+
+```go
+Type *string
+```
+
+- *Type:* \*string
+
+The connection type.
+
+Valid values are "ssh" and "winrm".
+Provisioners typically assume that the remote system runs Microsoft Windows when using WinRM.
+Behaviors based on the SSH target\_platform will force Windows-specific behavior for WinRM, unless otherwise specified.
+
+***
+
+### `Agent`<sup>Optional</sup> <a name="Agent" id="cdktn.SSHProvisionerConnection.property.agent"></a>
+
+```go
+Agent *string
+```
+
+- *Type:* \*string
+
+Set to false to disable using ssh-agent to authenticate.
+
+On Windows the only supported SSH authentication agent is Pageant.
+
+***
+
+### `AgentIdentity`<sup>Optional</sup> <a name="AgentIdentity" id="cdktn.SSHProvisionerConnection.property.agentIdentity"></a>
+
+```go
+AgentIdentity *string
+```
+
+- *Type:* \*string
+
+The preferred identity from the ssh agent for authentication.
+
+***
+
+### `BastionCertificate`<sup>Optional</sup> <a name="BastionCertificate" id="cdktn.SSHProvisionerConnection.property.bastionCertificate"></a>
+
+```go
+BastionCertificate *string
+```
+
+- *Type:* \*string
+
+The contents of a signed CA Certificate.
+
+The certificate argument must be used in conjunction with a bastion\_private\_key.
+These can be loaded from a file on disk using the the file function.
+
+***
+
+### `BastionHost`<sup>Optional</sup> <a name="BastionHost" id="cdktn.SSHProvisionerConnection.property.bastionHost"></a>
+
+```go
+BastionHost *string
+```
+
+- *Type:* \*string
+
+Setting this enables the bastion Host connection.
+
+The provisioner will connect to bastion\_host first, and then connect from there to host.
+
+***
+
+### `BastionHostKey`<sup>Optional</sup> <a name="BastionHostKey" id="cdktn.SSHProvisionerConnection.property.bastionHostKey"></a>
+
+```go
+BastionHostKey *string
+```
+
+- *Type:* \*string
+
+The public key from the remote host or the signing CA, used to verify the host connection.
+
+***
+
+### `BastionPassword`<sup>Optional</sup> <a name="BastionPassword" id="cdktn.SSHProvisionerConnection.property.bastionPassword"></a>
+
+```go
+BastionPassword *string
+```
+
+- *Type:* \*string
+
+The password to use for the bastion host.
+
+***
+
+### `BastionPort`<sup>Optional</sup> <a name="BastionPort" id="cdktn.SSHProvisionerConnection.property.bastionPort"></a>
+
+```go
+BastionPort *f64
+```
+
+- *Type:* \*f64
+
+The port to use connect to the bastion host.
+
+***
+
+### `BastionPrivateKey`<sup>Optional</sup> <a name="BastionPrivateKey" id="cdktn.SSHProvisionerConnection.property.bastionPrivateKey"></a>
+
+```go
+BastionPrivateKey *string
+```
+
+- *Type:* \*string
+
+The contents of an SSH key file to use for the bastion host.
+
+These can be loaded from a file on disk using the file function.
+
+***
+
+### `BastionUser`<sup>Optional</sup> <a name="BastionUser" id="cdktn.SSHProvisionerConnection.property.bastionUser"></a>
+
+```go
+BastionUser *string
+```
+
+- *Type:* \*string
+
+The user for the connection to the bastion host.
+
+***
+
+### `Certificate`<sup>Optional</sup> <a name="Certificate" id="cdktn.SSHProvisionerConnection.property.certificate"></a>
+
+```go
+Certificate *string
+```
+
+- *Type:* \*string
+
+The contents of a signed CA Certificate.
+
+The certificate argument must be used in conjunction with a private\_key.
+These can be loaded from a file on disk using the the file function.
+
+***
+
+### `HostKey`<sup>Optional</sup> <a name="HostKey" id="cdktn.SSHProvisionerConnection.property.hostKey"></a>
+
+```go
+HostKey *string
+```
+
+- *Type:* \*string
+
+The public key from the remote host or the signing CA, used to verify the connection.
+
+***
+
+### `Password`<sup>Optional</sup> <a name="Password" id="cdktn.SSHProvisionerConnection.property.password"></a>
+
+```go
+Password *string
+```
+
+- *Type:* \*string
+
+The password to use for the connection.
+
+***
+
+### `Port`<sup>Optional</sup> <a name="Port" id="cdktn.SSHProvisionerConnection.property.port"></a>
+
+```go
+Port *f64
+```
+
+- *Type:* \*f64
+- *Default:* 22
+
+The port to connect to.
+
+***
+
+### `PrivateKey`<sup>Optional</sup> <a name="PrivateKey" id="cdktn.SSHProvisionerConnection.property.privateKey"></a>
+
+```go
+PrivateKey *string
+```
+
+- *Type:* \*string
+
+The contents of an SSH key to use for the connection.
+
+These can be loaded from a file on disk using the file function.
+This takes preference over password if provided.
+
+***
+
+### `ProxyHost`<sup>Optional</sup> <a name="ProxyHost" id="cdktn.SSHProvisionerConnection.property.proxyHost"></a>
+
+```go
+ProxyHost *string
+```
+
+- *Type:* \*string
+
+Setting this enables the SSH over HTTP connection.
+
+This host will be connected to first, and then the host or bastion\_host connection will be made from there.
+
+***
+
+### `ProxyPort`<sup>Optional</sup> <a name="ProxyPort" id="cdktn.SSHProvisionerConnection.property.proxyPort"></a>
+
+```go
+ProxyPort *f64
+```
+
+- *Type:* \*f64
+
+The port to use connect to the proxy host.
+
+***
+
+### `ProxyScheme`<sup>Optional</sup> <a name="ProxyScheme" id="cdktn.SSHProvisionerConnection.property.proxyScheme"></a>
+
+```go
+ProxyScheme *string
+```
+
+- *Type:* \*string
+
+The ssh connection also supports the following fields to facilitate connections by SSH over HTTP proxy.
+
+***
+
+### `ProxyUserName`<sup>Optional</sup> <a name="ProxyUserName" id="cdktn.SSHProvisionerConnection.property.proxyUserName"></a>
+
+```go
+ProxyUserName *string
+```
+
+- *Type:* \*string
+
+The username to use connect to the private proxy host.
+
+This argument should be specified only if authentication is required for the HTTP Proxy server.
+
+***
+
+### `ProxyUserPassword`<sup>Optional</sup> <a name="ProxyUserPassword" id="cdktn.SSHProvisionerConnection.property.proxyUserPassword"></a>
+
+```go
+ProxyUserPassword *string
+```
+
+- *Type:* \*string
+
+The password to use connect to the private proxy host.
+
+This argument should be specified only if authentication is required for the HTTP Proxy server.
+
+***
+
+### `ScriptPath`<sup>Optional</sup> <a name="ScriptPath" id="cdktn.SSHProvisionerConnection.property.scriptPath"></a>
+
+```go
+ScriptPath *string
+```
+
+- *Type:* \*string
+
+The path used to copy scripts meant for remote execution.
+
+Refer to [How Provisioners Execute Remote Scripts below for more details](https://developer.hashicorp.com/terraform/language/resources/provisioners/connection#how-provisioners-execute-remote-scripts)
+
+***
+
+### `TargetPlatform`<sup>Optional</sup> <a name="TargetPlatform" id="cdktn.SSHProvisionerConnection.property.targetPlatform"></a>
+
+```go
+TargetPlatform *string
+```
+
+- *Type:* \*string
+- *Default:* unix
+
+The target platform to connect to.
+
+Valid values are "windows" and "unix".
+If the platform is set to windows, the default script\_path is c:\windows\temp\terraform\_%RAND%.cmd, assuming the SSH default shell is cmd.exe.
+If the SSH default shell is PowerShell, set script\_path to "c:/windows/temp/terraform\_%RAND%.ps1"
+
+***
+
+### `Timeout`<sup>Optional</sup> <a name="Timeout" id="cdktn.SSHProvisionerConnection.property.timeout"></a>
+
+```go
+Timeout *string
+```
+
+- *Type:* \*string
+- *Default:* 5m
+
+The timeout to wait for the connection to become available.
+
+Should be provided as a string (e.g., "30s" or "5m".)
+
+***
+
+### `User`<sup>Optional</sup> <a name="User" id="cdktn.SSHProvisionerConnection.property.user"></a>
+
+```go
+User *string
+```
+
+- *Type:* \*string
+- *Default:* root
+
+The user to use for the connection.
+
+***
+

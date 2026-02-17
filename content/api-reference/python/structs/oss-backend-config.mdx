@@ -1,0 +1,336 @@
+---
+title: "Python: OssBackendConfig"
+sidebarTitle: OssBackendConfig
+description: CDKTN Core API Reference for OssBackendConfig in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.OssBackendConfig.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.OssBackendConfig(
+  bucket: str,
+  access_key: str = None,
+  acl: str = None,
+  assume_role: OssAssumeRole = None,
+  assume_role_policy: str = None,
+  assume_role_role_arn: str = None,
+  assume_role_session_expiration: typing.Union[int, float] = None,
+  assume_role_session_name: str = None,
+  ecs_role_name: str = None,
+  encrypt: bool = None,
+  endpoint: str = None,
+  key: str = None,
+  prefix: str = None,
+  profile: str = None,
+  region: str = None,
+  secret_key: str = None,
+  security_token: str = None,
+  shared_credentials_file: str = None,
+  sts_endpoint: str = None,
+  tablestore_endpoint: str = None,
+  tablestore_table: str = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.OssBackendConfig.property.bucket">bucket</a></code> | <code>str</code> | (Required) The name of the OSS bucket. |
+| <code><a href="#cdktn.OssBackendConfig.property.accessKey">access\_key</a></code> | <code>str</code> | (Optional) Alibaba Cloud access key. |
+| <code><a href="#cdktn.OssBackendConfig.property.acl">acl</a></code> | <code>str</code> | (Optional) Object ACL to be applied to the state file. |
+| <code><a href="#cdktn.OssBackendConfig.property.assumeRole">assume\_role</a></code> | <code><a href="#cdktn.OssAssumeRole">OssAssumeRole</a></code> | *No description.* |
+| <code><a href="#cdktn.OssBackendConfig.property.assumeRolePolicy">assume\_role\_policy</a></code> | <code>str</code> | (Optional, Available in 1.1.0+) A more restrictive policy to apply to the temporary credentials. This gives you a way to further restrict the permissions for the resulting temporary security credentials. You cannot use this policy to grant permissions that exceed those of the role that is being assumed. |
+| <code><a href="#cdktn.OssBackendConfig.property.assumeRoleRoleArn">assume\_role\_role\_arn</a></code> | <code>str</code> | (Optional, Available in 1.1.0+) The ARN of the role to assume. If ARN is set to an empty string, it does not perform role switching. It supports the environment variable ALICLOUD\_ASSUME\_ROLE\_ARN. Terraform executes configuration on account with provided credentials. |
+| <code><a href="#cdktn.OssBackendConfig.property.assumeRoleSessionExpiration">assume\_role\_session\_expiration</a></code> | <code>typing.Union\[int, float]</code> | (Optional, Available in 1.1.0+) The time after which the established session for assuming role expires. Valid value range: \[900-3600] seconds. Default to 3600 (in this case Alibaba Cloud uses its own default value). It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_EXPIRATION. |
+| <code><a href="#cdktn.OssBackendConfig.property.assumeRoleSessionName">assume\_role\_session\_name</a></code> | <code>str</code> | (Optional, Available in 1.1.0+) The session name to use when assuming the role. If omitted, 'terraform' is passed to the AssumeRole call as session name. It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_NAME. |
+| <code><a href="#cdktn.OssBackendConfig.property.ecsRoleName">ecs\_role\_name</a></code> | <code>str</code> | (Optional, Available in 0.12.14+) The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section of the Alibaba Cloud console. |
+| <code><a href="#cdktn.OssBackendConfig.property.encrypt">encrypt</a></code> | <code>bool</code> | (Optional) Whether to enable server side encryption of the state file. |
+| <code><a href="#cdktn.OssBackendConfig.property.endpoint">endpoint</a></code> | <code>str</code> | (Optional) A custom endpoint for the OSS API. |
+| <code><a href="#cdktn.OssBackendConfig.property.key">key</a></code> | <code>str</code> | (Optional) The name of the state file. |
+| <code><a href="#cdktn.OssBackendConfig.property.prefix">prefix</a></code> | <code>str</code> | (Optional) The path directory of the state file will be stored. |
+| <code><a href="#cdktn.OssBackendConfig.property.profile">profile</a></code> | <code>str</code> | (Optional, Available in 0.12.8+) This is the Alibaba Cloud profile name as set in the shared credentials file. It can also be sourced from the ALICLOUD\_PROFILE environment variable. |
+| <code><a href="#cdktn.OssBackendConfig.property.region">region</a></code> | <code>str</code> | (Optional) The region of the OSS bucket. |
+| <code><a href="#cdktn.OssBackendConfig.property.secretKey">secret\_key</a></code> | <code>str</code> | (Optional) Alibaba Cloud secret access key. |
+| <code><a href="#cdktn.OssBackendConfig.property.securityToken">security\_token</a></code> | <code>str</code> | (Optional) STS access token. |
+| <code><a href="#cdktn.OssBackendConfig.property.sharedCredentialsFile">shared\_credentials\_file</a></code> | <code>str</code> | (Optional, Available in 0.12.8+) This is the path to the shared credentials file. It can also be sourced from the ALICLOUD\_SHARED\_CREDENTIALS\_FILE environment variable. If this is not set and a profile is specified, ~/.aliyun/config.json will be used. |
+| <code><a href="#cdktn.OssBackendConfig.property.stsEndpoint">sts\_endpoint</a></code> | <code>str</code> | (Optional, Available in 1.0.11+) Custom endpoint for the AliCloud Security Token Service (STS) API. It supports environment variable ALICLOUD\_STS\_ENDPOINT. |
+| <code><a href="#cdktn.OssBackendConfig.property.tablestoreEndpoint">tablestore\_endpoint</a></code> | <code>str</code> | (Optional) A custom endpoint for the TableStore API. |
+| <code><a href="#cdktn.OssBackendConfig.property.tablestoreTable">tablestore\_table</a></code> | <code>str</code> | (Optional) A TableStore table for state locking and consistency. |
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.OssBackendConfig.property.bucket"></a>
+
+```python
+bucket: str
+```
+
+- *Type:* str
+
+(Required) The name of the OSS bucket.
+
+***
+
+### `access_key`<sup>Optional</sup> <a name="access_key" id="cdktn.OssBackendConfig.property.accessKey"></a>
+
+```python
+access_key: str
+```
+
+- *Type:* str
+
+(Optional) Alibaba Cloud access key.
+
+It supports environment variables ALICLOUD\_ACCESS\_KEY and ALICLOUD\_ACCESS\_KEY\_ID.
+
+***
+
+### `acl`<sup>Optional</sup> <a name="acl" id="cdktn.OssBackendConfig.property.acl"></a>
+
+```python
+acl: str
+```
+
+- *Type:* str
+
+(Optional) Object ACL to be applied to the state file.
+
+***
+
+### ~~`assume_role`~~<sup>Optional</sup> <a name="assume_role" id="cdktn.OssBackendConfig.property.assumeRole"></a>
+
+- *Deprecated:* Use flattened assume role options
+
+```python
+assume_role: OssAssumeRole
+```
+
+- *Type:* <a href="#cdktn.OssAssumeRole">OssAssumeRole</a>
+
+***
+
+### `assume_role_policy`<sup>Optional</sup> <a name="assume_role_policy" id="cdktn.OssBackendConfig.property.assumeRolePolicy"></a>
+
+```python
+assume_role_policy: str
+```
+
+- *Type:* str
+
+(Optional, Available in 1.1.0+) A more restrictive policy to apply to the temporary credentials. This gives you a way to further restrict the permissions for the resulting temporary security credentials. You cannot use this policy to grant permissions that exceed those of the role that is being assumed.
+
+***
+
+### `assume_role_role_arn`<sup>Optional</sup> <a name="assume_role_role_arn" id="cdktn.OssBackendConfig.property.assumeRoleRoleArn"></a>
+
+```python
+assume_role_role_arn: str
+```
+
+- *Type:* str
+
+(Optional, Available in 1.1.0+) The ARN of the role to assume. If ARN is set to an empty string, it does not perform role switching. It supports the environment variable ALICLOUD\_ASSUME\_ROLE\_ARN. Terraform executes configuration on account with provided credentials.
+
+***
+
+### `assume_role_session_expiration`<sup>Optional</sup> <a name="assume_role_session_expiration" id="cdktn.OssBackendConfig.property.assumeRoleSessionExpiration"></a>
+
+```python
+assume_role_session_expiration: typing.Union[int, float]
+```
+
+- *Type:* typing.Union\[int, float]
+
+(Optional, Available in 1.1.0+) The time after which the established session for assuming role expires. Valid value range: \[900-3600] seconds. Default to 3600 (in this case Alibaba Cloud uses its own default value). It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_EXPIRATION.
+
+***
+
+### `assume_role_session_name`<sup>Optional</sup> <a name="assume_role_session_name" id="cdktn.OssBackendConfig.property.assumeRoleSessionName"></a>
+
+```python
+assume_role_session_name: str
+```
+
+- *Type:* str
+
+(Optional, Available in 1.1.0+) The session name to use when assuming the role. If omitted, 'terraform' is passed to the AssumeRole call as session name. It supports environment variable ALICLOUD\_ASSUME\_ROLE\_SESSION\_NAME.
+
+***
+
+### `ecs_role_name`<sup>Optional</sup> <a name="ecs_role_name" id="cdktn.OssBackendConfig.property.ecsRoleName"></a>
+
+```python
+ecs_role_name: str
+```
+
+- *Type:* str
+
+(Optional, Available in 0.12.14+) The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section of the Alibaba Cloud console.
+
+***
+
+### `encrypt`<sup>Optional</sup> <a name="encrypt" id="cdktn.OssBackendConfig.property.encrypt"></a>
+
+```python
+encrypt: bool
+```
+
+- *Type:* bool
+
+(Optional) Whether to enable server side encryption of the state file.
+
+If it is true, OSS will use 'AES256' encryption algorithm to encrypt state file.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.OssBackendConfig.property.endpoint"></a>
+
+```python
+endpoint: str
+```
+
+- *Type:* str
+
+(Optional) A custom endpoint for the OSS API.
+
+It supports environment variables ALICLOUD\_OSS\_ENDPOINT and OSS\_ENDPOINT.
+
+***
+
+### `key`<sup>Optional</sup> <a name="key" id="cdktn.OssBackendConfig.property.key"></a>
+
+```python
+key: str
+```
+
+- *Type:* str
+
+(Optional) The name of the state file.
+
+Defaults to terraform.tfstate.
+
+***
+
+### `prefix`<sup>Optional</sup> <a name="prefix" id="cdktn.OssBackendConfig.property.prefix"></a>
+
+```python
+prefix: str
+```
+
+- *Type:* str
+
+(Optional) The path directory of the state file will be stored.
+
+Default to "env:".
+
+***
+
+### `profile`<sup>Optional</sup> <a name="profile" id="cdktn.OssBackendConfig.property.profile"></a>
+
+```python
+profile: str
+```
+
+- *Type:* str
+
+(Optional, Available in 0.12.8+) This is the Alibaba Cloud profile name as set in the shared credentials file. It can also be sourced from the ALICLOUD\_PROFILE environment variable.
+
+***
+
+### `region`<sup>Optional</sup> <a name="region" id="cdktn.OssBackendConfig.property.region"></a>
+
+```python
+region: str
+```
+
+- *Type:* str
+
+(Optional) The region of the OSS bucket.
+
+It supports environment variables ALICLOUD\_REGION and ALICLOUD\_DEFAULT\_REGION.
+
+***
+
+### `secret_key`<sup>Optional</sup> <a name="secret_key" id="cdktn.OssBackendConfig.property.secretKey"></a>
+
+```python
+secret_key: str
+```
+
+- *Type:* str
+
+(Optional) Alibaba Cloud secret access key.
+
+It supports environment variables ALICLOUD\_SECRET\_KEY and ALICLOUD\_ACCESS\_KEY\_SECRET.
+
+***
+
+### `security_token`<sup>Optional</sup> <a name="security_token" id="cdktn.OssBackendConfig.property.securityToken"></a>
+
+```python
+security_token: str
+```
+
+- *Type:* str
+
+(Optional) STS access token.
+
+It supports environment variable ALICLOUD\_SECURITY\_TOKEN.
+
+***
+
+### `shared_credentials_file`<sup>Optional</sup> <a name="shared_credentials_file" id="cdktn.OssBackendConfig.property.sharedCredentialsFile"></a>
+
+```python
+shared_credentials_file: str
+```
+
+- *Type:* str
+
+(Optional, Available in 0.12.8+) This is the path to the shared credentials file. It can also be sourced from the ALICLOUD\_SHARED\_CREDENTIALS\_FILE environment variable. If this is not set and a profile is specified, ~/.aliyun/config.json will be used.
+
+***
+
+### `sts_endpoint`<sup>Optional</sup> <a name="sts_endpoint" id="cdktn.OssBackendConfig.property.stsEndpoint"></a>
+
+```python
+sts_endpoint: str
+```
+
+- *Type:* str
+
+(Optional, Available in 1.0.11+) Custom endpoint for the AliCloud Security Token Service (STS) API. It supports environment variable ALICLOUD\_STS\_ENDPOINT.
+
+***
+
+### `tablestore_endpoint`<sup>Optional</sup> <a name="tablestore_endpoint" id="cdktn.OssBackendConfig.property.tablestoreEndpoint"></a>
+
+```python
+tablestore_endpoint: str
+```
+
+- *Type:* str
+
+(Optional) A custom endpoint for the TableStore API.
+
+***
+
+### `tablestore_table`<sup>Optional</sup> <a name="tablestore_table" id="cdktn.OssBackendConfig.property.tablestoreTable"></a>
+
+```python
+tablestore_table: str
+```
+
+- *Type:* str
+
+(Optional) A TableStore table for state locking and consistency.
+
+The table must have a primary key named LockID of type String.
+
+***
+

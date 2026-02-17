@@ -1,0 +1,269 @@
+---
+title: "Go: PgBackend"
+sidebarTitle: PgBackend
+description: CDKTN Core API Reference for PgBackend in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.PgBackend.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewPgBackend(scope Construct, props PgBackendConfig) PgBackend
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.scope">scope</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Construct</code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.props">props</a></code> | <code><a href="#cdktn.PgBackendConfig">PgBackendConfig</a></code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.PgBackend.Initializer.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+***
+
+### `props`<sup>Required</sup> <a name="props" id="cdktn.PgBackend.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#cdktn.PgBackendConfig">PgBackendConfig</a>
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.PgBackend.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.PgBackend.addOverride">AddOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.PgBackend.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.PgBackend.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.toMetadata">ToMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.PgBackend.getRemoteStateDataSource">GetRemoteStateDataSource</a></code> | Creates a TerraformRemoteState resource that accesses this backend. |
+
+***
+
+### `ToString` <a name="ToString" id="cdktn.PgBackend.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Returns a string representation of this construct.
+
+### `AddOverride` <a name="AddOverride" id="cdktn.PgBackend.addOverride"></a>
+
+```go
+func AddOverride(path *string, value interface{})
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.PgBackend.addOverride.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.PgBackend.addOverride.parameter.value"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `OverrideLogicalId` <a name="OverrideLogicalId" id="cdktn.PgBackend.overrideLogicalId"></a>
+
+```go
+func OverrideLogicalId(newLogicalId *string)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.PgBackend.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* \*string
+
+The new logical ID to use for this stack element.
+
+***
+
+### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="cdktn.PgBackend.resetOverrideLogicalId"></a>
+
+```go
+func ResetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `ToHclTerraform` <a name="ToHclTerraform" id="cdktn.PgBackend.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+### `ToMetadata` <a name="ToMetadata" id="cdktn.PgBackend.toMetadata"></a>
+
+```go
+func ToMetadata() interface{}
+```
+
+### `ToTerraform` <a name="ToTerraform" id="cdktn.PgBackend.toTerraform"></a>
+
+```go
+func ToTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
+
+### `GetRemoteStateDataSource` <a name="GetRemoteStateDataSource" id="cdktn.PgBackend.getRemoteStateDataSource"></a>
+
+```go
+func GetRemoteStateDataSource(scope Construct, name *string, _fromStack *string) TerraformRemoteState
+```
+
+Creates a TerraformRemoteState resource that accesses this backend.
+
+#### `scope`<sup>Required</sup> <a name="scope" id="cdktn.PgBackend.getRemoteStateDataSource.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+***
+
+#### `name`<sup>Required</sup> <a name="name" id="cdktn.PgBackend.getRemoteStateDataSource.parameter.name"></a>
+
+- *Type:* \*string
+
+***
+
+#### `_fromStack`<sup>Required</sup> <a name="_fromStack" id="cdktn.PgBackend.getRemoteStateDataSource.parameter._fromStack"></a>
+
+- *Type:* \*string
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.PgBackend.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.PgBackend.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.isBackend">IsBackend</a></code> | *No description.* |
+
+***
+
+### `IsConstruct` <a name="IsConstruct" id="cdktn.PgBackend.isConstruct"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.PgBackend_IsConstruct(x interface{}) *bool
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.PgBackend.isConstruct.parameter.x"></a>
+
+- *Type:* interface\{}
+
+Any object.
+
+***
+
+### `IsTerraformElement` <a name="IsTerraformElement" id="cdktn.PgBackend.isTerraformElement"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.PgBackend_IsTerraformElement(x interface{}) *bool
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.PgBackend.isTerraformElement.parameter.x"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `IsBackend` <a name="IsBackend" id="cdktn.PgBackend.isBackend"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.PgBackend_IsBackend(x interface{}) *bool
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.PgBackend.isBackend.parameter.x"></a>
+
+- *Type:* interface\{}
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.PgBackend.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
+| <code><a href="#cdktn.PgBackend.property.cdktfStack">CdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.property.fqn">Fqn</a></code> | <code>\*string</code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>\*string</code> | *No description.* |
+
+***
+
+### `Node`<sup>Required</sup> <a name="Node" id="cdktn.PgBackend.property.node"></a>
+
+```go
+func Node() Node
+```
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Node
+
+The tree node.
+
+***
+
+### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="cdktn.PgBackend.property.cdktfStack"></a>
+
+```go
+func CdktfStack() TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `Fqn`<sup>Required</sup> <a name="Fqn" id="cdktn.PgBackend.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* \*string
+
+***
+
+### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="cdktn.PgBackend.property.friendlyUniqueId"></a>
+
+```go
+func FriendlyUniqueId() *string
+```
+
+- *Type:* \*string
+
+***
+

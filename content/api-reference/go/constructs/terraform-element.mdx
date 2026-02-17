@@ -1,0 +1,232 @@
+---
+title: "Go: TerraformElement"
+sidebarTitle: TerraformElement
+description: CDKTN Core API Reference for TerraformElement in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.TerraformElement.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewTerraformElement(scope Construct, id *string, elementType *string) TerraformElement
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformElement.Initializer.parameter.scope">scope</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.Initializer.parameter.id">id</a></code> | <code>\*string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.Initializer.parameter.elementType">elementType</a></code> | <code>\*string</code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.TerraformElement.Initializer.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.TerraformElement.Initializer.parameter.id"></a>
+
+- *Type:* \*string
+
+***
+
+### `elementType`<sup>Optional</sup> <a name="elementType" id="cdktn.TerraformElement.Initializer.parameter.elementType"></a>
+
+- *Type:* \*string
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformElement.toString">ToString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformElement.addOverride">AddOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.TerraformElement.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.TerraformElement.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.toMetadata">ToMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.toTerraform">ToTerraform</a></code> | *No description.* |
+
+***
+
+### `ToString` <a name="ToString" id="cdktn.TerraformElement.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Returns a string representation of this construct.
+
+### `AddOverride` <a name="AddOverride" id="cdktn.TerraformElement.addOverride"></a>
+
+```go
+func AddOverride(path *string, value interface{})
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.TerraformElement.addOverride.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformElement.addOverride.parameter.value"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `OverrideLogicalId` <a name="OverrideLogicalId" id="cdktn.TerraformElement.overrideLogicalId"></a>
+
+```go
+func OverrideLogicalId(newLogicalId *string)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.TerraformElement.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* \*string
+
+The new logical ID to use for this stack element.
+
+***
+
+### `ResetOverrideLogicalId` <a name="ResetOverrideLogicalId" id="cdktn.TerraformElement.resetOverrideLogicalId"></a>
+
+```go
+func ResetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `ToHclTerraform` <a name="ToHclTerraform" id="cdktn.TerraformElement.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+### `ToMetadata` <a name="ToMetadata" id="cdktn.TerraformElement.toMetadata"></a>
+
+```go
+func ToMetadata() interface{}
+```
+
+### `ToTerraform` <a name="ToTerraform" id="cdktn.TerraformElement.toTerraform"></a>
+
+```go
+func ToTerraform() interface{}
+```
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformElement.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformElement.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
+
+***
+
+### `IsConstruct` <a name="IsConstruct" id="cdktn.TerraformElement.isConstruct"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.TerraformElement_IsConstruct(x interface{}) *bool
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformElement.isConstruct.parameter.x"></a>
+
+- *Type:* interface\{}
+
+Any object.
+
+***
+
+### `IsTerraformElement` <a name="IsTerraformElement" id="cdktn.TerraformElement.isTerraformElement"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.TerraformElement_IsTerraformElement(x interface{}) *bool
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformElement.isTerraformElement.parameter.x"></a>
+
+- *Type:* interface\{}
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformElement.property.node">Node</a></code> | <code>github.com/aws/constructs-go/constructs/v10.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformElement.property.cdktfStack">CdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.property.fqn">Fqn</a></code> | <code>\*string</code> | *No description.* |
+| <code><a href="#cdktn.TerraformElement.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>\*string</code> | *No description.* |
+
+***
+
+### `Node`<sup>Required</sup> <a name="Node" id="cdktn.TerraformElement.property.node"></a>
+
+```go
+func Node() Node
+```
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Node
+
+The tree node.
+
+***
+
+### `CdktfStack`<sup>Required</sup> <a name="CdktfStack" id="cdktn.TerraformElement.property.cdktfStack"></a>
+
+```go
+func CdktfStack() TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `Fqn`<sup>Required</sup> <a name="Fqn" id="cdktn.TerraformElement.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* \*string
+
+***
+
+### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="cdktn.TerraformElement.property.friendlyUniqueId"></a>
+
+```go
+func FriendlyUniqueId() *string
+```
+
+- *Type:* \*string
+
+***
+

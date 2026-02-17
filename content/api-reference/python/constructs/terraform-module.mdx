@@ -1,0 +1,407 @@
+---
+title: "Python: TerraformModule"
+sidebarTitle: TerraformModule
+description: CDKTN Core API Reference for TerraformModule in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.ITerraformDependable">ITerraformDependable</a>
+
+TerraformModule can be used to reference a local terraform module or a module from the Terraform Registry.
+
+It should be used if you can not use generated bindings for the module as you would get by adding the module
+to your cdktf.json files "terraformModules" array and running cdktn get.
+
+This class is not creating a Terraform module to be used outside of CDKTN.
+If you want to bundle certain resources together like you would do with a Terraform module,
+you should use Constructs instead, see http://cdk.tf/constructs for more details.
+
+## Initializers <a name="Initializers" id="cdktn.TerraformModule.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformModule(
+  scope: Construct,
+  id: str,
+  depends_on: typing.List[ITerraformDependable] = None,
+  for_each: ITerraformIterator = None,
+  providers: typing.List[TerraformProvider | TerraformModuleProvider] = None,
+  skip_asset_creation_from_local_modules: bool = None,
+  source: str,
+  version: str = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformModule.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.Initializer.parameter.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.Initializer.parameter.dependsOn">depends\_on</a></code> | <code>typing.List\[<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.Initializer.parameter.forEach">for\_each</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.Initializer.parameter.providers">providers</a></code> | <code>typing.List\[<a href="#cdktn.TerraformProvider">TerraformProvider</a> &#124; <a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.Initializer.parameter.skipAssetCreationFromLocalModules">skip\_asset\_creation\_from\_local\_modules</a></code> | <code>bool</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.Initializer.parameter.source">source</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.Initializer.parameter.version">version</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.TerraformModule.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.TerraformModule.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+***
+
+### `depends_on`<sup>Optional</sup> <a name="depends_on" id="cdktn.TerraformModule.Initializer.parameter.dependsOn"></a>
+
+- *Type:* typing.List\[<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>]
+
+***
+
+### `for_each`<sup>Optional</sup> <a name="for_each" id="cdktn.TerraformModule.Initializer.parameter.forEach"></a>
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `providers`<sup>Optional</sup> <a name="providers" id="cdktn.TerraformModule.Initializer.parameter.providers"></a>
+
+- *Type:* typing.List\[<a href="#cdktn.TerraformProvider">TerraformProvider</a> | <a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>]
+
+***
+
+### `skip_asset_creation_from_local_modules`<sup>Optional</sup> <a name="skip_asset_creation_from_local_modules" id="cdktn.TerraformModule.Initializer.parameter.skipAssetCreationFromLocalModules"></a>
+
+- *Type:* bool
+
+***
+
+### `source`<sup>Required</sup> <a name="source" id="cdktn.TerraformModule.Initializer.parameter.source"></a>
+
+- *Type:* str
+
+***
+
+### `version`<sup>Optional</sup> <a name="version" id="cdktn.TerraformModule.Initializer.parameter.version"></a>
+
+- *Type:* str
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformModule.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformModule.addOverride">add\_override</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.overrideLogicalId">override\_logical\_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.TerraformModule.resetOverrideLogicalId">reset\_override\_logical\_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.TerraformModule.toHclTerraform">to\_hcl\_terraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.toMetadata">to\_metadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.toTerraform">to\_terraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.addProvider">add\_provider</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.getString">get\_string</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.interpolationForOutput">interpolation\_for\_output</a></code> | *No description.* |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.TerraformModule.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `add_override` <a name="add_override" id="cdktn.TerraformModule.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.TerraformModule.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformModule.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `override_logical_id` <a name="override_logical_id" id="cdktn.TerraformModule.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="cdktn.TerraformModule.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+***
+
+### `reset_override_logical_id` <a name="reset_override_logical_id" id="cdktn.TerraformModule.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.TerraformModule.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+### `to_metadata` <a name="to_metadata" id="cdktn.TerraformModule.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+### `to_terraform` <a name="to_terraform" id="cdktn.TerraformModule.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+### `add_provider` <a name="add_provider" id="cdktn.TerraformModule.addProvider"></a>
+
+```python
+def add_provider(
+  provider: TerraformProvider | TerraformModuleProvider
+) -> None
+```
+
+#### `provider`<sup>Required</sup> <a name="provider" id="cdktn.TerraformModule.addProvider.parameter.provider"></a>
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a> | <a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>
+
+***
+
+### `get_string` <a name="get_string" id="cdktn.TerraformModule.getString"></a>
+
+```python
+def get_string(
+  output: str
+) -> str
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.TerraformModule.getString.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `interpolation_for_output` <a name="interpolation_for_output" id="cdktn.TerraformModule.interpolationForOutput"></a>
+
+```python
+def interpolation_for_output(
+  module_output: str
+) -> IResolvable
+```
+
+#### `module_output`<sup>Required</sup> <a name="module_output" id="cdktn.TerraformModule.interpolationForOutput.parameter.moduleOutput"></a>
+
+- *Type:* str
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformModule.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformModule.isTerraformElement">is\_terraform\_element</a></code> | *No description.* |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.TerraformModule.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformModule.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformModule.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_terraform_element` <a name="is_terraform_element" id="cdktn.TerraformModule.isTerraformElement"></a>
+
+```python
+import cdktn
+
+cdktn.TerraformModule.is_terraform_element(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformModule.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformModule.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformModule.property.cdktfStack">cdktf\_stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.property.friendlyUniqueId">friendly\_unique\_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.property.source">source</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.property.providers">providers</a></code> | <code>typing.List\[<a href="#cdktn.TerraformProvider">TerraformProvider</a> &#124; <a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.property.skipAssetCreationFromLocalModules">skip\_asset\_creation\_from\_local\_modules</a></code> | <code>bool</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.property.version">version</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.property.dependsOn">depends\_on</a></code> | <code>typing.List\[str]</code> | *No description.* |
+| <code><a href="#cdktn.TerraformModule.property.forEach">for\_each</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.TerraformModule.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="cdktn.TerraformModule.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.TerraformModule.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+
+### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="cdktn.TerraformModule.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+***
+
+### `source`<sup>Required</sup> <a name="source" id="cdktn.TerraformModule.property.source"></a>
+
+```python
+source: str
+```
+
+- *Type:* str
+
+***
+
+### `providers`<sup>Optional</sup> <a name="providers" id="cdktn.TerraformModule.property.providers"></a>
+
+```python
+providers: typing.List[TerraformProvider | TerraformModuleProvider]
+```
+
+- *Type:* typing.List\[<a href="#cdktn.TerraformProvider">TerraformProvider</a> | <a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>]
+
+***
+
+### `skip_asset_creation_from_local_modules`<sup>Optional</sup> <a name="skip_asset_creation_from_local_modules" id="cdktn.TerraformModule.property.skipAssetCreationFromLocalModules"></a>
+
+```python
+skip_asset_creation_from_local_modules: bool
+```
+
+- *Type:* bool
+
+***
+
+### `version`<sup>Optional</sup> <a name="version" id="cdktn.TerraformModule.property.version"></a>
+
+```python
+version: str
+```
+
+- *Type:* str
+
+***
+
+### `depends_on`<sup>Optional</sup> <a name="depends_on" id="cdktn.TerraformModule.property.dependsOn"></a>
+
+```python
+depends_on: typing.List[str]
+```
+
+- *Type:* typing.List\[str]
+
+***
+
+### `for_each`<sup>Optional</sup> <a name="for_each" id="cdktn.TerraformModule.property.forEach"></a>
+
+```python
+for_each: ITerraformIterator
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+

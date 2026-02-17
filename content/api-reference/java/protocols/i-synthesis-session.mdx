@@ -1,0 +1,57 @@
+---
+title: "Java: ISynthesisSession"
+sidebarTitle: ISynthesisSession
+description: CDKTN Core API Reference for ISynthesisSession in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implemented By:* <a href="#cdktn.ISynthesisSession">ISynthesisSession</a>
+
+Represents a single session of synthesis.
+
+Passed into `TerraformStack.onSynthesize()` methods.
+originally from aws/constructs lib v3.3.126 (synth functionality was removed in constructs v10)
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.ISynthesisSession.property.manifest">manifest</a></code> | <code><a href="#cdktn.Manifest">Manifest</a></code> | *No description.* |
+| <code><a href="#cdktn.ISynthesisSession.property.outdir">outdir</a></code> | <code>java.lang.String</code> | The output directory for this synthesis session. |
+| <code><a href="#cdktn.ISynthesisSession.property.skipValidation">skipValidation</a></code> | <code>java.lang.Boolean</code> | *No description.* |
+
+***
+
+### `manifest`<sup>Required</sup> <a name="manifest" id="cdktn.ISynthesisSession.property.manifest"></a>
+
+```java
+public Manifest getManifest();
+```
+
+- *Type:* <a href="#cdktn.Manifest">Manifest</a>
+
+***
+
+### `outdir`<sup>Required</sup> <a name="outdir" id="cdktn.ISynthesisSession.property.outdir"></a>
+
+```java
+public java.lang.String getOutdir();
+```
+
+- *Type:* java.lang.String
+
+The output directory for this synthesis session.
+
+***
+
+### `skipValidation`<sup>Optional</sup> <a name="skipValidation" id="cdktn.ISynthesisSession.property.skipValidation"></a>
+
+```java
+public java.lang.Boolean getSkipValidation();
+```
+
+- *Type:* java.lang.Boolean
+
+***
+

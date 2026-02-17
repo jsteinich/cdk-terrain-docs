@@ -1,0 +1,180 @@
+---
+title: "Typescript: Manifest"
+sidebarTitle: Manifest
+description: CDKTN Core API Reference for Manifest in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.IManifest">IManifest</a>
+
+## Initializers <a name="Initializers" id="cdktn.Manifest.Initializer"></a>
+
+```typescript
+import { Manifest } from 'cdktn'
+
+new Manifest(version: string, outdir: string, hclOutput: boolean)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Manifest.Initializer.parameter.version">version</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.Initializer.parameter.outdir">outdir</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.Initializer.parameter.hclOutput">hclOutput</a></code> | <code>boolean</code> | *No description.* |
+
+***
+
+### `version`<sup>Required</sup> <a name="version" id="cdktn.Manifest.Initializer.parameter.version"></a>
+
+- *Type:* string
+
+***
+
+### `outdir`<sup>Required</sup> <a name="outdir" id="cdktn.Manifest.Initializer.parameter.outdir"></a>
+
+- *Type:* string
+
+***
+
+### `hclOutput`<sup>Required</sup> <a name="hclOutput" id="cdktn.Manifest.Initializer.parameter.hclOutput"></a>
+
+- *Type:* boolean
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Manifest.buildManifest">buildManifest</a></code> | *No description.* |
+| <code><a href="#cdktn.Manifest.forStack">forStack</a></code> | *No description.* |
+| <code><a href="#cdktn.Manifest.writeToFile">writeToFile</a></code> | *No description.* |
+
+***
+
+### `buildManifest` <a name="buildManifest" id="cdktn.Manifest.buildManifest"></a>
+
+```typescript
+public buildManifest(): IManifest
+```
+
+### `forStack` <a name="forStack" id="cdktn.Manifest.forStack"></a>
+
+```typescript
+public forStack(stack: TerraformStack): StackManifest
+```
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.Manifest.forStack.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `writeToFile` <a name="writeToFile" id="cdktn.Manifest.writeToFile"></a>
+
+```typescript
+public writeToFile(): void
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Manifest.property.hclOutput">hclOutput</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.outdir">outdir</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.stackFileName">stackFileName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.stacks">stacks</a></code> | <code>\{\[ key: string ]: <a href="#cdktn.StackManifest">StackManifest</a>}</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.version">version</a></code> | <code>string</code> | *No description.* |
+
+***
+
+### `hclOutput`<sup>Required</sup> <a name="hclOutput" id="cdktn.Manifest.property.hclOutput"></a>
+
+```typescript
+public readonly hclOutput: boolean;
+```
+
+- *Type:* boolean
+
+***
+
+### `outdir`<sup>Required</sup> <a name="outdir" id="cdktn.Manifest.property.outdir"></a>
+
+```typescript
+public readonly outdir: string;
+```
+
+- *Type:* string
+
+***
+
+### `stackFileName`<sup>Required</sup> <a name="stackFileName" id="cdktn.Manifest.property.stackFileName"></a>
+
+```typescript
+public readonly stackFileName: string;
+```
+
+- *Type:* string
+
+***
+
+### `stacks`<sup>Required</sup> <a name="stacks" id="cdktn.Manifest.property.stacks"></a>
+
+```typescript
+public readonly stacks: {[ key: string ]: StackManifest};
+```
+
+- *Type:* \{\[ key: string ]: <a href="#cdktn.StackManifest">StackManifest</a>}
+
+***
+
+### `version`<sup>Required</sup> <a name="version" id="cdktn.Manifest.property.version"></a>
+
+```typescript
+public readonly version: string;
+```
+
+- *Type:* string
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Manifest.property.fileName">fileName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.stackMetadataPath">stackMetadataPath</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.stacksFolder">stacksFolder</a></code> | <code>string</code> | *No description.* |
+
+***
+
+### `fileName`<sup>Required</sup> <a name="fileName" id="cdktn.Manifest.property.fileName"></a>
+
+```typescript
+public readonly fileName: string;
+```
+
+- *Type:* string
+
+***
+
+### `stackMetadataPath`<sup>Required</sup> <a name="stackMetadataPath" id="cdktn.Manifest.property.stackMetadataPath"></a>
+
+```typescript
+public readonly stackMetadataPath: string;
+```
+
+- *Type:* string
+
+***
+
+### `stacksFolder`<sup>Required</sup> <a name="stacksFolder" id="cdktn.Manifest.property.stacksFolder"></a>
+
+```typescript
+public readonly stacksFolder: string;
+```
+
+- *Type:* string
+
+***
+

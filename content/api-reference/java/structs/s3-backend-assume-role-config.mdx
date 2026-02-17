@@ -1,0 +1,155 @@
+---
+title: "Java: S3BackendAssumeRoleConfig"
+sidebarTitle: S3BackendAssumeRoleConfig
+description: CDKTN Core API Reference for S3BackendAssumeRoleConfig in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.S3BackendAssumeRoleConfig.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.S3BackendAssumeRoleConfig;
+
+S3BackendAssumeRoleConfig.builder()
+    .roleArn(java.lang.String)
+//  .duration(java.lang.String)
+//  .externalId(java.lang.String)
+//  .policy(java.lang.String)
+//  .policyArns(java.util.List<java.lang.String>)
+//  .sessionName(java.lang.String)
+//  .sourceIdentity(java.lang.String)
+//  .tags(java.util.Map<java.lang.String, java.lang.String>)
+//  .transitiveTagKeys(java.util.List<java.lang.String>)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.roleArn">roleArn</a></code> | <code>java.lang.String</code> | (Required) Amazon Resource Name (ARN) of the IAM Role to assume. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.duration">duration</a></code> | <code>java.lang.String</code> | (Optional) The duration individual credentials will be valid. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.externalId">externalId</a></code> | <code>java.lang.String</code> | (Optional) External identifier to use when assuming the role. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.policy">policy</a></code> | <code>java.lang.String</code> | (Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.policyArns">policyArns</a></code> | <code>java.util.List&lt; java.lang.String ></code> | (Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.sessionName">sessionName</a></code> | <code>java.lang.String</code> | (Optional) Session name to use when assuming the role. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.sourceIdentity">sourceIdentity</a></code> | <code>java.lang.String</code> | (Optional) Source identity specified by the principal assuming the. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.tags">tags</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.String ></code> | (Optional) Map of assume role session tags. |
+| <code><a href="#cdktn.S3BackendAssumeRoleConfig.property.transitiveTagKeys">transitiveTagKeys</a></code> | <code>java.util.List&lt; java.lang.String ></code> | (Optional) Set of assume role session tag keys to pass to any subsequent sessions. |
+
+***
+
+### `roleArn`<sup>Required</sup> <a name="roleArn" id="cdktn.S3BackendAssumeRoleConfig.property.roleArn"></a>
+
+```java
+public java.lang.String getRoleArn();
+```
+
+- *Type:* java.lang.String
+
+(Required) Amazon Resource Name (ARN) of the IAM Role to assume.
+
+***
+
+### `duration`<sup>Optional</sup> <a name="duration" id="cdktn.S3BackendAssumeRoleConfig.property.duration"></a>
+
+```java
+public java.lang.String getDuration();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The duration individual credentials will be valid.
+
+Credentials are automatically renewed up to the maximum defined by the AWS account.
+Specified using the format &lt; hours >h&lt; minutes >m&lt; seconds >s with any unit being optional.
+For example, an hour and a half can be specified as 1h30m or 90m.
+Must be between 15 minutes (15m) and 12 hours (12h).
+
+***
+
+### `externalId`<sup>Optional</sup> <a name="externalId" id="cdktn.S3BackendAssumeRoleConfig.property.externalId"></a>
+
+```java
+public java.lang.String getExternalId();
+```
+
+- *Type:* java.lang.String
+
+(Optional) External identifier to use when assuming the role.
+
+***
+
+### `policy`<sup>Optional</sup> <a name="policy" id="cdktn.S3BackendAssumeRoleConfig.property.policy"></a>
+
+```java
+public java.lang.String getPolicy();
+```
+
+- *Type:* java.lang.String
+
+(Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### `policyArns`<sup>Optional</sup> <a name="policyArns" id="cdktn.S3BackendAssumeRoleConfig.property.policyArns"></a>
+
+```java
+public java.util.List<java.lang.String> getPolicyArns();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+(Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### `sessionName`<sup>Optional</sup> <a name="sessionName" id="cdktn.S3BackendAssumeRoleConfig.property.sessionName"></a>
+
+```java
+public java.lang.String getSessionName();
+```
+
+- *Type:* java.lang.String
+
+(Optional) Session name to use when assuming the role.
+
+***
+
+### `sourceIdentity`<sup>Optional</sup> <a name="sourceIdentity" id="cdktn.S3BackendAssumeRoleConfig.property.sourceIdentity"></a>
+
+```java
+public java.lang.String getSourceIdentity();
+```
+
+- *Type:* java.lang.String
+
+(Optional) Source identity specified by the principal assuming the.
+
+***
+
+### `tags`<sup>Optional</sup> <a name="tags" id="cdktn.S3BackendAssumeRoleConfig.property.tags"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getTags();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.String >
+
+(Optional) Map of assume role session tags.
+
+***
+
+### `transitiveTagKeys`<sup>Optional</sup> <a name="transitiveTagKeys" id="cdktn.S3BackendAssumeRoleConfig.property.transitiveTagKeys"></a>
+
+```java
+public java.util.List<java.lang.String> getTransitiveTagKeys();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+(Optional) Set of assume role session tag keys to pass to any subsequent sessions.
+
+***
+

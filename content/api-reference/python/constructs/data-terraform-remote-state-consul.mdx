@@ -1,0 +1,471 @@
+---
+title: "Python: DataTerraformRemoteStateConsul"
+sidebarTitle: DataTerraformRemoteStateConsul
+description: CDKTN Core API Reference for DataTerraformRemoteStateConsul in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.DataTerraformRemoteStateConsul.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateConsul(
+  scope: Construct,
+  id: str,
+  defaults: typing.Mapping[typing.Any] = None,
+  workspace: str = None,
+  access_token: str,
+  path: str,
+  address: str = None,
+  ca_file: str = None,
+  cert_file: str = None,
+  datacenter: str = None,
+  gzip: bool = None,
+  http_auth: str = None,
+  key_file: str = None,
+  lock: bool = None,
+  scheme: str = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.defaults">defaults</a></code> | <code>typing.Mapping\[typing.Any]</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.workspace">workspace</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.accessToken">access\_token</a></code> | <code>str</code> | (Required) Access token. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.path">path</a></code> | <code>str</code> | (Required) Path in the Consul KV store. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.address">address</a></code> | <code>str</code> | (Optional) DNS name and port of your Consul endpoint specified in the format dnsname:port. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.caFile">ca\_file</a></code> | <code>str</code> | (Optional) A path to a PEM-encoded certificate authority used to verify the remote agent's certificate. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.certFile">cert\_file</a></code> | <code>str</code> | (Optional) A path to a PEM-encoded certificate provided to the remote agent; |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.datacenter">datacenter</a></code> | <code>str</code> | (Optional) The datacenter to use. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.gzip">gzip</a></code> | <code>bool</code> | (Optional) true to compress the state data using gzip, or false (the default) to leave it uncompressed. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.httpAuth">http\_auth</a></code> | <code>str</code> | (Optional) HTTP Basic Authentication credentials to be used when communicating with Consul, in the format of either user or user:pass. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.keyFile">key\_file</a></code> | <code>str</code> | (Optional) A path to a PEM-encoded private key, required if cert\_file is specified. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.lock">lock</a></code> | <code>bool</code> | (Optional) false to disable locking. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.scheme">scheme</a></code> | <code>str</code> | (Optional) Specifies what protocol to use when talking to the given address,either http or https. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.defaults"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.workspace"></a>
+
+- *Type:* str
+
+***
+
+### `access_token`<sup>Required</sup> <a name="access_token" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.accessToken"></a>
+
+- *Type:* str
+
+(Required) Access token.
+
+***
+
+### `path`<sup>Required</sup> <a name="path" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.path"></a>
+
+- *Type:* str
+
+(Required) Path in the Consul KV store.
+
+***
+
+### `address`<sup>Optional</sup> <a name="address" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.address"></a>
+
+- *Type:* str
+
+(Optional) DNS name and port of your Consul endpoint specified in the format dnsname:port.
+
+Defaults to the local agent HTTP listener.
+
+***
+
+### `ca_file`<sup>Optional</sup> <a name="ca_file" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.caFile"></a>
+
+- *Type:* str
+
+(Optional) A path to a PEM-encoded certificate authority used to verify the remote agent's certificate.
+
+***
+
+### `cert_file`<sup>Optional</sup> <a name="cert_file" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.certFile"></a>
+
+- *Type:* str
+
+(Optional) A path to a PEM-encoded certificate provided to the remote agent;
+
+requires use of key\_file.
+
+***
+
+### `datacenter`<sup>Optional</sup> <a name="datacenter" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.datacenter"></a>
+
+- *Type:* str
+
+(Optional) The datacenter to use.
+
+Defaults to that of the agent.
+
+***
+
+### `gzip`<sup>Optional</sup> <a name="gzip" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.gzip"></a>
+
+- *Type:* bool
+
+(Optional) true to compress the state data using gzip, or false (the default) to leave it uncompressed.
+
+***
+
+### `http_auth`<sup>Optional</sup> <a name="http_auth" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.httpAuth"></a>
+
+- *Type:* str
+
+(Optional) HTTP Basic Authentication credentials to be used when communicating with Consul, in the format of either user or user:pass.
+
+***
+
+### `key_file`<sup>Optional</sup> <a name="key_file" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.keyFile"></a>
+
+- *Type:* str
+
+(Optional) A path to a PEM-encoded private key, required if cert\_file is specified.
+
+***
+
+### `lock`<sup>Optional</sup> <a name="lock" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.lock"></a>
+
+- *Type:* bool
+
+(Optional) false to disable locking.
+
+This defaults to true, but will require session permissions with Consul and
+at least kv write permissions on $path/.lock to perform locking.
+
+***
+
+### `scheme`<sup>Optional</sup> <a name="scheme" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.scheme"></a>
+
+- *Type:* str
+
+(Optional) Specifies what protocol to use when talking to the given address,either http or https.
+
+SSL support can also be triggered by setting then environment variable CONSUL\_HTTP\_SSL to true.
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.addOverride">add\_override</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.overrideLogicalId">override\_logical\_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.resetOverrideLogicalId">reset\_override\_logical\_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.toHclTerraform">to\_hcl\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.toMetadata">to\_metadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.toTerraform">to\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.get">get</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.getBoolean">get\_boolean</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.getList">get\_list</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.getNumber">get\_number</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.getString">get\_string</a></code> | *No description.* |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.DataTerraformRemoteStateConsul.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `add_override` <a name="add_override" id="cdktn.DataTerraformRemoteStateConsul.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.DataTerraformRemoteStateConsul.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.DataTerraformRemoteStateConsul.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `override_logical_id` <a name="override_logical_id" id="cdktn.DataTerraformRemoteStateConsul.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="cdktn.DataTerraformRemoteStateConsul.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+***
+
+### `reset_override_logical_id` <a name="reset_override_logical_id" id="cdktn.DataTerraformRemoteStateConsul.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.DataTerraformRemoteStateConsul.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `to_metadata` <a name="to_metadata" id="cdktn.DataTerraformRemoteStateConsul.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+### `to_terraform` <a name="to_terraform" id="cdktn.DataTerraformRemoteStateConsul.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `get` <a name="get" id="cdktn.DataTerraformRemoteStateConsul.get"></a>
+
+```python
+def get(
+  output: str
+) -> IResolvable
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateConsul.get.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_boolean` <a name="get_boolean" id="cdktn.DataTerraformRemoteStateConsul.getBoolean"></a>
+
+```python
+def get_boolean(
+  output: str
+) -> IResolvable
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateConsul.getBoolean.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_list` <a name="get_list" id="cdktn.DataTerraformRemoteStateConsul.getList"></a>
+
+```python
+def get_list(
+  output: str
+) -> typing.List[str]
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateConsul.getList.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_number` <a name="get_number" id="cdktn.DataTerraformRemoteStateConsul.getNumber"></a>
+
+```python
+def get_number(
+  output: str
+) -> typing.Union[int, float]
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateConsul.getNumber.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+### `get_string` <a name="get_string" id="cdktn.DataTerraformRemoteStateConsul.getString"></a>
+
+```python
+def get_string(
+  output: str
+) -> str
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateConsul.getString.parameter.output"></a>
+
+- *Type:* str
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.isTerraformElement">is\_terraform\_element</a></code> | *No description.* |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.DataTerraformRemoteStateConsul.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateConsul.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateConsul.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_terraform_element` <a name="is_terraform_element" id="cdktn.DataTerraformRemoteStateConsul.isTerraformElement"></a>
+
+```python
+import cdktn
+
+cdktn.DataTerraformRemoteStateConsul.is_terraform_element(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateConsul.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.property.cdktfStack">cdktf\_stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.property.friendlyUniqueId">friendly\_unique\_id</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.DataTerraformRemoteStateConsul.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="cdktn.DataTerraformRemoteStateConsul.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.DataTerraformRemoteStateConsul.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+
+### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="cdktn.DataTerraformRemoteStateConsul.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.property.tfResourceType">tfResourceType</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="cdktn.DataTerraformRemoteStateConsul.property.tfResourceType"></a>
+
+```python
+tfResourceType: str
+```
+
+- *Type:* str
+
+***
+

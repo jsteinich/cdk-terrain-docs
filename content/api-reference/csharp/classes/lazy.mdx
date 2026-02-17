@@ -1,0 +1,133 @@
+---
+title: "CSharp: Lazy"
+sidebarTitle: Lazy
+description: CDKTN Core API Reference for Lazy in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Lazily produce a value.
+
+Can be used to return a string, list or numeric value whose actual value
+will only be calculated later, during synthesis.
+
+## Initializers <a name="Initializers" id="cdktn.Lazy.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new Lazy();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Lazy.anyValue">AnyValue</a></code> | Produces a lazy token from an untyped value. |
+| <code><a href="#cdktn.Lazy.listValue">ListValue</a></code> | Returns a list-ified token for a lazy value. |
+| <code><a href="#cdktn.Lazy.numberValue">NumberValue</a></code> | Returns a numberified token for a lazy value. |
+| <code><a href="#cdktn.Lazy.stringValue">StringValue</a></code> | Returns a stringified token for a lazy value. |
+
+***
+
+### `AnyValue` <a name="AnyValue" id="cdktn.Lazy.anyValue"></a>
+
+```csharp
+using Io.Cdktn;
+
+Lazy.AnyValue(IAnyProducer Producer, LazyAnyValueOptions Options = null);
+```
+
+Produces a lazy token from an untyped value.
+
+#### `Producer`<sup>Required</sup> <a name="Producer" id="cdktn.Lazy.anyValue.parameter.producer"></a>
+
+- *Type:* <a href="#cdktn.IAnyProducer">IAnyProducer</a>
+
+The lazy producer.
+
+***
+
+#### `Options`<sup>Optional</sup> <a name="Options" id="cdktn.Lazy.anyValue.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.LazyAnyValueOptions">LazyAnyValueOptions</a>
+
+Options.
+
+***
+
+### `ListValue` <a name="ListValue" id="cdktn.Lazy.listValue"></a>
+
+```csharp
+using Io.Cdktn;
+
+Lazy.ListValue(IListProducer Producer, LazyListValueOptions Options = null);
+```
+
+Returns a list-ified token for a lazy value.
+
+#### `Producer`<sup>Required</sup> <a name="Producer" id="cdktn.Lazy.listValue.parameter.producer"></a>
+
+- *Type:* <a href="#cdktn.IListProducer">IListProducer</a>
+
+The producer.
+
+***
+
+#### `Options`<sup>Optional</sup> <a name="Options" id="cdktn.Lazy.listValue.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.LazyListValueOptions">LazyListValueOptions</a>
+
+Options.
+
+***
+
+### `NumberValue` <a name="NumberValue" id="cdktn.Lazy.numberValue"></a>
+
+```csharp
+using Io.Cdktn;
+
+Lazy.NumberValue(INumberProducer Producer);
+```
+
+Returns a numberified token for a lazy value.
+
+#### `Producer`<sup>Required</sup> <a name="Producer" id="cdktn.Lazy.numberValue.parameter.producer"></a>
+
+- *Type:* <a href="#cdktn.INumberProducer">INumberProducer</a>
+
+The producer.
+
+***
+
+### `StringValue` <a name="StringValue" id="cdktn.Lazy.stringValue"></a>
+
+```csharp
+using Io.Cdktn;
+
+Lazy.StringValue(IStringProducer Producer, LazyStringValueOptions Options = null);
+```
+
+Returns a stringified token for a lazy value.
+
+#### `Producer`<sup>Required</sup> <a name="Producer" id="cdktn.Lazy.stringValue.parameter.producer"></a>
+
+- *Type:* <a href="#cdktn.IStringProducer">IStringProducer</a>
+
+The producer.
+
+***
+
+#### `Options`<sup>Optional</sup> <a name="Options" id="cdktn.Lazy.stringValue.parameter.options"></a>
+
+- *Type:* <a href="#cdktn.LazyStringValueOptions">LazyStringValueOptions</a>
+
+Options.
+
+***
+

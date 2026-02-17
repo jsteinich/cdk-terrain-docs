@@ -1,0 +1,450 @@
+---
+title: "Java: DataTerraformRemoteStateConsul"
+sidebarTitle: DataTerraformRemoteStateConsul
+description: CDKTN Core API Reference for DataTerraformRemoteStateConsul in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.DataTerraformRemoteStateConsul.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.DataTerraformRemoteStateConsul;
+
+DataTerraformRemoteStateConsul.Builder.create(Construct scope, java.lang.String id)
+//  .defaults(java.util.Map<java.lang.String, java.lang.Object>)
+//  .workspace(java.lang.String)
+    .accessToken(java.lang.String)
+    .path(java.lang.String)
+//  .address(java.lang.String)
+//  .caFile(java.lang.String)
+//  .certFile(java.lang.String)
+//  .datacenter(java.lang.String)
+//  .gzip(java.lang.Boolean)
+//  .httpAuth(java.lang.String)
+//  .keyFile(java.lang.String)
+//  .lock(java.lang.Boolean)
+//  .scheme(java.lang.String)
+    .build();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.defaults">defaults</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.workspace">workspace</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.accessToken">accessToken</a></code> | <code>java.lang.String</code> | (Required) Access token. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.path">path</a></code> | <code>java.lang.String</code> | (Required) Path in the Consul KV store. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.address">address</a></code> | <code>java.lang.String</code> | (Optional) DNS name and port of your Consul endpoint specified in the format dnsname:port. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.caFile">caFile</a></code> | <code>java.lang.String</code> | (Optional) A path to a PEM-encoded certificate authority used to verify the remote agent's certificate. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.certFile">certFile</a></code> | <code>java.lang.String</code> | (Optional) A path to a PEM-encoded certificate provided to the remote agent; |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.datacenter">datacenter</a></code> | <code>java.lang.String</code> | (Optional) The datacenter to use. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.gzip">gzip</a></code> | <code>java.lang.Boolean</code> | (Optional) true to compress the state data using gzip, or false (the default) to leave it uncompressed. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.httpAuth">httpAuth</a></code> | <code>java.lang.String</code> | (Optional) HTTP Basic Authentication credentials to be used when communicating with Consul, in the format of either user or user:pass. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.keyFile">keyFile</a></code> | <code>java.lang.String</code> | (Optional) A path to a PEM-encoded private key, required if cert\_file is specified. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.lock">lock</a></code> | <code>java.lang.Boolean</code> | (Optional) false to disable locking. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.scheme">scheme</a></code> | <code>java.lang.String</code> | (Optional) Specifies what protocol to use when talking to the given address,either http or https. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `defaults`<sup>Optional</sup> <a name="defaults" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.defaults"></a>
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+### `workspace`<sup>Optional</sup> <a name="workspace" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.workspace"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `accessToken`<sup>Required</sup> <a name="accessToken" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.accessToken"></a>
+
+- *Type:* java.lang.String
+
+(Required) Access token.
+
+***
+
+### `path`<sup>Required</sup> <a name="path" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+(Required) Path in the Consul KV store.
+
+***
+
+### `address`<sup>Optional</sup> <a name="address" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.address"></a>
+
+- *Type:* java.lang.String
+
+(Optional) DNS name and port of your Consul endpoint specified in the format dnsname:port.
+
+Defaults to the local agent HTTP listener.
+
+***
+
+### `caFile`<sup>Optional</sup> <a name="caFile" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.caFile"></a>
+
+- *Type:* java.lang.String
+
+(Optional) A path to a PEM-encoded certificate authority used to verify the remote agent's certificate.
+
+***
+
+### `certFile`<sup>Optional</sup> <a name="certFile" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.certFile"></a>
+
+- *Type:* java.lang.String
+
+(Optional) A path to a PEM-encoded certificate provided to the remote agent;
+
+requires use of key\_file.
+
+***
+
+### `datacenter`<sup>Optional</sup> <a name="datacenter" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.datacenter"></a>
+
+- *Type:* java.lang.String
+
+(Optional) The datacenter to use.
+
+Defaults to that of the agent.
+
+***
+
+### `gzip`<sup>Optional</sup> <a name="gzip" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.gzip"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) true to compress the state data using gzip, or false (the default) to leave it uncompressed.
+
+***
+
+### `httpAuth`<sup>Optional</sup> <a name="httpAuth" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.httpAuth"></a>
+
+- *Type:* java.lang.String
+
+(Optional) HTTP Basic Authentication credentials to be used when communicating with Consul, in the format of either user or user:pass.
+
+***
+
+### `keyFile`<sup>Optional</sup> <a name="keyFile" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.keyFile"></a>
+
+- *Type:* java.lang.String
+
+(Optional) A path to a PEM-encoded private key, required if cert\_file is specified.
+
+***
+
+### `lock`<sup>Optional</sup> <a name="lock" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.lock"></a>
+
+- *Type:* java.lang.Boolean
+
+(Optional) false to disable locking.
+
+This defaults to true, but will require session permissions with Consul and
+at least kv write permissions on $path/.lock to perform locking.
+
+***
+
+### `scheme`<sup>Optional</sup> <a name="scheme" id="cdktn.DataTerraformRemoteStateConsul.Initializer.parameter.scheme"></a>
+
+- *Type:* java.lang.String
+
+(Optional) Specifies what protocol to use when talking to the given address,either http or https.
+
+SSL support can also be triggered by setting then environment variable CONSUL\_HTTP\_SSL to true.
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.toHclTerraform">toHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.get">get</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.getBoolean">getBoolean</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.getList">getList</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.getNumber">getNumber</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.getString">getString</a></code> | *No description.* |
+
+***
+
+### `toString` <a name="toString" id="cdktn.DataTerraformRemoteStateConsul.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `addOverride` <a name="addOverride" id="cdktn.DataTerraformRemoteStateConsul.addOverride"></a>
+
+```java
+public void addOverride(java.lang.String path, java.lang.Object value)
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.DataTerraformRemoteStateConsul.addOverride.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.DataTerraformRemoteStateConsul.addOverride.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `overrideLogicalId` <a name="overrideLogicalId" id="cdktn.DataTerraformRemoteStateConsul.overrideLogicalId"></a>
+
+```java
+public void overrideLogicalId(java.lang.String newLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.DataTerraformRemoteStateConsul.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* java.lang.String
+
+The new logical ID to use for this stack element.
+
+***
+
+### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktn.DataTerraformRemoteStateConsul.resetOverrideLogicalId"></a>
+
+```java
+public void resetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.DataTerraformRemoteStateConsul.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+Adds this resource to the terraform JSON output.
+
+### `toMetadata` <a name="toMetadata" id="cdktn.DataTerraformRemoteStateConsul.toMetadata"></a>
+
+```java
+public java.lang.Object toMetadata()
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.DataTerraformRemoteStateConsul.toTerraform"></a>
+
+```java
+public java.lang.Object toTerraform()
+```
+
+Adds this resource to the terraform JSON output.
+
+### `get` <a name="get" id="cdktn.DataTerraformRemoteStateConsul.get"></a>
+
+```java
+public IResolvable get(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateConsul.get.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getBoolean` <a name="getBoolean" id="cdktn.DataTerraformRemoteStateConsul.getBoolean"></a>
+
+```java
+public IResolvable getBoolean(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateConsul.getBoolean.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getList` <a name="getList" id="cdktn.DataTerraformRemoteStateConsul.getList"></a>
+
+```java
+public java.util.List<java.lang.String> getList(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateConsul.getList.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getNumber` <a name="getNumber" id="cdktn.DataTerraformRemoteStateConsul.getNumber"></a>
+
+```java
+public java.lang.Number getNumber(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateConsul.getNumber.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getString` <a name="getString" id="cdktn.DataTerraformRemoteStateConsul.getString"></a>
+
+```java
+public java.lang.String getString(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.DataTerraformRemoteStateConsul.getString.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.DataTerraformRemoteStateConsul.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.DataTerraformRemoteStateConsul;
+
+DataTerraformRemoteStateConsul.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateConsul.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isTerraformElement` <a name="isTerraformElement" id="cdktn.DataTerraformRemoteStateConsul.isTerraformElement"></a>
+
+```java
+import io.cdktn.cdktn.DataTerraformRemoteStateConsul;
+
+DataTerraformRemoteStateConsul.isTerraformElement(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.DataTerraformRemoteStateConsul.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.property.cdktfStack">cdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.DataTerraformRemoteStateConsul.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktn.DataTerraformRemoteStateConsul.property.cdktfStack"></a>
+
+```java
+public TerraformStack getCdktfStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.DataTerraformRemoteStateConsul.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.DataTerraformRemoteStateConsul.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.DataTerraformRemoteStateConsul.property.tfResourceType">tfResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
+
+***
+
+### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="cdktn.DataTerraformRemoteStateConsul.property.tfResourceType"></a>
+
+```java
+public java.lang.String getTfResourceType();
+```
+
+- *Type:* java.lang.String
+
+***
+

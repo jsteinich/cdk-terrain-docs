@@ -1,0 +1,228 @@
+---
+title: "Typescript: CosBackendConfig"
+sidebarTitle: CosBackendConfig
+description: CDKTN Core API Reference for CosBackendConfig in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Stores the state as an object in a configurable prefix in a given bucket on Tencent Cloud Object Storage (COS).
+
+This backend supports state locking.
+
+Warning! It is highly recommended that you enable Object Versioning on the COS bucket to allow for state recovery in the case of accidental deletions and human error.
+
+Read more about this backend in the Terraform docs:
+https://developer.hashicorp.com/terraform/language/settings/backends/cos
+
+## Initializer <a name="Initializer" id="cdktn.CosBackendConfig.Initializer"></a>
+
+```typescript
+import { CosBackendConfig } from 'cdktn'
+
+const cosBackendConfig: CosBackendConfig = { ... }
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.CosBackendConfig.property.bucket">bucket</a></code> | <code>string</code> | (Required) The name of the COS bucket. |
+| <code><a href="#cdktn.CosBackendConfig.property.accelerate">accelerate</a></code> | <code>boolean</code> | (Optional) Whether to enable global Acceleration. |
+| <code><a href="#cdktn.CosBackendConfig.property.acl">acl</a></code> | <code>string</code> | (Optional) Object ACL to be applied to the state file, allows private and public-read. |
+| <code><a href="#cdktn.CosBackendConfig.property.assumeRole">assumeRole</a></code> | <code><a href="#cdktn.CosBackendAssumeRole">CosBackendAssumeRole</a></code> | (Optional) The assume\_role block. |
+| <code><a href="#cdktn.CosBackendConfig.property.domain">domain</a></code> | <code>string</code> | (Optional) The root domain of the API request. |
+| <code><a href="#cdktn.CosBackendConfig.property.encrypt">encrypt</a></code> | <code>boolean</code> | (Optional) Whether to enable server side encryption of the state file. |
+| <code><a href="#cdktn.CosBackendConfig.property.endpoint">endpoint</a></code> | <code>string</code> | (Optional) The Custom Endpoint for the COS backend. |
+| <code><a href="#cdktn.CosBackendConfig.property.key">key</a></code> | <code>string</code> | (Optional) The path for saving the state file in bucket. |
+| <code><a href="#cdktn.CosBackendConfig.property.prefix">prefix</a></code> | <code>string</code> | (Optional) The directory for saving the state file in bucket. |
+| <code><a href="#cdktn.CosBackendConfig.property.region">region</a></code> | <code>string</code> | (Optional) The region of the COS bucket. |
+| <code><a href="#cdktn.CosBackendConfig.property.secretId">secretId</a></code> | <code>string</code> | (Optional) Secret id of Tencent Cloud. |
+| <code><a href="#cdktn.CosBackendConfig.property.secretKey">secretKey</a></code> | <code>string</code> | (Optional) Secret key of Tencent Cloud. |
+| <code><a href="#cdktn.CosBackendConfig.property.securityToken">securityToken</a></code> | <code>string</code> | (Optional) TencentCloud Security Token of temporary access credentials. |
+
+***
+
+### `bucket`<sup>Required</sup> <a name="bucket" id="cdktn.CosBackendConfig.property.bucket"></a>
+
+```typescript
+public readonly bucket: string;
+```
+
+- *Type:* string
+
+(Required) The name of the COS bucket.
+
+You shall manually create it first.
+
+***
+
+### `accelerate`<sup>Optional</sup> <a name="accelerate" id="cdktn.CosBackendConfig.property.accelerate"></a>
+
+```typescript
+public readonly accelerate: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Whether to enable global Acceleration.
+
+Defaults to false.
+
+***
+
+### `acl`<sup>Optional</sup> <a name="acl" id="cdktn.CosBackendConfig.property.acl"></a>
+
+```typescript
+public readonly acl: string;
+```
+
+- *Type:* string
+
+(Optional) Object ACL to be applied to the state file, allows private and public-read.
+
+Defaults to private.
+
+***
+
+### `assumeRole`<sup>Optional</sup> <a name="assumeRole" id="cdktn.CosBackendConfig.property.assumeRole"></a>
+
+```typescript
+public readonly assumeRole: CosBackendAssumeRole;
+```
+
+- *Type:* <a href="#cdktn.CosBackendAssumeRole">CosBackendAssumeRole</a>
+
+(Optional) The assume\_role block.
+
+If provided, terraform will attempt to assume this role using the supplied credentials.
+
+***
+
+### `domain`<sup>Optional</sup> <a name="domain" id="cdktn.CosBackendConfig.property.domain"></a>
+
+```typescript
+public readonly domain: string;
+```
+
+- *Type:* string
+
+(Optional) The root domain of the API request.
+
+Defaults to tencentcloudapi.com.
+It supports the environment variable TENCENTCLOUD\_DOMAIN.
+
+***
+
+### `encrypt`<sup>Optional</sup> <a name="encrypt" id="cdktn.CosBackendConfig.property.encrypt"></a>
+
+```typescript
+public readonly encrypt: boolean;
+```
+
+- *Type:* boolean
+
+(Optional) Whether to enable server side encryption of the state file.
+
+If it is true, COS will use 'AES256' encryption algorithm to encrypt state file.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.CosBackendConfig.property.endpoint"></a>
+
+```typescript
+public readonly endpoint: string;
+```
+
+- *Type:* string
+
+(Optional) The Custom Endpoint for the COS backend.
+
+It supports the environment variable TENCENTCLOUD\_ENDPOINT.
+
+***
+
+### `key`<sup>Optional</sup> <a name="key" id="cdktn.CosBackendConfig.property.key"></a>
+
+```typescript
+public readonly key: string;
+```
+
+- *Type:* string
+
+(Optional) The path for saving the state file in bucket.
+
+Defaults to terraform.tfstate.
+
+***
+
+### `prefix`<sup>Optional</sup> <a name="prefix" id="cdktn.CosBackendConfig.property.prefix"></a>
+
+```typescript
+public readonly prefix: string;
+```
+
+- *Type:* string
+
+(Optional) The directory for saving the state file in bucket.
+
+Default to "env:".
+
+***
+
+### `region`<sup>Optional</sup> <a name="region" id="cdktn.CosBackendConfig.property.region"></a>
+
+```typescript
+public readonly region: string;
+```
+
+- *Type:* string
+
+(Optional) The region of the COS bucket.
+
+It supports environment variables TENCENTCLOUD\_REGION.
+
+***
+
+### `secretId`<sup>Optional</sup> <a name="secretId" id="cdktn.CosBackendConfig.property.secretId"></a>
+
+```typescript
+public readonly secretId: string;
+```
+
+- *Type:* string
+
+(Optional) Secret id of Tencent Cloud.
+
+It supports environment variables TENCENTCLOUD\_SECRET\_ID.
+
+***
+
+### `secretKey`<sup>Optional</sup> <a name="secretKey" id="cdktn.CosBackendConfig.property.secretKey"></a>
+
+```typescript
+public readonly secretKey: string;
+```
+
+- *Type:* string
+
+(Optional) Secret key of Tencent Cloud.
+
+It supports environment variables TENCENTCLOUD\_SECRET\_KEY.
+
+***
+
+### `securityToken`<sup>Optional</sup> <a name="securityToken" id="cdktn.CosBackendConfig.property.securityToken"></a>
+
+```typescript
+public readonly securityToken: string;
+```
+
+- *Type:* string
+
+(Optional) TencentCloud Security Token of temporary access credentials.
+
+It supports environment variables TENCENTCLOUD\_SECURITY\_TOKEN.
+
+***
+

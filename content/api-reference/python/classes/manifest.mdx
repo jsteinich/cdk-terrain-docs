@@ -1,0 +1,186 @@
+---
+title: "Python: Manifest"
+sidebarTitle: Manifest
+description: CDKTN Core API Reference for Manifest in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implements:* <a href="#cdktn.IManifest">IManifest</a>
+
+## Initializers <a name="Initializers" id="cdktn.Manifest.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.Manifest(
+  version: str,
+  outdir: str,
+  hcl_output: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Manifest.Initializer.parameter.version">version</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.Initializer.parameter.outdir">outdir</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.Initializer.parameter.hclOutput">hcl\_output</a></code> | <code>bool</code> | *No description.* |
+
+***
+
+### `version`<sup>Required</sup> <a name="version" id="cdktn.Manifest.Initializer.parameter.version"></a>
+
+- *Type:* str
+
+***
+
+### `outdir`<sup>Required</sup> <a name="outdir" id="cdktn.Manifest.Initializer.parameter.outdir"></a>
+
+- *Type:* str
+
+***
+
+### `hcl_output`<sup>Required</sup> <a name="hcl_output" id="cdktn.Manifest.Initializer.parameter.hclOutput"></a>
+
+- *Type:* bool
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Manifest.buildManifest">build\_manifest</a></code> | *No description.* |
+| <code><a href="#cdktn.Manifest.forStack">for\_stack</a></code> | *No description.* |
+| <code><a href="#cdktn.Manifest.writeToFile">write\_to\_file</a></code> | *No description.* |
+
+***
+
+### `build_manifest` <a name="build_manifest" id="cdktn.Manifest.buildManifest"></a>
+
+```python
+def build_manifest() -> IManifest
+```
+
+### `for_stack` <a name="for_stack" id="cdktn.Manifest.forStack"></a>
+
+```python
+def for_stack(
+  stack: TerraformStack
+) -> StackManifest
+```
+
+#### `stack`<sup>Required</sup> <a name="stack" id="cdktn.Manifest.forStack.parameter.stack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `write_to_file` <a name="write_to_file" id="cdktn.Manifest.writeToFile"></a>
+
+```python
+def write_to_file() -> None
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Manifest.property.hclOutput">hcl\_output</a></code> | <code>bool</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.outdir">outdir</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.stackFileName">stack\_file\_name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.stacks">stacks</a></code> | <code>typing.Mapping\[<a href="#cdktn.StackManifest">StackManifest</a>]</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.version">version</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `hcl_output`<sup>Required</sup> <a name="hcl_output" id="cdktn.Manifest.property.hclOutput"></a>
+
+```python
+hcl_output: bool
+```
+
+- *Type:* bool
+
+***
+
+### `outdir`<sup>Required</sup> <a name="outdir" id="cdktn.Manifest.property.outdir"></a>
+
+```python
+outdir: str
+```
+
+- *Type:* str
+
+***
+
+### `stack_file_name`<sup>Required</sup> <a name="stack_file_name" id="cdktn.Manifest.property.stackFileName"></a>
+
+```python
+stack_file_name: str
+```
+
+- *Type:* str
+
+***
+
+### `stacks`<sup>Required</sup> <a name="stacks" id="cdktn.Manifest.property.stacks"></a>
+
+```python
+stacks: typing.Mapping[StackManifest]
+```
+
+- *Type:* typing.Mapping\[<a href="#cdktn.StackManifest">StackManifest</a>]
+
+***
+
+### `version`<sup>Required</sup> <a name="version" id="cdktn.Manifest.property.version"></a>
+
+```python
+version: str
+```
+
+- *Type:* str
+
+***
+
+## Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.Manifest.property.fileName">fileName</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.stackMetadataPath">stackMetadataPath</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.Manifest.property.stacksFolder">stacksFolder</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `fileName`<sup>Required</sup> <a name="fileName" id="cdktn.Manifest.property.fileName"></a>
+
+```python
+fileName: str
+```
+
+- *Type:* str
+
+***
+
+### `stackMetadataPath`<sup>Required</sup> <a name="stackMetadataPath" id="cdktn.Manifest.property.stackMetadataPath"></a>
+
+```python
+stackMetadataPath: str
+```
+
+- *Type:* str
+
+***
+
+### `stacksFolder`<sup>Required</sup> <a name="stacksFolder" id="cdktn.Manifest.property.stacksFolder"></a>
+
+```python
+stacksFolder: str
+```
+
+- *Type:* str
+
+***
+

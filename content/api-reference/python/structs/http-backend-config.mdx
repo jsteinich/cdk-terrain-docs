@@ -1,0 +1,266 @@
+---
+title: "Python: HttpBackendConfig"
+sidebarTitle: HttpBackendConfig
+description: CDKTN Core API Reference for HttpBackendConfig in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Stores the state using a simple REST client.
+
+State will be fetched via GET, updated via POST, and purged with DELETE.
+The method used for updating is configurable.
+
+This backend optionally supports state locking.
+When locking support is enabled it will use LOCK and UNLOCK requests providing the lock info in the body.
+The endpoint should return a 423: Locked or 409: Conflict with the holding lock info when
+it's already taken, 200: OK for success. Any other status will be considered an error.
+The ID of the holding lock info will be added as a query parameter to state updates requests.
+
+Read more about this backend in the Terraform docs:
+https://developer.hashicorp.com/terraform/language/settings/backends/http
+
+## Initializer <a name="Initializer" id="cdktn.HttpBackendConfig.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.HttpBackendConfig(
+  address: str,
+  client_ca_certificate_pem: str = None,
+  client_certificate_pem: str = None,
+  client_private_key_pem: str = None,
+  lock_address: str = None,
+  lock_method: str = None,
+  password: str = None,
+  retry_max: typing.Union[int, float] = None,
+  retry_wait_max: typing.Union[int, float] = None,
+  retry_wait_min: typing.Union[int, float] = None,
+  skip_cert_verification: bool = None,
+  unlock_address: str = None,
+  unlock_method: str = None,
+  update_method: str = None,
+  username: str = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.HttpBackendConfig.property.address">address</a></code> | <code>str</code> | (Required) The address of the REST endpoint. |
+| <code><a href="#cdktn.HttpBackendConfig.property.clientCaCertificatePem">client\_ca\_certificate\_pem</a></code> | <code>str</code> | (Optional) A PEM-encoded CA certificate chain used by the client to verify server certificates during TLS authentication. |
+| <code><a href="#cdktn.HttpBackendConfig.property.clientCertificatePem">client\_certificate\_pem</a></code> | <code>str</code> | (Optional) A PEM-encoded certificate used by the server to verify the client during mutual TLS (mTLS) authentication. |
+| <code><a href="#cdktn.HttpBackendConfig.property.clientPrivateKeyPem">client\_private\_key\_pem</a></code> | <code>str</code> | (Optional) A PEM-encoded private key, required if client\_certificate\_pem is specified. |
+| <code><a href="#cdktn.HttpBackendConfig.property.lockAddress">lock\_address</a></code> | <code>str</code> | (Optional) The address of the lock REST endpoint. |
+| <code><a href="#cdktn.HttpBackendConfig.property.lockMethod">lock\_method</a></code> | <code>str</code> | (Optional) The HTTP method to use when locking. |
+| <code><a href="#cdktn.HttpBackendConfig.property.password">password</a></code> | <code>str</code> | (Optional) The password for HTTP basic authentication. |
+| <code><a href="#cdktn.HttpBackendConfig.property.retryMax">retry\_max</a></code> | <code>typing.Union\[int, float]</code> | (Optional) The number of HTTP request retries. |
+| <code><a href="#cdktn.HttpBackendConfig.property.retryWaitMax">retry\_wait\_max</a></code> | <code>typing.Union\[int, float]</code> | (Optional) The maximum time in seconds to wait between HTTP request attempts. |
+| <code><a href="#cdktn.HttpBackendConfig.property.retryWaitMin">retry\_wait\_min</a></code> | <code>typing.Union\[int, float]</code> | (Optional) The minimum time in seconds to wait between HTTP request attempts. |
+| <code><a href="#cdktn.HttpBackendConfig.property.skipCertVerification">skip\_cert\_verification</a></code> | <code>bool</code> | (Optional) Whether to skip TLS verification. |
+| <code><a href="#cdktn.HttpBackendConfig.property.unlockAddress">unlock\_address</a></code> | <code>str</code> | (Optional) The address of the unlock REST endpoint. |
+| <code><a href="#cdktn.HttpBackendConfig.property.unlockMethod">unlock\_method</a></code> | <code>str</code> | (Optional) The HTTP method to use when unlocking. |
+| <code><a href="#cdktn.HttpBackendConfig.property.updateMethod">update\_method</a></code> | <code>str</code> | (Optional) HTTP method to use when updating state. |
+| <code><a href="#cdktn.HttpBackendConfig.property.username">username</a></code> | <code>str</code> | (Optional) The username for HTTP basic authentication. |
+
+***
+
+### `address`<sup>Required</sup> <a name="address" id="cdktn.HttpBackendConfig.property.address"></a>
+
+```python
+address: str
+```
+
+- *Type:* str
+
+(Required) The address of the REST endpoint.
+
+***
+
+### `client_ca_certificate_pem`<sup>Optional</sup> <a name="client_ca_certificate_pem" id="cdktn.HttpBackendConfig.property.clientCaCertificatePem"></a>
+
+```python
+client_ca_certificate_pem: str
+```
+
+- *Type:* str
+
+(Optional) A PEM-encoded CA certificate chain used by the client to verify server certificates during TLS authentication.
+
+***
+
+### `client_certificate_pem`<sup>Optional</sup> <a name="client_certificate_pem" id="cdktn.HttpBackendConfig.property.clientCertificatePem"></a>
+
+```python
+client_certificate_pem: str
+```
+
+- *Type:* str
+
+(Optional) A PEM-encoded certificate used by the server to verify the client during mutual TLS (mTLS) authentication.
+
+***
+
+### `client_private_key_pem`<sup>Optional</sup> <a name="client_private_key_pem" id="cdktn.HttpBackendConfig.property.clientPrivateKeyPem"></a>
+
+```python
+client_private_key_pem: str
+```
+
+- *Type:* str
+
+(Optional) A PEM-encoded private key, required if client\_certificate\_pem is specified.
+
+***
+
+### `lock_address`<sup>Optional</sup> <a name="lock_address" id="cdktn.HttpBackendConfig.property.lockAddress"></a>
+
+```python
+lock_address: str
+```
+
+- *Type:* str
+
+(Optional) The address of the lock REST endpoint.
+
+Defaults to disabled.
+
+***
+
+### `lock_method`<sup>Optional</sup> <a name="lock_method" id="cdktn.HttpBackendConfig.property.lockMethod"></a>
+
+```python
+lock_method: str
+```
+
+- *Type:* str
+
+(Optional) The HTTP method to use when locking.
+
+Defaults to LOCK.
+
+***
+
+### `password`<sup>Optional</sup> <a name="password" id="cdktn.HttpBackendConfig.property.password"></a>
+
+```python
+password: str
+```
+
+- *Type:* str
+
+(Optional) The password for HTTP basic authentication.
+
+***
+
+### `retry_max`<sup>Optional</sup> <a name="retry_max" id="cdktn.HttpBackendConfig.property.retryMax"></a>
+
+```python
+retry_max: typing.Union[int, float]
+```
+
+- *Type:* typing.Union\[int, float]
+
+(Optional) The number of HTTP request retries.
+
+Defaults to 2.
+
+***
+
+### `retry_wait_max`<sup>Optional</sup> <a name="retry_wait_max" id="cdktn.HttpBackendConfig.property.retryWaitMax"></a>
+
+```python
+retry_wait_max: typing.Union[int, float]
+```
+
+- *Type:* typing.Union\[int, float]
+
+(Optional) The maximum time in seconds to wait between HTTP request attempts.
+
+Defaults to 30.
+
+***
+
+### `retry_wait_min`<sup>Optional</sup> <a name="retry_wait_min" id="cdktn.HttpBackendConfig.property.retryWaitMin"></a>
+
+```python
+retry_wait_min: typing.Union[int, float]
+```
+
+- *Type:* typing.Union\[int, float]
+
+(Optional) The minimum time in seconds to wait between HTTP request attempts.
+
+Defaults to 1.
+
+***
+
+### `skip_cert_verification`<sup>Optional</sup> <a name="skip_cert_verification" id="cdktn.HttpBackendConfig.property.skipCertVerification"></a>
+
+```python
+skip_cert_verification: bool
+```
+
+- *Type:* bool
+
+(Optional) Whether to skip TLS verification.
+
+Defaults to false.
+
+***
+
+### `unlock_address`<sup>Optional</sup> <a name="unlock_address" id="cdktn.HttpBackendConfig.property.unlockAddress"></a>
+
+```python
+unlock_address: str
+```
+
+- *Type:* str
+
+(Optional) The address of the unlock REST endpoint.
+
+Defaults to disabled.
+
+***
+
+### `unlock_method`<sup>Optional</sup> <a name="unlock_method" id="cdktn.HttpBackendConfig.property.unlockMethod"></a>
+
+```python
+unlock_method: str
+```
+
+- *Type:* str
+
+(Optional) The HTTP method to use when unlocking.
+
+Defaults to UNLOCK.
+
+***
+
+### `update_method`<sup>Optional</sup> <a name="update_method" id="cdktn.HttpBackendConfig.property.updateMethod"></a>
+
+```python
+update_method: str
+```
+
+- *Type:* str
+
+(Optional) HTTP method to use when updating state.
+
+Defaults to POST.
+
+***
+
+### `username`<sup>Optional</sup> <a name="username" id="cdktn.HttpBackendConfig.property.username"></a>
+
+```python
+username: str
+```
+
+- *Type:* str
+
+(Optional) The username for HTTP basic authentication.
+
+***
+

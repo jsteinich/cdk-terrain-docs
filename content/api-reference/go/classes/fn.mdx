@@ -1,0 +1,2336 @@
+---
+title: "Go: Fn"
+sidebarTitle: Fn
+description: CDKTN Core API Reference for Fn in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.Fn.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewFn() Fn
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Fn.abs">Abs</a></code> | [abs](https://developer.hashicorp.com/terraform/language/functions/abs) returns the absolute value of the given number. In other words, if the number is zero or positive then it is returned as-is, but if it is negative then it is multiplied by -1 to make it positive before returning it. |
+| <code><a href="#cdktn.Fn.abspath">Abspath</a></code> | [abspath](https://developer.hashicorp.com/terraform/language/functions/abspath) takes a string containing a filesystem path and converts it to an absolute path. That is, if the path is not absolute, it will be joined with the current working directory. |
+| <code><a href="#cdktn.Fn.alltrue">Alltrue</a></code> | [alltrue](https://developer.hashicorp.com/terraform/language/functions/alltrue) returns `true` if all elements in a given collection are `true` or `"true"`. It also returns `true` if the collection is empty. |
+| <code><a href="#cdktn.Fn.anytrue">Anytrue</a></code> | [anytrue](https://developer.hashicorp.com/terraform/language/functions/anytrue) returns `true` if any element in a given collection is `true` or `"true"`. It also returns `false` if the collection is empty. |
+| <code><a href="#cdktn.Fn.base64decode">Base64decode</a></code> | [base64decode](https://developer.hashicorp.com/terraform/language/functions/base64decode) takes a string containing a Base64 character sequence and returns the original string. |
+| <code><a href="#cdktn.Fn.base64encode">Base64encode</a></code> | [base64encode](https://developer.hashicorp.com/terraform/language/functions/base64encode) applies Base64 encoding to a string. |
+| <code><a href="#cdktn.Fn.base64gzip">Base64gzip</a></code> | [base64gzip](https://developer.hashicorp.com/terraform/language/functions/base64gzip) compresses a string with gzip and then encodes the result in Base64 encoding. |
+| <code><a href="#cdktn.Fn.base64sha256">Base64sha256</a></code> | [base64sha256](https://developer.hashicorp.com/terraform/language/functions/base64sha256) computes the SHA256 hash of a given string and encodes it with Base64. This is not equivalent to `base64encode(sha256("test"))` since `sha256()` returns hexadecimal representation. |
+| <code><a href="#cdktn.Fn.base64sha512">Base64sha512</a></code> | [base64sha512](https://developer.hashicorp.com/terraform/language/functions/base64sha512) computes the SHA512 hash of a given string and encodes it with Base64. This is not equivalent to `base64encode(sha512("test"))` since `sha512()` returns hexadecimal representation. |
+| <code><a href="#cdktn.Fn.basename">Basename</a></code> | [basename](https://developer.hashicorp.com/terraform/language/functions/basename) takes a string containing a filesystem path and removes all except the last portion from it. |
+| <code><a href="#cdktn.Fn.can">Can</a></code> | [can](https://developer.hashicorp.com/terraform/language/functions/can) evaluates the given expression and returns a boolean value indicating whether the expression produced a result without any errors. |
+| <code><a href="#cdktn.Fn.ceil">Ceil</a></code> | [ceil](https://developer.hashicorp.com/terraform/language/functions/ceil) returns the closest whole number that is greater than or equal to the given value, which may be a fraction. |
+| <code><a href="#cdktn.Fn.chomp">Chomp</a></code> | [chomp](https://developer.hashicorp.com/terraform/language/functions/chomp) removes newline characters at the end of a string. |
+| <code><a href="#cdktn.Fn.chunklist">Chunklist</a></code> | [chunklist](https://developer.hashicorp.com/terraform/language/functions/chunklist) splits a single list into fixed-size chunks, returning a list of lists. |
+| <code><a href="#cdktn.Fn.cidrhost">Cidrhost</a></code> | [cidrhost](https://developer.hashicorp.com/terraform/language/functions/cidrhost) calculates a full host IP address for a given host number within a given IP network address prefix. |
+| <code><a href="#cdktn.Fn.cidrnetmask">Cidrnetmask</a></code> | [cidrnetmask](https://developer.hashicorp.com/terraform/language/functions/cidrnetmask) converts an IPv4 address prefix given in CIDR notation into a subnet mask address. |
+| <code><a href="#cdktn.Fn.cidrsubnet">Cidrsubnet</a></code> | [cidrsubnet](https://developer.hashicorp.com/terraform/language/functions/cidrsubnet) calculates a subnet address within given IP network address prefix. |
+| <code><a href="#cdktn.Fn.cidrsubnets">Cidrsubnets</a></code> | [cidrsubnets](https://developer.hashicorp.com/terraform/language/functions/cidrsubnets) calculates a sequence of consecutive IP address ranges within a particular CIDR prefix. |
+| <code><a href="#cdktn.Fn.coalesce">Coalesce</a></code> | [coalesce](https://developer.hashicorp.com/terraform/language/functions/coalesce) takes any number of arguments and returns the first one that isn't null or an empty string. |
+| <code><a href="#cdktn.Fn.coalescelist">Coalescelist</a></code> | [coalescelist](https://developer.hashicorp.com/terraform/language/functions/coalescelist) takes any number of list arguments and returns the first one that isn't empty. |
+| <code><a href="#cdktn.Fn.compact">Compact</a></code> | [compact](https://developer.hashicorp.com/terraform/language/functions/compact) takes a list of strings and returns a new list with any empty string elements removed. |
+| <code><a href="#cdktn.Fn.concat">Concat</a></code> | [concat](https://developer.hashicorp.com/terraform/language/functions/concat) takes two or more lists and combines them into a single list. |
+| <code><a href="#cdktn.Fn.contains">Contains</a></code> | [contains](https://developer.hashicorp.com/terraform/language/functions/contains) determines whether a given list or set contains a given single value as one of its elements. |
+| <code><a href="#cdktn.Fn.csvdecode">Csvdecode</a></code> | [csvdecode](https://developer.hashicorp.com/terraform/language/functions/csvdecode) decodes a string containing CSV-formatted data and produces a list of maps representing that data. |
+| <code><a href="#cdktn.Fn.dirname">Dirname</a></code> | [dirname](https://developer.hashicorp.com/terraform/language/functions/dirname) takes a string containing a filesystem path and removes the last portion from it. |
+| <code><a href="#cdktn.Fn.distinct">Distinct</a></code> | [distinct](https://developer.hashicorp.com/terraform/language/functions/distinct) takes a list and returns a new list with any duplicate elements removed. |
+| <code><a href="#cdktn.Fn.element">Element</a></code> | [element](https://developer.hashicorp.com/terraform/language/functions/element) retrieves a single element from a list. |
+| <code><a href="#cdktn.Fn.endswith">Endswith</a></code> | [endswith](https://developer.hashicorp.com/terraform/language/functions/endswith) takes two values: a string to check and a suffix string. The function returns true if the first string ends with that exact suffix. |
+| <code><a href="#cdktn.Fn.file">File</a></code> | [file](https://developer.hashicorp.com/terraform/language/functions/file) reads the contents of a file at the given path and returns them as a string. |
+| <code><a href="#cdktn.Fn.filebase64">Filebase64</a></code> | [filebase64](https://developer.hashicorp.com/terraform/language/functions/filebase64) reads the contents of a file at the given path and returns them as a base64-encoded string. |
+| <code><a href="#cdktn.Fn.filebase64sha256">Filebase64sha256</a></code> | [filebase64sha256](https://developer.hashicorp.com/terraform/language/functions/filebase64sha256) is a variant of `base64sha256` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.Fn.filebase64sha512">Filebase64sha512</a></code> | [filebase64sha512](https://developer.hashicorp.com/terraform/language/functions/filebase64sha512) is a variant of `base64sha512` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.Fn.fileexists">Fileexists</a></code> | [fileexists](https://developer.hashicorp.com/terraform/language/functions/fileexists) determines whether a file exists at a given path. |
+| <code><a href="#cdktn.Fn.filemd5">Filemd5</a></code> | [filemd5](https://developer.hashicorp.com/terraform/language/functions/filemd5) is a variant of `md5` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.Fn.fileset">Fileset</a></code> | [fileset](https://developer.hashicorp.com/terraform/language/functions/fileset) enumerates a set of regular file names given a path and pattern. The path is automatically removed from the resulting set of file names and any result still containing path separators always returns forward slash (`/`) as the path separator for cross-system compatibility. |
+| <code><a href="#cdktn.Fn.filesha1">Filesha1</a></code> | [filesha1](https://developer.hashicorp.com/terraform/language/functions/filesha1) is a variant of `sha1` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.Fn.filesha256">Filesha256</a></code> | [filesha256](https://developer.hashicorp.com/terraform/language/functions/filesha256) is a variant of `sha256` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.Fn.filesha512">Filesha512</a></code> | [filesha512](https://developer.hashicorp.com/terraform/language/functions/filesha512) is a variant of `sha512` that hashes the contents of a given file rather than a literal string. |
+| <code><a href="#cdktn.Fn.flatten">Flatten</a></code> | [flatten](https://developer.hashicorp.com/terraform/language/functions/flatten) takes a list and replaces any elements that are lists with a flattened sequence of the list contents. |
+| <code><a href="#cdktn.Fn.floor">Floor</a></code> | [floor](https://developer.hashicorp.com/terraform/language/functions/floor) returns the closest whole number that is less than or equal to the given value, which may be a fraction. |
+| <code><a href="#cdktn.Fn.format">Format</a></code> | The [format](https://developer.hashicorp.com/terraform/language/functions/format) function produces a string by formatting a number of other values according to a specification string. It is similar to the `printf` function in C, and other similar functions in other programming languages. |
+| <code><a href="#cdktn.Fn.formatdate">Formatdate</a></code> | [formatdate](https://developer.hashicorp.com/terraform/language/functions/formatdate) converts a timestamp into a different time format. |
+| <code><a href="#cdktn.Fn.formatlist">Formatlist</a></code> | [formatlist](https://developer.hashicorp.com/terraform/language/functions/formatlist) produces a list of strings by formatting a number of other values according to a specification string. |
+| <code><a href="#cdktn.Fn.indent">Indent</a></code> | [indent](https://developer.hashicorp.com/terraform/language/functions/indent) adds a given number of spaces to the beginnings of all but the first line in a given multi-line string. |
+| <code><a href="#cdktn.Fn.index">Index</a></code> | [index](https://developer.hashicorp.com/terraform/language/functions/index) finds the element index for a given value in a list. |
+| <code><a href="#cdktn.Fn.jsondecode">Jsondecode</a></code> | [jsondecode](https://developer.hashicorp.com/terraform/language/functions/jsondecode) interprets a given string as JSON, returning a representation of the result of decoding that string. |
+| <code><a href="#cdktn.Fn.jsonencode">Jsonencode</a></code> | [jsonencode](https://developer.hashicorp.com/terraform/language/functions/jsonencode) encodes a given value to a string using JSON syntax. |
+| <code><a href="#cdktn.Fn.keys">Keys</a></code> | [keys](https://developer.hashicorp.com/terraform/language/functions/keys) takes a map and returns a list containing the keys from that map. |
+| <code><a href="#cdktn.Fn.lengthOf">LengthOf</a></code> | [length](https://developer.hashicorp.com/terraform/language/functions/length) determines the length of a given list, map, or string. |
+| <code><a href="#cdktn.Fn.log">Log</a></code> | [log](https://developer.hashicorp.com/terraform/language/functions/log) returns the logarithm of a given number in a given base. |
+| <code><a href="#cdktn.Fn.lower">Lower</a></code> | [lower](https://developer.hashicorp.com/terraform/language/functions/lower) converts all cased letters in the given string to lowercase. |
+| <code><a href="#cdktn.Fn.matchkeys">Matchkeys</a></code> | [matchkeys](https://developer.hashicorp.com/terraform/language/functions/matchkeys) constructs a new list by taking a subset of elements from one list whose indexes match the corresponding indexes of values in another list. |
+| <code><a href="#cdktn.Fn.max">Max</a></code> | [max](https://developer.hashicorp.com/terraform/language/functions/max) takes one or more numbers and returns the greatest number from the set. |
+| <code><a href="#cdktn.Fn.md5">Md5</a></code> | [md5](https://developer.hashicorp.com/terraform/language/functions/md5) computes the MD5 hash of a given string and encodes it with hexadecimal digits. |
+| <code><a href="#cdktn.Fn.merge">Merge</a></code> | [merge](https://developer.hashicorp.com/terraform/language/functions/merge) takes an arbitrary number of maps or objects, and returns a single map or object that contains a merged set of elements from all arguments. |
+| <code><a href="#cdktn.Fn.min">Min</a></code> | [min](https://developer.hashicorp.com/terraform/language/functions/min) takes one or more numbers and returns the smallest number from the set. |
+| <code><a href="#cdktn.Fn.nonsensitive">Nonsensitive</a></code> | [nonsensitive](https://developer.hashicorp.com/terraform/language/functions/nonsensitive) takes a sensitive value and returns a copy of that value with the sensitive marking removed, thereby exposing the sensitive value. |
+| <code><a href="#cdktn.Fn.one">One</a></code> | [one](https://developer.hashicorp.com/terraform/language/functions/one) takes a list, set, or tuple value with either zero or one elements. If the collection is empty, `one` returns `null`. Otherwise, `one` returns the first element. If there are two or more elements then `one` will return an error. |
+| <code><a href="#cdktn.Fn.parseint">Parseint</a></code> | [parseint](https://developer.hashicorp.com/terraform/language/functions/parseint) parses the given string as a representation of an integer in the specified base and returns the resulting number. The base must be between 2 and 62 inclusive. |
+| <code><a href="#cdktn.Fn.pathexpand">Pathexpand</a></code> | [pathexpand](https://developer.hashicorp.com/terraform/language/functions/pathexpand) takes a filesystem path that might begin with a `~` segment, and if so it replaces that segment with the current user's home directory path. |
+| <code><a href="#cdktn.Fn.plantimestamp">Plantimestamp</a></code> | [plantimestamp](https://developer.hashicorp.com/terraform/language/functions/plantimestamp) returns a UTC timestamp string in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, fixed to a constant time representing the time of the plan. |
+| <code><a href="#cdktn.Fn.pow">Pow</a></code> | [pow](https://developer.hashicorp.com/terraform/language/functions/pow) calculates an exponent, by raising its first argument to the power of the second argument. |
+| <code><a href="#cdktn.Fn.regex">Regex</a></code> | [regex](https://developer.hashicorp.com/terraform/language/functions/regex) applies a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) to a string and returns the matching substrings. |
+| <code><a href="#cdktn.Fn.regexall">Regexall</a></code> | [regexall](https://developer.hashicorp.com/terraform/language/functions/regexall) applies a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) to a string and returns a list of all matches. |
+| <code><a href="#cdktn.Fn.replace">Replace</a></code> | [replace](https://developer.hashicorp.com/terraform/language/functions/replace) searches a given string for another given substring, and replaces each occurrence with a given replacement string. |
+| <code><a href="#cdktn.Fn.reverse">Reverse</a></code> | [reverse](https://developer.hashicorp.com/terraform/language/functions/reverse) takes a sequence and produces a new sequence of the same length with all of the same elements as the given sequence but in reverse order. |
+| <code><a href="#cdktn.Fn.rsadecrypt">Rsadecrypt</a></code> | [rsadecrypt](https://developer.hashicorp.com/terraform/language/functions/rsadecrypt) decrypts an RSA-encrypted ciphertext, returning the corresponding cleartext. |
+| <code><a href="#cdktn.Fn.sensitive">Sensitive</a></code> | [sensitive](https://developer.hashicorp.com/terraform/language/functions/sensitive) takes any value and returns a copy of it marked so that Terraform will treat it as sensitive, with the same meaning and behavior as for [sensitive input variables](/terraform/language/values/variables#suppressing-values-in-cli-output). |
+| <code><a href="#cdktn.Fn.setintersection">Setintersection</a></code> | The [setintersection](https://developer.hashicorp.com/terraform/language/functions/setintersection) function takes multiple sets and produces a single set containing only the elements that all of the given sets have in common. In other words, it computes the [intersection](https://en.wikipedia.org/wiki/Intersection_\(set_theory\)) of the sets. |
+| <code><a href="#cdktn.Fn.setproduct">Setproduct</a></code> | The [setproduct](https://developer.hashicorp.com/terraform/language/functions/setproduct) function finds all of the possible combinations of elements from all of the given sets by computing the [Cartesian product](https://en.wikipedia.org/wiki/Cartesian_product). |
+| <code><a href="#cdktn.Fn.setsubtract">Setsubtract</a></code> | The [setsubtract](https://developer.hashicorp.com/terraform/language/functions/setsubtract) function returns a new set containing the elements from the first set that are not present in the second set. In other words, it computes the [relative complement](https://en.wikipedia.org/wiki/Complement_\(set_theory\)#Relative_complement) of the second set. |
+| <code><a href="#cdktn.Fn.setunion">Setunion</a></code> | The [setunion](https://developer.hashicorp.com/terraform/language/functions/setunion) function takes multiple sets and produces a single set containing the elements from all of the given sets. In other words, it computes the [union](https://en.wikipedia.org/wiki/Union_\(set_theory\)) of the sets. |
+| <code><a href="#cdktn.Fn.sha1">Sha1</a></code> | [sha1](https://developer.hashicorp.com/terraform/language/functions/sha1) computes the SHA1 hash of a given string and encodes it with hexadecimal digits. |
+| <code><a href="#cdktn.Fn.sha256">Sha256</a></code> | [sha256](https://developer.hashicorp.com/terraform/language/functions/sha256) computes the SHA256 hash of a given string and encodes it with hexadecimal digits. |
+| <code><a href="#cdktn.Fn.sha512">Sha512</a></code> | [sha512](https://developer.hashicorp.com/terraform/language/functions/sha512) computes the SHA512 hash of a given string and encodes it with hexadecimal digits. |
+| <code><a href="#cdktn.Fn.signum">Signum</a></code> | [signum](https://developer.hashicorp.com/terraform/language/functions/signum) determines the sign of a number, returning a number between -1 and 1 to represent the sign. |
+| <code><a href="#cdktn.Fn.slice">Slice</a></code> | [slice](https://developer.hashicorp.com/terraform/language/functions/slice) extracts some consecutive elements from within a list. |
+| <code><a href="#cdktn.Fn.sort">Sort</a></code> | [sort](https://developer.hashicorp.com/terraform/language/functions/sort) takes a list of strings and returns a new list with those strings sorted lexicographically. |
+| <code><a href="#cdktn.Fn.split">Split</a></code> | [split](https://developer.hashicorp.com/terraform/language/functions/split) produces a list by dividing a given string at all occurrences of a given separator. |
+| <code><a href="#cdktn.Fn.startswith">Startswith</a></code> | [startswith](https://developer.hashicorp.com/terraform/language/functions/startswith) takes two values: a string to check and a prefix string. The function returns true if the string begins with that exact prefix. |
+| <code><a href="#cdktn.Fn.strcontains">Strcontains</a></code> | [strcontains](https://developer.hashicorp.com/terraform/language/functions/strcontains) takes two values: a string to check and an expected substring. The function returns true if the string has the substring contained within it. |
+| <code><a href="#cdktn.Fn.strrev">Strrev</a></code> | [strrev](https://developer.hashicorp.com/terraform/language/functions/strrev) reverses the characters in a string. Note that the characters are treated as *Unicode characters* (in technical terms, Unicode [grapheme cluster boundaries](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries) are respected). |
+| <code><a href="#cdktn.Fn.substr">Substr</a></code> | [substr](https://developer.hashicorp.com/terraform/language/functions/substr) extracts a substring from a given string by offset and (maximum) length. |
+| <code><a href="#cdktn.Fn.sum">Sum</a></code> | [sum](https://developer.hashicorp.com/terraform/language/functions/sum) takes a list or set of numbers and returns the sum of those numbers. |
+| <code><a href="#cdktn.Fn.templatefile">Templatefile</a></code> | [templatefile](https://developer.hashicorp.com/terraform/language/functions/templatefile) reads the file at the given path and renders its content as a template using a supplied set of template variables. |
+| <code><a href="#cdktn.Fn.textdecodebase64">Textdecodebase64</a></code> | [textdecodebase64](https://developer.hashicorp.com/terraform/language/functions/textdecodebase64) function decodes a string that was previously Base64-encoded, and then interprets the result as characters in a specified character encoding. |
+| <code><a href="#cdktn.Fn.textencodebase64">Textencodebase64</a></code> | [textencodebase64](https://developer.hashicorp.com/terraform/language/functions/textencodebase64) encodes the unicode characters in a given string using a specified character encoding, returning the result base64 encoded because Terraform language strings are always sequences of unicode characters. |
+| <code><a href="#cdktn.Fn.timeadd">Timeadd</a></code> | [timeadd](https://developer.hashicorp.com/terraform/language/functions/timeadd) adds a duration to a timestamp, returning a new timestamp. |
+| <code><a href="#cdktn.Fn.timecmp">Timecmp</a></code> | [timecmp](https://developer.hashicorp.com/terraform/language/functions/timecmp) compares two timestamps and returns a number that represents the ordering of the instants those timestamps represent. |
+| <code><a href="#cdktn.Fn.timestamp">Timestamp</a></code> | [timestamp](https://developer.hashicorp.com/terraform/language/functions/timestamp) returns a UTC timestamp string in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| <code><a href="#cdktn.Fn.title">Title</a></code> | [title](https://developer.hashicorp.com/terraform/language/functions/title) converts the first letter of each word in the given string to uppercase. |
+| <code><a href="#cdktn.Fn.tobool">Tobool</a></code> | [tobool](https://developer.hashicorp.com/terraform/language/functions/tobool) converts its argument to a boolean value. |
+| <code><a href="#cdktn.Fn.tolist">Tolist</a></code> | [tolist](https://developer.hashicorp.com/terraform/language/functions/tolist) converts its argument to a list value. |
+| <code><a href="#cdktn.Fn.tomap">Tomap</a></code> | [tomap](https://developer.hashicorp.com/terraform/language/functions/tomap) converts its argument to a map value. |
+| <code><a href="#cdktn.Fn.tonumber">Tonumber</a></code> | [tonumber](https://developer.hashicorp.com/terraform/language/functions/tonumber) converts its argument to a number value. |
+| <code><a href="#cdktn.Fn.toset">Toset</a></code> | [toset](https://developer.hashicorp.com/terraform/language/functions/toset) converts its argument to a set value. |
+| <code><a href="#cdktn.Fn.tostring">Tostring</a></code> | [tostring](https://developer.hashicorp.com/terraform/language/functions/tostring) converts its argument to a string value. |
+| <code><a href="#cdktn.Fn.transpose">Transpose</a></code> | [transpose](https://developer.hashicorp.com/terraform/language/functions/transpose) takes a map of lists of strings and swaps the keys and values to produce a new map of lists of strings. |
+| <code><a href="#cdktn.Fn.trim">Trim</a></code> | [trim](https://developer.hashicorp.com/terraform/language/functions/trim) removes the specified set of characters from the start and end of the given string. |
+| <code><a href="#cdktn.Fn.trimprefix">Trimprefix</a></code> | [trimprefix](https://developer.hashicorp.com/terraform/language/functions/trimprefix) removes the specified prefix from the start of the given string. If the string does not start with the prefix, the string is returned unchanged. |
+| <code><a href="#cdktn.Fn.trimspace">Trimspace</a></code> | [trimspace](https://developer.hashicorp.com/terraform/language/functions/trimspace) removes any space characters from the start and end of the given string. |
+| <code><a href="#cdktn.Fn.trimsuffix">Trimsuffix</a></code> | [trimsuffix](https://developer.hashicorp.com/terraform/language/functions/trimsuffix) removes the specified suffix from the end of the given string. |
+| <code><a href="#cdktn.Fn.try">Try</a></code> | [try](https://developer.hashicorp.com/terraform/language/functions/try) evaluates all of its argument expressions in turn and returns the result of the first one that does not produce any errors. |
+| <code><a href="#cdktn.Fn.upper">Upper</a></code> | [upper](https://developer.hashicorp.com/terraform/language/functions/upper) converts all cased letters in the given string to uppercase. |
+| <code><a href="#cdktn.Fn.urlencode">Urlencode</a></code> | [urlencode](https://developer.hashicorp.com/terraform/language/functions/urlencode) applies URL encoding to a given string. |
+| <code><a href="#cdktn.Fn.uuid">Uuid</a></code> | [uuid](https://developer.hashicorp.com/terraform/language/functions/uuid) generates a unique identifier string. |
+| <code><a href="#cdktn.Fn.uuidv5">Uuidv5</a></code> | [uuidv5](https://developer.hashicorp.com/terraform/language/functions/uuidv5) generates a *name-based* UUID, as described in [RFC 4122 section 4.3](https://tools.ietf.org/html/rfc4122#section-4.3), also known as a "version 5" UUID. |
+| <code><a href="#cdktn.Fn.values">Values</a></code> | [values](https://developer.hashicorp.com/terraform/language/functions/values) takes a map and returns a list containing the values of the elements in that map. |
+| <code><a href="#cdktn.Fn.yamldecode">Yamldecode</a></code> | [yamldecode](https://developer.hashicorp.com/terraform/language/functions/yamldecode) parses a string as a subset of YAML, and produces a representation of its value. |
+| <code><a href="#cdktn.Fn.yamlencode">Yamlencode</a></code> | [yamlencode](https://developer.hashicorp.com/terraform/language/functions/yamlencode) encodes a given value to a string using [YAML 1.2](https://yaml.org/spec/1.2/spec.html) block syntax. |
+| <code><a href="#cdktn.Fn.zipmap">Zipmap</a></code> | [zipmap](https://developer.hashicorp.com/terraform/language/functions/zipmap) constructs a map from a list of keys and a corresponding list of values. |
+| <code><a href="#cdktn.Fn.bcrypt">Bcrypt</a></code> | [bcrypt](https://developer.hashicorp.com/terraform/docs/language/functions/bcrypt.html) computes a hash of the given string using the Blowfish cipher, returning a string in [the *Modular Crypt Format*](https://passlib.readthedocs.io/en/stable/modular_crypt_format.html) usually expected in the shadow password file on many Unix systems. |
+| <code><a href="#cdktn.Fn.conditional">Conditional</a></code> | [https://developer.hashicorp.com/terraform/language/expressions/conditionals](https://developer.hashicorp.com/terraform/language/expressions/conditionals) A conditional expression uses the value of a boolean expression to select one of two values. |
+| <code><a href="#cdktn.Fn.join">Join</a></code> | [join](https://developer.hashicorp.com/terraform/docs/language/functions/join.html) produces a string by concatenating together all elements of a given list of strings with the given delimiter. |
+| <code><a href="#cdktn.Fn.lookup">Lookup</a></code> | [lookup](https://developer.hashicorp.com/terraform/docs/language/functions/lookup.html) retrieves the value of a single element from a map, given its key. If the given key does not exist, the given default value is returned instead. |
+| <code><a href="#cdktn.Fn.lookupNested">LookupNested</a></code> | returns a property access expression that accesses the property at the given path in the given inputMap. |
+| <code><a href="#cdktn.Fn.range">Range</a></code> | [range](https://developer.hashicorp.com/terraform/docs/language/functions/range.html) generates a list of numbers using a start value, a limit value, and a step value. |
+| <code><a href="#cdktn.Fn.rawString">RawString</a></code> | Use this function to wrap a string and escape it properly for the use in Terraform This is only needed in certain scenarios (e.g., if you have unescaped double quotes in the string). |
+
+***
+
+### `Abs` <a name="Abs" id="cdktn.Fn.abs"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Abs(num *f64) *f64
+```
+
+[abs](https://developer.hashicorp.com/terraform/language/functions/abs) returns the absolute value of the given number. In other words, if the number is zero or positive then it is returned as-is, but if it is negative then it is multiplied by -1 to make it positive before returning it.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.Fn.abs.parameter.num"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Abspath` <a name="Abspath" id="cdktn.Fn.abspath"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Abspath(path *string) *string
+```
+
+[abspath](https://developer.hashicorp.com/terraform/language/functions/abspath) takes a string containing a filesystem path and converts it to an absolute path. That is, if the path is not absolute, it will be joined with the current working directory.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.abspath.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Alltrue` <a name="Alltrue" id="cdktn.Fn.alltrue"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Alltrue(list *[]interface{}) IResolvable
+```
+
+[alltrue](https://developer.hashicorp.com/terraform/language/functions/alltrue) returns `true` if all elements in a given collection are `true` or `"true"`. It also returns `true` if the collection is empty.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.alltrue.parameter.list"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Anytrue` <a name="Anytrue" id="cdktn.Fn.anytrue"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Anytrue(list *[]interface{}) IResolvable
+```
+
+[anytrue](https://developer.hashicorp.com/terraform/language/functions/anytrue) returns `true` if any element in a given collection is `true` or `"true"`. It also returns `false` if the collection is empty.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.anytrue.parameter.list"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Base64decode` <a name="Base64decode" id="cdktn.Fn.base64decode"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Base64decode(str *string) *string
+```
+
+[base64decode](https://developer.hashicorp.com/terraform/language/functions/base64decode) takes a string containing a Base64 character sequence and returns the original string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.base64decode.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Base64encode` <a name="Base64encode" id="cdktn.Fn.base64encode"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Base64encode(str *string) *string
+```
+
+[base64encode](https://developer.hashicorp.com/terraform/language/functions/base64encode) applies Base64 encoding to a string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.base64encode.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Base64gzip` <a name="Base64gzip" id="cdktn.Fn.base64gzip"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Base64gzip(str *string) *string
+```
+
+[base64gzip](https://developer.hashicorp.com/terraform/language/functions/base64gzip) compresses a string with gzip and then encodes the result in Base64 encoding.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.base64gzip.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Base64sha256` <a name="Base64sha256" id="cdktn.Fn.base64sha256"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Base64sha256(str *string) *string
+```
+
+[base64sha256](https://developer.hashicorp.com/terraform/language/functions/base64sha256) computes the SHA256 hash of a given string and encodes it with Base64. This is not equivalent to `base64encode(sha256("test"))` since `sha256()` returns hexadecimal representation.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.base64sha256.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Base64sha512` <a name="Base64sha512" id="cdktn.Fn.base64sha512"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Base64sha512(str *string) *string
+```
+
+[base64sha512](https://developer.hashicorp.com/terraform/language/functions/base64sha512) computes the SHA512 hash of a given string and encodes it with Base64. This is not equivalent to `base64encode(sha512("test"))` since `sha512()` returns hexadecimal representation.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.base64sha512.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Basename` <a name="Basename" id="cdktn.Fn.basename"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Basename(path *string) *string
+```
+
+[basename](https://developer.hashicorp.com/terraform/language/functions/basename) takes a string containing a filesystem path and removes all except the last portion from it.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.basename.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Can` <a name="Can" id="cdktn.Fn.can"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Can(expression interface{}) IResolvable
+```
+
+[can](https://developer.hashicorp.com/terraform/language/functions/can) evaluates the given expression and returns a boolean value indicating whether the expression produced a result without any errors.
+
+#### `expression`<sup>Required</sup> <a name="expression" id="cdktn.Fn.can.parameter.expression"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Ceil` <a name="Ceil" id="cdktn.Fn.ceil"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Ceil(num *f64) *f64
+```
+
+[ceil](https://developer.hashicorp.com/terraform/language/functions/ceil) returns the closest whole number that is greater than or equal to the given value, which may be a fraction.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.Fn.ceil.parameter.num"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Chomp` <a name="Chomp" id="cdktn.Fn.chomp"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Chomp(str *string) *string
+```
+
+[chomp](https://developer.hashicorp.com/terraform/language/functions/chomp) removes newline characters at the end of a string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.chomp.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Chunklist` <a name="Chunklist" id="cdktn.Fn.chunklist"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Chunklist(list *[]interface{}, size *f64) *[]*string
+```
+
+[chunklist](https://developer.hashicorp.com/terraform/language/functions/chunklist) splits a single list into fixed-size chunks, returning a list of lists.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.chunklist.parameter.list"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+#### `size`<sup>Required</sup> <a name="size" id="cdktn.Fn.chunklist.parameter.size"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Cidrhost` <a name="Cidrhost" id="cdktn.Fn.cidrhost"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Cidrhost(prefix *string, hostnum *f64) *string
+```
+
+[cidrhost](https://developer.hashicorp.com/terraform/language/functions/cidrhost) calculates a full host IP address for a given host number within a given IP network address prefix.
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.Fn.cidrhost.parameter.prefix"></a>
+
+- *Type:* \*string
+
+***
+
+#### `hostnum`<sup>Required</sup> <a name="hostnum" id="cdktn.Fn.cidrhost.parameter.hostnum"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Cidrnetmask` <a name="Cidrnetmask" id="cdktn.Fn.cidrnetmask"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Cidrnetmask(prefix *string) *string
+```
+
+[cidrnetmask](https://developer.hashicorp.com/terraform/language/functions/cidrnetmask) converts an IPv4 address prefix given in CIDR notation into a subnet mask address.
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.Fn.cidrnetmask.parameter.prefix"></a>
+
+- *Type:* \*string
+
+***
+
+### `Cidrsubnet` <a name="Cidrsubnet" id="cdktn.Fn.cidrsubnet"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Cidrsubnet(prefix *string, newbits *f64, netnum *f64) *string
+```
+
+[cidrsubnet](https://developer.hashicorp.com/terraform/language/functions/cidrsubnet) calculates a subnet address within given IP network address prefix.
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.Fn.cidrsubnet.parameter.prefix"></a>
+
+- *Type:* \*string
+
+***
+
+#### `newbits`<sup>Required</sup> <a name="newbits" id="cdktn.Fn.cidrsubnet.parameter.newbits"></a>
+
+- *Type:* \*f64
+
+***
+
+#### `netnum`<sup>Required</sup> <a name="netnum" id="cdktn.Fn.cidrsubnet.parameter.netnum"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Cidrsubnets` <a name="Cidrsubnets" id="cdktn.Fn.cidrsubnets"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Cidrsubnets(prefix *string, newbits *[]*f64) *[]*string
+```
+
+[cidrsubnets](https://developer.hashicorp.com/terraform/language/functions/cidrsubnets) calculates a sequence of consecutive IP address ranges within a particular CIDR prefix.
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.Fn.cidrsubnets.parameter.prefix"></a>
+
+- *Type:* \*string
+
+***
+
+#### `newbits`<sup>Required</sup> <a name="newbits" id="cdktn.Fn.cidrsubnets.parameter.newbits"></a>
+
+- *Type:* \*\[]\*f64
+
+***
+
+### `Coalesce` <a name="Coalesce" id="cdktn.Fn.coalesce"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Coalesce(vals *[]interface{}) interface{}
+```
+
+[coalesce](https://developer.hashicorp.com/terraform/language/functions/coalesce) takes any number of arguments and returns the first one that isn't null or an empty string.
+
+#### `vals`<sup>Required</sup> <a name="vals" id="cdktn.Fn.coalesce.parameter.vals"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Coalescelist` <a name="Coalescelist" id="cdktn.Fn.coalescelist"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Coalescelist(vals *[]interface{}) interface{}
+```
+
+[coalescelist](https://developer.hashicorp.com/terraform/language/functions/coalescelist) takes any number of list arguments and returns the first one that isn't empty.
+
+#### `vals`<sup>Required</sup> <a name="vals" id="cdktn.Fn.coalescelist.parameter.vals"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Compact` <a name="Compact" id="cdktn.Fn.compact"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Compact(list *[]*string) *[]*string
+```
+
+[compact](https://developer.hashicorp.com/terraform/language/functions/compact) takes a list of strings and returns a new list with any empty string elements removed.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.compact.parameter.list"></a>
+
+- *Type:* \*\[]\*string
+
+***
+
+### `Concat` <a name="Concat" id="cdktn.Fn.concat"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Concat(seqs *[]interface{}) interface{}
+```
+
+[concat](https://developer.hashicorp.com/terraform/language/functions/concat) takes two or more lists and combines them into a single list.
+
+#### `seqs`<sup>Required</sup> <a name="seqs" id="cdktn.Fn.concat.parameter.seqs"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Contains` <a name="Contains" id="cdktn.Fn.contains"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Contains(list interface{}, value interface{}) interface{}
+```
+
+[contains](https://developer.hashicorp.com/terraform/language/functions/contains) determines whether a given list or set contains a given single value as one of its elements.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.contains.parameter.list"></a>
+
+- *Type:* interface\{}
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Fn.contains.parameter.value"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Csvdecode` <a name="Csvdecode" id="cdktn.Fn.csvdecode"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Csvdecode(str *string) interface{}
+```
+
+[csvdecode](https://developer.hashicorp.com/terraform/language/functions/csvdecode) decodes a string containing CSV-formatted data and produces a list of maps representing that data.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.csvdecode.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Dirname` <a name="Dirname" id="cdktn.Fn.dirname"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Dirname(path *string) *string
+```
+
+[dirname](https://developer.hashicorp.com/terraform/language/functions/dirname) takes a string containing a filesystem path and removes the last portion from it.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.dirname.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Distinct` <a name="Distinct" id="cdktn.Fn.distinct"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Distinct(list *[]interface{}) *[]*string
+```
+
+[distinct](https://developer.hashicorp.com/terraform/language/functions/distinct) takes a list and returns a new list with any duplicate elements removed.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.distinct.parameter.list"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Element` <a name="Element" id="cdktn.Fn.element"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Element(list interface{}, index *f64) interface{}
+```
+
+[element](https://developer.hashicorp.com/terraform/language/functions/element) retrieves a single element from a list.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.element.parameter.list"></a>
+
+- *Type:* interface\{}
+
+***
+
+#### `index`<sup>Required</sup> <a name="index" id="cdktn.Fn.element.parameter.index"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Endswith` <a name="Endswith" id="cdktn.Fn.endswith"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Endswith(str *string, suffix *string) IResolvable
+```
+
+[endswith](https://developer.hashicorp.com/terraform/language/functions/endswith) takes two values: a string to check and a suffix string. The function returns true if the first string ends with that exact suffix.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.endswith.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+#### `suffix`<sup>Required</sup> <a name="suffix" id="cdktn.Fn.endswith.parameter.suffix"></a>
+
+- *Type:* \*string
+
+***
+
+### `File` <a name="File" id="cdktn.Fn.file"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_File(path *string) *string
+```
+
+[file](https://developer.hashicorp.com/terraform/language/functions/file) reads the contents of a file at the given path and returns them as a string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.file.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Filebase64` <a name="Filebase64" id="cdktn.Fn.filebase64"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Filebase64(path *string) *string
+```
+
+[filebase64](https://developer.hashicorp.com/terraform/language/functions/filebase64) reads the contents of a file at the given path and returns them as a base64-encoded string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.filebase64.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Filebase64sha256` <a name="Filebase64sha256" id="cdktn.Fn.filebase64sha256"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Filebase64sha256(path *string) *string
+```
+
+[filebase64sha256](https://developer.hashicorp.com/terraform/language/functions/filebase64sha256) is a variant of `base64sha256` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.filebase64sha256.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Filebase64sha512` <a name="Filebase64sha512" id="cdktn.Fn.filebase64sha512"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Filebase64sha512(path *string) *string
+```
+
+[filebase64sha512](https://developer.hashicorp.com/terraform/language/functions/filebase64sha512) is a variant of `base64sha512` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.filebase64sha512.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Fileexists` <a name="Fileexists" id="cdktn.Fn.fileexists"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Fileexists(path *string) IResolvable
+```
+
+[fileexists](https://developer.hashicorp.com/terraform/language/functions/fileexists) determines whether a file exists at a given path.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.fileexists.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Filemd5` <a name="Filemd5" id="cdktn.Fn.filemd5"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Filemd5(path *string) *string
+```
+
+[filemd5](https://developer.hashicorp.com/terraform/language/functions/filemd5) is a variant of `md5` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.filemd5.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Fileset` <a name="Fileset" id="cdktn.Fn.fileset"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Fileset(path *string, pattern *string) *[]*string
+```
+
+[fileset](https://developer.hashicorp.com/terraform/language/functions/fileset) enumerates a set of regular file names given a path and pattern. The path is automatically removed from the resulting set of file names and any result still containing path separators always returns forward slash (`/`) as the path separator for cross-system compatibility.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.fileset.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+#### `pattern`<sup>Required</sup> <a name="pattern" id="cdktn.Fn.fileset.parameter.pattern"></a>
+
+- *Type:* \*string
+
+***
+
+### `Filesha1` <a name="Filesha1" id="cdktn.Fn.filesha1"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Filesha1(path *string) *string
+```
+
+[filesha1](https://developer.hashicorp.com/terraform/language/functions/filesha1) is a variant of `sha1` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.filesha1.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Filesha256` <a name="Filesha256" id="cdktn.Fn.filesha256"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Filesha256(path *string) *string
+```
+
+[filesha256](https://developer.hashicorp.com/terraform/language/functions/filesha256) is a variant of `sha256` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.filesha256.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Filesha512` <a name="Filesha512" id="cdktn.Fn.filesha512"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Filesha512(path *string) *string
+```
+
+[filesha512](https://developer.hashicorp.com/terraform/language/functions/filesha512) is a variant of `sha512` that hashes the contents of a given file rather than a literal string.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.filesha512.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Flatten` <a name="Flatten" id="cdktn.Fn.flatten"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Flatten(list interface{}) interface{}
+```
+
+[flatten](https://developer.hashicorp.com/terraform/language/functions/flatten) takes a list and replaces any elements that are lists with a flattened sequence of the list contents.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.flatten.parameter.list"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Floor` <a name="Floor" id="cdktn.Fn.floor"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Floor(num *f64) *f64
+```
+
+[floor](https://developer.hashicorp.com/terraform/language/functions/floor) returns the closest whole number that is less than or equal to the given value, which may be a fraction.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.Fn.floor.parameter.num"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Format` <a name="Format" id="cdktn.Fn.format"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Format(format *string, args *[]interface{}) interface{}
+```
+
+The [format](https://developer.hashicorp.com/terraform/language/functions/format) function produces a string by formatting a number of other values according to a specification string. It is similar to the `printf` function in C, and other similar functions in other programming languages.
+
+#### `format`<sup>Required</sup> <a name="format" id="cdktn.Fn.format.parameter.format"></a>
+
+- *Type:* \*string
+
+***
+
+#### `args`<sup>Required</sup> <a name="args" id="cdktn.Fn.format.parameter.args"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Formatdate` <a name="Formatdate" id="cdktn.Fn.formatdate"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Formatdate(format *string, time *string) *string
+```
+
+[formatdate](https://developer.hashicorp.com/terraform/language/functions/formatdate) converts a timestamp into a different time format.
+
+#### `format`<sup>Required</sup> <a name="format" id="cdktn.Fn.formatdate.parameter.format"></a>
+
+- *Type:* \*string
+
+***
+
+#### `time`<sup>Required</sup> <a name="time" id="cdktn.Fn.formatdate.parameter.time"></a>
+
+- *Type:* \*string
+
+***
+
+### `Formatlist` <a name="Formatlist" id="cdktn.Fn.formatlist"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Formatlist(format *string, args *[]interface{}) interface{}
+```
+
+[formatlist](https://developer.hashicorp.com/terraform/language/functions/formatlist) produces a list of strings by formatting a number of other values according to a specification string.
+
+#### `format`<sup>Required</sup> <a name="format" id="cdktn.Fn.formatlist.parameter.format"></a>
+
+- *Type:* \*string
+
+***
+
+#### `args`<sup>Required</sup> <a name="args" id="cdktn.Fn.formatlist.parameter.args"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Indent` <a name="Indent" id="cdktn.Fn.indent"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Indent(spaces *f64, str *string) *string
+```
+
+[indent](https://developer.hashicorp.com/terraform/language/functions/indent) adds a given number of spaces to the beginnings of all but the first line in a given multi-line string.
+
+#### `spaces`<sup>Required</sup> <a name="spaces" id="cdktn.Fn.indent.parameter.spaces"></a>
+
+- *Type:* \*f64
+
+***
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.indent.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Index` <a name="Index" id="cdktn.Fn.index"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Index(list interface{}, value interface{}) interface{}
+```
+
+[index](https://developer.hashicorp.com/terraform/language/functions/index) finds the element index for a given value in a list.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.index.parameter.list"></a>
+
+- *Type:* interface\{}
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Fn.index.parameter.value"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Jsondecode` <a name="Jsondecode" id="cdktn.Fn.jsondecode"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Jsondecode(str *string) interface{}
+```
+
+[jsondecode](https://developer.hashicorp.com/terraform/language/functions/jsondecode) interprets a given string as JSON, returning a representation of the result of decoding that string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.jsondecode.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Jsonencode` <a name="Jsonencode" id="cdktn.Fn.jsonencode"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Jsonencode(val interface{}) *string
+```
+
+[jsonencode](https://developer.hashicorp.com/terraform/language/functions/jsonencode) encodes a given value to a string using JSON syntax.
+
+#### `val`<sup>Required</sup> <a name="val" id="cdktn.Fn.jsonencode.parameter.val"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Keys` <a name="Keys" id="cdktn.Fn.keys"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Keys(inputMap interface{}) interface{}
+```
+
+[keys](https://developer.hashicorp.com/terraform/language/functions/keys) takes a map and returns a list containing the keys from that map.
+
+#### `inputMap`<sup>Required</sup> <a name="inputMap" id="cdktn.Fn.keys.parameter.inputMap"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `LengthOf` <a name="LengthOf" id="cdktn.Fn.lengthOf"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_LengthOf(value interface{}) *f64
+```
+
+[length](https://developer.hashicorp.com/terraform/language/functions/length) determines the length of a given list, map, or string.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Fn.lengthOf.parameter.value"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Log` <a name="Log" id="cdktn.Fn.log"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Log(num *f64, base *f64) *f64
+```
+
+[log](https://developer.hashicorp.com/terraform/language/functions/log) returns the logarithm of a given number in a given base.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.Fn.log.parameter.num"></a>
+
+- *Type:* \*f64
+
+***
+
+#### `base`<sup>Required</sup> <a name="base" id="cdktn.Fn.log.parameter.base"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Lower` <a name="Lower" id="cdktn.Fn.lower"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Lower(str *string) *string
+```
+
+[lower](https://developer.hashicorp.com/terraform/language/functions/lower) converts all cased letters in the given string to lowercase.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.lower.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Matchkeys` <a name="Matchkeys" id="cdktn.Fn.matchkeys"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Matchkeys(values *[]interface{}, keys *[]interface{}, searchset *[]interface{}) *[]*string
+```
+
+[matchkeys](https://developer.hashicorp.com/terraform/language/functions/matchkeys) constructs a new list by taking a subset of elements from one list whose indexes match the corresponding indexes of values in another list.
+
+#### `values`<sup>Required</sup> <a name="values" id="cdktn.Fn.matchkeys.parameter.values"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+#### `keys`<sup>Required</sup> <a name="keys" id="cdktn.Fn.matchkeys.parameter.keys"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+#### `searchset`<sup>Required</sup> <a name="searchset" id="cdktn.Fn.matchkeys.parameter.searchset"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Max` <a name="Max" id="cdktn.Fn.max"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Max(numbers *[]*f64) *f64
+```
+
+[max](https://developer.hashicorp.com/terraform/language/functions/max) takes one or more numbers and returns the greatest number from the set.
+
+#### `numbers`<sup>Required</sup> <a name="numbers" id="cdktn.Fn.max.parameter.numbers"></a>
+
+- *Type:* \*\[]\*f64
+
+***
+
+### `Md5` <a name="Md5" id="cdktn.Fn.md5"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Md5(str *string) *string
+```
+
+[md5](https://developer.hashicorp.com/terraform/language/functions/md5) computes the MD5 hash of a given string and encodes it with hexadecimal digits.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.md5.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Merge` <a name="Merge" id="cdktn.Fn.merge"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Merge(maps *[]interface{}) interface{}
+```
+
+[merge](https://developer.hashicorp.com/terraform/language/functions/merge) takes an arbitrary number of maps or objects, and returns a single map or object that contains a merged set of elements from all arguments.
+
+#### `maps`<sup>Required</sup> <a name="maps" id="cdktn.Fn.merge.parameter.maps"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Min` <a name="Min" id="cdktn.Fn.min"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Min(numbers *[]*f64) *f64
+```
+
+[min](https://developer.hashicorp.com/terraform/language/functions/min) takes one or more numbers and returns the smallest number from the set.
+
+#### `numbers`<sup>Required</sup> <a name="numbers" id="cdktn.Fn.min.parameter.numbers"></a>
+
+- *Type:* \*\[]\*f64
+
+***
+
+### `Nonsensitive` <a name="Nonsensitive" id="cdktn.Fn.nonsensitive"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Nonsensitive(value interface{}) interface{}
+```
+
+[nonsensitive](https://developer.hashicorp.com/terraform/language/functions/nonsensitive) takes a sensitive value and returns a copy of that value with the sensitive marking removed, thereby exposing the sensitive value.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Fn.nonsensitive.parameter.value"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `One` <a name="One" id="cdktn.Fn.one"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_One(list interface{}) interface{}
+```
+
+[one](https://developer.hashicorp.com/terraform/language/functions/one) takes a list, set, or tuple value with either zero or one elements. If the collection is empty, `one` returns `null`. Otherwise, `one` returns the first element. If there are two or more elements then `one` will return an error.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.one.parameter.list"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Parseint` <a name="Parseint" id="cdktn.Fn.parseint"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Parseint(number interface{}, base *f64) interface{}
+```
+
+[parseint](https://developer.hashicorp.com/terraform/language/functions/parseint) parses the given string as a representation of an integer in the specified base and returns the resulting number. The base must be between 2 and 62 inclusive.
+
+#### `number`<sup>Required</sup> <a name="number" id="cdktn.Fn.parseint.parameter.number"></a>
+
+- *Type:* interface\{}
+
+***
+
+#### `base`<sup>Required</sup> <a name="base" id="cdktn.Fn.parseint.parameter.base"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Pathexpand` <a name="Pathexpand" id="cdktn.Fn.pathexpand"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Pathexpand(path *string) *string
+```
+
+[pathexpand](https://developer.hashicorp.com/terraform/language/functions/pathexpand) takes a filesystem path that might begin with a `~` segment, and if so it replaces that segment with the current user's home directory path.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.pathexpand.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+### `Plantimestamp` <a name="Plantimestamp" id="cdktn.Fn.plantimestamp"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Plantimestamp() *string
+```
+
+[plantimestamp](https://developer.hashicorp.com/terraform/language/functions/plantimestamp) returns a UTC timestamp string in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, fixed to a constant time representing the time of the plan.
+
+### `Pow` <a name="Pow" id="cdktn.Fn.pow"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Pow(num *f64, power *f64) *f64
+```
+
+[pow](https://developer.hashicorp.com/terraform/language/functions/pow) calculates an exponent, by raising its first argument to the power of the second argument.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.Fn.pow.parameter.num"></a>
+
+- *Type:* \*f64
+
+***
+
+#### `power`<sup>Required</sup> <a name="power" id="cdktn.Fn.pow.parameter.power"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Regex` <a name="Regex" id="cdktn.Fn.regex"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Regex(pattern *string, str *string) interface{}
+```
+
+[regex](https://developer.hashicorp.com/terraform/language/functions/regex) applies a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) to a string and returns the matching substrings.
+
+#### `pattern`<sup>Required</sup> <a name="pattern" id="cdktn.Fn.regex.parameter.pattern"></a>
+
+- *Type:* \*string
+
+***
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.regex.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Regexall` <a name="Regexall" id="cdktn.Fn.regexall"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Regexall(pattern *string, str *string) *[]*string
+```
+
+[regexall](https://developer.hashicorp.com/terraform/language/functions/regexall) applies a [regular expression](https://en.wikipedia.org/wiki/Regular_expression) to a string and returns a list of all matches.
+
+#### `pattern`<sup>Required</sup> <a name="pattern" id="cdktn.Fn.regexall.parameter.pattern"></a>
+
+- *Type:* \*string
+
+***
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.regexall.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Replace` <a name="Replace" id="cdktn.Fn.replace"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Replace(str *string, substr *string, replace *string) *string
+```
+
+[replace](https://developer.hashicorp.com/terraform/language/functions/replace) searches a given string for another given substring, and replaces each occurrence with a given replacement string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.replace.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+#### `substr`<sup>Required</sup> <a name="substr" id="cdktn.Fn.replace.parameter.substr"></a>
+
+- *Type:* \*string
+
+***
+
+#### `replace`<sup>Required</sup> <a name="replace" id="cdktn.Fn.replace.parameter.replace"></a>
+
+- *Type:* \*string
+
+***
+
+### `Reverse` <a name="Reverse" id="cdktn.Fn.reverse"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Reverse(list interface{}) interface{}
+```
+
+[reverse](https://developer.hashicorp.com/terraform/language/functions/reverse) takes a sequence and produces a new sequence of the same length with all of the same elements as the given sequence but in reverse order.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.reverse.parameter.list"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Rsadecrypt` <a name="Rsadecrypt" id="cdktn.Fn.rsadecrypt"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Rsadecrypt(ciphertext *string, privatekey *string) *string
+```
+
+[rsadecrypt](https://developer.hashicorp.com/terraform/language/functions/rsadecrypt) decrypts an RSA-encrypted ciphertext, returning the corresponding cleartext.
+
+#### `ciphertext`<sup>Required</sup> <a name="ciphertext" id="cdktn.Fn.rsadecrypt.parameter.ciphertext"></a>
+
+- *Type:* \*string
+
+***
+
+#### `privatekey`<sup>Required</sup> <a name="privatekey" id="cdktn.Fn.rsadecrypt.parameter.privatekey"></a>
+
+- *Type:* \*string
+
+***
+
+### `Sensitive` <a name="Sensitive" id="cdktn.Fn.sensitive"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Sensitive(value interface{}) interface{}
+```
+
+[sensitive](https://developer.hashicorp.com/terraform/language/functions/sensitive) takes any value and returns a copy of it marked so that Terraform will treat it as sensitive, with the same meaning and behavior as for [sensitive input variables](/terraform/language/values/variables#suppressing-values-in-cli-output).
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Fn.sensitive.parameter.value"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Setintersection` <a name="Setintersection" id="cdktn.Fn.setintersection"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Setintersection(first_set *[]interface{}, other_sets *[]*[]interface{}) *[]*string
+```
+
+The [setintersection](https://developer.hashicorp.com/terraform/language/functions/setintersection) function takes multiple sets and produces a single set containing only the elements that all of the given sets have in common. In other words, it computes the [intersection](https://en.wikipedia.org/wiki/Intersection_\(set_theory\)) of the sets.
+
+#### `first_set`<sup>Required</sup> <a name="first_set" id="cdktn.Fn.setintersection.parameter.first_set"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+#### `other_sets`<sup>Required</sup> <a name="other_sets" id="cdktn.Fn.setintersection.parameter.other_sets"></a>
+
+- *Type:* *\[]*\[]interface\{}
+
+***
+
+### `Setproduct` <a name="Setproduct" id="cdktn.Fn.setproduct"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Setproduct(sets *[]interface{}) interface{}
+```
+
+The [setproduct](https://developer.hashicorp.com/terraform/language/functions/setproduct) function finds all of the possible combinations of elements from all of the given sets by computing the [Cartesian product](https://en.wikipedia.org/wiki/Cartesian_product).
+
+#### `sets`<sup>Required</sup> <a name="sets" id="cdktn.Fn.setproduct.parameter.sets"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Setsubtract` <a name="Setsubtract" id="cdktn.Fn.setsubtract"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Setsubtract(a *[]interface{}, b *[]interface{}) *[]*string
+```
+
+The [setsubtract](https://developer.hashicorp.com/terraform/language/functions/setsubtract) function returns a new set containing the elements from the first set that are not present in the second set. In other words, it computes the [relative complement](https://en.wikipedia.org/wiki/Complement_\(set_theory\)#Relative_complement) of the second set.
+
+#### `a`<sup>Required</sup> <a name="a" id="cdktn.Fn.setsubtract.parameter.a"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+#### `b`<sup>Required</sup> <a name="b" id="cdktn.Fn.setsubtract.parameter.b"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Setunion` <a name="Setunion" id="cdktn.Fn.setunion"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Setunion(first_set *[]interface{}, other_sets *[]*[]interface{}) *[]*string
+```
+
+The [setunion](https://developer.hashicorp.com/terraform/language/functions/setunion) function takes multiple sets and produces a single set containing the elements from all of the given sets. In other words, it computes the [union](https://en.wikipedia.org/wiki/Union_\(set_theory\)) of the sets.
+
+#### `first_set`<sup>Required</sup> <a name="first_set" id="cdktn.Fn.setunion.parameter.first_set"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+#### `other_sets`<sup>Required</sup> <a name="other_sets" id="cdktn.Fn.setunion.parameter.other_sets"></a>
+
+- *Type:* *\[]*\[]interface\{}
+
+***
+
+### `Sha1` <a name="Sha1" id="cdktn.Fn.sha1"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Sha1(str *string) *string
+```
+
+[sha1](https://developer.hashicorp.com/terraform/language/functions/sha1) computes the SHA1 hash of a given string and encodes it with hexadecimal digits.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.sha1.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Sha256` <a name="Sha256" id="cdktn.Fn.sha256"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Sha256(str *string) *string
+```
+
+[sha256](https://developer.hashicorp.com/terraform/language/functions/sha256) computes the SHA256 hash of a given string and encodes it with hexadecimal digits.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.sha256.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Sha512` <a name="Sha512" id="cdktn.Fn.sha512"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Sha512(str *string) *string
+```
+
+[sha512](https://developer.hashicorp.com/terraform/language/functions/sha512) computes the SHA512 hash of a given string and encodes it with hexadecimal digits.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.sha512.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Signum` <a name="Signum" id="cdktn.Fn.signum"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Signum(num *f64) *f64
+```
+
+[signum](https://developer.hashicorp.com/terraform/language/functions/signum) determines the sign of a number, returning a number between -1 and 1 to represent the sign.
+
+#### `num`<sup>Required</sup> <a name="num" id="cdktn.Fn.signum.parameter.num"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Slice` <a name="Slice" id="cdktn.Fn.slice"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Slice(list interface{}, start_index *f64, end_index *f64) interface{}
+```
+
+[slice](https://developer.hashicorp.com/terraform/language/functions/slice) extracts some consecutive elements from within a list.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.slice.parameter.list"></a>
+
+- *Type:* interface\{}
+
+***
+
+#### `start_index`<sup>Required</sup> <a name="start_index" id="cdktn.Fn.slice.parameter.start_index"></a>
+
+- *Type:* \*f64
+
+***
+
+#### `end_index`<sup>Required</sup> <a name="end_index" id="cdktn.Fn.slice.parameter.end_index"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Sort` <a name="Sort" id="cdktn.Fn.sort"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Sort(list *[]*string) *[]*string
+```
+
+[sort](https://developer.hashicorp.com/terraform/language/functions/sort) takes a list of strings and returns a new list with those strings sorted lexicographically.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.sort.parameter.list"></a>
+
+- *Type:* \*\[]\*string
+
+***
+
+### `Split` <a name="Split" id="cdktn.Fn.split"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Split(separator *string, str *string) *[]*string
+```
+
+[split](https://developer.hashicorp.com/terraform/language/functions/split) produces a list by dividing a given string at all occurrences of a given separator.
+
+#### `separator`<sup>Required</sup> <a name="separator" id="cdktn.Fn.split.parameter.separator"></a>
+
+- *Type:* \*string
+
+***
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.split.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Startswith` <a name="Startswith" id="cdktn.Fn.startswith"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Startswith(str *string, prefix *string) IResolvable
+```
+
+[startswith](https://developer.hashicorp.com/terraform/language/functions/startswith) takes two values: a string to check and a prefix string. The function returns true if the string begins with that exact prefix.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.startswith.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.Fn.startswith.parameter.prefix"></a>
+
+- *Type:* \*string
+
+***
+
+### `Strcontains` <a name="Strcontains" id="cdktn.Fn.strcontains"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Strcontains(str *string, substr *string) IResolvable
+```
+
+[strcontains](https://developer.hashicorp.com/terraform/language/functions/strcontains) takes two values: a string to check and an expected substring. The function returns true if the string has the substring contained within it.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.strcontains.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+#### `substr`<sup>Required</sup> <a name="substr" id="cdktn.Fn.strcontains.parameter.substr"></a>
+
+- *Type:* \*string
+
+***
+
+### `Strrev` <a name="Strrev" id="cdktn.Fn.strrev"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Strrev(str *string) *string
+```
+
+[strrev](https://developer.hashicorp.com/terraform/language/functions/strrev) reverses the characters in a string. Note that the characters are treated as *Unicode characters* (in technical terms, Unicode [grapheme cluster boundaries](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries) are respected).
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.strrev.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Substr` <a name="Substr" id="cdktn.Fn.substr"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Substr(str *string, offset *f64, length *f64) *string
+```
+
+[substr](https://developer.hashicorp.com/terraform/language/functions/substr) extracts a substring from a given string by offset and (maximum) length.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.substr.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+#### `offset`<sup>Required</sup> <a name="offset" id="cdktn.Fn.substr.parameter.offset"></a>
+
+- *Type:* \*f64
+
+***
+
+#### `length`<sup>Required</sup> <a name="length" id="cdktn.Fn.substr.parameter.length"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Sum` <a name="Sum" id="cdktn.Fn.sum"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Sum(list interface{}) interface{}
+```
+
+[sum](https://developer.hashicorp.com/terraform/language/functions/sum) takes a list or set of numbers and returns the sum of those numbers.
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.sum.parameter.list"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Templatefile` <a name="Templatefile" id="cdktn.Fn.templatefile"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Templatefile(path *string, vars interface{}) interface{}
+```
+
+[templatefile](https://developer.hashicorp.com/terraform/language/functions/templatefile) reads the file at the given path and renders its content as a template using a supplied set of template variables.
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.templatefile.parameter.path"></a>
+
+- *Type:* \*string
+
+***
+
+#### `vars`<sup>Required</sup> <a name="vars" id="cdktn.Fn.templatefile.parameter.vars"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Textdecodebase64` <a name="Textdecodebase64" id="cdktn.Fn.textdecodebase64"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Textdecodebase64(source *string, encoding *string) *string
+```
+
+[textdecodebase64](https://developer.hashicorp.com/terraform/language/functions/textdecodebase64) function decodes a string that was previously Base64-encoded, and then interprets the result as characters in a specified character encoding.
+
+#### `source`<sup>Required</sup> <a name="source" id="cdktn.Fn.textdecodebase64.parameter.source"></a>
+
+- *Type:* \*string
+
+***
+
+#### `encoding`<sup>Required</sup> <a name="encoding" id="cdktn.Fn.textdecodebase64.parameter.encoding"></a>
+
+- *Type:* \*string
+
+***
+
+### `Textencodebase64` <a name="Textencodebase64" id="cdktn.Fn.textencodebase64"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Textencodebase64(str *string, encoding *string) *string
+```
+
+[textencodebase64](https://developer.hashicorp.com/terraform/language/functions/textencodebase64) encodes the unicode characters in a given string using a specified character encoding, returning the result base64 encoded because Terraform language strings are always sequences of unicode characters.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.textencodebase64.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+#### `encoding`<sup>Required</sup> <a name="encoding" id="cdktn.Fn.textencodebase64.parameter.encoding"></a>
+
+- *Type:* \*string
+
+***
+
+### `Timeadd` <a name="Timeadd" id="cdktn.Fn.timeadd"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Timeadd(timestamp *string, duration *string) *string
+```
+
+[timeadd](https://developer.hashicorp.com/terraform/language/functions/timeadd) adds a duration to a timestamp, returning a new timestamp.
+
+#### `timestamp`<sup>Required</sup> <a name="timestamp" id="cdktn.Fn.timeadd.parameter.timestamp"></a>
+
+- *Type:* \*string
+
+***
+
+#### `duration`<sup>Required</sup> <a name="duration" id="cdktn.Fn.timeadd.parameter.duration"></a>
+
+- *Type:* \*string
+
+***
+
+### `Timecmp` <a name="Timecmp" id="cdktn.Fn.timecmp"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Timecmp(timestamp_a *string, timestamp_b *string) *f64
+```
+
+[timecmp](https://developer.hashicorp.com/terraform/language/functions/timecmp) compares two timestamps and returns a number that represents the ordering of the instants those timestamps represent.
+
+#### `timestamp_a`<sup>Required</sup> <a name="timestamp_a" id="cdktn.Fn.timecmp.parameter.timestamp_a"></a>
+
+- *Type:* \*string
+
+***
+
+#### `timestamp_b`<sup>Required</sup> <a name="timestamp_b" id="cdktn.Fn.timecmp.parameter.timestamp_b"></a>
+
+- *Type:* \*string
+
+***
+
+### `Timestamp` <a name="Timestamp" id="cdktn.Fn.timestamp"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Timestamp() *string
+```
+
+[timestamp](https://developer.hashicorp.com/terraform/language/functions/timestamp) returns a UTC timestamp string in [RFC 3339](https://tools.ietf.org/html/rfc3339) format.
+
+### `Title` <a name="Title" id="cdktn.Fn.title"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Title(str *string) *string
+```
+
+[title](https://developer.hashicorp.com/terraform/language/functions/title) converts the first letter of each word in the given string to uppercase.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.title.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Tobool` <a name="Tobool" id="cdktn.Fn.tobool"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Tobool(v interface{}) IResolvable
+```
+
+[tobool](https://developer.hashicorp.com/terraform/language/functions/tobool) converts its argument to a boolean value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.Fn.tobool.parameter.v"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Tolist` <a name="Tolist" id="cdktn.Fn.tolist"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Tolist(v interface{}) *[]*string
+```
+
+[tolist](https://developer.hashicorp.com/terraform/language/functions/tolist) converts its argument to a list value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.Fn.tolist.parameter.v"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Tomap` <a name="Tomap" id="cdktn.Fn.tomap"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Tomap(v interface{}) interface{}
+```
+
+[tomap](https://developer.hashicorp.com/terraform/language/functions/tomap) converts its argument to a map value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.Fn.tomap.parameter.v"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Tonumber` <a name="Tonumber" id="cdktn.Fn.tonumber"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Tonumber(v interface{}) *f64
+```
+
+[tonumber](https://developer.hashicorp.com/terraform/language/functions/tonumber) converts its argument to a number value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.Fn.tonumber.parameter.v"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Toset` <a name="Toset" id="cdktn.Fn.toset"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Toset(v interface{}) *[]*string
+```
+
+[toset](https://developer.hashicorp.com/terraform/language/functions/toset) converts its argument to a set value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.Fn.toset.parameter.v"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Tostring` <a name="Tostring" id="cdktn.Fn.tostring"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Tostring(v interface{}) *string
+```
+
+[tostring](https://developer.hashicorp.com/terraform/language/functions/tostring) converts its argument to a string value.
+
+#### `v`<sup>Required</sup> <a name="v" id="cdktn.Fn.tostring.parameter.v"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Transpose` <a name="Transpose" id="cdktn.Fn.transpose"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Transpose(values interface{}) interface{}
+```
+
+[transpose](https://developer.hashicorp.com/terraform/language/functions/transpose) takes a map of lists of strings and swaps the keys and values to produce a new map of lists of strings.
+
+#### `values`<sup>Required</sup> <a name="values" id="cdktn.Fn.transpose.parameter.values"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Trim` <a name="Trim" id="cdktn.Fn.trim"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Trim(str *string, cutset *string) *string
+```
+
+[trim](https://developer.hashicorp.com/terraform/language/functions/trim) removes the specified set of characters from the start and end of the given string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.trim.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+#### `cutset`<sup>Required</sup> <a name="cutset" id="cdktn.Fn.trim.parameter.cutset"></a>
+
+- *Type:* \*string
+
+***
+
+### `Trimprefix` <a name="Trimprefix" id="cdktn.Fn.trimprefix"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Trimprefix(str *string, prefix *string) *string
+```
+
+[trimprefix](https://developer.hashicorp.com/terraform/language/functions/trimprefix) removes the specified prefix from the start of the given string. If the string does not start with the prefix, the string is returned unchanged.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.trimprefix.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+#### `prefix`<sup>Required</sup> <a name="prefix" id="cdktn.Fn.trimprefix.parameter.prefix"></a>
+
+- *Type:* \*string
+
+***
+
+### `Trimspace` <a name="Trimspace" id="cdktn.Fn.trimspace"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Trimspace(str *string) *string
+```
+
+[trimspace](https://developer.hashicorp.com/terraform/language/functions/trimspace) removes any space characters from the start and end of the given string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.trimspace.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Trimsuffix` <a name="Trimsuffix" id="cdktn.Fn.trimsuffix"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Trimsuffix(str *string, suffix *string) *string
+```
+
+[trimsuffix](https://developer.hashicorp.com/terraform/language/functions/trimsuffix) removes the specified suffix from the end of the given string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.trimsuffix.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+#### `suffix`<sup>Required</sup> <a name="suffix" id="cdktn.Fn.trimsuffix.parameter.suffix"></a>
+
+- *Type:* \*string
+
+***
+
+### `Try` <a name="Try" id="cdktn.Fn.try"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Try(expressions *[]interface{}) interface{}
+```
+
+[try](https://developer.hashicorp.com/terraform/language/functions/try) evaluates all of its argument expressions in turn and returns the result of the first one that does not produce any errors.
+
+#### `expressions`<sup>Required</sup> <a name="expressions" id="cdktn.Fn.try.parameter.expressions"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Upper` <a name="Upper" id="cdktn.Fn.upper"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Upper(str *string) *string
+```
+
+[upper](https://developer.hashicorp.com/terraform/language/functions/upper) converts all cased letters in the given string to uppercase.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.upper.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Urlencode` <a name="Urlencode" id="cdktn.Fn.urlencode"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Urlencode(str *string) *string
+```
+
+[urlencode](https://developer.hashicorp.com/terraform/language/functions/urlencode) applies URL encoding to a given string.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.urlencode.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+### `Uuid` <a name="Uuid" id="cdktn.Fn.uuid"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Uuid() *string
+```
+
+[uuid](https://developer.hashicorp.com/terraform/language/functions/uuid) generates a unique identifier string.
+
+### `Uuidv5` <a name="Uuidv5" id="cdktn.Fn.uuidv5"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Uuidv5(namespace *string, name *string) *string
+```
+
+[uuidv5](https://developer.hashicorp.com/terraform/language/functions/uuidv5) generates a *name-based* UUID, as described in [RFC 4122 section 4.3](https://tools.ietf.org/html/rfc4122#section-4.3), also known as a "version 5" UUID.
+
+#### `namespace`<sup>Required</sup> <a name="namespace" id="cdktn.Fn.uuidv5.parameter.namespace"></a>
+
+- *Type:* \*string
+
+***
+
+#### `name`<sup>Required</sup> <a name="name" id="cdktn.Fn.uuidv5.parameter.name"></a>
+
+- *Type:* \*string
+
+***
+
+### `Values` <a name="Values" id="cdktn.Fn.values"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Values(mapping interface{}) interface{}
+```
+
+[values](https://developer.hashicorp.com/terraform/language/functions/values) takes a map and returns a list containing the values of the elements in that map.
+
+#### `mapping`<sup>Required</sup> <a name="mapping" id="cdktn.Fn.values.parameter.mapping"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Yamldecode` <a name="Yamldecode" id="cdktn.Fn.yamldecode"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Yamldecode(src *string) interface{}
+```
+
+[yamldecode](https://developer.hashicorp.com/terraform/language/functions/yamldecode) parses a string as a subset of YAML, and produces a representation of its value.
+
+#### `src`<sup>Required</sup> <a name="src" id="cdktn.Fn.yamldecode.parameter.src"></a>
+
+- *Type:* \*string
+
+***
+
+### `Yamlencode` <a name="Yamlencode" id="cdktn.Fn.yamlencode"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Yamlencode(value interface{}) *string
+```
+
+[yamlencode](https://developer.hashicorp.com/terraform/language/functions/yamlencode) encodes a given value to a string using [YAML 1.2](https://yaml.org/spec/1.2/spec.html) block syntax.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.Fn.yamlencode.parameter.value"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Zipmap` <a name="Zipmap" id="cdktn.Fn.zipmap"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Zipmap(keys *[]*string, values interface{}) interface{}
+```
+
+[zipmap](https://developer.hashicorp.com/terraform/language/functions/zipmap) constructs a map from a list of keys and a corresponding list of values.
+
+#### `keys`<sup>Required</sup> <a name="keys" id="cdktn.Fn.zipmap.parameter.keys"></a>
+
+- *Type:* \*\[]\*string
+
+***
+
+#### `values`<sup>Required</sup> <a name="values" id="cdktn.Fn.zipmap.parameter.values"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Bcrypt` <a name="Bcrypt" id="cdktn.Fn.bcrypt"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Bcrypt(str *string, cost *f64) *string
+```
+
+[bcrypt](https://developer.hashicorp.com/terraform/docs/language/functions/bcrypt.html) computes a hash of the given string using the Blowfish cipher, returning a string in [the *Modular Crypt Format*](https://passlib.readthedocs.io/en/stable/modular_crypt_format.html) usually expected in the shadow password file on many Unix systems.
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.bcrypt.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+
+#### `cost`<sup>Optional</sup> <a name="cost" id="cdktn.Fn.bcrypt.parameter.cost"></a>
+
+- *Type:* \*f64
+
+***
+
+### `Conditional` <a name="Conditional" id="cdktn.Fn.conditional"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Conditional(condition interface{}, trueValue interface{}, falseValue interface{}) interface{}
+```
+
+[https://developer.hashicorp.com/terraform/language/expressions/conditionals](https://developer.hashicorp.com/terraform/language/expressions/conditionals) A conditional expression uses the value of a boolean expression to select one of two values.
+
+#### `condition`<sup>Required</sup> <a name="condition" id="cdktn.Fn.conditional.parameter.condition"></a>
+
+- *Type:* interface\{}
+
+***
+
+#### `trueValue`<sup>Required</sup> <a name="trueValue" id="cdktn.Fn.conditional.parameter.trueValue"></a>
+
+- *Type:* interface\{}
+
+***
+
+#### `falseValue`<sup>Required</sup> <a name="falseValue" id="cdktn.Fn.conditional.parameter.falseValue"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `Join` <a name="Join" id="cdktn.Fn.join"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Join(separator *string, list *[]*string) *string
+```
+
+[join](https://developer.hashicorp.com/terraform/docs/language/functions/join.html) produces a string by concatenating together all elements of a given list of strings with the given delimiter.
+
+#### `separator`<sup>Required</sup> <a name="separator" id="cdktn.Fn.join.parameter.separator"></a>
+
+- *Type:* \*string
+
+***
+
+#### `list`<sup>Required</sup> <a name="list" id="cdktn.Fn.join.parameter.list"></a>
+
+- *Type:* \*\[]\*string
+
+***
+
+### `Lookup` <a name="Lookup" id="cdktn.Fn.lookup"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Lookup(inputMap interface{}, key *string, defaultValue interface{}) interface{}
+```
+
+[lookup](https://developer.hashicorp.com/terraform/docs/language/functions/lookup.html) retrieves the value of a single element from a map, given its key. If the given key does not exist, the given default value is returned instead.
+
+#### `inputMap`<sup>Required</sup> <a name="inputMap" id="cdktn.Fn.lookup.parameter.inputMap"></a>
+
+- *Type:* interface\{}
+
+***
+
+#### `key`<sup>Required</sup> <a name="key" id="cdktn.Fn.lookup.parameter.key"></a>
+
+- *Type:* \*string
+
+***
+
+#### `defaultValue`<sup>Optional</sup> <a name="defaultValue" id="cdktn.Fn.lookup.parameter.defaultValue"></a>
+
+- *Type:* interface\{}
+
+***
+
+### `LookupNested` <a name="LookupNested" id="cdktn.Fn.lookupNested"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_LookupNested(inputMap interface{}, path *[]interface{}) interface{}
+```
+
+returns a property access expression that accesses the property at the given path in the given inputMap.
+
+For example lookupNested(x, \["a", "b", "c"]) will return a Terraform expression like x\["a"]\["b"]\["c"]
+
+#### `inputMap`<sup>Required</sup> <a name="inputMap" id="cdktn.Fn.lookupNested.parameter.inputMap"></a>
+
+- *Type:* interface\{}
+
+***
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.Fn.lookupNested.parameter.path"></a>
+
+- *Type:* \*\[]interface\{}
+
+***
+
+### `Range` <a name="Range" id="cdktn.Fn.range"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_Range(start *f64, limit *f64, step *f64) *[]*string
+```
+
+[range](https://developer.hashicorp.com/terraform/docs/language/functions/range.html) generates a list of numbers using a start value, a limit value, and a step value.
+
+#### `start`<sup>Required</sup> <a name="start" id="cdktn.Fn.range.parameter.start"></a>
+
+- *Type:* \*f64
+
+***
+
+#### `limit`<sup>Required</sup> <a name="limit" id="cdktn.Fn.range.parameter.limit"></a>
+
+- *Type:* \*f64
+
+***
+
+#### `step`<sup>Optional</sup> <a name="step" id="cdktn.Fn.range.parameter.step"></a>
+
+- *Type:* \*f64
+
+***
+
+### `RawString` <a name="RawString" id="cdktn.Fn.rawString"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Fn_RawString(str *string) *string
+```
+
+Use this function to wrap a string and escape it properly for the use in Terraform This is only needed in certain scenarios (e.g., if you have unescaped double quotes in the string).
+
+#### `str`<sup>Required</sup> <a name="str" id="cdktn.Fn.rawString.parameter.str"></a>
+
+- *Type:* \*string
+
+***
+

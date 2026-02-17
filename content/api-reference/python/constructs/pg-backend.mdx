@@ -1,0 +1,343 @@
+---
+title: "Python: PgBackend"
+sidebarTitle: PgBackend
+description: CDKTN Core API Reference for PgBackend in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.PgBackend.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.PgBackend(
+  scope: Construct,
+  conn_str: str,
+  schema_name: str = None,
+  skip_index_creation: bool = None,
+  skip_schema_creation: bool = None,
+  skip_table_creation: bool = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.connStr">conn\_str</a></code> | <code>str</code> | Postgres connection string; |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.schemaName">schema\_name</a></code> | <code>str</code> | Name of the automatically-managed Postgres schema, default to terraform\_remote\_state. |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.skipIndexCreation">skip\_index\_creation</a></code> | <code>bool</code> | If set to true, the Postgres index must already exist. |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.skipSchemaCreation">skip\_schema\_creation</a></code> | <code>bool</code> | If set to true, the Postgres schema must already exist. |
+| <code><a href="#cdktn.PgBackend.Initializer.parameter.skipTableCreation">skip\_table\_creation</a></code> | <code>bool</code> | If set to true, the Postgres table must already exist. |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.PgBackend.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+### `conn_str`<sup>Required</sup> <a name="conn_str" id="cdktn.PgBackend.Initializer.parameter.connStr"></a>
+
+- *Type:* str
+
+Postgres connection string;
+
+a postgres:// URL.
+The PG\_CONN\_STR and standard libpq environment variables can also be used to indicate how to connect to the PostgreSQL database.
+
+***
+
+### `schema_name`<sup>Optional</sup> <a name="schema_name" id="cdktn.PgBackend.Initializer.parameter.schemaName"></a>
+
+- *Type:* str
+
+Name of the automatically-managed Postgres schema, default to terraform\_remote\_state.
+
+Can also be set using the PG\_SCHEMA\_NAME environment variable.
+
+***
+
+### `skip_index_creation`<sup>Optional</sup> <a name="skip_index_creation" id="cdktn.PgBackend.Initializer.parameter.skipIndexCreation"></a>
+
+- *Type:* bool
+
+If set to true, the Postgres index must already exist.
+
+Can also be set using the PG\_SKIP\_INDEX\_CREATION environment variable.
+Terraform won't try to create the index, this is useful when it has already been created by a database administrator.
+
+***
+
+### `skip_schema_creation`<sup>Optional</sup> <a name="skip_schema_creation" id="cdktn.PgBackend.Initializer.parameter.skipSchemaCreation"></a>
+
+- *Type:* bool
+
+If set to true, the Postgres schema must already exist.
+
+Can also be set using the PG\_SKIP\_SCHEMA\_CREATION environment variable.
+Terraform won't try to create the schema, this is useful when it has already been created by a database administrator.
+
+***
+
+### `skip_table_creation`<sup>Optional</sup> <a name="skip_table_creation" id="cdktn.PgBackend.Initializer.parameter.skipTableCreation"></a>
+
+- *Type:* bool
+
+If set to true, the Postgres table must already exist.
+
+Can also be set using the PG\_SKIP\_TABLE\_CREATION environment variable.
+Terraform won't try to create the table, this is useful when it has already been created by a database administrator.
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.PgBackend.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.PgBackend.addOverride">add\_override</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.overrideLogicalId">override\_logical\_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.PgBackend.resetOverrideLogicalId">reset\_override\_logical\_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.PgBackend.toHclTerraform">to\_hcl\_terraform</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.toMetadata">to\_metadata</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.toTerraform">to\_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#cdktn.PgBackend.getRemoteStateDataSource">get\_remote\_state\_data\_source</a></code> | Creates a TerraformRemoteState resource that accesses this backend. |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.PgBackend.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `add_override` <a name="add_override" id="cdktn.PgBackend.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.PgBackend.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.PgBackend.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `override_logical_id` <a name="override_logical_id" id="cdktn.PgBackend.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="cdktn.PgBackend.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+***
+
+### `reset_override_logical_id` <a name="reset_override_logical_id" id="cdktn.PgBackend.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.PgBackend.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+### `to_metadata` <a name="to_metadata" id="cdktn.PgBackend.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+### `to_terraform` <a name="to_terraform" id="cdktn.PgBackend.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+### `get_remote_state_data_source` <a name="get_remote_state_data_source" id="cdktn.PgBackend.getRemoteStateDataSource"></a>
+
+```python
+def get_remote_state_data_source(
+  scope: Construct,
+  name: str,
+  _fromstack: str
+) -> TerraformRemoteState
+```
+
+Creates a TerraformRemoteState resource that accesses this backend.
+
+#### `scope`<sup>Required</sup> <a name="scope" id="cdktn.PgBackend.getRemoteStateDataSource.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+***
+
+#### `name`<sup>Required</sup> <a name="name" id="cdktn.PgBackend.getRemoteStateDataSource.parameter.name"></a>
+
+- *Type:* str
+
+***
+
+#### `_fromstack`<sup>Required</sup> <a name="_fromstack" id="cdktn.PgBackend.getRemoteStateDataSource.parameter._fromStack"></a>
+
+- *Type:* str
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.PgBackend.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.PgBackend.isTerraformElement">is\_terraform\_element</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.isBackend">is\_backend</a></code> | *No description.* |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.PgBackend.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.PgBackend.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.PgBackend.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_terraform_element` <a name="is_terraform_element" id="cdktn.PgBackend.isTerraformElement"></a>
+
+```python
+import cdktn
+
+cdktn.PgBackend.is_terraform_element(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.PgBackend.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `is_backend` <a name="is_backend" id="cdktn.PgBackend.isBackend"></a>
+
+```python
+import cdktn
+
+cdktn.PgBackend.is_backend(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.PgBackend.isBackend.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.PgBackend.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.PgBackend.property.cdktfStack">cdktf\_stack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.PgBackend.property.friendlyUniqueId">friendly\_unique\_id</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.PgBackend.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="cdktn.PgBackend.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.PgBackend.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+***
+
+### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="cdktn.PgBackend.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+***
+

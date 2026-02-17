@@ -1,0 +1,128 @@
+---
+title: "Typescript: S3BackendAssumeRoleWithWebIdentityConfig"
+sidebarTitle: S3BackendAssumeRoleWithWebIdentityConfig
+description: CDKTN Core API Reference for S3BackendAssumeRoleWithWebIdentityConfig in Typescript.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.Initializer"></a>
+
+```typescript
+import { S3BackendAssumeRoleWithWebIdentityConfig } from 'cdktn'
+
+const s3BackendAssumeRoleWithWebIdentityConfig: S3BackendAssumeRoleWithWebIdentityConfig = { ... }
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.duration">duration</a></code> | <code>string</code> | (Optional) The duration individual credentials will be valid. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.policy">policy</a></code> | <code>string</code> | (Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.policyArns">policyArns</a></code> | <code>string\[]</code> | (Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.roleArn">roleArn</a></code> | <code>string</code> | (Required) Amazon Resource Name (ARN) of the IAM Role to assume. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.sessionName">sessionName</a></code> | <code>string</code> | (Optional) Session name to use when assuming the role. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.webIdentityToken">webIdentityToken</a></code> | <code>string</code> | (Optional) The value of a web identity token from an OpenID Connect (OIDC) or OAuth provider. |
+| <code><a href="#cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.webIdentityTokenFile">webIdentityTokenFile</a></code> | <code>string</code> | (Optional) File containing a web identity token from an OpenID Connect (OIDC) or OAuth provider. |
+
+***
+
+### `duration`<sup>Optional</sup> <a name="duration" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.duration"></a>
+
+```typescript
+public readonly duration: string;
+```
+
+- *Type:* string
+
+(Optional) The duration individual credentials will be valid.
+
+Credentials are automatically renewed up to the maximum defined by the AWS account.
+Specified using the format &lt; hours >h&lt; minutes >m&lt; seconds >s with any unit being optional.
+For example, an hour and a half can be specified as 1h30m or 90m.
+Must be between 15 minutes (15m) and 12 hours (12h).
+
+***
+
+### `policy`<sup>Optional</sup> <a name="policy" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.policy"></a>
+
+```typescript
+public readonly policy: string;
+```
+
+- *Type:* string
+
+(Optional) IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### `policyArns`<sup>Optional</sup> <a name="policyArns" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.policyArns"></a>
+
+```typescript
+public readonly policyArns: string[];
+```
+
+- *Type:* string\[]
+
+(Optional) Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the IAM Role being assumed.
+
+***
+
+### `roleArn`<sup>Optional</sup> <a name="roleArn" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.roleArn"></a>
+
+```typescript
+public readonly roleArn: string;
+```
+
+- *Type:* string
+
+(Required) Amazon Resource Name (ARN) of the IAM Role to assume.
+
+Can also be set with the AWS\_ROLE\_ARN environment variable.
+
+***
+
+### `sessionName`<sup>Optional</sup> <a name="sessionName" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.sessionName"></a>
+
+```typescript
+public readonly sessionName: string;
+```
+
+- *Type:* string
+
+(Optional) Session name to use when assuming the role.
+
+Can also be set with the AWS\_ROLE\_SESSION\_NAME environment variable.
+
+***
+
+### `webIdentityToken`<sup>Optional</sup> <a name="webIdentityToken" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.webIdentityToken"></a>
+
+```typescript
+public readonly webIdentityToken: string;
+```
+
+- *Type:* string
+
+(Optional) The value of a web identity token from an OpenID Connect (OIDC) or OAuth provider.
+
+One of web\_identity\_token or web\_identity\_token\_file is required.
+
+***
+
+### `webIdentityTokenFile`<sup>Optional</sup> <a name="webIdentityTokenFile" id="cdktn.S3BackendAssumeRoleWithWebIdentityConfig.property.webIdentityTokenFile"></a>
+
+```typescript
+public readonly webIdentityTokenFile: string;
+```
+
+- *Type:* string
+
+(Optional) File containing a web identity token from an OpenID Connect (OIDC) or OAuth provider.
+
+One of web\_identity\_token\_file or web\_identity\_token is required.
+Can also be set with the AWS\_WEB\_IDENTITY\_TOKEN\_FILE environment variable.
+
+***
+

@@ -1,0 +1,122 @@
+---
+title: "Python: AppConfig"
+sidebarTitle: AppConfig
+description: CDKTN Core API Reference for AppConfig in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.AppConfig.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.AppConfig(
+  context: typing.Mapping[typing.Any] = None,
+  hcl_output: bool = None,
+  outdir: str = None,
+  skip_backend_validation: bool = None,
+  skip_validation: bool = None,
+  stack_traces: bool = None
+)
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.AppConfig.property.context">context</a></code> | <code>typing.Mapping\[typing.Any]</code> | Additional context values for the application. |
+| <code><a href="#cdktn.AppConfig.property.hclOutput">hcl\_output</a></code> | <code>bool</code> | *No description.* |
+| <code><a href="#cdktn.AppConfig.property.outdir">outdir</a></code> | <code>str</code> | The directory to output Terraform resources. |
+| <code><a href="#cdktn.AppConfig.property.skipBackendValidation">skip\_backend\_validation</a></code> | <code>bool</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#cdktn.AppConfig.property.skipValidation">skip\_validation</a></code> | <code>bool</code> | Whether to skip all validations during synthesis of the app. |
+| <code><a href="#cdktn.AppConfig.property.stackTraces">stack\_traces</a></code> | <code>bool</code> | *No description.* |
+
+***
+
+### `context`<sup>Optional</sup> <a name="context" id="cdktn.AppConfig.property.context"></a>
+
+```python
+context: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping\[typing.Any]
+- *Default:* no additional context
+
+Additional context values for the application.
+
+Context set by the CLI or the `context` key in `cdktf.json` has precedence.
+
+Context can be read from any construct using `node.getContext(key)`.
+
+***
+
+### `hcl_output`<sup>Optional</sup> <a name="hcl_output" id="cdktn.AppConfig.property.hclOutput"></a>
+
+```python
+hcl_output: bool
+```
+
+- *Type:* bool
+
+***
+
+### `outdir`<sup>Optional</sup> <a name="outdir" id="cdktn.AppConfig.property.outdir"></a>
+
+```python
+outdir: str
+```
+
+- *Type:* str
+- *Default:* CDKTF\_OUTDIR if defined, otherwise "cdktf.out"
+
+The directory to output Terraform resources.
+
+If you are using the CDKTN CLI, this value is automatically set from one of the following three sources:
+
+- The `-o` / `--output` CLI option
+- The `CDKTF_OUTDIR` environment variable
+- The `outdir` key in `cdktf.json`
+
+If you are using the CDKTN CLI and want to set a different value here, you will also need to set the same value via one of the three ways specified above.
+
+The most common case to set this value is when you are using the CDKTN library directly (e.g. when writing unit tests).
+
+***
+
+### `skip_backend_validation`<sup>Optional</sup> <a name="skip_backend_validation" id="cdktn.AppConfig.property.skipBackendValidation"></a>
+
+```python
+skip_backend_validation: bool
+```
+
+- *Type:* bool
+- *Default:* false
+
+Whether to skip backend validation during synthesis of the app.
+
+***
+
+### `skip_validation`<sup>Optional</sup> <a name="skip_validation" id="cdktn.AppConfig.property.skipValidation"></a>
+
+```python
+skip_validation: bool
+```
+
+- *Type:* bool
+- *Default:* false
+
+Whether to skip all validations during synthesis of the app.
+
+***
+
+### `stack_traces`<sup>Optional</sup> <a name="stack_traces" id="cdktn.AppConfig.property.stackTraces"></a>
+
+```python
+stack_traces: bool
+```
+
+- *Type:* bool
+
+***
+

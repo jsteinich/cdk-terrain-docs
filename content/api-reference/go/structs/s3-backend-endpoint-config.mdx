@@ -1,0 +1,104 @@
+---
+title: "Go: S3BackendEndpointConfig"
+sidebarTitle: S3BackendEndpointConfig
+description: CDKTN Core API Reference for S3BackendEndpointConfig in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializer <a name="Initializer" id="cdktn.S3BackendEndpointConfig.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+&cdktn.S3BackendEndpointConfig {
+	Dynamodb: *string,
+	Iam: *string,
+	S3: *string,
+	Sso: *string,
+	Sts: *string,
+}
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.S3BackendEndpointConfig.property.dynamodb">Dynamodb</a></code> | <code>\*string</code> | (Optional) Custom endpoint URL for the AWS DynamoDB API. |
+| <code><a href="#cdktn.S3BackendEndpointConfig.property.iam">Iam</a></code> | <code>\*string</code> | (Optional) Custom endpoint URL for the AWS IAM API. |
+| <code><a href="#cdktn.S3BackendEndpointConfig.property.s3">S3</a></code> | <code>\*string</code> | (Optional) Custom endpoint URL for the AWS S3 API. |
+| <code><a href="#cdktn.S3BackendEndpointConfig.property.sso">Sso</a></code> | <code>\*string</code> | (Optional) Custom endpoint URL for the AWS IAM Identity Center (formerly known as AWS SSO) API. |
+| <code><a href="#cdktn.S3BackendEndpointConfig.property.sts">Sts</a></code> | <code>\*string</code> | (Optional) Custom endpoint URL for the AWS STS API. |
+
+***
+
+### `Dynamodb`<sup>Optional</sup> <a name="Dynamodb" id="cdktn.S3BackendEndpointConfig.property.dynamodb"></a>
+
+```go
+Dynamodb *string
+```
+
+- *Type:* \*string
+
+(Optional) Custom endpoint URL for the AWS DynamoDB API.
+
+This can also be sourced from the environment variable AWS\_ENDPOINT\_URL\_DYNAMODB or the deprecated environment variable AWS\_DYNAMODB\_ENDPOINT.
+
+***
+
+### `Iam`<sup>Optional</sup> <a name="Iam" id="cdktn.S3BackendEndpointConfig.property.iam"></a>
+
+```go
+Iam *string
+```
+
+- *Type:* \*string
+
+(Optional) Custom endpoint URL for the AWS IAM API.
+
+This can also be sourced from the environment variable AWS\_ENDPOINT\_URL\_IAM or the deprecated environment variable AWS\_IAM\_ENDPOINT.
+
+***
+
+### `S3`<sup>Optional</sup> <a name="S3" id="cdktn.S3BackendEndpointConfig.property.s3"></a>
+
+```go
+S3 *string
+```
+
+- *Type:* \*string
+
+(Optional) Custom endpoint URL for the AWS S3 API.
+
+This can also be sourced from the environment variable AWS\_ENDPOINT\_URL\_S3 or the deprecated environment variable AWS\_S3\_ENDPOINT.
+
+***
+
+### `Sso`<sup>Optional</sup> <a name="Sso" id="cdktn.S3BackendEndpointConfig.property.sso"></a>
+
+```go
+Sso *string
+```
+
+- *Type:* \*string
+
+(Optional) Custom endpoint URL for the AWS IAM Identity Center (formerly known as AWS SSO) API.
+
+This can also be sourced from the environment variable AWS\_ENDPOINT\_URL\_SSO.
+
+***
+
+### `Sts`<sup>Optional</sup> <a name="Sts" id="cdktn.S3BackendEndpointConfig.property.sts"></a>
+
+```go
+Sts *string
+```
+
+- *Type:* \*string
+
+(Optional) Custom endpoint URL for the AWS STS API.
+
+This can also be sourced from the environment variable AWS\_ENDPOINT\_URL\_STS or the deprecated environment variable AWS\_STS\_ENDPOINT.
+
+***
+

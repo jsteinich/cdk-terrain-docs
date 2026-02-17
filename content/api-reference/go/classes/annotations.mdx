@@ -1,0 +1,102 @@
+---
+title: "Go: Annotations"
+sidebarTitle: Annotations
+description: CDKTN Core API Reference for Annotations in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Includes API for attaching annotations such as warning messages to constructs.
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Annotations.addError">AddError</a></code> | Adds an \{ "error": &lt; message > } metadata entry to this construct. |
+| <code><a href="#cdktn.Annotations.addInfo">AddInfo</a></code> | Adds an info metadata entry to this construct. |
+| <code><a href="#cdktn.Annotations.addWarning">AddWarning</a></code> | Adds a warning metadata entry to this construct. |
+
+***
+
+### `AddError` <a name="AddError" id="cdktn.Annotations.addError"></a>
+
+```go
+func AddError(message *string)
+```
+
+Adds an \{ "error": &lt; message > } metadata entry to this construct.
+
+The toolkit will fail synthesis when errors are reported.
+
+#### `message`<sup>Required</sup> <a name="message" id="cdktn.Annotations.addError.parameter.message"></a>
+
+- *Type:* \*string
+
+The error message.
+
+***
+
+### `AddInfo` <a name="AddInfo" id="cdktn.Annotations.addInfo"></a>
+
+```go
+func AddInfo(message *string)
+```
+
+Adds an info metadata entry to this construct.
+
+The CLI will display the info message when apps are synthesized.
+
+#### `message`<sup>Required</sup> <a name="message" id="cdktn.Annotations.addInfo.parameter.message"></a>
+
+- *Type:* \*string
+
+The info message.
+
+***
+
+### `AddWarning` <a name="AddWarning" id="cdktn.Annotations.addWarning"></a>
+
+```go
+func AddWarning(message *string)
+```
+
+Adds a warning metadata entry to this construct.
+
+The CLI will display the warning when an app is synthesized.
+In a future release the CLI might introduce a --strict flag which
+will then fail the synthesis if it encounters a warning.
+
+#### `message`<sup>Required</sup> <a name="message" id="cdktn.Annotations.addWarning.parameter.message"></a>
+
+- *Type:* \*string
+
+The warning message.
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.Annotations.of">Of</a></code> | Returns the annotations API for a construct scope. |
+
+***
+
+### `Of` <a name="Of" id="cdktn.Annotations.of"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.Annotations_Of(scope IConstruct) Annotations
+```
+
+Returns the annotations API for a construct scope.
+
+#### `scope`<sup>Required</sup> <a name="scope" id="cdktn.Annotations.of.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.IConstruct
+
+The scope.
+
+***
+

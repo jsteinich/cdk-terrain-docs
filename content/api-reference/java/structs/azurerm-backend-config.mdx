@@ -1,0 +1,445 @@
+---
+title: "Java: AzurermBackendConfig"
+sidebarTitle: AzurermBackendConfig
+description: CDKTN Core API Reference for AzurermBackendConfig in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Stores the state as a Blob with the given Key within the Blob Container within the Blob Storage Account.
+
+This backend supports state locking and consistency checking
+with Azure Blob Storage native capabilities.
+
+Note: By default the Azure Backend uses ADAL for authentication which is deprecated
+in favour of MSAL - MSAL can be used by setting use\_microsoft\_graph to true.
+The default for this will change in Terraform 1.2,
+so that MSAL authentication is used by default.
+
+Read more about this backend in the Terraform docs:
+https://developer.hashicorp.com/terraform/language/settings/backends/azurerm
+
+## Initializer <a name="Initializer" id="cdktn.AzurermBackendConfig.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.AzurermBackendConfig;
+
+AzurermBackendConfig.builder()
+    .containerName(java.lang.String)
+    .key(java.lang.String)
+    .storageAccountName(java.lang.String)
+//  .accessKey(java.lang.String)
+//  .clientCertificatePassword(java.lang.String)
+//  .clientCertificatePath(java.lang.String)
+//  .clientId(java.lang.String)
+//  .clientSecret(java.lang.String)
+//  .endpoint(java.lang.String)
+//  .environment(java.lang.String)
+//  .metadataHost(java.lang.String)
+//  .msiEndpoint(java.lang.String)
+//  .oidcRequestToken(java.lang.String)
+//  .oidcRequestUrl(java.lang.String)
+//  .oidcToken(java.lang.String)
+//  .oidcTokenFilePath(java.lang.String)
+//  .resourceGroupName(java.lang.String)
+//  .sasToken(java.lang.String)
+//  .snapshot(java.lang.Boolean)
+//  .subscriptionId(java.lang.String)
+//  .tenantId(java.lang.String)
+//  .useAzureadAuth(java.lang.Boolean)
+//  .useMicrosoftGraph(java.lang.Boolean)
+//  .useMsi(java.lang.Boolean)
+//  .useOidc(java.lang.Boolean)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.AzurermBackendConfig.property.containerName">containerName</a></code> | <code>java.lang.String</code> | (Required) The Name of the Storage Container within the Storage Account. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.key">key</a></code> | <code>java.lang.String</code> | (Required) The name of the Blob used to retrieve/store Terraform's State file inside the Storage Container. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.storageAccountName">storageAccountName</a></code> | <code>java.lang.String</code> | (Required) The Name of the Storage Account. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.accessKey">accessKey</a></code> | <code>java.lang.String</code> | access\_key - (Optional) The Access Key used to access the Blob Storage Account. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.clientCertificatePassword">clientCertificatePassword</a></code> | <code>java.lang.String</code> | (Optional) The password associated with the Client Certificate specified in client\_certificate\_path. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.clientCertificatePath">clientCertificatePath</a></code> | <code>java.lang.String</code> | (Optional) The path to the PFX file used as the Client Certificate when authenticating as a Service Principal. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.clientId">clientId</a></code> | <code>java.lang.String</code> | (Optional) The Client ID of the Service Principal. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.clientSecret">clientSecret</a></code> | <code>java.lang.String</code> | (Optional) The Client Secret of the Service Principal. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.endpoint">endpoint</a></code> | <code>java.lang.String</code> | (Optional) The Custom Endpoint for Azure Resource Manager. This can also be sourced from the ARM\_ENDPOINT environment variable. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.environment">environment</a></code> | <code>java.lang.String</code> | (Optional) The Azure Environment which should be used. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.metadataHost">metadataHost</a></code> | <code>java.lang.String</code> | (Optional) The Hostname of the Azure Metadata Service (for example management.azure.com), used to obtain the Cloud Environment when using a Custom Azure Environment. This can also be sourced from the ARM\_METADATA\_HOSTNAME Environment Variable.). |
+| <code><a href="#cdktn.AzurermBackendConfig.property.msiEndpoint">msiEndpoint</a></code> | <code>java.lang.String</code> | (Optional) The path to a custom Managed Service Identity endpoint which is automatically determined if not specified. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.oidcRequestToken">oidcRequestToken</a></code> | <code>java.lang.String</code> | (Optional) The bearer token for the request to the OIDC provider. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.oidcRequestUrl">oidcRequestUrl</a></code> | <code>java.lang.String</code> | (Optional) The URL for the OIDC provider from which to request an ID token. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.oidcToken">oidcToken</a></code> | <code>java.lang.String</code> | (Optional) The ID token when authenticating using OpenID Connect (OIDC). |
+| <code><a href="#cdktn.AzurermBackendConfig.property.oidcTokenFilePath">oidcTokenFilePath</a></code> | <code>java.lang.String</code> | (Optional) The path to a file containing an ID token when authenticating using OpenID Connect (OIDC). |
+| <code><a href="#cdktn.AzurermBackendConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | (Required) The Name of the Resource Group in which the Storage Account exists. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.sasToken">sasToken</a></code> | <code>java.lang.String</code> | (Optional) The SAS Token used to access the Blob Storage Account. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.snapshot">snapshot</a></code> | <code>java.lang.Boolean</code> | (Optional) Should the Blob used to store the Terraform Statefile be snapshotted before use? |
+| <code><a href="#cdktn.AzurermBackendConfig.property.subscriptionId">subscriptionId</a></code> | <code>java.lang.String</code> | (Optional) The Subscription ID in which the Storage Account exists. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.tenantId">tenantId</a></code> | <code>java.lang.String</code> | (Optional) The Tenant ID in which the Subscription exists. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.useAzureadAuth">useAzureadAuth</a></code> | <code>java.lang.Boolean</code> | (Optional) Should AzureAD Authentication be used to access the Blob Storage Account. |
+| <code><a href="#cdktn.AzurermBackendConfig.property.useMicrosoftGraph">useMicrosoftGraph</a></code> | <code>java.lang.Boolean</code> | (Optional) Should MSAL be used for authentication instead of ADAL, and should Microsoft Graph be used instead of Azure Active Directory Graph? |
+| <code><a href="#cdktn.AzurermBackendConfig.property.useMsi">useMsi</a></code> | <code>java.lang.Boolean</code> | (Optional) Should Managed Service Identity authentication be used? |
+| <code><a href="#cdktn.AzurermBackendConfig.property.useOidc">useOidc</a></code> | <code>java.lang.Boolean</code> | (Optional) Should OIDC authentication be used? This can also be sourced from the ARM\_USE\_OIDC environment variable. |
+
+***
+
+### `containerName`<sup>Required</sup> <a name="containerName" id="cdktn.AzurermBackendConfig.property.containerName"></a>
+
+```java
+public java.lang.String getContainerName();
+```
+
+- *Type:* java.lang.String
+
+(Required) The Name of the Storage Container within the Storage Account.
+
+***
+
+### `key`<sup>Required</sup> <a name="key" id="cdktn.AzurermBackendConfig.property.key"></a>
+
+```java
+public java.lang.String getKey();
+```
+
+- *Type:* java.lang.String
+
+(Required) The name of the Blob used to retrieve/store Terraform's State file inside the Storage Container.
+
+***
+
+### `storageAccountName`<sup>Required</sup> <a name="storageAccountName" id="cdktn.AzurermBackendConfig.property.storageAccountName"></a>
+
+```java
+public java.lang.String getStorageAccountName();
+```
+
+- *Type:* java.lang.String
+
+(Required) The Name of the Storage Account.
+
+***
+
+### `accessKey`<sup>Optional</sup> <a name="accessKey" id="cdktn.AzurermBackendConfig.property.accessKey"></a>
+
+```java
+public java.lang.String getAccessKey();
+```
+
+- *Type:* java.lang.String
+
+access\_key - (Optional) The Access Key used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_ACCESS\_KEY environment variable.
+
+***
+
+### `clientCertificatePassword`<sup>Optional</sup> <a name="clientCertificatePassword" id="cdktn.AzurermBackendConfig.property.clientCertificatePassword"></a>
+
+```java
+public java.lang.String getClientCertificatePassword();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The password associated with the Client Certificate specified in client\_certificate\_path.
+
+This can also be sourced from the
+ARM\_CLIENT\_CERTIFICATE\_PASSWORD environment variable.
+
+***
+
+### `clientCertificatePath`<sup>Optional</sup> <a name="clientCertificatePath" id="cdktn.AzurermBackendConfig.property.clientCertificatePath"></a>
+
+```java
+public java.lang.String getClientCertificatePath();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The path to the PFX file used as the Client Certificate when authenticating as a Service Principal.
+
+This can also be sourced from the
+ARM\_CLIENT\_CERTIFICATE\_PATH environment variable.
+
+***
+
+### `clientId`<sup>Optional</sup> <a name="clientId" id="cdktn.AzurermBackendConfig.property.clientId"></a>
+
+```java
+public java.lang.String getClientId();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The Client ID of the Service Principal.
+
+This can also be sourced from the ARM\_CLIENT\_ID environment variable.
+
+***
+
+### `clientSecret`<sup>Optional</sup> <a name="clientSecret" id="cdktn.AzurermBackendConfig.property.clientSecret"></a>
+
+```java
+public java.lang.String getClientSecret();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The Client Secret of the Service Principal.
+
+This can also be sourced from the ARM\_CLIENT\_SECRET environment variable.
+
+***
+
+### `endpoint`<sup>Optional</sup> <a name="endpoint" id="cdktn.AzurermBackendConfig.property.endpoint"></a>
+
+```java
+public java.lang.String getEndpoint();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The Custom Endpoint for Azure Resource Manager. This can also be sourced from the ARM\_ENDPOINT environment variable.
+
+NOTE: An endpoint should only be configured when using Azure Stack.
+
+***
+
+### `environment`<sup>Optional</sup> <a name="environment" id="cdktn.AzurermBackendConfig.property.environment"></a>
+
+```java
+public java.lang.String getEnvironment();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The Azure Environment which should be used.
+
+This can also be sourced from the ARM\_ENVIRONMENT environment variable.
+Possible values are public, china, german, stack and usgovernment. Defaults to public.
+
+***
+
+### `metadataHost`<sup>Optional</sup> <a name="metadataHost" id="cdktn.AzurermBackendConfig.property.metadataHost"></a>
+
+```java
+public java.lang.String getMetadataHost();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The Hostname of the Azure Metadata Service (for example management.azure.com), used to obtain the Cloud Environment when using a Custom Azure Environment. This can also be sourced from the ARM\_METADATA\_HOSTNAME Environment Variable.).
+
+***
+
+### `msiEndpoint`<sup>Optional</sup> <a name="msiEndpoint" id="cdktn.AzurermBackendConfig.property.msiEndpoint"></a>
+
+```java
+public java.lang.String getMsiEndpoint();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The path to a custom Managed Service Identity endpoint which is automatically determined if not specified.
+
+This can also be sourced from the ARM\_MSI\_ENDPOINT environment variable.
+
+***
+
+### `oidcRequestToken`<sup>Optional</sup> <a name="oidcRequestToken" id="cdktn.AzurermBackendConfig.property.oidcRequestToken"></a>
+
+```java
+public java.lang.String getOidcRequestToken();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The bearer token for the request to the OIDC provider.
+
+This can
+also be sourced from the ARM\_OIDC\_REQUEST\_TOKEN or
+ACTIONS\_ID\_TOKEN\_REQUEST\_TOKEN environment variables.
+
+***
+
+### `oidcRequestUrl`<sup>Optional</sup> <a name="oidcRequestUrl" id="cdktn.AzurermBackendConfig.property.oidcRequestUrl"></a>
+
+```java
+public java.lang.String getOidcRequestUrl();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The URL for the OIDC provider from which to request an ID token.
+
+This can also be sourced from the ARM\_OIDC\_REQUEST\_URL or
+ACTIONS\_ID\_TOKEN\_REQUEST\_URL environment variables.
+
+***
+
+### `oidcToken`<sup>Optional</sup> <a name="oidcToken" id="cdktn.AzurermBackendConfig.property.oidcToken"></a>
+
+```java
+public java.lang.String getOidcToken();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The ID token when authenticating using OpenID Connect (OIDC).
+
+This can also be sourced from the ARM\_OIDC\_TOKEN environment variable.
+
+***
+
+### `oidcTokenFilePath`<sup>Optional</sup> <a name="oidcTokenFilePath" id="cdktn.AzurermBackendConfig.property.oidcTokenFilePath"></a>
+
+```java
+public java.lang.String getOidcTokenFilePath();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The path to a file containing an ID token when authenticating using OpenID Connect (OIDC).
+
+This can also be sourced from the ARM\_OIDC\_TOKEN\_FILE\_PATH environment variable.
+
+***
+
+### `resourceGroupName`<sup>Optional</sup> <a name="resourceGroupName" id="cdktn.AzurermBackendConfig.property.resourceGroupName"></a>
+
+```java
+public java.lang.String getResourceGroupName();
+```
+
+- *Type:* java.lang.String
+
+(Required) The Name of the Resource Group in which the Storage Account exists.
+
+***
+
+### `sasToken`<sup>Optional</sup> <a name="sasToken" id="cdktn.AzurermBackendConfig.property.sasToken"></a>
+
+```java
+public java.lang.String getSasToken();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The SAS Token used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_SAS\_TOKEN environment variable.
+
+***
+
+### `snapshot`<sup>Optional</sup> <a name="snapshot" id="cdktn.AzurermBackendConfig.property.snapshot"></a>
+
+```java
+public java.lang.Boolean getSnapshot();
+```
+
+- *Type:* java.lang.Boolean
+
+(Optional) Should the Blob used to store the Terraform Statefile be snapshotted before use?
+
+Defaults to false. This value can also be sourced
+from the ARM\_SNAPSHOT environment variable.
+
+***
+
+### `subscriptionId`<sup>Optional</sup> <a name="subscriptionId" id="cdktn.AzurermBackendConfig.property.subscriptionId"></a>
+
+```java
+public java.lang.String getSubscriptionId();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The Subscription ID in which the Storage Account exists.
+
+This can also be sourced from the ARM\_SUBSCRIPTION\_ID environment variable.
+
+***
+
+### `tenantId`<sup>Optional</sup> <a name="tenantId" id="cdktn.AzurermBackendConfig.property.tenantId"></a>
+
+```java
+public java.lang.String getTenantId();
+```
+
+- *Type:* java.lang.String
+
+(Optional) The Tenant ID in which the Subscription exists.
+
+This can also be sourced from the ARM\_TENANT\_ID environment variable.
+
+***
+
+### `useAzureadAuth`<sup>Optional</sup> <a name="useAzureadAuth" id="cdktn.AzurermBackendConfig.property.useAzureadAuth"></a>
+
+```java
+public java.lang.Boolean getUseAzureadAuth();
+```
+
+- *Type:* java.lang.Boolean
+
+(Optional) Should AzureAD Authentication be used to access the Blob Storage Account.
+
+This can also be sourced from the ARM\_USE\_AZUREAD environment
+variable.
+
+Note: When using AzureAD for Authentication to Storage you also need to
+ensure the Storage Blob Data Owner role is assigned.
+
+***
+
+### `useMicrosoftGraph`<sup>Optional</sup> <a name="useMicrosoftGraph" id="cdktn.AzurermBackendConfig.property.useMicrosoftGraph"></a>
+
+```java
+public java.lang.Boolean getUseMicrosoftGraph();
+```
+
+- *Type:* java.lang.Boolean
+
+(Optional) Should MSAL be used for authentication instead of ADAL, and should Microsoft Graph be used instead of Azure Active Directory Graph?
+
+Defaults to true.
+
+Note: In Terraform 1.2 the Azure Backend uses MSAL (and Microsoft Graph)
+rather than ADAL (and Azure Active Directory Graph) for authentication by
+default - you can disable this by setting use\_microsoft\_graph to false.
+This setting will be removed in Terraform 1.3, due to Microsoft's
+deprecation of ADAL.
+
+***
+
+### `useMsi`<sup>Optional</sup> <a name="useMsi" id="cdktn.AzurermBackendConfig.property.useMsi"></a>
+
+```java
+public java.lang.Boolean getUseMsi();
+```
+
+- *Type:* java.lang.Boolean
+
+(Optional) Should Managed Service Identity authentication be used?
+
+This can also be sourced from the ARM\_USE\_MSI environment variable.
+
+***
+
+### `useOidc`<sup>Optional</sup> <a name="useOidc" id="cdktn.AzurermBackendConfig.property.useOidc"></a>
+
+```java
+public java.lang.Boolean getUseOidc();
+```
+
+- *Type:* java.lang.Boolean
+
+(Optional) Should OIDC authentication be used? This can also be sourced from the ARM\_USE\_OIDC environment variable.
+
+Note: When using OIDC for authentication, use\_microsoft\_graph
+must be set to true (which is the default).
+
+***
+

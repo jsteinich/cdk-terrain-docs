@@ -1,0 +1,91 @@
+---
+title: "CSharp: TerraformSelf"
+sidebarTitle: TerraformSelf
+description: CDKTN Core API Reference for TerraformSelf in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Expressions in connection blocks cannot refer to their parent resource by name.
+
+References create dependencies, and referring to a resource by name within its own block would create a dependency cycle.
+Instead, expressions can use the self object, which represents the connection's parent resource and has all of that resource's attributes.
+For example, use self.public\_ip to reference an aws\_instance's public\_ip attribute.
+
+## Initializers <a name="Initializers" id="cdktn.TerraformSelf.Initializer"></a>
+
+```csharp
+using Io.Cdktn;
+
+new TerraformSelf();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformSelf.getAny">GetAny</a></code> | Only usable within a connection block to reference the connections parent resource. |
+| <code><a href="#cdktn.TerraformSelf.getNumber">GetNumber</a></code> | Only usable within a connection block to reference the connections parent resource. |
+| <code><a href="#cdktn.TerraformSelf.getString">GetString</a></code> | Only usable within a connection block to reference the connections parent resource. |
+
+***
+
+### `GetAny` <a name="GetAny" id="cdktn.TerraformSelf.getAny"></a>
+
+```csharp
+using Io.Cdktn;
+
+TerraformSelf.GetAny(string Key);
+```
+
+Only usable within a connection block to reference the connections parent resource.
+
+Access a property on the resource like this: `getAny("hostPort")`
+
+#### `Key`<sup>Required</sup> <a name="Key" id="cdktn.TerraformSelf.getAny.parameter.key"></a>
+
+- *Type:* string
+
+***
+
+### `GetNumber` <a name="GetNumber" id="cdktn.TerraformSelf.getNumber"></a>
+
+```csharp
+using Io.Cdktn;
+
+TerraformSelf.GetNumber(string Key);
+```
+
+Only usable within a connection block to reference the connections parent resource.
+
+Access a property on the resource like this: `getNumber("hostPort")`
+
+#### `Key`<sup>Required</sup> <a name="Key" id="cdktn.TerraformSelf.getNumber.parameter.key"></a>
+
+- *Type:* string
+
+***
+
+### `GetString` <a name="GetString" id="cdktn.TerraformSelf.getString"></a>
+
+```csharp
+using Io.Cdktn;
+
+TerraformSelf.GetString(string Key);
+```
+
+Only usable within a connection block to reference the connections parent resource.
+
+Access a property on the resource like this: `getString("publicIp")`
+
+#### `Key`<sup>Required</sup> <a name="Key" id="cdktn.TerraformSelf.getString.parameter.key"></a>
+
+- *Type:* string
+
+***
+

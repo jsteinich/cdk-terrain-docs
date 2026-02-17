@@ -1,0 +1,469 @@
+---
+title: "Java: TerraformHclModule"
+sidebarTitle: TerraformHclModule
+description: CDKTN Core API Reference for TerraformHclModule in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+## Initializers <a name="Initializers" id="cdktn.TerraformHclModule.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.TerraformHclModule;
+
+TerraformHclModule.Builder.create(Construct scope, java.lang.String id)
+//  .dependsOn(java.util.List<ITerraformDependable>)
+//  .forEach(ITerraformIterator)
+//  .providers(java.util.List<TerraformProvider|TerraformModuleProvider>)
+//  .skipAssetCreationFromLocalModules(java.lang.Boolean)
+    .source(java.lang.String)
+//  .version(java.lang.String)
+//  .variables(java.util.Map<java.lang.String, java.lang.Object>)
+    .build();
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List&lt;<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.forEach">forEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.providers">providers</a></code> | <code>java.util.List&lt;<a href="#cdktn.TerraformProvider">TerraformProvider</a>&#124;<a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.skipAssetCreationFromLocalModules">skipAssetCreationFromLocalModules</a></code> | <code>java.lang.Boolean</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.source">source</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.version">version</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.Initializer.parameter.variables">variables</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | *No description.* |
+
+***
+
+### `scope`<sup>Required</sup> <a name="scope" id="cdktn.TerraformHclModule.Initializer.parameter.scope"></a>
+
+- *Type:* software.constructs.Construct
+
+***
+
+### `id`<sup>Required</sup> <a name="id" id="cdktn.TerraformHclModule.Initializer.parameter.id"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="cdktn.TerraformHclModule.Initializer.parameter.dependsOn"></a>
+
+- *Type:* java.util.List&lt;<a href="#cdktn.ITerraformDependable">ITerraformDependable</a>>
+
+***
+
+### `forEach`<sup>Optional</sup> <a name="forEach" id="cdktn.TerraformHclModule.Initializer.parameter.forEach"></a>
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `providers`<sup>Optional</sup> <a name="providers" id="cdktn.TerraformHclModule.Initializer.parameter.providers"></a>
+
+- *Type:* java.util.List&lt;<a href="#cdktn.TerraformProvider">TerraformProvider</a>|<a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>>
+
+***
+
+### `skipAssetCreationFromLocalModules`<sup>Optional</sup> <a name="skipAssetCreationFromLocalModules" id="cdktn.TerraformHclModule.Initializer.parameter.skipAssetCreationFromLocalModules"></a>
+
+- *Type:* java.lang.Boolean
+
+***
+
+### `source`<sup>Required</sup> <a name="source" id="cdktn.TerraformHclModule.Initializer.parameter.source"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `version`<sup>Optional</sup> <a name="version" id="cdktn.TerraformHclModule.Initializer.parameter.version"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `variables`<sup>Optional</sup> <a name="variables" id="cdktn.TerraformHclModule.Initializer.parameter.variables"></a>
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformHclModule.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.TerraformHclModule.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktn.TerraformHclModule.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktn.TerraformHclModule.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.toTerraform">toTerraform</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.addProvider">addProvider</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.getString">getString</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.interpolationForOutput">interpolationForOutput</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.get">get</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.getBoolean">getBoolean</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.getList">getList</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.getNumber">getNumber</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.set">set</a></code> | *No description.* |
+
+***
+
+### `toString` <a name="toString" id="cdktn.TerraformHclModule.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Returns a string representation of this construct.
+
+### `addOverride` <a name="addOverride" id="cdktn.TerraformHclModule.addOverride"></a>
+
+```java
+public void addOverride(java.lang.String path, java.lang.Object value)
+```
+
+#### `path`<sup>Required</sup> <a name="path" id="cdktn.TerraformHclModule.addOverride.parameter.path"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformHclModule.addOverride.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+### `overrideLogicalId` <a name="overrideLogicalId" id="cdktn.TerraformHclModule.overrideLogicalId"></a>
+
+```java
+public void overrideLogicalId(java.lang.String newLogicalId)
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+#### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktn.TerraformHclModule.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* java.lang.String
+
+The new logical ID to use for this stack element.
+
+***
+
+### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktn.TerraformHclModule.resetOverrideLogicalId"></a>
+
+```java
+public void resetOverrideLogicalId()
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+### `toHclTerraform` <a name="toHclTerraform" id="cdktn.TerraformHclModule.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
+### `toMetadata` <a name="toMetadata" id="cdktn.TerraformHclModule.toMetadata"></a>
+
+```java
+public java.lang.Object toMetadata()
+```
+
+### `toTerraform` <a name="toTerraform" id="cdktn.TerraformHclModule.toTerraform"></a>
+
+```java
+public java.lang.Object toTerraform()
+```
+
+### `addProvider` <a name="addProvider" id="cdktn.TerraformHclModule.addProvider"></a>
+
+```java
+public void addProvider(TerraformProvider|TerraformModuleProvider provider)
+```
+
+#### `provider`<sup>Required</sup> <a name="provider" id="cdktn.TerraformHclModule.addProvider.parameter.provider"></a>
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>|<a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>
+
+***
+
+### `getString` <a name="getString" id="cdktn.TerraformHclModule.getString"></a>
+
+```java
+public java.lang.String getString(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.TerraformHclModule.getString.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `interpolationForOutput` <a name="interpolationForOutput" id="cdktn.TerraformHclModule.interpolationForOutput"></a>
+
+```java
+public IResolvable interpolationForOutput(java.lang.String moduleOutput)
+```
+
+#### `moduleOutput`<sup>Required</sup> <a name="moduleOutput" id="cdktn.TerraformHclModule.interpolationForOutput.parameter.moduleOutput"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `get` <a name="get" id="cdktn.TerraformHclModule.get"></a>
+
+```java
+public java.lang.Object get(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.TerraformHclModule.get.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getBoolean` <a name="getBoolean" id="cdktn.TerraformHclModule.getBoolean"></a>
+
+```java
+public IResolvable getBoolean(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.TerraformHclModule.getBoolean.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getList` <a name="getList" id="cdktn.TerraformHclModule.getList"></a>
+
+```java
+public java.util.List<java.lang.String> getList(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.TerraformHclModule.getList.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `getNumber` <a name="getNumber" id="cdktn.TerraformHclModule.getNumber"></a>
+
+```java
+public java.lang.Number getNumber(java.lang.String output)
+```
+
+#### `output`<sup>Required</sup> <a name="output" id="cdktn.TerraformHclModule.getNumber.parameter.output"></a>
+
+- *Type:* java.lang.String
+
+***
+
+### `set` <a name="set" id="cdktn.TerraformHclModule.set"></a>
+
+```java
+public void set(java.lang.String variable, java.lang.Object value)
+```
+
+#### `variable`<sup>Required</sup> <a name="variable" id="cdktn.TerraformHclModule.set.parameter.variable"></a>
+
+- *Type:* java.lang.String
+
+***
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TerraformHclModule.set.parameter.value"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TerraformHclModule.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.TerraformHclModule.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+
+***
+
+### `isConstruct` <a name="isConstruct" id="cdktn.TerraformHclModule.isConstruct"></a>
+
+```java
+import io.cdktn.cdktn.TerraformHclModule;
+
+TerraformHclModule.isConstruct(java.lang.Object x)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformHclModule.isConstruct.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+Any object.
+
+***
+
+### `isTerraformElement` <a name="isTerraformElement" id="cdktn.TerraformHclModule.isTerraformElement"></a>
+
+```java
+import io.cdktn.cdktn.TerraformHclModule;
+
+TerraformHclModule.isTerraformElement(java.lang.Object x)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.TerraformHclModule.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TerraformHclModule.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.TerraformHclModule.property.cdktfStack">cdktfStack</a></code> | <code><a href="#cdktn.TerraformStack">TerraformStack</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.source">source</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.providers">providers</a></code> | <code>java.util.List&lt;<a href="#cdktn.TerraformProvider">TerraformProvider</a>&#124;<a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.skipAssetCreationFromLocalModules">skipAssetCreationFromLocalModules</a></code> | <code>java.lang.Boolean</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.version">version</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.dependsOn">dependsOn</a></code> | <code>java.util.List&lt; java.lang.String ></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.forEach">forEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.TerraformHclModule.property.variables">variables</a></code> | <code>java.util.Map&lt; java.lang.String, java.lang.Object ></code> | *No description.* |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.TerraformHclModule.property.node"></a>
+
+```java
+public Node getNode();
+```
+
+- *Type:* software.constructs.Node
+
+The tree node.
+
+***
+
+### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktn.TerraformHclModule.property.cdktfStack"></a>
+
+```java
+public TerraformStack getCdktfStack();
+```
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+### `fqn`<sup>Required</sup> <a name="fqn" id="cdktn.TerraformHclModule.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktn.TerraformHclModule.property.friendlyUniqueId"></a>
+
+```java
+public java.lang.String getFriendlyUniqueId();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `source`<sup>Required</sup> <a name="source" id="cdktn.TerraformHclModule.property.source"></a>
+
+```java
+public java.lang.String getSource();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `providers`<sup>Optional</sup> <a name="providers" id="cdktn.TerraformHclModule.property.providers"></a>
+
+```java
+public java.util.List<TerraformProvider|TerraformModuleProvider> getProviders();
+```
+
+- *Type:* java.util.List&lt;<a href="#cdktn.TerraformProvider">TerraformProvider</a>|<a href="#cdktn.TerraformModuleProvider">TerraformModuleProvider</a>>
+
+***
+
+### `skipAssetCreationFromLocalModules`<sup>Optional</sup> <a name="skipAssetCreationFromLocalModules" id="cdktn.TerraformHclModule.property.skipAssetCreationFromLocalModules"></a>
+
+```java
+public java.lang.Boolean getSkipAssetCreationFromLocalModules();
+```
+
+- *Type:* java.lang.Boolean
+
+***
+
+### `version`<sup>Optional</sup> <a name="version" id="cdktn.TerraformHclModule.property.version"></a>
+
+```java
+public java.lang.String getVersion();
+```
+
+- *Type:* java.lang.String
+
+***
+
+### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="cdktn.TerraformHclModule.property.dependsOn"></a>
+
+```java
+public java.util.List<java.lang.String> getDependsOn();
+```
+
+- *Type:* java.util.List&lt; java.lang.String >
+
+***
+
+### `forEach`<sup>Optional</sup> <a name="forEach" id="cdktn.TerraformHclModule.property.forEach"></a>
+
+```java
+public ITerraformIterator getForEach();
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `variables`<sup>Optional</sup> <a name="variables" id="cdktn.TerraformHclModule.property.variables"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getVariables();
+```
+
+- *Type:* java.util.Map&lt; java.lang.String, java.lang.Object >
+
+***
+

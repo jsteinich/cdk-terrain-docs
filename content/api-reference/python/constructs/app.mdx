@@ -1,0 +1,326 @@
+---
+title: "Python: App"
+sidebarTitle: App
+description: CDKTN Core API Reference for App in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Represents a cdktn application.
+
+## Initializers <a name="Initializers" id="cdktn.App.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.App(
+  context: typing.Mapping[typing.Any] = None,
+  hcl_output: bool = None,
+  outdir: str = None,
+  skip_backend_validation: bool = None,
+  skip_validation: bool = None,
+  stack_traces: bool = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.App.Initializer.parameter.context">context</a></code> | <code>typing.Mapping\[typing.Any]</code> | Additional context values for the application. |
+| <code><a href="#cdktn.App.Initializer.parameter.hclOutput">hcl\_output</a></code> | <code>bool</code> | *No description.* |
+| <code><a href="#cdktn.App.Initializer.parameter.outdir">outdir</a></code> | <code>str</code> | The directory to output Terraform resources. |
+| <code><a href="#cdktn.App.Initializer.parameter.skipBackendValidation">skip\_backend\_validation</a></code> | <code>bool</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#cdktn.App.Initializer.parameter.skipValidation">skip\_validation</a></code> | <code>bool</code> | Whether to skip all validations during synthesis of the app. |
+| <code><a href="#cdktn.App.Initializer.parameter.stackTraces">stack\_traces</a></code> | <code>bool</code> | *No description.* |
+
+***
+
+### `context`<sup>Optional</sup> <a name="context" id="cdktn.App.Initializer.parameter.context"></a>
+
+- *Type:* typing.Mapping\[typing.Any]
+- *Default:* no additional context
+
+Additional context values for the application.
+
+Context set by the CLI or the `context` key in `cdktf.json` has precedence.
+
+Context can be read from any construct using `node.getContext(key)`.
+
+***
+
+### `hcl_output`<sup>Optional</sup> <a name="hcl_output" id="cdktn.App.Initializer.parameter.hclOutput"></a>
+
+- *Type:* bool
+
+***
+
+### `outdir`<sup>Optional</sup> <a name="outdir" id="cdktn.App.Initializer.parameter.outdir"></a>
+
+- *Type:* str
+- *Default:* CDKTF\_OUTDIR if defined, otherwise "cdktf.out"
+
+The directory to output Terraform resources.
+
+If you are using the CDKTN CLI, this value is automatically set from one of the following three sources:
+
+- The `-o` / `--output` CLI option
+- The `CDKTF_OUTDIR` environment variable
+- The `outdir` key in `cdktf.json`
+
+If you are using the CDKTN CLI and want to set a different value here, you will also need to set the same value via one of the three ways specified above.
+
+The most common case to set this value is when you are using the CDKTN library directly (e.g. when writing unit tests).
+
+***
+
+### `skip_backend_validation`<sup>Optional</sup> <a name="skip_backend_validation" id="cdktn.App.Initializer.parameter.skipBackendValidation"></a>
+
+- *Type:* bool
+- *Default:* false
+
+Whether to skip backend validation during synthesis of the app.
+
+***
+
+### `skip_validation`<sup>Optional</sup> <a name="skip_validation" id="cdktn.App.Initializer.parameter.skipValidation"></a>
+
+- *Type:* bool
+- *Default:* false
+
+Whether to skip all validations during synthesis of the app.
+
+***
+
+### `stack_traces`<sup>Optional</sup> <a name="stack_traces" id="cdktn.App.Initializer.parameter.stackTraces"></a>
+
+- *Type:* bool
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.App.toString">to\_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktn.App.crossStackReference">cross\_stack\_reference</a></code> | Creates a reference from one stack to another, invoked on prepareStack since it creates extra resources. |
+| <code><a href="#cdktn.App.synth">synth</a></code> | Synthesizes all resources to the output directory. |
+
+***
+
+### `to_string` <a name="to_string" id="cdktn.App.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+### `cross_stack_reference` <a name="cross_stack_reference" id="cdktn.App.crossStackReference"></a>
+
+```python
+def cross_stack_reference(
+  from_stack: TerraformStack,
+  to_stack: TerraformStack,
+  identifier: str
+) -> str
+```
+
+Creates a reference from one stack to another, invoked on prepareStack since it creates extra resources.
+
+#### `from_stack`<sup>Required</sup> <a name="from_stack" id="cdktn.App.crossStackReference.parameter.fromStack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `to_stack`<sup>Required</sup> <a name="to_stack" id="cdktn.App.crossStackReference.parameter.toStack"></a>
+
+- *Type:* <a href="#cdktn.TerraformStack">TerraformStack</a>
+
+***
+
+#### `identifier`<sup>Required</sup> <a name="identifier" id="cdktn.App.crossStackReference.parameter.identifier"></a>
+
+- *Type:* str
+
+***
+
+### `synth` <a name="synth" id="cdktn.App.synth"></a>
+
+```python
+def synth() -> None
+```
+
+Synthesizes all resources to the output directory.
+
+## Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.App.isConstruct">is\_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktn.App.isApp">is\_app</a></code> | *No description.* |
+| <code><a href="#cdktn.App.of">of</a></code> | *No description.* |
+
+***
+
+### `is_construct` <a name="is_construct" id="cdktn.App.isConstruct"></a>
+
+```python
+import cdktn
+
+cdktn.App.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.App.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+***
+
+### `is_app` <a name="is_app" id="cdktn.App.isApp"></a>
+
+```python
+import cdktn
+
+cdktn.App.is_app(
+  x: typing.Any
+)
+```
+
+#### `x`<sup>Required</sup> <a name="x" id="cdktn.App.isApp.parameter.x"></a>
+
+- *Type:* typing.Any
+
+***
+
+### `of` <a name="of" id="cdktn.App.of"></a>
+
+```python
+import cdktn
+
+cdktn.App.of(
+  construct: IConstruct
+)
+```
+
+#### `construct`<sup>Required</sup> <a name="construct" id="cdktn.App.of.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.App.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktn.App.property.hclOutput">hcl\_output</a></code> | <code>bool</code> | *No description.* |
+| <code><a href="#cdktn.App.property.manifest">manifest</a></code> | <code><a href="#cdktn.Manifest">Manifest</a></code> | *No description.* |
+| <code><a href="#cdktn.App.property.outdir">outdir</a></code> | <code>str</code> | The output directory into which resources will be synthesized. |
+| <code><a href="#cdktn.App.property.skipBackendValidation">skip\_backend\_validation</a></code> | <code>bool</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#cdktn.App.property.skipValidation">skip\_validation</a></code> | <code>bool</code> | Whether to skip all validations during synthesis of the app. |
+| <code><a href="#cdktn.App.property.targetStackId">target\_stack\_id</a></code> | <code>str</code> | The stack which will be synthesized. |
+
+***
+
+### `node`<sup>Required</sup> <a name="node" id="cdktn.App.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+***
+
+### `hcl_output`<sup>Required</sup> <a name="hcl_output" id="cdktn.App.property.hclOutput"></a>
+
+```python
+hcl_output: bool
+```
+
+- *Type:* bool
+
+***
+
+### `manifest`<sup>Required</sup> <a name="manifest" id="cdktn.App.property.manifest"></a>
+
+```python
+manifest: Manifest
+```
+
+- *Type:* <a href="#cdktn.Manifest">Manifest</a>
+
+***
+
+### `outdir`<sup>Required</sup> <a name="outdir" id="cdktn.App.property.outdir"></a>
+
+```python
+outdir: str
+```
+
+- *Type:* str
+
+The output directory into which resources will be synthesized.
+
+***
+
+### `skip_backend_validation`<sup>Required</sup> <a name="skip_backend_validation" id="cdktn.App.property.skipBackendValidation"></a>
+
+```python
+skip_backend_validation: bool
+```
+
+- *Type:* bool
+
+Whether to skip backend validation during synthesis of the app.
+
+***
+
+### `skip_validation`<sup>Required</sup> <a name="skip_validation" id="cdktn.App.property.skipValidation"></a>
+
+```python
+skip_validation: bool
+```
+
+- *Type:* bool
+
+Whether to skip all validations during synthesis of the app.
+
+***
+
+### `target_stack_id`<sup>Optional</sup> <a name="target_stack_id" id="cdktn.App.property.targetStackId"></a>
+
+```python
+target_stack_id: str
+```
+
+- *Type:* str
+
+The stack which will be synthesized.
+
+If not set, all stacks will be synthesized.
+
+***
+

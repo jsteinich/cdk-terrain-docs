@@ -1,0 +1,237 @@
+---
+title: "Go: TokenizedStringFragments"
+sidebarTitle: TokenizedStringFragments
+description: CDKTN Core API Reference for TokenizedStringFragments in Go.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Fragments of a concatenated string containing stringified Tokens.
+
+## Initializers <a name="Initializers" id="cdktn.TokenizedStringFragments.Initializer"></a>
+
+```go
+import "github.com/open-constructs/cdk-terrain-go/cdktn"
+
+cdktn.NewTokenizedStringFragments() TokenizedStringFragments
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.TokenizedStringFragments.addEscape">AddEscape</a></code> | *No description.* |
+| <code><a href="#cdktn.TokenizedStringFragments.addIntrinsic">AddIntrinsic</a></code> | Adds an intrinsic fragment. |
+| <code><a href="#cdktn.TokenizedStringFragments.addLiteral">AddLiteral</a></code> | Adds a literal fragment. |
+| <code><a href="#cdktn.TokenizedStringFragments.addToken">AddToken</a></code> | Adds a token fragment. |
+| <code><a href="#cdktn.TokenizedStringFragments.concat">Concat</a></code> | *No description.* |
+| <code><a href="#cdktn.TokenizedStringFragments.join">Join</a></code> | Combine the string fragments using the given joiner. |
+| <code><a href="#cdktn.TokenizedStringFragments.mapTokens">MapTokens</a></code> | Apply a transformation function to all tokens in the string. |
+
+***
+
+### `AddEscape` <a name="AddEscape" id="cdktn.TokenizedStringFragments.addEscape"></a>
+
+```go
+func AddEscape(kind *string)
+```
+
+#### `kind`<sup>Required</sup> <a name="kind" id="cdktn.TokenizedStringFragments.addEscape.parameter.kind"></a>
+
+- *Type:* \*string
+
+***
+
+### `AddIntrinsic` <a name="AddIntrinsic" id="cdktn.TokenizedStringFragments.addIntrinsic"></a>
+
+```go
+func AddIntrinsic(value interface{})
+```
+
+Adds an intrinsic fragment.
+
+#### `value`<sup>Required</sup> <a name="value" id="cdktn.TokenizedStringFragments.addIntrinsic.parameter.value"></a>
+
+- *Type:* interface\{}
+
+the intrinsic value to add.
+
+***
+
+### `AddLiteral` <a name="AddLiteral" id="cdktn.TokenizedStringFragments.addLiteral"></a>
+
+```go
+func AddLiteral(lit interface{})
+```
+
+Adds a literal fragment.
+
+#### `lit`<sup>Required</sup> <a name="lit" id="cdktn.TokenizedStringFragments.addLiteral.parameter.lit"></a>
+
+- *Type:* interface\{}
+
+the literal to add.
+
+***
+
+### `AddToken` <a name="AddToken" id="cdktn.TokenizedStringFragments.addToken"></a>
+
+```go
+func AddToken(token IResolvable)
+```
+
+Adds a token fragment.
+
+#### `token`<sup>Required</sup> <a name="token" id="cdktn.TokenizedStringFragments.addToken.parameter.token"></a>
+
+- *Type:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+the token to add.
+
+***
+
+### `Concat` <a name="Concat" id="cdktn.TokenizedStringFragments.concat"></a>
+
+```go
+func Concat(other TokenizedStringFragments)
+```
+
+#### `other`<sup>Required</sup> <a name="other" id="cdktn.TokenizedStringFragments.concat.parameter.other"></a>
+
+- *Type:* <a href="#cdktn.TokenizedStringFragments">TokenizedStringFragments</a>
+
+***
+
+### `Join` <a name="Join" id="cdktn.TokenizedStringFragments.join"></a>
+
+```go
+func Join(concat IFragmentConcatenator) interface{}
+```
+
+Combine the string fragments using the given joiner.
+
+If there are any
+
+#### `concat`<sup>Required</sup> <a name="concat" id="cdktn.TokenizedStringFragments.join.parameter.concat"></a>
+
+- *Type:* <a href="#cdktn.IFragmentConcatenator">IFragmentConcatenator</a>
+
+***
+
+### `MapTokens` <a name="MapTokens" id="cdktn.TokenizedStringFragments.mapTokens"></a>
+
+```go
+func MapTokens(context IResolveContext) TokenizedStringFragments
+```
+
+Apply a transformation function to all tokens in the string.
+
+#### `context`<sup>Required</sup> <a name="context" id="cdktn.TokenizedStringFragments.mapTokens.parameter.context"></a>
+
+- *Type:* <a href="#cdktn.IResolveContext">IResolveContext</a>
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.TokenizedStringFragments.property.escapes">Escapes</a></code> | <code>*\[]<a href="#cdktn.IResolvable">IResolvable</a></code> | Return all escape fragments from this string. |
+| <code><a href="#cdktn.TokenizedStringFragments.property.firstValue">FirstValue</a></code> | <code>interface\{}</code> | Returns the first value. |
+| <code><a href="#cdktn.TokenizedStringFragments.property.intrinsic">Intrinsic</a></code> | <code>*\[]<a href="#cdktn.IResolvable">IResolvable</a></code> | Return all intrinsic fragments from this string. |
+| <code><a href="#cdktn.TokenizedStringFragments.property.length">Length</a></code> | <code>*f64</code> | Returns the number of fragments. |
+| <code><a href="#cdktn.TokenizedStringFragments.property.literals">Literals</a></code> | <code>*\[]<a href="#cdktn.IResolvable">IResolvable</a></code> | Return all literals from this string. |
+| <code><a href="#cdktn.TokenizedStringFragments.property.tokens">Tokens</a></code> | <code>\*\[]<a href="#cdktn.IResolvable">IResolvable</a></code> | Return all Tokens from this string. |
+| <code><a href="#cdktn.TokenizedStringFragments.property.firstToken">FirstToken</a></code> | <code><a href="#cdktn.IResolvable">IResolvable</a></code> | Returns the first token. |
+
+***
+
+### `Escapes`<sup>Required</sup> <a name="Escapes" id="cdktn.TokenizedStringFragments.property.escapes"></a>
+
+```go
+func Escapes() *[]IResolvable
+```
+
+- *Type:* \*\[]<a href="#cdktn.IResolvable">IResolvable</a>
+
+Return all escape fragments from this string.
+
+***
+
+### `FirstValue`<sup>Required</sup> <a name="FirstValue" id="cdktn.TokenizedStringFragments.property.firstValue"></a>
+
+```go
+func FirstValue() interface{}
+```
+
+- *Type:* interface\{}
+
+Returns the first value.
+
+***
+
+### `Intrinsic`<sup>Required</sup> <a name="Intrinsic" id="cdktn.TokenizedStringFragments.property.intrinsic"></a>
+
+```go
+func Intrinsic() *[]IResolvable
+```
+
+- *Type:* \*\[]<a href="#cdktn.IResolvable">IResolvable</a>
+
+Return all intrinsic fragments from this string.
+
+***
+
+### `Length`<sup>Required</sup> <a name="Length" id="cdktn.TokenizedStringFragments.property.length"></a>
+
+```go
+func Length() *f64
+```
+
+- *Type:* \*f64
+
+Returns the number of fragments.
+
+***
+
+### `Literals`<sup>Required</sup> <a name="Literals" id="cdktn.TokenizedStringFragments.property.literals"></a>
+
+```go
+func Literals() *[]IResolvable
+```
+
+- *Type:* \*\[]<a href="#cdktn.IResolvable">IResolvable</a>
+
+Return all literals from this string.
+
+***
+
+### `Tokens`<sup>Required</sup> <a name="Tokens" id="cdktn.TokenizedStringFragments.property.tokens"></a>
+
+```go
+func Tokens() *[]IResolvable
+```
+
+- *Type:* \*\[]<a href="#cdktn.IResolvable">IResolvable</a>
+
+Return all Tokens from this string.
+
+***
+
+### `FirstToken`<sup>Optional</sup> <a name="FirstToken" id="cdktn.TokenizedStringFragments.property.firstToken"></a>
+
+```go
+func FirstToken() IResolvable
+```
+
+- *Type:* <a href="#cdktn.IResolvable">IResolvable</a>
+
+Returns the first token.
+
+***
+

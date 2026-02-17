@@ -1,0 +1,92 @@
+---
+title: "Python: NamedCloudWorkspace"
+sidebarTitle: NamedCloudWorkspace
+description: CDKTN Core API Reference for NamedCloudWorkspace in Python.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+The name of a single Terraform Cloud workspace.
+
+You will only be able to use the workspace specified in the configuration with this working directory, and cannot manage workspaces from the CLI (e.g. terraform workspace select or terraform workspace new).
+
+## Initializers <a name="Initializers" id="cdktn.NamedCloudWorkspace.Initializer"></a>
+
+```python
+import cdktn
+
+cdktn.NamedCloudWorkspace(
+  name: str,
+  project: str = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.NamedCloudWorkspace.Initializer.parameter.name">name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.NamedCloudWorkspace.Initializer.parameter.project">project</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `name`<sup>Required</sup> <a name="name" id="cdktn.NamedCloudWorkspace.Initializer.parameter.name"></a>
+
+- *Type:* str
+
+***
+
+### `project`<sup>Optional</sup> <a name="project" id="cdktn.NamedCloudWorkspace.Initializer.parameter.project"></a>
+
+- *Type:* str
+
+***
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.NamedCloudWorkspace.toTerraform">to\_terraform</a></code> | *No description.* |
+| <code><a href="#cdktn.NamedCloudWorkspace.toHclTerraform">to\_hcl\_terraform</a></code> | *No description.* |
+
+***
+
+### `to_terraform` <a name="to_terraform" id="cdktn.NamedCloudWorkspace.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+### `to_hcl_terraform` <a name="to_hcl_terraform" id="cdktn.NamedCloudWorkspace.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.NamedCloudWorkspace.property.name">name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#cdktn.NamedCloudWorkspace.property.project">project</a></code> | <code>str</code> | *No description.* |
+
+***
+
+### `name`<sup>Required</sup> <a name="name" id="cdktn.NamedCloudWorkspace.property.name"></a>
+
+```python
+name: str
+```
+
+- *Type:* str
+
+***
+
+### `project`<sup>Optional</sup> <a name="project" id="cdktn.NamedCloudWorkspace.property.project"></a>
+
+```python
+project: str
+```
+
+- *Type:* str
+
+***
+

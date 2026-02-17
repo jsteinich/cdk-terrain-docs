@@ -1,0 +1,125 @@
+---
+title: "CSharp: ITerraformResource"
+sidebarTitle: ITerraformResource
+description: CDKTN Core API Reference for ITerraformResource in CSharp.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+- *Implemented By:* <a href="#cdktn.DataResource">DataResource</a>, <a href="#cdktn.TerraformDataSource">TerraformDataSource</a>, <a href="#cdktn.TerraformResource">TerraformResource</a>, <a href="#cdktn.ITerraformResource">ITerraformResource</a>
+
+## Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktn.ITerraformResource.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+
+***
+
+### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="cdktn.ITerraformResource.interpolationForAttribute"></a>
+
+```csharp
+private IResolvable InterpolationForAttribute(string TerraformAttribute)
+```
+
+#### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="cdktn.ITerraformResource.interpolationForAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+***
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.ITerraformResource.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.friendlyUniqueId">FriendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.count">Count</a></code> | <code>double&#124;<a href="#cdktn.TerraformCount">TerraformCount</a></code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.dependsOn">DependsOn</a></code> | <code>string\[]</code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.forEach">ForEach</a></code> | <code><a href="#cdktn.ITerraformIterator">ITerraformIterator</a></code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.lifecycle">Lifecycle</a></code> | <code><a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a></code> | *No description.* |
+| <code><a href="#cdktn.ITerraformResource.property.provider">Provider</a></code> | <code><a href="#cdktn.TerraformProvider">TerraformProvider</a></code> | *No description.* |
+
+***
+
+### `Fqn`<sup>Required</sup> <a name="Fqn" id="cdktn.ITerraformResource.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+***
+
+### `FriendlyUniqueId`<sup>Required</sup> <a name="FriendlyUniqueId" id="cdktn.ITerraformResource.property.friendlyUniqueId"></a>
+
+```csharp
+public string FriendlyUniqueId { get; }
+```
+
+- *Type:* string
+
+***
+
+### `TerraformResourceType`<sup>Required</sup> <a name="TerraformResourceType" id="cdktn.ITerraformResource.property.terraformResourceType"></a>
+
+```csharp
+public string TerraformResourceType { get; }
+```
+
+- *Type:* string
+
+***
+
+### `Count`<sup>Optional</sup> <a name="Count" id="cdktn.ITerraformResource.property.count"></a>
+
+```csharp
+public double|TerraformCount Count { get; set; }
+```
+
+- *Type:* double|<a href="#cdktn.TerraformCount">TerraformCount</a>
+
+***
+
+### `DependsOn`<sup>Optional</sup> <a name="DependsOn" id="cdktn.ITerraformResource.property.dependsOn"></a>
+
+```csharp
+public string[] DependsOn { get; set; }
+```
+
+- *Type:* string\[]
+
+***
+
+### `ForEach`<sup>Optional</sup> <a name="ForEach" id="cdktn.ITerraformResource.property.forEach"></a>
+
+```csharp
+public ITerraformIterator ForEach { get; set; }
+```
+
+- *Type:* <a href="#cdktn.ITerraformIterator">ITerraformIterator</a>
+
+***
+
+### `Lifecycle`<sup>Optional</sup> <a name="Lifecycle" id="cdktn.ITerraformResource.property.lifecycle"></a>
+
+```csharp
+public TerraformResourceLifecycle Lifecycle { get; set; }
+```
+
+- *Type:* <a href="#cdktn.TerraformResourceLifecycle">TerraformResourceLifecycle</a>
+
+***
+
+### `Provider`<sup>Optional</sup> <a name="Provider" id="cdktn.ITerraformResource.property.provider"></a>
+
+```csharp
+public TerraformProvider Provider { get; set; }
+```
+
+- *Type:* <a href="#cdktn.TerraformProvider">TerraformProvider</a>
+
+***
+

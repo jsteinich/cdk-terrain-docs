@@ -1,0 +1,56 @@
+---
+title: "Java: LazyAnyValueOptions"
+sidebarTitle: LazyAnyValueOptions
+description: CDKTN Core API Reference for LazyAnyValueOptions in Java.
+---
+
+{/* This file is generated through yarn generate-docs */}
+
+Options for creating lazy untyped tokens.
+
+## Initializer <a name="Initializer" id="cdktn.LazyAnyValueOptions.Initializer"></a>
+
+```java
+import io.cdktn.cdktn.LazyAnyValueOptions;
+
+LazyAnyValueOptions.builder()
+//  .displayHint(java.lang.String)
+//  .omitEmptyArray(java.lang.Boolean)
+    .build();
+```
+
+## Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktn.LazyAnyValueOptions.property.displayHint">displayHint</a></code> | <code>java.lang.String</code> | Use the given name as a display hint. |
+| <code><a href="#cdktn.LazyAnyValueOptions.property.omitEmptyArray">omitEmptyArray</a></code> | <code>java.lang.Boolean</code> | If the produced value is an array and it is empty, return 'undefined' instead. |
+
+***
+
+### `displayHint`<sup>Optional</sup> <a name="displayHint" id="cdktn.LazyAnyValueOptions.property.displayHint"></a>
+
+```java
+public java.lang.String getDisplayHint();
+```
+
+- *Type:* java.lang.String
+- *Default:* No hint
+
+Use the given name as a display hint.
+
+***
+
+### `omitEmptyArray`<sup>Optional</sup> <a name="omitEmptyArray" id="cdktn.LazyAnyValueOptions.property.omitEmptyArray"></a>
+
+```java
+public java.lang.Boolean getOmitEmptyArray();
+```
+
+- *Type:* java.lang.Boolean
+- *Default:* false
+
+If the produced value is an array and it is empty, return 'undefined' instead.
+
+***
+
