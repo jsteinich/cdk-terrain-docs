@@ -1,6 +1,10 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
+  "banner": {
+    "content": "✨ v0.22.0 is live — providers rebuilt without cdktf as a peer dependency. [Release notes](https://github.com/open-constructs/cdk-terrain/releases/tag/v0.22.0) · [Migration guide](/release/upgrade-guide-v0-22) · [Provider dashboard](https://provider-dashboard.cdktn.io)",
+    "dismissible": true
+  },
   "name": "CDK Terrain (CDKTN)",
   "colors": {
     "primary": "#16A34A",
@@ -1250,7 +1254,7 @@
         },
         {
           "anchor": "Providers",
-          "href": "https://github.com/cdktn-io",
+          "href": "https://provider-dashboard.cdktn.io/",
           "icon": "cube"
         }
       ]
